@@ -9,6 +9,15 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SignUp" customModule="TruckerShipper" customModuleProvider="target">
             <connections>
+                <outlet property="btnCreateAnAccount" destination="f38-Sy-d9w" id="T7p-2P-01d"/>
+                <outlet property="tfConfirmPassword" destination="Svj-jB-65e" id="B2N-Dn-tS3"/>
+                <outlet property="tfEmailAddress" destination="6Y5-nX-W8Q" id="jbf-88-sFC"/>
+                <outlet property="tfFirstName" destination="4Ju-qq-R4u" id="JNj-55-e0I"/>
+                <outlet property="tfLastName" destination="crF-uu-8ez" id="GF3-SA-pNY"/>
+                <outlet property="tfPassword" destination="gM3-9p-RXX" id="97z-IR-mX7"/>
+                <outlet property="tfPhoneNumber" destination="q1o-Is-FnH" id="3Nt-Zr-og3"/>
+                <outlet property="tfShipperType" destination="l3A-fO-UX0" id="Gtj-eP-52t"/>
+                <outlet property="tvTermsAndPolicies" destination="qRU-kE-zq7" id="89r-4j-zuK"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -21,13 +30,13 @@
                     <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bN2-Nx-taI">
-                            <rect key="frame" x="0.0" y="0.0" width="414" height="1150.5"/>
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="1183.5"/>
                             <subviews>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ufT-c8-DS9">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="224"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="179"/>
                                     <subviews>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="DBQ-pX-awX">
-                                            <rect key="frame" x="93" y="45.5" width="228" height="133"/>
+                                            <rect key="frame" x="93" y="46.5" width="228" height="132.5"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" secondItem="DBQ-pX-awX" secondAttribute="height" multiplier="12:7" id="ivu-4n-H0i"/>
                                             </constraints>
@@ -49,12 +58,12 @@
                                         <constraint firstItem="DBQ-pX-awX" firstAttribute="centerX" secondItem="ufT-c8-DS9" secondAttribute="centerX" id="9V5-t8-SwH"/>
                                         <constraint firstItem="DBQ-pX-awX" firstAttribute="width" secondItem="ufT-c8-DS9" secondAttribute="width" multiplier="0.55" id="TDN-yy-aR4"/>
                                         <constraint firstItem="XCy-lA-hiV" firstAttribute="top" secondItem="ufT-c8-DS9" secondAttribute="top" constant="16" id="k9O-Sn-OtJ"/>
+                                        <constraint firstAttribute="bottom" secondItem="DBQ-pX-awX" secondAttribute="bottom" id="lcB-Hg-Yca"/>
                                         <constraint firstItem="XCy-lA-hiV" firstAttribute="leading" secondItem="ufT-c8-DS9" secondAttribute="leading" constant="16" id="oKa-am-NJT"/>
-                                        <constraint firstItem="DBQ-pX-awX" firstAttribute="centerY" secondItem="ufT-c8-DS9" secondAttribute="centerY" id="v12-Jx-C0V"/>
                                     </constraints>
                                 </view>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Register" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xDO-Ta-Vlr" customClass="UILabelDeviceClass" customModule="TruckerShipper" customModuleProvider="target">
-                                    <rect key="frame" x="165.5" y="224" width="83" height="25.5"/>
+                                    <rect key="frame" x="165.5" y="179" width="83" height="25.5"/>
                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
                                     <color key="textColor" red="0.30976641179999997" green="0.30982545020000002" blue="0.30976271630000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <nil key="highlightedColor"/>
@@ -66,7 +75,7 @@
                                     </userDefinedRuntimeAttributes>
                                 </label>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="WSe-a6-jcj">
-                                    <rect key="frame" x="77" y="261.5" width="260" height="39"/>
+                                    <rect key="frame" x="77" y="216.5" width="260" height="39"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create an account so you can easily" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IQT-v6-mdN" customClass="UILabelDeviceClass" customModule="TruckerShipper" customModuleProvider="target">
                                             <rect key="frame" x="2" y="0.0" width="256.5" height="19.5"/>
@@ -95,20 +104,20 @@
                                     </subviews>
                                 </stackView>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Yqd-9R-Ndh">
-                                    <rect key="frame" x="24" y="326.5" width="366" height="624"/>
+                                    <rect key="frame" x="24" y="281.5" width="366" height="708"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3l1-M7-dmR">
-                                            <rect key="frame" x="0.0" y="0.0" width="366" height="72"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="366" height="84"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="UserName" translatesAutoresizingMaskIntoConstraints="NO" id="jIj-WM-mbZ" customClass="RoundedImage" customModule="TruckerShipper" customModuleProvider="target">
-                                                    <rect key="frame" x="20" y="14" width="44" height="44"/>
+                                                    <rect key="frame" x="20" y="14" width="56" height="56"/>
                                                     <color key="backgroundColor" red="0.0" green="0.2802670002" blue="0.62132591010000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="jIj-WM-mbZ" secondAttribute="height" multiplier="1:1" id="qUT-6Y-l0S"/>
                                                     </constraints>
                                                 </imageView>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="First name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4Ju-qq-R4u" customClass="UITextFieldDeviceClass" customModule="TruckerShipper" customModuleProvider="target">
-                                                    <rect key="frame" x="84" y="0.0" width="262" height="72"/>
+                                                    <rect key="frame" x="96" y="0.0" width="250" height="84"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                     <userDefinedRuntimeAttributes>
@@ -131,7 +140,7 @@
                                                 <constraint firstItem="4Ju-qq-R4u" firstAttribute="top" secondItem="3l1-M7-dmR" secondAttribute="top" id="V2O-lq-P3s"/>
                                                 <constraint firstAttribute="trailing" secondItem="4Ju-qq-R4u" secondAttribute="trailing" constant="20" id="XKZ-ln-Rcw"/>
                                                 <constraint firstItem="4Ju-qq-R4u" firstAttribute="centerY" secondItem="3l1-M7-dmR" secondAttribute="centerY" id="gzZ-Hf-J7c"/>
-                                                <constraint firstAttribute="width" secondItem="3l1-M7-dmR" secondAttribute="height" multiplier="61:12" id="xsW-xO-iLn"/>
+                                                <constraint firstAttribute="width" secondItem="3l1-M7-dmR" secondAttribute="height" multiplier="61:14" id="xsW-xO-iLn"/>
                                             </constraints>
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -146,17 +155,17 @@
                                             </userDefinedRuntimeAttributes>
                                         </view>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r29-Wr-Gm2">
-                                            <rect key="frame" x="0.0" y="92" width="366" height="72"/>
+                                            <rect key="frame" x="0.0" y="104" width="366" height="84"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="UserName" translatesAutoresizingMaskIntoConstraints="NO" id="QAn-qJ-BPP" customClass="RoundedImage" customModule="TruckerShipper" customModuleProvider="target">
-                                                    <rect key="frame" x="20" y="14" width="44" height="44"/>
+                                                    <rect key="frame" x="20" y="14" width="56" height="56"/>
                                                     <color key="backgroundColor" red="0.0" green="0.2802670002" blue="0.62132591010000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="QAn-qJ-BPP" secondAttribute="height" multiplier="1:1" id="hGT-oz-Bxd"/>
                                                     </constraints>
                                                 </imageView>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Last name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="crF-uu-8ez" customClass="UITextFieldDeviceClass" customModule="TruckerShipper" customModuleProvider="target">
-                                                    <rect key="frame" x="84" y="0.0" width="262" height="72"/>
+                                                    <rect key="frame" x="96" y="0.0" width="250" height="84"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                     <userDefinedRuntimeAttributes>
@@ -193,17 +202,17 @@
                                             </userDefinedRuntimeAttributes>
                                         </view>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wmU-GA-0sS">
-                                            <rect key="frame" x="0.0" y="184" width="366" height="72"/>
+                                            <rect key="frame" x="0.0" y="208" width="366" height="84"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="UserName" translatesAutoresizingMaskIntoConstraints="NO" id="dRp-g2-WCh" customClass="RoundedImage" customModule="TruckerShipper" customModuleProvider="target">
-                                                    <rect key="frame" x="20" y="14" width="44" height="44"/>
+                                                    <rect key="frame" x="20" y="14" width="56" height="56"/>
                                                     <color key="backgroundColor" red="0.0" green="0.2802670002" blue="0.62132591010000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="dRp-g2-WCh" secondAttribute="height" multiplier="1:1" id="hke-we-naH"/>
                                                     </constraints>
                                                 </imageView>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6Y5-nX-W8Q" customClass="UITextFieldDeviceClass" customModule="TruckerShipper" customModuleProvider="target">
-                                                    <rect key="frame" x="84" y="0.0" width="262" height="72"/>
+                                                    <rect key="frame" x="96" y="0.0" width="250" height="84"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                     <userDefinedRuntimeAttributes>
@@ -240,17 +249,17 @@
                                             </userDefinedRuntimeAttributes>
                                         </view>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OPZ-GO-EAL">
-                                            <rect key="frame" x="0.0" y="276" width="366" height="72"/>
+                                            <rect key="frame" x="0.0" y="312" width="366" height="84"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="UserName" translatesAutoresizingMaskIntoConstraints="NO" id="hlY-hl-7m9" customClass="RoundedImage" customModule="TruckerShipper" customModuleProvider="target">
-                                                    <rect key="frame" x="20" y="14" width="44" height="44"/>
+                                                    <rect key="frame" x="20" y="14" width="56" height="56"/>
                                                     <color key="backgroundColor" red="0.0" green="0.2802670002" blue="0.62132591010000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="hlY-hl-7m9" secondAttribute="height" multiplier="1:1" id="TDf-Og-DIY"/>
                                                     </constraints>
                                                 </imageView>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Phone number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="q1o-Is-FnH" customClass="UITextFieldDeviceClass" customModule="TruckerShipper" customModuleProvider="target">
-                                                    <rect key="frame" x="84" y="0.0" width="262" height="72"/>
+                                                    <rect key="frame" x="96" y="0.0" width="250" height="84"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                     <userDefinedRuntimeAttributes>
@@ -287,17 +296,17 @@
                                             </userDefinedRuntimeAttributes>
                                         </view>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yel-zV-677">
-                                            <rect key="frame" x="0.0" y="368" width="366" height="72"/>
+                                            <rect key="frame" x="0.0" y="416" width="366" height="84"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="UserName" translatesAutoresizingMaskIntoConstraints="NO" id="eTG-Nw-zPl" customClass="RoundedImage" customModule="TruckerShipper" customModuleProvider="target">
-                                                    <rect key="frame" x="20" y="14" width="44" height="44"/>
+                                                    <rect key="frame" x="20" y="14" width="56" height="56"/>
                                                     <color key="backgroundColor" red="0.0" green="0.2802670002" blue="0.62132591010000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="eTG-Nw-zPl" secondAttribute="height" multiplier="1:1" id="Abh-nP-bXh"/>
                                                     </constraints>
                                                 </imageView>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Shipper type" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="l3A-fO-UX0" customClass="UITextFieldDeviceClass" customModule="TruckerShipper" customModuleProvider="target">
-                                                    <rect key="frame" x="84" y="0.0" width="262" height="72"/>
+                                                    <rect key="frame" x="96" y="0.0" width="223" height="84"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                     <userDefinedRuntimeAttributes>
@@ -310,16 +319,30 @@
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                 </textField>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="255" verticalHuggingPriority="251" horizontalCompressionResistancePriority="755" image="dropDownBlack" translatesAutoresizingMaskIntoConstraints="NO" id="EXb-Xt-Ll9">
+                                                    <rect key="frame" x="329" y="37" width="10" height="10"/>
+                                                </imageView>
+                                                <button opaque="NO" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lte-e6-Wei">
+                                                    <rect key="frame" x="0.0" y="0.0" width="366" height="84"/>
+                                                    <connections>
+                                                        <action selector="onBtnShipperType:" destination="-1" eventType="touchUpInside" id="gP1-gL-fDx"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                             <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="l3A-fO-UX0" secondAttribute="trailing" constant="20" id="5aD-CB-1Ev"/>
                                                 <constraint firstItem="l3A-fO-UX0" firstAttribute="centerY" secondItem="yel-zV-677" secondAttribute="centerY" id="68d-pY-5pN"/>
                                                 <constraint firstItem="eTG-Nw-zPl" firstAttribute="centerY" secondItem="yel-zV-677" secondAttribute="centerY" id="6kB-ma-60D"/>
+                                                <constraint firstItem="lte-e6-Wei" firstAttribute="leading" secondItem="yel-zV-677" secondAttribute="leading" id="EUE-8K-2cE"/>
+                                                <constraint firstAttribute="trailing" secondItem="lte-e6-Wei" secondAttribute="trailing" id="FTb-yX-q0f"/>
                                                 <constraint firstItem="l3A-fO-UX0" firstAttribute="leading" secondItem="eTG-Nw-zPl" secondAttribute="trailing" constant="20" id="Mpq-7u-lGe"/>
+                                                <constraint firstAttribute="bottom" secondItem="lte-e6-Wei" secondAttribute="bottom" id="O5S-8F-GOm"/>
+                                                <constraint firstItem="EXb-Xt-Ll9" firstAttribute="leading" secondItem="l3A-fO-UX0" secondAttribute="trailing" constant="10" id="ObO-Hx-8K9"/>
                                                 <constraint firstItem="eTG-Nw-zPl" firstAttribute="leading" secondItem="yel-zV-677" secondAttribute="leading" constant="20" id="Pqd-gn-qG0"/>
+                                                <constraint firstItem="EXb-Xt-Ll9" firstAttribute="centerY" secondItem="yel-zV-677" secondAttribute="centerY" id="TCu-4G-Esz"/>
                                                 <constraint firstItem="l3A-fO-UX0" firstAttribute="top" secondItem="yel-zV-677" secondAttribute="top" id="cCP-Dy-qQS"/>
                                                 <constraint firstItem="eTG-Nw-zPl" firstAttribute="top" secondItem="yel-zV-677" secondAttribute="top" constant="14" id="soU-3t-byO"/>
+                                                <constraint firstItem="lte-e6-Wei" firstAttribute="top" secondItem="yel-zV-677" secondAttribute="top" id="ylq-pY-WPi"/>
                                             </constraints>
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -334,17 +357,17 @@
                                             </userDefinedRuntimeAttributes>
                                         </view>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yeM-gv-9El">
-                                            <rect key="frame" x="0.0" y="460" width="366" height="72"/>
+                                            <rect key="frame" x="0.0" y="520" width="366" height="84"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Password" translatesAutoresizingMaskIntoConstraints="NO" id="p0c-6I-lse" customClass="RoundedImage" customModule="TruckerShipper" customModuleProvider="target">
-                                                    <rect key="frame" x="20" y="14" width="44" height="44"/>
+                                                    <rect key="frame" x="20" y="14" width="56" height="56"/>
                                                     <color key="backgroundColor" red="0.0" green="0.2802670002" blue="0.62132591010000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="p0c-6I-lse" secondAttribute="height" multiplier="1:1" id="9bA-eg-MTl"/>
                                                     </constraints>
                                                 </imageView>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gM3-9p-RXX" customClass="UITextFieldDeviceClass" customModule="TruckerShipper" customModuleProvider="target">
-                                                    <rect key="frame" x="84" y="0.0" width="242" height="72"/>
+                                                    <rect key="frame" x="96" y="0.0" width="218" height="84"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                                     <userDefinedRuntimeAttributes>
@@ -358,13 +381,16 @@
                                                     </userDefinedRuntimeAttributes>
                                                 </textField>
                                                 <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="755" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lyH-KE-KiV">
-                                                    <rect key="frame" x="326" y="16" width="40" height="40"/>
+                                                    <rect key="frame" x="314" y="22" width="40" height="40"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="40" id="AJ6-vR-ayc"/>
                                                         <constraint firstAttribute="width" secondItem="lyH-KE-KiV" secondAttribute="height" multiplier="1:1" id="dMs-be-dh7"/>
                                                     </constraints>
                                                     <state key="normal" image="eyeClosed"/>
                                                     <state key="selected" image="eyeOpen"/>
+                                                    <connections>
+                                                        <action selector="onBtnShowPassword:" destination="-1" eventType="touchUpInside" id="efR-FB-52s"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -374,7 +400,7 @@
                                                 <constraint firstItem="gM3-9p-RXX" firstAttribute="top" secondItem="yeM-gv-9El" secondAttribute="top" id="2tr-JP-piL"/>
                                                 <constraint firstItem="lyH-KE-KiV" firstAttribute="leading" secondItem="gM3-9p-RXX" secondAttribute="trailing" id="5vN-jl-1eD"/>
                                                 <constraint firstItem="p0c-6I-lse" firstAttribute="centerY" secondItem="yeM-gv-9El" secondAttribute="centerY" id="7D1-eS-GrY"/>
-                                                <constraint firstAttribute="trailing" secondItem="lyH-KE-KiV" secondAttribute="trailing" id="E5N-gB-Oas"/>
+                                                <constraint firstAttribute="trailing" secondItem="lyH-KE-KiV" secondAttribute="trailing" constant="12" id="E5N-gB-Oas"/>
                                                 <constraint firstItem="p0c-6I-lse" firstAttribute="leading" secondItem="yeM-gv-9El" secondAttribute="leading" constant="20" id="Z6J-Ab-lxG"/>
                                                 <constraint firstItem="lyH-KE-KiV" firstAttribute="centerY" secondItem="yeM-gv-9El" secondAttribute="centerY" id="tWa-B1-gWz"/>
                                                 <constraint firstItem="gM3-9p-RXX" firstAttribute="centerY" secondItem="yeM-gv-9El" secondAttribute="centerY" id="ujb-A7-fK6"/>
@@ -392,17 +418,17 @@
                                             </userDefinedRuntimeAttributes>
                                         </view>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UNF-dC-he4">
-                                            <rect key="frame" x="0.0" y="552" width="366" height="72"/>
+                                            <rect key="frame" x="0.0" y="624" width="366" height="84"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Password" translatesAutoresizingMaskIntoConstraints="NO" id="yzU-ng-5hC" customClass="RoundedImage" customModule="TruckerShipper" customModuleProvider="target">
-                                                    <rect key="frame" x="20" y="14" width="44" height="44"/>
+                                                    <rect key="frame" x="20" y="14" width="56" height="56"/>
                                                     <color key="backgroundColor" red="0.0" green="0.2802670002" blue="0.62132591010000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="yzU-ng-5hC" secondAttribute="height" multiplier="1:1" id="L12-Qv-Gyo"/>
                                                     </constraints>
                                                 </imageView>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Confirm password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Svj-jB-65e" customClass="UITextFieldDeviceClass" customModule="TruckerShipper" customModuleProvider="target">
-                                                    <rect key="frame" x="84" y="0.0" width="242" height="72"/>
+                                                    <rect key="frame" x="96" y="0.0" width="218" height="84"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                                     <userDefinedRuntimeAttributes>
@@ -415,14 +441,17 @@
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                 </textField>
-                                                <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="755" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l7R-eJ-aBM">
-                                                    <rect key="frame" x="326" y="16" width="40" height="40"/>
+                                                <button opaque="NO" tag="1" contentMode="scaleToFill" horizontalCompressionResistancePriority="755" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l7R-eJ-aBM">
+                                                    <rect key="frame" x="314" y="22" width="40" height="40"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="40" id="7h8-iO-pyx"/>
                                                         <constraint firstAttribute="width" secondItem="l7R-eJ-aBM" secondAttribute="height" multiplier="1:1" id="zeL-TD-EHS"/>
                                                     </constraints>
                                                     <state key="normal" image="eyeClosed"/>
                                                     <state key="selected" image="eyeOpen"/>
+                                                    <connections>
+                                                        <action selector="onBtnShowPassword:" destination="-1" eventType="touchUpInside" id="55a-Mh-SMB"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -432,7 +461,7 @@
                                                 <constraint firstItem="l7R-eJ-aBM" firstAttribute="centerY" secondItem="UNF-dC-he4" secondAttribute="centerY" id="Hdc-Mi-p4O"/>
                                                 <constraint firstItem="Svj-jB-65e" firstAttribute="leading" secondItem="yzU-ng-5hC" secondAttribute="trailing" constant="20" id="NUt-c0-F6e"/>
                                                 <constraint firstItem="yzU-ng-5hC" firstAttribute="centerY" secondItem="UNF-dC-he4" secondAttribute="centerY" id="PgG-UU-G3e"/>
-                                                <constraint firstAttribute="trailing" secondItem="l7R-eJ-aBM" secondAttribute="trailing" id="SJK-vV-sxZ"/>
+                                                <constraint firstAttribute="trailing" secondItem="l7R-eJ-aBM" secondAttribute="trailing" constant="12" id="SJK-vV-sxZ"/>
                                                 <constraint firstItem="l7R-eJ-aBM" firstAttribute="leading" secondItem="Svj-jB-65e" secondAttribute="trailing" id="XQV-YT-v54"/>
                                                 <constraint firstItem="yzU-ng-5hC" firstAttribute="leading" secondItem="UNF-dC-he4" secondAttribute="leading" constant="20" id="kQ9-18-Vcq"/>
                                                 <constraint firstItem="yzU-ng-5hC" firstAttribute="top" secondItem="UNF-dC-he4" secondAttribute="top" constant="14" id="yls-Mb-R5j"/>
@@ -450,9 +479,12 @@
                                             </userDefinedRuntimeAttributes>
                                         </view>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstItem="EXb-Xt-Ll9" firstAttribute="centerX" secondItem="lyH-KE-KiV" secondAttribute="centerX" id="DCY-LT-Jot"/>
+                                    </constraints>
                                 </stackView>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f38-Sy-d9w" customClass="UIButtonDeviceClass" customModule="TruckerShipper" customModuleProvider="target">
-                                    <rect key="frame" x="24" y="974.5" width="366" height="54"/>
+                                    <rect key="frame" x="24" y="1013.5" width="366" height="54"/>
                                     <color key="backgroundColor" red="0.0" green="0.2802670002" blue="0.61960784310000006" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <constraints>
                                         <constraint firstAttribute="width" secondItem="f38-Sy-d9w" secondAttribute="height" multiplier="61:9" id="Oew-Su-28Z"/>
@@ -468,19 +500,31 @@
                                         </userDefinedRuntimeAttribute>
                                         <userDefinedRuntimeAttribute type="string" keyPath="iPhoneFontWeight" value="bold"/>
                                     </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="onBtnCreateAccount:" destination="-1" eventType="touchUpInside" id="i2b-ew-CiQ"/>
+                                    </connections>
                                 </button>
+                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="By signing up, you're agree to our Terms of use and Privacy Policy" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="qRU-kE-zq7">
+                                    <rect key="frame" x="24" y="1083.5" width="366" height="52"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    <dataDetectorType key="dataDetectorTypes" link="YES"/>
+                                </textView>
                             </subviews>
                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             <constraints>
                                 <constraint firstItem="ufT-c8-DS9" firstAttribute="top" secondItem="bN2-Nx-taI" secondAttribute="top" id="0Sx-c4-IaG"/>
+                                <constraint firstItem="qRU-kE-zq7" firstAttribute="leading" secondItem="f38-Sy-d9w" secondAttribute="leading" id="6qS-BZ-on9"/>
                                 <constraint firstAttribute="trailing" secondItem="Yqd-9R-Ndh" secondAttribute="trailing" constant="24" id="A21-An-ndG"/>
                                 <constraint firstItem="f38-Sy-d9w" firstAttribute="trailing" secondItem="Yqd-9R-Ndh" secondAttribute="trailing" id="BvJ-bs-0qN"/>
+                                <constraint firstAttribute="bottom" secondItem="qRU-kE-zq7" secondAttribute="bottom" constant="48" id="CLM-tA-7Qf"/>
+                                <constraint firstItem="qRU-kE-zq7" firstAttribute="trailing" secondItem="f38-Sy-d9w" secondAttribute="trailing" id="CR7-kN-8cA"/>
                                 <constraint firstItem="Yqd-9R-Ndh" firstAttribute="leading" secondItem="bN2-Nx-taI" secondAttribute="leading" constant="24" id="Eix-5j-VLR"/>
                                 <constraint firstItem="xDO-Ta-Vlr" firstAttribute="centerX" secondItem="bN2-Nx-taI" secondAttribute="centerX" id="R86-zv-2fr"/>
                                 <constraint firstItem="WSe-a6-jcj" firstAttribute="centerX" secondItem="xDO-Ta-Vlr" secondAttribute="centerX" id="TOJ-Ds-clP"/>
                                 <constraint firstItem="WSe-a6-jcj" firstAttribute="top" secondItem="xDO-Ta-Vlr" secondAttribute="bottom" constant="12" id="UgR-95-XRu"/>
+                                <constraint firstItem="qRU-kE-zq7" firstAttribute="top" secondItem="f38-Sy-d9w" secondAttribute="bottom" constant="16" id="VvC-3L-jeh"/>
                                 <constraint firstItem="Yqd-9R-Ndh" firstAttribute="top" secondItem="WSe-a6-jcj" secondAttribute="bottom" constant="26" id="W3w-iE-1H0"/>
-                                <constraint firstAttribute="bottom" secondItem="Yqd-9R-Ndh" secondAttribute="bottom" constant="200" id="eZJ-7U-UzN"/>
                                 <constraint firstItem="xDO-Ta-Vlr" firstAttribute="top" secondItem="ufT-c8-DS9" secondAttribute="bottom" id="iSR-uV-8aV"/>
                                 <constraint firstItem="f38-Sy-d9w" firstAttribute="top" secondItem="Yqd-9R-Ndh" secondAttribute="bottom" constant="24" id="mgz-qf-KB3"/>
                                 <constraint firstItem="ufT-c8-DS9" firstAttribute="leading" secondItem="bN2-Nx-taI" secondAttribute="leading" id="qRU-fU-uH4"/>
@@ -503,7 +547,7 @@
             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
             <constraints>
                 <constraint firstItem="3KV-rv-chZ" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="3Gj-pd-gDU"/>
-                <constraint firstItem="ufT-c8-DS9" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.25" id="3ha-l1-zBi"/>
+                <constraint firstItem="ufT-c8-DS9" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.2" id="3ha-l1-zBi"/>
                 <constraint firstItem="3KV-rv-chZ" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="IOC-um-KW6"/>
                 <constraint firstItem="3KV-rv-chZ" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="W9j-ls-g4o"/>
                 <constraint firstItem="3KV-rv-chZ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="yCh-mT-x7E"/>
@@ -517,6 +561,7 @@
         <image name="Password" width="14" height="19"/>
         <image name="UserName" width="20" height="20"/>
         <image name="backBlue" width="32" height="32"/>
+        <image name="dropDownBlack" width="10" height="10"/>
         <image name="eyeClosed" width="18" height="13.5"/>
         <image name="eyeOpen" width="18.5" height="10.5"/>
     </resources>

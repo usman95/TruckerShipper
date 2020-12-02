@@ -140,7 +140,7 @@
                                     </constraints>
                                 </imageView>
                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="e.g. ******" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pFn-VU-lxZ" customClass="UITextFieldDeviceClass" customModule="TruckerShipper" customModuleProvider="target">
-                                    <rect key="frame" x="84" y="0.0" width="242" height="72"/>
+                                    <rect key="frame" x="84" y="0.0" width="230" height="72"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                     <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     <userDefinedRuntimeAttributes>
@@ -154,7 +154,7 @@
                                     </userDefinedRuntimeAttributes>
                                 </textField>
                                 <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="755" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kju-j8-2SH">
-                                    <rect key="frame" x="326" y="16" width="40" height="40"/>
+                                    <rect key="frame" x="314" y="16" width="40" height="40"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="40" id="2eB-XR-8YV"/>
                                         <constraint firstAttribute="width" secondItem="kju-j8-2SH" secondAttribute="height" multiplier="1:1" id="SHC-cV-1ly"/>
@@ -175,7 +175,7 @@
                                 <constraint firstItem="pFn-VU-lxZ" firstAttribute="leading" secondItem="C8d-d7-0ME" secondAttribute="trailing" constant="20" id="d9G-nb-say"/>
                                 <constraint firstItem="C8d-d7-0ME" firstAttribute="centerY" secondItem="QQ4-HE-3Pj" secondAttribute="centerY" id="hf8-Gv-lI1"/>
                                 <constraint firstItem="kju-j8-2SH" firstAttribute="leading" secondItem="pFn-VU-lxZ" secondAttribute="trailing" id="tV6-5V-DGu"/>
-                                <constraint firstAttribute="trailing" secondItem="kju-j8-2SH" secondAttribute="trailing" id="tzK-7g-nIX"/>
+                                <constraint firstAttribute="trailing" secondItem="kju-j8-2SH" secondAttribute="trailing" constant="12" id="tzK-7g-nIX"/>
                                 <constraint firstItem="pFn-VU-lxZ" firstAttribute="top" secondItem="QQ4-HE-3Pj" secondAttribute="top" id="xAv-SN-NTD"/>
                             </constraints>
                             <userDefinedRuntimeAttributes>

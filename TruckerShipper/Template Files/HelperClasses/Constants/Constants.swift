@@ -6,7 +6,7 @@ struct Global{
     static let LOGGED_IN_USER                = AppStateManager.sharedInstance.loggedInUser
     static var APP_MANAGER                   = AppStateManager.sharedInstance
     static var APP_REALM                     = APP_MANAGER.realm
-    static let APP_COLOR                     = UIColor(red:228/255, green:0/255, blue:0/255, alpha:1.0)
+    static let APP_COLOR                     = UIColor(red:0/255, green:71/255, blue:158/255, alpha:1.0)
     static let APP_COLOR_DARK                = UIColor(red:185/255, green:13/255, blue:12/255, alpha:1.0)
 }
 

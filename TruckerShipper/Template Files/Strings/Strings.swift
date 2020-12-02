@@ -64,8 +64,9 @@ enum Strings: String{
     case MESSAGE_DELIVERED = "Message delivered"
     case CONTACT_US_SUBMITTED = "Our team will respond you shortly."
     
-//    case TERMS_AND_POLICIES = "By si"
-//    case TERMS_OF_SERVICES = ""
-//    case PRIVACY_POLICY = ""
+    case TERMS_AND_POLICIES = "By signing up, you're agree to our Terms of use and Privacy Policy"
+    case TERMS_OF_SERVICES = "Terms of use"
+    case PRIVACY_POLICY = "Privacy Policy"
+    case SELECT_SHIPPER = "Please select shipper type."
     
 }
