@@ -1,0 +1,95 @@
+PODS:
+  - Alamofire (4.9.1)
+  - CRRefresh (1.1.3)
+  - DropDown (2.3.13)
+  - DZNEmptyDataSet (1.8.1)
+  - GoogleMaps (3.10.0):
+    - GoogleMaps/Maps (= 3.10.0)
+  - GoogleMaps/Base (3.10.0)
+  - GoogleMaps/Maps (3.10.0):
+    - GoogleMaps/Base
+  - IQKeyboardManagerSwift (6.5.6)
+  - LGSideMenuController (2.1.1)
+  - ObjectMapper (4.2.0)
+  - "ObjectMapper+Realm (1.0)":
+    - ObjectMapper
+    - RealmSwift
+  - PhoneNumberKit (3.3.1):
+    - PhoneNumberKit/PhoneNumberKitCore (= 3.3.1)
+    - PhoneNumberKit/UIKit (= 3.3.1)
+  - PhoneNumberKit/PhoneNumberKitCore (3.3.1)
+  - PhoneNumberKit/UIKit (3.3.1):
+    - PhoneNumberKit/PhoneNumberKitCore
+  - PinCodeTextField (0.1.0)
+  - Realm (5.4.8):
+    - Realm/Headers (= 5.4.8)
+  - Realm/Headers (5.4.8)
+  - RealmSwift (5.4.8):
+    - Realm (= 5.4.8)
+  - SDWebImage (5.9.2):
+    - SDWebImage/Core (= 5.9.2)
+  - SDWebImage/Core (5.9.2)
+  - SwiftyJSON (5.0.0)
+  - Toast-Swift (5.0.1)
+  - "UITextView+Placeholder (1.4.0)"
+
+DEPENDENCIES:
+  - Alamofire (= 4.9.1)
+  - CRRefresh
+  - DropDown
+  - DZNEmptyDataSet
+  - GoogleMaps
+  - IQKeyboardManagerSwift
+  - LGSideMenuController
+  - "ObjectMapper+Realm"
+  - PhoneNumberKit
+  - PinCodeTextField
+  - Realm
+  - RealmSwift
+  - SDWebImage
+  - SwiftyJSON
+  - Toast-Swift
+  - "UITextView+Placeholder"
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - CRRefresh
+    - DropDown
+    - DZNEmptyDataSet
+    - GoogleMaps
+    - IQKeyboardManagerSwift
+    - LGSideMenuController
+    - ObjectMapper
+    - "ObjectMapper+Realm"
+    - PhoneNumberKit
+    - PinCodeTextField
+    - Realm
+    - RealmSwift
+    - SDWebImage
+    - SwiftyJSON
+    - Toast-Swift
+    - "UITextView+Placeholder"
+
+SPEC CHECKSUMS:
+  Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
+  CRRefresh: 1415d4ae06837fa7bb064c44f2e102f3ef517044
+  DropDown: 8a2116376c1981888557f72ec2ffc9a5e0e456ec
+  DZNEmptyDataSet: 9525833b9e68ac21c30253e1d3d7076cc828eaa7
+  GoogleMaps: 8c080862ff2748ece9929471b30feb56a6c5079d
+  IQKeyboardManagerSwift: c7df9d2deb356c04522f5c4b7b6e4ce4d8ed94fe
+  LGSideMenuController: ae40c80983ab8b8801c7cef0a6804d43aaa72d45
+  ObjectMapper: 1eb41f610210777375fa806bf161dc39fb832b81
+  "ObjectMapper+Realm": bd713d57132bf05880a656695137764692f7d2bb
+  PhoneNumberKit: ff153d5e299f6da566cb73c6aa71e354933b2932
+  PinCodeTextField: a3c39be58bde3ed1d6888d0fb1d88b0a4a2277cc
+  Realm: 042bbb59227a0159eda397b8a5a49fbd67495ce7
+  RealmSwift: 15ddd6b3398ebfc99810811c44f095df1313adb3
+  SDWebImage: 0b42b8719ab0c5257177d5894306e8a336b21cbb
+  SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
+  Toast-Swift: 9b6a70f28b3bf0b96c40d46c0c4b9d6639846711
+  "UITextView+Placeholder": d7b0c400921f66523f3a85d74f774512e14f6502
+
+PODFILE CHECKSUM: fb4aa4e0c9045e8b5554b08c3e21256c54fc8ed3
+
+COCOAPODS: 1.10.0.rc.1
