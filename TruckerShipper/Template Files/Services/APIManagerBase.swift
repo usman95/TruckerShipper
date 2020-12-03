@@ -9,6 +9,7 @@ enum Route: String {
     case ShipperTypes = "/public/shipper-types"
     case SignUp = "/auth/sign-up"
     case Login = "/auth/login"
+    case ForgotPassword = "/auth/forget-pass"
 }
 class APIManagerBase: NSObject {
     let baseURL = Constants.BaseURL

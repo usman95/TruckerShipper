@@ -68,5 +68,5 @@ enum Strings: String{
     case TERMS_OF_SERVICES = "Terms of use"
     case PRIVACY_POLICY = "Privacy Policy"
     case SELECT_SHIPPER = "Please select shipper type."
-    
+    case FORGOT_PASSWORD_EMAIL_SENT = "Please check your email and click on the provided link to reset your password."
 }

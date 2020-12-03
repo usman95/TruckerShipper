@@ -9,22 +9,39 @@
 import UIKit
 
 class ForgotPassword: BaseController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+    
+    @IBOutlet weak var tfEmailAddress: UITextFieldDeviceClass!
+    @IBOutlet weak var btnSubmit: UIButtonDeviceClass!
+    
+    @IBAction func onBtnSubmit(_ sender: UIButtonDeviceClass) {
+        self.forgotPassword()
     }
-
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+}
+//MARK:- Helper Methods
+extension ForgotPassword{
+    private func validate()->[String:Any]?{
+        let email = self.tfEmailAddress.text ?? ""
+        
+        if !Validation.isValidEmail(email){
+            Utility.main.showToast(message: Strings.INVALID_EMAIL.text)
+            self.btnSubmit.shake()
+            return nil
+        }
+        
+        let param:[String:Any] = ["email":email]
+        return param
     }
-    */
-
+}
+//MARK:- Services
+extension ForgotPassword{
+    private func forgotPassword(){
+        guard let param = self.validate() else {return}
+        APIManager.sharedInstance.usersAPIManager.ForgotPassword(params: param, success: { (responseObject) in
+            Utility.main.showAlert(message: Strings.FORGOT_PASSWORD_EMAIL_SENT.text, title: Strings.CONFIRMATION.text) {
+                Utility.main.topViewController()?.navigationController?.popViewController(animated: true)
+            }
+        }) { (error) in
+            print(error)
+        }
+    }
 }
