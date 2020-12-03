@@ -40,7 +40,6 @@
 		FA37EA6A25740E4C0073CF0C /* CustomLocale.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA37EA3525740E4C0073CF0C /* CustomLocale.swift */; };
 		FA37EA6B25740E4C0073CF0C /* BaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA37EA3725740E4C0073CF0C /* BaseController.swift */; };
 		FA37EA6C25740E4C0073CF0C /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA37EA3825740E4C0073CF0C /* BaseNavigationController.swift */; };
-		FA37EA6D25740E4C0073CF0C /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA37EA3A25740E4C0073CF0C /* UserModel.swift */; };
 		FA37EA6E25740E4C0073CF0C /* ProjectStructs.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA37EA3C25740E4C0073CF0C /* ProjectStructs.swift */; };
 		FA37EA6F25740E4C0073CF0C /* ProjectEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA37EA3E25740E4C0073CF0C /* ProjectEnums.swift */; };
 		FA37EA7025740E4C0073CF0C /* CustomLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA37EA4025740E4C0073CF0C /* CustomLoader.swift */; };
@@ -77,6 +76,14 @@
 		FA37EAB8257429350073CF0C /* ForgotPassword.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA37EAB6257429350073CF0C /* ForgotPassword.xib */; };
 		FA37EABB257432E10073CF0C /* SignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA37EAB9257432E10073CF0C /* SignUp.swift */; };
 		FA37EABC257432E10073CF0C /* SignUp.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA37EABA257432E10073CF0C /* SignUp.xib */; };
+		FA6B42412578F97500C6D106 /* RoleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6B42402578F97500C6D106 /* RoleModel.swift */; };
+		FA6B424A25791ABE00C6D106 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6B424325791ABD00C6D106 /* UserModel.swift */; };
+		FA6B424B25791ABE00C6D106 /* CreatedBy.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6B424425791ABD00C6D106 /* CreatedBy.swift */; };
+		FA6B424C25791ABE00C6D106 /* RoleId.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6B424525791ABE00C6D106 /* RoleId.swift */; };
+		FA6B424D25791ABE00C6D106 /* CountryId.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6B424625791ABE00C6D106 /* CountryId.swift */; };
+		FA6B424E25791ABE00C6D106 /* UpdatedBy.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6B424725791ABE00C6D106 /* UpdatedBy.swift */; };
+		FA6B424F25791ABE00C6D106 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6B424825791ABE00C6D106 /* User.swift */; };
+		FA6B425025791ABE00C6D106 /* CityId.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6B424925791ABE00C6D106 /* CityId.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -117,7 +124,6 @@
 		FA37EA3525740E4C0073CF0C /* CustomLocale.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomLocale.swift; sourceTree = "<group>"; };
 		FA37EA3725740E4C0073CF0C /* BaseController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseController.swift; sourceTree = "<group>"; };
 		FA37EA3825740E4C0073CF0C /* BaseNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
-		FA37EA3A25740E4C0073CF0C /* UserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		FA37EA3C25740E4C0073CF0C /* ProjectStructs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectStructs.swift; sourceTree = "<group>"; };
 		FA37EA3E25740E4C0073CF0C /* ProjectEnums.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectEnums.swift; sourceTree = "<group>"; };
 		FA37EA4025740E4C0073CF0C /* CustomLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomLoader.swift; sourceTree = "<group>"; };
@@ -154,6 +160,14 @@
 		FA37EAB6257429350073CF0C /* ForgotPassword.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ForgotPassword.xib; sourceTree = "<group>"; };
 		FA37EAB9257432E10073CF0C /* SignUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUp.swift; sourceTree = "<group>"; };
 		FA37EABA257432E10073CF0C /* SignUp.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignUp.xib; sourceTree = "<group>"; };
+		FA6B42402578F97500C6D106 /* RoleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoleModel.swift; sourceTree = "<group>"; };
+		FA6B424325791ABD00C6D106 /* UserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		FA6B424425791ABD00C6D106 /* CreatedBy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreatedBy.swift; sourceTree = "<group>"; };
+		FA6B424525791ABE00C6D106 /* RoleId.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoleId.swift; sourceTree = "<group>"; };
+		FA6B424625791ABE00C6D106 /* CountryId.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountryId.swift; sourceTree = "<group>"; };
+		FA6B424725791ABE00C6D106 /* UpdatedBy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdatedBy.swift; sourceTree = "<group>"; };
+		FA6B424825791ABE00C6D106 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		FA6B424925791ABE00C6D106 /* CityId.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CityId.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -240,13 +254,13 @@
 				FA37EA1525740E4C0073CF0C /* MOLH */,
 				FA37EA1B25740E4C0073CF0C /* HelperClasses */,
 				FA37EA3625740E4C0073CF0C /* BaseControllers */,
-				FA37EA3925740E4C0073CF0C /* Models */,
 				FA37EA3B25740E4C0073CF0C /* ProjectStructs */,
 				FA37EA3D25740E4C0073CF0C /* ProjectEnums */,
 				FA37EA3F25740E4C0073CF0C /* CustomLoader */,
 				FA37EA4125740E4C0073CF0C /* UICustomization */,
 				FA37EA4425740E4C0073CF0C /* Fonts */,
 				FA37EA4925740E4C0073CF0C /* Services */,
+				FA37EA3925740E4C0073CF0C /* Models */,
 			);
 			path = "Template Files";
 			sourceTree = "<group>";
@@ -366,7 +380,8 @@
 		FA37EA3925740E4C0073CF0C /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				FA37EA3A25740E4C0073CF0C /* UserModel.swift */,
+				FA6B424225791AAB00C6D106 /* UserModel */,
+				FA6B423F2578F95B00C6D106 /* RolesModel */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -445,8 +460,8 @@
 		FA37EA7B25740EAD0073CF0C /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				FA37EA7C25740EAD0073CF0C /* Home */,
 				FA37EA9725740EAD0073CF0C /* Login */,
+				FA37EA7C25740EAD0073CF0C /* Home */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -598,6 +613,28 @@
 				FA37EABA257432E10073CF0C /* SignUp.xib */,
 			);
 			path = SignUp;
+			sourceTree = "<group>";
+		};
+		FA6B423F2578F95B00C6D106 /* RolesModel */ = {
+			isa = PBXGroup;
+			children = (
+				FA6B42402578F97500C6D106 /* RoleModel.swift */,
+			);
+			path = RolesModel;
+			sourceTree = "<group>";
+		};
+		FA6B424225791AAB00C6D106 /* UserModel */ = {
+			isa = PBXGroup;
+			children = (
+				FA6B424925791ABE00C6D106 /* CityId.swift */,
+				FA6B424625791ABE00C6D106 /* CountryId.swift */,
+				FA6B424425791ABD00C6D106 /* CreatedBy.swift */,
+				FA6B424525791ABE00C6D106 /* RoleId.swift */,
+				FA6B424725791ABE00C6D106 /* UpdatedBy.swift */,
+				FA6B424825791ABE00C6D106 /* User.swift */,
+				FA6B424325791ABD00C6D106 /* UserModel.swift */,
+			);
+			path = UserModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -767,24 +804,30 @@
 				FA37EA6C25740E4C0073CF0C /* BaseNavigationController.swift in Sources */,
 				FA37EABB257432E10073CF0C /* SignUp.swift in Sources */,
 				FA37EAAA25740EAD0073CF0C /* SideMenu.swift in Sources */,
+				FA6B424A25791ABE00C6D106 /* UserModel.swift in Sources */,
 				FA37EA5425740E4C0073CF0C /* MOLHSizable.swift in Sources */,
 				FA37EA6225740E4C0073CF0C /* UIImage+Extension.swift in Sources */,
 				FA37EAA125740EAD0073CF0C /* TripExpenses.swift in Sources */,
+				FA6B42412578F97500C6D106 /* RoleModel.swift in Sources */,
+				FA6B425025791ABE00C6D106 /* CityId.swift in Sources */,
+				FA6B424B25791ABE00C6D106 /* CreatedBy.swift in Sources */,
 				FA37EAA325740EAD0073CF0C /* TripExpensesTVC.swift in Sources */,
 				FA37EA5025740E4C0073CF0C /* Strings.swift in Sources */,
 				FA37EAA825740EAD0073CF0C /* TripExpensesHeader.swift in Sources */,
 				FA37EA5325740E4C0073CF0C /* MOLH.swift in Sources */,
 				FA37EA6725740E4C0073CF0C /* UITextField+Extension.swift in Sources */,
 				FA37EA6025740E4C0073CF0C /* UILabel+Extension.swift in Sources */,
+				FA6B424C25791ABE00C6D106 /* RoleId.swift in Sources */,
 				FA37EA7225740E4C0073CF0C /* RoundedCorners.swift in Sources */,
 				FA37EA5725740E4C0073CF0C /* Validation.swift in Sources */,
+				FA6B424D25791ABE00C6D106 /* CountryId.swift in Sources */,
 				FA37EA6525740E4C0073CF0C /* Dictionary+Extension.swift in Sources */,
 				FA37EA7825740E4C0073CF0C /* APIManager.swift in Sources */,
+				FA6B424E25791ABE00C6D106 /* UpdatedBy.swift in Sources */,
 				FA37EA7025740E4C0073CF0C /* CustomLoader.swift in Sources */,
 				FA37EA6925740E4C0073CF0C /* LanguageManager.swift in Sources */,
 				FA37EA6625740E4C0073CF0C /* CLPlacemark+Extension.swift in Sources */,
 				FA37EA6425740E4C0073CF0C /* String+Extension.swift in Sources */,
-				FA37EA6D25740E4C0073CF0C /* UserModel.swift in Sources */,
 				FA37EA5225740E4C0073CF0C /* MOLHLanguage.swift in Sources */,
 				FA37EA5D25740E4C0073CF0C /* UIColor+Extension.swift in Sources */,
 				FA37EAA625740EAD0073CF0C /* TripExpenseDetailTVC.swift in Sources */,
@@ -800,6 +843,7 @@
 				FA37EA6F25740E4C0073CF0C /* ProjectEnums.swift in Sources */,
 				FA37EA5B25740E4C0073CF0C /* UIApplication+Extension.swift in Sources */,
 				FA37EAB7257429350073CF0C /* ForgotPassword.swift in Sources */,
+				FA6B424F25791ABE00C6D106 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

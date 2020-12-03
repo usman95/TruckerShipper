@@ -5,7 +5,10 @@ import SwiftyJSON
 
 enum Route: String {
     //MARK:- USER
-    case SignUp = ""
+    case Roles = "/public/roles"
+    case ShipperTypes = "/public/shipper-types"
+    case SignUp = "/auth/sign-up"
+    case Login = "/auth/login"
 }
 class APIManagerBase: NSObject {
     let baseURL = Constants.BaseURL
@@ -44,36 +47,18 @@ extension APIManagerBase{
                                     failure: @escaping (_ error: NSError) -> Void) {
         let errorGenericMessage = Strings.ERROR_GENERIC_MESSAGE.text
         
+        Utility.hideLoader()
+        
         if let dictData = response.result.value as? NSDictionary {
             
-            if let status = dictData["status"] as? Bool{
+            if let status = dictData["success"] as? Bool{
                 if status{
-                    let result = dictData["result"] as AnyObject
-                    if let token = result["authorization"] as? String {Constants.accessToken = token}
-                    if let pagesCount = dictData["pages_count"] as? Int ,let ordersCount = dictData["order_count"] as? Int {
-                        Constants.pagesCount = pagesCount
-                        Constants.ordersCount = ordersCount
-                    }
-                    else{
-                        Constants.pagesCount = 0
-                        Constants.ordersCount = 0
-                    }
-                    if let pagesCount = dictData["pages_count"] as? Int {
-                        Constants.pagesCount = pagesCount
-                    }
-                    else{
-                        Constants.pagesCount = 0
-                    }
+                    let result = dictData["data"] as AnyObject
                     success(result)
                     return
                 }
                 else{
-                    Utility.hideLoader()
                     if let error = (dictData["message"] as? String){
-                        if error == "Token is Invalid"{
-                            AppStateManager.sharedInstance.logoutUserAndChangeRootView()
-                            return
-                        }
                         Utility.main.showAlert(message: error, title: Strings.ERROR.text)
                     }
                     else{
@@ -83,7 +68,6 @@ extension APIManagerBase{
             }
         } else {
             //Failure
-            Utility.hideLoader()
             let errorMessage: String = Strings.UNKNOWN_ERROR.text+"\(response.response?.url?.absoluteString ?? "")"
             let userInfo = [NSLocalizedFailureReasonErrorKey: errorMessage]
             let error = NSError(domain: "Domain", code: 0, userInfo: userInfo);
@@ -109,8 +93,7 @@ extension APIManagerBase{
                         success(arrayResponse)
                     }
                     else{
-                        Utility.hideLoader()
-                        Utility.main.showAlert(message: Strings.RESPONSE_ERROR.rawValue + "\(route)", title: Strings.ERROR.text)
+                        success(Array<AnyObject>())
                     }
                 }, failure: {error in
                     failure(error as NSError)
@@ -125,8 +108,7 @@ extension APIManagerBase{
                         success(arrayResponse)
                     }
                     else{
-                        Utility.hideLoader()
-                        Utility.main.showAlert(message: Strings.RESPONSE_ERROR.rawValue + "\(route)", title: Strings.ERROR.text)
+                        success(Array<AnyObject>())
                     }
                 }, failure: {error in
                     failure(error as NSError)
@@ -146,8 +128,7 @@ extension APIManagerBase{
                         success(dictionaryResponse)
                     }
                     else{
-                        Utility.hideLoader()
-                        Utility.main.showAlert(message: Strings.RESPONSE_ERROR.rawValue + "\(route)", title: Strings.ERROR.text)
+                        success(Dictionary<String, AnyObject>())
                     }
                 }, failure: {error in
                     failure(error as NSError)
@@ -162,8 +143,7 @@ extension APIManagerBase{
                         success(dictionaryResponse)
                     }
                     else{
-                        Utility.hideLoader()
-                        Utility.main.showAlert(message: Strings.RESPONSE_ERROR.rawValue + "\(route)", title: Strings.ERROR.text)
+                        success(Dictionary<String, AnyObject>())
                     }
                 }, failure: {error in
                     failure(error as NSError)
@@ -212,8 +192,7 @@ extension APIManagerBase{
                         success(stringResponse)
                     }
                     else{
-                        Utility.hideLoader()
-                        Utility.main.showAlert(message: Strings.RESPONSE_ERROR.rawValue + "\(route)", title: Strings.ERROR.text)
+                        success(String())
                     }
                 }, failure: {error in
                     failure(error as NSError)
@@ -228,8 +207,7 @@ extension APIManagerBase{
                         success(stringResponse)
                     }
                     else{
-                        Utility.hideLoader()
-                        Utility.main.showAlert(message: Strings.RESPONSE_ERROR.rawValue + "\(route)", title: Strings.ERROR.text)
+                        success(String())
                     }
                 }, failure: {error in
                     failure(error as NSError)
@@ -249,8 +227,7 @@ extension APIManagerBase{
                         success(intResponse)
                     }
                     else{
-                        Utility.hideLoader()
-                        Utility.main.showAlert(message: Strings.RESPONSE_ERROR.rawValue + "\(route)", title: Strings.ERROR.text)
+                        success(Int())
                     }
                 }, failure: {error in
                     failure(error as NSError)
@@ -265,8 +242,7 @@ extension APIManagerBase{
                         success(intResponse)
                     }
                     else{
-                        Utility.hideLoader()
-                        Utility.main.showAlert(message: Strings.RESPONSE_ERROR.rawValue + "\(route)", title: Strings.ERROR.text)
+                        success(Int())
                     }
                 }, failure: {error in
                     failure(error as NSError)
@@ -280,18 +256,17 @@ extension APIManagerBase{
     
     func postArrayResponseWith(route: URL,parameters: Parameters,
                                success:@escaping DefaultArrayResultAPISuccessClosure,
-                               failure:@escaping DefaultAPIFailureClosure, withHeaders:Bool){
+                               failure:@escaping DefaultAPIFailureClosure, withHeader:Bool){
         
-        if withHeaders {
+        if withHeader {
             Alamofire.request(route, method: .post, parameters: parameters, encoding: URLEncoding.default, headers: getAuthorizationHeader()).responseJSON{
                 response in
                 self.responseResult(response, success: {response in
-                    if let arrayResponse = response as? [AnyObject]{
+                    if let arrayResponse = response as? Array<AnyObject>{
                         success(arrayResponse)
                     }
                     else{
-                        Utility.hideLoader()
-                        Utility.main.showAlert(message: Strings.RESPONSE_ERROR.rawValue + "\(route)", title: Strings.ERROR.text)
+                        success(Array<AnyObject>())
                     }
                 }, failure: {error in
                     
@@ -302,12 +277,11 @@ extension APIManagerBase{
             Alamofire.request(route, method: .post, parameters: parameters, encoding: URLEncoding.default).responseJSON{
                 response in
                 self.responseResult(response, success: {response in
-                    if let arrayResponse = response as? [AnyObject]{
+                    if let arrayResponse = response as? Array<AnyObject>{
                         success(arrayResponse)
                     }
                     else{
-                        Utility.hideLoader()
-                        Utility.main.showAlert(message: Strings.RESPONSE_ERROR.rawValue + "\(route)", title: Strings.ERROR.text)
+                        success(Array<AnyObject>())
                     }
                 }, failure: {error in
                     failure(error as NSError)
@@ -328,8 +302,7 @@ extension APIManagerBase{
                         success(dictionaryResponse)
                     }
                     else{
-                        Utility.hideLoader()
-                        Utility.main.showAlert(message: Strings.RESPONSE_ERROR.rawValue + "\(route)", title: Strings.ERROR.text)
+                        success(Dictionary<String, AnyObject>())
                     }
                 }, failure: {error in
                     failure(error as NSError)
@@ -343,8 +316,7 @@ extension APIManagerBase{
                         success(dictionaryResponse)
                     }
                     else{
-                        Utility.hideLoader()
-                        Utility.main.showAlert(message: Strings.RESPONSE_ERROR.rawValue + "\(route)", title: Strings.ERROR.text)
+                        success(Dictionary<String, AnyObject>())
                     }
                 }, failure: {error in
                     failure(error as NSError)
@@ -452,8 +424,7 @@ extension APIManagerBase{
                                     success(dictionaryResponse)
                                 }
                                 else{
-                                    Utility.hideLoader()
-                                    Utility.main.showAlert(message: Strings.RESPONSE_ERROR.rawValue + "\(route)", title: Strings.ERROR.text)
+                                    success(Dictionary<String, AnyObject>())
                                 }
                             }, failure: {error in
                                 
@@ -508,8 +479,7 @@ extension APIManagerBase{
                         success(stringResponse)
                     }
                     else{
-                        Utility.hideLoader()
-                        Utility.main.showAlert(message: Strings.RESPONSE_ERROR.rawValue + "\(route)", title: Strings.ERROR.text)
+                        success(String())
                     }
                 }, failure: {error in
                     failure(error as NSError)
@@ -524,8 +494,7 @@ extension APIManagerBase{
                         success(stringResponse)
                     }
                     else{
-                        Utility.hideLoader()
-                        Utility.main.showAlert(message: Strings.RESPONSE_ERROR.rawValue + "\(route)", title: Strings.ERROR.text)
+                        success(String())
                     }
                 }, failure: {error in
                     failure(error as NSError)
@@ -545,8 +514,7 @@ extension APIManagerBase{
                         success(intResponse)
                     }
                     else{
-                        Utility.hideLoader()
-                        Utility.main.showAlert(message: Strings.RESPONSE_ERROR.rawValue + "\(route)", title: Strings.ERROR.text)
+                        success(Int())
                     }
                 }, failure: {error in
                     failure(error as NSError)
@@ -561,8 +529,7 @@ extension APIManagerBase{
                         success(intResponse)
                     }
                     else{
-                        Utility.hideLoader()
-                        Utility.main.showAlert(message: Strings.RESPONSE_ERROR.rawValue + "\(route)", title: Strings.ERROR.text)
+                        success(Int())
                     }
                 }, failure: {error in
                     failure(error as NSError)
@@ -609,8 +576,8 @@ extension APIManagerBase{
     }
     
     func deleteBoolResponseWith(route: URL,parameters: Parameters,
-                              success:@escaping DefaultBoolResultAPISuccesClosure,
-                              failure:@escaping DefaultAPIFailureClosure, withHeader:Bool){
+                                success:@escaping DefaultBoolResultAPISuccesClosure,
+                                failure:@escaping DefaultAPIFailureClosure, withHeader:Bool){
         
         if withHeader{
             Alamofire.request(route, method: .delete, parameters: parameters, encoding: URLEncoding.default, headers: getAuthorizationHeader()).responseJSON{
@@ -652,8 +619,7 @@ extension APIManagerBase{
                         success(dictionaryResponse)
                     }
                     else{
-                        Utility.hideLoader()
-                        Utility.main.showAlert(message: Strings.RESPONSE_ERROR.rawValue + "\(route)", title: Strings.ERROR.text)
+                        success(Dictionary<String, AnyObject>())
                     }
                 }, failure: {error in
                     failure(error as NSError)
@@ -684,12 +650,11 @@ extension APIManagerBase{
             Alamofire.request(route, method: .put, parameters: parameters, encoding: URLEncoding.default, headers: getAuthorizationHeader()).responseJSON{
                 response in
                 self.responseResult(response, success: {response in
-                    if let arrayResponse = response as? [AnyObject]{
+                    if let arrayResponse = response as? Array<AnyObject>{
                         success(arrayResponse)
                     }
                     else{
-                        Utility.hideLoader()
-                        Utility.main.showAlert(message: Strings.RESPONSE_ERROR.rawValue + "\(route)", title: Strings.ERROR.text)
+                        success(Array<AnyObject>())
                     }
                 }, failure: {error in
                     failure(error as NSError)
@@ -699,12 +664,11 @@ extension APIManagerBase{
             Alamofire.request(route, method: .put, parameters: parameters, encoding: URLEncoding.default).responseJSON{
                 response in
                 self.responseResult(response, success: {response in
-                    if let arrayResponse = response as? [AnyObject]{
+                    if let arrayResponse = response as? Array<AnyObject>{
                         success(arrayResponse)
                     }
                     else{
-                        Utility.hideLoader()
-                        Utility.main.showAlert(message: Strings.RESPONSE_ERROR.rawValue + "\(route)", title: Strings.ERROR.text)
+                        success(Array<AnyObject>())
                     }
                 }, failure: {error in
                     failure(error as NSError)
@@ -739,8 +703,7 @@ extension APIManagerBase{
                                                 success(dictionaryResponse)
                                             }
                                             else{
-                                                Utility.hideLoader()
-                                                Utility.main.showAlert(message: Strings.RESPONSE_ERROR.rawValue + "\(route)", title: Strings.ERROR.text)
+                                                success(Dictionary<String, AnyObject>())
                                             }
                                         }, failure: {error in
                                             
@@ -777,8 +740,7 @@ extension APIManagerBase{
                                     success(dictionaryResponse)
                                 }
                                 else{
-                                    Utility.hideLoader()
-                                    Utility.main.showAlert(message: Strings.RESPONSE_ERROR.rawValue + "\(route)", title: Strings.ERROR.text)
+                                    success(Dictionary<String, AnyObject>())
                                 }
                             }, failure: {error in
                                 

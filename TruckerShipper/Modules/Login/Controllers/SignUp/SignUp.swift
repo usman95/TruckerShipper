@@ -8,6 +8,7 @@
 
 import UIKit
 import DropDown
+import ObjectMapper
 
 class SignUp: BaseController {
     
@@ -22,11 +23,13 @@ class SignUp: BaseController {
     @IBOutlet weak var tvTermsAndPolicies: UITextView!
     
     var selectedShipper: String?
-    var arrShipper = ["Individual","Company"]
+    var arrShipper = [String]()
     let shipperDropDown = DropDown()
+    var selectedRole: RoleModel?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.getAttributes()
         self.setUI()
         // Do any additional setup after loading the view.
     }
@@ -35,6 +38,7 @@ class SignUp: BaseController {
         self.shipperDropDown.show()
     }
     @IBAction func onBtnShowPassword(_ sender: UIButton) {
+        sender.isSelected = !sender.isSelected
         switch sender.tag{
         case 0:
             self.tfPassword.isSecureTextEntry = !self.tfPassword.isSecureTextEntry
@@ -58,8 +62,8 @@ extension SignUp{
         self.shipperDropDown.cellHeight = self.tfShipperType.frame.height
         self.shipperDropDown.width = self.tfShipperType.frame.width
         self.shipperDropDown.selectionAction = { [unowned self] (index: Int, item: String) in
-          print("Selected item: \(item) at index: \(index)")
             self.tfShipperType.text = item
+            self.selectedShipper = item
         }
     }
     private func setTermsAndPoliciesTextView(){
@@ -89,36 +93,41 @@ extension SignUp{
         self.tvTermsAndPolicies.attributedText = attributedModifiedMessage
         self.tvTermsAndPolicies.textAlignment = .center
     }
+    private func getAttributes(){
+        self.getRoles()
+        self.getShipperTypes()
+    }
     private func validate()->[String:Any]?{
-        let first_name = self.tfFirstName.text ?? ""
-        let last_name = self.tfLastName.text ?? ""
-        let email_address = self.tfEmailAddress.text ?? ""
-        let phone_number = self.tfPhoneNumber.text ?? ""
-        let shipper_type = self.selectedShipper ?? ""
+        let firstName = self.tfFirstName.text ?? ""
+        let lastName = self.tfLastName.text ?? ""
+        let email = self.tfEmailAddress.text ?? ""
+        let contactNo = self.tfPhoneNumber.text ?? ""
+        let roleId = self.selectedRole?.id ?? ""
+        let shipperType = self.selectedShipper ?? ""
         let password = self.tfPassword.text ?? ""
         let confirm_password = self.tfConfirmPassword.text ?? ""
         
-        if !Validation.isValidName(first_name){
+        if !Validation.isValidName(firstName){
             Utility.main.showToast(message: Strings.INVALID_F_NAME.text)
             self.btnCreateAnAccount.shake()
             return nil
         }
-        if !Validation.isValidName(last_name){
+        if !Validation.isValidName(lastName){
             Utility.main.showToast(message: Strings.INVALID_L_NAME.text)
             self.btnCreateAnAccount.shake()
             return nil
         }
-        if !Validation.isValidEmail(email_address){
+        if !Validation.isValidEmail(email){
             Utility.main.showToast(message: Strings.INVALID_EMAIL.text)
             self.btnCreateAnAccount.shake()
             return nil
         }
-        if !Validation.isValidNumber(phone_number){
+        if !Validation.isValidNumber(contactNo){
             Utility.main.showToast(message: Strings.INVALID_PHONE.text)
             self.btnCreateAnAccount.shake()
             return nil
         }
-        if !Validation.validateStringLength(shipper_type){
+        if !Validation.validateStringLength(shipperType){
             Utility.main.showToast(message: Strings.SELECT_SHIPPER.text)
             self.btnCreateAnAccount.shake()
             return nil
@@ -134,11 +143,12 @@ extension SignUp{
             return nil
         }
         
-        let params:[String:Any] = ["first_name":first_name,
-                                   "last_name":last_name,
-                                   "email_address":email_address,
-                                   "phone_number":phone_number,
-                                   "shipper_type":shipper_type,
+        let params:[String:Any] = ["firstName":firstName,
+                                   "lastName":lastName,
+                                   "email":email,
+                                   "contactNo":contactNo,
+                                   "roleId":roleId,
+                                   "shipperType":shipperType,
                                    "password":password]
         return params
     }
@@ -158,8 +168,30 @@ extension SignUp: UITextViewDelegate{
 }
 //MARK:- Services
 extension SignUp{
+    private func getRoles(){
+        APIManager.sharedInstance.usersAPIManager.Roles(success: { (responseObject) in
+            guard let roles = responseObject as? [[String:Any]] else {return}
+            let arrRoles = Mapper<RoleModel>().mapArray(JSONArray: roles)
+            self.selectedRole = arrRoles.filter{$0.title == RoleType.Shipper.rawValue}.first
+        }) { (error) in
+            print(error)
+        }
+    }
+    private func getShipperTypes(){
+        APIManager.sharedInstance.usersAPIManager.ShipperTypes(success: { (responseObject) in
+            guard let shipper = responseObject as? [String] else {return}
+            self.arrShipper = shipper
+            self.setShipperDropDown()
+        }) { (error) in
+            print(error)
+        }
+    }
     private func signUp(){
         guard let params = self.validate() else {return}
-        print(params)
+        APIManager.sharedInstance.usersAPIManager.SignUp(params: params, success: { (responseObject) in
+            print(responseObject)
+        }) { (error) in
+            print(error)
+        }
     }
 }

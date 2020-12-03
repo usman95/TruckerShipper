@@ -12,10 +12,8 @@ struct Global{
 
 struct Constants {
     //MARK:- Base URL
-//    static let BaseURL                     = "https://uat.quickdeliveryslu.com/api/"
-//    static let SocketBaseURL               = "https://uat.quickdeliveryslu.com/"
-    static let BaseURL                     = "https://quickdeliveryslu.com/api/"
-    static let SocketBaseURL               = "https://quickdeliveryslu.com/"
+    static let BaseURL                     = "http://13.212.49.143:3000"
+    static let SocketBaseURL               = ""
     static let APP_DELEGATE                = UIApplication.shared.delegate as! AppDelegate
     static let UIWINDOW                    = UIApplication.shared.delegate!.window!
     static let USER_DEFAULTS               = UserDefaults.standard

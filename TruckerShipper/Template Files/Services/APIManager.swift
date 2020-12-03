@@ -25,7 +25,7 @@ class APIManager: NSObject {
     var serverToken: String? {
         get{
             if AppStateManager.sharedInstance.isUserLoggedIn(){
-                return AppStateManager.sharedInstance.loggedInUser.accessToken
+                return AppStateManager.sharedInstance.loggedInUser.authToken
             }
             return Constants.accessToken
         }

@@ -7,20 +7,23 @@
 //
 
 import UIKit
+import ObjectMapper
 
 class Login: BaseController {
 
-    @IBOutlet weak var tfUserName: UITextFieldDeviceClass!
+    @IBOutlet weak var tfEmailAddress: UITextFieldDeviceClass!
     @IBOutlet weak var tfPassword: UITextFieldDeviceClass!
     @IBOutlet weak var btnLogin: UIButtonDeviceClass!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.tfEmailAddress.text = "ahmer@mailinator.com"
+        self.tfPassword.text = "abcdev123"
         // Do any additional setup after loading the view.
     }
     
     @IBAction func onBtnShowPassword(_ sender: UIButton) {
+        sender.isSelected = !sender.isSelected
         self.tfPassword.isSecureTextEntry = !self.tfPassword.isSecureTextEntry
     }
     @IBAction func onBtnForgotPassword(_ sender: Any) {
@@ -36,11 +39,11 @@ class Login: BaseController {
 //MARK:- Helper Methods
 extension Login{
     private func validate() -> [String:Any]? {
-        let userName = self.tfUserName.text ?? ""
+        let email = self.tfEmailAddress.text ?? ""
         let password = self.tfPassword.text ?? ""
         
-        if !Validation.isValidName(userName){
-            Utility.main.showToast(message: Strings.INVALID_NAME.text)
+        if !Validation.isValidEmail(email){
+            Utility.main.showToast(message: Strings.INVALID_EMAIL.text)
             self.btnLogin.shake()
             return nil
         }
@@ -50,7 +53,7 @@ extension Login{
             return nil
         }
         
-        let params:[String:Any] = ["userName":userName,
+        let params:[String:Any] = ["email":email,
                                    "password":password]
         return params
     }
@@ -58,8 +61,13 @@ extension Login{
 //MARK:- Services
 extension Login{
     private func login(){
-//        guard let params = self.validate() else {return}
-        let user = UserModel()
-        AppStateManager.sharedInstance.loginUser(user: user)
+        guard let params = self.validate() else {return}
+        APIManager.sharedInstance.usersAPIManager.Login(params: params, success: { (responseObject) in
+            guard let user = Mapper<UserModel>().map(JSON: responseObject) else{return}
+            print(user)
+            AppStateManager.sharedInstance.loginUser(user: user)
+        }) { (error) in
+            print(error)
+        }
     }
 }

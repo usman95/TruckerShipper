@@ -10,8 +10,8 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="Login" customModule="TruckerShipper" customModuleProvider="target">
             <connections>
                 <outlet property="btnLogin" destination="RcO-ug-5yU" id="oiH-n3-UGS"/>
+                <outlet property="tfEmailAddress" destination="UQa-1E-Pd7" id="eN1-xO-16B"/>
                 <outlet property="tfPassword" destination="pFn-VU-lxZ" id="GyZ-r5-aBR"/>
-                <outlet property="tfUserName" destination="UQa-1E-Pd7" id="n1N-em-7mC"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>

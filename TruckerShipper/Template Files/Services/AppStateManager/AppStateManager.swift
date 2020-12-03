@@ -84,14 +84,6 @@ extension AppStateManager{
         }
         AppDelegate.shared.changeRootViewController()
     }
-    func isGuestLoggedIn()->Bool{
-        if self.loggedInUser != nil {
-            if self.loggedInUser.isGuest {
-                return true
-            }
-        }
-        return false
-    }
 }
 extension AppStateManager{
     private func processLogoutUser(){

@@ -12,3 +12,6 @@ enum LocalizationType: String{
     case EN = "en"
     case UR = "ur"
 }
+enum RoleType: String{
+    case Shipper = "Shipper"
+}
