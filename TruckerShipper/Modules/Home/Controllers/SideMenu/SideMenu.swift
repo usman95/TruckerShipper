@@ -39,15 +39,26 @@ class SideMenu: UIViewController {
             self.sideMenuController?.hideRightViewAnimated()
         }
         switch sender.tag {
-        case 0:
+        case 2:
             self.pushToNotifications()
-        case 1:
-            self.pushToTripExpenses()
-        default:
+//        case 1:
+//            self.pushToTripExpenses()
+        case 5:
+            self.pushToMyAccount()
+        case 7:
             AppStateManager.sharedInstance.logoutUser()
+        default:
+            break
         }
     }
-    
+    @IBAction func onBtnPrivacyAndTerms(_ sender: UIButton) {
+        switch sender.tag {
+        case 0:
+            break
+        default:
+            break
+        }
+    }
 }
 //MARK:- Helper Methods
 extension SideMenu{
@@ -73,5 +84,11 @@ extension SideMenu{
         guard let topController = Utility.main.topViewController() as? LGSideMenuController else {return}
         guard let topNavigationController = topController.rootViewController as? UINavigationController else {return}
         topNavigationController.pushViewController(controller, animated: true)
-    }    
+    }
+    private func pushToMyAccount(){
+        let controller = MyAccount()
+        guard let topController = Utility.main.topViewController() as? LGSideMenuController else {return}
+        guard let topNavigationController = topController.rootViewController as? UINavigationController else {return}
+        topNavigationController.pushViewController(controller, animated: true)
+    }
 }

@@ -85,6 +85,8 @@
 		FA6B424F25791ABE00C6D106 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6B424825791ABE00C6D106 /* User.swift */; };
 		FA6B425025791ABE00C6D106 /* CityId.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6B424925791ABE00C6D106 /* CityId.swift */; };
 		FAE067CA257AE6A2005E1C97 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE067C9257AE6A2005E1C97 /* CardView.swift */; };
+		FAE067CE257AF5EB005E1C97 /* MyAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE067CC257AF5EB005E1C97 /* MyAccount.swift */; };
+		FAE067CF257AF5EB005E1C97 /* MyAccount.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAE067CD257AF5EB005E1C97 /* MyAccount.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -170,6 +172,8 @@
 		FA6B424825791ABE00C6D106 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		FA6B424925791ABE00C6D106 /* CityId.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CityId.swift; sourceTree = "<group>"; };
 		FAE067C9257AE6A2005E1C97 /* CardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		FAE067CC257AF5EB005E1C97 /* MyAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAccount.swift; sourceTree = "<group>"; };
+		FAE067CD257AF5EB005E1C97 /* MyAccount.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyAccount.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -483,6 +487,7 @@
 				FA37EA7E25740EAD0073CF0C /* Home */,
 				FA37EA8125740EAD0073CF0C /* TripExpenses */,
 				FA37EA8E25740EAD0073CF0C /* SideMenu */,
+				FAE067CB257AF3A1005E1C97 /* MyAccount */,
 				FA37EA9125740EAD0073CF0C /* Notifications */,
 			);
 			path = Controllers;
@@ -648,6 +653,15 @@
 			path = CardView;
 			sourceTree = "<group>";
 		};
+		FAE067CB257AF3A1005E1C97 /* MyAccount */ = {
+			isa = PBXGroup;
+			children = (
+				FAE067CC257AF5EB005E1C97 /* MyAccount.swift */,
+				FAE067CD257AF5EB005E1C97 /* MyAccount.xib */,
+			);
+			path = MyAccount;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -715,6 +729,7 @@
 				FA37EA7325740E4C0073CF0C /* Greycliff-cf-regular.ttf in Resources */,
 				FA37EAB125740EAE0073CF0C /* Login.xib in Resources */,
 				FA37EA9F25740EAD0073CF0C /* Home.xib in Resources */,
+				FAE067CF257AF5EB005E1C97 /* MyAccount.xib in Resources */,
 				FA37EAA925740EAD0073CF0C /* SideMenu.xib in Resources */,
 				FA37EAA225740EAD0073CF0C /* TripExpenses.xib in Resources */,
 				FA37EAA425740EAD0073CF0C /* TripExpensesTVC.xib in Resources */,
@@ -806,6 +821,7 @@
 				FA37EA5F25740E4C0073CF0C /* UIView+Extention.swift in Sources */,
 				FA37EA5925740E4C0073CF0C /* Constants.swift in Sources */,
 				FA37EA6125740E4C0073CF0C /* UIButton+Extension.swift in Sources */,
+				FAE067CE257AF5EB005E1C97 /* MyAccount.swift in Sources */,
 				FA37EAAE25740EAD0073CF0C /* NotificationsTVC.swift in Sources */,
 				FA37EA7925740E4C0073CF0C /* UserAPIManager.swift in Sources */,
 				FA37EA7725740E4C0073CF0C /* APIManagerBase.swift in Sources */,

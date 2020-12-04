@@ -78,15 +78,11 @@ extension SignUp{
         let regex1 = try! NSRegularExpression(pattern: termsString,options: .caseInsensitive)
         for match in regex1.matches(in: mainString, options: NSRegularExpression.MatchingOptions(), range: NSRange(location: 0, length: mainString.count)) as [NSTextCheckingResult] {
             attributedModifiedMessage.addAttribute(NSAttributedString.Key.link, value: "https://terms.com", range: match.range)
-            attributedModifiedMessage.addAttribute(NSAttributedString.Key.underlineStyle, value: NSUnderlineStyle.single.rawValue, range: match.range)
-            attributedModifiedMessage.addAttribute(NSAttributedString.Key.underlineColor, value: Global.APP_COLOR, range: match.range)
             attributedModifiedMessage.addAttribute(NSAttributedString.Key.font, value: UIFont.boldSystemFont(ofSize: 15), range: match.range)
         }
         let regex2 = try! NSRegularExpression(pattern: policyString,options: .caseInsensitive)
         for match in regex2.matches(in: mainString, options: NSRegularExpression.MatchingOptions(), range: NSRange(location: 0, length: mainString.count)) as [NSTextCheckingResult] {
             attributedModifiedMessage.addAttribute(NSAttributedString.Key.link, value: "https://policy.com", range: match.range)
-            attributedModifiedMessage.addAttribute(NSAttributedString.Key.underlineStyle, value: NSUnderlineStyle.single.rawValue, range: match.range)
-            attributedModifiedMessage.addAttribute(NSAttributedString.Key.underlineColor, value: Global.APP_COLOR, range: match.range)
             attributedModifiedMessage.addAttribute(NSAttributedString.Key.font, value: UIFont.boldSystemFont(ofSize: 15), range: match.range)
         }
         self.tvTermsAndPolicies.delegate = self

@@ -112,6 +112,9 @@
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yV5-fb-teb">
                                                     <rect key="frame" x="0.0" y="0.0" width="325" height="56"/>
+                                                    <connections>
+                                                        <action selector="onBtnOption:" destination="-1" eventType="touchUpInside" id="TWP-4H-Kdo"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -149,6 +152,9 @@
                                                 </label>
                                                 <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dXO-3Y-bke">
                                                     <rect key="frame" x="0.0" y="0.0" width="325" height="56"/>
+                                                    <connections>
+                                                        <action selector="onBtnOption:" destination="-1" eventType="touchUpInside" id="F71-Gl-9c3"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -184,8 +190,11 @@
                                                         <userDefinedRuntimeAttribute type="string" keyPath="iPhoneFontWeight" value="bold"/>
                                                     </userDefinedRuntimeAttributes>
                                                 </label>
-                                                <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vOg-zW-dOA">
+                                                <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vOg-zW-dOA">
                                                     <rect key="frame" x="0.0" y="0.0" width="325" height="56"/>
+                                                    <connections>
+                                                        <action selector="onBtnOption:" destination="-1" eventType="touchUpInside" id="oWn-rz-j2D"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -221,8 +230,11 @@
                                                         <userDefinedRuntimeAttribute type="string" keyPath="iPhoneFontWeight" value="bold"/>
                                                     </userDefinedRuntimeAttributes>
                                                 </label>
-                                                <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SgV-9q-J7b">
+                                                <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SgV-9q-J7b">
                                                     <rect key="frame" x="0.0" y="0.0" width="325" height="56"/>
+                                                    <connections>
+                                                        <action selector="onBtnOption:" destination="-1" eventType="touchUpInside" id="3Jh-7e-Rt8"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -258,8 +270,11 @@
                                                         <userDefinedRuntimeAttribute type="string" keyPath="iPhoneFontWeight" value="bold"/>
                                                     </userDefinedRuntimeAttributes>
                                                 </label>
-                                                <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2iI-3G-fIF">
+                                                <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2iI-3G-fIF">
                                                     <rect key="frame" x="0.0" y="0.0" width="325" height="56"/>
+                                                    <connections>
+                                                        <action selector="onBtnOption:" destination="-1" eventType="touchUpInside" id="kdU-kR-JgB"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -295,8 +310,11 @@
                                                         <userDefinedRuntimeAttribute type="string" keyPath="iPhoneFontWeight" value="bold"/>
                                                     </userDefinedRuntimeAttributes>
                                                 </label>
-                                                <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x5J-P6-MNe">
+                                                <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x5J-P6-MNe">
                                                     <rect key="frame" x="0.0" y="0.0" width="325" height="56"/>
+                                                    <connections>
+                                                        <action selector="onBtnOption:" destination="-1" eventType="touchUpInside" id="eIo-sX-MPl"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -332,8 +350,11 @@
                                                         <userDefinedRuntimeAttribute type="string" keyPath="iPhoneFontWeight" value="bold"/>
                                                     </userDefinedRuntimeAttributes>
                                                 </label>
-                                                <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ldw-JE-pJC">
+                                                <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ldw-JE-pJC">
                                                     <rect key="frame" x="0.0" y="0.0" width="325" height="56"/>
+                                                    <connections>
+                                                        <action selector="onBtnOption:" destination="-1" eventType="touchUpInside" id="QEV-RU-rTi"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -369,7 +390,7 @@
                                                         <userDefinedRuntimeAttribute type="string" keyPath="iPhoneFontWeight" value="bold"/>
                                                     </userDefinedRuntimeAttributes>
                                                 </label>
-                                                <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5cF-vP-doB">
+                                                <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5cF-vP-doB">
                                                     <rect key="frame" x="0.0" y="0.0" width="325" height="56"/>
                                                     <connections>
                                                         <action selector="onBtnOption:" destination="-1" eventType="touchUpInside" id="6ka-hi-jAH"/>
@@ -404,8 +425,11 @@
                                                 </userDefinedRuntimeAttribute>
                                                 <userDefinedRuntimeAttribute type="string" keyPath="iPhoneFontWeight" value="bold"/>
                                             </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="onBtnPrivacyAndTerms:" destination="-1" eventType="touchUpInside" id="poG-3u-UDZ"/>
+                                            </connections>
                                         </button>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zm4-4c-jDU" customClass="UIButtonDeviceClass" customModule="TruckerShipper" customModuleProvider="target">
+                                        <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zm4-4c-jDU" customClass="UIButtonDeviceClass" customModule="TruckerShipper" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="50" width="160" height="30"/>
                                             <state key="normal" title="TERMS &amp; CONDITIONS">
                                                 <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -416,6 +440,9 @@
                                                 </userDefinedRuntimeAttribute>
                                                 <userDefinedRuntimeAttribute type="string" keyPath="iPhoneFontWeight" value="bold"/>
                                             </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="onBtnPrivacyAndTerms:" destination="-1" eventType="touchUpInside" id="DVp-uh-xgA"/>
+                                            </connections>
                                         </button>
                                     </subviews>
                                 </stackView>
