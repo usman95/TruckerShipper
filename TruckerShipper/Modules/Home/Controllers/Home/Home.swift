@@ -37,18 +37,8 @@ class Home: BaseController {
     var polyline = GMSPolyline()
     var animationPolyline = GMSPolyline()
     var path = GMSPath()
-    var animationPath = GMSMutablePath()
-    var i: UInt = 0
-    var timer: Timer!
     var pickUpLocationMarker = GMSMarker()
     var dropOffLocationMarker = GMSMarker()
-    var minDate: Date {
-        return (Calendar.current as NSCalendar).date(byAdding: .day, value: 0, to: Date(), options: [])!//10
-    }
-    var maxDate: Date {
-        return (Calendar.current as NSCalendar).date(byAdding: .day, value: 70, to: Date(), options: [])!
-    }
-    var selectedDate:Date?
     var flagShouldReverseGeoCode = false
     
     override func viewDidLoad() {
@@ -314,7 +304,6 @@ extension Home{
         }
     }
     private func drawRoute(routesArray: [JSON]) {
-        self.resetPolyline()
         if !routesArray.isEmpty{
             let routeDict = routesArray[0]
             let routeOverviewPolyline = routeDict["overview_polyline"].dictionary
@@ -324,27 +313,8 @@ extension Home{
             self.polyline.strokeColor = Global.APP_COLOR
             self.polyline.strokeWidth = 3.0
             self.polyline.map = self.mapView
-            self.timer = Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: #selector(animatePolylinePath), userInfo: nil, repeats: true)
             self.fitAllMarkersBounds()
         }
-    }
-    @objc private func animatePolylinePath() {
-        if (self.i < self.path.count()) {
-            self.animationPath.add(self.path.coordinate(at: self.i))
-            self.animationPolyline.path = self.animationPath
-            self.animationPolyline.strokeColor = UIColor.lightGray
-            self.animationPolyline.strokeWidth = 3
-            self.animationPolyline.map = self.mapView
-            self.i += 1
-        }
-        else {
-            self.resetPolyline()
-        }
-    }
-    private func resetPolyline(){
-        self.i = 0
-        self.animationPath = GMSMutablePath()
-        self.animationPolyline.map = nil
     }
     private func getDistance()->String?{
         if self.path.count() == 0{return nil}
@@ -395,6 +365,7 @@ extension Home{
         self.fitAllMarkersBounds()
     }
 }
+//MARK:- GMSAutocompleteViewControllerDelegate
 extension Home: GMSAutocompleteViewControllerDelegate{
     func viewController(_ viewController: GMSAutocompleteViewController, didAutocompleteWith place: GMSPlace) {
         self.dismiss(animated: true, completion: {
