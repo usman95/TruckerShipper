@@ -10,6 +10,7 @@ import UIKit
 import LGSideMenuController
 import GoogleMaps
 import GooglePlaces
+import IQKeyboardManagerSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -22,6 +23,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         MOLH.shared.activate(true)
         GMSServices.provideAPIKey(Constants.apiKey)
         GMSPlacesClient.provideAPIKey(Constants.apiKey)
+        IQKeyboardManager.shared.enable = true
         self.changeRootViewController()
         return true
     }
