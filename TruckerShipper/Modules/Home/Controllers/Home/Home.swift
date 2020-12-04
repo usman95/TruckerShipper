@@ -144,9 +144,10 @@ extension Home{
         for marker in markerList {
             bounds = bounds.includingCoordinate(marker.position)
         }
-        print(markerList)
         let update = GMSCameraUpdate.fit(bounds, withPadding: CGFloat(160))
         self.mapView.animate(with: update)
+        
+        print("KM: \(getDistance() ?? "")")
     }
     private func getPathBounds()->[GMSMarker]?{
         if self.path.count() == 0{return nil}
