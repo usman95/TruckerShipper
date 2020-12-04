@@ -90,6 +90,10 @@ SOFTWARE.
 
 Copyright 2020 Google
 
+## GooglePlaces
+
+Copyright 2020 Google
+
 ## IQKeyboardManagerSwift
 
 MIT License

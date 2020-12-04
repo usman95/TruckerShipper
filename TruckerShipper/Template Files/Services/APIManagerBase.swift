@@ -8,7 +8,7 @@ enum Route: String {
     case Roles = "/public/roles"
     case ShipperTypes = "/public/shipper-types"
     case SignUp = "/auth/sign-up"
-    case Login = "/auth/login"
+    case Login = "/auth/shipper/login"
     case ForgotPassword = "/auth/forget-pass"
 }
 class APIManagerBase: NSObject {

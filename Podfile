@@ -22,5 +22,6 @@ target 'TruckerShipper' do
   pod 'Toast-Swift'
   pod 'CRRefresh'
   pod 'GoogleMaps'
+  pod 'GooglePlaces'
   
 end

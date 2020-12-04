@@ -9,6 +9,7 @@
 import UIKit
 import LGSideMenuController
 import GoogleMaps
+import GooglePlaces
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -20,6 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         MOLH.shared.activate(true)
         GMSServices.provideAPIKey(Constants.apiKey)
+        GMSPlacesClient.provideAPIKey(Constants.apiKey)
         self.changeRootViewController()
         return true
     }

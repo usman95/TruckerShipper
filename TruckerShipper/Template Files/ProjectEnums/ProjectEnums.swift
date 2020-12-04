@@ -15,3 +15,7 @@ enum LocalizationType: String{
 enum RoleType: String{
     case Shipper = "Shipper"
 }
+enum LocationPickerType{
+    case pickUp
+    case dropOff
+}

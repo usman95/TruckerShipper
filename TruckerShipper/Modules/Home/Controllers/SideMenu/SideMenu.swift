@@ -20,16 +20,16 @@ class SideMenu: UIViewController {
     }
     
     @IBAction func onSegmentLocalization(_ sender: UISegmentedControl) {
-        switch sender.selectedSegmentIndex {
-        case 0:
-            MOLH.setLanguageTo(LocalizationType.EN.rawValue)
-            MOLH.reset(transition: .curveEaseIn, duration: 1)
-            AppDelegate.shared.changeRootViewController()
-        default:
-            MOLH.setLanguageTo(LocalizationType.UR.rawValue)
-            MOLH.reset(transition: .curveEaseIn, duration: 1)
-            AppDelegate.shared.changeRootViewController()
-        }
+//        switch sender.selectedSegmentIndex {
+//        case 0:
+//            MOLH.setLanguageTo(LocalizationType.EN.rawValue)
+//            MOLH.reset(transition: .curveEaseIn, duration: 1)
+//            AppDelegate.shared.changeRootViewController()
+//        default:
+//            MOLH.setLanguageTo(LocalizationType.UR.rawValue)
+//            MOLH.reset(transition: .curveEaseIn, duration: 1)
+//            AppDelegate.shared.changeRootViewController()
+//        }
     }
     @IBAction func onBtnOption(_ sender: UIButton) {
         if MOLHLanguage.currentAppleLanguage() == "en"{

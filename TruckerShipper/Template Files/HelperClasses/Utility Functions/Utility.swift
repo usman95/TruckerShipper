@@ -104,44 +104,44 @@ extension Utility{
 }
 //MARK:- Validation Alert
 extension Utility{
-//    func showAlert(message:String){
-//        let storyboard = AppStoryboard.Login.instance
-//        guard let controller = storyboard.instantiateViewController(identifier: "ValidationController") as? ValidationController else {return}
-//        controller.message = message
-//        Utility().topViewController()!.present(controller, animated: true, completion: nil)
-//    }
-//    func showAlert(message: String, usingCompletionHandler handler:@escaping (() -> Swift.Void)) {
-//        let storyboard = AppStoryboard.Login.instance
-//        guard let controller = storyboard.instantiateViewController(identifier: "ConfirmationController") as? ConfirmationController else {return}
-//        controller.message = message
-//        Utility().topViewController()!.present(controller, animated: true, completion: nil)
-//        
-//        controller.dismiss = { _ in
-//            handler()
-//        }
-//    }
-//    func showAlert(message: String, YES: String, NO: String, completionHandler: @escaping (Bool, Bool) -> Void) {
-//        let storyboard = AppStoryboard.Login.instance
-//        guard let controller = storyboard.instantiateViewController(identifier: "ConfirmController") as? ConfirmController else {return}
-//        controller.message = message
-//        controller.yesText = YES
-//        controller.noText = NO
-//        Utility().topViewController()!.present(controller, animated: true, completion: nil)
-//        
-//        controller.dismiss = { Yes,No in
-//            completionHandler(Yes, No)
-//        }
-//    }
-//    func showSorryAlert(message: String, usingCompletionHandler handler:@escaping (() -> Swift.Void)) {
-//        let storyboard = AppStoryboard.Login.instance
-//        guard let controller = storyboard.instantiateViewController(identifier: "SorryController") as? SorryController else {return}
-//        controller.message = message
-//        Utility().topViewController()!.present(controller, animated: true, completion: nil)
-//        
-//        controller.dismiss = { _ in
-//            handler()
-//        }
-//    }
+    //    func showAlert(message:String){
+    //        let storyboard = AppStoryboard.Login.instance
+    //        guard let controller = storyboard.instantiateViewController(identifier: "ValidationController") as? ValidationController else {return}
+    //        controller.message = message
+    //        Utility().topViewController()!.present(controller, animated: true, completion: nil)
+    //    }
+    //    func showAlert(message: String, usingCompletionHandler handler:@escaping (() -> Swift.Void)) {
+    //        let storyboard = AppStoryboard.Login.instance
+    //        guard let controller = storyboard.instantiateViewController(identifier: "ConfirmationController") as? ConfirmationController else {return}
+    //        controller.message = message
+    //        Utility().topViewController()!.present(controller, animated: true, completion: nil)
+    //
+    //        controller.dismiss = { _ in
+    //            handler()
+    //        }
+    //    }
+    //    func showAlert(message: String, YES: String, NO: String, completionHandler: @escaping (Bool, Bool) -> Void) {
+    //        let storyboard = AppStoryboard.Login.instance
+    //        guard let controller = storyboard.instantiateViewController(identifier: "ConfirmController") as? ConfirmController else {return}
+    //        controller.message = message
+    //        controller.yesText = YES
+    //        controller.noText = NO
+    //        Utility().topViewController()!.present(controller, animated: true, completion: nil)
+    //
+    //        controller.dismiss = { Yes,No in
+    //            completionHandler(Yes, No)
+    //        }
+    //    }
+    //    func showSorryAlert(message: String, usingCompletionHandler handler:@escaping (() -> Swift.Void)) {
+    //        let storyboard = AppStoryboard.Login.instance
+    //        guard let controller = storyboard.instantiateViewController(identifier: "SorryController") as? SorryController else {return}
+    //        controller.message = message
+    //        Utility().topViewController()!.present(controller, animated: true, completion: nil)
+    //
+    //        controller.dismiss = { _ in
+    //            handler()
+    //        }
+    //    }
 }
 //MARK:- Go To Settings
 extension Utility{
@@ -222,7 +222,7 @@ extension Utility{
     }
     func presentSettingsAlert() {
         let settingsURL = URL(string: UIApplication.openSettingsURLString)!
-
+        
         DispatchQueue.main.async {
             let alert = UIAlertController(title: "Permission to Contacts", message: "QuickDelivery needs access to contacts in order to send them invitations.", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "Go to Settings", style: .default) { _ in
@@ -231,6 +231,20 @@ extension Utility{
             alert.addAction(UIAlertAction(title: "Cancel", style: .cancel))
             Utility.main.topViewController()?.present(alert, animated: true)
         }
+    }
+    func openSettings(){
+        let alertController = UIAlertController (title: "Go to Settings?", message: "Location permission is mandatory.", preferredStyle: .alert)
+        let settingsAction = UIAlertAction(title: "Settings", style: .default) { (_) -> Void in
+            guard let settingsUrl = URL(string: UIApplication.openSettingsURLString) else {return}
+            if UIApplication.shared.canOpenURL(settingsUrl) {
+                UIApplication.shared.open(settingsUrl, completionHandler: nil)
+            }
+        }
+        alertController.addAction(settingsAction)
+        let cancelAction = UIAlertAction(title: "Cancel", style: .default, handler: nil)
+        alertController.addAction(cancelAction)
+        
+        Utility.main.topViewController()?.present(alertController, animated: true, completion: nil)
     }
 }
 //MARK:- Phone contacts

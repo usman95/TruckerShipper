@@ -84,6 +84,7 @@
 		FA6B424E25791ABE00C6D106 /* UpdatedBy.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6B424725791ABE00C6D106 /* UpdatedBy.swift */; };
 		FA6B424F25791ABE00C6D106 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6B424825791ABE00C6D106 /* User.swift */; };
 		FA6B425025791ABE00C6D106 /* CityId.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6B424925791ABE00C6D106 /* CityId.swift */; };
+		FAE067CA257AE6A2005E1C97 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE067C9257AE6A2005E1C97 /* CardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -168,6 +169,7 @@
 		FA6B424725791ABE00C6D106 /* UpdatedBy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdatedBy.swift; sourceTree = "<group>"; };
 		FA6B424825791ABE00C6D106 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		FA6B424925791ABE00C6D106 /* CityId.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CityId.swift; sourceTree = "<group>"; };
+		FAE067C9257AE6A2005E1C97 /* CardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -250,6 +252,7 @@
 			isa = PBXGroup;
 			children = (
 				FA37EA1125740E4C0073CF0C /* Strings */,
+				FAE067C8257AE6A2005E1C97 /* CardView */,
 				FA37EA1325740E4C0073CF0C /* DynamicFonts */,
 				FA37EA1525740E4C0073CF0C /* MOLH */,
 				FA37EA1B25740E4C0073CF0C /* HelperClasses */,
@@ -637,6 +640,14 @@
 			path = UserModel;
 			sourceTree = "<group>";
 		};
+		FAE067C8257AE6A2005E1C97 /* CardView */ = {
+			isa = PBXGroup;
+			children = (
+				FAE067C9257AE6A2005E1C97 /* CardView.swift */,
+			);
+			path = CardView;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -836,6 +847,7 @@
 				FA37EA5525740E4C0073CF0C /* MOLHFontLocalizableViews.swift in Sources */,
 				FA37EA5A25740E4C0073CF0C /* Enums.swift in Sources */,
 				FA37E9FB2574099A0073CF0C /* AppDelegate.swift in Sources */,
+				FAE067CA257AE6A2005E1C97 /* CardView.swift in Sources */,
 				FA37EA6A25740E4C0073CF0C /* CustomLocale.swift in Sources */,
 				FA37EA6325740E4C0073CF0C /* UIViewController+Extension.swift in Sources */,
 				FA37EA5E25740E4C0073CF0C /* UIImageViewExtension.swift in Sources */,
@@ -999,6 +1011,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JLC45AAFJR;
 				INFOPLIST_FILE = TruckerShipper/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1018,6 +1031,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JLC45AAFJR;
 				INFOPLIST_FILE = TruckerShipper/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
