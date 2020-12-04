@@ -79,16 +79,17 @@ class Home: BaseController {
         self.pickLocationFromPlacePicker()
     }
     @IBAction func onBtnGoToMyLocation(_ sender: UIButton) {
-        if self.currentLocation == nil{
-            Utility.main.openSettings()
-            return
-        }
-        if self.pickUpLocation != nil && self.dropOffLocation != nil{
-            self.fitAllMarkersBounds()
-        }
-        else{
-            self.zoomToSearchLocation(location: self.currentLocation ?? CLLocationCoordinate2D())
-        }
+        self.fitAllMarkersBounds()
+//        if self.currentLocation == nil{
+//            Utility.main.openSettings()
+//            return
+//        }
+//        if self.pickUpLocation != nil && self.dropOffLocation != nil{
+//            self.fitAllMarkersBounds()
+//        }
+//        else{
+//            self.zoomToSearchLocation(location: self.currentLocation ?? CLLocationCoordinate2D())
+//        }
     }
     @IBAction func onBtnNext(_ sender: UIButton) {
     }

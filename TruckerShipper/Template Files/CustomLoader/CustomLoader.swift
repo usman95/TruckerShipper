@@ -10,7 +10,7 @@ class CustomLoader: UIView{
     fileprivate var backgroundView : UIView!
 
     //MARK:- ACCESS INSTANCE ONLY AND CHANGE ACCORDING TO YOUR NEEDS   *******
-    let colors : [UIColor] = [.red]//[Global.APP_COLOR]
+    let colors : [UIColor] = [Global.APP_COLOR]
     var defaultColor : UIColor = UIColor.red
     var isUsrInteractionEnable : Bool = false
     var defaultbgColor: UIColor = UIColor(white: 1, alpha: 0.5)
