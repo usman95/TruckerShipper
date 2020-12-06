@@ -25,7 +25,7 @@ class SignUp: BaseController {
     var selectedShipper: String?
     var arrShipper = [String]()
     let shipperDropDown = DropDown()
-    var selectedRole: RoleModel?
+    var selectedRole: AttributeModel?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -167,7 +167,7 @@ extension SignUp{
     private func getRoles(){
         APIManager.sharedInstance.usersAPIManager.Roles(success: { (responseObject) in
             guard let roles = responseObject as? [[String:Any]] else {return}
-            let arrRoles = Mapper<RoleModel>().mapArray(JSONArray: roles)
+            let arrRoles = Mapper<AttributeModel>().mapArray(JSONArray: roles)
             self.selectedRole = arrRoles.filter{$0.title == RoleType.Shipper.rawValue}.first
         }) { (error) in
             print(error)

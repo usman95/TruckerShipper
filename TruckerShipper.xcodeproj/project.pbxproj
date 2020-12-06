@@ -76,6 +76,9 @@
 		FA37EAB8257429350073CF0C /* ForgotPassword.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA37EAB6257429350073CF0C /* ForgotPassword.xib */; };
 		FA37EABB257432E10073CF0C /* SignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA37EAB9257432E10073CF0C /* SignUp.swift */; };
 		FA37EABC257432E10073CF0C /* SignUp.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA37EABA257432E10073CF0C /* SignUp.xib */; };
+		FA62D004257D6263000DCFDD /* AttributesAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA62D003257D6263000DCFDD /* AttributesAPIManager.swift */; };
+		FA62D008257D716C000DCFDD /* MyContracts.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA62D006257D716C000DCFDD /* MyContracts.swift */; };
+		FA62D009257D716C000DCFDD /* MyContracts.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA62D007257D716C000DCFDD /* MyContracts.xib */; };
 		FA6B42412578F97500C6D106 /* RoleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6B42402578F97500C6D106 /* RoleModel.swift */; };
 		FA6B424A25791ABE00C6D106 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6B424325791ABD00C6D106 /* UserModel.swift */; };
 		FA6B424B25791ABE00C6D106 /* CreatedBy.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6B424425791ABD00C6D106 /* CreatedBy.swift */; };
@@ -163,6 +166,9 @@
 		FA37EAB6257429350073CF0C /* ForgotPassword.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ForgotPassword.xib; sourceTree = "<group>"; };
 		FA37EAB9257432E10073CF0C /* SignUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUp.swift; sourceTree = "<group>"; };
 		FA37EABA257432E10073CF0C /* SignUp.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignUp.xib; sourceTree = "<group>"; };
+		FA62D003257D6263000DCFDD /* AttributesAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttributesAPIManager.swift; sourceTree = "<group>"; };
+		FA62D006257D716C000DCFDD /* MyContracts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyContracts.swift; sourceTree = "<group>"; };
+		FA62D007257D716C000DCFDD /* MyContracts.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyContracts.xib; sourceTree = "<group>"; };
 		FA6B42402578F97500C6D106 /* RoleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoleModel.swift; sourceTree = "<group>"; };
 		FA6B424325791ABD00C6D106 /* UserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		FA6B424425791ABD00C6D106 /* CreatedBy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreatedBy.swift; sourceTree = "<group>"; };
@@ -452,6 +458,7 @@
 			isa = PBXGroup;
 			children = (
 				FA37EA4D25740E4C0073CF0C /* UserAPIManager.swift */,
+				FA62D003257D6263000DCFDD /* AttributesAPIManager.swift */,
 			);
 			path = APIModules;
 			sourceTree = "<group>";
@@ -484,9 +491,10 @@
 		FA37EA7D25740EAD0073CF0C /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				FA37EA7E25740EAD0073CF0C /* Home */,
-				FA37EA8125740EAD0073CF0C /* TripExpenses */,
 				FA37EA8E25740EAD0073CF0C /* SideMenu */,
+				FA37EA7E25740EAD0073CF0C /* Home */,
+				FA62D005257D713A000DCFDD /* MyContracts */,
+				FA37EA8125740EAD0073CF0C /* TripExpenses */,
 				FAE067CB257AF3A1005E1C97 /* MyAccount */,
 				FA37EA9125740EAD0073CF0C /* Notifications */,
 			);
@@ -623,6 +631,15 @@
 			path = SignUp;
 			sourceTree = "<group>";
 		};
+		FA62D005257D713A000DCFDD /* MyContracts */ = {
+			isa = PBXGroup;
+			children = (
+				FA62D006257D716C000DCFDD /* MyContracts.swift */,
+				FA62D007257D716C000DCFDD /* MyContracts.xib */,
+			);
+			path = MyContracts;
+			sourceTree = "<group>";
+		};
 		FA6B423F2578F95B00C6D106 /* RolesModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -739,6 +756,7 @@
 				FA37EAA725740EAD0073CF0C /* TripExpensesHeader.xib in Resources */,
 				FA37EAA525740EAD0073CF0C /* TripExpenseDetailTVC.xib in Resources */,
 				FA37EABC257432E10073CF0C /* SignUp.xib in Resources */,
+				FA62D009257D716C000DCFDD /* MyContracts.xib in Resources */,
 				FA37EA7525740E4C0073CF0C /* Greycliff-cf-medium.ttf in Resources */,
 				FA37EA7625740E4C0073CF0C /* Greycliff-cf-light.ttf in Resources */,
 				FA37EAAF25740EAE0073CF0C /* Login.strings in Resources */,
@@ -815,6 +833,7 @@
 				FA37EAB025740EAE0073CF0C /* Login.swift in Sources */,
 				FA37EA5C25740E4C0073CF0C /* UIFont+Extension.swift in Sources */,
 				FA37EAAB25740EAD0073CF0C /* Notifications.swift in Sources */,
+				FA62D008257D716C000DCFDD /* MyContracts.swift in Sources */,
 				FA37EA5825740E4C0073CF0C /* Utility.swift in Sources */,
 				FA37EAA025740EAD0073CF0C /* Home.swift in Sources */,
 				FA37EA6B25740E4C0073CF0C /* BaseController.swift in Sources */,
@@ -825,6 +844,7 @@
 				FA37EAAE25740EAD0073CF0C /* NotificationsTVC.swift in Sources */,
 				FA37EA7925740E4C0073CF0C /* UserAPIManager.swift in Sources */,
 				FA37EA7725740E4C0073CF0C /* APIManagerBase.swift in Sources */,
+				FA62D004257D6263000DCFDD /* AttributesAPIManager.swift in Sources */,
 				FA37EA6825740E4C0073CF0C /* Singleton.swift in Sources */,
 				FA37EA7125740E4C0073CF0C /* ButtonStates.swift in Sources */,
 				FA37EA5625740E4C0073CF0C /* MOLHFont.swift in Sources */,

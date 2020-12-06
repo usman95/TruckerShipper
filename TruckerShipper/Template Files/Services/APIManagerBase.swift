@@ -10,6 +10,12 @@ enum Route: String {
     case SignUp = "/auth/sign-up"
     case Login = "/auth/shipper/login"
     case ForgotPassword = "/auth/forget-pass"
+    case UpdateProfile = "/api/user/"
+
+    
+    //MARK:- ATTRIBUTES
+    case Country = "/api/country"
+    case City = "/api/city/"
 }
 class APIManagerBase: NSObject {
     let baseURL = Constants.BaseURL
@@ -18,7 +24,7 @@ class APIManagerBase: NSObject {
     
     func getAuthorizationHeader () -> Dictionary<String,String> {
         if let token = APIManager.sharedInstance.serverToken {
-            return ["Authorization":"Bearer \(token)"]
+            return ["auth-token":"\(token)"]
         }
         return ["Content-Type":"application/x-www-form-urlencoded"]
     }

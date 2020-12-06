@@ -9,6 +9,19 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MyAccount" customModule="TruckerShipper" customModuleProvider="target">
             <connections>
+                <outlet property="btnSaveProfile" destination="A1X-Fa-C39" id="pZ4-4a-eIE"/>
+                <outlet property="tfAddress" destination="T5m-Ww-jzf" id="Stk-eM-2JZ"/>
+                <outlet property="tfCity" destination="aJD-J1-Hvy" id="rCi-lG-BRW"/>
+                <outlet property="tfCompany" destination="Mlo-Ub-35U" id="6NX-Iz-wM7"/>
+                <outlet property="tfCountry" destination="BnW-w4-viE" id="hM0-hE-2e6"/>
+                <outlet property="tfEmail" destination="FG3-3N-lix" id="O9c-iH-k9p"/>
+                <outlet property="tfFirstName" destination="gvP-z4-MHc" id="16o-CO-qbP"/>
+                <outlet property="tfLastName" destination="FYO-y0-PSR" id="bHU-se-uzf"/>
+                <outlet property="tfNIC" destination="ghE-k0-Qla" id="kdE-bO-Q3z"/>
+                <outlet property="tfNTN" destination="kvu-xO-MK6" id="jrA-aN-tPG"/>
+                <outlet property="tfPhone" destination="rUh-iY-4mU" id="omf-NO-bHw"/>
+                <outlet property="tfShipperType" destination="NP0-Ui-Jd6" id="43Y-Ls-Rqu"/>
+                <outlet property="tfWebsite" destination="LUl-Uy-ijU" id="w4D-ee-h17"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -432,7 +445,7 @@
                                                             <rect key="frame" x="0.0" y="41.5" width="334" height="48.5"/>
                                                             <subviews>
                                                                 <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Select country" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BnW-w4-viE" customClass="UITextFieldDeviceClass" customModule="TruckerShipper" customModuleProvider="target">
-                                                                    <rect key="frame" x="12" y="0.0" width="310" height="48.5"/>
+                                                                    <rect key="frame" x="12" y="0.0" width="288" height="48.5"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                     <textInputTraits key="textInputTraits"/>
                                                                     <userDefinedRuntimeAttributes>
@@ -445,12 +458,27 @@
                                                                         <userDefinedRuntimeAttribute type="string" keyPath="iPhoneFontWeight" value="medium"/>
                                                                     </userDefinedRuntimeAttributes>
                                                                 </textField>
+                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="255" verticalHuggingPriority="251" horizontalCompressionResistancePriority="755" image="dropDownBlack" translatesAutoresizingMaskIntoConstraints="NO" id="kld-wX-TmU">
+                                                                    <rect key="frame" x="308" y="19.5" width="10" height="10"/>
+                                                                </imageView>
+                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jf9-pr-9Nx">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="334" height="48.5"/>
+                                                                    <connections>
+                                                                        <action selector="onBtnCountry:" destination="-1" eventType="touchUpInside" id="lhv-td-0Kp"/>
+                                                                    </connections>
+                                                                </button>
                                                             </subviews>
                                                             <constraints>
+                                                                <constraint firstItem="Jf9-pr-9Nx" firstAttribute="top" secondItem="pZf-0v-3wV" secondAttribute="top" id="Dq6-CC-ttU"/>
                                                                 <constraint firstItem="BnW-w4-viE" firstAttribute="leading" secondItem="pZf-0v-3wV" secondAttribute="leading" constant="12" id="Ekz-Nu-7I2"/>
                                                                 <constraint firstItem="BnW-w4-viE" firstAttribute="top" secondItem="pZf-0v-3wV" secondAttribute="top" id="HtZ-Rk-Txm"/>
-                                                                <constraint firstAttribute="trailing" secondItem="BnW-w4-viE" secondAttribute="trailing" constant="12" id="Ik5-GG-cia"/>
+                                                                <constraint firstAttribute="trailing" secondItem="Jf9-pr-9Nx" secondAttribute="trailing" id="Omk-ii-0pp"/>
+                                                                <constraint firstAttribute="trailing" secondItem="kld-wX-TmU" secondAttribute="trailing" constant="16" id="RAz-ZC-f00"/>
+                                                                <constraint firstItem="Jf9-pr-9Nx" firstAttribute="leading" secondItem="pZf-0v-3wV" secondAttribute="leading" id="fIs-fk-k67"/>
+                                                                <constraint firstItem="kld-wX-TmU" firstAttribute="centerY" secondItem="pZf-0v-3wV" secondAttribute="centerY" id="igU-SU-tSw"/>
                                                                 <constraint firstAttribute="bottom" secondItem="BnW-w4-viE" secondAttribute="bottom" id="pdL-av-9ge"/>
+                                                                <constraint firstAttribute="bottom" secondItem="Jf9-pr-9Nx" secondAttribute="bottom" id="qEf-fx-bVs"/>
+                                                                <constraint firstItem="kld-wX-TmU" firstAttribute="leading" secondItem="BnW-w4-viE" secondAttribute="trailing" constant="8" id="zCR-ep-Sox"/>
                                                             </constraints>
                                                             <userDefinedRuntimeAttributes>
                                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -494,7 +522,7 @@
                                                             <rect key="frame" x="0.0" y="41.5" width="334" height="48.5"/>
                                                             <subviews>
                                                                 <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Select city" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aJD-J1-Hvy" customClass="UITextFieldDeviceClass" customModule="TruckerShipper" customModuleProvider="target">
-                                                                    <rect key="frame" x="12" y="0.0" width="310" height="48.5"/>
+                                                                    <rect key="frame" x="12" y="0.0" width="288" height="48.5"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                     <textInputTraits key="textInputTraits"/>
                                                                     <userDefinedRuntimeAttributes>
@@ -507,12 +535,27 @@
                                                                         <userDefinedRuntimeAttribute type="string" keyPath="iPhoneFontWeight" value="medium"/>
                                                                     </userDefinedRuntimeAttributes>
                                                                 </textField>
+                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="255" verticalHuggingPriority="251" horizontalCompressionResistancePriority="755" image="dropDownBlack" translatesAutoresizingMaskIntoConstraints="NO" id="KTv-xC-BgU">
+                                                                    <rect key="frame" x="308" y="19.5" width="10" height="10"/>
+                                                                </imageView>
+                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hT7-7v-0XP">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="334" height="48.5"/>
+                                                                    <connections>
+                                                                        <action selector="onBtnCity:" destination="-1" eventType="touchUpInside" id="qgK-Hj-wAG"/>
+                                                                    </connections>
+                                                                </button>
                                                             </subviews>
                                                             <constraints>
                                                                 <constraint firstAttribute="bottom" secondItem="aJD-J1-Hvy" secondAttribute="bottom" id="1RX-2R-Zgf"/>
+                                                                <constraint firstItem="hT7-7v-0XP" firstAttribute="leading" secondItem="bD9-fy-RuP" secondAttribute="leading" id="7Di-1c-qx9"/>
                                                                 <constraint firstItem="aJD-J1-Hvy" firstAttribute="top" secondItem="bD9-fy-RuP" secondAttribute="top" id="7VB-QJ-C1U"/>
+                                                                <constraint firstItem="KTv-xC-BgU" firstAttribute="centerY" secondItem="bD9-fy-RuP" secondAttribute="centerY" id="EGv-G6-xT6"/>
+                                                                <constraint firstAttribute="trailing" secondItem="hT7-7v-0XP" secondAttribute="trailing" id="QPV-mG-S78"/>
+                                                                <constraint firstItem="hT7-7v-0XP" firstAttribute="top" secondItem="bD9-fy-RuP" secondAttribute="top" id="Qt9-bG-iJr"/>
+                                                                <constraint firstAttribute="trailing" secondItem="KTv-xC-BgU" secondAttribute="trailing" constant="16" id="Vjh-DR-CFQ"/>
+                                                                <constraint firstAttribute="bottom" secondItem="hT7-7v-0XP" secondAttribute="bottom" id="eMr-mM-jCb"/>
                                                                 <constraint firstItem="aJD-J1-Hvy" firstAttribute="leading" secondItem="bD9-fy-RuP" secondAttribute="leading" constant="12" id="nqh-vL-QTa"/>
-                                                                <constraint firstAttribute="trailing" secondItem="aJD-J1-Hvy" secondAttribute="trailing" constant="12" id="zAP-GO-alh"/>
+                                                                <constraint firstItem="KTv-xC-BgU" firstAttribute="leading" secondItem="aJD-J1-Hvy" secondAttribute="trailing" constant="8" id="qaZ-dI-QAX"/>
                                                             </constraints>
                                                             <userDefinedRuntimeAttributes>
                                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -569,11 +612,21 @@
                                                                         <userDefinedRuntimeAttribute type="string" keyPath="iPhoneFontWeight" value="medium"/>
                                                                     </userDefinedRuntimeAttributes>
                                                                 </textField>
+                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h2C-yS-cnt">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="334" height="48.5"/>
+                                                                    <connections>
+                                                                        <action selector="onBtnAddress:" destination="-1" eventType="touchUpInside" id="zOv-DZ-5dk"/>
+                                                                    </connections>
+                                                                </button>
                                                             </subviews>
                                                             <constraints>
                                                                 <constraint firstItem="T5m-Ww-jzf" firstAttribute="top" secondItem="8u8-Cb-yVu" secondAttribute="top" id="2N9-8o-60c"/>
                                                                 <constraint firstAttribute="trailing" secondItem="T5m-Ww-jzf" secondAttribute="trailing" constant="12" id="54I-sJ-Ji9"/>
                                                                 <constraint firstAttribute="bottom" secondItem="T5m-Ww-jzf" secondAttribute="bottom" id="AP4-cs-YSo"/>
+                                                                <constraint firstAttribute="trailing" secondItem="h2C-yS-cnt" secondAttribute="trailing" id="Ey7-MA-ApK"/>
+                                                                <constraint firstAttribute="bottom" secondItem="h2C-yS-cnt" secondAttribute="bottom" id="V4a-6B-zng"/>
+                                                                <constraint firstItem="h2C-yS-cnt" firstAttribute="leading" secondItem="8u8-Cb-yVu" secondAttribute="leading" id="hS7-z8-fIk"/>
+                                                                <constraint firstItem="h2C-yS-cnt" firstAttribute="top" secondItem="8u8-Cb-yVu" secondAttribute="top" id="jub-3O-ZBb"/>
                                                                 <constraint firstItem="T5m-Ww-jzf" firstAttribute="leading" secondItem="8u8-Cb-yVu" secondAttribute="leading" constant="12" id="k8U-cL-OX9"/>
                                                             </constraints>
                                                             <userDefinedRuntimeAttributes>
@@ -618,7 +671,7 @@
                                                             <rect key="frame" x="0.0" y="41.5" width="334" height="48.5"/>
                                                             <subviews>
                                                                 <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Select shipper type" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NP0-Ui-Jd6" customClass="UITextFieldDeviceClass" customModule="TruckerShipper" customModuleProvider="target">
-                                                                    <rect key="frame" x="12" y="0.0" width="310" height="48.5"/>
+                                                                    <rect key="frame" x="12" y="0.0" width="288" height="48.5"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                     <textInputTraits key="textInputTraits"/>
                                                                     <userDefinedRuntimeAttributes>
@@ -631,12 +684,27 @@
                                                                         <userDefinedRuntimeAttribute type="string" keyPath="iPhoneFontWeight" value="medium"/>
                                                                     </userDefinedRuntimeAttributes>
                                                                 </textField>
+                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="255" verticalHuggingPriority="251" horizontalCompressionResistancePriority="755" image="dropDownBlack" translatesAutoresizingMaskIntoConstraints="NO" id="8W3-gF-CO4">
+                                                                    <rect key="frame" x="308" y="19.5" width="10" height="10"/>
+                                                                </imageView>
+                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l1r-Ud-0Ae">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="334" height="48.5"/>
+                                                                    <connections>
+                                                                        <action selector="onBtnShipperType:" destination="-1" eventType="touchUpInside" id="sgP-Ud-ZDY"/>
+                                                                    </connections>
+                                                                </button>
                                                             </subviews>
                                                             <constraints>
+                                                                <constraint firstItem="l1r-Ud-0Ae" firstAttribute="top" secondItem="QKe-fF-u8j" secondAttribute="top" id="2ln-Do-FEc"/>
                                                                 <constraint firstItem="NP0-Ui-Jd6" firstAttribute="leading" secondItem="QKe-fF-u8j" secondAttribute="leading" constant="12" id="4qE-yR-9f5"/>
+                                                                <constraint firstItem="l1r-Ud-0Ae" firstAttribute="leading" secondItem="QKe-fF-u8j" secondAttribute="leading" id="GNt-d9-kuI"/>
                                                                 <constraint firstItem="NP0-Ui-Jd6" firstAttribute="top" secondItem="QKe-fF-u8j" secondAttribute="top" id="GSN-p3-g49"/>
+                                                                <constraint firstAttribute="trailing" secondItem="8W3-gF-CO4" secondAttribute="trailing" constant="16" id="JrY-57-2lC"/>
+                                                                <constraint firstItem="8W3-gF-CO4" firstAttribute="leading" secondItem="NP0-Ui-Jd6" secondAttribute="trailing" constant="8" id="QEv-dK-Vdb"/>
+                                                                <constraint firstItem="8W3-gF-CO4" firstAttribute="centerY" secondItem="QKe-fF-u8j" secondAttribute="centerY" id="dQY-de-f5D"/>
+                                                                <constraint firstAttribute="bottom" secondItem="l1r-Ud-0Ae" secondAttribute="bottom" id="kzc-pP-tQ4"/>
                                                                 <constraint firstAttribute="bottom" secondItem="NP0-Ui-Jd6" secondAttribute="bottom" id="ntn-ne-Reu"/>
-                                                                <constraint firstAttribute="trailing" secondItem="NP0-Ui-Jd6" secondAttribute="trailing" constant="12" id="yjU-Gv-U4U"/>
+                                                                <constraint firstAttribute="trailing" secondItem="l1r-Ud-0Ae" secondAttribute="trailing" id="unb-DR-MRf"/>
                                                             </constraints>
                                                             <userDefinedRuntimeAttributes>
                                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -891,6 +959,9 @@
                                         </userDefinedRuntimeAttribute>
                                         <userDefinedRuntimeAttribute type="string" keyPath="iPhoneFontWeight" value="bold"/>
                                     </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="onBtnSaveProfile:" destination="-1" eventType="touchUpInside" id="HYe-BK-GQJ"/>
+                                    </connections>
                                 </button>
                             </subviews>
                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -943,5 +1014,6 @@
         <image name="Back" width="32" height="32"/>
         <image name="NavBar" width="375" height="95"/>
         <image name="TempPlacholder" width="52.5" height="52.5"/>
+        <image name="dropDownBlack" width="10" height="10"/>
     </resources>
 </document>

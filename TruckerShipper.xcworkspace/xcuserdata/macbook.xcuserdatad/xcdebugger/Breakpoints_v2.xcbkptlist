@@ -3,4 +3,54 @@
    uuid = "DEDEF51A-D900-4270-B586-880A56D0ECAC"
    type = "0"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A4DAE2F0-976D-49D8-9BA2-7571035B165F"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TruckerShipper/Modules/Home/Controllers/MyAccount/MyAccount.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "255"
+            endingLineNumber = "255"
+            landmarkName = "updateProfile()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "A4DAE2F0-976D-49D8-9BA2-7571035B165F - bde22b3188aa0be3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Dictionary&lt;Swift.String, Swift.AnyObject&gt;) -&gt; () in TruckerShipper.MyAccount.(updateProfile in _23551FBAA5CC9DA2DE4D8D55549E5444)() -&gt; ()"
+                  moduleName = "TruckerShipper"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/macbook/Documents/Freelance/Truckers/TruckerShipper/TruckerShipper/Modules/Home/Controllers/MyAccount/MyAccount.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "255"
+                  endingLineNumber = "255"
+                  offsetFromSymbolStart = "152">
+               </Location>
+               <Location
+                  uuid = "A4DAE2F0-976D-49D8-9BA2-7571035B165F - 749805806e12c0a1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (__C.NSError) -&gt; () in TruckerShipper.MyAccount.(updateProfile in _23551FBAA5CC9DA2DE4D8D55549E5444)() -&gt; ()"
+                  moduleName = "TruckerShipper"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/macbook/Documents/Freelance/Truckers/TruckerShipper/TruckerShipper/Modules/Home/Controllers/MyAccount/MyAccount.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "256"
+                  endingLineNumber = "256"
+                  offsetFromSymbolStart = "20">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

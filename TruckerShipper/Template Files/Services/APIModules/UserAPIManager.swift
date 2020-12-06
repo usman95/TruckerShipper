@@ -34,4 +34,10 @@ class UsersAPIManager: APIManagerBase {
         let route: URL = POSTURLforRoute(route: Route.ForgotPassword.rawValue)!
         self.postDictionaryResponseWith(route: route, parameters: params, success: success, failure: failure, withHeader: false)
     }
+    //MARK:- UpdateProfile
+    func UpdateProfile(id: String, params: Parameters, success: @escaping DefaultAPISuccessClosure, failure: @escaping DefaultAPIFailureClosure){
+        Utility.showLoader()
+        let route: URL = POSTURLforRoute(route: Route.UpdateProfile.rawValue+id)!
+        self.putDictionaryResponseWith(route: route, parameters: params, success: success, failure: failure, withHeader: true)
+    }
 }
