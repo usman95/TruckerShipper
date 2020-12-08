@@ -14,8 +14,8 @@
             filePath = "TruckerShipper/Modules/Home/Controllers/MyAccount/MyAccount.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "255"
-            endingLineNumber = "255"
+            startingLineNumber = "272"
+            endingLineNumber = "272"
             landmarkName = "updateProfile()"
             landmarkType = "7">
             <Locations>
@@ -30,8 +30,8 @@
                   urlString = "file:///Users/macbook/Documents/Freelance/Truckers/TruckerShipper/TruckerShipper/Modules/Home/Controllers/MyAccount/MyAccount.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "255"
-                  endingLineNumber = "255"
+                  startingLineNumber = "272"
+                  endingLineNumber = "272"
                   offsetFromSymbolStart = "152">
                </Location>
                <Location
@@ -45,8 +45,8 @@
                   urlString = "file:///Users/macbook/Documents/Freelance/Truckers/TruckerShipper/TruckerShipper/Modules/Home/Controllers/MyAccount/MyAccount.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "256"
-                  endingLineNumber = "256"
+                  startingLineNumber = "273"
+                  endingLineNumber = "273"
                   offsetFromSymbolStart = "20">
                </Location>
             </Locations>

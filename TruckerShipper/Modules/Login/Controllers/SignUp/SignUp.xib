@@ -109,7 +109,7 @@
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3l1-M7-dmR">
                                             <rect key="frame" x="0.0" y="0.0" width="366" height="72"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="UserName" translatesAutoresizingMaskIntoConstraints="NO" id="jIj-WM-mbZ" customClass="RoundedImage" customModule="TruckerShipper" customModuleProvider="target">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="User" translatesAutoresizingMaskIntoConstraints="NO" id="jIj-WM-mbZ" customClass="RoundedImage" customModule="TruckerShipper" customModuleProvider="target">
                                                     <rect key="frame" x="20" y="14" width="44" height="44"/>
                                                     <color key="backgroundColor" red="0.0" green="0.2802670002" blue="0.62132591010000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
@@ -157,7 +157,7 @@
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r29-Wr-Gm2">
                                             <rect key="frame" x="0.0" y="92" width="366" height="72"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="UserName" translatesAutoresizingMaskIntoConstraints="NO" id="QAn-qJ-BPP" customClass="RoundedImage" customModule="TruckerShipper" customModuleProvider="target">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="User" translatesAutoresizingMaskIntoConstraints="NO" id="QAn-qJ-BPP" customClass="RoundedImage" customModule="TruckerShipper" customModuleProvider="target">
                                                     <rect key="frame" x="20" y="14" width="44" height="44"/>
                                                     <color key="backgroundColor" red="0.0" green="0.2802670002" blue="0.62132591010000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
@@ -204,7 +204,7 @@
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wmU-GA-0sS">
                                             <rect key="frame" x="0.0" y="184" width="366" height="72"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="UserName" translatesAutoresizingMaskIntoConstraints="NO" id="dRp-g2-WCh" customClass="RoundedImage" customModule="TruckerShipper" customModuleProvider="target">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Email" translatesAutoresizingMaskIntoConstraints="NO" id="dRp-g2-WCh" customClass="RoundedImage" customModule="TruckerShipper" customModuleProvider="target">
                                                     <rect key="frame" x="20" y="14" width="44" height="44"/>
                                                     <color key="backgroundColor" red="0.0" green="0.2802670002" blue="0.62132591010000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
@@ -251,7 +251,7 @@
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OPZ-GO-EAL">
                                             <rect key="frame" x="0.0" y="276" width="366" height="72"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="UserName" translatesAutoresizingMaskIntoConstraints="NO" id="hlY-hl-7m9" customClass="RoundedImage" customModule="TruckerShipper" customModuleProvider="target">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Phone" translatesAutoresizingMaskIntoConstraints="NO" id="hlY-hl-7m9" customClass="RoundedImage" customModule="TruckerShipper" customModuleProvider="target">
                                                     <rect key="frame" x="20" y="14" width="44" height="44"/>
                                                     <color key="backgroundColor" red="0.0" green="0.2802670002" blue="0.62132591010000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
@@ -298,7 +298,7 @@
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yel-zV-677">
                                             <rect key="frame" x="0.0" y="368" width="366" height="72"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="UserName" translatesAutoresizingMaskIntoConstraints="NO" id="eTG-Nw-zPl" customClass="RoundedImage" customModule="TruckerShipper" customModuleProvider="target">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ShipperType" translatesAutoresizingMaskIntoConstraints="NO" id="eTG-Nw-zPl" customClass="RoundedImage" customModule="TruckerShipper" customModuleProvider="target">
                                                     <rect key="frame" x="20" y="14" width="44" height="44"/>
                                                     <color key="backgroundColor" red="0.0" green="0.2802670002" blue="0.62132591010000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
@@ -359,7 +359,7 @@
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yeM-gv-9El">
                                             <rect key="frame" x="0.0" y="460" width="366" height="72"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Password" translatesAutoresizingMaskIntoConstraints="NO" id="p0c-6I-lse" customClass="RoundedImage" customModule="TruckerShipper" customModuleProvider="target">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Password" translatesAutoresizingMaskIntoConstraints="NO" id="p0c-6I-lse" customClass="RoundedImage" customModule="TruckerShipper" customModuleProvider="target">
                                                     <rect key="frame" x="20" y="14" width="44" height="44"/>
                                                     <color key="backgroundColor" red="0.0" green="0.2802670002" blue="0.62132591010000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
@@ -420,7 +420,7 @@
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UNF-dC-he4">
                                             <rect key="frame" x="0.0" y="552" width="366" height="72"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Password" translatesAutoresizingMaskIntoConstraints="NO" id="yzU-ng-5hC" customClass="RoundedImage" customModule="TruckerShipper" customModuleProvider="target">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Password" translatesAutoresizingMaskIntoConstraints="NO" id="yzU-ng-5hC" customClass="RoundedImage" customModule="TruckerShipper" customModuleProvider="target">
                                                     <rect key="frame" x="20" y="14" width="44" height="44"/>
                                                     <color key="backgroundColor" red="0.0" green="0.2802670002" blue="0.62132591010000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
@@ -557,9 +557,12 @@
         </view>
     </objects>
     <resources>
+        <image name="Email" width="96" height="96"/>
         <image name="Logo" width="228" height="133"/>
-        <image name="Password" width="14" height="19"/>
-        <image name="UserName" width="20" height="20"/>
+        <image name="Password" width="96" height="96"/>
+        <image name="Phone" width="96" height="96"/>
+        <image name="ShipperType" width="96" height="96"/>
+        <image name="User" width="96" height="96"/>
         <image name="backBlue" width="32" height="32"/>
         <image name="dropDownBlack" width="10" height="10"/>
         <image name="eyeClosed" width="18" height="13.5"/>

@@ -14,6 +14,7 @@ import SwiftyJSON
 
 class Home: BaseController {
     
+    @IBOutlet weak var lblGreetingText: UILabelDeviceClass!
     @IBOutlet weak var lblPickUpTitle: UILabel!
     @IBOutlet weak var lblDropOffTitle: UILabel!
     @IBOutlet weak var lblPickUp: UILabel!
@@ -43,6 +44,7 @@ class Home: BaseController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.setData()
         // Do any additional setup after loading the view.
     }
     
@@ -86,6 +88,11 @@ class Home: BaseController {
 }
 //MARK:- Helper Methods
 extension Home{
+    private func setData(){
+        let userName = AppStateManager.sharedInstance.loggedInUser.user?.firstName ?? ""
+        let greetings = "\(Strings.HEY.text) \(userName) \(Strings.PLEASE_SELECT_PICKUP_AND_DROPOFF_LOCATION.text)"
+        self.lblGreetingText.text = greetings
+    }
     private func setGMSMapView(){
         self.mapView.delegate = self
         self.mapView.isMyLocationEnabled = true

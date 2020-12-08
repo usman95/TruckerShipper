@@ -42,6 +42,7 @@ class MyAccount: BaseController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.setProfileData()
         self.callAPIs()
         // Do any additional setup after loading the view.
     }
@@ -116,6 +117,24 @@ extension MyAccount{
             
         self.present(controller, animated: true, completion: nil)
     }
+    private func setProfileData(){
+        let data = AppStateManager.sharedInstance.loggedInUser.user
+        
+        self.tfFirstName.text = data?.firstName ?? ""
+        self.tfLastName.text = data?.lastName ?? ""
+        self.tfPhone.text = data?.contactNo ?? ""
+        self.tfEmail.text = data?.email ?? ""
+        
+//        self.tfNIC.text = ""
+        self.tfCountry.text = ""
+        self.tfCity.text = ""
+        self.tfAddress.text = data?.address ?? ""
+//        self.tfShipperType.text = ""
+//        self.tfCompany.text = ""
+//        self.tfNTN.text = ""
+//        self.tfWebsite.text = ""
+        
+    }
     private func validate()->[String:Any]?{
         let firstName = self.tfFirstName.text ?? ""
         let lastName = self.tfLastName.text ?? ""
@@ -155,13 +174,11 @@ extension MyAccount{
             self.btnSaveProfile.shake()
             return nil
         }
-        
         if !Validation.validateStringLength(shipperType){
             Utility.main.showToast(message: Strings.SELECT_SHIPPER.text)
             self.btnSaveProfile.shake()
             return nil
         }
-        
         
         let params:[String:Any] = ["firstName":firstName,
                                    "lastName":lastName,

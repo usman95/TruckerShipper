@@ -13,6 +13,7 @@
                 <outlet property="btnPickUpTick" destination="sUK-uJ-2Xh" id="4wO-Og-XjR"/>
                 <outlet property="lblDropOff" destination="Lyw-yx-Kqu" id="yJg-gn-nUz"/>
                 <outlet property="lblDropOffTitle" destination="dUu-DJ-HRA" id="JZ5-dC-vPO"/>
+                <outlet property="lblGreetingText" destination="jxC-gM-7Bz" id="wqU-qH-o7w"/>
                 <outlet property="lblPickUp" destination="5H4-jV-UAx" id="DqU-Zy-g12"/>
                 <outlet property="lblPickUpTitle" destination="fRs-rk-JaB" id="5LA-3G-mPy"/>
                 <outlet property="mapView" destination="amP-LH-jcj" id="LUF-dw-eBE"/>
@@ -49,8 +50,24 @@
                         </label>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="woY-Pt-6SK">
                             <rect key="frame" x="0.0" y="31.33333333333335" width="34" height="127.66666666666669"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DropOffPin" translatesAutoresizingMaskIntoConstraints="NO" id="tqr-X5-5tv">
+                                    <rect key="frame" x="12" y="10.333333333333316" width="22" height="20.666666666666671"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" secondItem="tqr-X5-5tv" secondAttribute="height" multiplier="21:20" id="bge-iS-F76"/>
+                                    </constraints>
+                                </imageView>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DropOffPin" translatesAutoresizingMaskIntoConstraints="NO" id="GNR-xB-gRJ">
+                                    <rect key="frame" x="12" y="76.666666666666657" width="22" height="20.666666666666671"/>
+                                </imageView>
+                            </subviews>
                             <constraints>
+                                <constraint firstAttribute="trailing" secondItem="tqr-X5-5tv" secondAttribute="trailing" id="5gp-30-hJw"/>
+                                <constraint firstAttribute="trailing" secondItem="GNR-xB-gRJ" secondAttribute="trailing" id="GrR-N0-Aq9"/>
+                                <constraint firstItem="GNR-xB-gRJ" firstAttribute="centerX" secondItem="woY-Pt-6SK" secondAttribute="centerX" constant="6" id="qBF-pJ-xFR"/>
                                 <constraint firstAttribute="width" constant="34" id="sN3-nl-uOK"/>
+                                <constraint firstItem="tqr-X5-5tv" firstAttribute="centerX" secondItem="woY-Pt-6SK" secondAttribute="centerX" constant="6" id="ur9-xo-Gp3"/>
+                                <constraint firstItem="GNR-xB-gRJ" firstAttribute="width" secondItem="GNR-xB-gRJ" secondAttribute="height" multiplier="21:20" id="xoR-lg-qAm"/>
                             </constraints>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VGH-Ki-6Lj">
@@ -212,7 +229,10 @@
                         <constraint firstItem="sUK-uJ-2Xh" firstAttribute="centerY" secondItem="VGH-Ki-6Lj" secondAttribute="centerY" id="5d8-sM-CKC"/>
                         <constraint firstAttribute="trailing" secondItem="sUK-uJ-2Xh" secondAttribute="trailing" constant="8" id="Caj-vP-ZIT"/>
                         <constraint firstItem="jxC-gM-7Bz" firstAttribute="top" secondItem="Clm-lx-ppa" secondAttribute="top" constant="10" id="Lgs-Rl-XQQ"/>
+                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="jxC-gM-7Bz" secondAttribute="trailing" constant="12" id="Mou-Fk-41Z"/>
+                        <constraint firstItem="GNR-xB-gRJ" firstAttribute="centerY" secondItem="dUu-DJ-HRA" secondAttribute="centerY" id="NRG-mL-fFK"/>
                         <constraint firstItem="rtY-M5-5Db" firstAttribute="trailing" secondItem="VGH-Ki-6Lj" secondAttribute="trailing" id="UCR-U0-xBE"/>
+                        <constraint firstItem="tqr-X5-5tv" firstAttribute="centerY" secondItem="fRs-rk-JaB" secondAttribute="centerY" id="b5d-IQ-nMZ"/>
                         <constraint firstAttribute="bottom" secondItem="rtY-M5-5Db" secondAttribute="bottom" constant="12" id="cXc-Dx-N0X"/>
                         <constraint firstItem="woY-Pt-6SK" firstAttribute="top" secondItem="jxC-gM-7Bz" secondAttribute="bottom" constant="8" id="hdL-ZX-f7p"/>
                         <constraint firstItem="VGH-Ki-6Lj" firstAttribute="top" secondItem="woY-Pt-6SK" secondAttribute="top" id="i86-gx-cha"/>
@@ -243,7 +263,7 @@
                         <constraint firstAttribute="width" constant="6" id="Ksc-h3-gK9"/>
                     </constraints>
                 </view>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="st9-ZF-GLw" customClass="RoundedButton" customModule="MTO_Customer" customModuleProvider="target">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="st9-ZF-GLw" customClass="RoundedButton" customModule="TruckerShipper" customModuleProvider="target">
                     <rect key="frame" x="315" y="624.66666666666663" width="40" height="40"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="st9-ZF-GLw" secondAttribute="height" multiplier="1:1" id="bLE-6l-Btm"/>
@@ -357,9 +377,10 @@
         </view>
     </objects>
     <resources>
+        <image name="DropOffPin" width="84" height="80"/>
         <image name="NavBar" width="375" height="95"/>
         <image name="SideMenu" width="31" height="30"/>
         <image name="myLocationButton" width="81" height="79"/>
-        <image name="tick" width="19" height="15"/>
+        <image name="tick" width="20" height="19"/>
     </resources>
 </document>

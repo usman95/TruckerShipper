@@ -76,6 +76,8 @@
 		FA37EAB8257429350073CF0C /* ForgotPassword.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA37EAB6257429350073CF0C /* ForgotPassword.xib */; };
 		FA37EABB257432E10073CF0C /* SignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA37EAB9257432E10073CF0C /* SignUp.swift */; };
 		FA37EABC257432E10073CF0C /* SignUp.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA37EABA257432E10073CF0C /* SignUp.xib */; };
+		FA5225AC25802E6200C4FFD0 /* MyContractsTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5225AA25802E6200C4FFD0 /* MyContractsTVC.swift */; };
+		FA5225AD25802E6200C4FFD0 /* MyContractsTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA5225AB25802E6200C4FFD0 /* MyContractsTVC.xib */; };
 		FA62D004257D6263000DCFDD /* AttributesAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA62D003257D6263000DCFDD /* AttributesAPIManager.swift */; };
 		FA62D008257D716C000DCFDD /* MyContracts.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA62D006257D716C000DCFDD /* MyContracts.swift */; };
 		FA62D009257D716C000DCFDD /* MyContracts.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA62D007257D716C000DCFDD /* MyContracts.xib */; };
@@ -166,6 +168,8 @@
 		FA37EAB6257429350073CF0C /* ForgotPassword.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ForgotPassword.xib; sourceTree = "<group>"; };
 		FA37EAB9257432E10073CF0C /* SignUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUp.swift; sourceTree = "<group>"; };
 		FA37EABA257432E10073CF0C /* SignUp.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignUp.xib; sourceTree = "<group>"; };
+		FA5225AA25802E6200C4FFD0 /* MyContractsTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyContractsTVC.swift; sourceTree = "<group>"; };
+		FA5225AB25802E6200C4FFD0 /* MyContractsTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyContractsTVC.xib; sourceTree = "<group>"; };
 		FA62D003257D6263000DCFDD /* AttributesAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttributesAPIManager.swift; sourceTree = "<group>"; };
 		FA62D006257D716C000DCFDD /* MyContracts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyContracts.swift; sourceTree = "<group>"; };
 		FA62D007257D716C000DCFDD /* MyContracts.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyContracts.xib; sourceTree = "<group>"; };
@@ -631,9 +635,19 @@
 			path = SignUp;
 			sourceTree = "<group>";
 		};
+		FA5225A925802E4700C4FFD0 /* MyContractsTVC */ = {
+			isa = PBXGroup;
+			children = (
+				FA5225AA25802E6200C4FFD0 /* MyContractsTVC.swift */,
+				FA5225AB25802E6200C4FFD0 /* MyContractsTVC.xib */,
+			);
+			path = MyContractsTVC;
+			sourceTree = "<group>";
+		};
 		FA62D005257D713A000DCFDD /* MyContracts */ = {
 			isa = PBXGroup;
 			children = (
+				FA5225A925802E4700C4FFD0 /* MyContractsTVC */,
 				FA62D006257D716C000DCFDD /* MyContracts.swift */,
 				FA62D007257D716C000DCFDD /* MyContracts.xib */,
 			);
@@ -761,6 +775,7 @@
 				FA37EA7625740E4C0073CF0C /* Greycliff-cf-light.ttf in Resources */,
 				FA37EAAF25740EAE0073CF0C /* Login.strings in Resources */,
 				FA37EA042574099D0073CF0C /* Assets.xcassets in Resources */,
+				FA5225AD25802E6200C4FFD0 /* MyContractsTVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -866,6 +881,7 @@
 				FA37EA6025740E4C0073CF0C /* UILabel+Extension.swift in Sources */,
 				FA6B424C25791ABE00C6D106 /* RoleId.swift in Sources */,
 				FA37EA7225740E4C0073CF0C /* RoundedCorners.swift in Sources */,
+				FA5225AC25802E6200C4FFD0 /* MyContractsTVC.swift in Sources */,
 				FA37EA5725740E4C0073CF0C /* Validation.swift in Sources */,
 				FA6B424D25791ABE00C6D106 /* CountryId.swift in Sources */,
 				FA37EA6525740E4C0073CF0C /* Dictionary+Extension.swift in Sources */,
