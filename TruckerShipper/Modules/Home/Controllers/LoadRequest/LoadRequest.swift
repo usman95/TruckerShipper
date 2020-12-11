@@ -54,7 +54,9 @@ class LoadRequest: BaseController {
     var selectedPickUpDetailsCity: AttributeModel?
     var selectedDropOffDetailsDetailsCity: AttributeModel?
     
-    
+    var bookingDatePickerType = BookingDatePickerType.booking
+    var selecteBookingDate: Date?
+    var selectePickUpDate: Date?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -62,6 +64,16 @@ class LoadRequest: BaseController {
         // Do any additional setup after loading the view.
     }
     
+    @IBAction func onTfBookingDate(_ sender: UITextField) {
+        self.bookingDatePickerType = .booking
+        self.setDate(date: self.selecteBookingDate ?? Date())
+        self.getPickedDate(sender)
+    }
+    @IBAction func onTfDnDPickUpDate(_ sender: UITextField) {
+        self.bookingDatePickerType = .pickUp
+        self.setDate(date: self.selecteBookingDate ?? self.selectePickUpDate ?? Date())
+        self.getPickedDate(sender)
+    }
 }
 //MARK:- Helper methods
 extension LoadRequest{
@@ -104,6 +116,45 @@ extension LoadRequest{
         
         self.selectedPickUpDetailsCity = self.arrCities.filter{$0.title == pickUpCity}.first
         self.selectedDropOffDetailsDetailsCity = self.arrCities.filter{$0.title == dropOffCity}.first
+    }
+}
+//MARK:- Date Picker
+extension LoadRequest{
+    private func getPickedDate(_ sender: UITextField){
+        let datePickerView:UIDatePicker = UIDatePicker()
+        datePickerView.datePickerMode = .date
+        
+        switch self.bookingDatePickerType{
+        case .booking:
+            datePickerView.minimumDate = Date()
+            datePickerView.date = self.selecteBookingDate ?? Date()
+        case .pickUp:
+            datePickerView.minimumDate = self.selecteBookingDate ?? Date()
+            datePickerView.date = self.selectePickUpDate ?? Date()
+        }
+        
+        sender.inputView = datePickerView
+        datePickerView.addTarget(self, action: #selector(self.datePickerValueChanged), for: .valueChanged)
+    }
+    @objc func datePickerValueChanged(sender:UIDatePicker) {
+        self.setDate(date: sender.date)
+    }
+    private func setDate(date:Date){
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd/MM/yyyy"
+        
+        switch self.bookingDatePickerType{
+        case .booking:
+            self.selecteBookingDate = date
+            self.selectePickUpDate = nil
+            
+            self.tfBookingDetailsBookingDate.text = dateFormatter.string(from: date)
+            self.tfBookingDetailsDnDPickUpDate.text = nil
+        case .pickUp:
+            self.selectePickUpDate = date
+            
+            self.tfBookingDetailsDnDPickUpDate.text = dateFormatter.string(from: date)
+        }
     }
 }
 //MARK:- Services

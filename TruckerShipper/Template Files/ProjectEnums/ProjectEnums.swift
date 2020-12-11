@@ -23,3 +23,7 @@ enum ModeOfTransportType: String{
     case truck = "truck"
     case train = "train"
 }
+enum BookingDatePickerType{
+    case booking
+    case pickUp
+}
