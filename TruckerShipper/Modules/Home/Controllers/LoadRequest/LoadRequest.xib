@@ -13,6 +13,21 @@
                 <outlet property="lblDropOffCity" destination="cO7-pl-drm" id="jdM-51-SyT"/>
                 <outlet property="lblPickUpAddress" destination="vFz-md-6HN" id="vqZ-ld-8lI"/>
                 <outlet property="lblPickUpCity" destination="m5k-j7-zcq" id="2qe-lJ-D58"/>
+                <outlet property="tfBookingDetailsBookingDate" destination="dtT-Gx-XRg" id="lRI-tk-GYj"/>
+                <outlet property="tfBookingDetailsBookingType" destination="QNr-Nc-7cl" id="uXg-ok-qj6"/>
+                <outlet property="tfBookingDetailsCargoType" destination="eow-1x-bYI" id="Iez-PR-3lw"/>
+                <outlet property="tfBookingDetailsCommodity" destination="iwg-bj-4hf" id="tvK-l6-OGx"/>
+                <outlet property="tfBookingDetailsCustomerName" destination="vfb-BC-MNc" id="DTC-Pq-w18"/>
+                <outlet property="tfBookingDetailsDnDPickUpDate" destination="5pZ-xk-g2j" id="Gsl-p9-Hjg"/>
+                <outlet property="tfBookingDetailsEmptyPickUpLocation" destination="exx-Bk-DQK" id="mLG-8y-gba"/>
+                <outlet property="tfBookingDetailsEmptyReturnLocation" destination="0Hu-Hl-iKB" id="Pkv-z9-BIr"/>
+                <outlet property="tfBookingDetailsModeOfTransport" destination="Nqw-nb-Sm9" id="o6B-sL-S7b"/>
+                <outlet property="tfBookingDetailsPortOfDischarge" destination="4kV-of-7vU" id="98h-pb-S9p"/>
+                <outlet property="tfBookingDetailsPortOfLoading" destination="dmq-hy-nVY" id="fE0-CN-HkO"/>
+                <outlet property="tfBookingDetailsRemarks" destination="Kq4-kY-APW" id="1Tr-R9-JeK"/>
+                <outlet property="tfBookingDetailsRoute" destination="ppD-YS-Cli" id="PNF-6s-BpO"/>
+                <outlet property="tfBookingDetailsShippingLine" destination="cNi-Tw-VUN" id="dw3-cz-b2M"/>
+                <outlet property="tfBookingDetailsTransitFreeDays" destination="I39-na-FRK" id="eMU-2w-vRF"/>
                 <outlet property="tfDropOffDetailsCity" destination="SSh-no-ddg" id="TF8-4g-aSE"/>
                 <outlet property="tfDropOffDetailsDropOff" destination="05r-s0-t2a" id="Mnu-aN-kMA"/>
                 <outlet property="tfDropOffDetailsDropOffName" destination="l4O-4T-a4J" id="Aoa-IZ-kR8"/>
@@ -1047,10 +1062,10 @@
                                     </userDefinedRuntimeAttributes>
                                 </label>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="nVL-TD-p5Y">
-                                    <rect key="frame" x="24" y="1524.5" width="366" height="1372"/>
+                                    <rect key="frame" x="24" y="1524.5" width="366" height="1470"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="RDX-qM-a3I">
-                                            <rect key="frame" x="0.0" y="0.0" width="366" height="1274"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="366" height="1372"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lTv-9X-ZfE">
                                                     <rect key="frame" x="0.0" y="0.0" width="366" height="98"/>
@@ -1070,7 +1085,7 @@
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kpm-20-gRs">
                                                             <rect key="frame" x="0.0" y="41.5" width="366" height="56.5"/>
                                                             <subviews>
-                                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter customer name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vfb-BC-MNc" customClass="UITextFieldDeviceClass" customModule="TruckerShipper" customModuleProvider="target">
+                                                                <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter customer name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vfb-BC-MNc" customClass="UITextFieldDeviceClass" customModule="TruckerShipper" customModuleProvider="target">
                                                                     <rect key="frame" x="12" y="0.0" width="342" height="56.5"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                     <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
@@ -1115,8 +1130,70 @@
                                                         <constraint firstAttribute="width" secondItem="lTv-9X-ZfE" secondAttribute="height" multiplier="183:49" id="q5k-EW-0PD"/>
                                                     </constraints>
                                                 </view>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XDX-hh-cGA">
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s5p-d1-pcQ">
                                                     <rect key="frame" x="0.0" y="98" width="366" height="98"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Booking Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pzx-fg-WD8" customClass="UILabelDeviceClass" customModule="TruckerShipper" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="14" width="103.5" height="19.5"/>
+                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                                            <color key="textColor" red="0.0" green="0.2802670002" blue="0.62132591010000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="iPhoneFontSize">
+                                                                    <real key="value" value="16"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="string" keyPath="iPhoneFontWeight" value="bold"/>
+                                                            </userDefinedRuntimeAttributes>
+                                                        </label>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9iS-8L-R60">
+                                                            <rect key="frame" x="0.0" y="41.5" width="366" height="56.5"/>
+                                                            <subviews>
+                                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Select booking date" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dtT-Gx-XRg" customClass="UITextFieldDeviceClass" customModule="TruckerShipper" customModuleProvider="target">
+                                                                    <rect key="frame" x="12" y="0.0" width="342" height="56.5"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                    <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                                                    <userDefinedRuntimeAttributes>
+                                                                        <userDefinedRuntimeAttribute type="color" keyPath="placeHolderColor">
+                                                                            <color key="value" red="0.30976641179999997" green="0.30982545020000002" blue="0.30976271630000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                        </userDefinedRuntimeAttribute>
+                                                                        <userDefinedRuntimeAttribute type="number" keyPath="iPhoneFontSize">
+                                                                            <real key="value" value="14"/>
+                                                                        </userDefinedRuntimeAttribute>
+                                                                        <userDefinedRuntimeAttribute type="string" keyPath="iPhoneFontWeight" value="medium"/>
+                                                                    </userDefinedRuntimeAttributes>
+                                                                </textField>
+                                                            </subviews>
+                                                            <constraints>
+                                                                <constraint firstItem="dtT-Gx-XRg" firstAttribute="top" secondItem="9iS-8L-R60" secondAttribute="top" id="SOF-ha-chP"/>
+                                                                <constraint firstAttribute="bottom" secondItem="dtT-Gx-XRg" secondAttribute="bottom" id="ThF-up-0Ig"/>
+                                                                <constraint firstAttribute="trailing" secondItem="dtT-Gx-XRg" secondAttribute="trailing" constant="12" id="ZFe-5f-Y5K"/>
+                                                                <constraint firstItem="dtT-Gx-XRg" firstAttribute="leading" secondItem="9iS-8L-R60" secondAttribute="leading" constant="12" id="ux4-qU-XeI"/>
+                                                            </constraints>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                    <real key="value" value="2"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                    <real key="value" value="1"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                    <color key="value" red="0.84696626659999996" green="0.84711211919999996" blue="0.84695702790000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                            </userDefinedRuntimeAttributes>
+                                                        </view>
+                                                    </subviews>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="bottom" secondItem="9iS-8L-R60" secondAttribute="bottom" id="3SA-pS-zww"/>
+                                                        <constraint firstAttribute="trailing" secondItem="9iS-8L-R60" secondAttribute="trailing" id="Frp-eY-0hU"/>
+                                                        <constraint firstItem="9iS-8L-R60" firstAttribute="leading" secondItem="s5p-d1-pcQ" secondAttribute="leading" id="Gdu-Pk-wbq"/>
+                                                        <constraint firstItem="Pzx-fg-WD8" firstAttribute="top" secondItem="s5p-d1-pcQ" secondAttribute="top" constant="14" id="HkA-gC-mnc"/>
+                                                        <constraint firstItem="9iS-8L-R60" firstAttribute="top" secondItem="Pzx-fg-WD8" secondAttribute="bottom" constant="8" id="KTf-P9-1Tj"/>
+                                                        <constraint firstItem="Pzx-fg-WD8" firstAttribute="leading" secondItem="s5p-d1-pcQ" secondAttribute="leading" id="V7s-Lf-7A5"/>
+                                                    </constraints>
+                                                </view>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XDX-hh-cGA">
+                                                    <rect key="frame" x="0.0" y="196" width="366" height="98"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Route" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wuz-29-WDJ" customClass="UILabelDeviceClass" customModule="TruckerShipper" customModuleProvider="target">
                                                             <rect key="frame" x="0.0" y="14" width="45.5" height="19.5"/>
@@ -1178,7 +1255,7 @@
                                                     </constraints>
                                                 </view>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xJZ-Lp-GMc">
-                                                    <rect key="frame" x="0.0" y="196" width="366" height="98"/>
+                                                    <rect key="frame" x="0.0" y="294" width="366" height="98"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mode of Transport" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DwD-5O-LhI" customClass="UILabelDeviceClass" customModule="TruckerShipper" customModuleProvider="target">
                                                             <rect key="frame" x="0.0" y="14" width="143.5" height="19.5"/>
@@ -1240,7 +1317,7 @@
                                                     </constraints>
                                                 </view>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IKA-b5-iTC">
-                                                    <rect key="frame" x="0.0" y="294" width="366" height="98"/>
+                                                    <rect key="frame" x="0.0" y="392" width="366" height="98"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Transit Free Days" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jZY-Q6-dNh" customClass="UILabelDeviceClass" customModule="TruckerShipper" customModuleProvider="target">
                                                             <rect key="frame" x="0.0" y="14" width="134.5" height="19.5"/>
@@ -1302,7 +1379,7 @@
                                                     </constraints>
                                                 </view>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aS4-Pd-u6u">
-                                                    <rect key="frame" x="0.0" y="392" width="366" height="98"/>
+                                                    <rect key="frame" x="0.0" y="490" width="366" height="98"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="D&amp;D/Pickup Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jqY-hM-OlH" customClass="UILabelDeviceClass" customModule="TruckerShipper" customModuleProvider="target">
                                                             <rect key="frame" x="0.0" y="14" width="133.5" height="19.5"/>
@@ -1364,7 +1441,7 @@
                                                     </constraints>
                                                 </view>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mko-ht-HDz">
-                                                    <rect key="frame" x="0.0" y="490" width="366" height="98"/>
+                                                    <rect key="frame" x="0.0" y="588" width="366" height="98"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Booking Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uWX-vZ-Fez" customClass="UILabelDeviceClass" customModule="TruckerShipper" customModuleProvider="target">
                                                             <rect key="frame" x="0.0" y="14" width="105.5" height="19.5"/>
@@ -1426,7 +1503,7 @@
                                                     </constraints>
                                                 </view>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dVN-vM-3wf">
-                                                    <rect key="frame" x="0.0" y="588" width="366" height="98"/>
+                                                    <rect key="frame" x="0.0" y="686" width="366" height="98"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cargo Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="08P-py-CKF" customClass="UILabelDeviceClass" customModule="TruckerShipper" customModuleProvider="target">
                                                             <rect key="frame" x="0.0" y="14" width="89" height="19.5"/>
@@ -1488,7 +1565,7 @@
                                                     </constraints>
                                                 </view>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hse-jG-YJp">
-                                                    <rect key="frame" x="0.0" y="686" width="366" height="98"/>
+                                                    <rect key="frame" x="0.0" y="784" width="366" height="98"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Shipping Line" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y1d-h4-dgn" customClass="UILabelDeviceClass" customModule="TruckerShipper" customModuleProvider="target">
                                                             <rect key="frame" x="0.0" y="14" width="105.5" height="19.5"/>
@@ -1550,7 +1627,7 @@
                                                     </constraints>
                                                 </view>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u3p-Pl-v3b">
-                                                    <rect key="frame" x="0.0" y="784" width="366" height="98"/>
+                                                    <rect key="frame" x="0.0" y="882" width="366" height="98"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Commodity" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ozF-E1-4qf" customClass="UILabelDeviceClass" customModule="TruckerShipper" customModuleProvider="target">
                                                             <rect key="frame" x="0.0" y="14" width="90" height="19.5"/>
@@ -1612,7 +1689,7 @@
                                                     </constraints>
                                                 </view>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ogv-KI-mUG">
-                                                    <rect key="frame" x="0.0" y="882" width="366" height="98"/>
+                                                    <rect key="frame" x="0.0" y="980" width="366" height="98"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Port of Loading" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4jX-Vf-Vpf" customClass="UILabelDeviceClass" customModule="TruckerShipper" customModuleProvider="target">
                                                             <rect key="frame" x="0.0" y="14" width="118.5" height="19.5"/>
@@ -1674,7 +1751,7 @@
                                                     </constraints>
                                                 </view>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M6P-xH-lYM">
-                                                    <rect key="frame" x="0.0" y="980" width="366" height="98"/>
+                                                    <rect key="frame" x="0.0" y="1078" width="366" height="98"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Port of Discharge" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="63B-qP-YOf" customClass="UILabelDeviceClass" customModule="TruckerShipper" customModuleProvider="target">
                                                             <rect key="frame" x="0.0" y="14" width="135.5" height="19.5"/>
@@ -1736,7 +1813,7 @@
                                                     </constraints>
                                                 </view>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UcI-3I-rTc">
-                                                    <rect key="frame" x="0.0" y="1078" width="366" height="98"/>
+                                                    <rect key="frame" x="0.0" y="1176" width="366" height="98"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Empty PickUp Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LqQ-Zr-buS" customClass="UILabelDeviceClass" customModule="TruckerShipper" customModuleProvider="target">
                                                             <rect key="frame" x="0.0" y="14" width="179" height="19.5"/>
@@ -1798,7 +1875,7 @@
                                                     </constraints>
                                                 </view>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qC4-jt-AYU">
-                                                    <rect key="frame" x="0.0" y="1176" width="366" height="98"/>
+                                                    <rect key="frame" x="0.0" y="1274" width="366" height="98"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Empty Return Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oaF-dV-hmR" customClass="UILabelDeviceClass" customModule="TruckerShipper" customModuleProvider="target">
                                                             <rect key="frame" x="0.0" y="14" width="176.5" height="19.5"/>
@@ -1862,7 +1939,7 @@
                                             </subviews>
                                         </stackView>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VAi-Pp-50w">
-                                            <rect key="frame" x="0.0" y="1274" width="366" height="98"/>
+                                            <rect key="frame" x="0.0" y="1372" width="366" height="98"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Remarks" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4RG-RN-KcO" customClass="UILabelDeviceClass" customModule="TruckerShipper" customModuleProvider="target">
                                                     <rect key="frame" x="0.0" y="14" width="68" height="19.5"/>

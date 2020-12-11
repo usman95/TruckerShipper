@@ -32,6 +32,7 @@ class LoadRequest: BaseController {
     @IBOutlet weak var tfDropOffDetailsLabourers: UITextFieldDeviceClass!
     
     @IBOutlet weak var tfBookingDetailsCustomerName: UITextFieldDeviceClass!
+    @IBOutlet weak var tfBookingDetailsBookingDate: UITextFieldDeviceClass!
     @IBOutlet weak var tfBookingDetailsRoute: UITextFieldDeviceClass!
     @IBOutlet weak var tfBookingDetailsModeOfTransport: UITextFieldDeviceClass!
     @IBOutlet weak var tfBookingDetailsTransitFreeDays: UITextFieldDeviceClass!
@@ -43,8 +44,7 @@ class LoadRequest: BaseController {
     @IBOutlet weak var tfBookingDetailsPortOfLoading: UITextFieldDeviceClass!
     @IBOutlet weak var tfBookingDetailsPortOfDischarge: UITextFieldDeviceClass!
     @IBOutlet weak var tfBookingDetailsEmptyPickUpLocation: UITextFieldDeviceClass!
-    @IBOutlet weak var tfBookingDetailsEmptyDropOffLocation: UITextFieldDeviceClass!
-    @IBOutlet weak var tfBookingDetailsBookingDate: UITextFieldDeviceClass!
+    @IBOutlet weak var tfBookingDetailsEmptyReturnLocation: UITextFieldDeviceClass!
     @IBOutlet weak var tfBookingDetailsRemarks: UITextFieldDeviceClass!
     
     var loadDetails: [String:Any]?
@@ -53,6 +53,8 @@ class LoadRequest: BaseController {
     
     var selectedPickUpDetailsCity: AttributeModel?
     var selectedDropOffDetailsDetailsCity: AttributeModel?
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -86,6 +88,11 @@ extension LoadRequest{
             }
             
             self.getCities()
+            
+            let name = "\(AppStateManager.sharedInstance.loggedInUser.user?.firstName ?? "") \(AppStateManager.sharedInstance.loggedInUser.user?.lastName ?? "")"
+            self.tfBookingDetailsCustomerName.text = name
+            
+            
         }
     }
     private func callAPIs(){
