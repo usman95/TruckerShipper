@@ -40,4 +40,16 @@ class AttributesAPIManager: APIManagerBase {
         let route: URL = URLforRoute(route: Route.Weight.rawValue, params: params)! as URL
         self.getDictionaryResponseWith(route: route, success: success, failure: failure, withHeader: true)
     }
+    //MARK:- BookingType
+    func BookingType(params: Parameters, success: @escaping DefaultAPISuccessClosure, failure: @escaping DefaultAPIFailureClosure){
+        Utility.showLoader()
+        let route: URL = URLforRoute(route: Route.BookingType.rawValue, params: params)! as URL
+        self.getDictionaryResponseWith(route: route, success: success, failure: failure, withHeader: true)
+    }
+    //MARK:- ShippingLine
+    func ShippingLine(params: Parameters, success: @escaping DefaultAPISuccessClosure, failure: @escaping DefaultAPIFailureClosure){
+        Utility.showLoader()
+        let route: URL = URLforRoute(route: Route.ShippingLine.rawValue, params: params)! as URL
+        self.getDictionaryResponseWith(route: route, success: success, failure: failure, withHeader: true)
+    }
 }

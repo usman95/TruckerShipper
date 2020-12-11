@@ -22,9 +22,10 @@ class SignUp: BaseController {
     @IBOutlet weak var btnCreateAnAccount: UIButtonDeviceClass!
     @IBOutlet weak var tvTermsAndPolicies: UITextView!
     
-    var selectedShipper: String?
-    var arrShipper = [String]()
     let shipperDropDown = DropDown()
+    var arrShipper = [String]()
+    var selectedShipper: String?
+    
     var selectedRole: AttributeModel?
     
     override func viewDidLoad() {

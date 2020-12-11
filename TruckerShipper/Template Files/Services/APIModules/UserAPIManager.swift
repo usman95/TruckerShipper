@@ -40,4 +40,10 @@ class UsersAPIManager: APIManagerBase {
         let route: URL = POSTURLforRoute(route: Route.UpdateProfile.rawValue+id)!
         self.putDictionaryResponseWith(route: route, parameters: params, success: success, failure: failure, withHeader: true)
     }
+    //MARK:- Routes
+    func Routes(success: @escaping DefaultArrayResultAPISuccessClosure, failure: @escaping DefaultAPIFailureClosure){
+        Utility.showLoader()
+        let route: URL = POSTURLforRoute(route: Route.Routes.rawValue)!
+        self.getArrayResponseWith(route: route, success: success, failure: failure, withHeader: false)
+    }
 }

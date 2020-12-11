@@ -80,4 +80,6 @@ enum Strings: String{
     case PLEASE_ENTER_QUANTITY = "Please enter valid quantity."
     case PER_TRUCK = "Per Truck"
     case PER_CONTAINER = "Per Container"
+    case BY_TRUCK = "By Truck"
+    case BY_TRAIN = "By Train"
 }

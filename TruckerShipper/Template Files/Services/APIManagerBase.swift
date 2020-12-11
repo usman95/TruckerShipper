@@ -19,6 +19,9 @@ enum Route: String {
     case Commodity = "/api/commodity"
     case CargoType = "/api/cargo-type"
     case Weight = "/api/weight"
+    case Routes = "/public/booking-routes"
+    case BookingType = "/api/booking-type"
+    case ShippingLine = "/api/shipping-line"
     
     //MARK:- ALL
     case ShipperContracts = "/api/shipper-contract"

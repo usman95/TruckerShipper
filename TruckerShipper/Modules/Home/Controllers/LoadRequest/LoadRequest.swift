@@ -47,6 +47,9 @@ class LoadRequest: BaseController {
     @IBOutlet weak var tfBookingDetailsEmptyReturnLocation: UITextFieldDeviceClass!
     @IBOutlet weak var tfBookingDetailsRemarks: UITextFieldDeviceClass!
     
+    @IBOutlet weak var viewPortOfLoading: UIView!
+    @IBOutlet weak var viewPortOfDischarge: UIView!
+    
     var loadDetails: [String:Any]?
     
     var arrCities = [AttributeModel]()
@@ -58,9 +61,28 @@ class LoadRequest: BaseController {
     var selecteBookingDate: Date?
     var selectePickUpDate: Date?
     
+    let routesDropDown = DropDown()
+    var arrRoutes = [String]()
+    var selectedRoute: String?
+    
+    let bookingTypeDropDown = DropDown()
+    var arrBookingType = [AttributeModel]()
+    var selectedBookingType: AttributeModel?
+    
+    let shippingLineDropDown = DropDown()
+    var arrShippingLine = [AttributeModel]()
+    var selectedShippingLine: AttributeModel?
+    
+    var arrCommodity = [AttributeModel]()
+    var selectedCommodity: AttributeModel?
+    
+    var arrCargoType = [AttributeModel]()
+    var selectedCargoType: AttributeModel?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setData()
+        self.callAPIs()
         // Do any additional setup after loading the view.
     }
     
@@ -73,6 +95,16 @@ class LoadRequest: BaseController {
         self.bookingDatePickerType = .pickUp
         self.setDate(date: self.selecteBookingDate ?? self.selectePickUpDate ?? Date())
         self.getPickedDate(sender)
+    }
+    
+    @IBAction func onBtnRoute(_ sender: UIButton) {
+        self.routesDropDown.show()
+    }
+    @IBAction func onBtnBookingType(_ sender: UIButton) {
+        self.bookingTypeDropDown.show()
+    }
+    @IBAction func onBtnShippingLine(_ sender: UIButton) {
+        self.shippingLineDropDown.show()
     }
 }
 //MARK:- Helper methods
@@ -104,11 +136,24 @@ extension LoadRequest{
             let name = "\(AppStateManager.sharedInstance.loggedInUser.user?.firstName ?? "") \(AppStateManager.sharedInstance.loggedInUser.user?.lastName ?? "")"
             self.tfBookingDetailsCustomerName.text = name
             
-            
+            let modeOfTransport = loadDetails["modeOfTransport"] as? String ?? ""
+            switch modeOfTransport {
+            case ModeOfTransportType.truck.rawValue:
+                self.tfBookingDetailsModeOfTransport.text = Strings.BY_TRUCK.text
+                
+                self.viewPortOfLoading.isHidden = true
+                self.viewPortOfDischarge.isHidden = true
+            default:
+                self.tfBookingDetailsModeOfTransport.text = Strings.BY_TRAIN.text
+            }
         }
     }
     private func callAPIs(){
-        self.getCities()
+        self.getRoutes()
+        self.getBookingType()
+        self.getShippingLine()
+        self.getCommodity()
+        self.getCargoType()
     }
     private func setSelectedCities(){
         let pickUpCity = self.tfPickUpDetailsCity.text ?? ""
@@ -116,6 +161,52 @@ extension LoadRequest{
         
         self.selectedPickUpDetailsCity = self.arrCities.filter{$0.title == pickUpCity}.first
         self.selectedDropOffDetailsDetailsCity = self.arrCities.filter{$0.title == dropOffCity}.first
+    }
+    private func setRoutesDropDown(){
+        self.routesDropDown.dataSource = self.arrRoutes
+        self.routesDropDown.anchorView = self.tfBookingDetailsRoute
+        self.routesDropDown.cellHeight = self.tfBookingDetailsRoute.frame.height
+        self.routesDropDown.width = self.tfBookingDetailsRoute.frame.width
+        self.routesDropDown.selectionAction = { [unowned self] (index: Int, item: String) in
+            self.tfBookingDetailsRoute.text = item.uppercased()
+            self.selectedRoute = item
+        }
+    }
+    private func setBookingTypeDropDown(){
+        self.bookingTypeDropDown.dataSource = self.arrBookingType.map{$0.title ?? ""}
+        self.bookingTypeDropDown.anchorView = self.tfBookingDetailsBookingType
+        self.bookingTypeDropDown.cellHeight = self.tfBookingDetailsBookingType.frame.height
+        self.bookingTypeDropDown.width = self.tfBookingDetailsBookingType.frame.width
+        self.bookingTypeDropDown.selectionAction = { [unowned self] (index: Int, item: String) in
+            self.tfBookingDetailsBookingType.text = item
+            self.selectedBookingType = self.arrBookingType[index]
+        }
+    }
+    private func setShippingLineDropDown(){
+        self.shippingLineDropDown.dataSource = self.arrShippingLine.map{$0.title ?? ""}
+        self.shippingLineDropDown.anchorView = self.tfBookingDetailsShippingLine
+        self.shippingLineDropDown.cellHeight = self.tfBookingDetailsShippingLine.frame.height
+        self.shippingLineDropDown.width = self.tfBookingDetailsShippingLine.frame.width
+        self.shippingLineDropDown.selectionAction = { [unowned self] (index: Int, item: String) in
+            self.tfBookingDetailsShippingLine.text = item
+            self.selectedShippingLine = self.arrShippingLine[index]
+        }
+    }
+    private func setSelectedCargoType(){
+        if let loadDetails = self.loadDetails{
+            let cargoTypeId = loadDetails["cargoTypeId"] as? String ?? ""
+            
+            self.selectedCargoType = self.arrCargoType.filter{$0.id == cargoTypeId}.first
+            self.tfBookingDetailsCargoType.text = self.selectedCargoType?.title ?? ""
+        }
+    }
+    private func setSelectedCommodity(){
+        if let loadDetails = self.loadDetails{
+            let commodityId = loadDetails["commodityId"] as? String ?? ""
+            
+            self.selectedCommodity = self.arrCommodity.filter{$0.id == commodityId}.first
+            self.tfBookingDetailsCommodity.text = self.selectedCommodity?.title ?? ""
+        }
     }
 }
 //MARK:- Date Picker
@@ -171,6 +262,79 @@ extension LoadRequest{
             guard let cities = response["cities"] as? [[String:Any]] else {return}
             self.arrCities = Mapper<AttributeModel>().mapArray(JSONArray: cities)
             self.setSelectedCities()
+        }) { (error) in
+            print(error)
+        }
+    }
+    private func getRoutes(){
+        APIManager.sharedInstance.usersAPIManager.Routes(success: { (responseObject) in
+            guard let routes = responseObject as? [String] else {return}
+            self.arrRoutes = routes
+            self.setRoutesDropDown()
+        }) { (error) in
+            print(error)
+        }
+    }
+    private func getBookingType(){
+        let skip = "0"
+        let limit = "1000"
+        
+        let params:[String:Any] = ["skip":skip,
+                                   "limit":limit]
+        
+        APIManager.sharedInstance.attributesAPIManager.BookingType(params: params, success: { (responseObject) in
+            let response = responseObject as Dictionary
+            guard let bookingTypes = response["bookingTypes"] as? [[String:Any]] else {return}
+            self.arrBookingType = Mapper<AttributeModel>().mapArray(JSONArray: bookingTypes)
+            self.setBookingTypeDropDown()
+        }) { (error) in
+            print(error)
+        }
+    }
+    private func getShippingLine(){
+        let skip = "0"
+        let limit = "1000"
+        
+        let params:[String:Any] = ["skip":skip,
+                                   "limit":limit]
+        
+        APIManager.sharedInstance.attributesAPIManager.ShippingLine(params: params, success: { (responseObject) in
+            let response = responseObject as Dictionary
+            guard let bookingTypes = response["shippingLines"] as? [[String:Any]] else {return}
+            self.arrShippingLine = Mapper<AttributeModel>().mapArray(JSONArray: bookingTypes)
+            self.setShippingLineDropDown()
+        }) { (error) in
+            print(error)
+        }
+    }
+    private func getCommodity(){
+        let skip = "0"
+        let limit = "1000"
+        
+        let params:[String:Any] = ["skip":skip,
+                                   "limit":limit]
+        
+        APIManager.sharedInstance.attributesAPIManager.Commodity(params: params, success: { (responseObject) in
+            let response = responseObject as Dictionary
+            guard let commodities = response["commodities"] as? [[String:Any]] else {return}
+            self.arrCommodity = Mapper<AttributeModel>().mapArray(JSONArray: commodities)
+            self.setSelectedCommodity()
+        }) { (error) in
+            print(error)
+        }
+    }
+    private func getCargoType(){
+        let skip = "0"
+        let limit = "1000"
+        
+        let params:[String:Any] = ["skip":skip,
+                                   "limit":limit]
+        
+        APIManager.sharedInstance.attributesAPIManager.CargoType(params: params, success: { (responseObject) in
+            let response = responseObject as Dictionary
+            guard let cargoTypes = response["cargoTypes"] as? [[String:Any]] else {return}
+            self.arrCargoType = Mapper<AttributeModel>().mapArray(JSONArray: cargoTypes)
+            self.setSelectedCargoType()
         }) { (error) in
             print(error)
         }

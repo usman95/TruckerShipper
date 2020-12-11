@@ -115,7 +115,7 @@ extension LoadDetails{
         let weightId = self.selectedWeightPerTruck?.id ?? ""
         let sizeId = self.selectedSizePerTruck?.id ?? ""
         let commodityId = self.selectedCommodity?.id ?? ""
-        let cargoTypeId = self.selectedCommodity?.id ?? ""
+        let cargoTypeId = self.selectedCargoType?.id ?? ""
         let quantityOfTrucks = self.tfQuantity.text ?? ""
         
         if self.selectedWeightPerTruck == nil{
