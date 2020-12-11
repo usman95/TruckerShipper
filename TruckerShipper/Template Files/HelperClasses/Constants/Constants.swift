@@ -8,6 +8,7 @@ struct Global{
     static var APP_REALM                     = APP_MANAGER.realm
     static let APP_COLOR                     = UIColor(red:0/255, green:71/255, blue:158/255, alpha:1.0)
     static let APP_COLOR_DARK                = UIColor(red:185/255, green:13/255, blue:12/255, alpha:1.0)
+    static let APP_COLOR_DARK_GREY           = UIColor(red:78/255, green:78/255, blue:78/255, alpha:1.0)
 }
 
 struct Constants {

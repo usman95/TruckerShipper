@@ -48,7 +48,7 @@ class LoadDetails: BaseController {
         self.cargoTypeDropDown.show()
     }
     @IBAction func onBtnCalculateRate(_ sender: UIButtonDeviceClass) {
-        
+        self.presentCalculatedRate()
     }
 }
 //MARK:- Helper methods
@@ -91,6 +91,16 @@ extension LoadDetails{
     private func validate()->[String:Any]?{
         
         return nil
+    }
+    private func presentCalculatedRate(){
+        let controller = CalculatedRate()
+        controller.modalPresentationStyle = .overFullScreen
+        controller.modalTransitionStyle = .coverVertical
+        self.present(controller, animated: true, completion: nil)
+        
+        controller.setSelectedPrice = { selectedPrice in
+            super.pushToLoadRequest()
+        }
     }
 }
 //MARK:- Services

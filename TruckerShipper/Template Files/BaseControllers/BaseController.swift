@@ -60,6 +60,10 @@ extension BaseController{
         let controller = SignUp()
         self.navigationController?.pushViewController(controller, animated: true)
     }
+    func pushToLoadRequest(){
+        let controller = LoadRequest()
+        self.navigationController?.pushViewController(controller, animated: true)
+    }
 }
 extension BaseController: UIGestureRecognizerDelegate {
     func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {

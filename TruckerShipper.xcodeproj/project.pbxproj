@@ -10,6 +10,10 @@
 		544F56C1EA857265523A6A2D /* Pods_TruckerShipper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5AC2E48790C561F507940FD /* Pods_TruckerShipper.framework */; };
 		FA20009225839B1D00E14D36 /* LoadDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA20009025839B1D00E14D36 /* LoadDetails.swift */; };
 		FA20009325839B1D00E14D36 /* LoadDetails.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA20009125839B1D00E14D36 /* LoadDetails.xib */; };
+		FA2000972583BB6800E14D36 /* CalculatedRate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2000952583BB6800E14D36 /* CalculatedRate.swift */; };
+		FA2000982583BB6800E14D36 /* CalculatedRate.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA2000962583BB6800E14D36 /* CalculatedRate.xib */; };
+		FA20009C2583DF8F00E14D36 /* LoadRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA20009A2583DF8E00E14D36 /* LoadRequest.swift */; };
+		FA20009D2583DF8F00E14D36 /* LoadRequest.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA20009B2583DF8F00E14D36 /* LoadRequest.xib */; };
 		FA37E9FB2574099A0073CF0C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA37E9FA2574099A0073CF0C /* AppDelegate.swift */; };
 		FA37EA042574099D0073CF0C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA37EA032574099D0073CF0C /* Assets.xcassets */; };
 		FA37EA072574099D0073CF0C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA37EA052574099D0073CF0C /* LaunchScreen.storyboard */; };
@@ -103,6 +107,10 @@
 		D5AC2E48790C561F507940FD /* Pods_TruckerShipper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TruckerShipper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA20009025839B1D00E14D36 /* LoadDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadDetails.swift; sourceTree = "<group>"; };
 		FA20009125839B1D00E14D36 /* LoadDetails.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadDetails.xib; sourceTree = "<group>"; };
+		FA2000952583BB6800E14D36 /* CalculatedRate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatedRate.swift; sourceTree = "<group>"; };
+		FA2000962583BB6800E14D36 /* CalculatedRate.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CalculatedRate.xib; sourceTree = "<group>"; };
+		FA20009A2583DF8E00E14D36 /* LoadRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadRequest.swift; sourceTree = "<group>"; };
+		FA20009B2583DF8F00E14D36 /* LoadRequest.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadRequest.xib; sourceTree = "<group>"; };
 		FA37E9F72574099A0073CF0C /* TruckerShipper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TruckerShipper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA37E9FA2574099A0073CF0C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FA37EA032574099D0073CF0C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -228,6 +236,24 @@
 				FA20009125839B1D00E14D36 /* LoadDetails.xib */,
 			);
 			path = LoadDetails;
+			sourceTree = "<group>";
+		};
+		FA2000942583BB4F00E14D36 /* CalculatedRate */ = {
+			isa = PBXGroup;
+			children = (
+				FA2000952583BB6800E14D36 /* CalculatedRate.swift */,
+				FA2000962583BB6800E14D36 /* CalculatedRate.xib */,
+			);
+			path = CalculatedRate;
+			sourceTree = "<group>";
+		};
+		FA2000992583DF7600E14D36 /* LoadRequest */ = {
+			isa = PBXGroup;
+			children = (
+				FA20009A2583DF8E00E14D36 /* LoadRequest.swift */,
+				FA20009B2583DF8F00E14D36 /* LoadRequest.xib */,
+			);
+			path = LoadRequest;
 			sourceTree = "<group>";
 		};
 		FA37E9EE2574099A0073CF0C = {
@@ -514,6 +540,8 @@
 				FA37EA8E25740EAD0073CF0C /* SideMenu */,
 				FA37EA7E25740EAD0073CF0C /* Home */,
 				FA20008F25839AF500E14D36 /* LoadDetails */,
+				FA2000942583BB4F00E14D36 /* CalculatedRate */,
+				FA2000992583DF7600E14D36 /* LoadRequest */,
 				FA62D005257D713A000DCFDD /* MyContracts */,
 				FA37EA8125740EAD0073CF0C /* TripExpenses */,
 				FAE067CB257AF3A1005E1C97 /* MyAccount */,
@@ -786,8 +814,10 @@
 				FA37EAAC25740EAD0073CF0C /* Notifications.xib in Resources */,
 				FA37EAB8257429350073CF0C /* ForgotPassword.xib in Resources */,
 				FA37EAA725740EAD0073CF0C /* TripExpensesHeader.xib in Resources */,
+				FA2000982583BB6800E14D36 /* CalculatedRate.xib in Resources */,
 				FA37EAA525740EAD0073CF0C /* TripExpenseDetailTVC.xib in Resources */,
 				FA37EABC257432E10073CF0C /* SignUp.xib in Resources */,
+				FA20009D2583DF8F00E14D36 /* LoadRequest.xib in Resources */,
 				FA62D009257D716C000DCFDD /* MyContracts.xib in Resources */,
 				FA37EA7525740E4C0073CF0C /* Greycliff-cf-medium.ttf in Resources */,
 				FA37EA7625740E4C0073CF0C /* Greycliff-cf-light.ttf in Resources */,
@@ -866,6 +896,7 @@
 				FA37EAB025740EAE0073CF0C /* Login.swift in Sources */,
 				FA37EA5C25740E4C0073CF0C /* UIFont+Extension.swift in Sources */,
 				FA37EAAB25740EAD0073CF0C /* Notifications.swift in Sources */,
+				FA2000972583BB6800E14D36 /* CalculatedRate.swift in Sources */,
 				FA62D008257D716C000DCFDD /* MyContracts.swift in Sources */,
 				FA37EA5825740E4C0073CF0C /* Utility.swift in Sources */,
 				FA37EAA025740EAD0073CF0C /* Home.swift in Sources */,
@@ -900,6 +931,7 @@
 				FABB36A42580B4870084BCCA /* ShipperApiManager.swift in Sources */,
 				FA6B424C25791ABE00C6D106 /* RoleId.swift in Sources */,
 				FA37EA7225740E4C0073CF0C /* RoundedCorners.swift in Sources */,
+				FA20009C2583DF8F00E14D36 /* LoadRequest.swift in Sources */,
 				FA5225AC25802E6200C4FFD0 /* MyContractsTVC.swift in Sources */,
 				FA37EA5725740E4C0073CF0C /* Validation.swift in Sources */,
 				FA6B424D25791ABE00C6D106 /* CountryId.swift in Sources */,
