@@ -13,7 +13,7 @@ class CustomLoader: UIView{
     let colors : [UIColor] = [Global.APP_COLOR]
     var defaultColor : UIColor = UIColor.red
     var isUsrInteractionEnable : Bool = false
-    var defaultbgColor: UIColor = UIColor(white: 1, alpha: 0.5)
+    var defaultbgColor: UIColor = UIColor(white: 1, alpha: 0.0)
     var loaderSize : CGFloat = 75.0
     /// **************** ******************  ////////// **************
 
@@ -37,7 +37,7 @@ class CustomLoader: UIView{
 
         backgroundView = UIView()
         backgroundView.frame = (UIApplication.shared.windows.first?.frame)!
-        backgroundView.backgroundColor = UIColor.init(white: 0, alpha: 0.4)
+        backgroundView.backgroundColor = UIColor.init(white: 0, alpha: 0.0)
         win?.addSubview(backgroundView)
 
         self.frame = CGRect.init(x: ((UIScreen.main.bounds.width) - loaderSize)/2, y: ((UIScreen.main.bounds.height) - loaderSize)/2, width: loaderSize, height: loaderSize)

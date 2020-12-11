@@ -17,8 +17,12 @@ class LoadDetails: BaseController {
     @IBOutlet weak var tfCommodity: UITextFieldDeviceClass!
     @IBOutlet weak var tfCargoType: UITextFieldDeviceClass!
     @IBOutlet weak var tfQuantity: UITextFieldDeviceClass!
+    @IBOutlet weak var btnCalculateRate: UIButtonDeviceClass!
     
     var locationAttribute: [String:Any]?
+    
+    var arrWeightPerTruck = [AttributeModel]()
+    var selectedWeightPerTruck: AttributeModel?
     
     let sizePerTruckDropDown = DropDown()
     var arrSizePerTruck = [AttributeModel]()
@@ -48,12 +52,13 @@ class LoadDetails: BaseController {
         self.cargoTypeDropDown.show()
     }
     @IBAction func onBtnCalculateRate(_ sender: UIButtonDeviceClass) {
-        self.presentCalculatedRate()
+        self.getBookingEstimate()
     }
 }
 //MARK:- Helper methods
 extension LoadDetails{
     private func callAPIs(){
+        self.getWeightPerTruck()
         self.getSizePerTruck()
         self.getCommodity()
         self.getCargoType()
@@ -88,12 +93,9 @@ extension LoadDetails{
             self.selectedCargoType = self.arrCargoType[index]
         }
     }
-    private func validate()->[String:Any]?{
-        
-        return nil
-    }
-    private func presentCalculatedRate(){
+    private func presentCalculatedRate(priceEstimates: PriceEstimates?){
         let controller = CalculatedRate()
+        controller.priceEstimates = priceEstimates
         controller.modalPresentationStyle = .overFullScreen
         controller.modalTransitionStyle = .coverVertical
         self.present(controller, animated: true, completion: nil)
@@ -102,9 +104,90 @@ extension LoadDetails{
             super.pushToLoadRequest()
         }
     }
+    private func validate()->[String:Any]?{
+        let weightId = self.selectedWeightPerTruck?.id ?? ""
+        let sizeId = self.selectedSizePerTruck?.id ?? ""
+        let commodityId = self.selectedCommodity?.id ?? ""
+        let cargoTypeId = self.selectedCommodity?.id ?? ""
+        let quantityOfTrucks = self.tfQuantity.text ?? ""
+        
+        if self.selectedWeightPerTruck == nil{
+            Utility.main.showToast(message: Strings.PLEASE_ENTER_WEIGHT_PER_TRUCK.text)
+            self.btnCalculateRate.shake()
+            return nil
+        }
+        if self.selectedSizePerTruck == nil{
+            Utility.main.showToast(message: Strings.PLEASE_SELECT_SIZE_PER_TRUCK.text)
+            self.btnCalculateRate.shake()
+            return nil
+        }
+        if self.selectedCommodity == nil{
+            Utility.main.showToast(message: Strings.PLEASE_SELECT_COMMODITY.text)
+            self.btnCalculateRate.shake()
+            return nil
+        }
+        if self.selectedCargoType == nil{
+            Utility.main.showToast(message: Strings.PLEASE_SELECT_CARGO_TYPE.text)
+            self.btnCalculateRate.shake()
+            return nil
+        }
+        if !Validation.isValidNumber(quantityOfTrucks){
+            Utility.main.showToast(message: Strings.PLEASE_ENTER_QUANTITY.text)
+            self.btnCalculateRate.shake()
+            return nil
+        }
+        
+        var params = self.locationAttribute ?? [:]
+        
+        params["weightId"] = weightId
+        params["sizeId"] = sizeId
+        params["commodityId"] = commodityId
+        params["cargoTypeId"] = cargoTypeId
+        params["quantityOfTrucks"] = quantityOfTrucks
+
+        return params
+    }
+}
+//MARK:- UITextFieldDelegate
+extension LoadDetails: UITextFieldDelegate{
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        if textField == self.tfWeightPerTruck{
+            self.selectedWeightPerTruck = nil
+            
+            let weight = Int(textField.text ?? "") ?? 0
+                    
+            for (index,weightPerTruck) in self.arrWeightPerTruck.enumerated(){
+                if weight == weightPerTruck.weight{
+                    self.selectedWeightPerTruck = self.arrWeightPerTruck[index]
+                    self.tfWeightPerTruck.text = "\(self.selectedWeightPerTruck?.weight ?? 0)"
+                    break
+                }
+            }
+            
+            if self.selectedWeightPerTruck == nil{
+                self.selectedWeightPerTruck = self.arrWeightPerTruck.last
+                self.tfWeightPerTruck.text = "\(self.selectedWeightPerTruck?.weight ?? 0)"
+            }
+        }
+    }
 }
 //MARK:- Services
 extension LoadDetails{
+    private func getWeightPerTruck(){
+        let skip = "0"
+        let limit = "1000"
+
+        let params:[String:Any] = ["skip":skip,
+                                   "limit":limit]
+        
+        APIManager.sharedInstance.attributesAPIManager.Weight(params: params, success: { (responseObject) in
+            let response = responseObject as Dictionary
+            guard let weights = response["weights"] as? [[String:Any]] else {return}
+            self.arrWeightPerTruck = Mapper<AttributeModel>().mapArray(JSONArray: weights)
+        }) { (error) in
+            print(error)
+        }
+    }
     private func getSizePerTruck(){
         let skip = "0"
         let limit = "1000"
@@ -149,6 +232,21 @@ extension LoadDetails{
             guard let cargoTypes = response["cargoTypes"] as? [[String:Any]] else {return}
             self.arrCargoType = Mapper<AttributeModel>().mapArray(JSONArray: cargoTypes)
             self.setCargoTypeDropDown()
+        }) { (error) in
+            print(error)
+        }
+    }
+    private func getBookingEstimate(){
+        guard let params = self.validate() else {return}
+        params.printJson()
+        APIManager.sharedInstance.shipperAPIManager.BookingEstimate(params: params, success: { (responseObject) in
+            let response = responseObject as Dictionary
+            
+            let truckPrice = response["truckPrice"] as? Int ?? 0
+            let trainPrice = response["trainPrice"] as? Int ?? 0
+            
+            let priceEstimates = PriceEstimates(truck: truckPrice, train: trainPrice)
+            self.presentCalculatedRate(priceEstimates: priceEstimates)
         }) { (error) in
             print(error)
         }

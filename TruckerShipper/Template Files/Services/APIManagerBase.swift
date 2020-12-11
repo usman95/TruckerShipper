@@ -12,14 +12,17 @@ enum Route: String {
     case ForgotPassword = "/auth/forget-pass"
     case UpdateProfile = "/api/user/"
     
-    case ShipperContracts = "/api/shipper-contract"
-
     //MARK:- ATTRIBUTES
     case Country = "/api/country"
     case City = "/api/city/"
     case Size = "/api/size"
     case Commodity = "/api/commodity"
     case CargoType = "/api/cargo-type"
+    case Weight = "/api/weight"
+    
+    //MARK:- ALL
+    case ShipperContracts = "/api/shipper-contract"
+    case BookingEstimate = "/api/booking-estimate"
 }
 class APIManagerBase: NSObject {
     let baseURL = Constants.BaseURL

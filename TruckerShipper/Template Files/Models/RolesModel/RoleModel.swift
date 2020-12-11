@@ -16,10 +16,12 @@ public class AttributeModel: Object, Mappable {
     private struct SerializationKeys {
         static let id = "_id"
         static let title = "title"
+        static let weight = "weight"
     }
     // MARK: Properties
     @objc dynamic var id: String? = ""
     @objc dynamic var title: String? = ""
+    @objc dynamic var weight = 0
     
     // MARK: ObjectMapper Initializers
     /// Map a JSON object to this class using ObjectMapper.
@@ -38,5 +40,6 @@ public class AttributeModel: Object, Mappable {
     public func mapping(map: Map) {
         id <- map[SerializationKeys.id]
         title <- map[SerializationKeys.title]
+        weight <- map[SerializationKeys.weight]
     }
 }

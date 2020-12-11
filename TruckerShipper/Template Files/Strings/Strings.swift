@@ -73,4 +73,11 @@ enum Strings: String{
     case HEY = "Hey!"
     case PLEASE_SELECT_PICKUP_AND_DROPOFF_LOCATION = "please select pickup and dropoff location"
     case PLEASE_SELECT_LOCATION = "Please select your pick-up/drop-off locations."
+    case PLEASE_ENTER_WEIGHT_PER_TRUCK = "Please enter valid weight per truck."
+    case PLEASE_SELECT_SIZE_PER_TRUCK = "Please select size per truck."
+    case PLEASE_SELECT_COMMODITY = "Please select commodity."
+    case PLEASE_SELECT_CARGO_TYPE = "Please select cargo type."
+    case PLEASE_ENTER_QUANTITY = "Please enter valid quantity."
+    case PER_TRUCK = "Per Truck"
+    case PER_CONTAINER = "Per Container"
 }

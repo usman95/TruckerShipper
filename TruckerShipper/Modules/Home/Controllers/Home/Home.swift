@@ -173,7 +173,21 @@ extension Home{
             self.lblPickUpTitle.text = place.name ?? "Pick-up Location"
             self.lblPickUp.text = place.formattedAddress ?? "Location Area - City"
             self.pickUpLocation = place.coordinate
-            self.pickUpCity = place.addressComponents?.first?.name ?? ""
+            
+            if let addressComponent = place.addressComponents{
+                for components in addressComponent {
+                    for type in components.types{
+                        switch type{
+                        case "locality":
+                            self.pickUpCity = components.name
+                        default:
+                            break
+                        }
+                        
+                    }
+                }
+            }
+            
             self.hidePicker()
             self.zoomToSearchLocation(location: self.pickUpLocation ?? CLLocationCoordinate2D())
             self.addPickUpMarker()
@@ -185,9 +199,23 @@ extension Home{
             self.lblDropOffTitle.text = place.name ?? "Drop-off Location"
             self.lblDropOff.text = place.formattedAddress ?? "Location Area - City"
             self.dropOffLocation = place.coordinate
-            self.dropOffCity = place.addressComponents?.first?.name ?? ""
-            self.addDropOffMarker()
+            
+            if let addressComponent = place.addressComponents{
+                for components in addressComponent {
+                    for type in components.types{
+                        switch type{
+                        case "locality":
+                            self.dropOffCity = components.name
+                        default:
+                            break
+                        }
+                        
+                    }
+                }
+            }
+
             self.hidePicker()
+            self.addDropOffMarker()
             self.getRoute()
         }
     }
@@ -197,7 +225,7 @@ extension Home{
         controller.locationAttribute = locationAttribute
         self.navigationController?.pushViewController(controller, animated: true)
     }
-    private func validate()-> [String:Any]?{
+    private func validate()->[String:Any]?{
         if self.pickUpLocation == nil || self.dropOffLocation == nil{
             Utility.main.showToast(message: Strings.PLEASE_SELECT_LOCATION.text)
             self.btnNext.shake()
@@ -205,19 +233,17 @@ extension Home{
         }
         
         var pickup = [String:Any]()
-        let pickup_address:[String:Any] = ["required":true,
-                                           "type":self.lblPickUp.text ?? ""]
         let pickup_coordinates:[Double] = [Double(self.pickUpLocation?.latitude ?? 0.0),
                                            Double(self.pickUpLocation?.longitude ?? 0.0),]
-        pickup["address"] = pickup_address
+//        pickup["city"] = self.pickUpCity ?? ""
+        pickup["address"] = self.lblPickUp.text ?? ""
         pickup["coordinates"] = pickup_coordinates
         
         var dropoff = [String:Any]()
-        let dropoff_address:[String:Any] = ["required":true,
-                                           "type":self.lblDropOff.text ?? ""]
         let dropoff_coordinates:[Double] = [Double(self.dropOffLocation?.latitude ?? 0.0),
                                            Double(self.dropOffLocation?.longitude ?? 0.0),]
-        dropoff["address"] = dropoff_address
+//        dropoff["city"] = self.dropOffCity ?? ""
+        dropoff["address"] = self.lblDropOff.text ?? ""
         dropoff["coordinates"] = dropoff_coordinates
         
         let params:[String:Any] = ["pickup":pickup,
@@ -227,6 +253,14 @@ extension Home{
 }
 //MARK:- Reverse Geocode Location
 extension Home{
+    private func reverseGeoCodeBy(location:CLLocation){
+        Utility.showLoader()
+        self.view.endEditing(true)
+        self.geocoder.reverseGeocodeLocation(location) { (placemarks, error) in
+            // Process Response
+            self.processResponse(withPlacemarks: placemarks, error: error)
+        }
+    }
     private func processResponse(withPlacemarks placemarks: [CLPlacemark]?, error: Error?) {
         // Update View
         Utility.hideLoader()
@@ -285,14 +319,6 @@ extension Home: GMSMapViewDelegate{
     }
     func mapView(_ mapView: GMSMapView, didTapMyLocation location: CLLocationCoordinate2D) {
         self.zoomToSearchLocation(location: location)
-    }
-    private func reverseGeoCodeBy(location:CLLocation){
-        Utility.showLoader()
-        self.view.endEditing(true)
-        self.geocoder.reverseGeocodeLocation(location) { (placemarks, error) in
-            // Process Response
-            self.processResponse(withPlacemarks: placemarks, error: error)
-        }
     }
 }
 //MARK:- CLLocationManagerDelegate

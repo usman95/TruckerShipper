@@ -9,6 +9,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoadDetails" customModule="TruckerShipper" customModuleProvider="target">
             <connections>
+                <outlet property="btnCalculateRate" destination="5SX-hh-g9E" id="ZCi-3m-AeK"/>
                 <outlet property="tfCargoType" destination="IXG-7e-djY" id="mKS-LR-8Pw"/>
                 <outlet property="tfCommodity" destination="BUB-VU-DKf" id="cFj-bf-bak"/>
                 <outlet property="tfQuantity" destination="6wl-LA-W5X" id="YGK-z9-PV3"/>
@@ -121,6 +122,9 @@
                                         </userDefinedRuntimeAttribute>
                                         <userDefinedRuntimeAttribute type="string" keyPath="iPhoneFontWeight" value="medium"/>
                                     </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <outlet property="delegate" destination="-1" id="EdC-DZ-ksL"/>
+                                    </connections>
                                 </textField>
                             </subviews>
                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>

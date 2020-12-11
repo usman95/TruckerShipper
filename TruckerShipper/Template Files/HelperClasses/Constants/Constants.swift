@@ -32,8 +32,7 @@ struct Constants {
     static var GoogleSignInClientID        = "821622832147-00elb5glohhc0njcl57bksf4b9kftomc.apps.googleusercontent.com"
     static var BugseeToken                 = "5e97ab5a-d533-443d-be90-5d4fea92b66e"
     static var iTunesURL                   = "http://itunes.apple.com/us/lookup?bundleId="
-    static var currency                    = "$"
-    static var localCurrency               = "USD"
+    static var localCurrency               = "PKR"
     static let oneSignalAppID              = "4ac1ff96-ec01-4a69-8abc-414b5884d79f"
     static let gmailSignInClientID         = "857012175771-er4drafle21fh2eh6mn37saode9299jv.apps.googleusercontent.com"
     static var pagesCount                 = 0

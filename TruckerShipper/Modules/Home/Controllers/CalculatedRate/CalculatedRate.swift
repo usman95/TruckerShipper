@@ -15,8 +15,14 @@ class CalculatedRate: BaseController {
     @IBOutlet weak var lblByTruck: UILabel!
     @IBOutlet weak var lblByTrain: UILabel!
     
+    var priceEstimates: PriceEstimates?
     var setSelectedPrice: ((String?)->Void)?
     var selectedPrice: String?
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.setData()
+    }
     
     @IBAction func onBtnByTruckOrTrain(_ sender: UIButton) {
         switch sender.tag {
@@ -37,6 +43,13 @@ class CalculatedRate: BaseController {
 }
 //MARK:- Helper method
 extension CalculatedRate{
+    private func setData(){
+        guard let data = self.priceEstimates else {return}
+        self.selectedPrice = "\(data.truck)"
+        
+        self.lblByTruck.text = "\(Constants.localCurrency) \(data.truck.withCommas()) \(Strings.PER_TRUCK.text)"
+        self.lblByTrain.text = "\(Constants.localCurrency) \(data.train.withCommas()) \(Strings.PER_CONTAINER.text)"
+    }
     private func setViewByTruck(){
         self.viewByTruck.borderColor = Global.APP_COLOR
         self.viewByTrain.borderColor = Global.APP_COLOR_DARK_GREY
@@ -46,6 +59,9 @@ extension CalculatedRate{
         
         self.lblByTruck.textColor = Global.APP_COLOR
         self.lblByTrain.textColor = Global.APP_COLOR_DARK_GREY
+        
+        guard let data = self.priceEstimates else {return}
+        self.selectedPrice = "\(data.truck)"
     }
     private func setViewByTrain(){
         self.viewByTruck.borderColor = Global.APP_COLOR_DARK_GREY
@@ -56,5 +72,8 @@ extension CalculatedRate{
         
         self.lblByTruck.textColor = Global.APP_COLOR_DARK_GREY
         self.lblByTrain.textColor = Global.APP_COLOR
+        
+        guard let data = self.priceEstimates else {return}
+        self.selectedPrice = "\(data.train)"
     }
 }

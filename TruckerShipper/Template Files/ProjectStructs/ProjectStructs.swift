@@ -13,3 +13,7 @@ struct SideMenuOption {
     var icon: UIImage?
     var option: String
 }
+struct PriceEstimates {
+    var truck = 0
+    var train = 0
+}
