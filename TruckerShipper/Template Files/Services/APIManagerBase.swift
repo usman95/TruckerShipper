@@ -17,6 +17,9 @@ enum Route: String {
     //MARK:- ATTRIBUTES
     case Country = "/api/country"
     case City = "/api/city/"
+    case Size = "/api/size"
+    case Commodity = "/api/commodity"
+    case CargoType = "/api/cargo-type"
 }
 class APIManagerBase: NSObject {
     let baseURL = Constants.BaseURL
