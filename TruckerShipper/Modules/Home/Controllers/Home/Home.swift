@@ -235,14 +235,14 @@ extension Home{
         var pickup = [String:Any]()
         let pickup_coordinates:[Double] = [Double(self.pickUpLocation?.latitude ?? 0.0),
                                            Double(self.pickUpLocation?.longitude ?? 0.0),]
-//        pickup["city"] = self.pickUpCity ?? ""
+        pickup["city"] = self.pickUpCity ?? ""
         pickup["address"] = self.lblPickUp.text ?? ""
         pickup["coordinates"] = pickup_coordinates
         
         var dropoff = [String:Any]()
         let dropoff_coordinates:[Double] = [Double(self.dropOffLocation?.latitude ?? 0.0),
                                            Double(self.dropOffLocation?.longitude ?? 0.0),]
-//        dropoff["city"] = self.dropOffCity ?? ""
+        dropoff["city"] = self.dropOffCity ?? ""
         dropoff["address"] = self.lblDropOff.text ?? ""
         dropoff["coordinates"] = dropoff_coordinates
         

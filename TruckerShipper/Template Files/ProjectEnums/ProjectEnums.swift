@@ -19,3 +19,7 @@ enum LocationPickerType{
     case pickUp
     case dropOff
 }
+enum ModeOfTransportType: String{
+    case truck = "truck"
+    case train = "train"
+}

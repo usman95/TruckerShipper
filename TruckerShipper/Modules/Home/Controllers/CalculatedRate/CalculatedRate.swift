@@ -16,7 +16,8 @@ class CalculatedRate: BaseController {
     @IBOutlet weak var lblByTrain: UILabel!
     
     var priceEstimates: PriceEstimates?
-    var setSelectedPrice: ((String?)->Void)?
+    var setSelectedPrice: ((ModeOfTransportType,String?)->Void)?
+    var selectedModeOfTransport = ModeOfTransportType.truck
     var selectedPrice: String?
     
     override func viewDidLoad() {
@@ -37,7 +38,7 @@ class CalculatedRate: BaseController {
     }
     @IBAction func onBtnContinue(_ sender: UIButtonDeviceClass) {
         self.dismiss(animated: true) {
-            self.setSelectedPrice?(self.selectedPrice)
+            self.setSelectedPrice?(self.selectedModeOfTransport,self.selectedPrice)
         }
     }
 }
@@ -62,6 +63,7 @@ extension CalculatedRate{
         
         guard let data = self.priceEstimates else {return}
         self.selectedPrice = "\(data.truck)"
+        self.selectedModeOfTransport = .truck
     }
     private func setViewByTrain(){
         self.viewByTruck.borderColor = Global.APP_COLOR_DARK_GREY
@@ -75,5 +77,6 @@ extension CalculatedRate{
         
         guard let data = self.priceEstimates else {return}
         self.selectedPrice = "\(data.train)"
+        self.selectedModeOfTransport = .train
     }
 }

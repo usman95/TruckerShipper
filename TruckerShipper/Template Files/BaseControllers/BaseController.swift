@@ -60,8 +60,9 @@ extension BaseController{
         let controller = SignUp()
         self.navigationController?.pushViewController(controller, animated: true)
     }
-    func pushToLoadRequest(){
+    func pushToLoadRequest(loadDetails: [String:Any]){
         let controller = LoadRequest()
+        controller.loadDetails = loadDetails
         self.navigationController?.pushViewController(controller, animated: true)
     }
 }

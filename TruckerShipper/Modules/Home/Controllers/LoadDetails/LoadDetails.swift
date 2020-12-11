@@ -36,6 +36,8 @@ class LoadDetails: BaseController {
     var arrCargoType = [AttributeModel]()
     var selectedCargoType: AttributeModel?
     
+    var estimateParams:[String:Any]?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.callAPIs()
@@ -100,8 +102,13 @@ extension LoadDetails{
         controller.modalTransitionStyle = .coverVertical
         self.present(controller, animated: true, completion: nil)
         
-        controller.setSelectedPrice = { selectedPrice in
-            super.pushToLoadRequest()
+        controller.setSelectedPrice = { (modeOfTransport,selectedPrice) in
+            
+            var loadDetails = self.estimateParams ?? [:]
+            loadDetails["modeOfTransport"] = modeOfTransport
+            loadDetails["selectedPrice"] = selectedPrice
+            
+            super.pushToLoadRequest(loadDetails: loadDetails)
         }
     }
     private func validate()->[String:Any]?{
@@ -238,7 +245,8 @@ extension LoadDetails{
     }
     private func getBookingEstimate(){
         guard let params = self.validate() else {return}
-        params.printJson()
+        self.estimateParams = params
+        
         APIManager.sharedInstance.shipperAPIManager.BookingEstimate(params: params, success: { (responseObject) in
             let response = responseObject as Dictionary
             
