@@ -13,6 +13,18 @@
                 <outlet property="lblDropOffCity" destination="cO7-pl-drm" id="jdM-51-SyT"/>
                 <outlet property="lblPickUpAddress" destination="vFz-md-6HN" id="vqZ-ld-8lI"/>
                 <outlet property="lblPickUpCity" destination="m5k-j7-zcq" id="2qe-lJ-D58"/>
+                <outlet property="tfDropOffDetailsCity" destination="SSh-no-ddg" id="TF8-4g-aSE"/>
+                <outlet property="tfDropOffDetailsDropOff" destination="05r-s0-t2a" id="Mnu-aN-kMA"/>
+                <outlet property="tfDropOffDetailsDropOffName" destination="l4O-4T-a4J" id="Aoa-IZ-kR8"/>
+                <outlet property="tfDropOffDetailsFullName" destination="Fth-Ja-5eA" id="sOZ-ck-N8y"/>
+                <outlet property="tfDropOffDetailsLabourers" destination="NRy-3X-dmn" id="JDj-Jy-QrX"/>
+                <outlet property="tfDropOffDetailsPhoneNumber" destination="Fij-JQ-OWS" id="Vo1-Oz-E1h"/>
+                <outlet property="tfPickUpDetailsCity" destination="PhD-LC-ilf" id="Hzn-KQ-56B"/>
+                <outlet property="tfPickUpDetailsFullName" destination="XVH-QO-Sam" id="eWy-eC-M5D"/>
+                <outlet property="tfPickUpDetailsLabourers" destination="kfL-m3-72z" id="nfB-j2-Yfe"/>
+                <outlet property="tfPickUpDetailsPhoneNumber" destination="Ydf-IA-Jet" id="h7T-BS-idn"/>
+                <outlet property="tfPickUpDetailsPickUp" destination="bpI-as-Dw8" id="Zmw-kO-MRy"/>
+                <outlet property="tfPickUpDetailsPickUpName" destination="oSD-1B-flL" id="S63-C3-P7j"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -400,7 +412,7 @@
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cXm-2Q-bn2">
                                                     <rect key="frame" x="0.0" y="41.5" width="366" height="57.5"/>
                                                     <subviews>
-                                                        <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Select city" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PhD-LC-ilf" customClass="UITextFieldDeviceClass" customModule="TruckerShipper" customModuleProvider="target">
+                                                        <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Select city" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PhD-LC-ilf" customClass="UITextFieldDeviceClass" customModule="TruckerShipper" customModuleProvider="target">
                                                             <rect key="frame" x="12" y="0.0" width="342" height="57.5"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                             <textInputTraits key="textInputTraits"/>
@@ -416,9 +428,9 @@
                                                         </textField>
                                                     </subviews>
                                                     <constraints>
-                                                        <constraint firstAttribute="trailing" secondItem="PhD-LC-ilf" secondAttribute="trailing" constant="12" id="30T-BI-abe"/>
                                                         <constraint firstAttribute="bottom" secondItem="PhD-LC-ilf" secondAttribute="bottom" id="EpP-Xo-dck"/>
                                                         <constraint firstItem="PhD-LC-ilf" firstAttribute="leading" secondItem="cXm-2Q-bn2" secondAttribute="leading" constant="12" id="FM5-Tz-stz"/>
+                                                        <constraint firstAttribute="trailing" secondItem="PhD-LC-ilf" secondAttribute="trailing" constant="12" id="GWw-hb-LWO"/>
                                                         <constraint firstItem="PhD-LC-ilf" firstAttribute="top" secondItem="cXm-2Q-bn2" secondAttribute="top" id="ckH-HS-GMH"/>
                                                     </constraints>
                                                     <userDefinedRuntimeAttributes>
@@ -790,7 +802,7 @@
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jwk-FA-m5M">
                                                     <rect key="frame" x="0.0" y="41.5" width="366" height="57"/>
                                                     <subviews>
-                                                        <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Select city" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SSh-no-ddg" customClass="UITextFieldDeviceClass" customModule="TruckerShipper" customModuleProvider="target">
+                                                        <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Select city" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SSh-no-ddg" customClass="UITextFieldDeviceClass" customModule="TruckerShipper" customModuleProvider="target">
                                                             <rect key="frame" x="12" y="0.0" width="342" height="57"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                             <textInputTraits key="textInputTraits"/>
@@ -806,8 +818,8 @@
                                                         </textField>
                                                     </subviews>
                                                     <constraints>
+                                                        <constraint firstAttribute="trailing" secondItem="SSh-no-ddg" secondAttribute="trailing" constant="12" id="1Sa-Sa-a96"/>
                                                         <constraint firstItem="SSh-no-ddg" firstAttribute="leading" secondItem="jwk-FA-m5M" secondAttribute="leading" constant="12" id="8WC-vn-8cx"/>
-                                                        <constraint firstAttribute="trailing" secondItem="SSh-no-ddg" secondAttribute="trailing" constant="12" id="N1N-A7-B3H"/>
                                                         <constraint firstItem="SSh-no-ddg" firstAttribute="top" secondItem="jwk-FA-m5M" secondAttribute="top" id="XAQ-zr-UsK"/>
                                                         <constraint firstAttribute="bottom" secondItem="SSh-no-ddg" secondAttribute="bottom" id="qcJ-7c-k03"/>
                                                     </constraints>
@@ -1035,10 +1047,10 @@
                                     </userDefinedRuntimeAttributes>
                                 </label>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="nVL-TD-p5Y">
-                                    <rect key="frame" x="24" y="1524.5" width="366" height="1176"/>
+                                    <rect key="frame" x="24" y="1524.5" width="366" height="1372"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="RDX-qM-a3I">
-                                            <rect key="frame" x="0.0" y="0.0" width="366" height="1078"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="366" height="1274"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lTv-9X-ZfE">
                                                     <rect key="frame" x="0.0" y="0.0" width="366" height="98"/>
@@ -1723,10 +1735,134 @@
                                                         <constraint firstAttribute="bottom" secondItem="AwG-AB-1Ya" secondAttribute="bottom" id="inv-Te-tzu"/>
                                                     </constraints>
                                                 </view>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UcI-3I-rTc">
+                                                    <rect key="frame" x="0.0" y="1078" width="366" height="98"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Empty PickUp Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LqQ-Zr-buS" customClass="UILabelDeviceClass" customModule="TruckerShipper" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="14" width="179" height="19.5"/>
+                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                                            <color key="textColor" red="0.0" green="0.2802670002" blue="0.62132591010000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="iPhoneFontSize">
+                                                                    <real key="value" value="16"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="string" keyPath="iPhoneFontWeight" value="bold"/>
+                                                            </userDefinedRuntimeAttributes>
+                                                        </label>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5uS-mf-O0v">
+                                                            <rect key="frame" x="0.0" y="41.5" width="366" height="56.5"/>
+                                                            <subviews>
+                                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Select empty pickup location" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="exx-Bk-DQK" customClass="UITextFieldDeviceClass" customModule="TruckerShipper" customModuleProvider="target">
+                                                                    <rect key="frame" x="12" y="0.0" width="342" height="56.5"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                    <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                                                    <userDefinedRuntimeAttributes>
+                                                                        <userDefinedRuntimeAttribute type="color" keyPath="placeHolderColor">
+                                                                            <color key="value" red="0.30976641179999997" green="0.30982545020000002" blue="0.30976271630000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                        </userDefinedRuntimeAttribute>
+                                                                        <userDefinedRuntimeAttribute type="number" keyPath="iPhoneFontSize">
+                                                                            <real key="value" value="14"/>
+                                                                        </userDefinedRuntimeAttribute>
+                                                                        <userDefinedRuntimeAttribute type="string" keyPath="iPhoneFontWeight" value="medium"/>
+                                                                    </userDefinedRuntimeAttributes>
+                                                                </textField>
+                                                            </subviews>
+                                                            <constraints>
+                                                                <constraint firstItem="exx-Bk-DQK" firstAttribute="leading" secondItem="5uS-mf-O0v" secondAttribute="leading" constant="12" id="4VG-Nf-Atj"/>
+                                                                <constraint firstAttribute="bottom" secondItem="exx-Bk-DQK" secondAttribute="bottom" id="J3L-qj-6Kv"/>
+                                                                <constraint firstItem="exx-Bk-DQK" firstAttribute="top" secondItem="5uS-mf-O0v" secondAttribute="top" id="OGf-oM-XKM"/>
+                                                                <constraint firstAttribute="trailing" secondItem="exx-Bk-DQK" secondAttribute="trailing" constant="12" id="PhT-ta-7M7"/>
+                                                            </constraints>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                    <real key="value" value="2"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                    <real key="value" value="1"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                    <color key="value" red="0.84696626659999996" green="0.84711211919999996" blue="0.84695702790000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                            </userDefinedRuntimeAttributes>
+                                                        </view>
+                                                    </subviews>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                    <constraints>
+                                                        <constraint firstItem="LqQ-Zr-buS" firstAttribute="top" secondItem="UcI-3I-rTc" secondAttribute="top" constant="14" id="6Uq-M6-bG9"/>
+                                                        <constraint firstItem="5uS-mf-O0v" firstAttribute="top" secondItem="LqQ-Zr-buS" secondAttribute="bottom" constant="8" id="GWi-bx-6sA"/>
+                                                        <constraint firstItem="5uS-mf-O0v" firstAttribute="leading" secondItem="UcI-3I-rTc" secondAttribute="leading" id="H7x-Cy-YmF"/>
+                                                        <constraint firstAttribute="bottom" secondItem="5uS-mf-O0v" secondAttribute="bottom" id="JfB-dl-f8f"/>
+                                                        <constraint firstAttribute="trailing" secondItem="5uS-mf-O0v" secondAttribute="trailing" id="c1e-hi-eby"/>
+                                                        <constraint firstItem="LqQ-Zr-buS" firstAttribute="leading" secondItem="UcI-3I-rTc" secondAttribute="leading" id="oiN-A7-1Yi"/>
+                                                    </constraints>
+                                                </view>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qC4-jt-AYU">
+                                                    <rect key="frame" x="0.0" y="1176" width="366" height="98"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Empty Return Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oaF-dV-hmR" customClass="UILabelDeviceClass" customModule="TruckerShipper" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="14" width="176.5" height="19.5"/>
+                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                                            <color key="textColor" red="0.0" green="0.2802670002" blue="0.62132591010000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="iPhoneFontSize">
+                                                                    <real key="value" value="16"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="string" keyPath="iPhoneFontWeight" value="bold"/>
+                                                            </userDefinedRuntimeAttributes>
+                                                        </label>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aDb-Se-cUm">
+                                                            <rect key="frame" x="0.0" y="41.5" width="366" height="56.5"/>
+                                                            <subviews>
+                                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Select empty return location" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0Hu-Hl-iKB" customClass="UITextFieldDeviceClass" customModule="TruckerShipper" customModuleProvider="target">
+                                                                    <rect key="frame" x="12" y="0.0" width="342" height="56.5"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                    <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                                                    <userDefinedRuntimeAttributes>
+                                                                        <userDefinedRuntimeAttribute type="color" keyPath="placeHolderColor">
+                                                                            <color key="value" red="0.30976641179999997" green="0.30982545020000002" blue="0.30976271630000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                        </userDefinedRuntimeAttribute>
+                                                                        <userDefinedRuntimeAttribute type="number" keyPath="iPhoneFontSize">
+                                                                            <real key="value" value="14"/>
+                                                                        </userDefinedRuntimeAttribute>
+                                                                        <userDefinedRuntimeAttribute type="string" keyPath="iPhoneFontWeight" value="medium"/>
+                                                                    </userDefinedRuntimeAttributes>
+                                                                </textField>
+                                                            </subviews>
+                                                            <constraints>
+                                                                <constraint firstAttribute="bottom" secondItem="0Hu-Hl-iKB" secondAttribute="bottom" id="3AJ-lw-eyg"/>
+                                                                <constraint firstAttribute="trailing" secondItem="0Hu-Hl-iKB" secondAttribute="trailing" constant="12" id="3eP-hv-2Gs"/>
+                                                                <constraint firstItem="0Hu-Hl-iKB" firstAttribute="top" secondItem="aDb-Se-cUm" secondAttribute="top" id="Pn3-aI-sAq"/>
+                                                                <constraint firstItem="0Hu-Hl-iKB" firstAttribute="leading" secondItem="aDb-Se-cUm" secondAttribute="leading" constant="12" id="e2z-Xy-99y"/>
+                                                            </constraints>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                    <real key="value" value="2"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                    <real key="value" value="1"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                    <color key="value" red="0.84696626659999996" green="0.84711211919999996" blue="0.84695702790000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                            </userDefinedRuntimeAttributes>
+                                                        </view>
+                                                    </subviews>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                    <constraints>
+                                                        <constraint firstItem="aDb-Se-cUm" firstAttribute="top" secondItem="oaF-dV-hmR" secondAttribute="bottom" constant="8" id="6cE-dN-IxS"/>
+                                                        <constraint firstAttribute="bottom" secondItem="aDb-Se-cUm" secondAttribute="bottom" id="6hy-cq-Sg9"/>
+                                                        <constraint firstItem="aDb-Se-cUm" firstAttribute="leading" secondItem="qC4-jt-AYU" secondAttribute="leading" id="JyP-Lb-nJy"/>
+                                                        <constraint firstItem="oaF-dV-hmR" firstAttribute="top" secondItem="qC4-jt-AYU" secondAttribute="top" constant="14" id="PnL-Hr-Mue"/>
+                                                        <constraint firstItem="oaF-dV-hmR" firstAttribute="leading" secondItem="qC4-jt-AYU" secondAttribute="leading" id="XP3-2l-aPk"/>
+                                                        <constraint firstAttribute="trailing" secondItem="aDb-Se-cUm" secondAttribute="trailing" id="yVx-Bg-qmt"/>
+                                                    </constraints>
+                                                </view>
                                             </subviews>
                                         </stackView>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VAi-Pp-50w">
-                                            <rect key="frame" x="0.0" y="1078" width="366" height="98"/>
+                                            <rect key="frame" x="0.0" y="1274" width="366" height="98"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Remarks" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4RG-RN-KcO" customClass="UILabelDeviceClass" customModule="TruckerShipper" customModuleProvider="target">
                                                     <rect key="frame" x="0.0" y="14" width="68" height="19.5"/>

@@ -105,7 +105,7 @@ extension LoadDetails{
         controller.setSelectedPrice = { (modeOfTransport,selectedPrice) in
             
             var loadDetails = self.estimateParams ?? [:]
-            loadDetails["modeOfTransport"] = modeOfTransport
+            loadDetails["modeOfTransport"] = modeOfTransport.rawValue
             loadDetails["selectedPrice"] = selectedPrice
             
             super.pushToLoadRequest(loadDetails: loadDetails)
