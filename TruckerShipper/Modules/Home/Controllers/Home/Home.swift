@@ -23,6 +23,7 @@ class Home: BaseController {
     @IBOutlet weak var btnPickUpTick: UIButton!
     @IBOutlet weak var btnDropOffTick: UIButton!
     @IBOutlet weak var viewPickUpMarker: RoundedView!
+    @IBOutlet weak var btnNext: UIButtonDeviceClass!
     
     var locationPickerType = LocationPickerType.pickUp
     lazy var geocoder = CLGeocoder()
@@ -84,6 +85,7 @@ class Home: BaseController {
 //        }
     }
     @IBAction func onBtnNext(_ sender: UIButton) {
+        self.pushToLoadDetails()
     }
 }
 //MARK:- Helper Methods
@@ -188,6 +190,39 @@ extension Home{
             self.hidePicker()
             self.getRoute()
         }
+    }
+    private func pushToLoadDetails(){
+        guard let locationAttribute = self.validate() else {return}
+        let controller = LoadDetails()
+        controller.locationAttribute = locationAttribute
+        self.navigationController?.pushViewController(controller, animated: true)
+    }
+    private func validate()-> [String:Any]?{
+        if self.pickUpLocation == nil || self.dropOffLocation == nil{
+            Utility.main.showToast(message: Strings.PLEASE_SELECT_LOCATION.text)
+            self.btnNext.shake()
+            return nil
+        }
+        
+        var pickup = [String:Any]()
+        let pickup_address:[String:Any] = ["required":true,
+                                           "type":self.lblPickUp.text ?? ""]
+        let pickup_coordinates:[Double] = [Double(self.pickUpLocation?.latitude ?? 0.0),
+                                           Double(self.pickUpLocation?.longitude ?? 0.0),]
+        pickup["address"] = pickup_address
+        pickup["coordinates"] = pickup_coordinates
+        
+        var dropoff = [String:Any]()
+        let dropoff_address:[String:Any] = ["required":true,
+                                           "type":self.lblDropOff.text ?? ""]
+        let dropoff_coordinates:[Double] = [Double(self.dropOffLocation?.latitude ?? 0.0),
+                                           Double(self.dropOffLocation?.longitude ?? 0.0),]
+        dropoff["address"] = dropoff_address
+        dropoff["coordinates"] = dropoff_coordinates
+        
+        let params:[String:Any] = ["pickup":pickup,
+                                   "dropOff":dropoff]
+        return params
     }
 }
 //MARK:- Reverse Geocode Location

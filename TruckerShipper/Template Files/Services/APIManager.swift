@@ -33,4 +33,5 @@ class APIManager: NSObject {
     
     let usersAPIManager = UsersAPIManager()
     let attributesAPIManager = AttributesAPIManager()
+    let shipperAPIManager = ShipperAPIManager()
 }

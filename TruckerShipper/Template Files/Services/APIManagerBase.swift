@@ -11,8 +11,9 @@ enum Route: String {
     case Login = "/auth/shipper/login"
     case ForgotPassword = "/auth/forget-pass"
     case UpdateProfile = "/api/user/"
-
     
+    case ShipperContracts = "/api/shipper-contract"
+
     //MARK:- ATTRIBUTES
     case Country = "/api/country"
     case City = "/api/city/"

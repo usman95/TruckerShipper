@@ -72,4 +72,5 @@ enum Strings: String{
     case ENTER_ADDRESS = "Please enter your address."
     case HEY = "Hey!"
     case PLEASE_SELECT_PICKUP_AND_DROPOFF_LOCATION = "please select pickup and dropoff location"
+    case PLEASE_SELECT_LOCATION = "Please select your pick-up/drop-off locations."
 }

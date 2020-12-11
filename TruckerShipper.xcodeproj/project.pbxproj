@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		544F56C1EA857265523A6A2D /* Pods_TruckerShipper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5AC2E48790C561F507940FD /* Pods_TruckerShipper.framework */; };
+		FA20009225839B1D00E14D36 /* LoadDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA20009025839B1D00E14D36 /* LoadDetails.swift */; };
+		FA20009325839B1D00E14D36 /* LoadDetails.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA20009125839B1D00E14D36 /* LoadDetails.xib */; };
 		FA37E9FB2574099A0073CF0C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA37E9FA2574099A0073CF0C /* AppDelegate.swift */; };
 		FA37EA042574099D0073CF0C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA37EA032574099D0073CF0C /* Assets.xcassets */; };
 		FA37EA072574099D0073CF0C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA37EA052574099D0073CF0C /* LaunchScreen.storyboard */; };
@@ -89,6 +91,7 @@
 		FA6B424E25791ABE00C6D106 /* UpdatedBy.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6B424725791ABE00C6D106 /* UpdatedBy.swift */; };
 		FA6B424F25791ABE00C6D106 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6B424825791ABE00C6D106 /* User.swift */; };
 		FA6B425025791ABE00C6D106 /* CityId.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6B424925791ABE00C6D106 /* CityId.swift */; };
+		FABB36A42580B4870084BCCA /* ShipperApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABB36A32580B4870084BCCA /* ShipperApiManager.swift */; };
 		FAE067CA257AE6A2005E1C97 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE067C9257AE6A2005E1C97 /* CardView.swift */; };
 		FAE067CE257AF5EB005E1C97 /* MyAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE067CC257AF5EB005E1C97 /* MyAccount.swift */; };
 		FAE067CF257AF5EB005E1C97 /* MyAccount.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAE067CD257AF5EB005E1C97 /* MyAccount.xib */; };
@@ -98,6 +101,8 @@
 		A132EE7F1F1B3B363015A156 /* Pods-TruckerShipper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TruckerShipper.debug.xcconfig"; path = "Target Support Files/Pods-TruckerShipper/Pods-TruckerShipper.debug.xcconfig"; sourceTree = "<group>"; };
 		C2C9B300DDD7FD3454D093B4 /* Pods-TruckerShipper.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TruckerShipper.release.xcconfig"; path = "Target Support Files/Pods-TruckerShipper/Pods-TruckerShipper.release.xcconfig"; sourceTree = "<group>"; };
 		D5AC2E48790C561F507940FD /* Pods_TruckerShipper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TruckerShipper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA20009025839B1D00E14D36 /* LoadDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadDetails.swift; sourceTree = "<group>"; };
+		FA20009125839B1D00E14D36 /* LoadDetails.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadDetails.xib; sourceTree = "<group>"; };
 		FA37E9F72574099A0073CF0C /* TruckerShipper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TruckerShipper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA37E9FA2574099A0073CF0C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FA37EA032574099D0073CF0C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -181,6 +186,7 @@
 		FA6B424725791ABE00C6D106 /* UpdatedBy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdatedBy.swift; sourceTree = "<group>"; };
 		FA6B424825791ABE00C6D106 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		FA6B424925791ABE00C6D106 /* CityId.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CityId.swift; sourceTree = "<group>"; };
+		FABB36A32580B4870084BCCA /* ShipperApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShipperApiManager.swift; sourceTree = "<group>"; };
 		FAE067C9257AE6A2005E1C97 /* CardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		FAE067CC257AF5EB005E1C97 /* MyAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAccount.swift; sourceTree = "<group>"; };
 		FAE067CD257AF5EB005E1C97 /* MyAccount.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyAccount.xib; sourceTree = "<group>"; };
@@ -213,6 +219,15 @@
 				C2C9B300DDD7FD3454D093B4 /* Pods-TruckerShipper.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		FA20008F25839AF500E14D36 /* LoadDetails */ = {
+			isa = PBXGroup;
+			children = (
+				FA20009025839B1D00E14D36 /* LoadDetails.swift */,
+				FA20009125839B1D00E14D36 /* LoadDetails.xib */,
+			);
+			path = LoadDetails;
 			sourceTree = "<group>";
 		};
 		FA37E9EE2574099A0073CF0C = {
@@ -463,6 +478,7 @@
 			children = (
 				FA37EA4D25740E4C0073CF0C /* UserAPIManager.swift */,
 				FA62D003257D6263000DCFDD /* AttributesAPIManager.swift */,
+				FABB36A32580B4870084BCCA /* ShipperApiManager.swift */,
 			);
 			path = APIModules;
 			sourceTree = "<group>";
@@ -497,6 +513,7 @@
 			children = (
 				FA37EA8E25740EAD0073CF0C /* SideMenu */,
 				FA37EA7E25740EAD0073CF0C /* Home */,
+				FA20008F25839AF500E14D36 /* LoadDetails */,
 				FA62D005257D713A000DCFDD /* MyContracts */,
 				FA37EA8125740EAD0073CF0C /* TripExpenses */,
 				FAE067CB257AF3A1005E1C97 /* MyAccount */,
@@ -755,6 +772,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA20009325839B1D00E14D36 /* LoadDetails.xib in Resources */,
 				FA37EAAD25740EAD0073CF0C /* NotificationsTVC.xib in Resources */,
 				FA37EA7425740E4C0073CF0C /* Greycliff-cf-bold.ttf in Resources */,
 				FA37EA7325740E4C0073CF0C /* Greycliff-cf-regular.ttf in Resources */,
@@ -879,6 +897,7 @@
 				FA37EA5325740E4C0073CF0C /* MOLH.swift in Sources */,
 				FA37EA6725740E4C0073CF0C /* UITextField+Extension.swift in Sources */,
 				FA37EA6025740E4C0073CF0C /* UILabel+Extension.swift in Sources */,
+				FABB36A42580B4870084BCCA /* ShipperApiManager.swift in Sources */,
 				FA6B424C25791ABE00C6D106 /* RoleId.swift in Sources */,
 				FA37EA7225740E4C0073CF0C /* RoundedCorners.swift in Sources */,
 				FA5225AC25802E6200C4FFD0 /* MyContractsTVC.swift in Sources */,
@@ -886,6 +905,7 @@
 				FA6B424D25791ABE00C6D106 /* CountryId.swift in Sources */,
 				FA37EA6525740E4C0073CF0C /* Dictionary+Extension.swift in Sources */,
 				FA37EA7825740E4C0073CF0C /* APIManager.swift in Sources */,
+				FA20009225839B1D00E14D36 /* LoadDetails.swift in Sources */,
 				FA6B424E25791ABE00C6D106 /* UpdatedBy.swift in Sources */,
 				FA37EA7025740E4C0073CF0C /* CustomLoader.swift in Sources */,
 				FA37EA6925740E4C0073CF0C /* LanguageManager.swift in Sources */,

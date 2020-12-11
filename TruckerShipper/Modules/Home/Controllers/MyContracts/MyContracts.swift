@@ -15,6 +15,7 @@ class MyContracts: BaseController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.registerCells()
+        self.getMyContracts()
         // Do any additional setup after loading the view.
     }
 }
@@ -37,4 +38,19 @@ extension MyContracts: UITableViewDataSource{
 //MARK:- UITableViewDelegate
 extension MyContracts: UITableViewDelegate{
     
+}
+//MARK:- Services
+extension MyContracts{
+    private func getMyContracts(){
+        let skip = "0"
+        let limit = "1000"
+        
+        let params:[String:Any] = ["skip":skip,
+                                   "limit":limit]
+        APIManager.sharedInstance.shipperAPIManager.ShipperContracts(params: params, success: { (responseObject) in
+            print(responseObject)
+        }) { (error) in
+            print(error)
+        }
+    }
 }

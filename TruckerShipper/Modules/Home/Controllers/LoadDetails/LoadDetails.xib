@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoadDetails" customModule="TruckerShipper" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CCO-iM-n7K">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="124"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="NavBar" translatesAutoresizingMaskIntoConstraints="NO" id="5Fe-lK-1BW">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="124"/>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="5Fe-lK-1BW" secondAttribute="bottom" id="2V2-fy-uK9"/>
+                        <constraint firstItem="5Fe-lK-1BW" firstAttribute="leading" secondItem="CCO-iM-n7K" secondAttribute="leading" id="F8F-KC-LGx"/>
+                        <constraint firstAttribute="trailing" secondItem="5Fe-lK-1BW" secondAttribute="trailing" id="NH1-V3-M3P"/>
+                        <constraint firstItem="5Fe-lK-1BW" firstAttribute="top" secondItem="CCO-iM-n7K" secondAttribute="top" id="QIA-2b-U4c"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="89n-d6-sOt">
+                    <rect key="frame" x="0.0" y="44" width="414" height="80"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S8i-9J-Yqs">
+                            <rect key="frame" x="20" y="24" width="32" height="32"/>
+                            <state key="normal" image="Back"/>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BOOKING" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mSU-GI-u1Z" customClass="UILabelDeviceClass" customModule="TruckerShipper" customModuleProvider="target">
+                            <rect key="frame" x="64" y="27" width="96" height="26"/>
+                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="21"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="iPhoneFontSize">
+                                    <real key="value" value="21"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="string" keyPath="iPhoneFontWeight" value="bold"/>
+                            </userDefinedRuntimeAttributes>
+                        </label>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="S8i-9J-Yqs" firstAttribute="leading" secondItem="89n-d6-sOt" secondAttribute="leading" constant="20" id="NTa-jZ-ryn"/>
+                        <constraint firstItem="S8i-9J-Yqs" firstAttribute="centerY" secondItem="89n-d6-sOt" secondAttribute="centerY" id="TY5-oI-wih"/>
+                        <constraint firstItem="mSU-GI-u1Z" firstAttribute="centerY" secondItem="S8i-9J-Yqs" secondAttribute="centerY" id="aDO-G3-1cw"/>
+                        <constraint firstAttribute="height" constant="80" id="aFI-Zl-Gtl"/>
+                        <constraint firstItem="mSU-GI-u1Z" firstAttribute="leading" secondItem="S8i-9J-Yqs" secondAttribute="trailing" constant="12" id="hrb-TA-NyL"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Load Details" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vHV-En-fXf" customClass="UILabelDeviceClass" customModule="TruckerShipper" customModuleProvider="target">
+                    <rect key="frame" x="148" y="144" width="118" height="26.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                    <color key="textColor" red="0.30976641179999997" green="0.30982545020000002" blue="0.30976271630000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="iPhoneFontSize">
+                            <real key="value" value="22"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="string" keyPath="iPhoneFontWeight" value="bold"/>
+                    </userDefinedRuntimeAttributes>
+                </label>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <constraints>
+                <constraint firstItem="CCO-iM-n7K" firstAttribute="bottom" secondItem="89n-d6-sOt" secondAttribute="bottom" id="Kfd-Rw-J58"/>
+                <constraint firstItem="89n-d6-sOt" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="LYV-GA-zKE"/>
+                <constraint firstItem="89n-d6-sOt" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="M2C-Zk-gOI"/>
+                <constraint firstItem="CCO-iM-n7K" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Suu-Hw-XgG"/>
+                <constraint firstItem="CCO-iM-n7K" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="URV-1R-Vqb"/>
+                <constraint firstItem="CCO-iM-n7K" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="mf2-cV-Ryp"/>
+                <constraint firstItem="89n-d6-sOt" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="ujt-7v-R1A"/>
+                <constraint firstItem="vHV-En-fXf" firstAttribute="top" secondItem="CCO-iM-n7K" secondAttribute="bottom" constant="20" id="uy9-IS-VdJ"/>
+                <constraint firstItem="vHV-En-fXf" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="zIU-my-Rxv"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="137.68115942028987" y="124.55357142857142"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Back" width="32" height="32"/>
+        <image name="NavBar" width="375" height="95"/>
+    </resources>
+</document>

@@ -10,6 +10,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="Home" customModule="TruckerShipper" customModuleProvider="target">
             <connections>
                 <outlet property="btnDropOffTick" destination="Ev0-5z-LcC" id="fzC-Ch-dsg"/>
+                <outlet property="btnNext" destination="3tC-xL-DdT" id="LX8-Z2-wJb"/>
                 <outlet property="btnPickUpTick" destination="sUK-uJ-2Xh" id="4wO-Og-XjR"/>
                 <outlet property="lblDropOff" destination="Lyw-yx-Kqu" id="yJg-gn-nUz"/>
                 <outlet property="lblDropOffTitle" destination="dUu-DJ-HRA" id="JZ5-dC-vPO"/>
@@ -51,10 +52,17 @@
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="woY-Pt-6SK">
                             <rect key="frame" x="0.0" y="31.33333333333335" width="34" height="127.66666666666669"/>
                             <subviews>
-                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DropOffPin" translatesAutoresizingMaskIntoConstraints="NO" id="tqr-X5-5tv">
-                                    <rect key="frame" x="12" y="10.333333333333316" width="22" height="20.666666666666671"/>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PickUpPin" translatesAutoresizingMaskIntoConstraints="NO" id="tqr-X5-5tv">
+                                    <rect key="frame" x="15" y="13" width="16" height="15.333333333333336"/>
                                     <constraints>
+                                        <constraint firstAttribute="width" constant="16" id="FBn-yl-maH"/>
                                         <constraint firstAttribute="width" secondItem="tqr-X5-5tv" secondAttribute="height" multiplier="21:20" id="bge-iS-F76"/>
+                                    </constraints>
+                                </imageView>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="RouteLine" translatesAutoresizingMaskIntoConstraints="NO" id="RIw-F9-W8X">
+                                    <rect key="frame" x="14.666666666666664" y="34.333333333333314" width="17" height="42"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="42" id="kTF-on-6jx"/>
                                     </constraints>
                                 </imageView>
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DropOffPin" translatesAutoresizingMaskIntoConstraints="NO" id="GNR-xB-gRJ">
@@ -62,8 +70,9 @@
                                 </imageView>
                             </subviews>
                             <constraints>
-                                <constraint firstAttribute="trailing" secondItem="tqr-X5-5tv" secondAttribute="trailing" id="5gp-30-hJw"/>
+                                <constraint firstItem="RIw-F9-W8X" firstAttribute="top" secondItem="tqr-X5-5tv" secondAttribute="bottom" constant="6" id="EZq-io-mPD"/>
                                 <constraint firstAttribute="trailing" secondItem="GNR-xB-gRJ" secondAttribute="trailing" id="GrR-N0-Aq9"/>
+                                <constraint firstItem="RIw-F9-W8X" firstAttribute="centerX" secondItem="tqr-X5-5tv" secondAttribute="centerX" id="SLF-Pl-bos"/>
                                 <constraint firstItem="GNR-xB-gRJ" firstAttribute="centerX" secondItem="woY-Pt-6SK" secondAttribute="centerX" constant="6" id="qBF-pJ-xFR"/>
                                 <constraint firstAttribute="width" constant="34" id="sN3-nl-uOK"/>
                                 <constraint firstItem="tqr-X5-5tv" firstAttribute="centerX" secondItem="woY-Pt-6SK" secondAttribute="centerX" constant="6" id="ur9-xo-Gp3"/>
@@ -379,6 +388,8 @@
     <resources>
         <image name="DropOffPin" width="84" height="80"/>
         <image name="NavBar" width="375" height="95"/>
+        <image name="PickUpPin" width="42" height="40"/>
+        <image name="RouteLine" width="17" height="69"/>
         <image name="SideMenu" width="31" height="30"/>
         <image name="myLocationButton" width="81" height="79"/>
         <image name="tick" width="20" height="19"/>
