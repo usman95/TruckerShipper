@@ -82,4 +82,5 @@ enum Strings: String{
     case PER_CONTAINER = "Per Container"
     case BY_TRUCK = "By Truck"
     case BY_TRAIN = "By Train"
+    case KARACHI = "Karachi"
 }

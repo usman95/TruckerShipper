@@ -170,7 +170,6 @@ extension Home{
     private func setPickedAddressFromPlacePickerVC(_ place:GMSPlace){
         switch self.locationPickerType{
         case .pickUp:
-            self.lblPickUpTitle.text = place.name ?? "Pick-up Location"
             self.lblPickUp.text = place.formattedAddress ?? "Location Area - City"
             self.pickUpLocation = place.coordinate
             
@@ -180,10 +179,10 @@ extension Home{
                         switch type{
                         case "locality":
                             self.pickUpCity = components.name
+                            self.lblPickUpTitle.text = self.pickUpCity ?? "Pick-up Location"
                         default:
                             break
                         }
-                        
                     }
                 }
             }
@@ -196,7 +195,6 @@ extension Home{
                 self.getRoute()
             }
         case .dropOff:
-            self.lblDropOffTitle.text = place.name ?? "Drop-off Location"
             self.lblDropOff.text = place.formattedAddress ?? "Location Area - City"
             self.dropOffLocation = place.coordinate
             
@@ -206,10 +204,10 @@ extension Home{
                         switch type{
                         case "locality":
                             self.dropOffCity = components.name
+                            self.lblDropOffTitle.text = self.dropOffCity ?? "Drop-off Location"
                         default:
                             break
                         }
-                        
                     }
                 }
             }
@@ -276,7 +274,7 @@ extension Home{
             if let placemarks = placemarks, let placemark = placemarks.first {
                 switch self.locationPickerType{
                 case .pickUp:
-                    self.lblPickUpTitle.text = placemark.name ?? "Pick-up Location"
+                    self.lblPickUpTitle.text = placemark.locality ?? "Pick-up Location"
                     self.lblPickUp.text = placemark.compactAddress
                     self.pickUpLocation = placemark.location?.coordinate ?? CLLocationCoordinate2D()
                     self.pickUpCity = placemark.locality
@@ -287,7 +285,7 @@ extension Home{
                         self.getRoute()
                     }
                 case .dropOff:
-                    self.lblDropOffTitle.text = placemark.name ?? "Drop-off Location"
+                    self.lblDropOffTitle.text = placemark.locality ?? "Drop-off Location"
                     self.lblDropOff.text = placemark.compactAddress
                     self.dropOffLocation = placemark.location?.coordinate ?? CLLocationCoordinate2D()
                     self.dropOffCity = placemark.locality

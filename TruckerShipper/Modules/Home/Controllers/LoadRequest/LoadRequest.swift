@@ -20,14 +20,12 @@ class LoadRequest: BaseController {
     @IBOutlet weak var tfPickUpDetailsFullName: UITextFieldDeviceClass!
     @IBOutlet weak var tfPickUpDetailsPhoneNumber: UITextFieldDeviceClass!
     @IBOutlet weak var tfPickUpDetailsCity: UITextFieldDeviceClass!
-    @IBOutlet weak var tfPickUpDetailsPickUp: UITextFieldDeviceClass!
     @IBOutlet weak var tfPickUpDetailsPickUpName: UITextFieldDeviceClass!
     @IBOutlet weak var tfPickUpDetailsLabourers: UITextFieldDeviceClass!
     
     @IBOutlet weak var tfDropOffDetailsFullName: UITextFieldDeviceClass!
     @IBOutlet weak var tfDropOffDetailsPhoneNumber: UITextFieldDeviceClass!
     @IBOutlet weak var tfDropOffDetailsCity: UITextFieldDeviceClass!
-    @IBOutlet weak var tfDropOffDetailsDropOff: UITextFieldDeviceClass!
     @IBOutlet weak var tfDropOffDetailsDropOffName: UITextFieldDeviceClass!
     @IBOutlet weak var tfDropOffDetailsLabourers: UITextFieldDeviceClass!
     
@@ -41,17 +39,7 @@ class LoadRequest: BaseController {
     @IBOutlet weak var tfBookingDetailsCargoType: UITextFieldDeviceClass!
     @IBOutlet weak var tfBookingDetailsShippingLine: UITextFieldDeviceClass!
     @IBOutlet weak var tfBookingDetailsCommodity: UITextFieldDeviceClass!
-    @IBOutlet weak var tfBookingDetailsPortOfLoading: UITextFieldDeviceClass!
-    @IBOutlet weak var tfBookingDetailsPortOfDischarge: UITextFieldDeviceClass!
-    @IBOutlet weak var tfBookingDetailsEmptyPickUpLocation: UITextFieldDeviceClass!
-    @IBOutlet weak var tfBookingDetailsEmptyReturnLocation: UITextFieldDeviceClass!
     @IBOutlet weak var tfBookingDetailsRemarks: UITextFieldDeviceClass!
-    
-    @IBOutlet weak var viewPortOfLoading: UIView!
-    @IBOutlet weak var viewPortOfDischarge: UIView!
-    
-    @IBOutlet weak var btnEmptyPickUpLocation: UIButton!
-    @IBOutlet weak var btnEmptyReturnLocation: UIButton!
     
     var loadDetails: [String:Any]?
     
@@ -64,7 +52,6 @@ class LoadRequest: BaseController {
     var selecteBookingDate: Date?
     var selectePickUpDate: Date?
     
-    let routesDropDown = DropDown()
     var arrRoutes = [String]()
     var selectedRoute: String?
     
@@ -81,12 +68,6 @@ class LoadRequest: BaseController {
     
     var arrCargoType = [AttributeModel]()
     var selectedCargoType: AttributeModel?
-    
-    let emptyPickUpLocationsDropDown = DropDown()
-    let emptyReturnLocationsDropDown = DropDown()
-    var arrEmptyLocations = [AttributeModel]()
-    var selectedEmptyPickUpLocation: AttributeModel?
-    var selectedEmptyReturnLocation: AttributeModel?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -106,26 +87,11 @@ class LoadRequest: BaseController {
         self.getPickedDate(sender)
     }
     
-    @IBAction func onBtnRoute(_ sender: UIButton) {
-        self.routesDropDown.show()
-    }
     @IBAction func onBtnBookingType(_ sender: UIButton) {
         self.bookingTypeDropDown.show()
     }
     @IBAction func onBtnShippingLine(_ sender: UIButton) {
         self.shippingLineDropDown.show()
-    }
-    @IBAction func onBtnEmptyPickUpLocation(_ sender: UIButton) {
-        sender.isSelected = !sender.isSelected
-    }
-    @IBAction func onBtnEmptyReturnLocation(_ sender: UIButton) {
-        sender.isSelected = !sender.isSelected
-    }
-    @IBAction func onBtnEmptyPickUpLocationDropDown(_ sender: UIButton) {
-        self.emptyPickUpLocationsDropDown.show()
-    }
-    @IBAction func onBtnEmptyReturnLocationDropDown(_ sender: UIButton) {
-        self.emptyReturnLocationsDropDown.show()
     }
     @IBAction func onBtnCreateBooking(_ sender: UIButtonDeviceClass) {
     }
@@ -163,9 +129,6 @@ extension LoadRequest{
             switch modeOfTransport {
             case ModeOfTransportType.truck.rawValue:
                 self.tfBookingDetailsModeOfTransport.text = Strings.BY_TRUCK.text
-                
-                self.viewPortOfLoading.isHidden = true
-                self.viewPortOfDischarge.isHidden = true
             default:
                 self.tfBookingDetailsModeOfTransport.text = Strings.BY_TRAIN.text
             }
@@ -177,7 +140,6 @@ extension LoadRequest{
         self.getShippingLine()
         self.getCommodity()
         self.getCargoType()
-        self.getLocations()
     }
     private func setSelectedCities(){
         let pickUpCity = self.tfPickUpDetailsCity.text ?? ""
@@ -186,15 +148,15 @@ extension LoadRequest{
         self.selectedPickUpDetailsCity = self.arrCities.filter{$0.title == pickUpCity}.first
         self.selectedDropOffDetailsDetailsCity = self.arrCities.filter{$0.title == dropOffCity}.first
     }
-    private func setRoutesDropDown(){
-        self.routesDropDown.dataSource = self.arrRoutes
-        self.routesDropDown.anchorView = self.tfBookingDetailsRoute
-        self.routesDropDown.cellHeight = self.tfBookingDetailsRoute.frame.height
-        self.routesDropDown.width = self.tfBookingDetailsRoute.frame.width
-        self.routesDropDown.selectionAction = { [unowned self] (index: Int, item: String) in
-            self.tfBookingDetailsRoute.text = item.uppercased()
-            self.selectedRoute = item
+    private func setSelectedRoute(){
+        let pickUpCity = self.tfPickUpDetailsCity.text ?? ""
+        if pickUpCity == Strings.KARACHI.text{
+            self.selectedRoute = self.arrRoutes.filter{$0 == "up"}.first
         }
+        else{
+            self.selectedRoute = self.arrRoutes.filter{$0 == "down"}.first
+        }
+        self.tfBookingDetailsRoute.text = self.selectedRoute?.uppercased()
     }
     private func setBookingTypeDropDown(){
         self.bookingTypeDropDown.dataSource = self.arrBookingType.map{$0.title ?? ""}
@@ -230,26 +192,6 @@ extension LoadRequest{
             
             self.selectedCommodity = self.arrCommodity.filter{$0.id == commodityId}.first
             self.tfBookingDetailsCommodity.text = self.selectedCommodity?.title ?? ""
-        }
-    }
-    private func setEmptyPickUpLocationsDropDown(){
-        self.emptyPickUpLocationsDropDown.dataSource = self.arrEmptyLocations.map{$0.title ?? ""}
-        self.emptyPickUpLocationsDropDown.anchorView = self.tfBookingDetailsEmptyPickUpLocation
-        self.emptyPickUpLocationsDropDown.cellHeight = self.tfBookingDetailsEmptyPickUpLocation.frame.height
-        self.emptyPickUpLocationsDropDown.width = self.tfBookingDetailsEmptyPickUpLocation.frame.width
-        self.emptyPickUpLocationsDropDown.selectionAction = { [unowned self] (index: Int, item: String) in
-            self.tfBookingDetailsEmptyPickUpLocation.text = item
-            self.selectedEmptyPickUpLocation = self.arrEmptyLocations[index]
-        }
-    }
-    private func setEmptyReturnLocationsDropDown(){
-        self.emptyReturnLocationsDropDown.dataSource = self.arrEmptyLocations.map{$0.title ?? ""}
-        self.emptyReturnLocationsDropDown.anchorView = self.tfBookingDetailsEmptyReturnLocation
-        self.emptyReturnLocationsDropDown.cellHeight = self.tfBookingDetailsEmptyReturnLocation.frame.height
-        self.emptyReturnLocationsDropDown.width = self.tfBookingDetailsEmptyReturnLocation.frame.width
-        self.emptyReturnLocationsDropDown.selectionAction = { [unowned self] (index: Int, item: String) in
-            self.tfBookingDetailsEmptyReturnLocation.text = item
-            self.selectedEmptyReturnLocation = self.arrEmptyLocations[index]
         }
     }
 }
@@ -314,7 +256,7 @@ extension LoadRequest{
         APIManager.sharedInstance.usersAPIManager.Routes(success: { (responseObject) in
             guard let routes = responseObject as? [String] else {return}
             self.arrRoutes = routes
-            self.setRoutesDropDown()
+            self.setSelectedRoute()
         }) { (error) in
             print(error)
         }
@@ -379,23 +321,6 @@ extension LoadRequest{
             guard let cargoTypes = response["cargoTypes"] as? [[String:Any]] else {return}
             self.arrCargoType = Mapper<AttributeModel>().mapArray(JSONArray: cargoTypes)
             self.setSelectedCargoType()
-        }) { (error) in
-            print(error)
-        }
-    }
-    private func getLocations(){
-        let skip = "0"
-        let limit = "1000"
-        
-        let params:[String:Any] = ["skip":skip,
-                                   "limit":limit]
-        
-        APIManager.sharedInstance.attributesAPIManager.Locations(params: params, success: { (responseObject) in
-            let response = responseObject as Dictionary
-            guard let locations = response["locations"] as? [[String:Any]] else {return}
-            self.arrEmptyLocations = Mapper<AttributeModel>().mapArray(JSONArray: locations)
-            self.setEmptyPickUpLocationsDropDown()
-            self.setEmptyReturnLocationsDropDown()
         }) { (error) in
             print(error)
         }
