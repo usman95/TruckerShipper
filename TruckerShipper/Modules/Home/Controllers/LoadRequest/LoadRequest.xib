@@ -9,12 +9,14 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoadRequest" customModule="TruckerShipper" customModuleProvider="target">
             <connections>
+                <outlet property="btnCreatebooking" destination="32x-1t-icd" id="fd5-5r-hVz"/>
                 <outlet property="lblDropOffAddress" destination="F9s-Rd-lnB" id="aov-13-yZe"/>
                 <outlet property="lblDropOffCity" destination="cO7-pl-drm" id="jdM-51-SyT"/>
                 <outlet property="lblPickUpAddress" destination="vFz-md-6HN" id="vqZ-ld-8lI"/>
                 <outlet property="lblPickUpCity" destination="m5k-j7-zcq" id="2qe-lJ-D58"/>
                 <outlet property="tfBookingDetailsBookingDate" destination="dtT-Gx-XRg" id="lRI-tk-GYj"/>
                 <outlet property="tfBookingDetailsBookingType" destination="QNr-Nc-7cl" id="uXg-ok-qj6"/>
+                <outlet property="tfBookingDetailsCargoMode" destination="Pq7-M5-C9o" id="oRK-27-rRc"/>
                 <outlet property="tfBookingDetailsCargoType" destination="eow-1x-bYI" id="Iez-PR-3lw"/>
                 <outlet property="tfBookingDetailsCommodity" destination="iwg-bj-4hf" id="tvK-l6-OGx"/>
                 <outlet property="tfBookingDetailsCustomerName" destination="vfb-BC-MNc" id="DTC-Pq-w18"/>
@@ -39,7 +41,7 @@
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
-            <rect key="frame" x="0.0" y="0.0" width="414" height="3500"/>
+            <rect key="frame" x="0.0" y="0.0" width="414" height="3000"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BY6-at-oCP">
@@ -89,7 +91,7 @@
                     </constraints>
                 </view>
                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i9Q-9t-1ts">
-                    <rect key="frame" x="0.0" y="124" width="414" height="3342"/>
+                    <rect key="frame" x="0.0" y="124" width="414" height="2842"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ogO-Mh-fFT">
                             <rect key="frame" x="0.0" y="0.0" width="414" height="2635"/>
@@ -1204,7 +1206,7 @@
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eb2-qB-MJl">
                                                     <rect key="frame" x="0.0" y="41.5" width="366" height="56.5"/>
                                                     <subviews>
-                                                        <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter transit free days" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="I39-na-FRK" customClass="UITextFieldDeviceClass" customModule="TruckerShipper" customModuleProvider="target">
+                                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter transit free days" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="I39-na-FRK" customClass="UITextFieldDeviceClass" customModule="TruckerShipper" customModuleProvider="target">
                                                             <rect key="frame" x="12" y="0.0" width="342" height="56.5"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                             <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
@@ -1504,6 +1506,9 @@
                                                         </imageView>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mzf-ge-yqO">
                                                             <rect key="frame" x="0.0" y="0.0" width="366" height="56.5"/>
+                                                            <connections>
+                                                                <action selector="onBtnCargoMode:" destination="-1" eventType="touchUpInside" id="IU8-jv-Rgu"/>
+                                                            </connections>
                                                         </button>
                                                     </subviews>
                                                     <constraints>

@@ -69,6 +69,7 @@ enum Strings: String{
     case PRIVACY_POLICY = "Privacy Policy"
     case SELECT_SHIPPER = "Please select shipper type."
     case FORGOT_PASSWORD_EMAIL_SENT = "Please check your email and click on the provided link to reset your password."
+    case SIGNUP_COMPLETED = "A verification email sent to your provided email addres\nPlease check your email and click on the provided link to verify your account."
     case ENTER_ADDRESS = "Please enter your address."
     case HEY = "Hey!"
     case PLEASE_SELECT_PICKUP_AND_DROPOFF_LOCATION = "please select pickup and dropoff location"

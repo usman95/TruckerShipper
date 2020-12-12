@@ -21,9 +21,6 @@ class LoadDetails: BaseController {
     
     var locationAttribute: [String:Any]?
     
-    var arrWeightPerTruck = [AttributeModel]()
-    var selectedWeightPerTruck: AttributeModel?
-    
     let sizePerTruckDropDown = DropDown()
     var arrSizePerTruck = [AttributeModel]()
     var selectedSizePerTruck: AttributeModel?
@@ -60,7 +57,6 @@ class LoadDetails: BaseController {
 //MARK:- Helper methods
 extension LoadDetails{
     private func callAPIs(){
-        self.getWeightPerTruck()
         self.getSizePerTruck()
         self.getCommodity()
         self.getCargoType()
@@ -112,13 +108,13 @@ extension LoadDetails{
         }
     }
     private func validate()->[String:Any]?{
-        let weightId = self.selectedWeightPerTruck?.id ?? ""
+        let weight = self.tfWeightPerTruck.text ?? ""
         let sizeId = self.selectedSizePerTruck?.id ?? ""
         let commodityId = self.selectedCommodity?.id ?? ""
         let cargoTypeId = self.selectedCargoType?.id ?? ""
         let quantityOfTrucks = self.tfQuantity.text ?? ""
         
-        if self.selectedWeightPerTruck == nil{
+        if !Validation.isValidNumber(weight){
             Utility.main.showToast(message: Strings.PLEASE_ENTER_WEIGHT_PER_TRUCK.text)
             self.btnCalculateRate.shake()
             return nil
@@ -146,55 +142,17 @@ extension LoadDetails{
         
         var params = self.locationAttribute ?? [:]
         
-        params["weightId"] = weightId
+        params["weight"] = Int(weight) ?? 0
         params["sizeId"] = sizeId
         params["commodityId"] = commodityId
         params["cargoTypeId"] = cargoTypeId
-        params["quantityOfTrucks"] = quantityOfTrucks
+        params["quantityOfTrucks"] = Int(quantityOfTrucks) ?? 0
 
         return params
     }
 }
-//MARK:- UITextFieldDelegate
-extension LoadDetails: UITextFieldDelegate{
-    func textFieldDidEndEditing(_ textField: UITextField) {
-        if textField == self.tfWeightPerTruck{
-            self.selectedWeightPerTruck = nil
-            
-            let weight = Int(textField.text ?? "") ?? 0
-                    
-            for (index,weightPerTruck) in self.arrWeightPerTruck.enumerated(){
-                if weight == weightPerTruck.weight{
-                    self.selectedWeightPerTruck = self.arrWeightPerTruck[index]
-                    self.tfWeightPerTruck.text = "\(self.selectedWeightPerTruck?.weight ?? 0)"
-                    break
-                }
-            }
-            
-            if self.selectedWeightPerTruck == nil{
-                self.selectedWeightPerTruck = self.arrWeightPerTruck.last
-                self.tfWeightPerTruck.text = "\(self.selectedWeightPerTruck?.weight ?? 0)"
-            }
-        }
-    }
-}
 //MARK:- Services
 extension LoadDetails{
-    private func getWeightPerTruck(){
-        let skip = "0"
-        let limit = "1000"
-
-        let params:[String:Any] = ["skip":skip,
-                                   "limit":limit]
-        
-        APIManager.sharedInstance.attributesAPIManager.Weight(params: params, success: { (responseObject) in
-            let response = responseObject as Dictionary
-            guard let weights = response["weights"] as? [[String:Any]] else {return}
-            self.arrWeightPerTruck = Mapper<AttributeModel>().mapArray(JSONArray: weights)
-        }) { (error) in
-            print(error)
-        }
-    }
     private func getSizePerTruck(){
         let skip = "0"
         let limit = "1000"

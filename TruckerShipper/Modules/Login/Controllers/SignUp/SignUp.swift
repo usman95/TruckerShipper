@@ -187,6 +187,9 @@ extension SignUp{
         guard let params = self.validate() else {return}
         APIManager.sharedInstance.usersAPIManager.SignUp(params: params, success: { (responseObject) in
             print(responseObject)
+            Utility.main.showAlert(message: Strings.SIGNUP_COMPLETED.text, title: Strings.CONFIRMATION.text) {
+                Utility.main.topViewController()?.navigationController?.popViewController(animated: true)
+            }
         }) { (error) in
             print(error)
         }

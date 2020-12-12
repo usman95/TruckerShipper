@@ -36,17 +36,20 @@ class LoadRequest: BaseController {
     @IBOutlet weak var tfBookingDetailsTransitFreeDays: UITextFieldDeviceClass!
     @IBOutlet weak var tfBookingDetailsDnDPickUpDate: UITextFieldDeviceClass!
     @IBOutlet weak var tfBookingDetailsBookingType: UITextFieldDeviceClass!
+    @IBOutlet weak var tfBookingDetailsCargoMode: UITextFieldDeviceClass!
     @IBOutlet weak var tfBookingDetailsCargoType: UITextFieldDeviceClass!
     @IBOutlet weak var tfBookingDetailsShippingLine: UITextFieldDeviceClass!
     @IBOutlet weak var tfBookingDetailsCommodity: UITextFieldDeviceClass!
     @IBOutlet weak var tfBookingDetailsRemarks: UITextFieldDeviceClass!
+    
+    @IBOutlet weak var btnCreatebooking: UIButtonDeviceClass!
     
     var loadDetails: [String:Any]?
     
     var arrCities = [AttributeModel]()
     
     var selectedPickUpDetailsCity: AttributeModel?
-    var selectedDropOffDetailsDetailsCity: AttributeModel?
+    var selectedDropOffDetailsCity: AttributeModel?
     
     var bookingDatePickerType = BookingDatePickerType.booking
     var selecteBookingDate: Date?
@@ -65,6 +68,10 @@ class LoadRequest: BaseController {
     
     var arrCommodity = [AttributeModel]()
     var selectedCommodity: AttributeModel?
+    
+    let cargoModeDropDown = DropDown()
+    var arrCargoModes = [String]()
+    var selectedCargoMode: String?
     
     var arrCargoType = [AttributeModel]()
     var selectedCargoType: AttributeModel?
@@ -93,7 +100,11 @@ class LoadRequest: BaseController {
     @IBAction func onBtnShippingLine(_ sender: UIButton) {
         self.shippingLineDropDown.show()
     }
+    @IBAction func onBtnCargoMode(_ sender: UIButton) {
+        self.cargoModeDropDown.show()
+    }
     @IBAction func onBtnCreateBooking(_ sender: UIButtonDeviceClass) {
+        self.createBooking()
     }
 }
 //MARK:- Helper methods
@@ -139,6 +150,7 @@ extension LoadRequest{
         self.getBookingType()
         self.getShippingLine()
         self.getCommodity()
+        self.getCargoMode()
         self.getCargoType()
     }
     private func setSelectedCities(){
@@ -146,7 +158,7 @@ extension LoadRequest{
         let dropOffCity = self.tfDropOffDetailsCity.text ?? ""
         
         self.selectedPickUpDetailsCity = self.arrCities.filter{$0.title == pickUpCity}.first
-        self.selectedDropOffDetailsDetailsCity = self.arrCities.filter{$0.title == dropOffCity}.first
+        self.selectedDropOffDetailsCity = self.arrCities.filter{$0.title == dropOffCity}.first
     }
     private func setSelectedRoute(){
         let pickUpCity = self.tfPickUpDetailsCity.text ?? ""
@@ -178,6 +190,16 @@ extension LoadRequest{
             self.selectedShippingLine = self.arrShippingLine[index]
         }
     }
+    private func setCargoModeDropDown(){
+        self.cargoModeDropDown.dataSource = self.arrCargoModes
+        self.cargoModeDropDown.anchorView = self.tfBookingDetailsCargoMode
+        self.cargoModeDropDown.cellHeight = self.tfBookingDetailsCargoMode.frame.height
+        self.cargoModeDropDown.width = self.tfBookingDetailsBookingType.frame.width
+        self.cargoModeDropDown.selectionAction = { [unowned self] (index: Int, item: String) in
+            self.tfBookingDetailsCargoMode.text = item
+            self.selectedCargoMode = self.arrCargoModes[index]
+        }
+    }
     private func setSelectedCargoType(){
         if let loadDetails = self.loadDetails{
             let cargoTypeId = loadDetails["cargoTypeId"] as? String ?? ""
@@ -192,6 +214,96 @@ extension LoadRequest{
             
             self.selectedCommodity = self.arrCommodity.filter{$0.id == commodityId}.first
             self.tfBookingDetailsCommodity.text = self.selectedCommodity?.title ?? ""
+        }
+    }
+    private func validate()->[String:Any]?{
+        if let loadDetails = self.loadDetails{
+            
+            var pickup = [String:Any]()
+            
+            if let pickupLoadDetails = loadDetails["pickup"] as? [String:Any]{
+                let fullName = self.tfPickUpDetailsFullName.text ?? ""
+                let phoneNumber = self.tfPickUpDetailsPhoneNumber.text ?? ""
+                let origin = self.tfPickUpDetailsCity.text ?? ""
+                let originName = self.tfPickUpDetailsPickUpName.text ?? ""
+                let address = self.lblPickUpAddress.text ?? ""
+                let labourers = self.tfPickUpDetailsLabourers.text ?? ""
+                let cityId = self.selectedPickUpDetailsCity?.id ?? ""
+                let coordinates = pickupLoadDetails["coordinates"] as? [Double] ?? [Double]()
+                
+                pickup["fullName"] = fullName
+                pickup["phoneNumber"] = phoneNumber
+                pickup["origin"] = origin
+                pickup["originName"] = originName
+                pickup["address"] = address
+                pickup["labourers"] = labourers
+                pickup["cityId"] = cityId
+                pickup["coordinates"] = coordinates
+            }
+            
+            var dropOff = [String:Any]()
+            
+            if let dropOffLoadDetails = loadDetails["dropOff"] as? [String:Any]{
+                let fullName = self.tfDropOffDetailsFullName.text ?? ""
+                let phoneNumber = self.tfDropOffDetailsPhoneNumber.text ?? ""
+                let destination = self.tfDropOffDetailsCity.text ?? ""
+                let destinationName = self.tfDropOffDetailsDropOffName.text ?? ""
+                let address = self.lblDropOffAddress.text ?? ""
+                let labourers = self.tfDropOffDetailsLabourers.text ?? ""
+                let cityId = self.selectedDropOffDetailsCity?.id ?? ""
+                let coordinates = dropOffLoadDetails["coordinates"] as? [Double] ?? [Double]()
+                
+                dropOff["fullName"] = fullName
+                dropOff["phoneNumber"] = phoneNumber
+                dropOff["destination"] = destination
+                dropOff["destinationName"] = destinationName
+                dropOff["address"] = address
+                dropOff["labourers"] = labourers
+                dropOff["cityId"] = cityId
+                dropOff["coordinates"] = coordinates
+            }
+            
+            let weight = loadDetails["weight"] as? Int ?? 0
+            let sizeId = loadDetails["sizeId"] as? String ?? ""
+            let commodityId =  loadDetails["commodityId"] as? String ?? ""
+            let cargoTypeId = loadDetails["cargoTypeId"] as? String ?? ""
+            let transportModeId = loadDetails["modeOfTransport"] as? String ?? ""
+            let route = self.selectedRoute ?? ""
+            let bookingTypeId = self.selectedBookingType?.id ?? ""
+            let quantityOfTrucks = loadDetails["quantityOfTrucks"] as? Int ?? 0
+            let transitFreeDays = Int(self.tfBookingDetailsTransitFreeDays.text ?? "") ?? 0
+            let pickUpDate = Utility.main.dateFormatter(date: self.selectePickUpDate ?? self.selecteBookingDate ?? Date(), dateFormat: "yyyy-MM-dd HH:mm:ss.SSS'Z'")
+            let bookingDate = Utility.main.dateFormatter(date: self.selecteBookingDate ?? Date(), dateFormat: "yyyy-MM-dd HH:mm:ss.SSS'Z'")
+            let shippingLine = self.selectedShippingLine?.id ?? ""
+            
+            let comments = "\(self.tfBookingDetailsRemarks.text ?? "")"
+            let remark:[String:Any] = ["comments":comments]
+            let remarks = [remark]
+            
+            let totalDistance = loadDetails["totalDistance"] as? Int ?? 0
+            let cargoMode = self.selectedCargoMode ?? ""
+            
+            let params:[String:Any] = ["pickup":pickup,
+                                       "dropOff":dropOff,
+                                       "weight":weight,
+                                       "sizeId":sizeId,
+                                       "commodityId":commodityId,
+                                       "cargoTypeId":cargoTypeId,
+                                       "transportModeId":transportModeId,
+                                       "route":route,
+                                       "bookingTypeId":bookingTypeId,
+                                       "quantityOfTrucks":quantityOfTrucks,
+                                       "transitFreeDays":transitFreeDays,
+                                       "pickUpDate":pickUpDate,
+                                       "bookingDate":bookingDate,
+                                       "shippingLine":shippingLine,
+                                       "remarks":remarks,
+                                       "totalDistance":totalDistance,
+                                       "cargoMode":cargoMode]
+            return params
+        }
+        else{
+            return nil
         }
     }
 }
@@ -253,7 +365,7 @@ extension LoadRequest{
         }
     }
     private func getRoutes(){
-        APIManager.sharedInstance.usersAPIManager.Routes(success: { (responseObject) in
+        APIManager.sharedInstance.attributesAPIManager.Routes(success: { (responseObject) in
             guard let routes = responseObject as? [String] else {return}
             self.arrRoutes = routes
             self.setSelectedRoute()
@@ -309,6 +421,21 @@ extension LoadRequest{
             print(error)
         }
     }
+    private func getCargoMode(){
+        let skip = "0"
+        let limit = "1000"
+        
+        let params:[String:Any] = ["skip":skip,
+                                   "limit":limit]
+        
+        APIManager.sharedInstance.attributesAPIManager.CargoMode(params: params, success: { (responseObject) in
+            guard let routes = responseObject as? [String] else {return}
+            self.arrCargoModes = routes
+            self.setCargoModeDropDown()
+        }) { (error) in
+            print(error)
+        }
+    }
     private func getCargoType(){
         let skip = "0"
         let limit = "1000"
@@ -321,6 +448,15 @@ extension LoadRequest{
             guard let cargoTypes = response["cargoTypes"] as? [[String:Any]] else {return}
             self.arrCargoType = Mapper<AttributeModel>().mapArray(JSONArray: cargoTypes)
             self.setSelectedCargoType()
+        }) { (error) in
+            print(error)
+        }
+    }
+    private func createBooking(){
+        guard let params = self.validate() else {return}
+        params.printJson()
+        APIManager.sharedInstance.shipperAPIManager.Booking(params: params, success: { (responseObject) in
+            print(responseObject)
         }) { (error) in
             print(error)
         }

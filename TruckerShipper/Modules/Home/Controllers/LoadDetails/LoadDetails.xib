@@ -122,9 +122,6 @@
                                         </userDefinedRuntimeAttribute>
                                         <userDefinedRuntimeAttribute type="string" keyPath="iPhoneFontWeight" value="medium"/>
                                     </userDefinedRuntimeAttributes>
-                                    <connections>
-                                        <outlet property="delegate" destination="-1" id="EdC-DZ-ksL"/>
-                                    </connections>
                                 </textField>
                             </subviews>
                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>

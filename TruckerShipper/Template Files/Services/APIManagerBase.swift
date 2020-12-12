@@ -23,9 +23,12 @@ enum Route: String {
     case BookingType = "/api/booking-type"
     case ShippingLine = "/api/shipping-line"
     case Locations = "/api/location"
+    case CargoMode = "/public/cargo-modes"
+    
     //MARK:- ALL
     case ShipperContracts = "/api/shipper-contract"
     case BookingEstimate = "/api/booking-estimate"
+    case Booking = "/api/booking"
 }
 class APIManagerBase: NSObject {
     let baseURL = Constants.BaseURL
@@ -102,7 +105,7 @@ extension APIManagerBase{
                               failure:@escaping DefaultAPIFailureClosure,
                               withHeader: Bool){
         if withHeader{
-            Alamofire.request(route, method: .get, parameters: nil, encoding: URLEncoding.default, headers: getAuthorizationHeader()).responseJSON{
+            Alamofire.request(route, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: getAuthorizationHeader()).responseJSON{
                 response in
                 self.responseResult(response, success: {
                     response in
@@ -117,7 +120,7 @@ extension APIManagerBase{
                 })}
         }
         else{
-            Alamofire.request(route, method: .get, parameters: nil, encoding: URLEncoding()).responseJSON {
+            Alamofire.request(route, method: .get, parameters: nil, encoding: JSONEncoding()).responseJSON {
                 response in
                 
                 self.responseResult(response, success: {response in
@@ -138,7 +141,7 @@ extension APIManagerBase{
                                    success:@escaping DefaultAPISuccessClosure,
                                    failure:@escaping DefaultAPIFailureClosure, withHeader: Bool){
         if withHeader{
-            Alamofire.request(route, method: .get, encoding: URLEncoding.default, headers: getAuthorizationHeader()).responseJSON{
+            Alamofire.request(route, method: .get, encoding: JSONEncoding.default, headers: getAuthorizationHeader()).responseJSON{
                 response in
                 self.responseResult(response, success: {response in
                     if let dictionaryResponse = response as? Dictionary<String, AnyObject>{
@@ -153,7 +156,7 @@ extension APIManagerBase{
             }
         }
         else{
-            Alamofire.request(route, method: .get, parameters: nil, encoding: URLEncoding()).responseJSON {
+            Alamofire.request(route, method: .get, parameters: nil, encoding: JSONEncoding()).responseJSON {
                 response in
                 self.responseResult(response, success: {response in
                     if let dictionaryResponse = response as? Dictionary<String, AnyObject>{
@@ -173,7 +176,7 @@ extension APIManagerBase{
                              success:@escaping DefaultBoolResultAPISuccesClosure,
                              failure:@escaping DefaultAPIFailureClosure, withHeader: Bool){
         if withHeader{
-            Alamofire.request(route, method: .get, encoding: URLEncoding.default, headers: getAuthorizationHeader()).responseJSON{
+            Alamofire.request(route, method: .get, encoding: JSONEncoding.default, headers: getAuthorizationHeader()).responseJSON{
                 response in
                 self.responseResult(response, success: {response in
                     if let boolResponse = response as? Bool{
@@ -185,7 +188,7 @@ extension APIManagerBase{
             }
         }
         else{
-            Alamofire.request(route, method: .get , parameters: nil, encoding: URLEncoding.default).responseJSON{
+            Alamofire.request(route, method: .get , parameters: nil, encoding: JSONEncoding.default).responseJSON{
                 response in
                 self.responseResult(response, success: {response in
                     if let boolResponse = response as? Bool{
@@ -202,7 +205,7 @@ extension APIManagerBase{
                                success:@escaping DefaultStringResultAPISuccesClosure,
                                failure:@escaping DefaultAPIFailureClosure, withHeader: Bool){
         if withHeader{
-            Alamofire.request(route, method: .get, encoding: URLEncoding.default, headers: getAuthorizationHeader()).responseJSON{
+            Alamofire.request(route, method: .get, encoding: JSONEncoding.default, headers: getAuthorizationHeader()).responseJSON{
                 response in
                 self.responseResult(response, success: {response in
                     if let stringResponse = response as? String{
@@ -217,7 +220,7 @@ extension APIManagerBase{
             }
         }
         else{
-            Alamofire.request(route, method: .get , parameters: nil, encoding: URLEncoding.default).responseJSON{
+            Alamofire.request(route, method: .get , parameters: nil, encoding: JSONEncoding.default).responseJSON{
                 response in
                 self.responseResult(response, success: {response in
                     if let stringResponse = response as? String{
@@ -237,7 +240,7 @@ extension APIManagerBase{
                             success:@escaping DefaultIntResultAPISuccesClosure,
                             failure:@escaping DefaultAPIFailureClosure, withHeader: Bool){
         if withHeader{
-            Alamofire.request(route, method: .get, encoding: URLEncoding.default, headers: getAuthorizationHeader()).responseJSON{
+            Alamofire.request(route, method: .get, encoding: JSONEncoding.default, headers: getAuthorizationHeader()).responseJSON{
                 response in
                 self.responseResult(response, success: {response in
                     if let intResponse = response as? Int{
@@ -252,7 +255,7 @@ extension APIManagerBase{
             }
         }
         else{
-            Alamofire.request(route, method: .get , parameters: nil, encoding: URLEncoding.default).responseJSON{
+            Alamofire.request(route, method: .get , parameters: nil, encoding: JSONEncoding.default).responseJSON{
                 response in
                 self.responseResult(response, success: {response in
                     if let intResponse = response as? Int{
@@ -276,7 +279,7 @@ extension APIManagerBase{
                                failure:@escaping DefaultAPIFailureClosure, withHeader:Bool){
         
         if withHeader {
-            Alamofire.request(route, method: .post, parameters: parameters, encoding: URLEncoding.default, headers: getAuthorizationHeader()).responseJSON{
+            Alamofire.request(route, method: .post, parameters: parameters, encoding: JSONEncoding.default, headers: getAuthorizationHeader()).responseJSON{
                 response in
                 self.responseResult(response, success: {response in
                     if let arrayResponse = response as? Array<AnyObject>{
@@ -291,7 +294,7 @@ extension APIManagerBase{
                 })
             }
         }else {
-            Alamofire.request(route, method: .post, parameters: parameters, encoding: URLEncoding.default).responseJSON{
+            Alamofire.request(route, method: .post, parameters: parameters, encoding: JSONEncoding.default).responseJSON{
                 response in
                 self.responseResult(response, success: {response in
                     if let arrayResponse = response as? Array<AnyObject>{
@@ -312,7 +315,7 @@ extension APIManagerBase{
                                     failure:@escaping DefaultAPIFailureClosure, withHeader:Bool){
         
         if withHeader{
-            Alamofire.request(route, method: .post, parameters: parameters, encoding: URLEncoding.default, headers: getAuthorizationHeader()).responseJSON{
+            Alamofire.request(route, method: .post, parameters: parameters, encoding: JSONEncoding.default, headers: getAuthorizationHeader()).responseJSON{
                 response in
                 self.responseResult(response, success: {response in
                     if let dictionaryResponse = response as? Dictionary<String, AnyObject>{
@@ -326,7 +329,7 @@ extension APIManagerBase{
                 })
             }
         }else {
-            Alamofire.request(route, method: .post, parameters: parameters, encoding: URLEncoding.default).responseJSON{
+            Alamofire.request(route, method: .post, parameters: parameters, encoding: JSONEncoding.default).responseJSON{
                 response in
                 self.responseResult(response, success: {response in
                     if let dictionaryResponse = response as? Dictionary<String, AnyObject>{
@@ -342,12 +345,12 @@ extension APIManagerBase{
         }
     }
     
-    func postDictionaryResponseWithURLEncoding(route: URL,parameters: Parameters,
+    func postDictionaryResponseWithJSONEncoding(route: URL,parameters: Parameters,
                                                success:@escaping DefaultAPISuccessClosure,
                                                failure:@escaping DefaultAPIFailureClosure, withHeader:Bool){
         
         if withHeader{
-            Alamofire.request(route, method: .post, parameters: parameters, encoding: URLEncoding.default, headers: getAuthorizationHeader()).responseJSON{
+            Alamofire.request(route, method: .post, parameters: parameters, encoding: JSONEncoding.default, headers: getAuthorizationHeader()).responseJSON{
                 response in
                 self.responseResult(response, success: {response in
                     if let dictionaryResponse = response as? Dictionary<String, AnyObject>{
@@ -361,7 +364,7 @@ extension APIManagerBase{
                 })
             }
         }else {
-            Alamofire.request(route, method: .post, parameters: parameters, encoding: URLEncoding.default).responseJSON{
+            Alamofire.request(route, method: .post, parameters: parameters, encoding: JSONEncoding.default).responseJSON{
                 response in
                 self.responseResult(response, success: {response in
                     if let dictionaryResponse = response as? Dictionary<String, AnyObject>{
@@ -461,7 +464,7 @@ extension APIManagerBase{
                               failure:@escaping DefaultAPIFailureClosure, withHeader:Bool){
         
         if withHeader{
-            Alamofire.request(route, method: .post, parameters: parameters, encoding: URLEncoding.default, headers: getAuthorizationHeader()).responseJSON{
+            Alamofire.request(route, method: .post, parameters: parameters, encoding: JSONEncoding.default, headers: getAuthorizationHeader()).responseJSON{
                 response in
                 self.responseResult(response, success: {response in
                     if let boolResponse = response as? Bool{
@@ -472,7 +475,7 @@ extension APIManagerBase{
                 })
             }
         }else {
-            Alamofire.request(route, method: .post, parameters: parameters, encoding: URLEncoding.default).responseJSON{
+            Alamofire.request(route, method: .post, parameters: parameters, encoding: JSONEncoding.default).responseJSON{
                 response in
                 self.responseResult(response, success: {response in
                     if let boolResponse = response as? Bool{
@@ -489,7 +492,7 @@ extension APIManagerBase{
                                 success:@escaping DefaultStringResultAPISuccesClosure,
                                 failure:@escaping DefaultAPIFailureClosure, withHeader: Bool){
         if withHeader{
-            Alamofire.request(route, method: .post, encoding: URLEncoding.default, headers: getAuthorizationHeader()).responseJSON{
+            Alamofire.request(route, method: .post, encoding: JSONEncoding.default, headers: getAuthorizationHeader()).responseJSON{
                 response in
                 self.responseResult(response, success: {response in
                     if let stringResponse = response as? String{
@@ -504,7 +507,7 @@ extension APIManagerBase{
             }
         }
         else{
-            Alamofire.request(route, method: .post , parameters: nil, encoding: URLEncoding.default).responseJSON{
+            Alamofire.request(route, method: .post , parameters: nil, encoding: JSONEncoding.default).responseJSON{
                 response in
                 self.responseResult(response, success: {response in
                     if let stringResponse = response as? String{
@@ -524,7 +527,7 @@ extension APIManagerBase{
                              success:@escaping DefaultIntResultAPISuccesClosure,
                              failure:@escaping DefaultAPIFailureClosure, withHeader: Bool){
         if withHeader{
-            Alamofire.request(route, method: .post, parameters: parameters, encoding: URLEncoding.default, headers: getAuthorizationHeader()).responseJSON{
+            Alamofire.request(route, method: .post, parameters: parameters, encoding: JSONEncoding.default, headers: getAuthorizationHeader()).responseJSON{
                 response in
                 self.responseResult(response, success: {response in
                     if let intResponse = response as? Int{
@@ -539,7 +542,7 @@ extension APIManagerBase{
             }
         }
         else{
-            Alamofire.request(route, method: .post , parameters: nil, encoding: URLEncoding.default).responseJSON{
+            Alamofire.request(route, method: .post , parameters: nil, encoding: JSONEncoding.default).responseJSON{
                 response in
                 self.responseResult(response, success: {response in
                     if let intResponse = response as? Int{
@@ -562,7 +565,7 @@ extension APIManagerBase{
                                       failure:@escaping DefaultAPIFailureClosure, withHeader:Bool){
         
         if withHeader{
-            Alamofire.request(route, method: .delete, parameters: parameters, encoding: URLEncoding.default, headers: getAuthorizationHeader()).responseJSON{
+            Alamofire.request(route, method: .delete, parameters: parameters, encoding: JSONEncoding.default, headers: getAuthorizationHeader()).responseJSON{
                 response in
                 self.responseResult(response, success: {response in
                     if let dictionaryResponse = response as? Dictionary<String, AnyObject>{
@@ -576,7 +579,7 @@ extension APIManagerBase{
                 })
             }
         }else {
-            Alamofire.request(route, method: .delete, parameters: parameters, encoding: URLEncoding.default).responseJSON{
+            Alamofire.request(route, method: .delete, parameters: parameters, encoding: JSONEncoding.default).responseJSON{
                 response in
                 self.responseResult(response, success: {response in
                     if let dictionaryResponse = response as? Dictionary<String, AnyObject>{
@@ -597,7 +600,7 @@ extension APIManagerBase{
                                 failure:@escaping DefaultAPIFailureClosure, withHeader:Bool){
         
         if withHeader{
-            Alamofire.request(route, method: .delete, parameters: parameters, encoding: URLEncoding.default, headers: getAuthorizationHeader()).responseJSON{
+            Alamofire.request(route, method: .delete, parameters: parameters, encoding: JSONEncoding.default, headers: getAuthorizationHeader()).responseJSON{
                 response in
                 self.responseResult(response, success: {response in
                     if let boolResponse = response as? Bool{
@@ -608,7 +611,7 @@ extension APIManagerBase{
                 })
             }
         }else {
-            Alamofire.request(route, method: .delete, parameters: parameters, encoding: URLEncoding.default).responseJSON{
+            Alamofire.request(route, method: .delete, parameters: parameters, encoding: JSONEncoding.default).responseJSON{
                 response in
                 self.responseResult(response, success: {response in
                     if let boolResponse = response as? Bool{
@@ -629,7 +632,7 @@ extension APIManagerBase{
                                    failure:@escaping DefaultAPIFailureClosure, withHeader:Bool){
         
         if withHeader{
-            Alamofire.request(route, method: .put, parameters: parameters, encoding: URLEncoding.default, headers: getAuthorizationHeader()).responseJSON{
+            Alamofire.request(route, method: .put, parameters: parameters, encoding: JSONEncoding.default, headers: getAuthorizationHeader()).responseJSON{
                 response in
                 self.responseResult(response, success: {response in
                     if let dictionaryResponse = response as? Dictionary<String, AnyObject>{
@@ -643,7 +646,7 @@ extension APIManagerBase{
                 })
             }
         }else {
-            Alamofire.request(route, method: .put, parameters: parameters, encoding: URLEncoding.default).responseJSON{
+            Alamofire.request(route, method: .put, parameters: parameters, encoding: JSONEncoding.default).responseJSON{
                 response in
                 self.responseResult(response, success: {response in
                     if let dictionaryResponse = response as? Dictionary<String, AnyObject>{
@@ -664,7 +667,7 @@ extension APIManagerBase{
                               failure:@escaping DefaultAPIFailureClosure, withHeader:Bool){
         
         if withHeader{
-            Alamofire.request(route, method: .put, parameters: parameters, encoding: URLEncoding.default, headers: getAuthorizationHeader()).responseJSON{
+            Alamofire.request(route, method: .put, parameters: parameters, encoding: JSONEncoding.default, headers: getAuthorizationHeader()).responseJSON{
                 response in
                 self.responseResult(response, success: {response in
                     if let arrayResponse = response as? Array<AnyObject>{
@@ -678,7 +681,7 @@ extension APIManagerBase{
                 })
             }
         }else {
-            Alamofire.request(route, method: .put, parameters: parameters, encoding: URLEncoding.default).responseJSON{
+            Alamofire.request(route, method: .put, parameters: parameters, encoding: JSONEncoding.default).responseJSON{
                 response in
                 self.responseResult(response, success: {response in
                     if let arrayResponse = response as? Array<AnyObject>{

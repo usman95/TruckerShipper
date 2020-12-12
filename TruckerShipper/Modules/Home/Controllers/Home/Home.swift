@@ -145,8 +145,6 @@ extension Home{
         }
         let update = GMSCameraUpdate.fit(bounds, withPadding: CGFloat(160))
         self.mapView.animate(with: update)
-        
-        print("KM: \(getDistance() ?? "")")
     }
     private func getPathBounds()->[GMSMarker]?{
         if self.path.count() == 0{return nil}
@@ -218,7 +216,9 @@ extension Home{
         }
     }
     private func pushToLoadDetails(){
-        guard let locationAttribute = self.validate() else {return}
+        guard var locationAttribute = self.validate() else {return}
+        locationAttribute["totalDistance"] = self.getDistance() ?? 0
+        
         let controller = LoadDetails()
         controller.locationAttribute = locationAttribute
         self.navigationController?.pushViewController(controller, animated: true)
@@ -232,14 +232,14 @@ extension Home{
         
         var pickup = [String:Any]()
         let pickup_coordinates:[Double] = [Double(self.pickUpLocation?.latitude ?? 0.0),
-                                           Double(self.pickUpLocation?.longitude ?? 0.0),]
+                                           Double(self.pickUpLocation?.longitude ?? 0.0)]
         pickup["city"] = self.pickUpCity ?? ""
         pickup["address"] = self.lblPickUp.text ?? ""
         pickup["coordinates"] = pickup_coordinates
         
         var dropoff = [String:Any]()
         let dropoff_coordinates:[Double] = [Double(self.dropOffLocation?.latitude ?? 0.0),
-                                           Double(self.dropOffLocation?.longitude ?? 0.0),]
+                                           Double(self.dropOffLocation?.longitude ?? 0.0)]
         dropoff["city"] = self.dropOffCity ?? ""
         dropoff["address"] = self.lblDropOff.text ?? ""
         dropoff["coordinates"] = dropoff_coordinates
@@ -382,7 +382,7 @@ extension Home{
             self.fitAllMarkersBounds()
         }
     }
-    private func getDistance()->String?{
+    private func getDistance()->Int?{
         if self.path.count() == 0{return nil}
         var distance = 0.0
         let pathTaken = self.path.count()
@@ -397,7 +397,7 @@ extension Home{
                 point1 = point2
             }
         }
-        let distanceInKM = "\(distance/1000.0)"
+        let distanceInKM = Int(Double("\(distance/1000.0)") ?? 0.0)
         print(distanceInKM)
         return distanceInKM
     }
