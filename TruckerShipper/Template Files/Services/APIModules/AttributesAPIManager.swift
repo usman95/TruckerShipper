@@ -70,4 +70,10 @@ class AttributesAPIManager: APIManagerBase {
         let route: URL = URLforRoute(route: Route.CargoMode.rawValue, params: params)! as URL
         self.getArrayResponseWith(route: route, success: success, failure: failure, withHeader: false)
     }
+    //MARK:- TransportMode
+    func TransportMode(params: Parameters, success: @escaping DefaultAPISuccessClosure, failure: @escaping DefaultAPIFailureClosure){
+        Utility.showLoader()
+        let route: URL = URLforRoute(route: Route.TransportMode.rawValue, params: params)! as URL
+        self.getDictionaryResponseWith(route: route, success: success, failure: failure, withHeader: true)
+    }
 }

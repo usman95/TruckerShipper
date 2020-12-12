@@ -13,7 +13,7 @@ struct Global{
 
 struct Constants {
     //MARK:- Base URL
-    static let BaseURL                     = "http://13.212.49.143:3000"
+    static let BaseURL                     = "http://192.168.18.31:4040"//"http://13.212.49.143:3000"
     static let SocketBaseURL               = ""
     static let APP_DELEGATE                = UIApplication.shared.delegate as! AppDelegate
     static let UIWINDOW                    = UIApplication.shared.delegate!.window!
@@ -29,6 +29,7 @@ struct Constants {
     static var adminPhone                  = "123456"
     static let apiKey                      = "AIzaSyAUOz-7RsaYs_xNB8XAHlo1PNf866EhT_w"//"AIzaSyCJBDZYHuEOl08YzAOTkOPfq0TQ3mO0MgA"
     static var accessToken                 = ""
+    static var apiMessage                  = ""
     static var GoogleSignInClientID        = "821622832147-00elb5glohhc0njcl57bksf4b9kftomc.apps.googleusercontent.com"
     static var BugseeToken                 = "5e97ab5a-d533-443d-be90-5d4fea92b66e"
     static var iTunesURL                   = "http://itunes.apple.com/us/lookup?bundleId="

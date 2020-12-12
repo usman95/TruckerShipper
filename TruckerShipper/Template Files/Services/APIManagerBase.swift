@@ -24,6 +24,7 @@ enum Route: String {
     case ShippingLine = "/api/shipping-line"
     case Locations = "/api/location"
     case CargoMode = "/public/cargo-modes"
+    case TransportMode = "/api/transport-mode"
     
     //MARK:- ALL
     case ShipperContracts = "/api/shipper-contract"
@@ -73,6 +74,8 @@ extension APIManagerBase{
             
             if let status = dictData["success"] as? Bool{
                 if status{
+                    if let message = dictData["message"] as? String {Constants.apiMessage = message}
+                    
                     let result = dictData["data"] as AnyObject
                     success(result)
                     return

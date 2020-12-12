@@ -76,6 +76,9 @@ class LoadRequest: BaseController {
     var arrCargoType = [AttributeModel]()
     var selectedCargoType: AttributeModel?
     
+    var arrTransportMode = [AttributeModel]()
+    var selectedTransportMode: AttributeModel?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setData()
@@ -152,6 +155,7 @@ extension LoadRequest{
         self.getCommodity()
         self.getCargoMode()
         self.getCargoType()
+        self.getTransportMode()
     }
     private func setSelectedCities(){
         let pickUpCity = self.tfPickUpDetailsCity.text ?? ""
@@ -216,6 +220,11 @@ extension LoadRequest{
             self.tfBookingDetailsCommodity.text = self.selectedCommodity?.title ?? ""
         }
     }
+    private func setSelectedTransportMode(){
+        let modeOfTransport = self.loadDetails?["modeOfTransport"] as? String ?? ""
+        
+        self.selectedTransportMode = self.arrTransportMode.filter{$0.title?.lowercased() == modeOfTransport}.first
+    }
     private func validate()->[String:Any]?{
         if let loadDetails = self.loadDetails{
             
@@ -263,11 +272,13 @@ extension LoadRequest{
                 dropOff["coordinates"] = coordinates
             }
             
+            var params = [String:Any]()
+            
             let weight = loadDetails["weight"] as? Int ?? 0
             let sizeId = loadDetails["sizeId"] as? String ?? ""
             let commodityId =  loadDetails["commodityId"] as? String ?? ""
             let cargoTypeId = loadDetails["cargoTypeId"] as? String ?? ""
-            let transportModeId = loadDetails["modeOfTransport"] as? String ?? ""
+            let transportModeId = self.selectedTransportMode?.id ?? ""
             let route = self.selectedRoute ?? ""
             let bookingTypeId = self.selectedBookingType?.id ?? ""
             let quantityOfTrucks = loadDetails["quantityOfTrucks"] as? Int ?? 0
@@ -277,29 +288,33 @@ extension LoadRequest{
             let shippingLine = self.selectedShippingLine?.id ?? ""
             
             let comments = "\(self.tfBookingDetailsRemarks.text ?? "")"
-            let remark:[String:Any] = ["comments":comments]
-            let remarks = [remark]
+            if !comments.isEmpty{
+                let remark:[String:Any] = ["comments":comments]
+                let remarks = [remark]
+                params["remarks"] = remarks
+            }
             
             let totalDistance = loadDetails["totalDistance"] as? Int ?? 0
             let cargoMode = self.selectedCargoMode ?? ""
             
-            let params:[String:Any] = ["pickup":pickup,
-                                       "dropOff":dropOff,
-                                       "weight":weight,
-                                       "sizeId":sizeId,
-                                       "commodityId":commodityId,
-                                       "cargoTypeId":cargoTypeId,
-                                       "transportModeId":transportModeId,
-                                       "route":route,
-                                       "bookingTypeId":bookingTypeId,
-                                       "quantityOfTrucks":quantityOfTrucks,
-                                       "transitFreeDays":transitFreeDays,
-                                       "pickUpDate":pickUpDate,
-                                       "bookingDate":bookingDate,
-                                       "shippingLine":shippingLine,
-                                       "remarks":remarks,
-                                       "totalDistance":totalDistance,
-                                       "cargoMode":cargoMode]
+            params["pickup"] = pickup
+            params["dropOff"] = dropOff
+            params["weight"] = weight
+            params["sizeId"] = sizeId
+            params["commodityId"] = commodityId
+            params["cargoTypeId"] = cargoTypeId
+            params["transportModeId"] = transportModeId
+            params["route"] = route
+            params["bookingTypeId"] = bookingTypeId
+            params["quantityOfTrucks"] = quantityOfTrucks
+            params["transitFreeDays"] = transitFreeDays
+            params["pickUpDate"] = pickUpDate
+            params["bookingDate"] = bookingDate
+            params["shippingLine"] = shippingLine
+            
+            params["totalDistance"] = totalDistance
+            params["cargoMode"] = cargoMode
+            
             return params
         }
         else{
@@ -452,11 +467,29 @@ extension LoadRequest{
             print(error)
         }
     }
+    private func getTransportMode(){
+        let skip = "0"
+        let limit = "1000"
+        
+        let params:[String:Any] = ["skip":skip,
+                                   "limit":limit]
+        
+        APIManager.sharedInstance.attributesAPIManager.TransportMode(params: params, success: { (responseObject) in
+            let response = responseObject as Dictionary
+            guard let transportModes = response["transportModes"] as? [[String:Any]] else {return}
+            self.arrTransportMode = Mapper<AttributeModel>().mapArray(JSONArray: transportModes)
+            self.setSelectedTransportMode()
+        }) { (error) in
+            print(error)
+        }
+    }
     private func createBooking(){
         guard let params = self.validate() else {return}
         params.printJson()
         APIManager.sharedInstance.shipperAPIManager.Booking(params: params, success: { (responseObject) in
-            print(responseObject)
+            Utility.main.showAlert(message: Constants.apiMessage, title: Strings.CONFIRMATION.text) {
+                AppDelegate.shared.changeRootViewController()
+            }
         }) { (error) in
             print(error)
         }
