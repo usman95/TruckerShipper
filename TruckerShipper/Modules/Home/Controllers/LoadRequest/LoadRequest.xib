@@ -9,6 +9,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoadRequest" customModule="TruckerShipper" customModuleProvider="target">
             <connections>
+                <outlet property="btnEmptyPickUpLocation" destination="rWz-iW-mfp" id="uNP-3D-6Vb"/>
+                <outlet property="btnEmptyReturnLocation" destination="bmL-U5-Fi8" id="K6I-sS-1P2"/>
                 <outlet property="lblDropOffAddress" destination="F9s-Rd-lnB" id="aov-13-yZe"/>
                 <outlet property="lblDropOffCity" destination="cO7-pl-drm" id="jdM-51-SyT"/>
                 <outlet property="lblPickUpAddress" destination="vFz-md-6HN" id="vqZ-ld-8lI"/>
@@ -100,7 +102,7 @@
                     <rect key="frame" x="0.0" y="124" width="414" height="3342"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ogO-Mh-fFT">
-                            <rect key="frame" x="0.0" y="0.0" width="414" height="3000"/>
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="3126"/>
                             <subviews>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5zN-3F-F7c" customClass="CardView" customModule="TruckerShipper" customModuleProvider="target">
                                     <rect key="frame" x="24" y="16" width="366" height="142"/>
@@ -1883,8 +1885,20 @@
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5uS-mf-O0v">
                                                             <rect key="frame" x="0.0" y="41.5" width="366" height="56.5"/>
                                                             <subviews>
-                                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Select empty pickup location" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="exx-Bk-DQK" customClass="UITextFieldDeviceClass" customModule="TruckerShipper" customModuleProvider="target">
-                                                                    <rect key="frame" x="12" y="0.0" width="342" height="56.5"/>
+                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rWz-iW-mfp">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="32" height="56.5"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="width" constant="32" id="qCa-aa-ob1"/>
+                                                                    </constraints>
+                                                                    <color key="tintColor" red="0.0" green="0.27608564499999999" blue="0.62137049440000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    <state key="normal" image="checkmark.square" catalog="system"/>
+                                                                    <state key="selected" image="checkmark.square.fill" catalog="system"/>
+                                                                    <connections>
+                                                                        <action selector="onBtnEmptyPickUpLocation:" destination="-1" eventType="touchUpInside" id="HGD-Pc-CTc"/>
+                                                                    </connections>
+                                                                </button>
+                                                                <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Select empty pickup location" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="exx-Bk-DQK" customClass="UITextFieldDeviceClass" customModule="TruckerShipper" customModuleProvider="target">
+                                                                    <rect key="frame" x="44" y="0.0" width="284" height="56.5"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                     <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                                                     <userDefinedRuntimeAttributes>
@@ -1897,12 +1911,30 @@
                                                                         <userDefinedRuntimeAttribute type="string" keyPath="iPhoneFontWeight" value="medium"/>
                                                                     </userDefinedRuntimeAttributes>
                                                                 </textField>
+                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="255" verticalHuggingPriority="251" horizontalCompressionResistancePriority="755" image="dropDownBlack" translatesAutoresizingMaskIntoConstraints="NO" id="Zp2-2b-6IS">
+                                                                    <rect key="frame" x="336" y="23" width="10" height="10"/>
+                                                                </imageView>
+                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SZn-NI-LeZ">
+                                                                    <rect key="frame" x="44" y="0.0" width="322" height="56.5"/>
+                                                                    <connections>
+                                                                        <action selector="onBtnEmptyPickUpLocationDropDown:" destination="-1" eventType="touchUpInside" id="C0I-LH-8VZ"/>
+                                                                    </connections>
+                                                                </button>
                                                             </subviews>
                                                             <constraints>
-                                                                <constraint firstItem="exx-Bk-DQK" firstAttribute="leading" secondItem="5uS-mf-O0v" secondAttribute="leading" constant="12" id="4VG-Nf-Atj"/>
+                                                                <constraint firstItem="rWz-iW-mfp" firstAttribute="leading" secondItem="5uS-mf-O0v" secondAttribute="leading" id="1p4-rl-BR0"/>
+                                                                <constraint firstItem="Zp2-2b-6IS" firstAttribute="leading" secondItem="exx-Bk-DQK" secondAttribute="trailing" constant="8" id="BKW-au-DXy"/>
+                                                                <constraint firstAttribute="trailing" secondItem="SZn-NI-LeZ" secondAttribute="trailing" id="FzS-l8-xs5"/>
+                                                                <constraint firstAttribute="bottom" secondItem="SZn-NI-LeZ" secondAttribute="bottom" id="GRK-Nm-t5e"/>
+                                                                <constraint firstItem="exx-Bk-DQK" firstAttribute="leading" secondItem="rWz-iW-mfp" secondAttribute="trailing" constant="12" id="H2d-Eg-Wfi"/>
                                                                 <constraint firstAttribute="bottom" secondItem="exx-Bk-DQK" secondAttribute="bottom" id="J3L-qj-6Kv"/>
+                                                                <constraint firstAttribute="bottom" secondItem="rWz-iW-mfp" secondAttribute="bottom" id="N1G-ik-ON4"/>
+                                                                <constraint firstItem="Zp2-2b-6IS" firstAttribute="centerY" secondItem="5uS-mf-O0v" secondAttribute="centerY" id="O5g-kt-5HS"/>
                                                                 <constraint firstItem="exx-Bk-DQK" firstAttribute="top" secondItem="5uS-mf-O0v" secondAttribute="top" id="OGf-oM-XKM"/>
-                                                                <constraint firstAttribute="trailing" secondItem="exx-Bk-DQK" secondAttribute="trailing" constant="12" id="PhT-ta-7M7"/>
+                                                                <constraint firstAttribute="trailing" secondItem="Zp2-2b-6IS" secondAttribute="trailing" constant="20" id="Wtd-cX-HWT"/>
+                                                                <constraint firstItem="SZn-NI-LeZ" firstAttribute="top" secondItem="5uS-mf-O0v" secondAttribute="top" id="ckB-Jf-oLJ"/>
+                                                                <constraint firstItem="rWz-iW-mfp" firstAttribute="top" secondItem="5uS-mf-O0v" secondAttribute="top" id="sbH-jQ-lgp"/>
+                                                                <constraint firstItem="SZn-NI-LeZ" firstAttribute="leading" secondItem="exx-Bk-DQK" secondAttribute="leading" id="yBt-Zv-CtD"/>
                                                             </constraints>
                                                             <userDefinedRuntimeAttributes>
                                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -1945,8 +1977,20 @@
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aDb-Se-cUm">
                                                             <rect key="frame" x="0.0" y="41.5" width="366" height="56.5"/>
                                                             <subviews>
-                                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Select empty return location" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0Hu-Hl-iKB" customClass="UITextFieldDeviceClass" customModule="TruckerShipper" customModuleProvider="target">
-                                                                    <rect key="frame" x="12" y="0.0" width="342" height="56.5"/>
+                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bmL-U5-Fi8">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="32" height="56.5"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="width" constant="32" id="UiV-VZ-wHm"/>
+                                                                    </constraints>
+                                                                    <color key="tintColor" red="0.0" green="0.27608564499999999" blue="0.62137049440000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    <state key="normal" image="checkmark.square" catalog="system"/>
+                                                                    <state key="selected" image="checkmark.square.fill" catalog="system"/>
+                                                                    <connections>
+                                                                        <action selector="onBtnEmptyReturnLocation:" destination="-1" eventType="touchUpInside" id="31m-bu-b5t"/>
+                                                                    </connections>
+                                                                </button>
+                                                                <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Select empty return location" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0Hu-Hl-iKB" customClass="UITextFieldDeviceClass" customModule="TruckerShipper" customModuleProvider="target">
+                                                                    <rect key="frame" x="44" y="0.0" width="284" height="56.5"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                     <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                                                     <userDefinedRuntimeAttributes>
@@ -1959,12 +2003,30 @@
                                                                         <userDefinedRuntimeAttribute type="string" keyPath="iPhoneFontWeight" value="medium"/>
                                                                     </userDefinedRuntimeAttributes>
                                                                 </textField>
+                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="255" verticalHuggingPriority="251" horizontalCompressionResistancePriority="755" image="dropDownBlack" translatesAutoresizingMaskIntoConstraints="NO" id="KUA-yf-kh5">
+                                                                    <rect key="frame" x="336" y="23" width="10" height="10"/>
+                                                                </imageView>
+                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tsu-1R-RYS">
+                                                                    <rect key="frame" x="44" y="0.0" width="322" height="56.5"/>
+                                                                    <connections>
+                                                                        <action selector="onBtnEmptyReturnLocationDropDown:" destination="-1" eventType="touchUpInside" id="VwL-HT-Unn"/>
+                                                                    </connections>
+                                                                </button>
                                                             </subviews>
                                                             <constraints>
                                                                 <constraint firstAttribute="bottom" secondItem="0Hu-Hl-iKB" secondAttribute="bottom" id="3AJ-lw-eyg"/>
-                                                                <constraint firstAttribute="trailing" secondItem="0Hu-Hl-iKB" secondAttribute="trailing" constant="12" id="3eP-hv-2Gs"/>
+                                                                <constraint firstItem="KUA-yf-kh5" firstAttribute="centerY" secondItem="aDb-Se-cUm" secondAttribute="centerY" id="EWp-2Z-nVA"/>
+                                                                <constraint firstItem="tsu-1R-RYS" firstAttribute="leading" secondItem="0Hu-Hl-iKB" secondAttribute="leading" id="FXJ-ds-0DN"/>
                                                                 <constraint firstItem="0Hu-Hl-iKB" firstAttribute="top" secondItem="aDb-Se-cUm" secondAttribute="top" id="Pn3-aI-sAq"/>
-                                                                <constraint firstItem="0Hu-Hl-iKB" firstAttribute="leading" secondItem="aDb-Se-cUm" secondAttribute="leading" constant="12" id="e2z-Xy-99y"/>
+                                                                <constraint firstItem="bmL-U5-Fi8" firstAttribute="leading" secondItem="aDb-Se-cUm" secondAttribute="leading" id="Qyd-ro-YE1"/>
+                                                                <constraint firstItem="KUA-yf-kh5" firstAttribute="leading" secondItem="0Hu-Hl-iKB" secondAttribute="trailing" constant="8" id="ZSC-DJ-3HX"/>
+                                                                <constraint firstItem="bmL-U5-Fi8" firstAttribute="top" secondItem="aDb-Se-cUm" secondAttribute="top" id="dQV-GQ-2pM"/>
+                                                                <constraint firstAttribute="bottom" secondItem="bmL-U5-Fi8" secondAttribute="bottom" id="izg-ZU-Dts"/>
+                                                                <constraint firstAttribute="bottom" secondItem="tsu-1R-RYS" secondAttribute="bottom" id="luf-FF-5xj"/>
+                                                                <constraint firstItem="0Hu-Hl-iKB" firstAttribute="leading" secondItem="bmL-U5-Fi8" secondAttribute="trailing" constant="12" id="sRu-Yg-j0p"/>
+                                                                <constraint firstItem="tsu-1R-RYS" firstAttribute="top" secondItem="aDb-Se-cUm" secondAttribute="top" id="u1n-7o-jzo"/>
+                                                                <constraint firstAttribute="trailing" secondItem="KUA-yf-kh5" secondAttribute="trailing" constant="20" id="uHI-b8-gXS"/>
+                                                                <constraint firstAttribute="trailing" secondItem="tsu-1R-RYS" secondAttribute="trailing" id="ueM-M9-v6i"/>
                                                             </constraints>
                                                             <userDefinedRuntimeAttributes>
                                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -2056,26 +2118,50 @@
                                         </view>
                                     </subviews>
                                 </stackView>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="32x-1t-icd" customClass="UIButtonDeviceClass" customModule="TruckerShipper" customModuleProvider="target">
+                                    <rect key="frame" x="32" y="3026.5" width="350" height="51.5"/>
+                                    <color key="backgroundColor" red="0.0" green="0.2802670002" blue="0.61960784310000006" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" secondItem="32x-1t-icd" secondAttribute="height" multiplier="61:9" id="1Nc-Dj-Qve"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                    <state key="normal" title="CREATE BOOKING">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="boolean" keyPath="isCircular" value="YES"/>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="iPhoneFontSize">
+                                            <real key="value" value="16"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="iPhoneFontWeight" value="bold"/>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="onBtnCreateBooking:" destination="-1" eventType="touchUpInside" id="74f-Le-6AX"/>
+                                    </connections>
+                                </button>
                             </subviews>
                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             <constraints>
+                                <constraint firstItem="32x-1t-icd" firstAttribute="top" secondItem="nVL-TD-p5Y" secondAttribute="bottom" constant="32" id="2F6-yw-Moc"/>
                                 <constraint firstAttribute="trailing" secondItem="5zN-3F-F7c" secondAttribute="trailing" constant="24" id="6Y8-8h-QCu"/>
                                 <constraint firstAttribute="trailing" secondItem="nVL-TD-p5Y" secondAttribute="trailing" constant="24" id="6zr-tw-PIB"/>
                                 <constraint firstItem="ntJ-aX-HXD" firstAttribute="leading" secondItem="ogO-Mh-fFT" secondAttribute="leading" constant="24" id="Chf-Ak-PBB"/>
                                 <constraint firstItem="nVL-TD-p5Y" firstAttribute="leading" secondItem="ogO-Mh-fFT" secondAttribute="leading" constant="24" id="EkD-Zn-XF5"/>
                                 <constraint firstItem="LDg-3h-qaH" firstAttribute="leading" secondItem="ogO-Mh-fFT" secondAttribute="leading" constant="24" id="Fc0-Rx-4BZ"/>
+                                <constraint firstAttribute="trailing" secondItem="32x-1t-icd" secondAttribute="trailing" constant="32" id="Gku-xc-Sgi"/>
                                 <constraint firstItem="Tfa-Gz-eyB" firstAttribute="leading" secondItem="5zN-3F-F7c" secondAttribute="leading" id="JNU-kM-PJ4"/>
                                 <constraint firstItem="LDg-3h-qaH" firstAttribute="top" secondItem="Tfa-Gz-eyB" secondAttribute="bottom" constant="12" id="Je1-KA-K1J"/>
+                                <constraint firstItem="32x-1t-icd" firstAttribute="leading" secondItem="ogO-Mh-fFT" secondAttribute="leading" constant="32" id="KlB-E5-5QG"/>
                                 <constraint firstAttribute="trailing" secondItem="ntJ-aX-HXD" secondAttribute="trailing" constant="24" id="OHb-VG-tb7"/>
                                 <constraint firstItem="ntJ-aX-HXD" firstAttribute="top" secondItem="x28-RT-GKv" secondAttribute="bottom" constant="12" id="R2R-Uh-Ofz"/>
                                 <constraint firstAttribute="trailing" secondItem="LDg-3h-qaH" secondAttribute="trailing" constant="24" id="S8d-5J-hhR"/>
                                 <constraint firstItem="tib-Fc-czZ" firstAttribute="leading" secondItem="ntJ-aX-HXD" secondAttribute="leading" id="T91-8c-Pql"/>
                                 <constraint firstItem="nVL-TD-p5Y" firstAttribute="top" secondItem="tib-Fc-czZ" secondAttribute="bottom" constant="12" id="TiU-fZ-WWR"/>
                                 <constraint firstItem="5zN-3F-F7c" firstAttribute="leading" secondItem="ogO-Mh-fFT" secondAttribute="leading" constant="24" id="Umg-wA-Xpe"/>
+                                <constraint firstAttribute="bottom" secondItem="32x-1t-icd" secondAttribute="bottom" constant="48" id="VBR-Wh-LNH"/>
                                 <constraint firstItem="x28-RT-GKv" firstAttribute="top" secondItem="LDg-3h-qaH" secondAttribute="bottom" constant="20" id="kbn-sf-IJx"/>
                                 <constraint firstItem="x28-RT-GKv" firstAttribute="leading" secondItem="LDg-3h-qaH" secondAttribute="leading" id="mvV-3u-adW"/>
                                 <constraint firstItem="Tfa-Gz-eyB" firstAttribute="top" secondItem="5zN-3F-F7c" secondAttribute="bottom" constant="20" id="oi0-ov-WFr"/>
-                                <constraint firstAttribute="height" constant="3000" id="pgo-NV-TaC"/>
                                 <constraint firstItem="tib-Fc-czZ" firstAttribute="top" secondItem="ntJ-aX-HXD" secondAttribute="bottom" constant="20" id="s8y-PA-JSQ"/>
                                 <constraint firstItem="5zN-3F-F7c" firstAttribute="top" secondItem="ogO-Mh-fFT" secondAttribute="top" constant="16" id="zMF-xd-3aW"/>
                             </constraints>
@@ -2117,6 +2203,8 @@
         <image name="NavBar" width="375" height="95"/>
         <image name="PickUpPin" width="42" height="40"/>
         <image name="RouteLine" width="17" height="69"/>
+        <image name="checkmark.square" catalog="system" width="128" height="114"/>
+        <image name="checkmark.square.fill" catalog="system" width="128" height="114"/>
         <image name="dropDownBlack" width="10" height="10"/>
     </resources>
 </document>

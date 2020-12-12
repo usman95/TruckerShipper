@@ -52,4 +52,10 @@ class AttributesAPIManager: APIManagerBase {
         let route: URL = URLforRoute(route: Route.ShippingLine.rawValue, params: params)! as URL
         self.getDictionaryResponseWith(route: route, success: success, failure: failure, withHeader: true)
     }
+    //MARK:- Locations
+    func Locations(params: Parameters, success: @escaping DefaultAPISuccessClosure, failure: @escaping DefaultAPIFailureClosure){
+        Utility.showLoader()
+        let route: URL = URLforRoute(route: Route.Locations.rawValue, params: params)! as URL
+        self.getDictionaryResponseWith(route: route, success: success, failure: failure, withHeader: true)
+    }
 }

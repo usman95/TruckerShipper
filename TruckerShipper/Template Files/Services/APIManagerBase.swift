@@ -22,7 +22,7 @@ enum Route: String {
     case Routes = "/public/booking-routes"
     case BookingType = "/api/booking-type"
     case ShippingLine = "/api/shipping-line"
-    
+    case Locations = "/api/location"
     //MARK:- ALL
     case ShipperContracts = "/api/shipper-contract"
     case BookingEstimate = "/api/booking-estimate"
