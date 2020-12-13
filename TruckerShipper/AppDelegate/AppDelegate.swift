@@ -45,7 +45,7 @@ extension AppDelegate{
         UIApplication.shared.windows.first?.makeKeyAndVisible()
     }
     private func showHome(){
-        let controller = Home()
+        let controller = Dashboard()
         let menuController = SideMenu()
         let navController = UINavigationController(rootViewController: controller)
         

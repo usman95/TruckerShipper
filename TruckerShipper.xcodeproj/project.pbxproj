@@ -104,6 +104,12 @@
 		FAEDA20B2586607C00AD777F /* BookingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEDA1FF2586607B00AD777F /* BookingModel.swift */; };
 		FAEDA20C2586607C00AD777F /* PickupModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEDA2002586607B00AD777F /* PickupModel.swift */; };
 		FAEDA2132586607C00AD777F /* RemarksModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEDA2072586607C00AD777F /* RemarksModel.swift */; };
+		FAEDA21825866DFD00AD777F /* Dashboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEDA21625866DFD00AD777F /* Dashboard.swift */; };
+		FAEDA21925866DFD00AD777F /* Dashboard.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAEDA21725866DFD00AD777F /* Dashboard.xib */; };
+		FAEDA21C258672A900AD777F /* DashboardHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAEDA21B258672A900AD777F /* DashboardHeader.xib */; };
+		FAEDA21E258672BC00AD777F /* DashboardHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEDA21D258672BC00AD777F /* DashboardHeader.swift */; };
+		FAEDA2222586937000AD777F /* RequestTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEDA2202586937000AD777F /* RequestTVC.swift */; };
+		FAEDA2232586937000AD777F /* RequestTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAEDA2212586937000AD777F /* RequestTVC.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -208,6 +214,12 @@
 		FAEDA1FF2586607B00AD777F /* BookingModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookingModel.swift; sourceTree = "<group>"; };
 		FAEDA2002586607B00AD777F /* PickupModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickupModel.swift; sourceTree = "<group>"; };
 		FAEDA2072586607C00AD777F /* RemarksModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemarksModel.swift; sourceTree = "<group>"; };
+		FAEDA21625866DFD00AD777F /* Dashboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dashboard.swift; sourceTree = "<group>"; };
+		FAEDA21725866DFD00AD777F /* Dashboard.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Dashboard.xib; sourceTree = "<group>"; };
+		FAEDA21B258672A900AD777F /* DashboardHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DashboardHeader.xib; sourceTree = "<group>"; };
+		FAEDA21D258672BC00AD777F /* DashboardHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardHeader.swift; sourceTree = "<group>"; };
+		FAEDA2202586937000AD777F /* RequestTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestTVC.swift; sourceTree = "<group>"; };
+		FAEDA2212586937000AD777F /* RequestTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RequestTVC.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -549,6 +561,7 @@
 			isa = PBXGroup;
 			children = (
 				FA37EA8E25740EAD0073CF0C /* SideMenu */,
+				FAEDA21525866D6C00AD777F /* Dashboard */,
 				FA37EA7E25740EAD0073CF0C /* Home */,
 				FA20008F25839AF500E14D36 /* LoadDetails */,
 				FA2000942583BB4F00E14D36 /* CalculatedRate */,
@@ -769,6 +782,35 @@
 			path = BookingModel;
 			sourceTree = "<group>";
 		};
+		FAEDA21525866D6C00AD777F /* Dashboard */ = {
+			isa = PBXGroup;
+			children = (
+				FAEDA21F2586933000AD777F /* RequestTVC */,
+				FAEDA21A2586719600AD777F /* DashboardHeader */,
+				FAEDA21625866DFD00AD777F /* Dashboard.swift */,
+				FAEDA21725866DFD00AD777F /* Dashboard.xib */,
+			);
+			path = Dashboard;
+			sourceTree = "<group>";
+		};
+		FAEDA21A2586719600AD777F /* DashboardHeader */ = {
+			isa = PBXGroup;
+			children = (
+				FAEDA21B258672A900AD777F /* DashboardHeader.xib */,
+				FAEDA21D258672BC00AD777F /* DashboardHeader.swift */,
+			);
+			path = DashboardHeader;
+			sourceTree = "<group>";
+		};
+		FAEDA21F2586933000AD777F /* RequestTVC */ = {
+			isa = PBXGroup;
+			children = (
+				FAEDA2202586937000AD777F /* RequestTVC.swift */,
+				FAEDA2212586937000AD777F /* RequestTVC.xib */,
+			);
+			path = RequestTVC;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -843,8 +885,11 @@
 				FA37EAA425740EAD0073CF0C /* TripExpensesTVC.xib in Resources */,
 				FA37EA072574099D0073CF0C /* LaunchScreen.storyboard in Resources */,
 				FA37EAAC25740EAD0073CF0C /* Notifications.xib in Resources */,
+				FAEDA21C258672A900AD777F /* DashboardHeader.xib in Resources */,
+				FAEDA2232586937000AD777F /* RequestTVC.xib in Resources */,
 				FA37EAB8257429350073CF0C /* ForgotPassword.xib in Resources */,
 				FA37EAA725740EAD0073CF0C /* TripExpensesHeader.xib in Resources */,
+				FAEDA21925866DFD00AD777F /* Dashboard.xib in Resources */,
 				FA2000982583BB6800E14D36 /* CalculatedRate.xib in Resources */,
 				FA37EAA525740EAD0073CF0C /* TripExpenseDetailTVC.xib in Resources */,
 				FA37EABC257432E10073CF0C /* SignUp.xib in Resources */,
@@ -935,6 +980,7 @@
 				FA37EA6B25740E4C0073CF0C /* BaseController.swift in Sources */,
 				FA37EA5F25740E4C0073CF0C /* UIView+Extention.swift in Sources */,
 				FACF6A762585A14E004D2C16 /* Bookings.swift in Sources */,
+				FAEDA21E258672BC00AD777F /* DashboardHeader.swift in Sources */,
 				FAEDA20B2586607C00AD777F /* BookingModel.swift in Sources */,
 				FA37EA5925740E4C0073CF0C /* Constants.swift in Sources */,
 				FA37EA6125740E4C0073CF0C /* UIButton+Extension.swift in Sources */,
@@ -959,6 +1005,7 @@
 				FA37EA5025740E4C0073CF0C /* Strings.swift in Sources */,
 				FA37EAA825740EAD0073CF0C /* TripExpensesHeader.swift in Sources */,
 				FA37EA5325740E4C0073CF0C /* MOLH.swift in Sources */,
+				FAEDA2222586937000AD777F /* RequestTVC.swift in Sources */,
 				FA37EA6725740E4C0073CF0C /* UITextField+Extension.swift in Sources */,
 				FA37EA6025740E4C0073CF0C /* UILabel+Extension.swift in Sources */,
 				FABB36A42580B4870084BCCA /* ShipperApiManager.swift in Sources */,
@@ -983,6 +1030,7 @@
 				FA37EAA625740EAD0073CF0C /* TripExpenseDetailTVC.swift in Sources */,
 				FA37EA7A25740E4C0073CF0C /* AppStateManager.swift in Sources */,
 				FA37EA5125740E4C0073CF0C /* DynamicFonts.swift in Sources */,
+				FAEDA21825866DFD00AD777F /* Dashboard.swift in Sources */,
 				FA37EA5525740E4C0073CF0C /* MOLHFontLocalizableViews.swift in Sources */,
 				FA37EA5A25740E4C0073CF0C /* Enums.swift in Sources */,
 				FA37E9FB2574099A0073CF0C /* AppDelegate.swift in Sources */,

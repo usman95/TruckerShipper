@@ -328,14 +328,14 @@
                     <rect key="frame" x="0.0" y="44" width="375" height="80"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t0M-q6-dGw">
-                            <rect key="frame" x="20" y="25" width="31" height="30"/>
-                            <state key="normal" image="SideMenu"/>
+                            <rect key="frame" x="20" y="24" width="32" height="32"/>
+                            <state key="normal" image="Back"/>
                             <connections>
-                                <action selector="onBtnSideMenu:" destination="-1" eventType="touchUpInside" id="ogV-ud-3U7"/>
+                                <action selector="onBtnBack:" destination="-1" eventType="touchUpInside" id="dNS-Ky-agv"/>
                             </connections>
                         </button>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BOOKING" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I72-37-0A2" customClass="UILabelDeviceClass" customModule="TruckerShipper" customModuleProvider="target">
-                            <rect key="frame" x="63" y="27" width="96" height="26"/>
+                            <rect key="frame" x="64" y="27" width="96" height="26"/>
                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="21"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
@@ -386,11 +386,11 @@
         </view>
     </objects>
     <resources>
+        <image name="Back" width="32" height="32"/>
         <image name="DropOffPin" width="84" height="80"/>
         <image name="NavBar" width="375" height="95"/>
         <image name="PickUpPin" width="42" height="40"/>
         <image name="RouteLine" width="17" height="69"/>
-        <image name="SideMenu" width="31" height="30"/>
         <image name="myLocationButton" width="81" height="79"/>
         <image name="tick" width="20" height="19"/>
     </resources>
