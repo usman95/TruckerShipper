@@ -497,7 +497,7 @@ class UIButtonStatesDeviceClass : UIButton {
         }
         else{
             self.backgroundColor = .clear
-            self.setTitleColor(Global.APP_COLOR, for: .normal)
+            self.setTitleColor(Global.APP_COLOR_DARK_GREY, for: .normal)
         }
     }
     

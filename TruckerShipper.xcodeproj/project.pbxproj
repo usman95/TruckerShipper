@@ -110,6 +110,8 @@
 		FAEDA21E258672BC00AD777F /* DashboardHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEDA21D258672BC00AD777F /* DashboardHeader.swift */; };
 		FAEDA22625869B8A00AD777F /* TitleHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAEDA22525869B8A00AD777F /* TitleHeader.xib */; };
 		FAEDA22825869B9600AD777F /* TitleHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEDA22725869B9600AD777F /* TitleHeader.swift */; };
+		FAEDA22C2586AF9600AD777F /* BookingsTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEDA22A2586AF9600AD777F /* BookingsTVC.swift */; };
+		FAEDA22D2586AF9600AD777F /* BookingsTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAEDA22B2586AF9600AD777F /* BookingsTVC.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -220,6 +222,8 @@
 		FAEDA21D258672BC00AD777F /* DashboardHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardHeader.swift; sourceTree = "<group>"; };
 		FAEDA22525869B8A00AD777F /* TitleHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TitleHeader.xib; sourceTree = "<group>"; };
 		FAEDA22725869B9600AD777F /* TitleHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleHeader.swift; sourceTree = "<group>"; };
+		FAEDA22A2586AF9600AD777F /* BookingsTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingsTVC.swift; sourceTree = "<group>"; };
+		FAEDA22B2586AF9600AD777F /* BookingsTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookingsTVC.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -748,6 +752,7 @@
 		FACF6A732585A0D2004D2C16 /* Bookings */ = {
 			isa = PBXGroup;
 			children = (
+				FAEDA2292586AF7D00AD777F /* BookingsTVC */,
 				FACF6A742585A14E004D2C16 /* Bookings.swift */,
 				FACF6A752585A14E004D2C16 /* Bookings.xib */,
 			);
@@ -809,6 +814,15 @@
 				FAEDA22725869B9600AD777F /* TitleHeader.swift */,
 			);
 			path = TitleHeader;
+			sourceTree = "<group>";
+		};
+		FAEDA2292586AF7D00AD777F /* BookingsTVC */ = {
+			isa = PBXGroup;
+			children = (
+				FAEDA22A2586AF9600AD777F /* BookingsTVC.swift */,
+				FAEDA22B2586AF9600AD777F /* BookingsTVC.xib */,
+			);
+			path = BookingsTVC;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -900,6 +914,7 @@
 				FACF6A772585A14E004D2C16 /* Bookings.xib in Resources */,
 				FA37EAAF25740EAE0073CF0C /* Login.strings in Resources */,
 				FA37EA042574099D0073CF0C /* Assets.xcassets in Resources */,
+				FAEDA22D2586AF9600AD777F /* BookingsTVC.xib in Resources */,
 				FA5225AD25802E6200C4FFD0 /* MyContractsTVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1001,6 +1016,7 @@
 				FA37EAA125740EAD0073CF0C /* TripExpenses.swift in Sources */,
 				FA6B42412578F97500C6D106 /* AttributeModel.swift in Sources */,
 				FA6B424B25791ABE00C6D106 /* CreatedByModel.swift in Sources */,
+				FAEDA22C2586AF9600AD777F /* BookingsTVC.swift in Sources */,
 				FA37EAA325740EAD0073CF0C /* TripExpensesTVC.swift in Sources */,
 				FA37EA5025740E4C0073CF0C /* Strings.swift in Sources */,
 				FA37EAA825740EAD0073CF0C /* TripExpensesHeader.swift in Sources */,

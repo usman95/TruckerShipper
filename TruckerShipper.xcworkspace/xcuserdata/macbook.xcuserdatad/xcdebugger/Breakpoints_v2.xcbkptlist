@@ -71,16 +71,32 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "65412F57-061B-45C4-B5A7-1B1AA145305C"
+            uuid = "23BE2B58-75A0-4175-A4CC-A009307F5566"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "TruckerShipper/Modules/Login/Controllers/Login/Login.swift"
+            filePath = "TruckerShipper/Modules/Home/Controllers/Home/Home.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "67"
-            endingLineNumber = "67"
-            landmarkName = "login()"
+            startingLineNumber = "367"
+            endingLineNumber = "367"
+            landmarkName = "getRoute()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D2334D27-D94B-47B1-BE25-13E885804BE3"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TruckerShipper/Modules/Home/Controllers/Home/Home.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "378"
+            endingLineNumber = "378"
+            landmarkName = "drawRoute(routesArray:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

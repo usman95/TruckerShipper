@@ -59,7 +59,7 @@ class Bookings: BaseController {
 //MARK:- Helper methods
 extension Bookings{
     private func registerCells(){
-        self.tableView.register(UINib(nibName: "MyContractsTVC", bundle: nil), forCellReuseIdentifier: "MyContractsTVC")
+        self.tableView.register(UINib(nibName: "BookingsTVC", bundle: nil), forCellReuseIdentifier: "BookingsTVC")
     }
 }
 //MARK:- UITableViewDataSource
@@ -68,7 +68,9 @@ extension Bookings: UITableViewDataSource{
         return self.arrBookings.count
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "MyContractsTVC", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "BookingsTVC", for: indexPath) as! BookingsTVC
+        let data = self.arrBookings[indexPath.row]
+        cell.setData(data: data)
         return cell
     }
 }
@@ -77,7 +79,7 @@ extension Bookings{
     private func getBookings(){
         let skip = self.recordsToSkip
         let limit = Constants.PAGINATION_PAGE_SIZE
-        let status = self.bookingType.rawValue
+//        let status = self.bookingType.rawValue
         
         let params:[String:Any] = ["skip":skip,
                                    "limit":limit]

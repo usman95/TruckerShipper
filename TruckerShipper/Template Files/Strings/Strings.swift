@@ -84,4 +84,6 @@ enum Strings: String{
     case BY_TRUCK = "By Truck"
     case BY_TRAIN = "By Train"
     case KARACHI = "Karachi"
+    case KM = "KM"
+    case HOURS = "HOURS"
 }

@@ -68,10 +68,13 @@
                     </constraints>
                 </view>
                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="WaD-yU-sRj">
-                    <rect key="frame" x="32" y="144" width="350" height="30"/>
+                    <rect key="frame" x="20" y="144" width="374" height="42"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x3t-08-VDU" customClass="UIButtonStatesDeviceClass" customModule="TruckerShipper" customModuleProvider="target">
-                            <rect key="frame" x="0.0" y="0.0" width="116.5" height="30"/>
+                            <rect key="frame" x="0.0" y="0.0" width="124.5" height="42"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="x3t-08-VDU" secondAttribute="height" multiplier="62:21" id="rr6-Li-0UF"/>
+                            </constraints>
                             <state key="normal" title="Pending"/>
                             <state key="selected" title="Pending"/>
                             <userDefinedRuntimeAttributes>
@@ -86,7 +89,7 @@
                             </connections>
                         </button>
                         <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5c5-4z-he8" customClass="UIButtonStatesDeviceClass" customModule="TruckerShipper" customModuleProvider="target">
-                            <rect key="frame" x="116.5" y="0.0" width="117" height="30"/>
+                            <rect key="frame" x="124.5" y="0.0" width="125" height="42"/>
                             <state key="normal" title="In Progress"/>
                             <state key="selected" title="In Progress"/>
                             <userDefinedRuntimeAttributes>
@@ -101,7 +104,7 @@
                             </connections>
                         </button>
                         <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Ny-Oy-1Ao" customClass="UIButtonStatesDeviceClass" customModule="TruckerShipper" customModuleProvider="target">
-                            <rect key="frame" x="233.5" y="0.0" width="116.5" height="30"/>
+                            <rect key="frame" x="249.5" y="0.0" width="124.5" height="42"/>
                             <state key="normal" title="Completed"/>
                             <state key="selected" title="Completed"/>
                             <userDefinedRuntimeAttributes>
@@ -118,7 +121,7 @@
                     </subviews>
                 </stackView>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="jYM-2a-JKJ">
-                    <rect key="frame" x="0.0" y="186" width="414" height="676"/>
+                    <rect key="frame" x="0.0" y="190" width="414" height="672"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                     <connections>
                         <outlet property="dataSource" destination="-1" id="jJE-8O-Mry"/>
@@ -128,8 +131,8 @@
             </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
             <constraints>
-                <constraint firstItem="WaD-yU-sRj" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="32" id="6qX-O1-ui1"/>
-                <constraint firstItem="jYM-2a-JKJ" firstAttribute="top" secondItem="WaD-yU-sRj" secondAttribute="bottom" constant="12" id="8c6-yv-TsG"/>
+                <constraint firstItem="WaD-yU-sRj" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="6qX-O1-ui1"/>
+                <constraint firstItem="jYM-2a-JKJ" firstAttribute="top" secondItem="WaD-yU-sRj" secondAttribute="bottom" constant="4" id="8c6-yv-TsG"/>
                 <constraint firstItem="fcv-b1-OfP" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="IfI-1C-DVK"/>
                 <constraint firstItem="WaD-yU-sRj" firstAttribute="top" secondItem="L0M-MZ-ubz" secondAttribute="bottom" constant="20" id="NHq-zJ-nur"/>
                 <constraint firstItem="L0M-MZ-ubz" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="S1z-9L-7IM"/>
@@ -138,7 +141,7 @@
                 <constraint firstItem="fcv-b1-OfP" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="fNQ-8d-DVs"/>
                 <constraint firstItem="L0M-MZ-ubz" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="iSQ-31-hOI"/>
                 <constraint firstItem="jYM-2a-JKJ" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="icT-2v-NUi"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="WaD-yU-sRj" secondAttribute="trailing" constant="32" id="meg-hm-Dql"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="WaD-yU-sRj" secondAttribute="trailing" constant="20" id="meg-hm-Dql"/>
                 <constraint firstItem="L0M-MZ-ubz" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="p7f-Bo-i63"/>
                 <constraint firstItem="jYM-2a-JKJ" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="rTm-iR-Lj8"/>
                 <constraint firstItem="fcv-b1-OfP" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="vbE-C8-6ko"/>
