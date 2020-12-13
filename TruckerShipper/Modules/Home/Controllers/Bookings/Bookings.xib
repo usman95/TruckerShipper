@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="Bookings" customModule="TruckerShipper" customModuleProvider="target">
+            <connections>
+                <outlet property="btnCompleted" destination="0Ny-Oy-1Ao" id="Nns-W4-csc"/>
+                <outlet property="btnInProgress" destination="5c5-4z-he8" id="cPF-yb-ZlZ"/>
+                <outlet property="btnPending" destination="x3t-08-VDU" id="LQP-qF-p11"/>
+                <outlet property="tableView" destination="jYM-2a-JKJ" id="7Qy-Bz-K6b"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L0M-MZ-ubz">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="124"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="NavBar" translatesAutoresizingMaskIntoConstraints="NO" id="AgF-gg-07o">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="124"/>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="AgF-gg-07o" secondAttribute="bottom" id="Pdn-f1-Pob"/>
+                        <constraint firstItem="AgF-gg-07o" firstAttribute="top" secondItem="L0M-MZ-ubz" secondAttribute="top" id="UvO-yB-6tr"/>
+                        <constraint firstItem="AgF-gg-07o" firstAttribute="leading" secondItem="L0M-MZ-ubz" secondAttribute="leading" id="nHZ-zJ-d9X"/>
+                        <constraint firstAttribute="trailing" secondItem="AgF-gg-07o" secondAttribute="trailing" id="uMj-tl-hlN"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fcv-b1-OfP">
+                    <rect key="frame" x="0.0" y="44" width="414" height="80"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CZC-I1-Vb6">
+                            <rect key="frame" x="20" y="24" width="32" height="32"/>
+                            <state key="normal" image="Back"/>
+                            <connections>
+                                <action selector="onBtnBack:" destination="-1" eventType="touchUpInside" id="fdU-Kz-vVC"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MY BOOKINGS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gcr-ZJ-idj" customClass="UILabelDeviceClass" customModule="TruckerShipper" customModuleProvider="target">
+                            <rect key="frame" x="64" y="27.5" width="146" height="25.5"/>
+                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="21"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="iPhoneFontSize">
+                                    <real key="value" value="21"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="string" keyPath="iPhoneFontWeight" value="bold"/>
+                            </userDefinedRuntimeAttributes>
+                        </label>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="CZC-I1-Vb6" firstAttribute="leading" secondItem="fcv-b1-OfP" secondAttribute="leading" constant="20" id="9Oh-oh-NvN"/>
+                        <constraint firstItem="Gcr-ZJ-idj" firstAttribute="leading" secondItem="CZC-I1-Vb6" secondAttribute="trailing" constant="12" id="dm1-mT-fAM"/>
+                        <constraint firstItem="Gcr-ZJ-idj" firstAttribute="centerY" secondItem="CZC-I1-Vb6" secondAttribute="centerY" id="wvO-fP-4yU"/>
+                        <constraint firstAttribute="height" constant="80" id="yPH-64-vGf"/>
+                        <constraint firstItem="CZC-I1-Vb6" firstAttribute="centerY" secondItem="fcv-b1-OfP" secondAttribute="centerY" id="yrQ-fr-gpL"/>
+                    </constraints>
+                </view>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="WaD-yU-sRj">
+                    <rect key="frame" x="32" y="144" width="350" height="30"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x3t-08-VDU" customClass="UIButtonStatesDeviceClass" customModule="TruckerShipper" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="116.5" height="30"/>
+                            <state key="normal" title="Pending"/>
+                            <state key="selected" title="Pending"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="iPhoneFontSize">
+                                    <real key="value" value="15"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="string" keyPath="iPhoneFontWeight" value="bold"/>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="isCircular" value="YES"/>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="onBtnBookingsStatus:" destination="-1" eventType="touchUpInside" id="fTD-YZ-Ykw"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5c5-4z-he8" customClass="UIButtonStatesDeviceClass" customModule="TruckerShipper" customModuleProvider="target">
+                            <rect key="frame" x="116.5" y="0.0" width="117" height="30"/>
+                            <state key="normal" title="In Progress"/>
+                            <state key="selected" title="In Progress"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="iPhoneFontSize">
+                                    <real key="value" value="15"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="string" keyPath="iPhoneFontWeight" value="bold"/>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="isCircular" value="YES"/>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="onBtnBookingsStatus:" destination="-1" eventType="touchUpInside" id="2PQ-Ke-icG"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Ny-Oy-1Ao" customClass="UIButtonStatesDeviceClass" customModule="TruckerShipper" customModuleProvider="target">
+                            <rect key="frame" x="233.5" y="0.0" width="116.5" height="30"/>
+                            <state key="normal" title="Completed"/>
+                            <state key="selected" title="Completed"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="iPhoneFontSize">
+                                    <real key="value" value="15"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="string" keyPath="iPhoneFontWeight" value="bold"/>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="isCircular" value="YES"/>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="onBtnBookingsStatus:" destination="-1" eventType="touchUpInside" id="MFb-6G-FIb"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                </stackView>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="jYM-2a-JKJ">
+                    <rect key="frame" x="0.0" y="186" width="414" height="676"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="jJE-8O-Mry"/>
+                        <outlet property="delegate" destination="-1" id="ZPl-3Y-f12"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <constraints>
+                <constraint firstItem="WaD-yU-sRj" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="32" id="6qX-O1-ui1"/>
+                <constraint firstItem="jYM-2a-JKJ" firstAttribute="top" secondItem="WaD-yU-sRj" secondAttribute="bottom" constant="12" id="8c6-yv-TsG"/>
+                <constraint firstItem="fcv-b1-OfP" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="IfI-1C-DVK"/>
+                <constraint firstItem="WaD-yU-sRj" firstAttribute="top" secondItem="L0M-MZ-ubz" secondAttribute="bottom" constant="20" id="NHq-zJ-nur"/>
+                <constraint firstItem="L0M-MZ-ubz" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="S1z-9L-7IM"/>
+                <constraint firstItem="jYM-2a-JKJ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="bp4-Q4-hjM"/>
+                <constraint firstItem="L0M-MZ-ubz" firstAttribute="bottom" secondItem="fcv-b1-OfP" secondAttribute="bottom" id="d4w-k5-iHb"/>
+                <constraint firstItem="fcv-b1-OfP" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="fNQ-8d-DVs"/>
+                <constraint firstItem="L0M-MZ-ubz" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="iSQ-31-hOI"/>
+                <constraint firstItem="jYM-2a-JKJ" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="icT-2v-NUi"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="WaD-yU-sRj" secondAttribute="trailing" constant="32" id="meg-hm-Dql"/>
+                <constraint firstItem="L0M-MZ-ubz" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="p7f-Bo-i63"/>
+                <constraint firstItem="jYM-2a-JKJ" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="rTm-iR-Lj8"/>
+                <constraint firstItem="fcv-b1-OfP" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="vbE-C8-6ko"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="137.68115942028987" y="124.55357142857142"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Back" width="32" height="32"/>
+        <image name="NavBar" width="375" height="95"/>
+    </resources>
+</document>

@@ -87,18 +87,23 @@
 		FA62D004257D6263000DCFDD /* AttributesAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA62D003257D6263000DCFDD /* AttributesAPIManager.swift */; };
 		FA62D008257D716C000DCFDD /* MyContracts.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA62D006257D716C000DCFDD /* MyContracts.swift */; };
 		FA62D009257D716C000DCFDD /* MyContracts.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA62D007257D716C000DCFDD /* MyContracts.xib */; };
-		FA6B42412578F97500C6D106 /* RoleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6B42402578F97500C6D106 /* RoleModel.swift */; };
+		FA6B42412578F97500C6D106 /* AttributeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6B42402578F97500C6D106 /* AttributeModel.swift */; };
 		FA6B424A25791ABE00C6D106 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6B424325791ABD00C6D106 /* UserModel.swift */; };
-		FA6B424B25791ABE00C6D106 /* CreatedBy.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6B424425791ABD00C6D106 /* CreatedBy.swift */; };
+		FA6B424B25791ABE00C6D106 /* CreatedByModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6B424425791ABD00C6D106 /* CreatedByModel.swift */; };
 		FA6B424C25791ABE00C6D106 /* RoleId.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6B424525791ABE00C6D106 /* RoleId.swift */; };
-		FA6B424D25791ABE00C6D106 /* CountryId.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6B424625791ABE00C6D106 /* CountryId.swift */; };
 		FA6B424E25791ABE00C6D106 /* UpdatedBy.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6B424725791ABE00C6D106 /* UpdatedBy.swift */; };
 		FA6B424F25791ABE00C6D106 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6B424825791ABE00C6D106 /* User.swift */; };
-		FA6B425025791ABE00C6D106 /* CityId.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6B424925791ABE00C6D106 /* CityId.swift */; };
 		FABB36A42580B4870084BCCA /* ShipperApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABB36A32580B4870084BCCA /* ShipperApiManager.swift */; };
+		FACF6A762585A14E004D2C16 /* Bookings.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACF6A742585A14E004D2C16 /* Bookings.swift */; };
+		FACF6A772585A14E004D2C16 /* Bookings.xib in Resources */ = {isa = PBXBuildFile; fileRef = FACF6A752585A14E004D2C16 /* Bookings.xib */; };
 		FAE067CA257AE6A2005E1C97 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE067C9257AE6A2005E1C97 /* CardView.swift */; };
 		FAE067CE257AF5EB005E1C97 /* MyAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE067CC257AF5EB005E1C97 /* MyAccount.swift */; };
 		FAE067CF257AF5EB005E1C97 /* MyAccount.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAE067CD257AF5EB005E1C97 /* MyAccount.xib */; };
+		FAEDA2092586607C00AD777F /* DropOffModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEDA1FD2586607A00AD777F /* DropOffModel.swift */; };
+		FAEDA20A2586607C00AD777F /* ShipperIdModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEDA1FE2586607A00AD777F /* ShipperIdModel.swift */; };
+		FAEDA20B2586607C00AD777F /* BookingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEDA1FF2586607B00AD777F /* BookingModel.swift */; };
+		FAEDA20C2586607C00AD777F /* PickupModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEDA2002586607B00AD777F /* PickupModel.swift */; };
+		FAEDA2132586607C00AD777F /* RemarksModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEDA2072586607C00AD777F /* RemarksModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -186,18 +191,23 @@
 		FA62D003257D6263000DCFDD /* AttributesAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttributesAPIManager.swift; sourceTree = "<group>"; };
 		FA62D006257D716C000DCFDD /* MyContracts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyContracts.swift; sourceTree = "<group>"; };
 		FA62D007257D716C000DCFDD /* MyContracts.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyContracts.xib; sourceTree = "<group>"; };
-		FA6B42402578F97500C6D106 /* RoleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoleModel.swift; sourceTree = "<group>"; };
+		FA6B42402578F97500C6D106 /* AttributeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttributeModel.swift; sourceTree = "<group>"; };
 		FA6B424325791ABD00C6D106 /* UserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
-		FA6B424425791ABD00C6D106 /* CreatedBy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreatedBy.swift; sourceTree = "<group>"; };
+		FA6B424425791ABD00C6D106 /* CreatedByModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreatedByModel.swift; sourceTree = "<group>"; };
 		FA6B424525791ABE00C6D106 /* RoleId.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoleId.swift; sourceTree = "<group>"; };
-		FA6B424625791ABE00C6D106 /* CountryId.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountryId.swift; sourceTree = "<group>"; };
 		FA6B424725791ABE00C6D106 /* UpdatedBy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdatedBy.swift; sourceTree = "<group>"; };
 		FA6B424825791ABE00C6D106 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		FA6B424925791ABE00C6D106 /* CityId.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CityId.swift; sourceTree = "<group>"; };
 		FABB36A32580B4870084BCCA /* ShipperApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShipperApiManager.swift; sourceTree = "<group>"; };
+		FACF6A742585A14E004D2C16 /* Bookings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bookings.swift; sourceTree = "<group>"; };
+		FACF6A752585A14E004D2C16 /* Bookings.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Bookings.xib; sourceTree = "<group>"; };
 		FAE067C9257AE6A2005E1C97 /* CardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		FAE067CC257AF5EB005E1C97 /* MyAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAccount.swift; sourceTree = "<group>"; };
 		FAE067CD257AF5EB005E1C97 /* MyAccount.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyAccount.xib; sourceTree = "<group>"; };
+		FAEDA1FD2586607A00AD777F /* DropOffModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropOffModel.swift; sourceTree = "<group>"; };
+		FAEDA1FE2586607A00AD777F /* ShipperIdModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShipperIdModel.swift; sourceTree = "<group>"; };
+		FAEDA1FF2586607B00AD777F /* BookingModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookingModel.swift; sourceTree = "<group>"; };
+		FAEDA2002586607B00AD777F /* PickupModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickupModel.swift; sourceTree = "<group>"; };
+		FAEDA2072586607C00AD777F /* RemarksModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemarksModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -439,7 +449,8 @@
 			isa = PBXGroup;
 			children = (
 				FA6B424225791AAB00C6D106 /* UserModel */,
-				FA6B423F2578F95B00C6D106 /* RolesModel */,
+				FA6B423F2578F95B00C6D106 /* AttributeModel */,
+				FAEDA1FC2586606D00AD777F /* BookingModel */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -544,6 +555,7 @@
 				FA2000992583DF7600E14D36 /* LoadRequest */,
 				FA62D005257D713A000DCFDD /* MyContracts */,
 				FA37EA8125740EAD0073CF0C /* TripExpenses */,
+				FACF6A732585A0D2004D2C16 /* Bookings */,
 				FAE067CB257AF3A1005E1C97 /* MyAccount */,
 				FA37EA9125740EAD0073CF0C /* Notifications */,
 			);
@@ -699,26 +711,33 @@
 			path = MyContracts;
 			sourceTree = "<group>";
 		};
-		FA6B423F2578F95B00C6D106 /* RolesModel */ = {
+		FA6B423F2578F95B00C6D106 /* AttributeModel */ = {
 			isa = PBXGroup;
 			children = (
-				FA6B42402578F97500C6D106 /* RoleModel.swift */,
+				FA6B42402578F97500C6D106 /* AttributeModel.swift */,
 			);
-			path = RolesModel;
+			path = AttributeModel;
 			sourceTree = "<group>";
 		};
 		FA6B424225791AAB00C6D106 /* UserModel */ = {
 			isa = PBXGroup;
 			children = (
-				FA6B424925791ABE00C6D106 /* CityId.swift */,
-				FA6B424625791ABE00C6D106 /* CountryId.swift */,
-				FA6B424425791ABD00C6D106 /* CreatedBy.swift */,
+				FA6B424425791ABD00C6D106 /* CreatedByModel.swift */,
 				FA6B424525791ABE00C6D106 /* RoleId.swift */,
 				FA6B424725791ABE00C6D106 /* UpdatedBy.swift */,
 				FA6B424825791ABE00C6D106 /* User.swift */,
 				FA6B424325791ABD00C6D106 /* UserModel.swift */,
 			);
 			path = UserModel;
+			sourceTree = "<group>";
+		};
+		FACF6A732585A0D2004D2C16 /* Bookings */ = {
+			isa = PBXGroup;
+			children = (
+				FACF6A742585A14E004D2C16 /* Bookings.swift */,
+				FACF6A752585A14E004D2C16 /* Bookings.xib */,
+			);
+			path = Bookings;
 			sourceTree = "<group>";
 		};
 		FAE067C8257AE6A2005E1C97 /* CardView */ = {
@@ -736,6 +755,18 @@
 				FAE067CD257AF5EB005E1C97 /* MyAccount.xib */,
 			);
 			path = MyAccount;
+			sourceTree = "<group>";
+		};
+		FAEDA1FC2586606D00AD777F /* BookingModel */ = {
+			isa = PBXGroup;
+			children = (
+				FAEDA1FF2586607B00AD777F /* BookingModel.swift */,
+				FAEDA1FD2586607A00AD777F /* DropOffModel.swift */,
+				FAEDA2002586607B00AD777F /* PickupModel.swift */,
+				FAEDA2072586607C00AD777F /* RemarksModel.swift */,
+				FAEDA1FE2586607A00AD777F /* ShipperIdModel.swift */,
+			);
+			path = BookingModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -821,6 +852,7 @@
 				FA62D009257D716C000DCFDD /* MyContracts.xib in Resources */,
 				FA37EA7525740E4C0073CF0C /* Greycliff-cf-medium.ttf in Resources */,
 				FA37EA7625740E4C0073CF0C /* Greycliff-cf-light.ttf in Resources */,
+				FACF6A772585A14E004D2C16 /* Bookings.xib in Resources */,
 				FA37EAAF25740EAE0073CF0C /* Login.strings in Resources */,
 				FA37EA042574099D0073CF0C /* Assets.xcassets in Resources */,
 				FA5225AD25802E6200C4FFD0 /* MyContractsTVC.xib in Resources */,
@@ -902,6 +934,8 @@
 				FA37EAA025740EAD0073CF0C /* Home.swift in Sources */,
 				FA37EA6B25740E4C0073CF0C /* BaseController.swift in Sources */,
 				FA37EA5F25740E4C0073CF0C /* UIView+Extention.swift in Sources */,
+				FACF6A762585A14E004D2C16 /* Bookings.swift in Sources */,
+				FAEDA20B2586607C00AD777F /* BookingModel.swift in Sources */,
 				FA37EA5925740E4C0073CF0C /* Constants.swift in Sources */,
 				FA37EA6125740E4C0073CF0C /* UIButton+Extension.swift in Sources */,
 				FAE067CE257AF5EB005E1C97 /* MyAccount.swift in Sources */,
@@ -919,9 +953,8 @@
 				FA37EA5425740E4C0073CF0C /* MOLHSizable.swift in Sources */,
 				FA37EA6225740E4C0073CF0C /* UIImage+Extension.swift in Sources */,
 				FA37EAA125740EAD0073CF0C /* TripExpenses.swift in Sources */,
-				FA6B42412578F97500C6D106 /* RoleModel.swift in Sources */,
-				FA6B425025791ABE00C6D106 /* CityId.swift in Sources */,
-				FA6B424B25791ABE00C6D106 /* CreatedBy.swift in Sources */,
+				FA6B42412578F97500C6D106 /* AttributeModel.swift in Sources */,
+				FA6B424B25791ABE00C6D106 /* CreatedByModel.swift in Sources */,
 				FA37EAA325740EAD0073CF0C /* TripExpensesTVC.swift in Sources */,
 				FA37EA5025740E4C0073CF0C /* Strings.swift in Sources */,
 				FA37EAA825740EAD0073CF0C /* TripExpensesHeader.swift in Sources */,
@@ -930,18 +963,20 @@
 				FA37EA6025740E4C0073CF0C /* UILabel+Extension.swift in Sources */,
 				FABB36A42580B4870084BCCA /* ShipperApiManager.swift in Sources */,
 				FA6B424C25791ABE00C6D106 /* RoleId.swift in Sources */,
+				FAEDA20A2586607C00AD777F /* ShipperIdModel.swift in Sources */,
 				FA37EA7225740E4C0073CF0C /* RoundedCorners.swift in Sources */,
 				FA20009C2583DF8F00E14D36 /* LoadRequest.swift in Sources */,
 				FA5225AC25802E6200C4FFD0 /* MyContractsTVC.swift in Sources */,
 				FA37EA5725740E4C0073CF0C /* Validation.swift in Sources */,
-				FA6B424D25791ABE00C6D106 /* CountryId.swift in Sources */,
 				FA37EA6525740E4C0073CF0C /* Dictionary+Extension.swift in Sources */,
 				FA37EA7825740E4C0073CF0C /* APIManager.swift in Sources */,
 				FA20009225839B1D00E14D36 /* LoadDetails.swift in Sources */,
 				FA6B424E25791ABE00C6D106 /* UpdatedBy.swift in Sources */,
 				FA37EA7025740E4C0073CF0C /* CustomLoader.swift in Sources */,
 				FA37EA6925740E4C0073CF0C /* LanguageManager.swift in Sources */,
+				FAEDA20C2586607C00AD777F /* PickupModel.swift in Sources */,
 				FA37EA6625740E4C0073CF0C /* CLPlacemark+Extension.swift in Sources */,
+				FAEDA2132586607C00AD777F /* RemarksModel.swift in Sources */,
 				FA37EA6425740E4C0073CF0C /* String+Extension.swift in Sources */,
 				FA37EA5225740E4C0073CF0C /* MOLHLanguage.swift in Sources */,
 				FA37EA5D25740E4C0073CF0C /* UIColor+Extension.swift in Sources */,
@@ -959,6 +994,7 @@
 				FA37EA6F25740E4C0073CF0C /* ProjectEnums.swift in Sources */,
 				FA37EA5B25740E4C0073CF0C /* UIApplication+Extension.swift in Sources */,
 				FA37EAB7257429350073CF0C /* ForgotPassword.swift in Sources */,
+				FAEDA2092586607C00AD777F /* DropOffModel.swift in Sources */,
 				FA6B424F25791ABE00C6D106 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

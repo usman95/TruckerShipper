@@ -39,10 +39,10 @@ class SideMenu: UIViewController {
             self.sideMenuController?.hideRightViewAnimated()
         }
         switch sender.tag {
+        case 0:
+            self.pushToMyBookings()
         case 2:
             self.pushToNotifications()
-            //        case 1:
-        //            self.pushToTripExpenses()
         case 4:
             self.pushToMyContracts()
         case 5:
@@ -75,6 +75,12 @@ extension SideMenu{
 }
 //MARK:- Application flow
 extension SideMenu{
+    private func pushToMyBookings(){
+        let controller = Bookings()
+        guard let topController = Utility.main.topViewController() as? LGSideMenuController else {return}
+        guard let topNavigationController = topController.rootViewController as? UINavigationController else {return}
+        topNavigationController.pushViewController(controller, animated: true)
+    }
     private func pushToNotifications(){
         let controller = Notifications()
         guard let topController = Utility.main.topViewController() as? LGSideMenuController else {return}

@@ -486,7 +486,7 @@ extension LoadRequest{
     private func createBooking(){
         guard let params = self.validate() else {return}
         params.printJson()
-        APIManager.sharedInstance.shipperAPIManager.Booking(params: params, success: { (responseObject) in
+        APIManager.sharedInstance.shipperAPIManager.Bookings(params: params, success: { (responseObject) in
             Utility.main.showAlert(message: Constants.apiMessage, title: Strings.CONFIRMATION.text) {
                 AppDelegate.shared.changeRootViewController()
             }

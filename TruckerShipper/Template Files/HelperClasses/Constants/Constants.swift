@@ -13,7 +13,7 @@ struct Global{
 
 struct Constants {
     //MARK:- Base URL
-    static let BaseURL                     = "http://192.168.18.31:4040"//"http://13.212.49.143:3000"
+    static let BaseURL                     = "http://13.212.49.143:3000"//"http://192.168.18.31:4040"
     static let SocketBaseURL               = ""
     static let APP_DELEGATE                = UIApplication.shared.delegate as! AppDelegate
     static let UIWINDOW                    = UIApplication.shared.delegate!.window!
@@ -24,7 +24,7 @@ struct Constants {
     static var DeviceToken                 = "No certificates"
     static let serverDateFormat            = "yyyy-MM-dd HH:mm:ss.SSS"
     static let serverDateFormat1           = "yyyy-MM-dd HH:mm:ss"
-    static let PAGINATION_PAGE_SIZE        = 100
+    static let PAGINATION_PAGE_SIZE        = 10
     static let VERIFY_CODE_TIME_LIMIT      = 5*60
     static var adminPhone                  = "123456"
     static let apiKey                      = "AIzaSyAUOz-7RsaYs_xNB8XAHlo1PNf866EhT_w"//"AIzaSyCJBDZYHuEOl08YzAOTkOPfq0TQ3mO0MgA"
@@ -36,7 +36,7 @@ struct Constants {
     static var localCurrency               = "PKR"
     static let oneSignalAppID              = "4ac1ff96-ec01-4a69-8abc-414b5884d79f"
     static let gmailSignInClientID         = "857012175771-er4drafle21fh2eh6mn37saode9299jv.apps.googleusercontent.com"
-    static var pagesCount                 = 0
-    static var ordersCount                = 0
+    static var pagesCount                  = 0
+    static var ordersCount                 = 0
     static let stripeDefaultPublishableKey = "pk_test_51HLEsID30KhvE5IwlgHuVtRB6rtqIBpfVRhOdaPAnLNs1Fa4I2nDEYjgxXY99WtISfwX3E9ylqJ2uh1kFIgcEQuw00FBv96gDW"
 }

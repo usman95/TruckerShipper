@@ -33,7 +33,7 @@ public class User: Object, Mappable {
     }
     
     // MARK: Properties
-    @objc dynamic var cityId: CityId?
+    @objc dynamic var cityId: AttributeModel?
     @objc dynamic var email: String? = ""
     @objc dynamic var createdAt: String? = ""
     @objc dynamic var address: String? = ""
@@ -47,8 +47,8 @@ public class User: Object, Mappable {
     @objc dynamic var contactNo: String? = ""
     @objc dynamic var updatedAt: String? = ""
     @objc dynamic var firstName: String? = ""
-    @objc dynamic var countryId: CountryId?
-    @objc dynamic var createdBy: CreatedBy?
+    @objc dynamic var countryId: AttributeModel?
+    @objc dynamic var createdBy: CreatedByModel?
     
     // MARK: ObjectMapper Initializers
     /// Map a JSON object to this class using ObjectMapper.

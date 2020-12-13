@@ -29,7 +29,7 @@ enum Route: String {
     //MARK:- ALL
     case ShipperContracts = "/api/shipper-contract"
     case BookingEstimate = "/api/booking-estimate"
-    case Booking = "/api/booking"
+    case Bookings = "/api/booking"
 }
 class APIManagerBase: NSObject {
     let baseURL = Constants.BaseURL
@@ -82,7 +82,12 @@ extension APIManagerBase{
                 }
                 else{
                     if let error = (dictData["message"] as? String){
-                        Utility.main.showAlert(message: error, title: Strings.ERROR.text)
+                        if error == "The token has expired, please login again!"{
+                            AppStateManager.sharedInstance.logoutUserAndChangeRootView()
+                        }
+                        else{
+                            Utility.main.showAlert(message: error, title: Strings.ERROR.text)
+                        }
                     }
                     else{
                         Utility.main.showAlert(message: errorGenericMessage, title: Strings.ERROR.text)

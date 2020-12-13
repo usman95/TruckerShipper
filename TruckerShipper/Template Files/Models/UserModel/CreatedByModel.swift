@@ -10,7 +10,7 @@ import ObjectMapper
 import RealmSwift
 import ObjectMapper_Realm
 
-public class CreatedBy: Object, Mappable {
+public class CreatedByModel: Object, Mappable {
     
     // MARK: Declaration for string constants to be used to decode and also serialize.
     private struct SerializationKeys {
