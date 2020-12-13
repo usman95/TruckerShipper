@@ -10,7 +10,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="DashboardHeader" customModule="TruckerShipper" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="414" height="448"/>
+            <rect key="frame" x="0.0" y="0.0" width="414" height="428"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Drf-JL-aGG">
@@ -435,7 +435,6 @@
                 <constraint firstItem="5Vi-oZ-0Ap" firstAttribute="top" secondItem="Drf-JL-aGG" secondAttribute="bottom" id="anp-pA-8kj"/>
                 <constraint firstItem="Drf-JL-aGG" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="b52-XG-d25"/>
                 <constraint firstItem="wg5-uZ-4Wo" firstAttribute="trailing" secondItem="5Vi-oZ-0Ap" secondAttribute="trailing" id="gAN-ds-GdQ"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="wg5-uZ-4Wo" secondAttribute="bottom" constant="14" id="t6u-6p-cvF"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>

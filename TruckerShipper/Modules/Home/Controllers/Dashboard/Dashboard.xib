@@ -41,6 +41,9 @@
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cJk-WP-pv5">
                             <rect key="frame" x="20" y="25" width="31" height="30"/>
                             <state key="normal" image="SideMenu"/>
+                            <connections>
+                                <action selector="onBtnSideMenu:" destination="-1" eventType="touchUpInside" id="6cH-vr-NMS"/>
+                            </connections>
                         </button>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LIVE DASHBOARD" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kdE-Cn-kf8" customClass="UILabelDeviceClass" customModule="TruckerShipper" customModuleProvider="target">
                             <rect key="frame" x="63" y="27.5" width="177.5" height="25.5"/>

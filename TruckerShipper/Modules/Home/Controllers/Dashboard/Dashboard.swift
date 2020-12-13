@@ -51,3 +51,12 @@ extension Dashboard: UITableViewDataSource{
         return cell
     }
 }
+extension Dashboard: UITableViewDelegate{
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return CGFloat(50.0)
+    }
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let header = TitleHeader.instanceFromNib() as! TitleHeader
+        return header
+    }
+}

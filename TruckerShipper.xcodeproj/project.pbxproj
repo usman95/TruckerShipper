@@ -108,8 +108,8 @@
 		FAEDA21925866DFD00AD777F /* Dashboard.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAEDA21725866DFD00AD777F /* Dashboard.xib */; };
 		FAEDA21C258672A900AD777F /* DashboardHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAEDA21B258672A900AD777F /* DashboardHeader.xib */; };
 		FAEDA21E258672BC00AD777F /* DashboardHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEDA21D258672BC00AD777F /* DashboardHeader.swift */; };
-		FAEDA2222586937000AD777F /* RequestTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEDA2202586937000AD777F /* RequestTVC.swift */; };
-		FAEDA2232586937000AD777F /* RequestTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAEDA2212586937000AD777F /* RequestTVC.xib */; };
+		FAEDA22625869B8A00AD777F /* TitleHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAEDA22525869B8A00AD777F /* TitleHeader.xib */; };
+		FAEDA22825869B9600AD777F /* TitleHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEDA22725869B9600AD777F /* TitleHeader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -218,8 +218,8 @@
 		FAEDA21725866DFD00AD777F /* Dashboard.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Dashboard.xib; sourceTree = "<group>"; };
 		FAEDA21B258672A900AD777F /* DashboardHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DashboardHeader.xib; sourceTree = "<group>"; };
 		FAEDA21D258672BC00AD777F /* DashboardHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardHeader.swift; sourceTree = "<group>"; };
-		FAEDA2202586937000AD777F /* RequestTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestTVC.swift; sourceTree = "<group>"; };
-		FAEDA2212586937000AD777F /* RequestTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RequestTVC.xib; sourceTree = "<group>"; };
+		FAEDA22525869B8A00AD777F /* TitleHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TitleHeader.xib; sourceTree = "<group>"; };
+		FAEDA22725869B9600AD777F /* TitleHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleHeader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -643,6 +643,7 @@
 		FA37EA9125740EAD0073CF0C /* Notifications */ = {
 			isa = PBXGroup;
 			children = (
+				FAEDA22425869B7900AD777F /* TitleHeader */,
 				FA37EA9225740EAD0073CF0C /* Notifications.swift */,
 				FA37EA9325740EAD0073CF0C /* Notifications.xib */,
 				FA37EA9425740EAD0073CF0C /* TVC */,
@@ -785,7 +786,6 @@
 		FAEDA21525866D6C00AD777F /* Dashboard */ = {
 			isa = PBXGroup;
 			children = (
-				FAEDA21F2586933000AD777F /* RequestTVC */,
 				FAEDA21A2586719600AD777F /* DashboardHeader */,
 				FAEDA21625866DFD00AD777F /* Dashboard.swift */,
 				FAEDA21725866DFD00AD777F /* Dashboard.xib */,
@@ -802,13 +802,13 @@
 			path = DashboardHeader;
 			sourceTree = "<group>";
 		};
-		FAEDA21F2586933000AD777F /* RequestTVC */ = {
+		FAEDA22425869B7900AD777F /* TitleHeader */ = {
 			isa = PBXGroup;
 			children = (
-				FAEDA2202586937000AD777F /* RequestTVC.swift */,
-				FAEDA2212586937000AD777F /* RequestTVC.xib */,
+				FAEDA22525869B8A00AD777F /* TitleHeader.xib */,
+				FAEDA22725869B9600AD777F /* TitleHeader.swift */,
 			);
-			path = RequestTVC;
+			path = TitleHeader;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -886,7 +886,6 @@
 				FA37EA072574099D0073CF0C /* LaunchScreen.storyboard in Resources */,
 				FA37EAAC25740EAD0073CF0C /* Notifications.xib in Resources */,
 				FAEDA21C258672A900AD777F /* DashboardHeader.xib in Resources */,
-				FAEDA2232586937000AD777F /* RequestTVC.xib in Resources */,
 				FA37EAB8257429350073CF0C /* ForgotPassword.xib in Resources */,
 				FA37EAA725740EAD0073CF0C /* TripExpensesHeader.xib in Resources */,
 				FAEDA21925866DFD00AD777F /* Dashboard.xib in Resources */,
@@ -897,6 +896,7 @@
 				FA62D009257D716C000DCFDD /* MyContracts.xib in Resources */,
 				FA37EA7525740E4C0073CF0C /* Greycliff-cf-medium.ttf in Resources */,
 				FA37EA7625740E4C0073CF0C /* Greycliff-cf-light.ttf in Resources */,
+				FAEDA22625869B8A00AD777F /* TitleHeader.xib in Resources */,
 				FACF6A772585A14E004D2C16 /* Bookings.xib in Resources */,
 				FA37EAAF25740EAE0073CF0C /* Login.strings in Resources */,
 				FA37EA042574099D0073CF0C /* Assets.xcassets in Resources */,
@@ -1005,7 +1005,6 @@
 				FA37EA5025740E4C0073CF0C /* Strings.swift in Sources */,
 				FA37EAA825740EAD0073CF0C /* TripExpensesHeader.swift in Sources */,
 				FA37EA5325740E4C0073CF0C /* MOLH.swift in Sources */,
-				FAEDA2222586937000AD777F /* RequestTVC.swift in Sources */,
 				FA37EA6725740E4C0073CF0C /* UITextField+Extension.swift in Sources */,
 				FA37EA6025740E4C0073CF0C /* UILabel+Extension.swift in Sources */,
 				FABB36A42580B4870084BCCA /* ShipperApiManager.swift in Sources */,
@@ -1014,6 +1013,7 @@
 				FA37EA7225740E4C0073CF0C /* RoundedCorners.swift in Sources */,
 				FA20009C2583DF8F00E14D36 /* LoadRequest.swift in Sources */,
 				FA5225AC25802E6200C4FFD0 /* MyContractsTVC.swift in Sources */,
+				FAEDA22825869B9600AD777F /* TitleHeader.swift in Sources */,
 				FA37EA5725740E4C0073CF0C /* Validation.swift in Sources */,
 				FA37EA6525740E4C0073CF0C /* Dictionary+Extension.swift in Sources */,
 				FA37EA7825740E4C0073CF0C /* APIManager.swift in Sources */,

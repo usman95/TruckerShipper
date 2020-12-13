@@ -65,6 +65,22 @@ class MyAccount: BaseController {
 }
 //MARK:- Helper methods
 extension MyAccount{
+    private func setData(){
+        let user = AppStateManager.sharedInstance.loggedInUser.user
+        
+        self.tfFirstName.text = user?.firstName ?? ""
+        self.tfLastName.text = user?.lastName ?? ""
+        self.tfPhone.text = user?.contactNo ?? ""
+        self.tfEmail.text = user?.email ?? ""
+//        self.tfNIC.text = user.
+//        self.tfCountry.text = ""
+//        self.tfCity.text = ""
+//        self.tfAddress.text = ""
+//        self.tfShipperType.text = ""
+//        self.tfCompany.text = ""
+//        self.tfNTN.text = ""
+//        self.tfWebsite.text = ""
+    }
     private func callAPIs(){
         self.getCountries()
         self.getCities()
@@ -101,6 +117,24 @@ extension MyAccount{
             self.tfShipperType.text = item
             self.selectedShipper = item
         }
+    }
+    private func setSelectedCountry(){
+        let countryId = AppStateManager.sharedInstance.loggedInUser.user?.countryId?.id ?? ""
+        
+        self.selectedCountry = self.arrCountry.filter{$0.id == countryId}.first
+        self.tfCountry.text = self.selectedCountry?.title ?? ""
+    }
+    private func setSelectedCity(){
+        let cityId = AppStateManager.sharedInstance.loggedInUser.user?.cityId?.id ?? ""
+        
+        self.selectedCity = self.arrCity.filter{$0.id == cityId}.first
+        self.tfCity.text = self.selectedCity?.title ?? ""
+    }
+    private func setSelectedShipperType(){
+        let shipperType = AppStateManager.sharedInstance.loggedInUser.user?.shipperType
+        
+        self.selectedShipper = self.arrShipper.filter{$0 == shipperType}.first
+        self.tfShipperType .text = self.selectedShipper
     }
     private func resetCities(){
         self.tfCity.text = nil
@@ -180,18 +214,26 @@ extension MyAccount{
             return nil
         }
         
-        let params:[String:Any] = ["firstName":firstName,
+        var params:[String:Any] = ["firstName":firstName,
                                    "lastName":lastName,
                                    "contactNo":contactNo,
                                    "email":email,
-                                   "nicNo":nicNo,
                                    "countryId":countryId,
                                    "cityId":cityId,
                                    "address":address,
-                                   "shipperType":shipperType,
-                                   "company":company,
-                                   "ntn":ntn,
-                                   "website":website]
+                                   "shipperType":shipperType]
+        if !nicNo.isEmpty{
+            params["nicNo"] = nicNo
+        }
+        if !company.isEmpty{
+            params["company"] = company
+        }
+        if !ntn.isEmpty{
+            params["ntn"] = ntn
+        }
+        if !website.isEmpty{
+            params["website"] = website
+        }
         return params
     }
 }
@@ -229,6 +271,7 @@ extension MyAccount{
             guard let countries = response["countries"] as? [[String:Any]] else {return}
             self.arrCountry = Mapper<AttributeModel>().mapArray(JSONArray: countries)
             self.setCountriesDropDown()
+            self.setSelectedCountry()
         }) { (error) in
             print(error)
         }
@@ -248,6 +291,7 @@ extension MyAccount{
             self.arrAllCity = Mapper<AttributeModel>().mapArray(JSONArray: cities)
             self.arrCity = Mapper<AttributeModel>().mapArray(JSONArray: cities)
             self.setCitiesDropDown()
+            self.setSelectedCity()
         }) { (error) in
             print(error)
         }
@@ -257,6 +301,7 @@ extension MyAccount{
             guard let shipper = responseObject as? [String] else {return}
             self.arrShipper = shipper
             self.setShipperDropDown()
+            self.setSelectedShipperType()
         }) { (error) in
             print(error)
         }

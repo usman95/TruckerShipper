@@ -14,42 +14,10 @@
             filePath = "TruckerShipper/Modules/Home/Controllers/MyAccount/MyAccount.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "272"
-            endingLineNumber = "272"
+            startingLineNumber = "316"
+            endingLineNumber = "316"
             landmarkName = "updateProfile()"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "A4DAE2F0-976D-49D8-9BA2-7571035B165F - bde22b3188aa0be3"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Dictionary&lt;Swift.String, Swift.AnyObject&gt;) -&gt; () in TruckerShipper.MyAccount.(updateProfile in _23551FBAA5CC9DA2DE4D8D55549E5444)() -&gt; ()"
-                  moduleName = "TruckerShipper"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/macbook/Documents/Freelance/Truckers/TruckerShipper/TruckerShipper/Modules/Home/Controllers/MyAccount/MyAccount.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "272"
-                  endingLineNumber = "272"
-                  offsetFromSymbolStart = "152">
-               </Location>
-               <Location
-                  uuid = "A4DAE2F0-976D-49D8-9BA2-7571035B165F - 749805806e12c0a1"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #2 (__C.NSError) -&gt; () in TruckerShipper.MyAccount.(updateProfile in _23551FBAA5CC9DA2DE4D8D55549E5444)() -&gt; ()"
-                  moduleName = "TruckerShipper"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/macbook/Documents/Freelance/Truckers/TruckerShipper/TruckerShipper/Modules/Home/Controllers/MyAccount/MyAccount.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "273"
-                  endingLineNumber = "273"
-                  offsetFromSymbolStart = "20">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -81,6 +49,38 @@
             startingLineNumber = "53"
             endingLineNumber = "53"
             landmarkName = "getMyContracts()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "49739E39-FE06-4EC7-BD08-DD6F150D6594"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TruckerShipper/Modules/Home/Controllers/MyAccount/MyAccount.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "318"
+            endingLineNumber = "318"
+            landmarkName = "updateProfile()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "65412F57-061B-45C4-B5A7-1B1AA145305C"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TruckerShipper/Modules/Login/Controllers/Login/Login.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "67"
+            endingLineNumber = "67"
+            landmarkName = "login()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
