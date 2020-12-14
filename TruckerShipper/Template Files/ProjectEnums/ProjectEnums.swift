@@ -37,3 +37,7 @@ enum BookingRequest{
     case load
     case rate
 }
+enum ImagePickerType{
+    case profile
+    case ntn
+}

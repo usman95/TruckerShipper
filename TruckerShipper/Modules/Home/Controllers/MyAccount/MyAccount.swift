@@ -26,6 +26,7 @@ class MyAccount: BaseController {
     @IBOutlet weak var tfShipperType: UITextFieldDeviceClass!
     @IBOutlet weak var tfCompany: UITextFieldDeviceClass!
     @IBOutlet weak var tfNTN: UITextFieldDeviceClass!
+    @IBOutlet weak var imgNTN: UIImageView!
     @IBOutlet weak var tfWebsite: UITextFieldDeviceClass!
     @IBOutlet weak var btnSaveProfile: UIButtonDeviceClass!
     
@@ -45,6 +46,8 @@ class MyAccount: BaseController {
     var shipperProfile: UserModel?
     var profileImage: UIImage?
     
+    var imagePickerType = ImagePickerType.profile
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.callAPIs()
@@ -53,6 +56,7 @@ class MyAccount: BaseController {
     }
     
     @IBAction func onBtnProfileImage(_ sender: UIButton) {
+        self.imagePickerType = .profile
         self.uploadProfileImageBy()
     }
     @IBAction func onBtnCountry(_ sender: UIButton) {
@@ -66,6 +70,10 @@ class MyAccount: BaseController {
     }
     @IBAction func onBtnAddress(_ sender: UIButton) {
         self.pickLocationFromPlacePicker()
+    }
+    @IBAction func onBtnNTNPhoto(_ sender: UIButton) {
+        self.imagePickerType = .ntn
+        self.uploadProfileImageBy()
     }
     @IBAction func onBtnSaveProfile(_ sender: UIButton) {
         self.updateProfile()
@@ -88,6 +96,16 @@ extension MyAccount{
         self.tfShipperType.text = user?.shipperType ?? ""
         self.tfCompany.text = user?.company ?? ""
         self.tfNTN.text = user?.ntn ?? ""
+        
+        let ntnImageURL = self.shipperProfile?.user?.documents.filter{$0.docType == "ntn"}.first?.url ?? ""
+        
+        switch ntnImageURL.isEmpty{
+        case false:
+            self.imgNTN.sd_setImage(with: URL(string: ntnImageURL), placeholderImage: UIImage(named: "DocumentPlaceholder"))
+        case true:
+            self.imgNTN.isHidden = true
+        }
+        
         self.tfWebsite.text = user?.website ?? ""
     }
     private func callAPIs(){
@@ -334,6 +352,25 @@ extension MyAccount{
             guard let user = Mapper<UserModel>().map(JSON: responseObject) else{return}
             user.authToken = AppStateManager.sharedInstance.loggedInUser.authToken
             AppStateManager.sharedInstance.saveUser(user: user)
+        }) { (error) in
+            print(error)
+        }
+    }
+    func uploadNTN(doc: Data){
+        let id = AppStateManager.sharedInstance.loggedInUser.user?.id ?? ""
+        
+        let docId = self.shipperProfile?.user?.documents.filter{$0.docType == "ntn"}.first?.id ?? ""
+        
+        let params:[String:Any] = ["docId":docId,
+                                  "doc":doc]
+        
+        APIManager.sharedInstance.usersAPIManager.UploadDocument(id: id, params: params, success: { (responseObject) in
+            guard let user = Mapper<UserModel>().map(JSON: responseObject) else{return}
+            user.authToken = AppStateManager.sharedInstance.loggedInUser.authToken
+            AppStateManager.sharedInstance.saveUser(user: user)
+            
+            self.shipperProfile = user
+            self.setData()
         }) { (error) in
             print(error)
         }

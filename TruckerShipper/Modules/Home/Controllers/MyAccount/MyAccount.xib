@@ -10,6 +10,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MyAccount" customModule="TruckerShipper" customModuleProvider="target">
             <connections>
                 <outlet property="btnSaveProfile" destination="A1X-Fa-C39" id="pZ4-4a-eIE"/>
+                <outlet property="imgNTN" destination="lpE-as-weF" id="DFV-pV-KhQ"/>
                 <outlet property="imgProfile" destination="h4I-4e-TAO" id="gUt-hD-kJi"/>
                 <outlet property="tfAddress" destination="T5m-Ww-jzf" id="Stk-eM-2JZ"/>
                 <outlet property="tfCity" destination="aJD-J1-Hvy" id="rCi-lG-BRW"/>
@@ -862,7 +863,7 @@
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mpK-Ex-BEn">
                                             <rect key="frame" x="0.0" y="990" width="334" height="100"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add photo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n4c-93-c31" customClass="UILabelDeviceClass" customModule="TruckerShipper" customModuleProvider="target">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="255" verticalCompressionResistancePriority="755" text="Add photo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n4c-93-c31" customClass="UILabelDeviceClass" customModule="TruckerShipper" customModuleProvider="target">
                                                     <rect key="frame" x="0.0" y="14" width="80.5" height="19.5"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                                                     <color key="textColor" red="0.0" green="0.2802670002" blue="0.62132591010000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -874,12 +875,38 @@
                                                         <userDefinedRuntimeAttribute type="string" keyPath="iPhoneFontWeight" value="bold"/>
                                                     </userDefinedRuntimeAttributes>
                                                 </label>
+                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="sER-Wd-nbg">
+                                                    <rect key="frame" x="0.0" y="41.5" width="101" height="50.5"/>
+                                                    <subviews>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iM4-ex-Tdf">
+                                                            <rect key="frame" x="0.0" y="0.0" width="50.5" height="50.5"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" secondItem="iM4-ex-Tdf" secondAttribute="height" multiplier="1:1" id="NNZ-uL-S6S"/>
+                                                            </constraints>
+                                                            <state key="normal" image="UploadDocument"/>
+                                                            <connections>
+                                                                <action selector="onBtnNTNPhoto:" destination="-1" eventType="touchUpInside" id="vEi-mJ-Zra"/>
+                                                            </connections>
+                                                        </button>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DocumentPlaceholder" translatesAutoresizingMaskIntoConstraints="NO" id="lpE-as-weF">
+                                                            <rect key="frame" x="50.5" y="0.0" width="50.5" height="50.5"/>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                    <real key="value" value="4"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                            </userDefinedRuntimeAttributes>
+                                                        </imageView>
+                                                    </subviews>
+                                                </stackView>
                                             </subviews>
                                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="100" id="3UY-EM-5UC"/>
+                                                <constraint firstItem="sER-Wd-nbg" firstAttribute="top" secondItem="n4c-93-c31" secondAttribute="bottom" constant="8" id="7tX-vw-Ecg"/>
                                                 <constraint firstItem="n4c-93-c31" firstAttribute="leading" secondItem="mpK-Ex-BEn" secondAttribute="leading" id="K2Q-tm-StW"/>
                                                 <constraint firstItem="n4c-93-c31" firstAttribute="top" secondItem="mpK-Ex-BEn" secondAttribute="top" constant="14" id="LxF-kr-QXZ"/>
+                                                <constraint firstItem="sER-Wd-nbg" firstAttribute="leading" secondItem="n4c-93-c31" secondAttribute="leading" id="Oo0-dl-xjM"/>
+                                                <constraint firstAttribute="bottom" secondItem="sER-Wd-nbg" secondAttribute="bottom" constant="8" id="bco-LA-jhH"/>
                                             </constraints>
                                         </view>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X28-yD-2ne">
@@ -1016,7 +1043,9 @@
     </objects>
     <resources>
         <image name="Back" width="32" height="32"/>
+        <image name="DocumentPlaceholder" width="48" height="48"/>
         <image name="NavBar" width="375" height="95"/>
+        <image name="UploadDocument" width="48" height="48"/>
         <image name="dropDownBlack" width="10" height="10"/>
         <image name="profilePlaceHolder" width="180" height="180"/>
     </resources>
