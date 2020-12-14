@@ -10,9 +10,11 @@ import UIKit
 import ObjectMapper
 import DropDown
 import GooglePlaces
+import SDWebImage
 
 class MyAccount: BaseController {
     
+    @IBOutlet weak var imgProfile: RoundedImage!
     @IBOutlet weak var tfFirstName: UITextFieldDeviceClass!
     @IBOutlet weak var tfLastName: UITextFieldDeviceClass!
     @IBOutlet weak var tfPhone: UITextFieldDeviceClass!
@@ -41,15 +43,18 @@ class MyAccount: BaseController {
     var selectedShipper: String?
     
     var shipperProfile: UserModel?
+    var profileImage: UIImage?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.setProfileData()
         self.callAPIs()
         self.getUserDetails()
         // Do any additional setup after loading the view.
     }
     
+    @IBAction func onBtnProfileImage(_ sender: UIButton) {
+        self.uploadProfileImageBy()
+    }
     @IBAction func onBtnCountry(_ sender: UIButton) {
         self.countriesDropDown.show()
     }
@@ -71,13 +76,14 @@ extension MyAccount{
     private func setData(){
         let user = self.shipperProfile?.user
         
+        let shipperImageURL = AppStateManager.sharedInstance.loggedInUser.user?.profileImageUrl ?? ""
+        self.imgProfile.sd_setImage(with: URL(string: shipperImageURL), placeholderImage: UIImage(named: "profilePlaceHolder"))
+        
         self.tfFirstName.text = user?.firstName ?? ""
         self.tfLastName.text = user?.lastName ?? ""
         self.tfPhone.text = user?.contactNo ?? ""
         self.tfEmail.text = user?.email ?? ""
         self.tfNIC.text = user?.nicNo ?? ""
-//        self.tfCountry.text = ""
-//        self.tfCity.text = ""
         self.tfAddress.text = user?.address ?? ""
         self.tfShipperType.text = user?.shipperType ?? ""
         self.tfCompany.text = user?.company ?? ""
@@ -153,24 +159,6 @@ extension MyAccount{
         controller.tableCellBackgroundColor = UIColor.white
             
         self.present(controller, animated: true, completion: nil)
-    }
-    private func setProfileData(){
-        let data = AppStateManager.sharedInstance.loggedInUser.user
-        
-        self.tfFirstName.text = data?.firstName ?? ""
-        self.tfLastName.text = data?.lastName ?? ""
-        self.tfPhone.text = data?.contactNo ?? ""
-        self.tfEmail.text = data?.email ?? ""
-        
-//        self.tfNIC.text = ""
-        self.tfCountry.text = ""
-        self.tfCity.text = ""
-        self.tfAddress.text = data?.address ?? ""
-//        self.tfShipperType.text = ""
-//        self.tfCompany.text = ""
-//        self.tfNTN.text = ""
-//        self.tfWebsite.text = ""
-        
     }
     private func validate()->[String:Any]?{
         let firstName = self.tfFirstName.text ?? ""
@@ -331,6 +319,21 @@ extension MyAccount{
             Utility.main.showAlert(message: Strings.PROFILE_UPDATED.text, title: Strings.CONFIRMATION.text) {
                 self.navigationController?.popViewController(animated: true)
             }
+        }) { (error) in
+            print(error)
+        }
+    }
+    func uploadProfile(){
+        let id = AppStateManager.sharedInstance.loggedInUser.user?.id ?? ""
+        
+        guard let image: NSData = NSData(data: (self.profileImage ?? UIImage()).jpegData(compressionQuality: 0.1)!) as NSData? else{return}
+        
+        let param:[String:Any] = ["image":image]
+        
+        APIManager.sharedInstance.usersAPIManager.UploadProfile(id: id, params: param, success: { (responseObject) in
+            guard let user = Mapper<UserModel>().map(JSON: responseObject) else{return}
+            user.authToken = AppStateManager.sharedInstance.loggedInUser.authToken
+            AppStateManager.sharedInstance.saveUser(user: user)
         }) { (error) in
             print(error)
         }

@@ -11,6 +11,7 @@ enum Route: String {
     case Login = "/auth/shipper/login"
     case ForgotPassword = "/auth/forget-pass"
     case UpdateProfile = "/api/user/"
+    case UploadProfile = "/upload/profile-pic"
     
     //MARK:- ATTRIBUTES
     case Country = "/api/country"

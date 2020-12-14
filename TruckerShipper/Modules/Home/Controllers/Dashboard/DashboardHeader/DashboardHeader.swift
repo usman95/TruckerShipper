@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class DashboardHeader: UIView {
 
@@ -29,6 +30,9 @@ class DashboardHeader: UIView {
     }
 
     func setData(){
+        let shipperImageURL = AppStateManager.sharedInstance.loggedInUser.user?.profileImageUrl ?? ""
+        self.imgShipper.sd_setImage(with: URL(string: shipperImageURL), placeholderImage: UIImage(named: "profilePlaceHolder"))
+        
         let firstName = AppStateManager.sharedInstance.loggedInUser.user?.firstName ?? ""
         let lastName = AppStateManager.sharedInstance.loggedInUser.user?.lastName ?? ""
         

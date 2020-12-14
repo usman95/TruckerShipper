@@ -10,6 +10,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MyAccount" customModule="TruckerShipper" customModuleProvider="target">
             <connections>
                 <outlet property="btnSaveProfile" destination="A1X-Fa-C39" id="pZ4-4a-eIE"/>
+                <outlet property="imgProfile" destination="h4I-4e-TAO" id="gUt-hD-kJi"/>
                 <outlet property="tfAddress" destination="T5m-Ww-jzf" id="Stk-eM-2JZ"/>
                 <outlet property="tfCity" destination="aJD-J1-Hvy" id="rCi-lG-BRW"/>
                 <outlet property="tfCompany" destination="Mlo-Ub-35U" id="6NX-Iz-wM7"/>
@@ -85,7 +86,7 @@
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mbj-km-rGs">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="153"/>
                                     <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TempPlacholder" translatesAutoresizingMaskIntoConstraints="NO" id="h4I-4e-TAO" customClass="RoundedImage" customModule="TruckerShipper" customModuleProvider="target">
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profilePlaceHolder" translatesAutoresizingMaskIntoConstraints="NO" id="h4I-4e-TAO" customClass="RoundedImage" customModule="TruckerShipper" customModuleProvider="target">
                                             <rect key="frame" x="160.5" y="16" width="93" height="93"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" secondItem="h4I-4e-TAO" secondAttribute="height" multiplier="1:1" id="0V6-A2-8ss"/>
@@ -97,6 +98,9 @@
                                             <state key="normal" title="Profile Image">
                                                 <color key="titleColor" red="0.0" green="0.27608564499999999" blue="0.62137049440000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </state>
+                                            <connections>
+                                                <action selector="onBtnProfileImage:" destination="-1" eventType="touchUpInside" id="5vW-jS-Hwv"/>
+                                            </connections>
                                         </button>
                                     </subviews>
                                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -1013,7 +1017,7 @@
     <resources>
         <image name="Back" width="32" height="32"/>
         <image name="NavBar" width="375" height="95"/>
-        <image name="TempPlacholder" width="52.5" height="52.5"/>
         <image name="dropDownBlack" width="10" height="10"/>
+        <image name="profilePlaceHolder" width="180" height="180"/>
     </resources>
 </document>

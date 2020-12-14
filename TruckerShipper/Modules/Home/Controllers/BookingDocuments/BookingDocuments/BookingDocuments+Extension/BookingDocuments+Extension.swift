@@ -9,7 +9,6 @@
 import UIKit
 import MobileCoreServices
 
-
 extension BookingDocuments{
     func uploadFromiCloudDrive(){
         let types = [kUTTypePDF, kUTTypeText, kUTTypeRTF, kUTTypeSpreadsheet]

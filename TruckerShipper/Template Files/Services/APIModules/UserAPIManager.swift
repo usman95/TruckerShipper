@@ -46,4 +46,10 @@ class UsersAPIManager: APIManagerBase {
         let route: URL = POSTURLforRoute(route: Route.UpdateProfile.rawValue+id)!
         self.putDictionaryResponseWith(route: route, parameters: params, success: success, failure: failure, withHeader: true)
     }
+    //MARK:- UploadProfile
+    func UploadProfile(id: String, params: Parameters, success: @escaping DefaultAPISuccessClosure, failure: @escaping DefaultAPIFailureClosure){
+        Utility.showLoader()
+        let route: URL = POSTURLforRoute(route: Route.UpdateProfile.rawValue+id+Route.UploadProfile.rawValue)! as URL
+        self.postMultipartDictionaryResponseWith(route: route, parameters: params, success: success, failure: failure, withHeader: true)
+    }
 }

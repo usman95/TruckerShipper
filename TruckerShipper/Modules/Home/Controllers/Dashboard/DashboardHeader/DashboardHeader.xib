@@ -16,7 +16,7 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Drf-JL-aGG">
                     <rect key="frame" x="0.0" y="8" width="414" height="104.33333333333333"/>
                     <subviews>
-                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TempPlacholder" translatesAutoresizingMaskIntoConstraints="NO" id="n2g-nH-2xe" customClass="RoundedImage" customModule="TruckerShipper" customModuleProvider="target">
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profilePlaceHolder" translatesAutoresizingMaskIntoConstraints="NO" id="n2g-nH-2xe" customClass="RoundedImage" customModule="TruckerShipper" customModuleProvider="target">
                             <rect key="frame" x="24" y="16" width="72.333333333333329" height="72.333333333333329"/>
                             <constraints>
                                 <constraint firstAttribute="width" secondItem="n2g-nH-2xe" secondAttribute="height" multiplier="1:1" id="KEc-yB-Kd0"/>
@@ -487,8 +487,8 @@
         <image name="Cancelled" width="29" height="27.5"/>
         <image name="CloseBlue" width="20" height="19"/>
         <image name="InProgress" width="29" height="28"/>
-        <image name="TempPlacholder" width="52.5" height="52.5"/>
         <image name="Total" width="29" height="27.5"/>
         <image name="magnifyingglass" catalog="system" width="128" height="115"/>
+        <image name="profilePlaceHolder" width="180" height="180"/>
     </resources>
 </document>

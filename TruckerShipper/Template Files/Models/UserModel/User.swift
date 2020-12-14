@@ -35,6 +35,7 @@ public class User: Object, Mappable {
         static let company = "company"
         static let ntn = "ntn"
         static let website = "website"
+        static let profileImageUrl = "profileImageUrl"
     }
     
     // MARK: Properties
@@ -59,6 +60,7 @@ public class User: Object, Mappable {
     @objc dynamic var company: String? = ""
     @objc dynamic var ntn: String? = ""
     @objc dynamic var website: String? = ""
+    @objc dynamic var profileImageUrl: String? = ""
     
     // MARK: ObjectMapper Initializers
     /// Map a JSON object to this class using ObjectMapper.
@@ -98,6 +100,7 @@ public class User: Object, Mappable {
         company <- map[SerializationKeys.company]
         ntn <- map[SerializationKeys.ntn]
         website <- map[SerializationKeys.website]
+        profileImageUrl <- map[SerializationKeys.profileImageUrl]
     }
     
     
