@@ -22,8 +22,7 @@ struct Constants {
     static let DEFAULTS_USER_KEY           = "User"
     static var DeviceType                  = "ios"
     static var DeviceToken                 = "No certificates"
-    static let serverDateFormat            = "yyyy-MM-dd HH:mm:ss.SSS"
-    static let serverDateFormat1           = "yyyy-MM-dd HH:mm:ss"
+    static let serverDateFormat            = "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'"
     static let PAGINATION_PAGE_SIZE        = 10
     static let VERIFY_CODE_TIME_LIMIT      = 5*60
     static var adminPhone                  = "123456"

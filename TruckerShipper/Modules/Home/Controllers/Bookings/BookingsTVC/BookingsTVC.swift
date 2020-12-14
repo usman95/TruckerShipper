@@ -11,7 +11,7 @@ import UIKit
 class BookingsTVC: UITableViewCell {
 
     @IBOutlet weak var lblDistanceInKM: UILabelDeviceClass!
-    @IBOutlet weak var lblTimeInHours: UILabelDeviceClass!
+    @IBOutlet weak var lblDuration: UILabelDeviceClass!
     @IBOutlet weak var lblPickUpTime: UILabelDeviceClass!
     @IBOutlet weak var lblPickUpDate: UILabelDeviceClass!
     @IBOutlet weak var lblDropOffTime: UILabelDeviceClass!
@@ -21,12 +21,25 @@ class BookingsTVC: UITableViewCell {
     
     func setData(data: BookingModel){
         self.lblDistanceInKM.text = "\(data.totalDistance) \(Strings.KM.text)"
-//        self.lblTimeInHours.text = data
-//        self.lblPickUpTime.text = data
-//        self.lblPickUpDate.text = data
-//        self.lblDropOffTime.text = data
-//        self.lblDropOffDate.text = data
-//        self.lblPickUpAddress.text = data
-//        self.lblDropOffAddress.text = data
+        
+        let totalDuration = data.totalDuration ?? ""
+        self.lblDuration.text = totalDuration.isEmpty ? "-" : totalDuration
+        
+        let pickUpDateString = data.pickUpDate ?? "2020-12-14T14:24:59.741Z"
+        let pickUpTime = Utility.main.stringDateFormatter(dateStr: pickUpDateString, dateFormat: Constants.serverDateFormat, formatteddate: "hh:mm a")
+        let pickUpDate = Utility.main.stringDateFormatter(dateStr: pickUpDateString, dateFormat: Constants.serverDateFormat, formatteddate: "d/MMM/yy")
+        
+        self.lblPickUpTime.text = pickUpTime
+        self.lblPickUpDate.text = pickUpDate
+        
+        let bookingDateString = data.bookingDate ?? "2020-12-14T14:24:59.741Z"
+        let bookingTime = Utility.main.stringDateFormatter(dateStr: bookingDateString, dateFormat: Constants.serverDateFormat, formatteddate: "hh:mm a")
+        let bookingDate = Utility.main.stringDateFormatter(dateStr: bookingDateString, dateFormat: Constants.serverDateFormat, formatteddate: "d/MMM/yy")
+        
+        self.lblDropOffTime.text = bookingTime
+        self.lblDropOffDate.text = bookingDate
+        
+        self.lblPickUpAddress.text = data.pickup?.address ?? ""
+        self.lblDropOffAddress.text = data.dropOff?.address ?? ""
     }
 }

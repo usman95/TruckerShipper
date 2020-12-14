@@ -45,6 +45,8 @@ class Home: BaseController {
     var dropOffLocationMarker = GMSMarker()
     var flagShouldReverseGeoCode = false
     
+    var routeDuration: String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setData()
@@ -220,6 +222,7 @@ extension Home{
     private func pushToLoadDetails(){
         guard var locationAttribute = self.validate() else {return}
         locationAttribute["totalDistance"] = self.getDistance() ?? 0
+        locationAttribute["totalDuration"] = self.routeDuration ?? ""
         
         let controller = LoadDetails()
         controller.bookingRequest = self.bookingRequest
@@ -375,6 +378,14 @@ extension Home{
     private func drawRoute(routesArray: [JSON]) {
         if !routesArray.isEmpty{
             let routeDict = routesArray[0]
+            
+            if let legs = routeDict["legs"].arrayValue.first?.dictionary{
+                if let duration = legs["duration"]?.dictionary{
+                    let durationValue = duration["text"]?.stringValue
+                    self.routeDuration = durationValue
+                }
+            }
+            
             let routeOverviewPolyline = routeDict["overview_polyline"].dictionary
             let points = routeOverviewPolyline?["points"]?.stringValue
             self.path = GMSPath.init(fromEncodedPath: points ?? "")!

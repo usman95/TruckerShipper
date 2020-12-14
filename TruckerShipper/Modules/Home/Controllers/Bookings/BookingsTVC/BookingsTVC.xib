@@ -231,10 +231,10 @@
                 <outlet property="lblDropOffAddress" destination="L1r-gw-AdH" id="Gnh-bS-byL"/>
                 <outlet property="lblDropOffDate" destination="vLx-sL-b1S" id="Dlp-1v-Asi"/>
                 <outlet property="lblDropOffTime" destination="XRP-E6-39E" id="6NL-M1-HfB"/>
+                <outlet property="lblDuration" destination="bqg-wC-nCO" id="aqf-lU-Jng"/>
                 <outlet property="lblPickUpAddress" destination="zlJ-VM-5lg" id="y2D-FH-cZG"/>
                 <outlet property="lblPickUpDate" destination="2zu-3I-Hw3" id="fWe-XB-wwX"/>
                 <outlet property="lblPickUpTime" destination="cqH-7g-r2V" id="5gJ-ba-0KF"/>
-                <outlet property="lblTimeInHours" destination="bqg-wC-nCO" id="BCO-ii-4GS"/>
             </connections>
             <point key="canvasLocation" x="137.68115942028987" y="84.375"/>
         </tableViewCell>
