@@ -47,14 +47,14 @@
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vot-PP-4a3">
                                             <rect key="frame" x="0.0" y="0.0" width="325" height="56"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LanguageOption" translatesAutoresizingMaskIntoConstraints="NO" id="TH0-qC-DRh">
-                                                    <rect key="frame" x="20" y="14" width="28" height="28"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Language" translatesAutoresizingMaskIntoConstraints="NO" id="TH0-qC-DRh">
+                                                    <rect key="frame" x="19.999999999999996" y="11.333333333333343" width="33.666666666666657" height="33.333333333333336"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="TH0-qC-DRh" secondAttribute="height" multiplier="1:1" id="Opv-s5-fhT"/>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Language" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tyW-jd-15J" customClass="UILabelDeviceClass" customModule="TruckerShipper" customModuleProvider="target">
-                                                    <rect key="frame" x="59.999999999999993" y="15.333333333333341" width="85.333333333333314" height="25.333333333333329"/>
+                                                    <rect key="frame" x="65.666666666666686" y="15.333333333333341" width="85.333333333333314" height="25.333333333333329"/>
                                                     <fontDescription key="fontDescription" name="NotoSansOriya-Bold" family="Noto Sans Oriya" pointSize="18"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
@@ -83,7 +83,7 @@
                                                 <constraint firstAttribute="width" secondItem="vot-PP-4a3" secondAttribute="height" multiplier="325:56" id="FZk-lO-0K7"/>
                                                 <constraint firstItem="TH0-qC-DRh" firstAttribute="leading" secondItem="vot-PP-4a3" secondAttribute="leading" constant="20" id="G7F-qS-mLX"/>
                                                 <constraint firstItem="tyW-jd-15J" firstAttribute="centerY" secondItem="vot-PP-4a3" secondAttribute="centerY" id="J71-8G-FeZ"/>
-                                                <constraint firstItem="TH0-qC-DRh" firstAttribute="height" secondItem="vot-PP-4a3" secondAttribute="height" multiplier="0.5" id="alc-q7-MxL"/>
+                                                <constraint firstItem="TH0-qC-DRh" firstAttribute="height" secondItem="vot-PP-4a3" secondAttribute="height" multiplier="0.6" id="alc-q7-MxL"/>
                                                 <constraint firstItem="TH0-qC-DRh" firstAttribute="centerY" secondItem="vot-PP-4a3" secondAttribute="centerY" id="bHs-a0-Gdd"/>
                                                 <constraint firstItem="tyW-jd-15J" firstAttribute="leading" secondItem="TH0-qC-DRh" secondAttribute="trailing" constant="12" id="eCE-IJ-xuV"/>
                                                 <constraint firstItem="gk5-Au-c0o" firstAttribute="centerY" secondItem="vot-PP-4a3" secondAttribute="centerY" id="ofG-Qt-76V"/>
@@ -92,14 +92,14 @@
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bqO-Hh-lkK">
                                             <rect key="frame" x="0.0" y="64" width="325" height="56"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="NotificationOption" translatesAutoresizingMaskIntoConstraints="NO" id="DH1-mR-p6D">
-                                                    <rect key="frame" x="20" y="14" width="28" height="28"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MyBookings" translatesAutoresizingMaskIntoConstraints="NO" id="DH1-mR-p6D">
+                                                    <rect key="frame" x="19.999999999999996" y="11.333333333333314" width="33.666666666666657" height="33.333333333333336"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="DH1-mR-p6D" secondAttribute="height" multiplier="1:1" id="8kt-mk-giF"/>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Bookings" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tsd-lw-nOS" customClass="UILabelDeviceClass" customModule="TruckerShipper" customModuleProvider="target">
-                                                    <rect key="frame" x="59.999999999999993" y="17.333333333333314" width="104.33333333333331" height="21.666666666666671"/>
+                                                    <rect key="frame" x="65.666666666666686" y="17.333333333333314" width="104.33333333333331" height="21.666666666666671"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
@@ -121,7 +121,7 @@
                                                 <constraint firstItem="DH1-mR-p6D" firstAttribute="centerY" secondItem="bqO-Hh-lkK" secondAttribute="centerY" id="4eE-LR-CGi"/>
                                                 <constraint firstAttribute="bottom" secondItem="yV5-fb-teb" secondAttribute="bottom" id="Fxa-2U-wBh"/>
                                                 <constraint firstItem="DH1-mR-p6D" firstAttribute="leading" secondItem="bqO-Hh-lkK" secondAttribute="leading" constant="20" id="L71-XX-JkN"/>
-                                                <constraint firstItem="DH1-mR-p6D" firstAttribute="height" secondItem="bqO-Hh-lkK" secondAttribute="height" multiplier="0.5" id="XaB-bd-bBN"/>
+                                                <constraint firstItem="DH1-mR-p6D" firstAttribute="height" secondItem="bqO-Hh-lkK" secondAttribute="height" multiplier="0.6" id="XaB-bd-bBN"/>
                                                 <constraint firstItem="tsd-lw-nOS" firstAttribute="centerY" secondItem="bqO-Hh-lkK" secondAttribute="centerY" id="gpX-26-9TD"/>
                                                 <constraint firstItem="yV5-fb-teb" firstAttribute="leading" secondItem="bqO-Hh-lkK" secondAttribute="leading" id="i7o-v0-Ky7"/>
                                                 <constraint firstItem="yV5-fb-teb" firstAttribute="top" secondItem="bqO-Hh-lkK" secondAttribute="top" id="mLA-97-ijP"/>
@@ -132,14 +132,14 @@
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zmn-pk-gZh">
                                             <rect key="frame" x="0.0" y="128" width="325" height="56"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="HistoryOption" translatesAutoresizingMaskIntoConstraints="NO" id="lzL-bH-HHH">
-                                                    <rect key="frame" x="20" y="14" width="28" height="28"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ShipmentTracking" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lzL-bH-HHH">
+                                                    <rect key="frame" x="19.999999999999996" y="11.333333333333314" width="33.666666666666657" height="33.333333333333336"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="lzL-bH-HHH" secondAttribute="height" multiplier="1:1" id="m6a-hn-74x"/>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Shipment Tracking" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uaw-U8-ndd" customClass="UILabelDeviceClass" customModule="TruckerShipper" customModuleProvider="target">
-                                                    <rect key="frame" x="60" y="17.333333333333314" width="151" height="21.666666666666671"/>
+                                                    <rect key="frame" x="65.666666666666686" y="17.333333333333314" width="151" height="21.666666666666671"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
@@ -164,7 +164,7 @@
                                                 <constraint firstAttribute="trailing" secondItem="dXO-3Y-bke" secondAttribute="trailing" id="PIl-yz-xOy"/>
                                                 <constraint firstItem="dXO-3Y-bke" firstAttribute="leading" secondItem="zmn-pk-gZh" secondAttribute="leading" id="TI8-0H-MhZ"/>
                                                 <constraint firstItem="Uaw-U8-ndd" firstAttribute="centerY" secondItem="zmn-pk-gZh" secondAttribute="centerY" id="Xbo-3B-bxd"/>
-                                                <constraint firstItem="lzL-bH-HHH" firstAttribute="height" secondItem="zmn-pk-gZh" secondAttribute="height" multiplier="0.5" id="Yu6-q6-DmJ"/>
+                                                <constraint firstItem="lzL-bH-HHH" firstAttribute="height" secondItem="zmn-pk-gZh" secondAttribute="height" multiplier="0.6" id="Yu6-q6-DmJ"/>
                                                 <constraint firstItem="dXO-3Y-bke" firstAttribute="top" secondItem="zmn-pk-gZh" secondAttribute="top" id="Zqf-ti-nnS"/>
                                                 <constraint firstItem="lzL-bH-HHH" firstAttribute="centerY" secondItem="zmn-pk-gZh" secondAttribute="centerY" id="ngg-HI-SuL"/>
                                             </constraints>
@@ -172,14 +172,14 @@
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FqT-1d-R45">
                                             <rect key="frame" x="0.0" y="192" width="325" height="56"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="HistoryOption" translatesAutoresizingMaskIntoConstraints="NO" id="tYT-f7-bJK">
-                                                    <rect key="frame" x="20" y="14" width="28" height="28"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Notifications" translatesAutoresizingMaskIntoConstraints="NO" id="tYT-f7-bJK">
+                                                    <rect key="frame" x="19.999999999999996" y="11.333333333333314" width="33.666666666666657" height="33.333333333333336"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="tYT-f7-bJK" secondAttribute="height" multiplier="1:1" id="KdK-Jc-1Yg"/>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Notifications" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DE5-Cl-AMY" customClass="UILabelDeviceClass" customModule="TruckerShipper" customModuleProvider="target">
-                                                    <rect key="frame" x="60" y="17.333333333333314" width="102" height="21.666666666666671"/>
+                                                    <rect key="frame" x="65.666666666666671" y="17.333333333333314" width="102.00000000000001" height="21.666666666666671"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
@@ -200,7 +200,7 @@
                                             <constraints>
                                                 <constraint firstItem="DE5-Cl-AMY" firstAttribute="centerY" secondItem="FqT-1d-R45" secondAttribute="centerY" id="6ZI-e9-fF2"/>
                                                 <constraint firstItem="tYT-f7-bJK" firstAttribute="leading" secondItem="FqT-1d-R45" secondAttribute="leading" constant="20" id="9Z4-EZ-sZb"/>
-                                                <constraint firstItem="tYT-f7-bJK" firstAttribute="height" secondItem="FqT-1d-R45" secondAttribute="height" multiplier="0.5" id="Oke-Bf-VI1"/>
+                                                <constraint firstItem="tYT-f7-bJK" firstAttribute="height" secondItem="FqT-1d-R45" secondAttribute="height" multiplier="0.6" id="Oke-Bf-VI1"/>
                                                 <constraint firstItem="DE5-Cl-AMY" firstAttribute="leading" secondItem="tYT-f7-bJK" secondAttribute="trailing" constant="12" id="TQy-s5-oMY"/>
                                                 <constraint firstItem="vOg-zW-dOA" firstAttribute="leading" secondItem="FqT-1d-R45" secondAttribute="leading" id="WCs-DW-dDH"/>
                                                 <constraint firstAttribute="trailing" secondItem="vOg-zW-dOA" secondAttribute="trailing" id="Woh-bP-Bed"/>
@@ -212,14 +212,14 @@
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gfA-fw-IjZ">
                                             <rect key="frame" x="0.0" y="256" width="325" height="56"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="HistoryOption" translatesAutoresizingMaskIntoConstraints="NO" id="NUD-WR-PfF">
-                                                    <rect key="frame" x="20" y="14" width="28" height="28"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Reports" translatesAutoresizingMaskIntoConstraints="NO" id="NUD-WR-PfF">
+                                                    <rect key="frame" x="19.999999999999996" y="11.333333333333314" width="33.666666666666657" height="33.333333333333336"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="NUD-WR-PfF" secondAttribute="height" multiplier="1:1" id="Kl2-Wu-qAx"/>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reports" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vL2-PG-8aa" customClass="UILabelDeviceClass" customModule="TruckerShipper" customModuleProvider="target">
-                                                    <rect key="frame" x="60" y="17.333333333333314" width="63.666666666666657" height="21.666666666666671"/>
+                                                    <rect key="frame" x="65.666666666666671" y="17.333333333333314" width="63.666666666666671" height="21.666666666666671"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
@@ -238,7 +238,7 @@
                                                 </button>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="NUD-WR-PfF" firstAttribute="height" secondItem="gfA-fw-IjZ" secondAttribute="height" multiplier="0.5" id="Biy-V3-JeZ"/>
+                                                <constraint firstItem="NUD-WR-PfF" firstAttribute="height" secondItem="gfA-fw-IjZ" secondAttribute="height" multiplier="0.6" id="Biy-V3-JeZ"/>
                                                 <constraint firstItem="NUD-WR-PfF" firstAttribute="leading" secondItem="gfA-fw-IjZ" secondAttribute="leading" constant="20" id="GMr-oP-Fj4"/>
                                                 <constraint firstItem="SgV-9q-J7b" firstAttribute="top" secondItem="gfA-fw-IjZ" secondAttribute="top" id="HSD-OQ-l5g"/>
                                                 <constraint firstAttribute="trailing" secondItem="SgV-9q-J7b" secondAttribute="trailing" id="KHM-HR-ls9"/>
@@ -252,14 +252,14 @@
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c9N-nj-eGj">
                                             <rect key="frame" x="0.0" y="320" width="325" height="56"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="HistoryOption" translatesAutoresizingMaskIntoConstraints="NO" id="QL5-Ge-lmD">
-                                                    <rect key="frame" x="20" y="14" width="28" height="28"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MyContracts" translatesAutoresizingMaskIntoConstraints="NO" id="QL5-Ge-lmD">
+                                                    <rect key="frame" x="19.999999999999996" y="11.333333333333371" width="33.666666666666657" height="33.333333333333336"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="QL5-Ge-lmD" secondAttribute="height" multiplier="1:1" id="ca2-1V-lzf"/>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Contracts" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gFE-Pg-xZ0" customClass="UILabelDeviceClass" customModule="TruckerShipper" customModuleProvider="target">
-                                                    <rect key="frame" x="60" y="17.333333333333371" width="109" height="21.666666666666671"/>
+                                                    <rect key="frame" x="65.666666666666671" y="17.333333333333371" width="109.00000000000001" height="21.666666666666671"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
@@ -281,7 +281,7 @@
                                                 <constraint firstItem="gFE-Pg-xZ0" firstAttribute="centerY" secondItem="c9N-nj-eGj" secondAttribute="centerY" id="4ge-pH-jDO"/>
                                                 <constraint firstItem="QL5-Ge-lmD" firstAttribute="leading" secondItem="c9N-nj-eGj" secondAttribute="leading" constant="20" id="8ks-19-Cge"/>
                                                 <constraint firstAttribute="bottom" secondItem="2iI-3G-fIF" secondAttribute="bottom" id="Gr0-Wx-4SZ"/>
-                                                <constraint firstItem="QL5-Ge-lmD" firstAttribute="height" secondItem="c9N-nj-eGj" secondAttribute="height" multiplier="0.5" id="NX1-gi-OH1"/>
+                                                <constraint firstItem="QL5-Ge-lmD" firstAttribute="height" secondItem="c9N-nj-eGj" secondAttribute="height" multiplier="0.6" id="NX1-gi-OH1"/>
                                                 <constraint firstItem="gFE-Pg-xZ0" firstAttribute="leading" secondItem="QL5-Ge-lmD" secondAttribute="trailing" constant="12" id="Zkq-1e-DRw"/>
                                                 <constraint firstAttribute="trailing" secondItem="2iI-3G-fIF" secondAttribute="trailing" id="a4z-Sb-mJ1"/>
                                                 <constraint firstItem="2iI-3G-fIF" firstAttribute="top" secondItem="c9N-nj-eGj" secondAttribute="top" id="aJM-Qg-dfy"/>
@@ -292,14 +292,14 @@
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UOL-ro-lNH">
                                             <rect key="frame" x="0.0" y="384" width="325" height="56"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="HistoryOption" translatesAutoresizingMaskIntoConstraints="NO" id="sAh-JK-433">
-                                                    <rect key="frame" x="20" y="14" width="28" height="28"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MyAccount" translatesAutoresizingMaskIntoConstraints="NO" id="sAh-JK-433">
+                                                    <rect key="frame" x="19.999999999999996" y="11.333333333333371" width="33.666666666666657" height="33.333333333333336"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="sAh-JK-433" secondAttribute="height" multiplier="1:1" id="IkM-Wd-4dR"/>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Account" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kBj-A7-0re" customClass="UILabelDeviceClass" customModule="TruckerShipper" customModuleProvider="target">
-                                                    <rect key="frame" x="59.999999999999993" y="17.333333333333371" width="96.333333333333314" height="21.666666666666671"/>
+                                                    <rect key="frame" x="65.666666666666686" y="17.333333333333371" width="96.333333333333314" height="21.666666666666671"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
@@ -324,7 +324,7 @@
                                                 <constraint firstAttribute="trailing" secondItem="x5J-P6-MNe" secondAttribute="trailing" id="KBU-DA-RlS"/>
                                                 <constraint firstItem="kBj-A7-0re" firstAttribute="centerY" secondItem="UOL-ro-lNH" secondAttribute="centerY" id="KmZ-PK-PNf"/>
                                                 <constraint firstAttribute="bottom" secondItem="x5J-P6-MNe" secondAttribute="bottom" id="VZg-Pc-YIT"/>
-                                                <constraint firstItem="sAh-JK-433" firstAttribute="height" secondItem="UOL-ro-lNH" secondAttribute="height" multiplier="0.5" id="XN7-VF-Mzf"/>
+                                                <constraint firstItem="sAh-JK-433" firstAttribute="height" secondItem="UOL-ro-lNH" secondAttribute="height" multiplier="0.6" id="XN7-VF-Mzf"/>
                                                 <constraint firstItem="sAh-JK-433" firstAttribute="leading" secondItem="UOL-ro-lNH" secondAttribute="leading" constant="20" id="dFe-AC-6mQ"/>
                                                 <constraint firstItem="kBj-A7-0re" firstAttribute="leading" secondItem="sAh-JK-433" secondAttribute="trailing" constant="12" id="qrN-Q5-rou"/>
                                             </constraints>
@@ -332,14 +332,14 @@
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="McF-EO-oJe">
                                             <rect key="frame" x="0.0" y="448" width="325" height="56"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="HistoryOption" translatesAutoresizingMaskIntoConstraints="NO" id="uUs-R5-qCq">
-                                                    <rect key="frame" x="20" y="14" width="28" height="28"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ChangePassword" translatesAutoresizingMaskIntoConstraints="NO" id="uUs-R5-qCq">
+                                                    <rect key="frame" x="19.999999999999996" y="11.333333333333371" width="33.666666666666657" height="33.333333333333336"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="uUs-R5-qCq" secondAttribute="height" multiplier="1:1" id="vAz-Sd-Izi"/>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Change Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yjn-Gv-czr" customClass="UILabelDeviceClass" customModule="TruckerShipper" customModuleProvider="target">
-                                                    <rect key="frame" x="60.000000000000014" y="17.333333333333371" width="145.33333333333337" height="21.666666666666671"/>
+                                                    <rect key="frame" x="65.666666666666671" y="17.333333333333371" width="145.33333333333331" height="21.666666666666671"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
@@ -365,21 +365,21 @@
                                                 <constraint firstItem="uUs-R5-qCq" firstAttribute="leading" secondItem="McF-EO-oJe" secondAttribute="leading" constant="20" id="iaU-t7-wDB"/>
                                                 <constraint firstAttribute="bottom" secondItem="ldw-JE-pJC" secondAttribute="bottom" id="iu2-Aq-Yfs"/>
                                                 <constraint firstItem="ldw-JE-pJC" firstAttribute="leading" secondItem="McF-EO-oJe" secondAttribute="leading" id="oXw-0B-My3"/>
-                                                <constraint firstItem="uUs-R5-qCq" firstAttribute="height" secondItem="McF-EO-oJe" secondAttribute="height" multiplier="0.5" id="rfH-H6-Lht"/>
+                                                <constraint firstItem="uUs-R5-qCq" firstAttribute="height" secondItem="McF-EO-oJe" secondAttribute="height" multiplier="0.6" id="rfH-H6-Lht"/>
                                                 <constraint firstItem="Yjn-Gv-czr" firstAttribute="centerY" secondItem="McF-EO-oJe" secondAttribute="centerY" id="yjt-BD-Pgz"/>
                                             </constraints>
                                         </view>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ckm-mI-h7i">
                                             <rect key="frame" x="0.0" y="512" width="325" height="56"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LogoutOption" translatesAutoresizingMaskIntoConstraints="NO" id="JiG-qk-ad7">
-                                                    <rect key="frame" x="20" y="14" width="28" height="28"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logout" translatesAutoresizingMaskIntoConstraints="NO" id="JiG-qk-ad7">
+                                                    <rect key="frame" x="19.999999999999996" y="11.333333333333371" width="33.666666666666657" height="33.333333333333336"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="JiG-qk-ad7" secondAttribute="height" multiplier="1:1" id="UFL-uM-kIq"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LOGOUT" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yp1-SD-tdx" customClass="UILabelDeviceClass" customModule="TruckerShipper" customModuleProvider="target">
-                                                    <rect key="frame" x="59.999999999999993" y="17.333333333333371" width="73.333333333333314" height="21.666666666666671"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Logout" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yp1-SD-tdx" customClass="UILabelDeviceClass" customModule="TruckerShipper" customModuleProvider="target">
+                                                    <rect key="frame" x="65.666666666666671" y="17.333333333333371" width="56.666666666666671" height="21.666666666666671"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
@@ -401,7 +401,7 @@
                                                 <constraint firstAttribute="trailing" secondItem="5cF-vP-doB" secondAttribute="trailing" id="03b-Yy-hvp"/>
                                                 <constraint firstItem="JiG-qk-ad7" firstAttribute="centerY" secondItem="ckm-mI-h7i" secondAttribute="centerY" id="76a-aI-uMO"/>
                                                 <constraint firstItem="JiG-qk-ad7" firstAttribute="leading" secondItem="ckm-mI-h7i" secondAttribute="leading" constant="20" id="Alv-iS-ZpD"/>
-                                                <constraint firstItem="JiG-qk-ad7" firstAttribute="height" secondItem="ckm-mI-h7i" secondAttribute="height" multiplier="0.5" id="aBM-SL-eUr"/>
+                                                <constraint firstItem="JiG-qk-ad7" firstAttribute="height" secondItem="ckm-mI-h7i" secondAttribute="height" multiplier="0.6" id="aBM-SL-eUr"/>
                                                 <constraint firstItem="Yp1-SD-tdx" firstAttribute="leading" secondItem="JiG-qk-ad7" secondAttribute="trailing" constant="12" id="awW-zr-Vh3"/>
                                                 <constraint firstAttribute="bottom" secondItem="5cF-vP-doB" secondAttribute="bottom" id="gwg-u2-we4"/>
                                                 <constraint firstItem="5cF-vP-doB" firstAttribute="top" secondItem="ckm-mI-h7i" secondAttribute="top" id="qZ7-fo-wEg"/>
@@ -484,10 +484,15 @@
         </view>
     </objects>
     <resources>
-        <image name="HistoryOption" width="26" height="26"/>
-        <image name="LanguageOption" width="28" height="28"/>
+        <image name="ChangePassword" width="42" height="40"/>
+        <image name="Language" width="42" height="40"/>
         <image name="LogoSideMenu" width="212" height="123.66666412353516"/>
-        <image name="LogoutOption" width="26" height="26"/>
-        <image name="NotificationOption" width="22.666666030883789" height="26"/>
+        <image name="Logout" width="42" height="40"/>
+        <image name="MyAccount" width="42" height="40"/>
+        <image name="MyBookings" width="42" height="40"/>
+        <image name="MyContracts" width="42" height="40"/>
+        <image name="Notifications" width="42" height="40"/>
+        <image name="Reports" width="42" height="40"/>
+        <image name="ShipmentTracking" width="42" height="40"/>
     </resources>
 </document>
