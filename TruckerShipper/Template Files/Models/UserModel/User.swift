@@ -31,6 +31,10 @@ public class User: Object, Mappable {
         static let countryId = "countryId"
         static let createdBy = "createdBy"
         static let shipperType = "shipperType"
+        static let nicNo = "nicNo"
+        static let company = "company"
+        static let ntn = "ntn"
+        static let website = "website"
     }
     
     // MARK: Properties
@@ -51,6 +55,10 @@ public class User: Object, Mappable {
     @objc dynamic var countryId: AttributeModel?
     @objc dynamic var createdBy: CreatedByModel?
     @objc dynamic var shipperType: String? = ""
+    @objc dynamic var nicNo: String? = ""
+    @objc dynamic var company: String? = ""
+    @objc dynamic var ntn: String? = ""
+    @objc dynamic var website: String? = ""
     
     // MARK: ObjectMapper Initializers
     /// Map a JSON object to this class using ObjectMapper.
@@ -86,6 +94,10 @@ public class User: Object, Mappable {
         countryId <- map[SerializationKeys.countryId]
         createdBy <- map[SerializationKeys.createdBy]
         shipperType <- map[SerializationKeys.shipperType]
+        nicNo <- map[SerializationKeys.nicNo]
+        company <- map[SerializationKeys.company]
+        ntn <- map[SerializationKeys.ntn]
+        website <- map[SerializationKeys.website]
     }
     
     

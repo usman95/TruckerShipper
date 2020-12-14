@@ -7,22 +7,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "A4DAE2F0-976D-49D8-9BA2-7571035B165F"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "TruckerShipper/Modules/Home/Controllers/MyAccount/MyAccount.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "316"
-            endingLineNumber = "316"
-            landmarkName = "updateProfile()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "757F7C36-A0EE-42D2-900C-919FFCECB04C"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
@@ -49,22 +33,6 @@
             startingLineNumber = "53"
             endingLineNumber = "53"
             landmarkName = "getMyContracts()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "49739E39-FE06-4EC7-BD08-DD6F150D6594"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "TruckerShipper/Modules/Home/Controllers/MyAccount/MyAccount.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "318"
-            endingLineNumber = "318"
-            landmarkName = "updateProfile()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

@@ -89,4 +89,5 @@ enum Strings: String{
     case ASK_UPLOAD_DOCMENT_IMAGE_VIA = "How do you want to set your document?"
     case GALLERY = "Gallery"
     case CAMERA = "Camera"
+    case PROFILE_UPDATED = "Profile updated successfully."
 }

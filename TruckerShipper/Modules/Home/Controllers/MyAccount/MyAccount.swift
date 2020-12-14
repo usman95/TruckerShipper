@@ -40,10 +40,13 @@ class MyAccount: BaseController {
     var arrShipper = [String]()
     var selectedShipper: String?
     
+    var shipperProfile: UserModel?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setProfileData()
         self.callAPIs()
+        self.getUserDetails()
         // Do any additional setup after loading the view.
     }
     
@@ -66,20 +69,20 @@ class MyAccount: BaseController {
 //MARK:- Helper methods
 extension MyAccount{
     private func setData(){
-        let user = AppStateManager.sharedInstance.loggedInUser.user
+        let user = self.shipperProfile?.user
         
         self.tfFirstName.text = user?.firstName ?? ""
         self.tfLastName.text = user?.lastName ?? ""
         self.tfPhone.text = user?.contactNo ?? ""
         self.tfEmail.text = user?.email ?? ""
-//        self.tfNIC.text = user.
+        self.tfNIC.text = user?.nicNo ?? ""
 //        self.tfCountry.text = ""
 //        self.tfCity.text = ""
-//        self.tfAddress.text = ""
-//        self.tfShipperType.text = ""
-//        self.tfCompany.text = ""
-//        self.tfNTN.text = ""
-//        self.tfWebsite.text = ""
+        self.tfAddress.text = user?.address ?? ""
+        self.tfShipperType.text = user?.shipperType ?? ""
+        self.tfCompany.text = user?.company ?? ""
+        self.tfNTN.text = user?.ntn ?? ""
+        self.tfWebsite.text = user?.website ?? ""
     }
     private func callAPIs(){
         self.getCountries()
@@ -306,6 +309,15 @@ extension MyAccount{
             print(error)
         }
     }
+    private func getUserDetails(){
+        APIManager.sharedInstance.usersAPIManager.GetProfile(success: { (responseObject) in
+            guard let user = Mapper<UserModel>().map(JSON: responseObject) else{return}
+            self.shipperProfile = user
+            self.setData()
+        }) { (error) in
+            print(error)
+        }
+    }
     private func updateProfile(){
         let id = AppStateManager.sharedInstance.loggedInUser.user?.id ?? ""
         
@@ -313,7 +325,12 @@ extension MyAccount{
         print(params)
         
         APIManager.sharedInstance.usersAPIManager.UpdateProfile(id: id, params: params, success: { (responseObject) in
-            print(responseObject)
+            guard let user = Mapper<UserModel>().map(JSON: responseObject) else{return}
+            user.authToken = AppStateManager.sharedInstance.loggedInUser.authToken
+            AppStateManager.sharedInstance.saveUser(user: user)
+            Utility.main.showAlert(message: Strings.PROFILE_UPDATED.text, title: Strings.CONFIRMATION.text) {
+                self.navigationController?.popViewController(animated: true)
+            }
         }) { (error) in
             print(error)
         }

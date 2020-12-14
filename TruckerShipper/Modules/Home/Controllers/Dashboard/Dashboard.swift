@@ -16,10 +16,9 @@ class Dashboard: BaseController {
     
     let dashboardView = DashboardHeader.instanceFromNib() as! DashboardHeader
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         self.setUI()
-        // Do any additional setup after loading the view.
     }
     
     @IBAction func onBtnLoadRequest(_ sender: UIButtonDeviceClass) {
