@@ -54,6 +54,9 @@ class BookingsTVC: UITableViewCell {
         case .completed:
             self.btnViewTrips.isHidden = true
             self.btnAddDocuments.isHidden = true
+        case .rejected:
+            self.btnViewTrips.isHidden = true
+            self.btnAddDocuments.isHidden = true
         }
     }
 }

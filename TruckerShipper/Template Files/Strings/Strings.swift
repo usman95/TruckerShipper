@@ -86,4 +86,7 @@ enum Strings: String{
     case KARACHI = "Karachi"
     case KM = "KM"
     case HOURS = "HOURS"
+    case ASK_UPLOAD_DOCMENT_IMAGE_VIA = "How do you want to set your document?"
+    case GALLERY = "Gallery"
+    case CAMERA = "Camera"
 }

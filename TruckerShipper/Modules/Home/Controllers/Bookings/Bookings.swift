@@ -14,6 +14,7 @@ class Bookings: BaseController {
     @IBOutlet weak var btnPending: UIButtonStatesDeviceClass!
     @IBOutlet weak var btnInProgress: UIButtonStatesDeviceClass!
     @IBOutlet weak var btnCompleted: UIButtonStatesDeviceClass!
+    @IBOutlet weak var btnRejected: UIButtonStatesDeviceClass!
     @IBOutlet weak var tableView: UITableView!
     
     var bookingType = BookingType.pending
@@ -33,6 +34,7 @@ class Bookings: BaseController {
             self.btnPending.isSelected = true
             self.btnInProgress.isSelected = false
             self.btnCompleted.isSelected = false
+            self.btnRejected.isSelected = false
             
             self.arrBookings.removeAll()
             self.tableView.reloadData()
@@ -44,6 +46,7 @@ class Bookings: BaseController {
             self.btnPending.isSelected = false
             self.btnInProgress.isSelected = true
             self.btnCompleted.isSelected = false
+            self.btnRejected.isSelected = false
             
             self.arrBookings.removeAll()
             self.tableView.reloadData()
@@ -51,15 +54,28 @@ class Bookings: BaseController {
             self.bookingType = BookingType.inProgress
             self.recordsToSkip = 0
             self.getBookings()
-        default:
+        case 2:
             self.btnPending.isSelected = false
             self.btnInProgress.isSelected = false
             self.btnCompleted.isSelected = true
+            self.btnRejected.isSelected = false
             
             self.arrBookings.removeAll()
             self.tableView.reloadData()
             
             self.bookingType = BookingType.completed
+            self.recordsToSkip = 0
+            self.getBookings()
+        default:
+            self.btnPending.isSelected = false
+            self.btnInProgress.isSelected = false
+            self.btnCompleted.isSelected = false
+            self.btnRejected.isSelected = true
+            
+            self.arrBookings.removeAll()
+            self.tableView.reloadData()
+            
+            self.bookingType = BookingType.rejected
             self.recordsToSkip = 0
             self.getBookings()
         }

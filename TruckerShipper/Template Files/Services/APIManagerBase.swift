@@ -29,7 +29,8 @@ enum Route: String {
     //MARK:- ALL
     case ShipperContracts = "/api/shipper-contract"
     case BookingEstimate = "/api/booking-estimate"
-    case Bookings = "/api/booking"
+    case Bookings = "/api/booking/"
+    case UploadDocument = "/upload-document"
 }
 class APIManagerBase: NSObject {
     let baseURL = Constants.BaseURL

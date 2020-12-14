@@ -167,6 +167,11 @@ extension Home{
     private func pickLocationFromPlacePicker(){
         let autocompleteController = GMSAutocompleteViewController()
         autocompleteController.delegate = self
+        
+        let filter = GMSAutocompleteFilter()
+        filter.country = "PK"
+        autocompleteController.autocompleteFilter = filter
+        
         self.present(autocompleteController, animated: true, completion: nil)
     }
     private func setPickedAddressFromPlacePickerVC(_ place:GMSPlace){
@@ -362,6 +367,8 @@ extension Home: CLLocationManagerDelegate{
 //MARK:- Polyline
 extension Home{
     private func getRoute(){
+        Utility.showLoader()
+        
         let origin = "\(self.pickUpLocation?.latitude ?? 0.0),\(self.pickUpLocation?.longitude ?? 0.0)"
         let destination = "\(self.dropOffLocation?.latitude ?? 0.0),\(self.dropOffLocation?.longitude ?? 0.0)"
         let url = "https://maps.googleapis.com/maps/api/directions/json?origin=\(origin)&destination=\(destination)&mode=driving&key=\(Constants.apiKey)"
@@ -373,6 +380,7 @@ extension Home{
             } catch {
                 print("Hm, something is wrong here. Try connecting to the wifi.")
             }
+            Utility.hideLoader()
         }
     }
     private func drawRoute(routesArray: [JSON]) {

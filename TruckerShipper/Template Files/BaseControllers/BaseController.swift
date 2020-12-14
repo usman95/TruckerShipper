@@ -75,6 +75,11 @@ extension BaseController{
         controller.booking = booking
         self.navigationController?.pushViewController(controller, animated: true)
     }
+    func pushToWebView(fileURLString: String?){
+        let controller = WebView()
+        controller.fileURLString = fileURLString
+        self.navigationController?.pushViewController(controller, animated: true)
+    }
 }
 extension BaseController: UIGestureRecognizerDelegate {
     func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {

@@ -12,6 +12,7 @@
                 <outlet property="btnCompleted" destination="0Ny-Oy-1Ao" id="Nns-W4-csc"/>
                 <outlet property="btnInProgress" destination="5c5-4z-he8" id="cPF-yb-ZlZ"/>
                 <outlet property="btnPending" destination="x3t-08-VDU" id="LQP-qF-p11"/>
+                <outlet property="btnRejected" destination="UEU-UF-vln" id="9up-XG-gEU"/>
                 <outlet property="tableView" destination="jYM-2a-JKJ" id="7Qy-Bz-K6b"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -68,12 +69,12 @@
                     </constraints>
                 </view>
                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="WaD-yU-sRj">
-                    <rect key="frame" x="20" y="144" width="374" height="42"/>
+                    <rect key="frame" x="20" y="144" width="374" height="40"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x3t-08-VDU" customClass="UIButtonStatesDeviceClass" customModule="TruckerShipper" customModuleProvider="target">
-                            <rect key="frame" x="0.0" y="0.0" width="124.5" height="42"/>
+                            <rect key="frame" x="0.0" y="0.0" width="93.5" height="40"/>
                             <constraints>
-                                <constraint firstAttribute="width" secondItem="x3t-08-VDU" secondAttribute="height" multiplier="62:21" id="rr6-Li-0UF"/>
+                                <constraint firstAttribute="width" secondItem="x3t-08-VDU" secondAttribute="height" multiplier="93:40" id="6xM-ud-4tH"/>
                             </constraints>
                             <state key="normal" title="Pending"/>
                             <state key="selected" title="Pending"/>
@@ -89,7 +90,7 @@
                             </connections>
                         </button>
                         <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5c5-4z-he8" customClass="UIButtonStatesDeviceClass" customModule="TruckerShipper" customModuleProvider="target">
-                            <rect key="frame" x="124.5" y="0.0" width="125" height="42"/>
+                            <rect key="frame" x="93.5" y="0.0" width="93.5" height="40"/>
                             <state key="normal" title="In Progress"/>
                             <state key="selected" title="In Progress"/>
                             <userDefinedRuntimeAttributes>
@@ -104,7 +105,7 @@
                             </connections>
                         </button>
                         <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Ny-Oy-1Ao" customClass="UIButtonStatesDeviceClass" customModule="TruckerShipper" customModuleProvider="target">
-                            <rect key="frame" x="249.5" y="0.0" width="124.5" height="42"/>
+                            <rect key="frame" x="187" y="0.0" width="93.5" height="40"/>
                             <state key="normal" title="Completed"/>
                             <state key="selected" title="Completed"/>
                             <userDefinedRuntimeAttributes>
@@ -118,10 +119,24 @@
                                 <action selector="onBtnBookingsStatus:" destination="-1" eventType="touchUpInside" id="MFb-6G-FIb"/>
                             </connections>
                         </button>
+                        <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UEU-UF-vln" customClass="UIButtonStatesDeviceClass" customModule="TruckerShipper" customModuleProvider="target">
+                            <rect key="frame" x="280.5" y="0.0" width="93.5" height="40"/>
+                            <state key="normal" title="Rejected"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="iPhoneFontSize">
+                                    <real key="value" value="15"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="string" keyPath="iPhoneFontWeight" value="bold"/>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="isCircular" value="YES"/>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="onBtnBookingsStatus:" destination="-1" eventType="touchUpInside" id="Jho-I9-xq0"/>
+                            </connections>
+                        </button>
                     </subviews>
                 </stackView>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="jYM-2a-JKJ">
-                    <rect key="frame" x="0.0" y="190" width="414" height="672"/>
+                    <rect key="frame" x="0.0" y="188" width="414" height="674"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                     <connections>
                         <outlet property="dataSource" destination="-1" id="jJE-8O-Mry"/>

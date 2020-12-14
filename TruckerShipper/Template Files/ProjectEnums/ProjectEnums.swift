@@ -31,6 +31,7 @@ enum BookingType: String{
     case pending = "pending"
     case inProgress = "in-progress"//"accepted"
     case completed = "completed"//"rejected","cancelled"
+    case rejected = "rejected"
 }
 enum BookingRequest{
     case load
