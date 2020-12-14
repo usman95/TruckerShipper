@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BookingDocuments" customModule="TruckerShipper" customModuleProvider="target">
+            <connections>
+                <outlet property="tableView" destination="HWd-pq-pjC" id="K63-Np-Kw0"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lHc-eM-NcQ">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="124"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="NavBar" translatesAutoresizingMaskIntoConstraints="NO" id="CI7-zh-ZXQ">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="124"/>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="CI7-zh-ZXQ" secondAttribute="bottom" id="Jfl-HG-DYb"/>
+                        <constraint firstAttribute="trailing" secondItem="CI7-zh-ZXQ" secondAttribute="trailing" id="PCw-oB-I8M"/>
+                        <constraint firstItem="CI7-zh-ZXQ" firstAttribute="leading" secondItem="lHc-eM-NcQ" secondAttribute="leading" id="VIc-wV-4H1"/>
+                        <constraint firstItem="CI7-zh-ZXQ" firstAttribute="top" secondItem="lHc-eM-NcQ" secondAttribute="top" id="yL7-pj-O1c"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PKN-C8-LCw">
+                    <rect key="frame" x="0.0" y="44" width="414" height="80"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cch-FJ-fjw">
+                            <rect key="frame" x="20" y="24" width="32" height="32"/>
+                            <state key="normal" image="Back"/>
+                            <connections>
+                                <action selector="onBtnBack:" destination="-1" eventType="touchUpInside" id="3z9-ip-8yl"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MY BOOKINGS DOCUMENT" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="36T-Kx-nSh" customClass="UILabelDeviceClass" customModule="TruckerShipper" customModuleProvider="target">
+                            <rect key="frame" x="64" y="27" width="270" height="26"/>
+                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="21"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="iPhoneFontSize">
+                                    <real key="value" value="21"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="string" keyPath="iPhoneFontWeight" value="bold"/>
+                            </userDefinedRuntimeAttributes>
+                        </label>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="36T-Kx-nSh" firstAttribute="leading" secondItem="cch-FJ-fjw" secondAttribute="trailing" constant="12" id="5Pw-Nt-Xbp"/>
+                        <constraint firstAttribute="height" constant="80" id="Lf1-QN-bJU"/>
+                        <constraint firstItem="cch-FJ-fjw" firstAttribute="leading" secondItem="PKN-C8-LCw" secondAttribute="leading" constant="20" id="c3U-Uy-Fvg"/>
+                        <constraint firstItem="36T-Kx-nSh" firstAttribute="centerY" secondItem="cch-FJ-fjw" secondAttribute="centerY" id="lVB-KL-l46"/>
+                        <constraint firstItem="cch-FJ-fjw" firstAttribute="centerY" secondItem="PKN-C8-LCw" secondAttribute="centerY" id="y53-eR-O8X"/>
+                    </constraints>
+                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="HWd-pq-pjC">
+                    <rect key="frame" x="0.0" y="124" width="414" height="738"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <constraints>
+                <constraint firstItem="PKN-C8-LCw" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="5sb-Qk-Imk"/>
+                <constraint firstItem="lHc-eM-NcQ" firstAttribute="bottom" secondItem="PKN-C8-LCw" secondAttribute="bottom" id="IQ3-lm-eda"/>
+                <constraint firstItem="lHc-eM-NcQ" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="RCK-kF-vi6"/>
+                <constraint firstItem="HWd-pq-pjC" firstAttribute="top" secondItem="lHc-eM-NcQ" secondAttribute="bottom" id="adx-av-JnQ"/>
+                <constraint firstItem="lHc-eM-NcQ" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="b1s-lK-gYH"/>
+                <constraint firstItem="HWd-pq-pjC" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="iJ9-Kb-AZT"/>
+                <constraint firstItem="PKN-C8-LCw" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="pB2-ED-Uur"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="HWd-pq-pjC" secondAttribute="trailing" id="qbm-lT-5a7"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="HWd-pq-pjC" secondAttribute="bottom" id="vBO-ak-9Kx"/>
+                <constraint firstItem="lHc-eM-NcQ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="zMR-cS-qoh"/>
+                <constraint firstItem="PKN-C8-LCw" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="zY1-MZ-R2d"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="137.68115942028987" y="124.55357142857142"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Back" width="32" height="32"/>
+        <image name="NavBar" width="375" height="95"/>
+    </resources>
+</document>

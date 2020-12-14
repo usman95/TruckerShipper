@@ -29,7 +29,7 @@ class Dashboard: BaseController {
         super.pushToHome(bookingRequest: .rate)
     }
 }
-//MARk:- Helper Methods
+//MARK:- Helper Methods
 extension Dashboard{
     private func setUI(){
         self.registerCells()
@@ -39,9 +39,11 @@ extension Dashboard{
         self.tableView.register(UINib(nibName: "NotificationsTVC", bundle: nil), forCellReuseIdentifier: "NotificationsTVC")
     }
     private func setHeaderView(){
+        self.dashboardView.setData()
         self.tableView.tableHeaderView = self.dashboardView
     }
 }
+//MARK:- UITableViewDataSource
 extension Dashboard: UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 10
@@ -51,6 +53,7 @@ extension Dashboard: UITableViewDataSource{
         return cell
     }
 }
+//MARK:- UITableViewDelegate
 extension Dashboard: UITableViewDelegate{
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return CGFloat(50.0)

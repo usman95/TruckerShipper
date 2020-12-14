@@ -70,7 +70,7 @@ public class BookingModel: Object, Mappable {
     @objc dynamic var updatedAt: String? = ""
     @objc dynamic var weight = 0
     @objc dynamic var cargoMode: String? = ""
-    //  var documents = List<Any>()
+    var documents = List<DocumentModel>()
     @objc dynamic var createdBy: CreatedByModel?
     @objc dynamic var quantityOfTrucks = 0
     
@@ -116,7 +116,7 @@ public class BookingModel: Object, Mappable {
         updatedAt <- map[SerializationKeys.updatedAt]
         weight <- map[SerializationKeys.weight]
         cargoMode <- map[SerializationKeys.cargoMode]
-        //    documents <- map[SerializationKeys.documents]
+        documents <- (map[SerializationKeys.documents], ListTransform<DocumentModel>())
         createdBy <- map[SerializationKeys.createdBy]
         quantityOfTrucks <- map[SerializationKeys.quantityOfTrucks]
     }

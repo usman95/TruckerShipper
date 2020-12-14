@@ -18,8 +18,10 @@ class BookingsTVC: UITableViewCell {
     @IBOutlet weak var lblDropOffDate: UILabelDeviceClass!
     @IBOutlet weak var lblPickUpAddress: UILabelDeviceClass!
     @IBOutlet weak var lblDropOffAddress: UILabelDeviceClass!
+    @IBOutlet weak var btnViewTrips: UIButtonDeviceClass!
+    @IBOutlet weak var btnAddDocuments: UIButtonDeviceClass!
     
-    func setData(data: BookingModel){
+    func setData(bookingType: BookingType, data: BookingModel){
         self.lblDistanceInKM.text = "\(data.totalDistance) \(Strings.KM.text)"
         
         let totalDuration = data.totalDuration ?? ""
@@ -41,5 +43,17 @@ class BookingsTVC: UITableViewCell {
         
         self.lblPickUpAddress.text = data.pickup?.address ?? ""
         self.lblDropOffAddress.text = data.dropOff?.address ?? ""
+        
+        switch bookingType {
+        case .pending:
+            self.btnViewTrips.isHidden = true
+            self.btnAddDocuments.isHidden = true
+        case .inProgress:
+            self.btnAddDocuments.isHidden = data.documents.isEmpty
+            self.btnViewTrips.isHidden = false
+        case .completed:
+            self.btnViewTrips.isHidden = true
+            self.btnAddDocuments.isHidden = true
+        }
     }
 }

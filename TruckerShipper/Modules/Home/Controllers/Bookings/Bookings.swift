@@ -34,6 +34,9 @@ class Bookings: BaseController {
             self.btnInProgress.isSelected = false
             self.btnCompleted.isSelected = false
             
+            self.arrBookings.removeAll()
+            self.tableView.reloadData()
+            
             self.bookingType = BookingType.pending
             self.recordsToSkip = 0
             self.getBookings()
@@ -42,6 +45,9 @@ class Bookings: BaseController {
             self.btnInProgress.isSelected = true
             self.btnCompleted.isSelected = false
             
+            self.arrBookings.removeAll()
+            self.tableView.reloadData()
+            
             self.bookingType = BookingType.inProgress
             self.recordsToSkip = 0
             self.getBookings()
@@ -49,6 +55,9 @@ class Bookings: BaseController {
             self.btnPending.isSelected = false
             self.btnInProgress.isSelected = false
             self.btnCompleted.isSelected = true
+            
+            self.arrBookings.removeAll()
+            self.tableView.reloadData()
             
             self.bookingType = BookingType.completed
             self.recordsToSkip = 0
@@ -70,8 +79,23 @@ extension Bookings: UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "BookingsTVC", for: indexPath) as! BookingsTVC
         let data = self.arrBookings[indexPath.row]
-        cell.setData(data: data)
+        cell.setData(bookingType: self.bookingType, data: data)
+        
+        cell.btnViewTrips.tag = indexPath.row
+        cell.btnAddDocuments.tag = indexPath.row
+        
+        cell.btnViewTrips.addTarget(self, action: #selector(self.onBtnViewTrips(_:)), for: .touchUpInside)
+        cell.btnAddDocuments.addTarget(self, action: #selector(self.onBtnViewAddDocuments(_:)), for: .touchUpInside)
+        
         return cell
+    }
+    
+    @objc func onBtnViewTrips(_ sender:UIButton){
+        
+    }
+    @objc func onBtnViewAddDocuments(_ sender:UIButton){
+        let booking = self.arrBookings[sender.tag]
+        super.pushToBookingDocuments(booking: booking)
     }
 }
 //MARK:- Services
@@ -89,6 +113,7 @@ extension Bookings{
         
         APIManager.sharedInstance.shipperAPIManager.AllBookings(params: params, success: { (responseObject) in
             let response = responseObject as Dictionary
+            response.printJson()
             guard let bookings = response["bookings"] as? [[String:Any]] else {return}
             self.arrBookings = Mapper<BookingModel>().mapArray(JSONArray: bookings)
             
