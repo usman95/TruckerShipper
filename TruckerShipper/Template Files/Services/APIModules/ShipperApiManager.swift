@@ -34,4 +34,10 @@ class ShipperAPIManager: APIManagerBase {
         let route: URL = POSTURLforRoute(route: Route.Bookings.rawValue+id+Route.UploadDocument.rawValue)! as URL
         self.postMultipartDictionaryResponseWith(route: route, parameters: params, success: success, failure: failure, withHeader: true)
     }
+    //MARK:- BookingDetails
+    func BookingDetails(id: String, success: @escaping DefaultAPISuccessClosure, failure: @escaping DefaultAPIFailureClosure){
+        Utility.showLoader()
+        let route: URL = POSTURLforRoute(route: Route.Bookings.rawValue+id)! as URL
+        self.getDictionaryResponseWith(route: route, success: success, failure: failure, withHeader: true)
+    }
 }

@@ -87,12 +87,6 @@ extension SideMenu{
         guard let topNavigationController = topController.rootViewController as? UINavigationController else {return}
         topNavigationController.pushViewController(controller, animated: true)
     }
-    private func pushToTripExpenses(){
-        let controller = TripExpenses()
-        guard let topController = Utility.main.topViewController() as? LGSideMenuController else {return}
-        guard let topNavigationController = topController.rootViewController as? UINavigationController else {return}
-        topNavigationController.pushViewController(controller, animated: true)
-    }
     private func pushToMyAccount(){
         let controller = MyAccount()
         guard let topController = Utility.main.topViewController() as? LGSideMenuController else {return}

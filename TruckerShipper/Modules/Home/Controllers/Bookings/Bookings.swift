@@ -107,7 +107,8 @@ extension Bookings: UITableViewDataSource{
     }
     
     @objc func onBtnViewTrips(_ sender:UIButton){
-        
+        let booking = self.arrBookings[sender.tag]
+        super.pushToTrips(booking: booking)
     }
     @objc func onBtnViewAddDocuments(_ sender:UIButton){
         let booking = self.arrBookings[sender.tag]
@@ -119,13 +120,11 @@ extension Bookings{
     private func getBookings(){
         let skip = self.recordsToSkip
         let limit = Constants.PAGINATION_PAGE_SIZE
-//        let status = self.bookingType.rawValue
+        let status = self.bookingType.rawValue
         
         let params:[String:Any] = ["skip":skip,
-                                   "limit":limit]
-//        let params:[String:Any] = ["skip":skip,
-//                                   "limit":limit,
-//                                   "status":status]
+                                   "limit":limit,
+                                   "status":status]
         
         APIManager.sharedInstance.shipperAPIManager.AllBookings(params: params, success: { (responseObject) in
             let response = responseObject as Dictionary
