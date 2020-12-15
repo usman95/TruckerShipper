@@ -26,10 +26,6 @@
 		FA294FD72587FB9E00323EA2 /* MyAccount+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA294FD62587FB9E00323EA2 /* MyAccount+Extension.swift */; };
 		FA294FDB2588209A00323EA2 /* Trips.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA294FD92588209A00323EA2 /* Trips.swift */; };
 		FA294FDC2588209A00323EA2 /* Trips.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA294FDA2588209A00323EA2 /* Trips.xib */; };
-		FA294FED25882E2900323EA2 /* TripsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA294FDE25882E2800323EA2 /* TripsModel.swift */; };
-		FA294FEF25882E2900323EA2 /* BookingDetailtModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA294FE025882E2800323EA2 /* BookingDetailtModel.swift */; };
-		FA294FF225882E2900323EA2 /* ShipperIdModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA294FE325882E2800323EA2 /* ShipperIdModel.swift */; };
-		FA294FF425882E2900323EA2 /* RemarksMark.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA294FE525882E2800323EA2 /* RemarksMark.swift */; };
 		FA295004258846B700323EA2 /* DriverIdModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA294FFD258846B600323EA2 /* DriverIdModel.swift */; };
 		FA295005258846B700323EA2 /* VehicleIdModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA294FFE258846B600323EA2 /* VehicleIdModel.swift */; };
 		FA295006258846B700323EA2 /* TripModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA294FFF258846B600323EA2 /* TripModel.swift */; };
@@ -110,6 +106,10 @@
 		FA6B424C25791ABE00C6D106 /* RoleId.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6B424525791ABE00C6D106 /* RoleId.swift */; };
 		FA6B424E25791ABE00C6D106 /* UpdatedBy.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6B424725791ABE00C6D106 /* UpdatedBy.swift */; };
 		FA6B424F25791ABE00C6D106 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6B424825791ABE00C6D106 /* User.swift */; };
+		FA9DBD77258937FD0082A67C /* ShipperIdModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9DBD73258937FC0082A67C /* ShipperIdModel.swift */; };
+		FA9DBD78258937FD0082A67C /* RemarksMark.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9DBD74258937FD0082A67C /* RemarksMark.swift */; };
+		FA9DBD79258937FD0082A67C /* BookingDetailtModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9DBD75258937FD0082A67C /* BookingDetailtModel.swift */; };
+		FA9DBD7A258937FD0082A67C /* TripsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9DBD76258937FD0082A67C /* TripsModel.swift */; };
 		FABB36A42580B4870084BCCA /* ShipperApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABB36A32580B4870084BCCA /* ShipperApiManager.swift */; };
 		FACF6A762585A14E004D2C16 /* Bookings.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACF6A742585A14E004D2C16 /* Bookings.swift */; };
 		FACF6A772585A14E004D2C16 /* Bookings.xib in Resources */ = {isa = PBXBuildFile; fileRef = FACF6A752585A14E004D2C16 /* Bookings.xib */; };
@@ -152,10 +152,6 @@
 		FA294FD62587FB9E00323EA2 /* MyAccount+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MyAccount+Extension.swift"; sourceTree = "<group>"; };
 		FA294FD92588209A00323EA2 /* Trips.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trips.swift; sourceTree = "<group>"; };
 		FA294FDA2588209A00323EA2 /* Trips.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Trips.xib; sourceTree = "<group>"; };
-		FA294FDE25882E2800323EA2 /* TripsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TripsModel.swift; path = "../../../../../../../../Desktop/Models/untitled folder 3/TripsModel.swift"; sourceTree = "<group>"; };
-		FA294FE025882E2800323EA2 /* BookingDetailtModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BookingDetailtModel.swift; path = "../../../../../../../../Desktop/Models/untitled folder 3/BookingDetailtModel.swift"; sourceTree = "<group>"; };
-		FA294FE325882E2800323EA2 /* ShipperIdModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ShipperIdModel.swift; path = "../../../../../../../../Desktop/Models/untitled folder 3/ShipperIdModel.swift"; sourceTree = "<group>"; };
-		FA294FE525882E2800323EA2 /* RemarksMark.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RemarksMark.swift; path = "../../../../../../../../Desktop/Models/untitled folder 3/RemarksMark.swift"; sourceTree = "<group>"; };
 		FA294FFD258846B600323EA2 /* DriverIdModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DriverIdModel.swift; sourceTree = "<group>"; };
 		FA294FFE258846B600323EA2 /* VehicleIdModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VehicleIdModel.swift; sourceTree = "<group>"; };
 		FA294FFF258846B600323EA2 /* TripModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripModel.swift; sourceTree = "<group>"; };
@@ -238,6 +234,10 @@
 		FA6B424525791ABE00C6D106 /* RoleId.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoleId.swift; sourceTree = "<group>"; };
 		FA6B424725791ABE00C6D106 /* UpdatedBy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdatedBy.swift; sourceTree = "<group>"; };
 		FA6B424825791ABE00C6D106 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		FA9DBD73258937FC0082A67C /* ShipperIdModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShipperIdModel.swift; sourceTree = "<group>"; };
+		FA9DBD74258937FD0082A67C /* RemarksMark.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemarksMark.swift; sourceTree = "<group>"; };
+		FA9DBD75258937FD0082A67C /* BookingDetailtModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookingDetailtModel.swift; sourceTree = "<group>"; };
+		FA9DBD76258937FD0082A67C /* TripsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripsModel.swift; sourceTree = "<group>"; };
 		FABB36A32580B4870084BCCA /* ShipperApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShipperApiManager.swift; sourceTree = "<group>"; };
 		FACF6A742585A14E004D2C16 /* Bookings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bookings.swift; sourceTree = "<group>"; };
 		FACF6A752585A14E004D2C16 /* Bookings.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Bookings.xib; sourceTree = "<group>"; };
@@ -381,10 +381,10 @@
 		FA294FDD25882E1400323EA2 /* BookingDetailModel */ = {
 			isa = PBXGroup;
 			children = (
-				FA294FE025882E2800323EA2 /* BookingDetailtModel.swift */,
-				FA294FE525882E2800323EA2 /* RemarksMark.swift */,
-				FA294FE325882E2800323EA2 /* ShipperIdModel.swift */,
-				FA294FDE25882E2800323EA2 /* TripsModel.swift */,
+				FA9DBD75258937FD0082A67C /* BookingDetailtModel.swift */,
+				FA9DBD74258937FD0082A67C /* RemarksMark.swift */,
+				FA9DBD73258937FC0082A67C /* ShipperIdModel.swift */,
+				FA9DBD76258937FD0082A67C /* TripsModel.swift */,
 			);
 			path = BookingDetailModel;
 			sourceTree = "<group>";
@@ -1109,10 +1109,10 @@
 				FA37EA7125740E4C0073CF0C /* ButtonStates.swift in Sources */,
 				FA37EA5625740E4C0073CF0C /* MOLHFont.swift in Sources */,
 				FA37EA6C25740E4C0073CF0C /* BaseNavigationController.swift in Sources */,
-				FA294FEF25882E2900323EA2 /* BookingDetailtModel.swift in Sources */,
 				FA37EABB257432E10073CF0C /* SignUp.swift in Sources */,
 				FA37EAAA25740EAD0073CF0C /* SideMenu.swift in Sources */,
 				FA6B424A25791ABE00C6D106 /* UserModel.swift in Sources */,
+				FA9DBD78258937FD0082A67C /* RemarksMark.swift in Sources */,
 				FA3298DA2588CAB700BA8C49 /* TripDetail.swift in Sources */,
 				FA294FD72587FB9E00323EA2 /* MyAccount+Extension.swift in Sources */,
 				FA37EA5425740E4C0073CF0C /* MOLHSizable.swift in Sources */,
@@ -1127,10 +1127,10 @@
 				FA37EA5325740E4C0073CF0C /* MOLH.swift in Sources */,
 				FA37EA6725740E4C0073CF0C /* UITextField+Extension.swift in Sources */,
 				FA37EA6025740E4C0073CF0C /* UILabel+Extension.swift in Sources */,
+				FA9DBD77258937FD0082A67C /* ShipperIdModel.swift in Sources */,
 				FABB36A42580B4870084BCCA /* ShipperApiManager.swift in Sources */,
 				FA6B424C25791ABE00C6D106 /* RoleId.swift in Sources */,
 				FA37EA7225740E4C0073CF0C /* RoundedCorners.swift in Sources */,
-				FA294FED25882E2900323EA2 /* TripsModel.swift in Sources */,
 				FA20009C2583DF8F00E14D36 /* LoadRequest.swift in Sources */,
 				FA5225AC25802E6200C4FFD0 /* MyContractsTVC.swift in Sources */,
 				FAEDA22825869B9600AD777F /* TitleHeader.swift in Sources */,
@@ -1141,6 +1141,7 @@
 				FA37EA7825740E4C0073CF0C /* APIManager.swift in Sources */,
 				FA20009225839B1D00E14D36 /* LoadDetails.swift in Sources */,
 				FA6B424E25791ABE00C6D106 /* UpdatedBy.swift in Sources */,
+				FA9DBD79258937FD0082A67C /* BookingDetailtModel.swift in Sources */,
 				FA37EA7025740E4C0073CF0C /* CustomLoader.swift in Sources */,
 				FA294FC82587CD8600323EA2 /* BookingDocumentTVC.swift in Sources */,
 				FA37EA6925740E4C0073CF0C /* LanguageManager.swift in Sources */,
@@ -1152,7 +1153,6 @@
 				FA37EA5D25740E4C0073CF0C /* UIColor+Extension.swift in Sources */,
 				FA295008258846B700323EA2 /* TripMilesModel.swift in Sources */,
 				FA37EA7A25740E4C0073CF0C /* AppStateManager.swift in Sources */,
-				FA294FF225882E2900323EA2 /* ShipperIdModel.swift in Sources */,
 				FA37EA5125740E4C0073CF0C /* DynamicFonts.swift in Sources */,
 				FAEDA21825866DFD00AD777F /* Dashboard.swift in Sources */,
 				FA37EA5525740E4C0073CF0C /* MOLHFontLocalizableViews.swift in Sources */,
@@ -1162,11 +1162,11 @@
 				FA37EA6A25740E4C0073CF0C /* CustomLocale.swift in Sources */,
 				FA37EA6325740E4C0073CF0C /* UIViewController+Extension.swift in Sources */,
 				FA3298D42588C60600BA8C49 /* TripHeader.swift in Sources */,
+				FA9DBD7A258937FD0082A67C /* TripsModel.swift in Sources */,
 				FA37EA5E25740E4C0073CF0C /* UIImageViewExtension.swift in Sources */,
 				FA37EA6E25740E4C0073CF0C /* ProjectStructs.swift in Sources */,
 				FA295004258846B700323EA2 /* DriverIdModel.swift in Sources */,
 				FA294FC32587CAFD00323EA2 /* BookingDocuments.swift in Sources */,
-				FA294FF425882E2900323EA2 /* RemarksMark.swift in Sources */,
 				FA37EA6F25740E4C0073CF0C /* ProjectEnums.swift in Sources */,
 				FA37EA5B25740E4C0073CF0C /* UIApplication+Extension.swift in Sources */,
 				FA37EAB7257429350073CF0C /* ForgotPassword.swift in Sources */,
