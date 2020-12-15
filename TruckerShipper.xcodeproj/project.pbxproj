@@ -35,6 +35,10 @@
 		FA295006258846B700323EA2 /* TripModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA294FFF258846B600323EA2 /* TripModel.swift */; };
 		FA295008258846B700323EA2 /* TripMilesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA295001258846B600323EA2 /* TripMilesModel.swift */; };
 		FA29500A258846B700323EA2 /* CrewIdModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA295003258846B700323EA2 /* CrewIdModel.swift */; };
+		FA3298D42588C60600BA8C49 /* TripHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3298D32588C60600BA8C49 /* TripHeader.swift */; };
+		FA3298D62588C61200BA8C49 /* TripHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA3298D52588C61200BA8C49 /* TripHeader.xib */; };
+		FA3298DA2588CAB700BA8C49 /* TripDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3298D82588CAB700BA8C49 /* TripDetail.swift */; };
+		FA3298DB2588CAB700BA8C49 /* TripDetail.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA3298D92588CAB700BA8C49 /* TripDetail.xib */; };
 		FA37E9FB2574099A0073CF0C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA37E9FA2574099A0073CF0C /* AppDelegate.swift */; };
 		FA37EA042574099D0073CF0C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA37EA032574099D0073CF0C /* Assets.xcassets */; };
 		FA37EA072574099D0073CF0C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA37EA052574099D0073CF0C /* LaunchScreen.storyboard */; };
@@ -157,6 +161,10 @@
 		FA294FFF258846B600323EA2 /* TripModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripModel.swift; sourceTree = "<group>"; };
 		FA295001258846B600323EA2 /* TripMilesModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripMilesModel.swift; sourceTree = "<group>"; };
 		FA295003258846B700323EA2 /* CrewIdModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CrewIdModel.swift; sourceTree = "<group>"; };
+		FA3298D32588C60600BA8C49 /* TripHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripHeader.swift; sourceTree = "<group>"; };
+		FA3298D52588C61200BA8C49 /* TripHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TripHeader.xib; sourceTree = "<group>"; };
+		FA3298D82588CAB700BA8C49 /* TripDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripDetail.swift; sourceTree = "<group>"; };
+		FA3298D92588CAB700BA8C49 /* TripDetail.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TripDetail.xib; sourceTree = "<group>"; };
 		FA37E9F72574099A0073CF0C /* TruckerShipper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TruckerShipper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA37E9FA2574099A0073CF0C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FA37EA032574099D0073CF0C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -391,6 +399,25 @@
 				FA294FFE258846B600323EA2 /* VehicleIdModel.swift */,
 			);
 			path = TripModel;
+			sourceTree = "<group>";
+		};
+		FA3298D22588C5C400BA8C49 /* TripHeader */ = {
+			isa = PBXGroup;
+			children = (
+				FA3298D32588C60600BA8C49 /* TripHeader.swift */,
+				FA3298D52588C61200BA8C49 /* TripHeader.xib */,
+			);
+			path = TripHeader;
+			sourceTree = "<group>";
+		};
+		FA3298D72588CA8D00BA8C49 /* TripDetail */ = {
+			isa = PBXGroup;
+			children = (
+				FA3298D22588C5C400BA8C49 /* TripHeader */,
+				FA3298D82588CAB700BA8C49 /* TripDetail.swift */,
+				FA3298D92588CAB700BA8C49 /* TripDetail.xib */,
+			);
+			path = TripDetail;
 			sourceTree = "<group>";
 		};
 		FA37E9EE2574099A0073CF0C = {
@@ -686,6 +713,7 @@
 				FA62D005257D713A000DCFDD /* MyContracts */,
 				FACF6A732585A0D2004D2C16 /* Bookings */,
 				FA294FD82588205C00323EA2 /* Trips */,
+				FA3298D72588CA8D00BA8C49 /* TripDetail */,
 				FA294FBE2587C7F300323EA2 /* BookingDocuments */,
 				FA294FCA2587E4FA00323EA2 /* WebView */,
 				FAE067CB257AF3A1005E1C97 /* MyAccount */,
@@ -957,6 +985,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA20009325839B1D00E14D36 /* LoadDetails.xib in Resources */,
+				FA3298D62588C61200BA8C49 /* TripHeader.xib in Resources */,
 				FA37EAAD25740EAD0073CF0C /* NotificationsTVC.xib in Resources */,
 				FA294FDC2588209A00323EA2 /* Trips.xib in Resources */,
 				FA37EA7425740E4C0073CF0C /* Greycliff-cf-bold.ttf in Resources */,
@@ -977,6 +1006,7 @@
 				FA294FCE2587E51C00323EA2 /* WebView.xib in Resources */,
 				FA294FC92587CD8600323EA2 /* BookingDocumentTVC.xib in Resources */,
 				FA62D009257D716C000DCFDD /* MyContracts.xib in Resources */,
+				FA3298DB2588CAB700BA8C49 /* TripDetail.xib in Resources */,
 				FA37EA7525740E4C0073CF0C /* Greycliff-cf-medium.ttf in Resources */,
 				FA37EA7625740E4C0073CF0C /* Greycliff-cf-light.ttf in Resources */,
 				FAEDA22625869B8A00AD777F /* TitleHeader.xib in Resources */,
@@ -1083,6 +1113,7 @@
 				FA37EABB257432E10073CF0C /* SignUp.swift in Sources */,
 				FA37EAAA25740EAD0073CF0C /* SideMenu.swift in Sources */,
 				FA6B424A25791ABE00C6D106 /* UserModel.swift in Sources */,
+				FA3298DA2588CAB700BA8C49 /* TripDetail.swift in Sources */,
 				FA294FD72587FB9E00323EA2 /* MyAccount+Extension.swift in Sources */,
 				FA37EA5425740E4C0073CF0C /* MOLHSizable.swift in Sources */,
 				FA37EA6225740E4C0073CF0C /* UIImage+Extension.swift in Sources */,
@@ -1130,6 +1161,7 @@
 				FAE067CA257AE6A2005E1C97 /* CardView.swift in Sources */,
 				FA37EA6A25740E4C0073CF0C /* CustomLocale.swift in Sources */,
 				FA37EA6325740E4C0073CF0C /* UIViewController+Extension.swift in Sources */,
+				FA3298D42588C60600BA8C49 /* TripHeader.swift in Sources */,
 				FA37EA5E25740E4C0073CF0C /* UIImageViewExtension.swift in Sources */,
 				FA37EA6E25740E4C0073CF0C /* ProjectStructs.swift in Sources */,
 				FA295004258846B700323EA2 /* DriverIdModel.swift in Sources */,

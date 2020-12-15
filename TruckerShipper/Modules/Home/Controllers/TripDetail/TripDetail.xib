@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TripDetail" customModule="TruckerShipper" customModuleProvider="target">
+            <connections>
+                <outlet property="tableView" destination="XTn-zN-NFr" id="Rrg-xl-c2M"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b79-LV-55U">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="124"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="NavBar" translatesAutoresizingMaskIntoConstraints="NO" id="BtX-iw-MOP">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="124"/>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstItem="BtX-iw-MOP" firstAttribute="leading" secondItem="b79-LV-55U" secondAttribute="leading" id="F7m-HX-boV"/>
+                        <constraint firstAttribute="bottom" secondItem="BtX-iw-MOP" secondAttribute="bottom" id="NDO-VU-THk"/>
+                        <constraint firstItem="BtX-iw-MOP" firstAttribute="top" secondItem="b79-LV-55U" secondAttribute="top" id="YB1-RA-nJY"/>
+                        <constraint firstAttribute="trailing" secondItem="BtX-iw-MOP" secondAttribute="trailing" id="fdP-pf-4FW"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yFA-hU-Ch2">
+                    <rect key="frame" x="0.0" y="44" width="414" height="80"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jMf-29-mDl">
+                            <rect key="frame" x="20" y="24" width="32" height="32"/>
+                            <state key="normal" image="Back"/>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TRIP DETAILS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o0F-Na-Dc3" customClass="UILabelDeviceClass" customModule="TruckerShipper" customModuleProvider="target">
+                            <rect key="frame" x="64" y="27" width="133" height="26"/>
+                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="21"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="iPhoneFontSize">
+                                    <real key="value" value="21"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="string" keyPath="iPhoneFontWeight" value="bold"/>
+                            </userDefinedRuntimeAttributes>
+                        </label>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="jMf-29-mDl" firstAttribute="leading" secondItem="yFA-hU-Ch2" secondAttribute="leading" constant="20" id="KHl-Uy-3Qf"/>
+                        <constraint firstItem="o0F-Na-Dc3" firstAttribute="centerY" secondItem="jMf-29-mDl" secondAttribute="centerY" id="NV0-Ar-UmS"/>
+                        <constraint firstItem="jMf-29-mDl" firstAttribute="centerY" secondItem="yFA-hU-Ch2" secondAttribute="centerY" id="OTw-BJ-pCW"/>
+                        <constraint firstAttribute="height" constant="80" id="vL8-hW-z2g"/>
+                        <constraint firstItem="o0F-Na-Dc3" firstAttribute="leading" secondItem="jMf-29-mDl" secondAttribute="trailing" constant="12" id="wEF-bn-Ivs"/>
+                    </constraints>
+                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="XTn-zN-NFr">
+                    <rect key="frame" x="0.0" y="124" width="414" height="738"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="h1O-Ow-c6k"/>
+                        <outlet property="delegate" destination="-1" id="nqf-vE-IPN"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <constraints>
+                <constraint firstItem="b79-LV-55U" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="1Tc-Ny-xV4"/>
+                <constraint firstItem="b79-LV-55U" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="2Zo-Vg-qKS"/>
+                <constraint firstItem="XTn-zN-NFr" firstAttribute="top" secondItem="b79-LV-55U" secondAttribute="bottom" id="8U5-0m-NKP"/>
+                <constraint firstItem="yFA-hU-Ch2" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="A02-zV-5H2"/>
+                <constraint firstItem="XTn-zN-NFr" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="EEg-ex-0Yp"/>
+                <constraint firstItem="b79-LV-55U" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="IJa-sQ-xbQ"/>
+                <constraint firstItem="XTn-zN-NFr" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="Pkw-rK-wY6"/>
+                <constraint firstItem="yFA-hU-Ch2" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="WWJ-Rg-orb"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="XTn-zN-NFr" secondAttribute="bottom" id="eS4-cV-sXG"/>
+                <constraint firstItem="yFA-hU-Ch2" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="n4o-Pm-wE0"/>
+                <constraint firstItem="b79-LV-55U" firstAttribute="bottom" secondItem="yFA-hU-Ch2" secondAttribute="bottom" id="ysv-gx-z3u"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="137.68115942028987" y="129.91071428571428"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Back" width="32" height="32"/>
+        <image name="NavBar" width="375" height="95"/>
+    </resources>
+</document>
