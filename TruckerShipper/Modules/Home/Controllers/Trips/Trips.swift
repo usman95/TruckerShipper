@@ -7,12 +7,14 @@
 //
 
 import UIKit
+import ObjectMapper
 
 class Trips: BaseController {
 
     @IBOutlet weak var tableView: UITableView!
     
     var booking: BookingModel?
+    var bookingDetail: BookingDetailtModel?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,7 +45,8 @@ extension Trips: UITableViewDelegate{
         let id = self.booking?.id ?? ""
         
         APIManager.sharedInstance.shipperAPIManager.BookingDetails(id: id, success: { (responseObject) in
-            print(responseObject)
+            self.bookingDetail = Mapper<BookingDetailtModel>().map(JSON: responseObject)
+            print(self.bookingDetail)
         }) { (error) in
             print(error)
         }
