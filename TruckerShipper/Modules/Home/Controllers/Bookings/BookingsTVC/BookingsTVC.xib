@@ -188,7 +188,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1, Thrale Street, London, SE18hW, UK" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L1r-gw-AdH" customClass="UILabelDeviceClass" customModule="TruckerShipper" customModuleProvider="target">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1, Thrale Street, London, SE18hW, UK" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L1r-gw-AdH" customClass="UILabelDeviceClass" customModule="TruckerShipper" customModuleProvider="target">
                                 <rect key="frame" x="120.5" y="136" width="225.5" height="16"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <color key="textColor" red="0.2416056097" green="0.28531306979999999" blue="0.34354370829999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

@@ -19,8 +19,6 @@ class LoadDetails: BaseController {
     @IBOutlet weak var tfQuantity: UITextFieldDeviceClass!
     @IBOutlet weak var btnCalculateRate: UIButtonDeviceClass!
     
-    var bookingRequest = BookingRequest.load
-    
     var locationAttribute: [String:Any]?
     
     let sizePerTruckDropDown = DropDown()
@@ -105,13 +103,7 @@ extension LoadDetails{
             var loadDetails = self.estimateParams ?? [:]
             loadDetails["modeOfTransport"] = modeOfTransport.rawValue
             loadDetails["selectedPrice"] = selectedPrice
-            
-            switch self.bookingRequest {
-            case .load:
-                super.pushToLoadRequest(loadDetails: loadDetails)
-            case .rate:
-                self.navigationController?.popToRootViewController(animated: true)
-            }
+            super.pushToLoadRequest(loadDetails: loadDetails)
         }
     }
     private func validate()->[String:Any]?{

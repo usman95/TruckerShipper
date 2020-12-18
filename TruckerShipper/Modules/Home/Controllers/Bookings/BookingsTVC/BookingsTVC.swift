@@ -59,4 +59,30 @@ class BookingsTVC: UITableViewCell {
             self.btnAddDocuments.isHidden = true
         }
     }
+    func setData(bookingDetails: BookingDetailtModel?, trip: TripsModel?){
+        let tripID = trip?.tripNumber ?? ""
+        self.lblDistanceInKM.text = tripID
+        
+        self.lblDuration.text = "trips of miles"
+        
+        let pickUpDateString = bookingDetails?.pickUpDate ?? "2020-12-14T14:24:59.741Z"
+        let pickUpTime = Utility.main.stringDateFormatter(dateStr: pickUpDateString, dateFormat: Constants.serverDateFormat, formatteddate: "hh:mm a")
+        let pickUpDate = Utility.main.stringDateFormatter(dateStr: pickUpDateString, dateFormat: Constants.serverDateFormat, formatteddate: "d/MMM/yy")
+        
+        self.lblPickUpTime.text = pickUpTime
+        self.lblPickUpDate.text = pickUpDate
+        
+        let bookingDateString = bookingDetails?.bookingDate ?? "2020-12-14T14:24:59.741Z"
+        let bookingTime = Utility.main.stringDateFormatter(dateStr: bookingDateString, dateFormat: Constants.serverDateFormat, formatteddate: "hh:mm a")
+        let bookingDate = Utility.main.stringDateFormatter(dateStr: bookingDateString, dateFormat: Constants.serverDateFormat, formatteddate: "d/MMM/yy")
+        
+        self.lblDropOffTime.text = bookingTime
+        self.lblDropOffDate.text = bookingDate
+        
+        self.lblPickUpAddress.text = bookingDetails?.pickup?.address ?? ""
+        self.lblDropOffAddress.text = bookingDetails?.dropOff?.address ?? ""
+        
+        self.btnViewTrips.isHidden = true
+        self.btnAddDocuments.isHidden = true
+    }
 }

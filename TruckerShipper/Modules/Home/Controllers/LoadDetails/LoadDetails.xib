@@ -327,7 +327,7 @@
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qf5-g8-p4T">
                             <rect key="frame" x="0.0" y="296" width="350" height="60"/>
                             <subviews>
-                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Quantity Per Transport Unit" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6wl-LA-W5X" customClass="UITextFieldDeviceClass" customModule="TruckerShipper" customModuleProvider="target">
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Quantity Of Transport Unit" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6wl-LA-W5X" customClass="UITextFieldDeviceClass" customModule="TruckerShipper" customModuleProvider="target">
                                     <rect key="frame" x="20" y="0.0" width="310" height="60"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                     <textInputTraits key="textInputTraits" keyboardType="numberPad"/>

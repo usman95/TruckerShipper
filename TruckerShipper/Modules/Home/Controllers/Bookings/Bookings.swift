@@ -8,6 +8,7 @@
 
 import UIKit
 import ObjectMapper
+import DZNEmptyDataSet
 
 class Bookings: BaseController {
 
@@ -17,13 +18,16 @@ class Bookings: BaseController {
     @IBOutlet weak var btnRejected: UIButtonStatesDeviceClass!
     @IBOutlet weak var tableView: UITableView!
     
+    var refreshControl = UIRefreshControl()
     var bookingType = BookingType.pending
     var recordsToSkip = 0
     var arrBookings = [BookingModel]()
+    var totalBookings = 0
+    var pageNumber = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.registerCells()
+        self.setUI()
         self.getBookings()
         // Do any additional setup after loading the view.
     }
@@ -40,8 +44,6 @@ class Bookings: BaseController {
             self.tableView.reloadData()
             
             self.bookingType = BookingType.pending
-            self.recordsToSkip = 0
-            self.getBookings()
         case 1:
             self.btnPending.isSelected = false
             self.btnInProgress.isSelected = true
@@ -52,8 +54,6 @@ class Bookings: BaseController {
             self.tableView.reloadData()
             
             self.bookingType = BookingType.inProgress
-            self.recordsToSkip = 0
-            self.getBookings()
         case 2:
             self.btnPending.isSelected = false
             self.btnInProgress.isSelected = false
@@ -64,8 +64,6 @@ class Bookings: BaseController {
             self.tableView.reloadData()
             
             self.bookingType = BookingType.completed
-            self.recordsToSkip = 0
-            self.getBookings()
         default:
             self.btnPending.isSelected = false
             self.btnInProgress.isSelected = false
@@ -76,15 +74,31 @@ class Bookings: BaseController {
             self.tableView.reloadData()
             
             self.bookingType = BookingType.rejected
-            self.recordsToSkip = 0
-            self.getBookings()
         }
+        
+        self.refreshBookings()
     }
 }
 //MARK:- Helper methods
 extension Bookings{
+    private func setUI(){
+        self.tableView.emptyDataSetSource = self
+        self.registerCells()
+        self.pullToRefresh()
+    }
     private func registerCells(){
         self.tableView.register(UINib(nibName: "BookingsTVC", bundle: nil), forCellReuseIdentifier: "BookingsTVC")
+    }
+    private func pullToRefresh(){
+        self.refreshControl.attributedTitle = NSAttributedString(string: "Pull to refresh")
+        self.refreshControl.addTarget(self, action: #selector(self.refreshBookings), for: UIControl.Event.valueChanged)
+        self.tableView.addSubview(self.refreshControl)
+    }
+    @objc func refreshBookings() {
+        self.pageNumber = 0
+        self.arrBookings.removeAll()
+        self.tableView.reloadData()
+        self.getBookings()
     }
 }
 //MARK:- UITableViewDataSource
@@ -115,27 +129,60 @@ extension Bookings: UITableViewDataSource{
         super.pushToBookingDocuments(booking: booking)
     }
 }
+//MARK:- UITableViewDelegate
+extension Bookings: UITableViewDelegate{
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        let ride = self.arrRides[indexPath.row]
+//        let selectedRide = SelectedRideDetailData(bookingType: self.bookingType, ride: ride)
+//        self.selectedRide?(selectedRide)
+    }
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+            if tableView.visibleCells.contains(cell) {
+                if indexPath.row == self.arrBookings.count - 1{
+                    self.loadMoreCells()
+                }
+            }
+        }
+    }
+    
+    private func loadMoreCells(){
+        if self.totalBookings != self.arrBookings.count{
+            self.pageNumber += 1
+            self.getBookings()
+        }
+    }
+}
+extension Bookings: DZNEmptyDataSetSource{
+    func title(forEmptyDataSet scrollView: UIScrollView!) -> NSAttributedString! {
+        let str = Strings.NO_DATA_AVAILABLE.text
+        let attrs = [NSAttributedString.Key.font: UIFont.preferredFont(forTextStyle: UIFont.TextStyle.headline)]
+        return NSAttributedString(string: str, attributes: attrs)
+    }
+}
 //MARK:- Services
 extension Bookings{
     private func getBookings(){
-        let skip = self.recordsToSkip
+        let skip = self.recordsToSkip + (self.pageNumber * Constants.PAGINATION_PAGE_SIZE)
         let limit = Constants.PAGINATION_PAGE_SIZE
-//        let status = self.bookingType.rawValue
-        
+        let status = self.bookingType.rawValue
+
         let params:[String:Any] = ["skip":skip,
-                                   "limit":limit]
-//        let params:[String:Any] = ["skip":skip,
-//                                   "limit":limit,
-//                                   "status":status]
+                                   "limit":limit,
+                                   "status":status]
         
         APIManager.sharedInstance.shipperAPIManager.AllBookings(params: params, success: { (responseObject) in
             let response = responseObject as Dictionary
-            response.printJson()
+            
+            if let bookingsCount = response["bookingsCount"] as? Int {self.totalBookings = bookingsCount}
+            
             guard let bookings = response["bookings"] as? [[String:Any]] else {return}
-            self.arrBookings = Mapper<BookingModel>().mapArray(JSONArray: bookings)
+            let arrBookings = Mapper<BookingModel>().mapArray(JSONArray: bookings)
+            self.arrBookings.append(contentsOf: arrBookings)
             
             DispatchQueue.main.async {
                 self.tableView.reloadData()
+                self.refreshControl.endRefreshing()
             }
         }) { (error) in
             print(error)

@@ -25,8 +25,6 @@ class Home: BaseController {
     @IBOutlet weak var viewPickUpMarker: RoundedView!
     @IBOutlet weak var btnNext: UIButtonDeviceClass!
     
-    var bookingRequest = BookingRequest.load
-    
     var locationPickerType = LocationPickerType.pickUp
     lazy var geocoder = CLGeocoder()
     
@@ -230,7 +228,6 @@ extension Home{
         locationAttribute["totalDuration"] = self.routeDuration ?? ""
         
         let controller = LoadDetails()
-        controller.bookingRequest = self.bookingRequest
         controller.locationAttribute = locationAttribute
         self.navigationController?.pushViewController(controller, animated: true)
     }

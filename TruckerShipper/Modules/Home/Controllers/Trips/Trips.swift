@@ -26,27 +26,38 @@ class Trips: BaseController {
 //MARK:- Helper methods
 extension Trips{
     private func registerCells(){
-        self.tableView.register(UINib(nibName: "MyContractsTVC", bundle: nil), forCellReuseIdentifier: "MyContractsTVC")
+        self.tableView.register(UINib(nibName: "BookingsTVC", bundle: nil), forCellReuseIdentifier: "BookingsTVC")
     }
 }
 //MARK:- UITableViewDataSource
 extension Trips: UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return self.bookingDetail?.trips.count ?? 0
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "MyContractsTVC", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "BookingsTVC", for: indexPath) as! BookingsTVC
+        let trip = self.bookingDetail?.trips[indexPath.row]
+        cell.setData(bookingDetails: self.bookingDetail, trip: trip)
         return cell
     }
 }
 //MARK:- UITableViewDelegate
 extension Trips: UITableViewDelegate{
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        super.pushToTripDetails(booking: self.booking)
+    }
+}
+//MARK:- Services
+extension Trips{
     private func getBookingDetail(){
         let id = self.booking?.id ?? ""
         
         APIManager.sharedInstance.shipperAPIManager.BookingDetails(id: id, success: { (responseObject) in
             self.bookingDetail = Mapper<BookingDetailtModel>().map(JSON: responseObject)
-            print(self.bookingDetail)
+            
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
         }) { (error) in
             print(error)
         }

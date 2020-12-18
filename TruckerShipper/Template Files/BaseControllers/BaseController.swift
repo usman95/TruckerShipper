@@ -65,9 +65,8 @@ extension BaseController{
         controller.loadDetails = loadDetails
         self.navigationController?.pushViewController(controller, animated: true)
     }
-    func pushToHome(bookingRequest: BookingRequest){
+    func pushToHome(){
         let controller = Home()
-        controller.bookingRequest = bookingRequest
         self.navigationController?.pushViewController(controller, animated: true)
     }
     func pushToBookingDocuments(booking: BookingModel){
@@ -75,7 +74,7 @@ extension BaseController{
         controller.booking = booking
         self.navigationController?.pushViewController(controller, animated: true)
     }
-    func pushToTrips(booking: BookingModel){
+    func pushToTrips(booking: BookingModel?){
         let controller = Trips()
         controller.booking = booking
         self.navigationController?.pushViewController(controller, animated: true)
@@ -83,6 +82,11 @@ extension BaseController{
     func pushToWebView(fileURLString: String?){
         let controller = WebView()
         controller.fileURLString = fileURLString
+        self.navigationController?.pushViewController(controller, animated: true)
+    }
+    func pushToTripDetails(booking: BookingModel?){
+        let controller = TripDetail()
+        controller.booking = booking
         self.navigationController?.pushViewController(controller, animated: true)
     }
 }

@@ -7,12 +7,15 @@
 //
 
 import UIKit
+import ObjectMapper
 
 class TripDetail: BaseController {
 
     @IBOutlet weak var tableView: UITableView!
     
     let tripDetailView = TripHeader.instanceFromNib() as! TripHeader
+    var booking: BookingModel?
+    var bookingDetail: BookingDetailtModel?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,5 +37,21 @@ extension TripDetail: UITableViewDataSource{
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         return UITableViewCell()
+    }
+}
+//MARK:- Services
+extension TripDetail{
+    private func getBookingDetail(){
+        let id = self.booking?.id ?? ""
+        
+        APIManager.sharedInstance.shipperAPIManager.BookingDetails(id: id, success: { (responseObject) in
+            self.bookingDetail = Mapper<BookingDetailtModel>().map(JSON: responseObject)
+            
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
+        }) { (error) in
+            print(error)
+        }
     }
 }

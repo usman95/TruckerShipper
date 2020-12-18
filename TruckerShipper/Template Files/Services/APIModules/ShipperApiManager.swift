@@ -40,4 +40,9 @@ class ShipperAPIManager: APIManagerBase {
         let route: URL = POSTURLforRoute(route: Route.Bookings.rawValue+id)! as URL
         self.getDictionaryResponseWith(route: route, success: success, failure: failure, withHeader: true)
     }
+    //MARK:- BookingsCount
+    func BookingsCount(success: @escaping DefaultAPISuccessClosure, failure: @escaping DefaultAPIFailureClosure){
+        let route: URL = POSTURLforRoute(route: Route.BookingsCount.rawValue)! as URL
+        self.getDictionaryResponseWith(route: route, success: success, failure: failure, withHeader: true)
+    }
 }

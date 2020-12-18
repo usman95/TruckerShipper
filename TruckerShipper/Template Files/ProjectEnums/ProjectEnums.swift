@@ -15,6 +15,10 @@ enum LocalizationType: String{
 enum RoleType: String{
     case Shipper = "Shipper"
 }
+enum ShipperType: String{
+    case WalkIn = "Walk-In"
+    case Contractual = "Contractual"
+}
 enum LocationPickerType{
     case pickUp
     case dropOff
@@ -32,10 +36,6 @@ enum BookingType: String{
     case inProgress = "in-progress"//"accepted"
     case completed = "completed"//"rejected","cancelled"
     case rejected = "rejected"
-}
-enum BookingRequest{
-    case load
-    case rate
 }
 enum ImagePickerType{
     case profile
