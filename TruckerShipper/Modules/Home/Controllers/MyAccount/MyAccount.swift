@@ -342,7 +342,7 @@ extension MyAccount{
             print(error)
         }
     }
-    func uploadProfile(){
+    public func uploadProfile(){
         let id = AppStateManager.sharedInstance.loggedInUser.user?.id ?? ""
         
         guard let image: NSData = NSData(data: (self.profileImage ?? UIImage()).jpegData(compressionQuality: 0.1)!) as NSData? else{return}
@@ -357,7 +357,7 @@ extension MyAccount{
             print(error)
         }
     }
-    func uploadNTN(doc: Data){
+    public func uploadNTN(doc: Data){
         let id = AppStateManager.sharedInstance.loggedInUser.user?.id ?? ""
         
         let docId = self.shipperProfile?.user?.documents.filter{$0.docType == "ntn"}.first?.id ?? ""

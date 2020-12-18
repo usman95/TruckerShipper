@@ -114,7 +114,7 @@ public class TripMilesModel: Object, Mappable {
         dropOffLocation?.forEach { coordinate in
             let value = ListLatLong()
             value.value = coordinate
-            self.pickUpLocation.append(value)
+            self.dropOffLocation.append(value)
         }
     }
     

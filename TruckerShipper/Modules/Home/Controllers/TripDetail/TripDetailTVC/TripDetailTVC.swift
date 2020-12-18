@@ -10,6 +10,8 @@ import UIKit
 import GoogleMaps
 import GooglePlaces
 import SDWebImage
+import Alamofire
+import SwiftyJSON
 
 class TripDetailTVC: UITableViewCell {
     
@@ -30,6 +32,9 @@ class TripDetailTVC: UITableViewCell {
     
     var pickUpLocationMarker = GMSMarker()
     var dropOffLocationMarker = GMSMarker()
+    
+    var polyline = GMSPolyline()
+    var path = GMSPath()
     
 }
 extension TripDetailTVC{
@@ -66,6 +71,7 @@ extension TripDetailTVC{
             self.addPickUpMarker()
             self.addDropOffMarker()
             self.fitAllMarkersBounds()
+            self.getRoute()
             
             return
         }
@@ -95,6 +101,7 @@ extension TripDetailTVC{
             self.addPickUpMarker()
             self.addDropOffMarker()
             self.fitAllMarkersBounds()
+            self.getRoute()
             
             return
         }
@@ -124,7 +131,7 @@ extension TripDetailTVC{
             self.addPickUpMarker()
             self.addDropOffMarker()
             self.fitAllMarkersBounds()
-
+            self.getRoute()
         }
     }
     private func addPickUpMarker(){
@@ -155,13 +162,63 @@ extension TripDetailTVC{
         DispatchQueue.main.async {
             var bounds = GMSCoordinateBounds()
             var markerList = [GMSMarker]()
+            if let pathBounds = self.getPathBounds(){
+                markerList = pathBounds
+            }
             markerList.append(self.pickUpLocationMarker)
             markerList.append(self.dropOffLocationMarker)
             for marker in markerList {
                 bounds = bounds.includingCoordinate(marker.position)
             }
-            let update = GMSCameraUpdate.fit(bounds, withPadding: CGFloat(52))
+            let update = GMSCameraUpdate.fit(bounds, withPadding: CGFloat(160))
             self.mapView.animate(with: update)
         }
+    }
+}
+//MARK:- Polyline
+extension TripDetailTVC{
+    private func getRoute(){
+        Utility.showLoader()
+        
+        let origin = "\(self.pickUpLocation?.latitude ?? 0.0),\(self.pickUpLocation?.longitude ?? 0.0)"
+        let destination = "\(self.dropOffLocation?.latitude ?? 0.0),\(self.dropOffLocation?.longitude ?? 0.0)"
+        let url = "https://maps.googleapis.com/maps/api/directions/json?origin=\(origin)&destination=\(destination)&mode=driving&key=\(Constants.apiKey)"
+        Alamofire.request(url).responseJSON { response in
+            do {
+                let json = try JSON(data: response.data ?? Data())
+                let routes = json["routes"].arrayValue
+                self.drawRoute(routesArray: routes)
+            } catch {
+                print("Hm, something is wrong here. Try connecting to the wifi.")
+            }
+            Utility.hideLoader()
+        }
+    }
+    private func drawRoute(routesArray: [JSON]) {
+        if !routesArray.isEmpty{
+            let routeDict = routesArray[0]
+            let routeOverviewPolyline = routeDict["overview_polyline"].dictionary
+            let points = routeOverviewPolyline?["points"]?.stringValue
+            self.path = GMSPath.init(fromEncodedPath: points ?? "")!
+            self.polyline.path = path
+            self.polyline.strokeColor = Global.APP_COLOR
+            self.polyline.strokeWidth = 3.0
+            self.polyline.map = self.mapView
+            self.fitAllMarkersBounds()
+        }
+    }
+    private func getPathBounds()->[GMSMarker]?{
+        if self.path.count() == 0{return nil}
+        var arrPinPoints = [GMSMarker]()
+        let pathTaken = self.path.count()
+        
+        if pathTaken > 0{
+            for i in 0..<pathTaken{
+                let point = path.coordinate(at: i)
+                let position = CLLocationCoordinate2D(latitude: point.latitude , longitude: point.longitude)
+                arrPinPoints.append(GMSMarker(position: position))
+            }
+        }
+        return arrPinPoints
     }
 }
