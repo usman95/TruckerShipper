@@ -102,6 +102,7 @@ extension MyAccount{
         switch ntnImageURL.isEmpty{
         case false:
             self.imgNTN.sd_setImage(with: URL(string: ntnImageURL), placeholderImage: UIImage(named: "DocumentPlaceholder"))
+            self.imgNTN.isHidden = false
         case true:
             self.imgNTN.isHidden = true
         }
