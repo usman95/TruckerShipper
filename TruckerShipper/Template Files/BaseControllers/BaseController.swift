@@ -84,9 +84,10 @@ extension BaseController{
         controller.fileURLString = fileURLString
         self.navigationController?.pushViewController(controller, animated: true)
     }
-    func pushToTripDetails(booking: BookingModel?){
+    func pushToTripDetails(bookingDetail: BookingDetailtModel?, trip: TripsModel?){
         let controller = TripDetail()
-        controller.booking = booking
+        controller.bookingDetail = bookingDetail
+        controller.trip = trip
         self.navigationController?.pushViewController(controller, animated: true)
     }
 }

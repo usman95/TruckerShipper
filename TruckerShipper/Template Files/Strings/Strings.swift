@@ -91,4 +91,6 @@ enum Strings: String{
     case CAMERA = "Camera"
     case PROFILE_UPDATED = "Profile updated successfully."
     case NO_DATA_AVAILABLE = "No data available."
+    case NO_MILES_AVAILABLE = "No miles available."
+    case MILES_TRACKING = "Miles Tracking"
 }

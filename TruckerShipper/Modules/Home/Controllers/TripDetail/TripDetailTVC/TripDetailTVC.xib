@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="TripDetailTVC" id="KGk-i7-Jjw" customClass="TripDetailTVC" customModule="TruckerShipper" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="588"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="588"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SWJ-9N-l37" customClass="GMSMapView">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="210"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="SWJ-9N-l37" secondAttribute="height" multiplier="69:35" id="hfi-Tv-tJz"/>
+                        </constraints>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d8Q-iv-aiF" customClass="CardView" customModule="TruckerShipper" customModuleProvider="target">
+                        <rect key="frame" x="20" y="178" width="374" height="185"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="10"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                <color key="value" white="0.66666666669999997" alpha="0.75159551059999996" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S2m-F2-rt8">
+                        <rect key="frame" x="20" y="178" width="374" height="185"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZRK-bu-y8B">
+                                <rect key="frame" x="0.0" y="0.0" width="374" height="45"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1243KM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mvW-dN-d1T" customClass="UILabelDeviceClass" customModule="TruckerShipper" customModuleProvider="target">
+                                        <rect key="frame" x="20" y="14" width="53.5" height="17"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <color key="textColor" red="0.2416056097" green="0.28531306979999999" blue="0.34354370829999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="iPhoneFontSize">
+                                                <real key="value" value="14"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="iPhoneFontWeight" value="bold"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="17 Dec" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b0S-Ha-tBm" customClass="UILabelDeviceClass" customModule="TruckerShipper" customModuleProvider="target">
+                                        <rect key="frame" x="310" y="14" width="44" height="17"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <color key="textColor" red="0.24313725489999999" green="0.28627450980000002" blue="0.34509803919999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="iPhoneFontSize">
+                                                <real key="value" value="14"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="iPhoneFontWeight" value="bold"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a5g-4a-x8S">
+                                        <rect key="frame" x="20" y="44" width="334" height="1"/>
+                                        <color key="backgroundColor" red="0.83430743220000003" green="0.86662364010000004" blue="0.87916028499999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1" id="h8i-TZ-3tL"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="mvW-dN-d1T" firstAttribute="centerY" secondItem="ZRK-bu-y8B" secondAttribute="centerY" id="9zs-ok-Uez"/>
+                                    <constraint firstItem="b0S-Ha-tBm" firstAttribute="top" secondItem="ZRK-bu-y8B" secondAttribute="top" constant="14" id="BXt-Lr-ode"/>
+                                    <constraint firstItem="a5g-4a-x8S" firstAttribute="leading" secondItem="ZRK-bu-y8B" secondAttribute="leading" constant="20" id="KA6-lF-08V"/>
+                                    <constraint firstAttribute="bottom" secondItem="a5g-4a-x8S" secondAttribute="bottom" id="QMj-wy-5os"/>
+                                    <constraint firstAttribute="trailing" secondItem="a5g-4a-x8S" secondAttribute="trailing" constant="20" id="RMX-LD-V7F"/>
+                                    <constraint firstItem="mvW-dN-d1T" firstAttribute="top" secondItem="ZRK-bu-y8B" secondAttribute="top" constant="14" id="XIq-Ma-ypG"/>
+                                    <constraint firstItem="mvW-dN-d1T" firstAttribute="leading" secondItem="ZRK-bu-y8B" secondAttribute="leading" constant="20" id="mHe-Bk-xW5"/>
+                                    <constraint firstAttribute="trailing" secondItem="b0S-Ha-tBm" secondAttribute="trailing" constant="20" id="vmh-xd-f0K"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c8T-je-yrh">
+                                <rect key="frame" x="0.0" y="61" width="32" height="90"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="32" id="OsI-4I-JF4"/>
+                                    <constraint firstAttribute="height" constant="90" id="PjP-Ph-1rx"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yDi-n0-SG1">
+                                <rect key="frame" x="32" y="61" width="12" height="90"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k9q-WY-uSW" customClass="RoundedView" customModule="TruckerShipper" customModuleProvider="target">
+                                        <rect key="frame" x="2" y="2" width="8" height="8"/>
+                                        <color key="backgroundColor" red="0.0" green="0.27608564499999999" blue="0.62137049440000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="8" id="OI1-iS-eIK"/>
+                                            <constraint firstAttribute="height" constant="8" id="nn6-Da-jt8"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FQh-2d-w7F">
+                                        <rect key="frame" x="5.5" y="16" width="1" height="58"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="1" id="rRH-Fd-aya"/>
+                                        </constraints>
+                                    </view>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dropDownBlack" translatesAutoresizingMaskIntoConstraints="NO" id="sYs-Xo-ibU">
+                                        <rect key="frame" x="1" y="80" width="10" height="10"/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="FQh-2d-w7F" firstAttribute="top" secondItem="k9q-WY-uSW" secondAttribute="bottom" constant="6" id="65A-Tw-QAO"/>
+                                    <constraint firstItem="FQh-2d-w7F" firstAttribute="centerX" secondItem="yDi-n0-SG1" secondAttribute="centerX" id="9it-fi-R3X"/>
+                                    <constraint firstItem="k9q-WY-uSW" firstAttribute="centerX" secondItem="yDi-n0-SG1" secondAttribute="centerX" id="ItE-8b-GAQ"/>
+                                    <constraint firstAttribute="width" constant="12" id="Re4-0P-de3"/>
+                                    <constraint firstItem="k9q-WY-uSW" firstAttribute="top" secondItem="yDi-n0-SG1" secondAttribute="top" constant="2" id="YsN-UA-aui"/>
+                                    <constraint firstAttribute="bottom" secondItem="sYs-Xo-ibU" secondAttribute="bottom" id="aFv-1f-DYk"/>
+                                    <constraint firstItem="sYs-Xo-ibU" firstAttribute="centerX" secondItem="yDi-n0-SG1" secondAttribute="centerX" id="n6e-lt-w2y"/>
+                                    <constraint firstItem="sYs-Xo-ibU" firstAttribute="top" secondItem="FQh-2d-w7F" secondAttribute="bottom" constant="6" id="t9M-tV-swB"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1, Thrale Street, London, SE18hW, UK" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P1C-6E-sIr" customClass="UILabelDeviceClass" customModule="TruckerShipper" customModuleProvider="target">
+                                <rect key="frame" x="56" y="59" width="225.5" height="16"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" red="0.2416056097" green="0.28531306979999999" blue="0.34354370829999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="iPhoneFontSize">
+                                        <real key="value" value="13"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1, Thrale Street, London, SE18hW, UK" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qrZ-rr-hee" customClass="UILabelDeviceClass" customModule="TruckerShipper" customModuleProvider="target">
+                                <rect key="frame" x="56" y="137" width="225.5" height="16"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" red="0.2416056097" green="0.28531306979999999" blue="0.34354370829999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="iPhoneFontSize">
+                                        <real key="value" value="13"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="qrZ-rr-hee" secondAttribute="trailing" constant="20" id="2ef-aJ-22k"/>
+                            <constraint firstItem="yDi-n0-SG1" firstAttribute="leading" secondItem="c8T-je-yrh" secondAttribute="trailing" id="46W-9A-Y8O"/>
+                            <constraint firstItem="ZRK-bu-y8B" firstAttribute="leading" secondItem="S2m-F2-rt8" secondAttribute="leading" id="4o6-LJ-8ks"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="P1C-6E-sIr" secondAttribute="trailing" constant="20" id="5Rc-fg-HPA"/>
+                            <constraint firstItem="qrZ-rr-hee" firstAttribute="top" secondItem="sYs-Xo-ibU" secondAttribute="top" constant="-4" id="5YW-Bt-5we"/>
+                            <constraint firstItem="qrZ-rr-hee" firstAttribute="leading" secondItem="P1C-6E-sIr" secondAttribute="leading" id="Der-Vz-pFb"/>
+                            <constraint firstItem="yDi-n0-SG1" firstAttribute="top" secondItem="c8T-je-yrh" secondAttribute="top" id="QL5-qR-YIK"/>
+                            <constraint firstItem="P1C-6E-sIr" firstAttribute="top" secondItem="k9q-WY-uSW" secondAttribute="top" constant="-4" id="TMn-M4-5JX"/>
+                            <constraint firstAttribute="bottom" secondItem="qrZ-rr-hee" secondAttribute="bottom" constant="32" id="YVe-mf-Yxc"/>
+                            <constraint firstItem="ZRK-bu-y8B" firstAttribute="top" secondItem="S2m-F2-rt8" secondAttribute="top" id="bX7-xv-Lng"/>
+                            <constraint firstItem="c8T-je-yrh" firstAttribute="leading" secondItem="S2m-F2-rt8" secondAttribute="leading" id="byY-PI-6FS"/>
+                            <constraint firstItem="c8T-je-yrh" firstAttribute="top" secondItem="ZRK-bu-y8B" secondAttribute="bottom" constant="16" id="fXa-RY-Uxq"/>
+                            <constraint firstItem="P1C-6E-sIr" firstAttribute="leading" secondItem="yDi-n0-SG1" secondAttribute="trailing" constant="12" id="in9-99-fIW"/>
+                            <constraint firstAttribute="trailing" secondItem="ZRK-bu-y8B" secondAttribute="trailing" id="ngq-6h-2er"/>
+                            <constraint firstItem="yDi-n0-SG1" firstAttribute="bottom" secondItem="c8T-je-yrh" secondAttribute="bottom" id="zPE-yN-Z9R"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="10"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Driver" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dmy-j7-sBi" customClass="UILabelDeviceClass" customModule="TruckerShipper" customModuleProvider="target">
+                        <rect key="frame" x="20" y="395" width="60" height="25.5"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
+                        <color key="textColor" red="0.2416056097" green="0.28531306979999999" blue="0.34354370829999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="iPhoneFontSize">
+                                <real key="value" value="21"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="string" keyPath="iPhoneFontWeight" value="bold"/>
+                        </userDefinedRuntimeAttributes>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="irV-wd-uEj" customClass="CardView" customModule="TruckerShipper" customModuleProvider="target">
+                        <rect key="frame" x="20" y="432.5" width="374" height="128"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profilePlaceHolder" translatesAutoresizingMaskIntoConstraints="NO" id="5b7-lz-aJX" customClass="RoundedImage" customModule="TruckerShipper" customModuleProvider="target">
+                                <rect key="frame" x="16" y="29" width="70" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="70" id="LMa-qd-39Z"/>
+                                    <constraint firstAttribute="width" secondItem="5b7-lz-aJX" secondAttribute="height" multiplier="1:1" id="nCC-ej-2TB"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="d0p-Yr-dLr">
+                                <rect key="frame" x="102" y="29" width="264" height="70.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Driver name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xfb-vc-PeH" customClass="UILabelDeviceClass" customModule="TruckerShipper" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="264" height="23"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
+                                        <color key="textColor" red="0.2416056097" green="0.28531306979999999" blue="0.34354370829999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="iPhoneFontSize">
+                                                <real key="value" value="19"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="iPhoneFontWeight" value="bold"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vehicle name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yfs-Ls-zor" customClass="UILabelDeviceClass" customModule="TruckerShipper" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="25" width="264" height="19.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="iPhoneFontSize">
+                                                <real key="value" value="16"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="iPhoneFontWeight" value="medium"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XUe-jQ-cXT">
+                                        <rect key="frame" x="0.0" y="46.5" width="264" height="24"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phone number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vhj-g3-rko" customClass="UILabelDeviceClass" customModule="TruckerShipper" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="3.5" width="94.5" height="17"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <color key="textColor" red="0.21901232000000001" green="0.72264683249999995" blue="0.44165021180000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="iPhoneFontSize">
+                                                        <real key="value" value="14"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="iPhoneFontWeight" value="bold"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="LYU-9S-BsJ">
+                                                <rect key="frame" x="106.5" y="0.0" width="56" height="24"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="onu-l3-0Ax">
+                                                        <rect key="frame" x="0.0" y="0.0" width="24" height="24"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="onu-l3-0Ax" secondAttribute="height" multiplier="1:1" id="bIW-iG-Eme"/>
+                                                        </constraints>
+                                                        <state key="normal" image="CallDriver"/>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6tu-dj-Bo9">
+                                                        <rect key="frame" x="32" y="0.0" width="24" height="24"/>
+                                                        <state key="normal" image="MessageDriver"/>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstItem="Vhj-g3-rko" firstAttribute="centerY" secondItem="XUe-jQ-cXT" secondAttribute="centerY" id="MXp-dc-b28"/>
+                                            <constraint firstAttribute="bottom" secondItem="LYU-9S-BsJ" secondAttribute="bottom" id="VEw-kY-4m8"/>
+                                            <constraint firstItem="LYU-9S-BsJ" firstAttribute="leading" secondItem="Vhj-g3-rko" secondAttribute="trailing" constant="12" id="f68-0s-CDl"/>
+                                            <constraint firstAttribute="height" constant="24" id="hAy-H6-lNs"/>
+                                            <constraint firstItem="Vhj-g3-rko" firstAttribute="leading" secondItem="XUe-jQ-cXT" secondAttribute="leading" id="pcy-jL-8g8"/>
+                                            <constraint firstItem="LYU-9S-BsJ" firstAttribute="top" secondItem="XUe-jQ-cXT" secondAttribute="top" id="wc7-Ng-yB1"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="d0p-Yr-dLr" firstAttribute="leading" secondItem="5b7-lz-aJX" secondAttribute="trailing" constant="16" id="2Wn-YI-bfs"/>
+                            <constraint firstItem="5b7-lz-aJX" firstAttribute="centerY" secondItem="irV-wd-uEj" secondAttribute="centerY" id="9a4-zD-tTL"/>
+                            <constraint firstItem="d0p-Yr-dLr" firstAttribute="centerY" secondItem="irV-wd-uEj" secondAttribute="centerY" id="HAB-z0-gw0"/>
+                            <constraint firstAttribute="trailing" secondItem="d0p-Yr-dLr" secondAttribute="trailing" constant="8" id="IAD-hx-jeN"/>
+                            <constraint firstItem="5b7-lz-aJX" firstAttribute="leading" secondItem="irV-wd-uEj" secondAttribute="leading" constant="16" id="Xwn-fy-26G"/>
+                            <constraint firstAttribute="width" secondItem="irV-wd-uEj" secondAttribute="height" multiplier="187:64" id="gQt-Nz-1kC"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="10"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                <color key="value" white="0.66666666669999997" alpha="0.74650638199999997" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="irV-wd-uEj" firstAttribute="top" secondItem="dmy-j7-sBi" secondAttribute="bottom" constant="12" id="16Y-Wn-3hi"/>
+                    <constraint firstItem="dmy-j7-sBi" firstAttribute="leading" secondItem="S2m-F2-rt8" secondAttribute="leading" id="BUm-lO-X12"/>
+                    <constraint firstAttribute="trailing" secondItem="S2m-F2-rt8" secondAttribute="trailing" constant="20" id="CcP-9m-CcS"/>
+                    <constraint firstItem="SWJ-9N-l37" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="Fn7-e6-kny"/>
+                    <constraint firstItem="d8Q-iv-aiF" firstAttribute="leading" secondItem="S2m-F2-rt8" secondAttribute="leading" id="QKR-Ss-i9u"/>
+                    <constraint firstItem="S2m-F2-rt8" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="S5r-Do-vIc"/>
+                    <constraint firstItem="S2m-F2-rt8" firstAttribute="top" secondItem="SWJ-9N-l37" secondAttribute="bottom" constant="-32" id="Sls-Rd-Wg2"/>
+                    <constraint firstItem="irV-wd-uEj" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="XEc-zg-Ai7"/>
+                    <constraint firstItem="d8Q-iv-aiF" firstAttribute="trailing" secondItem="S2m-F2-rt8" secondAttribute="trailing" id="YtY-zx-wSh"/>
+                    <constraint firstAttribute="trailing" secondItem="SWJ-9N-l37" secondAttribute="trailing" id="dRL-fV-5wG"/>
+                    <constraint firstAttribute="trailing" secondItem="irV-wd-uEj" secondAttribute="trailing" constant="20" id="g2f-tM-v5x"/>
+                    <constraint firstItem="d8Q-iv-aiF" firstAttribute="bottom" secondItem="S2m-F2-rt8" secondAttribute="bottom" id="gWO-Ha-ZVX"/>
+                    <constraint firstItem="SWJ-9N-l37" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="hCi-qB-uNo"/>
+                    <constraint firstItem="d8Q-iv-aiF" firstAttribute="top" secondItem="S2m-F2-rt8" secondAttribute="top" id="hJl-TV-avN"/>
+                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="irV-wd-uEj" secondAttribute="bottom" constant="8" id="kgN-gY-Esu"/>
+                    <constraint firstItem="dmy-j7-sBi" firstAttribute="top" secondItem="S2m-F2-rt8" secondAttribute="bottom" constant="32" id="s6K-ER-0If"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="btnCallDriver" destination="onu-l3-0Ax" id="F8M-eE-vQh"/>
+                <outlet property="btnMessageDriver" destination="6tu-dj-Bo9" id="jeK-Me-F2S"/>
+                <outlet property="imgDriver" destination="5b7-lz-aJX" id="uBO-yc-9LQ"/>
+                <outlet property="lblDate" destination="b0S-Ha-tBm" id="yNX-Us-lXs"/>
+                <outlet property="lblDistanceInKM" destination="mvW-dN-d1T" id="rzT-tp-gp6"/>
+                <outlet property="lblDriverName" destination="xfb-vc-PeH" id="nc8-4s-riq"/>
+                <outlet property="lblDropOff" destination="qrZ-rr-hee" id="6mU-Yi-cpf"/>
+                <outlet property="lblPhoneNumber" destination="Vhj-g3-rko" id="pID-ed-vk9"/>
+                <outlet property="lblPickUp" destination="P1C-6E-sIr" id="Aeu-Uy-lUZ"/>
+                <outlet property="lblVehicleName" destination="yfs-Ls-zor" id="Of0-JD-yrX"/>
+                <outlet property="mapView" destination="SWJ-9N-l37" id="FJP-pv-FeS"/>
+            </connections>
+            <point key="canvasLocation" x="139" y="125"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="CallDriver" width="42" height="40"/>
+        <image name="MessageDriver" width="42" height="40"/>
+        <image name="dropDownBlack" width="10" height="10"/>
+        <image name="profilePlaceHolder" width="180" height="180"/>
+    </resources>
+</document>

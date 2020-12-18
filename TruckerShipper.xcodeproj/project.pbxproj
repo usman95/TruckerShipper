@@ -31,8 +31,6 @@
 		FA295006258846B700323EA2 /* TripModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA294FFF258846B600323EA2 /* TripModel.swift */; };
 		FA295008258846B700323EA2 /* TripMilesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA295001258846B600323EA2 /* TripMilesModel.swift */; };
 		FA29500A258846B700323EA2 /* CrewIdModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA295003258846B700323EA2 /* CrewIdModel.swift */; };
-		FA3298D42588C60600BA8C49 /* TripHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3298D32588C60600BA8C49 /* TripHeader.swift */; };
-		FA3298D62588C61200BA8C49 /* TripHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA3298D52588C61200BA8C49 /* TripHeader.xib */; };
 		FA3298DA2588CAB700BA8C49 /* TripDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3298D82588CAB700BA8C49 /* TripDetail.swift */; };
 		FA3298DB2588CAB700BA8C49 /* TripDetail.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA3298D92588CAB700BA8C49 /* TripDetail.xib */; };
 		FA37E9FB2574099A0073CF0C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA37E9FA2574099A0073CF0C /* AppDelegate.swift */; };
@@ -112,6 +110,10 @@
 		FA9DBD78258937FD0082A67C /* RemarksMark.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9DBD74258937FD0082A67C /* RemarksMark.swift */; };
 		FA9DBD79258937FD0082A67C /* BookingDetailtModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9DBD75258937FD0082A67C /* BookingDetailtModel.swift */; };
 		FA9DBD7A258937FD0082A67C /* TripsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9DBD76258937FD0082A67C /* TripsModel.swift */; };
+		FAA9C848258D3E50005FC95C /* TripDetailTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA9C846258D3E50005FC95C /* TripDetailTVC.swift */; };
+		FAA9C849258D3E50005FC95C /* TripDetailTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAA9C847258D3E50005FC95C /* TripDetailTVC.xib */; };
+		FAA9C84D258D4B45005FC95C /* MilesTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA9C84B258D4B45005FC95C /* MilesTVC.swift */; };
+		FAA9C84E258D4B45005FC95C /* MilesTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAA9C84C258D4B45005FC95C /* MilesTVC.xib */; };
 		FABB36A42580B4870084BCCA /* ShipperApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABB36A32580B4870084BCCA /* ShipperApiManager.swift */; };
 		FACF6A762585A14E004D2C16 /* Bookings.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACF6A742585A14E004D2C16 /* Bookings.swift */; };
 		FACF6A772585A14E004D2C16 /* Bookings.xib in Resources */ = {isa = PBXBuildFile; fileRef = FACF6A752585A14E004D2C16 /* Bookings.xib */; };
@@ -160,8 +162,6 @@
 		FA294FFF258846B600323EA2 /* TripModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripModel.swift; sourceTree = "<group>"; };
 		FA295001258846B600323EA2 /* TripMilesModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripMilesModel.swift; sourceTree = "<group>"; };
 		FA295003258846B700323EA2 /* CrewIdModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CrewIdModel.swift; sourceTree = "<group>"; };
-		FA3298D32588C60600BA8C49 /* TripHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripHeader.swift; sourceTree = "<group>"; };
-		FA3298D52588C61200BA8C49 /* TripHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TripHeader.xib; sourceTree = "<group>"; };
 		FA3298D82588CAB700BA8C49 /* TripDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripDetail.swift; sourceTree = "<group>"; };
 		FA3298D92588CAB700BA8C49 /* TripDetail.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TripDetail.xib; sourceTree = "<group>"; };
 		FA37E9F72574099A0073CF0C /* TruckerShipper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TruckerShipper.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -243,6 +243,10 @@
 		FA9DBD74258937FD0082A67C /* RemarksMark.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemarksMark.swift; sourceTree = "<group>"; };
 		FA9DBD75258937FD0082A67C /* BookingDetailtModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookingDetailtModel.swift; sourceTree = "<group>"; };
 		FA9DBD76258937FD0082A67C /* TripsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripsModel.swift; sourceTree = "<group>"; };
+		FAA9C846258D3E50005FC95C /* TripDetailTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripDetailTVC.swift; sourceTree = "<group>"; };
+		FAA9C847258D3E50005FC95C /* TripDetailTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TripDetailTVC.xib; sourceTree = "<group>"; };
+		FAA9C84B258D4B45005FC95C /* MilesTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MilesTVC.swift; sourceTree = "<group>"; };
+		FAA9C84C258D4B45005FC95C /* MilesTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MilesTVC.xib; sourceTree = "<group>"; };
 		FABB36A32580B4870084BCCA /* ShipperApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShipperApiManager.swift; sourceTree = "<group>"; };
 		FACF6A742585A14E004D2C16 /* Bookings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bookings.swift; sourceTree = "<group>"; };
 		FACF6A752585A14E004D2C16 /* Bookings.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Bookings.xib; sourceTree = "<group>"; };
@@ -407,19 +411,11 @@
 			path = TripModel;
 			sourceTree = "<group>";
 		};
-		FA3298D22588C5C400BA8C49 /* TripHeader */ = {
-			isa = PBXGroup;
-			children = (
-				FA3298D32588C60600BA8C49 /* TripHeader.swift */,
-				FA3298D52588C61200BA8C49 /* TripHeader.xib */,
-			);
-			path = TripHeader;
-			sourceTree = "<group>";
-		};
 		FA3298D72588CA8D00BA8C49 /* TripDetail */ = {
 			isa = PBXGroup;
 			children = (
-				FA3298D22588C5C400BA8C49 /* TripHeader */,
+				FAA9C845258D3E24005FC95C /* TripDetailTVC */,
+				FAA9C84A258D49F5005FC95C /* MileTVC */,
 				FA3298D82588CAB700BA8C49 /* TripDetail.swift */,
 				FA3298D92588CAB700BA8C49 /* TripDetail.xib */,
 			);
@@ -861,6 +857,24 @@
 			path = DashboardTVC;
 			sourceTree = "<group>";
 		};
+		FAA9C845258D3E24005FC95C /* TripDetailTVC */ = {
+			isa = PBXGroup;
+			children = (
+				FAA9C846258D3E50005FC95C /* TripDetailTVC.swift */,
+				FAA9C847258D3E50005FC95C /* TripDetailTVC.xib */,
+			);
+			path = TripDetailTVC;
+			sourceTree = "<group>";
+		};
+		FAA9C84A258D49F5005FC95C /* MileTVC */ = {
+			isa = PBXGroup;
+			children = (
+				FAA9C84B258D4B45005FC95C /* MilesTVC.swift */,
+				FAA9C84C258D4B45005FC95C /* MilesTVC.xib */,
+			);
+			path = MileTVC;
+			sourceTree = "<group>";
+		};
 		FACF6A732585A0D2004D2C16 /* Bookings */ = {
 			isa = PBXGroup;
 			children = (
@@ -1010,7 +1024,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA20009325839B1D00E14D36 /* LoadDetails.xib in Resources */,
-				FA3298D62588C61200BA8C49 /* TripHeader.xib in Resources */,
 				FA37EAAD25740EAD0073CF0C /* NotificationsTVC.xib in Resources */,
 				FA294FDC2588209A00323EA2 /* Trips.xib in Resources */,
 				FA37EA7425740E4C0073CF0C /* Greycliff-cf-bold.ttf in Resources */,
@@ -1037,7 +1050,9 @@
 				FA37EA7625740E4C0073CF0C /* Greycliff-cf-light.ttf in Resources */,
 				FAEDA22625869B8A00AD777F /* TitleHeader.xib in Resources */,
 				FACF6A772585A14E004D2C16 /* Bookings.xib in Resources */,
+				FAA9C849258D3E50005FC95C /* TripDetailTVC.xib in Resources */,
 				FA37EAAF25740EAE0073CF0C /* Login.strings in Resources */,
+				FAA9C84E258D4B45005FC95C /* MilesTVC.xib in Resources */,
 				FA37EA042574099D0073CF0C /* Assets.xcassets in Resources */,
 				FAEDA22D2586AF9600AD777F /* BookingsTVC.xib in Resources */,
 				FA5225AD25802E6200C4FFD0 /* MyContractsTVC.xib in Resources */,
@@ -1152,6 +1167,7 @@
 				FA37EA5025740E4C0073CF0C /* Strings.swift in Sources */,
 				FA295006258846B700323EA2 /* TripModel.swift in Sources */,
 				FA37EA5325740E4C0073CF0C /* MOLH.swift in Sources */,
+				FAA9C848258D3E50005FC95C /* TripDetailTVC.swift in Sources */,
 				FA37EA6725740E4C0073CF0C /* UITextField+Extension.swift in Sources */,
 				FA37EA6025740E4C0073CF0C /* UILabel+Extension.swift in Sources */,
 				FA9DBD77258937FD0082A67C /* ShipperIdModel.swift in Sources */,
@@ -1164,6 +1180,7 @@
 				FA37EA5725740E4C0073CF0C /* Validation.swift in Sources */,
 				FA294FCD2587E51C00323EA2 /* WebView.swift in Sources */,
 				FA29500A258846B700323EA2 /* CrewIdModel.swift in Sources */,
+				FAA9C84D258D4B45005FC95C /* MilesTVC.swift in Sources */,
 				FA37EA6525740E4C0073CF0C /* Dictionary+Extension.swift in Sources */,
 				FA37EA7825740E4C0073CF0C /* APIManager.swift in Sources */,
 				FA20009225839B1D00E14D36 /* LoadDetails.swift in Sources */,
@@ -1189,7 +1206,6 @@
 				FAE067CA257AE6A2005E1C97 /* CardView.swift in Sources */,
 				FA37EA6A25740E4C0073CF0C /* CustomLocale.swift in Sources */,
 				FA37EA6325740E4C0073CF0C /* UIViewController+Extension.swift in Sources */,
-				FA3298D42588C60600BA8C49 /* TripHeader.swift in Sources */,
 				FA9DBD7A258937FD0082A67C /* TripsModel.swift in Sources */,
 				FA37EA5E25740E4C0073CF0C /* UIImageViewExtension.swift in Sources */,
 				FA37EA6E25740E4C0073CF0C /* ProjectStructs.swift in Sources */,

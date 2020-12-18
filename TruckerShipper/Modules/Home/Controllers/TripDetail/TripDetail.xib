@@ -9,6 +9,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TripDetail" customModule="TruckerShipper" customModuleProvider="target">
             <connections>
+                <outlet property="btnTrackLocation" destination="2WJ-b1-jhX" id="YUa-jd-j0d"/>
                 <outlet property="tableView" destination="XTn-zN-NFr" id="Rrg-xl-c2M"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -39,9 +40,12 @@
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jMf-29-mDl">
                             <rect key="frame" x="20" y="24" width="32" height="32"/>
                             <state key="normal" image="Back"/>
+                            <connections>
+                                <action selector="onBtnBack:" destination="-1" eventType="touchUpInside" id="4ei-EE-xsF"/>
+                            </connections>
                         </button>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TRIP DETAILS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o0F-Na-Dc3" customClass="UILabelDeviceClass" customModule="TruckerShipper" customModuleProvider="target">
-                            <rect key="frame" x="64" y="27" width="133" height="26"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MY TRIP SUMMARY" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o0F-Na-Dc3" customClass="UILabelDeviceClass" customModule="TruckerShipper" customModuleProvider="target">
+                            <rect key="frame" x="64" y="27.5" width="193" height="25.5"/>
                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="21"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
@@ -62,26 +66,52 @@
                     </constraints>
                 </view>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="XTn-zN-NFr">
-                    <rect key="frame" x="0.0" y="124" width="414" height="738"/>
+                    <rect key="frame" x="0.0" y="124" width="414" height="652"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                     <connections>
                         <outlet property="dataSource" destination="-1" id="h1O-Ow-c6k"/>
                         <outlet property="delegate" destination="-1" id="nqf-vE-IPN"/>
                     </connections>
                 </tableView>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Nok-It-thC">
+                    <rect key="frame" x="24" y="784" width="366" height="54"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2WJ-b1-jhX" customClass="UIButtonDeviceClass" customModule="TruckerShipper" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="366" height="54"/>
+                            <color key="backgroundColor" red="0.2470588235" green="0.71764705880000002" blue="0.45098039220000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="2WJ-b1-jhX" secondAttribute="height" multiplier="61:9" id="Iwn-FT-Onk"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                            <state key="normal" title="TRACK LOCATION">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="isCircular" value="YES"/>
+                                <userDefinedRuntimeAttribute type="number" keyPath="iPhoneFontSize">
+                                    <real key="value" value="16"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="string" keyPath="iPhoneFontWeight" value="bold"/>
+                            </userDefinedRuntimeAttributes>
+                        </button>
+                    </subviews>
+                </stackView>
             </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
             <constraints>
                 <constraint firstItem="b79-LV-55U" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="1Tc-Ny-xV4"/>
                 <constraint firstItem="b79-LV-55U" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="2Zo-Vg-qKS"/>
+                <constraint firstItem="Nok-It-thC" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="24" id="5Wo-xf-448"/>
                 <constraint firstItem="XTn-zN-NFr" firstAttribute="top" secondItem="b79-LV-55U" secondAttribute="bottom" id="8U5-0m-NKP"/>
                 <constraint firstItem="yFA-hU-Ch2" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="A02-zV-5H2"/>
                 <constraint firstItem="XTn-zN-NFr" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="EEg-ex-0Yp"/>
                 <constraint firstItem="b79-LV-55U" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="IJa-sQ-xbQ"/>
                 <constraint firstItem="XTn-zN-NFr" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="Pkw-rK-wY6"/>
                 <constraint firstItem="yFA-hU-Ch2" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="WWJ-Rg-orb"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="XTn-zN-NFr" secondAttribute="bottom" id="eS4-cV-sXG"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Nok-It-thC" secondAttribute="trailing" constant="24" id="jaR-eX-ALX"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="Nok-It-thC" secondAttribute="bottom" constant="24" id="k7Y-j3-W35"/>
                 <constraint firstItem="yFA-hU-Ch2" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="n4o-Pm-wE0"/>
+                <constraint firstItem="Nok-It-thC" firstAttribute="top" secondItem="XTn-zN-NFr" secondAttribute="bottom" constant="8" id="xQb-R5-WhR"/>
                 <constraint firstItem="b79-LV-55U" firstAttribute="bottom" secondItem="yFA-hU-Ch2" secondAttribute="bottom" id="ysv-gx-z3u"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>

@@ -37,6 +37,11 @@ enum BookingType: String{
     case completed = "completed"//"rejected","cancelled"
     case rejected = "rejected"
 }
+enum MileType: String{
+    case pending = "pending"
+    case inProgress = "in-progress"
+    case completed = "completed"
+}
 enum ImagePickerType{
     case profile
     case ntn

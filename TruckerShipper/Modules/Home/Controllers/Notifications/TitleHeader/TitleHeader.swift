@@ -16,4 +16,7 @@ class TitleHeader: UIView {
         return UINib(nibName: "TitleHeader", bundle: nil).instantiate(withOwner: nil, options: nil)[0] as! UIView
     }
 
+    func setData(data: String){
+        self.lblTitle.text = data
+    }
 }

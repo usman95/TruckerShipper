@@ -44,7 +44,13 @@ extension Trips: UITableViewDataSource{
 //MARK:- UITableViewDelegate
 extension Trips: UITableViewDelegate{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        super.pushToTripDetails(booking: self.booking)
+        if (self.bookingDetail?.trips[indexPath.row].tripMiles.isEmpty ?? false){
+            Utility.main.showToast(message: Strings.NO_MILES_AVAILABLE.text)
+            return
+        }
+        
+        let trip = self.bookingDetail?.trips[indexPath.row]
+        super.pushToTripDetails(bookingDetail: self.bookingDetail, trip: trip)
     }
 }
 //MARK:- Services
