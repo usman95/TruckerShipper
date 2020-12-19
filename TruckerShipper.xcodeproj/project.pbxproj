@@ -767,9 +767,9 @@
 			isa = PBXGroup;
 			children = (
 				FAEDA22425869B7900AD777F /* TitleHeader */,
+				FA37EA9425740EAD0073CF0C /* TVC */,
 				FA37EA9225740EAD0073CF0C /* Notifications.swift */,
 				FA37EA9325740EAD0073CF0C /* Notifications.xib */,
-				FA37EA9425740EAD0073CF0C /* TVC */,
 			);
 			path = Notifications;
 			sourceTree = "<group>";
