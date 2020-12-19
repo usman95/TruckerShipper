@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CMS" customModule="TruckerShipper" customModuleProvider="target">
+            <connections>
+                <outlet property="lblTitle" destination="WE6-l6-LbO" id="58L-5S-Aad"/>
+                <outlet property="tvCMS" destination="zlt-2e-acp" id="3hu-ak-dQf"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ubS-Tx-qT9">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="124"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="NavBar" translatesAutoresizingMaskIntoConstraints="NO" id="Ojd-SF-9bD">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="124"/>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstItem="Ojd-SF-9bD" firstAttribute="top" secondItem="ubS-Tx-qT9" secondAttribute="top" id="2wQ-Mw-vhN"/>
+                        <constraint firstAttribute="bottom" secondItem="Ojd-SF-9bD" secondAttribute="bottom" id="DH6-V7-H1M"/>
+                        <constraint firstItem="Ojd-SF-9bD" firstAttribute="leading" secondItem="ubS-Tx-qT9" secondAttribute="leading" id="atQ-f8-wr7"/>
+                        <constraint firstAttribute="trailing" secondItem="Ojd-SF-9bD" secondAttribute="trailing" id="yEL-3r-pNF"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eS6-JC-bh7">
+                    <rect key="frame" x="0.0" y="44" width="414" height="80"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iwA-cN-4AH">
+                            <rect key="frame" x="20" y="24" width="32" height="32"/>
+                            <state key="normal" image="Back"/>
+                            <connections>
+                                <action selector="onBtnBack:" destination="-1" eventType="touchUpInside" id="gOd-Dk-dXS"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CMS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WE6-l6-LbO" customClass="UILabelDeviceClass" customModule="TruckerShipper" customModuleProvider="target">
+                            <rect key="frame" x="64" y="27" width="47" height="26"/>
+                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="21"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="iPhoneFontSize">
+                                    <real key="value" value="21"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="string" keyPath="iPhoneFontWeight" value="bold"/>
+                            </userDefinedRuntimeAttributes>
+                        </label>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="iwA-cN-4AH" firstAttribute="centerY" secondItem="eS6-JC-bh7" secondAttribute="centerY" id="P6R-YT-e0m"/>
+                        <constraint firstItem="iwA-cN-4AH" firstAttribute="leading" secondItem="eS6-JC-bh7" secondAttribute="leading" constant="20" id="SpC-wF-eLg"/>
+                        <constraint firstItem="WE6-l6-LbO" firstAttribute="centerY" secondItem="iwA-cN-4AH" secondAttribute="centerY" id="Uqy-Dl-EiX"/>
+                        <constraint firstItem="WE6-l6-LbO" firstAttribute="leading" secondItem="iwA-cN-4AH" secondAttribute="trailing" constant="12" id="riw-Ne-Ytf"/>
+                        <constraint firstAttribute="height" constant="80" id="w3O-Ct-3he"/>
+                    </constraints>
+                </view>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="zlt-2e-acp" customClass="UITextViewDeviceClass" customModule="TruckerShipper" customModuleProvider="target">
+                    <rect key="frame" x="20" y="128" width="374" height="734"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <color key="textColor" red="0.36741197110000001" green="0.40314349529999999" blue="0.45307356119999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="iPhoneFontSize">
+                            <real key="value" value="14"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="string" keyPath="iPhoneFontWeight" value="medium"/>
+                    </userDefinedRuntimeAttributes>
+                </textView>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <constraints>
+                <constraint firstItem="zlt-2e-acp" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="77o-Mq-xH7"/>
+                <constraint firstItem="ubS-Tx-qT9" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="CbS-Dd-Jbl"/>
+                <constraint firstItem="ubS-Tx-qT9" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="UFd-bv-O3M"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="zlt-2e-acp" secondAttribute="trailing" constant="20" id="ctL-XV-cPa"/>
+                <constraint firstItem="eS6-JC-bh7" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="dTD-Hg-7Ig"/>
+                <constraint firstItem="zlt-2e-acp" firstAttribute="top" secondItem="ubS-Tx-qT9" secondAttribute="bottom" constant="4" id="ilK-Rg-Pqg"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="zlt-2e-acp" secondAttribute="bottom" id="lbd-eN-Z6R"/>
+                <constraint firstItem="ubS-Tx-qT9" firstAttribute="bottom" secondItem="eS6-JC-bh7" secondAttribute="bottom" id="oJk-or-ZNO"/>
+                <constraint firstItem="eS6-JC-bh7" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="oS1-21-xUj"/>
+                <constraint firstItem="eS6-JC-bh7" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="smP-Do-EFv"/>
+                <constraint firstItem="ubS-Tx-qT9" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="wSz-gc-jts"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="137.68115942028987" y="124.55357142857142"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Back" width="32" height="32"/>
+        <image name="NavBar" width="375" height="95"/>
+    </resources>
+</document>

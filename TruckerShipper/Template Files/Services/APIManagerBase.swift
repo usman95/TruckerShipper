@@ -27,6 +27,8 @@ enum Route: String {
     case CargoMode = "/public/cargo-modes"
     case TransportMode = "/api/transport-mode"
     case GetProfile = "/auth/me"
+    case PrivacyPolicy = "/public/system/privacy"
+    case TermsAndCondition = "/public/system/terms"
     
     //MARK:- ALL
     case ShipperContracts = "/api/shipper-contract"

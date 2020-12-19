@@ -67,6 +67,7 @@ enum Strings: String{
     case TERMS_AND_POLICIES = "By signing up, you're agree to our Terms of use and Privacy Policy"
     case TERMS_OF_SERVICES = "Terms of use"
     case PRIVACY_POLICY = "Privacy Policy"
+    case TERMS_AND_CONDITIONS = "Terms And Conditions"
     case SELECT_SHIPPER = "Please select shipper type."
     case FORGOT_PASSWORD_EMAIL_SENT = "Please check your email and click on the provided link to reset your password."
     case SIGNUP_COMPLETED = "A verification email has been sent to your provided email addres\nPlease check your email and click on the provided link to verify your account."

@@ -46,3 +46,7 @@ enum ImagePickerType{
     case profile
     case ntn
 }
+enum CMSType{
+    case privacyPolicy
+    case termsAndCondition
+}

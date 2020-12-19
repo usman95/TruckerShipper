@@ -116,6 +116,10 @@
 		FAA9C84E258D4B45005FC95C /* MilesTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAA9C84C258D4B45005FC95C /* MilesTVC.xib */; };
 		FAA9C852258D769B005FC95C /* TrackLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA9C850258D769B005FC95C /* TrackLocation.swift */; };
 		FAA9C853258D769B005FC95C /* TrackLocation.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAA9C851258D769B005FC95C /* TrackLocation.xib */; };
+		FAA9C858258D83C6005FC95C /* Reports.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA9C856258D83C6005FC95C /* Reports.swift */; };
+		FAA9C859258D83C6005FC95C /* Reports.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAA9C857258D83C6005FC95C /* Reports.xib */; };
+		FAA9C85D258D8C2B005FC95C /* CMS.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA9C85B258D8C2A005FC95C /* CMS.swift */; };
+		FAA9C85E258D8C2B005FC95C /* CMS.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAA9C85C258D8C2A005FC95C /* CMS.xib */; };
 		FABB36A42580B4870084BCCA /* ShipperApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABB36A32580B4870084BCCA /* ShipperApiManager.swift */; };
 		FACF6A762585A14E004D2C16 /* Bookings.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACF6A742585A14E004D2C16 /* Bookings.swift */; };
 		FACF6A772585A14E004D2C16 /* Bookings.xib in Resources */ = {isa = PBXBuildFile; fileRef = FACF6A752585A14E004D2C16 /* Bookings.xib */; };
@@ -251,6 +255,10 @@
 		FAA9C84C258D4B45005FC95C /* MilesTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MilesTVC.xib; sourceTree = "<group>"; };
 		FAA9C850258D769B005FC95C /* TrackLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackLocation.swift; sourceTree = "<group>"; };
 		FAA9C851258D769B005FC95C /* TrackLocation.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrackLocation.xib; sourceTree = "<group>"; };
+		FAA9C856258D83C6005FC95C /* Reports.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reports.swift; sourceTree = "<group>"; };
+		FAA9C857258D83C6005FC95C /* Reports.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Reports.xib; sourceTree = "<group>"; };
+		FAA9C85B258D8C2A005FC95C /* CMS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMS.swift; sourceTree = "<group>"; };
+		FAA9C85C258D8C2A005FC95C /* CMS.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CMS.xib; sourceTree = "<group>"; };
 		FABB36A32580B4870084BCCA /* ShipperApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShipperApiManager.swift; sourceTree = "<group>"; };
 		FACF6A742585A14E004D2C16 /* Bookings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bookings.swift; sourceTree = "<group>"; };
 		FACF6A752585A14E004D2C16 /* Bookings.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Bookings.xib; sourceTree = "<group>"; };
@@ -725,6 +733,8 @@
 				FA294FBE2587C7F300323EA2 /* BookingDocuments */,
 				FA294FCA2587E4FA00323EA2 /* WebView */,
 				FAE067CB257AF3A1005E1C97 /* MyAccount */,
+				FAA9C854258D83A0005FC95C /* Reports */,
+				FAA9C85A258D8BF5005FC95C /* CMS */,
 				FA37EA9125740EAD0073CF0C /* Notifications */,
 			);
 			path = Controllers;
@@ -889,6 +899,24 @@
 			path = TrackLocation;
 			sourceTree = "<group>";
 		};
+		FAA9C854258D83A0005FC95C /* Reports */ = {
+			isa = PBXGroup;
+			children = (
+				FAA9C856258D83C6005FC95C /* Reports.swift */,
+				FAA9C857258D83C6005FC95C /* Reports.xib */,
+			);
+			path = Reports;
+			sourceTree = "<group>";
+		};
+		FAA9C85A258D8BF5005FC95C /* CMS */ = {
+			isa = PBXGroup;
+			children = (
+				FAA9C85B258D8C2A005FC95C /* CMS.swift */,
+				FAA9C85C258D8C2A005FC95C /* CMS.xib */,
+			);
+			path = CMS;
+			sourceTree = "<group>";
+		};
 		FACF6A732585A0D2004D2C16 /* Bookings */ = {
 			isa = PBXGroup;
 			children = (
@@ -1037,6 +1065,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAA9C859258D83C6005FC95C /* Reports.xib in Resources */,
 				FA20009325839B1D00E14D36 /* LoadDetails.xib in Resources */,
 				FA37EAAD25740EAD0073CF0C /* NotificationsTVC.xib in Resources */,
 				FA294FDC2588209A00323EA2 /* Trips.xib in Resources */,
@@ -1051,6 +1080,7 @@
 				FA37EAAC25740EAD0073CF0C /* Notifications.xib in Resources */,
 				FAEDA21C258672A900AD777F /* DashboardHeader.xib in Resources */,
 				FA37EAB8257429350073CF0C /* ForgotPassword.xib in Resources */,
+				FAA9C85E258D8C2B005FC95C /* CMS.xib in Resources */,
 				FAEDA21925866DFD00AD777F /* Dashboard.xib in Resources */,
 				FA2000982583BB6800E14D36 /* CalculatedRate.xib in Resources */,
 				FA37EABC257432E10073CF0C /* SignUp.xib in Resources */,
@@ -1166,6 +1196,7 @@
 				FA37EA7125740E4C0073CF0C /* ButtonStates.swift in Sources */,
 				FA37EA5625740E4C0073CF0C /* MOLHFont.swift in Sources */,
 				FA37EA6C25740E4C0073CF0C /* BaseNavigationController.swift in Sources */,
+				FAA9C858258D83C6005FC95C /* Reports.swift in Sources */,
 				FA37EABB257432E10073CF0C /* SignUp.swift in Sources */,
 				FA37EAAA25740EAD0073CF0C /* SideMenu.swift in Sources */,
 				FA6B424A25791ABE00C6D106 /* UserModel.swift in Sources */,
@@ -1204,6 +1235,7 @@
 				FA9DBD79258937FD0082A67C /* BookingDetailtModel.swift in Sources */,
 				FA37EA7025740E4C0073CF0C /* CustomLoader.swift in Sources */,
 				FA294FC82587CD8600323EA2 /* BookingDocumentTVC.swift in Sources */,
+				FAA9C85D258D8C2B005FC95C /* CMS.swift in Sources */,
 				FA37EA6925740E4C0073CF0C /* LanguageManager.swift in Sources */,
 				FAEDA20C2586607C00AD777F /* PickupModel.swift in Sources */,
 				FA37EA6625740E4C0073CF0C /* CLPlacemark+Extension.swift in Sources */,

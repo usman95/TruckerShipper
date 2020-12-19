@@ -76,4 +76,16 @@ class AttributesAPIManager: APIManagerBase {
         let route: URL = URLforRoute(route: Route.TransportMode.rawValue, params: params)! as URL
         self.getDictionaryResponseWith(route: route, success: success, failure: failure, withHeader: true)
     }
+    //MARK:- PrivacyPolicy
+    func PrivacyPolicy(success: @escaping DefaultAPISuccessClosure, failure: @escaping DefaultAPIFailureClosure){
+        Utility.showLoader()
+        let route: URL = POSTURLforRoute(route: Route.PrivacyPolicy.rawValue)! as URL
+        self.getDictionaryResponseWith(route: route, success: success, failure: failure, withHeader: false)
+    }
+    //MARK:- TermsAndCondition
+    func TermsAndCondition(success: @escaping DefaultAPISuccessClosure, failure: @escaping DefaultAPIFailureClosure){
+        Utility.showLoader()
+        let route: URL = POSTURLforRoute(route: Route.TermsAndCondition.rawValue)! as URL
+        self.getDictionaryResponseWith(route: route, success: success, failure: failure, withHeader: false)
+    }
 }

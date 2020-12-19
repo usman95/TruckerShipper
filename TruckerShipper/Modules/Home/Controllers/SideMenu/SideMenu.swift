@@ -43,6 +43,8 @@ class SideMenu: UIViewController {
             self.pushToMyBookings()
         case 2:
             self.pushToNotifications()
+        case 3:
+            self.pushToReports()
         case 4:
             self.pushToMyContracts()
         case 5:
@@ -54,11 +56,17 @@ class SideMenu: UIViewController {
         }
     }
     @IBAction func onBtnPrivacyAndTerms(_ sender: UIButton) {
+        if MOLHLanguage.currentAppleLanguage() == "en"{
+            self.sideMenuController?.hideLeftViewAnimated()
+        }
+        else{
+            self.sideMenuController?.hideRightViewAnimated()
+        }
         switch sender.tag {
         case 0:
-            break
+            self.pushToPrivacyPolicy()
         default:
-            break
+            self.pushToTermsAndConditions()
         }
     }
 }
@@ -95,6 +103,26 @@ extension SideMenu{
     }
     private func pushToMyContracts(){
         let controller = MyContracts()
+        guard let topController = Utility.main.topViewController() as? LGSideMenuController else {return}
+        guard let topNavigationController = topController.rootViewController as? UINavigationController else {return}
+        topNavigationController.pushViewController(controller, animated: true)
+    }
+    private func pushToReports(){
+        let controller = Reports()
+        guard let topController = Utility.main.topViewController() as? LGSideMenuController else {return}
+        guard let topNavigationController = topController.rootViewController as? UINavigationController else {return}
+        topNavigationController.pushViewController(controller, animated: true)
+    }
+    private func pushToPrivacyPolicy(){
+        let controller = CMS()
+        controller.cmsType = .privacyPolicy
+        guard let topController = Utility.main.topViewController() as? LGSideMenuController else {return}
+        guard let topNavigationController = topController.rootViewController as? UINavigationController else {return}
+        topNavigationController.pushViewController(controller, animated: true)
+    }
+    private func pushToTermsAndConditions(){
+        let controller = CMS()
+        controller.cmsType = .termsAndCondition
         guard let topController = Utility.main.topViewController() as? LGSideMenuController else {return}
         guard let topNavigationController = topController.rootViewController as? UINavigationController else {return}
         topNavigationController.pushViewController(controller, animated: true)
