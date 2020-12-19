@@ -45,6 +45,7 @@ enum Strings: String{
     case EMPTY_PWD = "Please provide password."
     case EMPTY_CONFIRM_PWD = "Please confirm your password."
     case INVALID_PWD_LENGTH = "Password should contain minimum of 6 characters."
+    case INVALID_NEW_PWD_LENGTH = "New password should contain minimum of 6 characters."
     case INVALID_PWD = "Password should contain minimum of 8 characters with atleast 1 uppercase, 1 lowercase and 1 digit."
     case PWD_ATLEAST_SIX_CH = "At least 6 characters."
     case PWD_DONT_MATCH = "New password and confirm password does not match."
