@@ -143,6 +143,20 @@ extension Utility{
     //        }
     //    }
 }
+//MARK:- QueryURL
+extension Utility{
+    static func URLforRoute(route: String,params:[String: Any]) -> NSURL? {
+        if let components: NSURLComponents  = NSURLComponents(string: route){
+            var queryItems = [NSURLQueryItem]()
+            for(key,value) in params {
+                queryItems.append(NSURLQueryItem(name:key,value: "\(value)"))
+            }
+            components.queryItems = queryItems as [URLQueryItem]?
+            return components.url as NSURL?
+        }
+        return nil
+    }
+}
 //MARK:- Go To Settings
 extension Utility{
     func goToSettings(){

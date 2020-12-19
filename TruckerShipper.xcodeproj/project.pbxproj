@@ -114,6 +114,8 @@
 		FAA9C849258D3E50005FC95C /* TripDetailTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAA9C847258D3E50005FC95C /* TripDetailTVC.xib */; };
 		FAA9C84D258D4B45005FC95C /* MilesTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA9C84B258D4B45005FC95C /* MilesTVC.swift */; };
 		FAA9C84E258D4B45005FC95C /* MilesTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAA9C84C258D4B45005FC95C /* MilesTVC.xib */; };
+		FAA9C852258D769B005FC95C /* TrackLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA9C850258D769B005FC95C /* TrackLocation.swift */; };
+		FAA9C853258D769B005FC95C /* TrackLocation.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAA9C851258D769B005FC95C /* TrackLocation.xib */; };
 		FABB36A42580B4870084BCCA /* ShipperApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABB36A32580B4870084BCCA /* ShipperApiManager.swift */; };
 		FACF6A762585A14E004D2C16 /* Bookings.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACF6A742585A14E004D2C16 /* Bookings.swift */; };
 		FACF6A772585A14E004D2C16 /* Bookings.xib in Resources */ = {isa = PBXBuildFile; fileRef = FACF6A752585A14E004D2C16 /* Bookings.xib */; };
@@ -247,6 +249,8 @@
 		FAA9C847258D3E50005FC95C /* TripDetailTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TripDetailTVC.xib; sourceTree = "<group>"; };
 		FAA9C84B258D4B45005FC95C /* MilesTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MilesTVC.swift; sourceTree = "<group>"; };
 		FAA9C84C258D4B45005FC95C /* MilesTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MilesTVC.xib; sourceTree = "<group>"; };
+		FAA9C850258D769B005FC95C /* TrackLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackLocation.swift; sourceTree = "<group>"; };
+		FAA9C851258D769B005FC95C /* TrackLocation.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrackLocation.xib; sourceTree = "<group>"; };
 		FABB36A32580B4870084BCCA /* ShipperApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShipperApiManager.swift; sourceTree = "<group>"; };
 		FACF6A742585A14E004D2C16 /* Bookings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bookings.swift; sourceTree = "<group>"; };
 		FACF6A752585A14E004D2C16 /* Bookings.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Bookings.xib; sourceTree = "<group>"; };
@@ -707,7 +711,6 @@
 		FA37EA7D25740EAD0073CF0C /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				FAA9C84F258D6EE7005FC95C /* New Group */,
 				FA37EA8E25740EAD0073CF0C /* SideMenu */,
 				FAEDA21525866D6C00AD777F /* Dashboard */,
 				FA37EA7E25740EAD0073CF0C /* Home */,
@@ -718,6 +721,7 @@
 				FACF6A732585A0D2004D2C16 /* Bookings */,
 				FA294FD82588205C00323EA2 /* Trips */,
 				FA3298D72588CA8D00BA8C49 /* TripDetail */,
+				FAA9C84F258D6EE7005FC95C /* TrackLocation */,
 				FA294FBE2587C7F300323EA2 /* BookingDocuments */,
 				FA294FCA2587E4FA00323EA2 /* WebView */,
 				FAE067CB257AF3A1005E1C97 /* MyAccount */,
@@ -876,11 +880,13 @@
 			path = MileTVC;
 			sourceTree = "<group>";
 		};
-		FAA9C84F258D6EE7005FC95C /* New Group */ = {
+		FAA9C84F258D6EE7005FC95C /* TrackLocation */ = {
 			isa = PBXGroup;
 			children = (
+				FAA9C850258D769B005FC95C /* TrackLocation.swift */,
+				FAA9C851258D769B005FC95C /* TrackLocation.xib */,
 			);
-			path = "New Group";
+			path = TrackLocation;
 			sourceTree = "<group>";
 		};
 		FACF6A732585A0D2004D2C16 /* Bookings */ = {
@@ -1051,6 +1057,7 @@
 				FA20009D2583DF8F00E14D36 /* LoadRequest.xib in Resources */,
 				FA294FCE2587E51C00323EA2 /* WebView.xib in Resources */,
 				FA294FC92587CD8600323EA2 /* BookingDocumentTVC.xib in Resources */,
+				FAA9C853258D769B005FC95C /* TrackLocation.xib in Resources */,
 				FA62D009257D716C000DCFDD /* MyContracts.xib in Resources */,
 				FA6F0145258AA23400197BE4 /* DashboardTVC.xib in Resources */,
 				FA3298DB2588CAB700BA8C49 /* TripDetail.xib in Resources */,
@@ -1193,6 +1200,7 @@
 				FA37EA7825740E4C0073CF0C /* APIManager.swift in Sources */,
 				FA20009225839B1D00E14D36 /* LoadDetails.swift in Sources */,
 				FA6B424E25791ABE00C6D106 /* UpdatedBy.swift in Sources */,
+				FAA9C852258D769B005FC95C /* TrackLocation.swift in Sources */,
 				FA9DBD79258937FD0082A67C /* BookingDetailtModel.swift in Sources */,
 				FA37EA7025740E4C0073CF0C /* CustomLoader.swift in Sources */,
 				FA294FC82587CD8600323EA2 /* BookingDocumentTVC.swift in Sources */,

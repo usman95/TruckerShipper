@@ -23,5 +23,6 @@ target 'TruckerShipper' do
   pod 'CRRefresh'
   pod 'GoogleMaps'
   pod 'GooglePlaces'
+  pod 'Socket.IO-Client-Swift', '~> 15.1.0'
   
 end

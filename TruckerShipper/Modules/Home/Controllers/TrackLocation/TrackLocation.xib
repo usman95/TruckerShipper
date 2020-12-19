@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TrackLocation" customModule="TruckerShipper" customModuleProvider="target">
+            <connections>
+                <outlet property="mapView" destination="Cgh-Iy-Ppw" id="uFO-fP-dQg"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wuc-rB-njh">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="124"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="NavBar" translatesAutoresizingMaskIntoConstraints="NO" id="0XY-3R-hGZ">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="124"/>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstItem="0XY-3R-hGZ" firstAttribute="leading" secondItem="Wuc-rB-njh" secondAttribute="leading" id="LBi-mh-pE5"/>
+                        <constraint firstAttribute="bottom" secondItem="0XY-3R-hGZ" secondAttribute="bottom" id="kmV-NQ-63H"/>
+                        <constraint firstAttribute="trailing" secondItem="0XY-3R-hGZ" secondAttribute="trailing" id="rbu-r8-lZa"/>
+                        <constraint firstItem="0XY-3R-hGZ" firstAttribute="top" secondItem="Wuc-rB-njh" secondAttribute="top" id="w0H-81-WqU"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nNk-53-HNi">
+                    <rect key="frame" x="0.0" y="44" width="414" height="80"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ffz-ag-z18">
+                            <rect key="frame" x="20" y="24" width="32" height="32"/>
+                            <state key="normal" image="Back"/>
+                            <connections>
+                                <action selector="onBtnBack:" destination="-1" eventType="touchUpInside" id="Xee-WM-Y24"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TRACK RIDE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zr6-pP-mvB" customClass="UILabelDeviceClass" customModule="TruckerShipper" customModuleProvider="target">
+                            <rect key="frame" x="64" y="27" width="120" height="26"/>
+                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="21"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="iPhoneFontSize">
+                                    <real key="value" value="21"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="string" keyPath="iPhoneFontWeight" value="bold"/>
+                            </userDefinedRuntimeAttributes>
+                        </label>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="zr6-pP-mvB" firstAttribute="centerY" secondItem="Ffz-ag-z18" secondAttribute="centerY" id="6yB-8R-64Z"/>
+                        <constraint firstItem="zr6-pP-mvB" firstAttribute="leading" secondItem="Ffz-ag-z18" secondAttribute="trailing" constant="12" id="GIE-Lf-Oky"/>
+                        <constraint firstAttribute="height" constant="80" id="SSJ-jd-FUV"/>
+                        <constraint firstItem="Ffz-ag-z18" firstAttribute="leading" secondItem="nNk-53-HNi" secondAttribute="leading" constant="20" id="eDk-cC-0pa"/>
+                        <constraint firstItem="Ffz-ag-z18" firstAttribute="centerY" secondItem="nNk-53-HNi" secondAttribute="centerY" id="vXa-Xb-Yub"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cgh-Iy-Ppw" customClass="GMSMapView">
+                    <rect key="frame" x="0.0" y="124" width="414" height="738"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                </view>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <constraints>
+                <constraint firstItem="Cgh-Iy-Ppw" firstAttribute="top" secondItem="Wuc-rB-njh" secondAttribute="bottom" id="0lj-Vn-Bf9"/>
+                <constraint firstItem="Wuc-rB-njh" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="0r4-tD-8OH"/>
+                <constraint firstItem="Wuc-rB-njh" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="2ZR-sN-uyf"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="Cgh-Iy-Ppw" secondAttribute="bottom" id="DcD-M2-IOt"/>
+                <constraint firstItem="Wuc-rB-njh" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="JOW-4p-nrJ"/>
+                <constraint firstItem="nNk-53-HNi" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="fC1-Kw-980"/>
+                <constraint firstItem="Wuc-rB-njh" firstAttribute="bottom" secondItem="nNk-53-HNi" secondAttribute="bottom" id="gtl-UU-aTL"/>
+                <constraint firstItem="nNk-53-HNi" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="maG-JW-E4B"/>
+                <constraint firstItem="Cgh-Iy-Ppw" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="nRR-zR-SfH"/>
+                <constraint firstItem="nNk-53-HNi" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="pPe-gr-9Zy"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Cgh-Iy-Ppw" secondAttribute="trailing" id="wqb-rB-yBl"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="137.68115942028987" y="124.55357142857142"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Back" width="32" height="32"/>
+        <image name="NavBar" width="375" height="95"/>
+    </resources>
+</document>

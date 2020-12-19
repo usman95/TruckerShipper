@@ -9,7 +9,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TripDetail" customModule="TruckerShipper" customModuleProvider="target">
             <connections>
-                <outlet property="btnTrackLocation" destination="2WJ-b1-jhX" id="YUa-jd-j0d"/>
+                <outlet property="btnTrackLocation" destination="2WJ-b1-jhX" id="4dp-6P-2kL"/>
                 <outlet property="tableView" destination="XTn-zN-NFr" id="Rrg-xl-c2M"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -93,6 +93,9 @@
                                 </userDefinedRuntimeAttribute>
                                 <userDefinedRuntimeAttribute type="string" keyPath="iPhoneFontWeight" value="bold"/>
                             </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="onBtnTrackLocation:" destination="-1" eventType="touchUpInside" id="1he-N9-dEX"/>
+                            </connections>
                         </button>
                     </subviews>
                 </stackView>

@@ -31,6 +31,9 @@ PODS:
   - SDWebImage (5.9.2):
     - SDWebImage/Core (= 5.9.2)
   - SDWebImage/Core (5.9.2)
+  - Socket.IO-Client-Swift (15.1.0):
+    - Starscream (~> 3.1)
+  - Starscream (3.1.1)
   - SwiftyJSON (5.0.0)
   - Toast-Swift (5.0.1)
   - "UITextView+Placeholder (1.4.0)"
@@ -50,6 +53,7 @@ DEPENDENCIES:
   - Realm
   - RealmSwift
   - SDWebImage
+  - Socket.IO-Client-Swift (~> 15.1.0)
   - SwiftyJSON
   - Toast-Swift
   - "UITextView+Placeholder"
@@ -71,6 +75,8 @@ SPEC REPOS:
     - Realm
     - RealmSwift
     - SDWebImage
+    - Socket.IO-Client-Swift
+    - Starscream
     - SwiftyJSON
     - Toast-Swift
     - "UITextView+Placeholder"
@@ -91,10 +97,12 @@ SPEC CHECKSUMS:
   Realm: 042bbb59227a0159eda397b8a5a49fbd67495ce7
   RealmSwift: 15ddd6b3398ebfc99810811c44f095df1313adb3
   SDWebImage: 0b42b8719ab0c5257177d5894306e8a336b21cbb
+  Socket.IO-Client-Swift: 7cb44c0ffb86e158cee32d0642d30ec5fdcf8f61
+  Starscream: 4bb2f9942274833f7b4d296a55504dcfc7edb7b0
   SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
   Toast-Swift: 9b6a70f28b3bf0b96c40d46c0c4b9d6639846711
   "UITextView+Placeholder": d7b0c400921f66523f3a85d74f774512e14f6502
 
-PODFILE CHECKSUM: 19298cdd00444612157150377a6bc375b27a9c81
+PODFILE CHECKSUM: b85e737834c004c59926b3b9b96f398ee97d03b2
 
 COCOAPODS: 1.10.0.rc.1

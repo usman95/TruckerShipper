@@ -90,6 +90,12 @@ extension BaseController{
         controller.trip = trip
         self.navigationController?.pushViewController(controller, animated: true)
     }
+    func pushToTrackLocation(inProgressMile: TripMilesModel?){
+        let controller = TrackLocation()
+        controller.inProgressMile = inProgressMile
+        Constants.inProgressMileId = inProgressMile?.id ?? ""
+        self.navigationController?.pushViewController(controller, animated: true)
+    }
 }
 extension BaseController: UIGestureRecognizerDelegate {
     func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {

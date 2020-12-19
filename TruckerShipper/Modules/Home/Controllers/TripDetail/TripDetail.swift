@@ -16,12 +16,17 @@ class TripDetail: BaseController {
     
     var bookingDetail: BookingDetailtModel?
     var trip: TripsModel?
+    var inProgressMile: TripMilesModel?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.registerCells()
         self.getBookingDetail()
         // Do any additional setup after loading the view.
+    }
+    
+    @IBAction func onBtnTrackLocation(_ sender: UIButtonDeviceClass) {
+        super.pushToTrackLocation(inProgressMile: self.inProgressMile)
     }
 }
 //MARK:- Helper methods
@@ -33,6 +38,18 @@ extension TripDetail{
 }
 //MARK:- Helper method
 extension TripDetail{
+    private func setData(){
+        guard let selectedTrip:TripsModel = self.bookingDetail?.trips.filter({$0.id == self.trip?.id}).first else {return}
+        let selectedInProgressMile = selectedTrip.tripMiles.filter{$0.status == MileType.inProgress.rawValue}.first
+        
+        if let inProgressMile = selectedInProgressMile{
+            self.inProgressMile = inProgressMile
+            self.btnTrackLocation.isHidden = false
+        }
+        else{
+            self.btnTrackLocation.isHidden = true
+        }
+    }
 }
 //MARK:- Helper method
 extension TripDetail: UITableViewDataSource{
@@ -89,6 +106,7 @@ extension TripDetail{
         
         APIManager.sharedInstance.shipperAPIManager.BookingDetails(id: id, success: { (responseObject) in
             self.bookingDetail = Mapper<BookingDetailtModel>().map(JSON: responseObject)
+            self.setData()
             
             DispatchQueue.main.async {
                 self.tableView.reloadData()
