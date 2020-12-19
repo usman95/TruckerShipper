@@ -49,6 +49,8 @@ class SideMenu: UIViewController {
             self.pushToMyContracts()
         case 5:
             self.pushToMyAccount()
+        case 6:
+            self.pushToChangePassword()
         case 7:
             AppStateManager.sharedInstance.logoutUser()
         default:
@@ -109,6 +111,12 @@ extension SideMenu{
     }
     private func pushToReports(){
         let controller = Reports()
+        guard let topController = Utility.main.topViewController() as? LGSideMenuController else {return}
+        guard let topNavigationController = topController.rootViewController as? UINavigationController else {return}
+        topNavigationController.pushViewController(controller, animated: true)
+    }
+    private func pushToChangePassword(){
+        let controller = ChangePassword()
         guard let topController = Utility.main.topViewController() as? LGSideMenuController else {return}
         guard let topNavigationController = topController.rootViewController as? UINavigationController else {return}
         topNavigationController.pushViewController(controller, animated: true)

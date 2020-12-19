@@ -120,6 +120,8 @@
 		FAA9C859258D83C6005FC95C /* Reports.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAA9C857258D83C6005FC95C /* Reports.xib */; };
 		FAA9C85D258D8C2B005FC95C /* CMS.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA9C85B258D8C2A005FC95C /* CMS.swift */; };
 		FAA9C85E258D8C2B005FC95C /* CMS.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAA9C85C258D8C2A005FC95C /* CMS.xib */; };
+		FAA9C862258D9172005FC95C /* ChangePassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA9C860258D9172005FC95C /* ChangePassword.swift */; };
+		FAA9C863258D9172005FC95C /* ChangePassword.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAA9C861258D9172005FC95C /* ChangePassword.xib */; };
 		FABB36A42580B4870084BCCA /* ShipperApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABB36A32580B4870084BCCA /* ShipperApiManager.swift */; };
 		FACF6A762585A14E004D2C16 /* Bookings.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACF6A742585A14E004D2C16 /* Bookings.swift */; };
 		FACF6A772585A14E004D2C16 /* Bookings.xib in Resources */ = {isa = PBXBuildFile; fileRef = FACF6A752585A14E004D2C16 /* Bookings.xib */; };
@@ -259,6 +261,8 @@
 		FAA9C857258D83C6005FC95C /* Reports.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Reports.xib; sourceTree = "<group>"; };
 		FAA9C85B258D8C2A005FC95C /* CMS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMS.swift; sourceTree = "<group>"; };
 		FAA9C85C258D8C2A005FC95C /* CMS.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CMS.xib; sourceTree = "<group>"; };
+		FAA9C860258D9172005FC95C /* ChangePassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePassword.swift; sourceTree = "<group>"; };
+		FAA9C861258D9172005FC95C /* ChangePassword.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChangePassword.xib; sourceTree = "<group>"; };
 		FABB36A32580B4870084BCCA /* ShipperApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShipperApiManager.swift; sourceTree = "<group>"; };
 		FACF6A742585A14E004D2C16 /* Bookings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bookings.swift; sourceTree = "<group>"; };
 		FACF6A752585A14E004D2C16 /* Bookings.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Bookings.xib; sourceTree = "<group>"; };
@@ -736,6 +740,7 @@
 				FAA9C854258D83A0005FC95C /* Reports */,
 				FAA9C85A258D8BF5005FC95C /* CMS */,
 				FA37EA9125740EAD0073CF0C /* Notifications */,
+				FAA9C85F258D9155005FC95C /* ChangePassword */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -917,6 +922,15 @@
 			path = CMS;
 			sourceTree = "<group>";
 		};
+		FAA9C85F258D9155005FC95C /* ChangePassword */ = {
+			isa = PBXGroup;
+			children = (
+				FAA9C860258D9172005FC95C /* ChangePassword.swift */,
+				FAA9C861258D9172005FC95C /* ChangePassword.xib */,
+			);
+			path = ChangePassword;
+			sourceTree = "<group>";
+		};
 		FACF6A732585A0D2004D2C16 /* Bookings */ = {
 			isa = PBXGroup;
 			children = (
@@ -1085,6 +1099,7 @@
 				FA2000982583BB6800E14D36 /* CalculatedRate.xib in Resources */,
 				FA37EABC257432E10073CF0C /* SignUp.xib in Resources */,
 				FA20009D2583DF8F00E14D36 /* LoadRequest.xib in Resources */,
+				FAA9C863258D9172005FC95C /* ChangePassword.xib in Resources */,
 				FA294FCE2587E51C00323EA2 /* WebView.xib in Resources */,
 				FA294FC92587CD8600323EA2 /* BookingDocumentTVC.xib in Resources */,
 				FAA9C853258D769B005FC95C /* TrackLocation.xib in Resources */,
@@ -1197,6 +1212,7 @@
 				FA37EA5625740E4C0073CF0C /* MOLHFont.swift in Sources */,
 				FA37EA6C25740E4C0073CF0C /* BaseNavigationController.swift in Sources */,
 				FAA9C858258D83C6005FC95C /* Reports.swift in Sources */,
+				FAA9C862258D9172005FC95C /* ChangePassword.swift in Sources */,
 				FA37EABB257432E10073CF0C /* SignUp.swift in Sources */,
 				FA37EAAA25740EAD0073CF0C /* SideMenu.swift in Sources */,
 				FA6B424A25791ABE00C6D106 /* UserModel.swift in Sources */,

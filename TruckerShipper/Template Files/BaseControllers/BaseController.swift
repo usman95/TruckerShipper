@@ -96,6 +96,7 @@ extension BaseController{
         Constants.inProgressMileId = inProgressMile?.id ?? ""
         self.navigationController?.pushViewController(controller, animated: true)
     }
+    
 }
 extension BaseController: UIGestureRecognizerDelegate {
     func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
