@@ -26,7 +26,7 @@ struct Constants {
     static let PAGINATION_PAGE_SIZE        = 10
     static let VERIFY_CODE_TIME_LIMIT      = 5*60
     static var adminPhone                  = "123456"
-    static let apiKey                      = "AIzaSyAUOz-7RsaYs_xNB8XAHlo1PNf866EhT_w"//"AIzaSyCJBDZYHuEOl08YzAOTkOPfq0TQ3mO0MgA"
+    static let apiKey                      = "AIzaSyBpMecyq-QuBi8mdaaZQlGBbUkxOsuA6G0"
     static var accessToken                 = ""
     static var apiMessage                  = ""
     static var GoogleSignInClientID        = "821622832147-00elb5glohhc0njcl57bksf4b9kftomc.apps.googleusercontent.com"

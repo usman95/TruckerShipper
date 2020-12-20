@@ -50,7 +50,7 @@
                                             <userDefinedRuntimeAttribute type="number" keyPath="iPhoneFontSize">
                                                 <real key="value" value="15"/>
                                             </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="iPhoneFontWeight" value="semiBold"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="iPhoneFontWeight" value="medium"/>
                                         </userDefinedRuntimeAttributes>
                                     </label>
                                 </subviews>
