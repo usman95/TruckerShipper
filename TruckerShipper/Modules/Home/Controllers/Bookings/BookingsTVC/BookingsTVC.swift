@@ -21,12 +21,16 @@ class BookingsTVC: UITableViewCell {
     @IBOutlet weak var btnViewTrips: UIButtonDeviceClass!
     @IBOutlet weak var btnAddDocuments: UIButtonDeviceClass!
     
-    func setData(data: BookingModel){
+    func setData(data: BookingModel, isSearched: Bool){
         self.lblDistanceInKM.text = "\(data.totalDistance) \(Strings.KM.text)"
         
-//        let totalDuration = data.totalDuration ?? ""
-//        self.lblDuration.text = totalDuration.isEmpty ? "-" : totalDuration
-        self.lblDuration.text = (data.status ?? "").uppercased()
+        switch isSearched{
+        case false:
+            let totalDuration = data.totalDuration ?? ""
+            self.lblDuration.text = totalDuration.isEmpty ? "-" : totalDuration
+        case true:
+            self.lblDuration.text = (data.status ?? "").uppercased()
+        }
         
         let pickUpDateString = data.pickUpDate ?? "2020-12-14T14:24:59.741Z"
         let pickUpTime = Utility.main.stringDateFormatter(dateStr: pickUpDateString, dateFormat: Constants.serverDateFormat, formatteddate: "hh:mm a")
@@ -45,7 +49,7 @@ class BookingsTVC: UITableViewCell {
         self.lblPickUpAddress.text = data.pickup?.address ?? ""
         self.lblDropOffAddress.text = data.dropOff?.address ?? ""
         
-        self.btnViewTrips.setTitle(Strings.VIEW_TRIPS.text, for: .normal)
+        self.btnViewTrips.setTitle(Strings.VIEW_TRIPS.text.uppercased(), for: .normal)
         
         let bookingStatus = data.status ?? ""
         
@@ -54,7 +58,7 @@ class BookingsTVC: UITableViewCell {
             self.btnViewTrips.isHidden = false
             self.btnAddDocuments.isHidden = true
             
-            self.btnViewTrips.setTitle(Strings.CANCEL_BOOKING.text, for: .normal)
+            self.btnViewTrips.setTitle(Strings.CANCEL_BOOKING.text.uppercased(), for: .normal)
         case BookingType.inProgress.rawValue:
             self.btnAddDocuments.isHidden = data.documents.isEmpty
             self.btnViewTrips.isHidden = false

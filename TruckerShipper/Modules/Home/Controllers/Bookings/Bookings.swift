@@ -109,7 +109,7 @@ extension Bookings: UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "BookingsTVC", for: indexPath) as! BookingsTVC
         let data = self.arrBookings[indexPath.row]
-        cell.setData(data: data)
+        cell.setData(data: data, isSearched: false)
         
         cell.btnViewTrips.tag = indexPath.row
         cell.btnAddDocuments.tag = indexPath.row
@@ -144,7 +144,7 @@ extension Bookings: UITableViewDataSource{
 //MARK:- UITableViewDelegate
 extension Bookings: UITableViewDelegate{
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
             if tableView.visibleCells.contains(cell) {
                 if indexPath.row == self.arrBookings.count - 1{
                     self.loadMoreCells()

@@ -95,6 +95,9 @@
 		FA37EABC257432E10073CF0C /* SignUp.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA37EABA257432E10073CF0C /* SignUp.xib */; };
 		FA5225AC25802E6200C4FFD0 /* MyContractsTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5225AA25802E6200C4FFD0 /* MyContractsTVC.swift */; };
 		FA5225AD25802E6200C4FFD0 /* MyContractsTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA5225AB25802E6200C4FFD0 /* MyContractsTVC.xib */; };
+		FA5AB710258FF520008314FE /* ContractModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5AB701258FF51E008314FE /* ContractModel.swift */; };
+		FA5AB717258FF520008314FE /* ChargesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5AB708258FF51F008314FE /* ChargesModel.swift */; };
+		FA5AB71C258FF520008314FE /* ShippingLineModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5AB70D258FF520008314FE /* ShippingLineModel.swift */; };
 		FA62D004257D6263000DCFDD /* AttributesAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA62D003257D6263000DCFDD /* AttributesAPIManager.swift */; };
 		FA62D008257D716C000DCFDD /* MyContracts.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA62D006257D716C000DCFDD /* MyContracts.swift */; };
 		FA62D009257D716C000DCFDD /* MyContracts.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA62D007257D716C000DCFDD /* MyContracts.xib */; };
@@ -240,6 +243,9 @@
 		FA37EABA257432E10073CF0C /* SignUp.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignUp.xib; sourceTree = "<group>"; };
 		FA5225AA25802E6200C4FFD0 /* MyContractsTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyContractsTVC.swift; sourceTree = "<group>"; };
 		FA5225AB25802E6200C4FFD0 /* MyContractsTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyContractsTVC.xib; sourceTree = "<group>"; };
+		FA5AB701258FF51E008314FE /* ContractModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContractModel.swift; sourceTree = "<group>"; };
+		FA5AB708258FF51F008314FE /* ChargesModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChargesModel.swift; sourceTree = "<group>"; };
+		FA5AB70D258FF520008314FE /* ShippingLineModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShippingLineModel.swift; sourceTree = "<group>"; };
 		FA62D003257D6263000DCFDD /* AttributesAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttributesAPIManager.swift; sourceTree = "<group>"; };
 		FA62D006257D716C000DCFDD /* MyContracts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyContracts.swift; sourceTree = "<group>"; };
 		FA62D007257D716C000DCFDD /* MyContracts.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyContracts.xib; sourceTree = "<group>"; };
@@ -635,6 +641,7 @@
 				FA294FFC258846A100323EA2 /* TripModel */,
 				FAD70DBD258C0E1000AACEDB /* BookingsCountModel */,
 				FA880328258F63CB00B7A0ED /* NotificationsModel */,
+				FA5AB700258FF4FD008314FE /* ContractModel */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -846,6 +853,16 @@
 				FA5225AB25802E6200C4FFD0 /* MyContractsTVC.xib */,
 			);
 			path = MyContractsTVC;
+			sourceTree = "<group>";
+		};
+		FA5AB700258FF4FD008314FE /* ContractModel */ = {
+			isa = PBXGroup;
+			children = (
+				FA5AB701258FF51E008314FE /* ContractModel.swift */,
+				FA5AB708258FF51F008314FE /* ChargesModel.swift */,
+				FA5AB70D258FF520008314FE /* ShippingLineModel.swift */,
+			);
+			path = ContractModel;
 			sourceTree = "<group>";
 		};
 		FA62D005257D713A000DCFDD /* MyContracts */ = {
@@ -1278,6 +1295,7 @@
 				FA37EA6925740E4C0073CF0C /* LanguageManager.swift in Sources */,
 				FAEDA20C2586607C00AD777F /* PickupModel.swift in Sources */,
 				FA37EA6625740E4C0073CF0C /* CLPlacemark+Extension.swift in Sources */,
+				FA5AB710258FF520008314FE /* ContractModel.swift in Sources */,
 				FAEDA2132586607C00AD777F /* RemarksModel.swift in Sources */,
 				FA37EA6425740E4C0073CF0C /* String+Extension.swift in Sources */,
 				FA37EA5225740E4C0073CF0C /* MOLHLanguage.swift in Sources */,
@@ -1292,11 +1310,13 @@
 				FA37EA5A25740E4C0073CF0C /* Enums.swift in Sources */,
 				FA37E9FB2574099A0073CF0C /* AppDelegate.swift in Sources */,
 				FAE067CA257AE6A2005E1C97 /* CardView.swift in Sources */,
+				FA5AB717258FF520008314FE /* ChargesModel.swift in Sources */,
 				FA37EA6A25740E4C0073CF0C /* CustomLocale.swift in Sources */,
 				FA37EA6325740E4C0073CF0C /* UIViewController+Extension.swift in Sources */,
 				FA9DBD7A258937FD0082A67C /* TripsModel.swift in Sources */,
 				FA37EA5E25740E4C0073CF0C /* UIImageViewExtension.swift in Sources */,
 				FA37EA6E25740E4C0073CF0C /* ProjectStructs.swift in Sources */,
+				FA5AB71C258FF520008314FE /* ShippingLineModel.swift in Sources */,
 				FA295004258846B700323EA2 /* DriverIdModel.swift in Sources */,
 				FA294FC32587CAFD00323EA2 /* BookingDocuments.swift in Sources */,
 				FA37EA6F25740E4C0073CF0C /* ProjectEnums.swift in Sources */,

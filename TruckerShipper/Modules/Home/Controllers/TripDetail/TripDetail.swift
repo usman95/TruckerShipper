@@ -120,18 +120,18 @@ extension TripDetail: UITableViewDataSource{
         let selectedCompletedMile = selectedTrip.tripMiles.filter{$0.status == MileType.completed.rawValue}.first
         
         if selectedInProgressMile != nil{
-            let currentDriver = selectedInProgressMile?.driverId
-            
+            let phoneNumber = selectedInProgressMile?.driverId?.contactNo ?? ""
+            Utility.main.sendSMS(number: phoneNumber)
             return
         }
         if selectedPendingMile != nil{
-            let currentDriver = selectedPendingMile?.driverId
-            
+            let phoneNumber = selectedPendingMile?.driverId?.contactNo ?? ""
+            Utility.main.sendSMS(number: phoneNumber)
             return
         }
         if selectedCompletedMile != nil{
-            let currentDriver = selectedCompletedMile?.driverId
-            
+            let phoneNumber = selectedCompletedMile?.driverId?.contactNo ?? ""
+            Utility.main.sendSMS(number: phoneNumber)
             return
         }
     }

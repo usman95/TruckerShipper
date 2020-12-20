@@ -4,12 +4,6 @@ import Alamofire
 import SwiftyJSON
 
 class ShipperAPIManager: APIManagerBase {
-    //MARK:- ShipperContracts
-    func ShipperContracts(params: Parameters, success: @escaping DefaultArrayResultAPISuccessClosure, failure: @escaping DefaultAPIFailureClosure){
-        Utility.showLoader()
-        let route: URL = URLforRoute(route: Route.ShipperContracts.rawValue, params: params)! as URL
-        self.getArrayResponseWith(route: route, success: success, failure: failure, withHeader: true)
-    }
     //MARK:- BookingEstimate
     func BookingEstimate(params: Parameters, success: @escaping DefaultAPISuccessClosure, failure: @escaping DefaultAPIFailureClosure){
         Utility.showLoader()
@@ -74,5 +68,11 @@ class ShipperAPIManager: APIManagerBase {
         Utility.showLoader()
         let route: URL = POSTURLforRoute(route: Route.Bookings.rawValue+id+Route.BookingStatus.rawValue)! as URL
         self.putDictionaryResponseWith(route: route, parameters: params, success: success, failure: failure, withHeader: true)
+    }
+    //MARK:- ShipperContracts
+    func ShipperContracts(params: Parameters, success: @escaping DefaultAPISuccessClosure, failure: @escaping DefaultAPIFailureClosure){
+        Utility.showLoader()
+        let route: URL = URLforRoute(route: Route.ShipperContracts.rawValue, params: params)! as URL
+        self.getDictionaryResponseWith(route: route, success: success, failure: failure, withHeader: true)
     }
 }

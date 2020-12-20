@@ -63,8 +63,8 @@ class LoadRequest: BaseController {
     var selectedBookingType: AttributeModel?
     
     let shippingLineDropDown = DropDown()
-    var arrShippingLine = [AttributeModel]()
-    var selectedShippingLine: AttributeModel?
+    var arrShippingLine = [ShippingLineModel]()
+    var selectedShippingLine: ShippingLineModel?
     
     var arrCommodity = [AttributeModel]()
     var selectedCommodity: AttributeModel?
@@ -436,7 +436,7 @@ extension LoadRequest{
         APIManager.sharedInstance.attributesAPIManager.ShippingLine(params: params, success: { (responseObject) in
             let response = responseObject as Dictionary
             guard let bookingTypes = response["shippingLines"] as? [[String:Any]] else {return}
-            self.arrShippingLine = Mapper<AttributeModel>().mapArray(JSONArray: bookingTypes)
+            self.arrShippingLine = Mapper<ShippingLineModel>().mapArray(JSONArray: bookingTypes)
             self.setShippingLineDropDown(showDropDown: showDropDown)
         }) { (error) in
             print(error)

@@ -76,7 +76,7 @@ extension Notifications: UITableViewDataSource{
 //MARK:- UITableViewDelegate
 extension Notifications: UITableViewDelegate{
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
             if tableView.visibleCells.contains(cell) {
                 if indexPath.row == self.arrNotifications.count - 1{
                     self.loadMoreCells()

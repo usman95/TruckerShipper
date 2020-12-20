@@ -64,7 +64,7 @@ extension SearchForAnything: UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "BookingsTVC", for: indexPath) as! BookingsTVC
         let data = self.arrBookings[indexPath.row]
-        cell.setData(data: data)
+        cell.setData(data: data, isSearched: true)
         
         cell.btnViewTrips.tag = indexPath.row
         cell.btnAddDocuments.tag = indexPath.row

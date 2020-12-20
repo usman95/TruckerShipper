@@ -3,6 +3,7 @@ import UIKit
 import AVFoundation
 import Toast_Swift
 import ContactsUI
+import MessageUI
 
 //MARK:- AppHelperUtility setup
 @objc class Utility: NSObject{
@@ -74,6 +75,20 @@ extension Utility{
     func makeCallTo(number:String){
         guard let number = URL(string: "tel://" + number) else { return }
         UIApplication.shared.open(number)
+    }
+    func sendSMS(number:String){
+        if (MFMessageComposeViewController.canSendText()) {
+            let controller = MFMessageComposeViewController()
+            controller.body = ""
+            controller.recipients = [number]
+            controller.messageComposeDelegate = self
+            Utility.main.topViewController()?.present(controller, animated: true, completion: nil)
+        }
+    }
+}
+extension Utility: MFMessageComposeViewControllerDelegate{
+    func messageComposeViewController(_ controller: MFMessageComposeViewController, didFinishWith result: MessageComposeResult) {
+        Utility.main.topViewController()?.dismiss(animated: true, completion: nil)
     }
 }
 //MARK:- Alert related functions
