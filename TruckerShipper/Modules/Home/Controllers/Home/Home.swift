@@ -52,18 +52,20 @@ class Home: BaseController {
     }
     
     @IBAction func onBtnPickUpTick(_ sender: UIButton) {
-        if self.btnPickUpTick.isSelected{return}
-        self.btnPickUpTick.isSelected = true
-        self.btnDropOffTick.isSelected = false
-        self.locationPickerType = .pickUp
-        self.showPicker()
+        return
+//        if self.btnPickUpTick.isSelected{return}
+//        self.btnPickUpTick.isSelected = true
+//        self.btnDropOffTick.isSelected = false
+//        self.locationPickerType = .pickUp
+//        self.showPicker()
     }
     @IBAction func onBtnDropOffTick(_ sender: UIButton) {
-        if self.btnDropOffTick.isSelected{return}
-        self.btnDropOffTick.isSelected = true
-        self.btnPickUpTick.isSelected = false
-        self.locationPickerType = .dropOff
-        self.showPicker()
+        return
+//        if self.btnDropOffTick.isSelected{return}
+//        self.btnDropOffTick.isSelected = true
+//        self.btnPickUpTick.isSelected = false
+//        self.locationPickerType = .dropOff
+//        self.showPicker()
     }
     @IBAction func onBtnPickUpLocationPicker(_ sender: UIButton) {
         self.locationPickerType = .pickUp
