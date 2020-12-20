@@ -9,7 +9,7 @@
 import UIKit
 
 class Reports: BaseController {
-
+    
     @IBOutlet weak var tfStartDate: UITextFieldDeviceClass!
     @IBOutlet weak var tfEndDate: UITextFieldDeviceClass!
     @IBOutlet weak var btnGenerateReport: UIButtonDeviceClass!
@@ -96,6 +96,11 @@ extension Reports{
 extension Reports{
     private func generateReport(){
         guard let params = self.validate() else {return}
-        
+        APIManager.sharedInstance.shipperAPIManager.Report(params: params, success: { (responseObject) in
+            guard let reportURL = URL(string: "\(Constants.BaseURL)/\(responseObject)") else {return}
+            Utility.main.openURL(url: reportURL)
+        }) { (error) in
+            print(error)
+        }
     }
 }
