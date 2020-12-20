@@ -51,6 +51,7 @@ class MyAccount: BaseController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.callAPIs()
+        self.setData()
         self.getUserDetails()
         // Do any additional setup after loading the view.
     }
@@ -82,9 +83,9 @@ class MyAccount: BaseController {
 //MARK:- Helper methods
 extension MyAccount{
     private func setData(){
-        let user = self.shipperProfile?.user
+        let user = self.shipperProfile?.user ?? AppStateManager.sharedInstance.loggedInUser.user
         
-        let shipperImageURL = AppStateManager.sharedInstance.loggedInUser.user?.profileImageUrl ?? ""
+        let shipperImageURL = user?.profileImageUrl ?? ""
         self.imgProfile.sd_setImage(with: URL(string: shipperImageURL), placeholderImage: UIImage(named: "profilePlaceHolder"))
         
         self.tfFirstName.text = user?.firstName ?? ""
