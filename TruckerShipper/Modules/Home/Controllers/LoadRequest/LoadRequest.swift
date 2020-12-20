@@ -52,8 +52,8 @@ class LoadRequest: BaseController {
     var selectedDropOffDetailsCity: AttributeModel?
     
     var bookingDatePickerType = BookingDatePickerType.booking
-    var selecteBookingDate: Date?
-    var selectePickUpDate: Date?
+    var selectedBookingDate: Date?
+    var selectedPickUpDate: Date?
     
     var arrRoutes = [String]()
     var selectedRoute: String?
@@ -88,12 +88,12 @@ class LoadRequest: BaseController {
     
     @IBAction func onTfBookingDate(_ sender: UITextField) {
         self.bookingDatePickerType = .booking
-        self.setDate(date: self.selecteBookingDate ?? Date())
+        self.setDate(date: self.selectedBookingDate ?? Date())
         self.getPickedDate(sender)
     }
     @IBAction func onTfDnDPickUpDate(_ sender: UITextField) {
         self.bookingDatePickerType = .pickUp
-        self.setDate(date: self.selecteBookingDate ?? self.selectePickUpDate ?? Date())
+        self.setDate(date: self.selectedBookingDate ?? self.selectedPickUpDate ?? Date())
         self.getPickedDate(sender)
     }
     
@@ -304,8 +304,8 @@ extension LoadRequest{
             let bookingTypeId = self.selectedBookingType?.id ?? ""
             let quantityOfTrucks = loadDetails["quantityOfTrucks"] as? Int ?? 0
             let transitFreeDays = Int(self.tfBookingDetailsTransitFreeDays.text ?? "") ?? 0
-            let pickUpDate = Utility.main.dateFormatter(date: self.selectePickUpDate ?? self.selecteBookingDate ?? Date(), dateFormat: "yyyy-MM-dd HH:mm:ss.SSS'Z'")
-            let bookingDate = Utility.main.dateFormatter(date: self.selecteBookingDate ?? Date(), dateFormat: "yyyy-MM-dd HH:mm:ss.SSS'Z'")
+            let pickUpDate = Utility.main.dateFormatter(date: self.selectedPickUpDate ?? self.selectedBookingDate ?? Date(), dateFormat: "yyyy-MM-dd HH:mm:ss.SSS'Z'")
+            let bookingDate = Utility.main.dateFormatter(date: self.selectedBookingDate ?? Date(), dateFormat: "yyyy-MM-dd HH:mm:ss.SSS'Z'")
             let shippingLine = self.selectedShippingLine?.id ?? ""
             
             let comments = "\(self.tfBookingDetailsRemarks.text ?? "")"
@@ -353,10 +353,10 @@ extension LoadRequest{
         switch self.bookingDatePickerType{
         case .booking:
             datePickerView.minimumDate = Date()
-            datePickerView.date = self.selecteBookingDate ?? Date()
+            datePickerView.date = self.selectedBookingDate ?? Date()
         case .pickUp:
-            datePickerView.minimumDate = self.selecteBookingDate ?? Date()
-            datePickerView.date = self.selectePickUpDate ?? Date()
+            datePickerView.minimumDate = self.selectedBookingDate ?? Date()
+            datePickerView.date = self.selectedPickUpDate ?? Date()
         }
         
         sender.inputView = datePickerView
@@ -371,13 +371,13 @@ extension LoadRequest{
         
         switch self.bookingDatePickerType{
         case .booking:
-            self.selecteBookingDate = date
-            self.selectePickUpDate = nil
+            self.selectedBookingDate = date
+            self.selectedPickUpDate = nil
             
             self.tfBookingDetailsBookingDate.text = dateFormatter.string(from: date)
             self.tfBookingDetailsDnDPickUpDate.text = nil
         case .pickUp:
-            self.selectePickUpDate = date
+            self.selectedPickUpDate = date
             
             self.tfBookingDetailsDnDPickUpDate.text = dateFormatter.string(from: date)
         }

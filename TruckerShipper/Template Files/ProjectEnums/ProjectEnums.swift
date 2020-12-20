@@ -56,3 +56,7 @@ enum SearchType{
     case search
     case shipmentTracking
 }
+enum ReportDateType{
+    case start
+    case end
+}
