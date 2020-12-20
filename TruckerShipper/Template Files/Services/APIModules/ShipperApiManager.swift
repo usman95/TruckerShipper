@@ -63,4 +63,10 @@ class ShipperAPIManager: APIManagerBase {
         let route: URL = POSTURLforRoute(route: Route.Notifications.rawValue+id)! as URL
         self.deleteDictionaryResponseWith(route: route, parameters: [:], success: success, failure: failure, withHeader: true)
     }
+    //MARK:- BookingSearch
+    func BookingSearch(params: Parameters, success: @escaping DefaultArrayResultAPISuccessClosure, failure: @escaping DefaultAPIFailureClosure){
+        Utility.showLoader()
+        let route: URL = URLforRoute(route: Route.BookingSearch.rawValue, params: params)! as URL
+        self.getArrayResponseWith(route: route, success: success, failure: failure, withHeader: true)
+    }
 }

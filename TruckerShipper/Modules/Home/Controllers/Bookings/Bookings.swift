@@ -109,7 +109,7 @@ extension Bookings: UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "BookingsTVC", for: indexPath) as! BookingsTVC
         let data = self.arrBookings[indexPath.row]
-        cell.setData(bookingType: self.bookingType, data: data)
+        cell.setData(data: data)
         
         cell.btnViewTrips.tag = indexPath.row
         cell.btnAddDocuments.tag = indexPath.row

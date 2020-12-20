@@ -56,7 +56,7 @@ extension Dashboard{
     }
     private func setDashboard(){
         DispatchQueue.main.async {
-            self.tableView.reloadSections([0], with: .automatic)
+            self.tableView.reloadData()
         }
     }
     
@@ -156,7 +156,9 @@ extension Dashboard: UITableViewDelegate{
 extension Dashboard{
     private func getBookingsCount(){
         APIManager.sharedInstance.shipperAPIManager.BookingsCount(success: { (responseObject) in
-            self.bookingsCount = Mapper<BookingsCountModel>().map(JSON: responseObject)
+            let response = responseObject as Dictionary
+            guard let bookingCounts = response["bookingCounts"] as? [String:Any] else {return}
+            self.bookingsCount = Mapper<BookingsCountModel>().map(JSON: bookingCounts)
             self.setDashboard()
         }) { (error) in
             print(error)

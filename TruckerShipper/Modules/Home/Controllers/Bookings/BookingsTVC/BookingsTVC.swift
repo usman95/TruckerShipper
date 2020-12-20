@@ -21,11 +21,12 @@ class BookingsTVC: UITableViewCell {
     @IBOutlet weak var btnViewTrips: UIButtonDeviceClass!
     @IBOutlet weak var btnAddDocuments: UIButtonDeviceClass!
     
-    func setData(bookingType: BookingType, data: BookingModel){
+    func setData(data: BookingModel){
         self.lblDistanceInKM.text = "\(data.totalDistance) \(Strings.KM.text)"
         
-        let totalDuration = data.totalDuration ?? ""
-        self.lblDuration.text = totalDuration.isEmpty ? "-" : totalDuration
+//        let totalDuration = data.totalDuration ?? ""
+//        self.lblDuration.text = totalDuration.isEmpty ? "-" : totalDuration
+        self.lblDuration.text = (data.status ?? "").uppercased()
         
         let pickUpDateString = data.pickUpDate ?? "2020-12-14T14:24:59.741Z"
         let pickUpTime = Utility.main.stringDateFormatter(dateStr: pickUpDateString, dateFormat: Constants.serverDateFormat, formatteddate: "hh:mm a")
@@ -44,17 +45,25 @@ class BookingsTVC: UITableViewCell {
         self.lblPickUpAddress.text = data.pickup?.address ?? ""
         self.lblDropOffAddress.text = data.dropOff?.address ?? ""
         
-        switch bookingType {
-        case .pending:
+        let bookingStatus = data.status ?? ""
+        
+        switch bookingStatus {
+        case BookingType.pending.rawValue:
             self.btnViewTrips.isHidden = true
             self.btnAddDocuments.isHidden = true
-        case .inProgress:
+        case BookingType.inProgress.rawValue:
             self.btnAddDocuments.isHidden = data.documents.isEmpty
             self.btnViewTrips.isHidden = false
-        case .completed:
+        case BookingType.accepted.rawValue:
+            self.btnAddDocuments.isHidden = data.documents.isEmpty
+            self.btnViewTrips.isHidden = false
+        case BookingType.completed.rawValue:
             self.btnViewTrips.isHidden = true
             self.btnAddDocuments.isHidden = true
-        case .rejected:
+        case BookingType.rejected.rawValue:
+            self.btnViewTrips.isHidden = true
+            self.btnAddDocuments.isHidden = true
+        default:
             self.btnViewTrips.isHidden = true
             self.btnAddDocuments.isHidden = true
         }

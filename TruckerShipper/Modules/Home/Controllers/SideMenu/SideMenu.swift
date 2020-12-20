@@ -41,6 +41,8 @@ class SideMenu: UIViewController {
         switch sender.tag {
         case 0:
             self.pushToMyBookings()
+        case 1:
+            self.pushToShipmentTracking()
         case 2:
             self.pushToNotifications()
         case 3:
@@ -91,14 +93,21 @@ extension SideMenu{
         guard let topNavigationController = topController.rootViewController as? UINavigationController else {return}
         topNavigationController.pushViewController(controller, animated: true)
     }
+    private func pushToShipmentTracking(){
+        let controller = SearchForAnything()
+        controller.searchType = .shipmentTracking
+        guard let topController = Utility.main.topViewController() as? LGSideMenuController else {return}
+        guard let topNavigationController = topController.rootViewController as? UINavigationController else {return}
+        topNavigationController.pushViewController(controller, animated: true)
+    }
     private func pushToNotifications(){
         let controller = Notifications()
         guard let topController = Utility.main.topViewController() as? LGSideMenuController else {return}
         guard let topNavigationController = topController.rootViewController as? UINavigationController else {return}
         topNavigationController.pushViewController(controller, animated: true)
     }
-    private func pushToMyAccount(){
-        let controller = MyAccount()
+    private func pushToReports(){
+        let controller = Reports()
         guard let topController = Utility.main.topViewController() as? LGSideMenuController else {return}
         guard let topNavigationController = topController.rootViewController as? UINavigationController else {return}
         topNavigationController.pushViewController(controller, animated: true)
@@ -109,8 +118,8 @@ extension SideMenu{
         guard let topNavigationController = topController.rootViewController as? UINavigationController else {return}
         topNavigationController.pushViewController(controller, animated: true)
     }
-    private func pushToReports(){
-        let controller = Reports()
+    private func pushToMyAccount(){
+        let controller = MyAccount()
         guard let topController = Utility.main.topViewController() as? LGSideMenuController else {return}
         guard let topNavigationController = topController.rootViewController as? UINavigationController else {return}
         topNavigationController.pushViewController(controller, animated: true)

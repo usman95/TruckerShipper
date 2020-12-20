@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import LGSideMenuController
 
 class DashboardTVC: UITableViewCell {
 
@@ -23,6 +24,12 @@ class DashboardTVC: UITableViewCell {
     @IBOutlet weak var btnCompletedBookings: UIButton!
     @IBOutlet weak var btnCancelled: UIButton!
     
+    @IBAction func onBtnSearchForAnyThing(_ sender: UIButton) {
+        self.pushToSearchForAnyThing()
+    }
+}
+//MARK:- Helper methods
+extension DashboardTVC{
     func setData(data: BookingsCountModel?){
         let shipperImageURL = AppStateManager.sharedInstance.loggedInUser.user?.profileImageUrl ?? ""
         self.imgShipper.sd_setImage(with: URL(string: shipperImageURL), placeholderImage: UIImage(named: "profilePlaceHolder"))
@@ -43,5 +50,10 @@ class DashboardTVC: UITableViewCell {
         self.lblCompletedBookings.text = "\(data?.completed ?? 0)"
         self.lblCancelled.text = "\(data?.cancelled ?? 0)"
     }
-    
+    private func pushToSearchForAnyThing(){
+        let controller = SearchForAnything()
+        guard let topController = Utility.main.topViewController() as? LGSideMenuController else {return}
+        guard let topNavigationController = topController.rootViewController as? UINavigationController else {return}
+        topNavigationController.pushViewController(controller, animated: true)
+    }
 }

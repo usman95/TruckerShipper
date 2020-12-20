@@ -110,6 +110,8 @@
 		FA88032E258F63E500B7A0ED /* NotificationsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA88032A258F63E400B7A0ED /* NotificationsModel.swift */; };
 		FA88032F258F63E500B7A0ED /* NotificationToModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA88032B258F63E500B7A0ED /* NotificationToModel.swift */; };
 		FA880330258F63E500B7A0ED /* NotificationFromModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA88032C258F63E500B7A0ED /* NotificationFromModel.swift */; };
+		FA880334258F91A300B7A0ED /* SearchForAnything.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA880332258F91A300B7A0ED /* SearchForAnything.swift */; };
+		FA880335258F91A300B7A0ED /* SearchForAnything.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA880333258F91A300B7A0ED /* SearchForAnything.xib */; };
 		FA9DBD77258937FD0082A67C /* ShipperIdModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9DBD73258937FC0082A67C /* ShipperIdModel.swift */; };
 		FA9DBD78258937FD0082A67C /* RemarksMark.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9DBD74258937FD0082A67C /* RemarksMark.swift */; };
 		FA9DBD79258937FD0082A67C /* BookingDetailtModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9DBD75258937FD0082A67C /* BookingDetailtModel.swift */; };
@@ -139,8 +141,6 @@
 		FAEDA2132586607C00AD777F /* RemarksModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEDA2072586607C00AD777F /* RemarksModel.swift */; };
 		FAEDA21825866DFD00AD777F /* Dashboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEDA21625866DFD00AD777F /* Dashboard.swift */; };
 		FAEDA21925866DFD00AD777F /* Dashboard.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAEDA21725866DFD00AD777F /* Dashboard.xib */; };
-		FAEDA21C258672A900AD777F /* DashboardHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAEDA21B258672A900AD777F /* DashboardHeader.xib */; };
-		FAEDA21E258672BC00AD777F /* DashboardHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEDA21D258672BC00AD777F /* DashboardHeader.swift */; };
 		FAEDA22625869B8A00AD777F /* TitleHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAEDA22525869B8A00AD777F /* TitleHeader.xib */; };
 		FAEDA22825869B9600AD777F /* TitleHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEDA22725869B9600AD777F /* TitleHeader.swift */; };
 		FAEDA22C2586AF9600AD777F /* BookingsTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEDA22A2586AF9600AD777F /* BookingsTVC.swift */; };
@@ -255,6 +255,8 @@
 		FA88032A258F63E400B7A0ED /* NotificationsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationsModel.swift; sourceTree = "<group>"; };
 		FA88032B258F63E500B7A0ED /* NotificationToModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationToModel.swift; sourceTree = "<group>"; };
 		FA88032C258F63E500B7A0ED /* NotificationFromModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationFromModel.swift; sourceTree = "<group>"; };
+		FA880332258F91A300B7A0ED /* SearchForAnything.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchForAnything.swift; sourceTree = "<group>"; };
+		FA880333258F91A300B7A0ED /* SearchForAnything.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchForAnything.xib; sourceTree = "<group>"; };
 		FA9DBD73258937FC0082A67C /* ShipperIdModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShipperIdModel.swift; sourceTree = "<group>"; };
 		FA9DBD74258937FD0082A67C /* RemarksMark.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemarksMark.swift; sourceTree = "<group>"; };
 		FA9DBD75258937FD0082A67C /* BookingDetailtModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookingDetailtModel.swift; sourceTree = "<group>"; };
@@ -284,8 +286,6 @@
 		FAEDA2072586607C00AD777F /* RemarksModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemarksModel.swift; sourceTree = "<group>"; };
 		FAEDA21625866DFD00AD777F /* Dashboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dashboard.swift; sourceTree = "<group>"; };
 		FAEDA21725866DFD00AD777F /* Dashboard.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Dashboard.xib; sourceTree = "<group>"; };
-		FAEDA21B258672A900AD777F /* DashboardHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DashboardHeader.xib; sourceTree = "<group>"; };
-		FAEDA21D258672BC00AD777F /* DashboardHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardHeader.swift; sourceTree = "<group>"; };
 		FAEDA22525869B8A00AD777F /* TitleHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TitleHeader.xib; sourceTree = "<group>"; };
 		FAEDA22725869B9600AD777F /* TitleHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleHeader.swift; sourceTree = "<group>"; };
 		FAEDA22A2586AF9600AD777F /* BookingsTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingsTVC.swift; sourceTree = "<group>"; };
@@ -750,6 +750,7 @@
 				FAA9C85A258D8BF5005FC95C /* CMS */,
 				FA37EA9125740EAD0073CF0C /* Notifications */,
 				FAA9C85F258D9155005FC95C /* ChangePassword */,
+				FA880331258F918900B7A0ED /* SearchForAnything */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -897,6 +898,15 @@
 			path = NotificationsModel;
 			sourceTree = "<group>";
 		};
+		FA880331258F918900B7A0ED /* SearchForAnything */ = {
+			isa = PBXGroup;
+			children = (
+				FA880332258F91A300B7A0ED /* SearchForAnything.swift */,
+				FA880333258F91A300B7A0ED /* SearchForAnything.xib */,
+			);
+			path = SearchForAnything;
+			sourceTree = "<group>";
+		};
 		FAA9C845258D3E24005FC95C /* TripDetailTVC */ = {
 			isa = PBXGroup;
 			children = (
@@ -1003,20 +1013,10 @@
 			isa = PBXGroup;
 			children = (
 				FA6F0141258AA21800197BE4 /* DashboardTVC */,
-				FAEDA21A2586719600AD777F /* DashboardHeader */,
 				FAEDA21625866DFD00AD777F /* Dashboard.swift */,
 				FAEDA21725866DFD00AD777F /* Dashboard.xib */,
 			);
 			path = Dashboard;
-			sourceTree = "<group>";
-		};
-		FAEDA21A2586719600AD777F /* DashboardHeader */ = {
-			isa = PBXGroup;
-			children = (
-				FAEDA21B258672A900AD777F /* DashboardHeader.xib */,
-				FAEDA21D258672BC00AD777F /* DashboardHeader.swift */,
-			);
-			path = DashboardHeader;
 			sourceTree = "<group>";
 		};
 		FAEDA22425869B7900AD777F /* TitleHeader */ = {
@@ -1111,8 +1111,8 @@
 				FA37EAA925740EAD0073CF0C /* SideMenu.xib in Resources */,
 				FA294FC42587CAFD00323EA2 /* BookingDocuments.xib in Resources */,
 				FA37EA072574099D0073CF0C /* LaunchScreen.storyboard in Resources */,
+				FA880335258F91A300B7A0ED /* SearchForAnything.xib in Resources */,
 				FA37EAAC25740EAD0073CF0C /* Notifications.xib in Resources */,
-				FAEDA21C258672A900AD777F /* DashboardHeader.xib in Resources */,
 				FA37EAB8257429350073CF0C /* ForgotPassword.xib in Resources */,
 				FAA9C85E258D8C2B005FC95C /* CMS.xib in Resources */,
 				FAEDA21925866DFD00AD777F /* Dashboard.xib in Resources */,
@@ -1216,7 +1216,7 @@
 				FA37EA6B25740E4C0073CF0C /* BaseController.swift in Sources */,
 				FA37EA5F25740E4C0073CF0C /* UIView+Extention.swift in Sources */,
 				FACF6A762585A14E004D2C16 /* Bookings.swift in Sources */,
-				FAEDA21E258672BC00AD777F /* DashboardHeader.swift in Sources */,
+				FA880334258F91A300B7A0ED /* SearchForAnything.swift in Sources */,
 				FAEDA20B2586607C00AD777F /* BookingModel.swift in Sources */,
 				FA37EA5925740E4C0073CF0C /* Constants.swift in Sources */,
 				FA37EA6125740E4C0073CF0C /* UIButton+Extension.swift in Sources */,

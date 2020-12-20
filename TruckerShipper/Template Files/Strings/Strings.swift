@@ -98,4 +98,6 @@ enum Strings: String{
     case MILES_TRACKING = "Miles Tracking"
     case NOTIFICATIONS = "Notifications"
     case ASK_TO_DELETE_NOTIFICATION = "Are you sure you want to delete this notification?"
+    case SEARCH_FOR_ANYTHING = "Search for anything"
+    case SHIPMENT_TRACKING = "Shipment Tracking"
 }

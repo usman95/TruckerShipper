@@ -36,9 +36,10 @@ enum Route: String {
     case BookingEstimate = "/api/booking-estimate"
     case Bookings = "/api/booking/"
     case UploadDocument = "/upload-document"
-    case BookingsCount = "/api/booking-count"
+    case BookingsCount = "/api/stats/shipper"
     case Trip = "/api/trip/"
     case Notifications = "/api/notification/"
+    case BookingSearch = "/api/booking-search"
 }
 class APIManagerBase: NSObject {
     let baseURL = Constants.BaseURL
