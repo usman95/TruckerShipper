@@ -12,6 +12,7 @@ class Reports: BaseController {
 
     @IBOutlet weak var tfStartDate: UITextFieldDeviceClass!
     @IBOutlet weak var tfEndDate: UITextFieldDeviceClass!
+    @IBOutlet weak var btnGenerateReport: UIButtonDeviceClass!
     
     var reportDatePickerType = ReportDateType.start
     var selectedStartDate: Date?
@@ -26,6 +27,9 @@ class Reports: BaseController {
         self.reportDatePickerType = .end
         self.setDate(date: self.selectedStartDate ?? self.selectedEndDate ?? Date())
         self.getPickedDate(sender)
+    }
+    @IBAction func onBtnGenerateReports(_ sender: UIButtonDeviceClass) {
+        self.generateReport()
     }
 }
 //MARK:- Date Picker
@@ -64,5 +68,34 @@ extension Reports{
             
             self.tfEndDate.text = dateFormatter.string(from: date)
         }
+    }
+}
+//MARK:- Helper methods
+extension Reports{
+    private func validate()->[String:Any]?{
+        if self.selectedStartDate == nil{
+            Utility.main.showToast(message: Strings.SELECT_START_DATE.text)
+            self.btnGenerateReport.shake()
+            return nil
+        }
+        if self.selectedEndDate == nil{
+            Utility.main.showToast(message: Strings.SELECT_END_DATE.text)
+            self.btnGenerateReport.shake()
+            return nil
+        }
+        
+        let bookingDateStart = Utility.main.dateFormatter(date: self.selectedStartDate ?? Date(), dateFormat: "yyyy-MM-dd HH:mm:ss.SSS'Z'")
+        let bookingDateEnd = Utility.main.dateFormatter(date: self.selectedEndDate ?? Date(), dateFormat: "yyyy-MM-dd HH:mm:ss.SSS'Z'")
+        
+        let params:[String:Any] = ["bookingDateStart":bookingDateStart,
+                                   "bookingDateEnd":bookingDateEnd]
+        return params
+    }
+}
+//MARK:- Servuces
+extension Reports{
+    private func generateReport(){
+        guard let params = self.validate() else {return}
+        
     }
 }

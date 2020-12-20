@@ -104,4 +104,6 @@ enum Strings: String{
     case SHIPMENT_TRACKING = "Shipment Tracking"
     case CANCEL_BOOKING = "Cancel Booking"
     case VIEW_TRIPS = "View Trips"
+    case SELECT_START_DATE = "Please select start date."
+    case SELECT_END_DATE = "Please select end date."
 }
