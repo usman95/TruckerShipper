@@ -95,6 +95,7 @@ extension Dashboard: UITableViewDelegate{
             return nil
         default:
             let header = TitleHeader.instanceFromNib() as! TitleHeader
+            header.setData(data: Strings.NOTIFICATIONS.text)
             return header
         }
     }

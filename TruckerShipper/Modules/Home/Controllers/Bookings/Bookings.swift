@@ -18,9 +18,8 @@ class Bookings: BaseController {
     @IBOutlet weak var btnRejected: UIButtonStatesDeviceClass!
     @IBOutlet weak var tableView: UITableView!
     
-    var refreshControl = UIRefreshControl()
     var bookingType = BookingType.pending
-    var recordsToSkip = 0
+    var refreshControl = UIRefreshControl()
     var arrBookings = [BookingModel]()
     var totalBookings = 0
     var pageNumber = 0
@@ -89,6 +88,7 @@ extension Bookings{
     private func registerCells(){
         self.tableView.register(UINib(nibName: "BookingsTVC", bundle: nil), forCellReuseIdentifier: "BookingsTVC")
     }
+    
     private func pullToRefresh(){
         self.refreshControl.attributedTitle = NSAttributedString(string: "Pull to refresh")
         self.refreshControl.addTarget(self, action: #selector(self.refreshBookings), for: UIControl.Event.valueChanged)
@@ -131,11 +131,6 @@ extension Bookings: UITableViewDataSource{
 }
 //MARK:- UITableViewDelegate
 extension Bookings: UITableViewDelegate{
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        let ride = self.arrRides[indexPath.row]
-//        let selectedRide = SelectedRideDetailData(bookingType: self.bookingType, ride: ride)
-//        self.selectedRide?(selectedRide)
-    }
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
             if tableView.visibleCells.contains(cell) {
@@ -153,6 +148,7 @@ extension Bookings: UITableViewDelegate{
         }
     }
 }
+//MARK:- DZNEmptyDataSetSource
 extension Bookings: DZNEmptyDataSetSource{
     func title(forEmptyDataSet scrollView: UIScrollView!) -> NSAttributedString! {
         let str = Strings.NO_DATA_AVAILABLE.text
@@ -163,7 +159,7 @@ extension Bookings: DZNEmptyDataSetSource{
 //MARK:- Services
 extension Bookings{
     private func getBookings(){
-        let skip = self.recordsToSkip + (self.pageNumber * Constants.PAGINATION_PAGE_SIZE)
+        let skip = self.pageNumber * Constants.PAGINATION_PAGE_SIZE
         let limit = Constants.PAGINATION_PAGE_SIZE
         let status = self.bookingType.rawValue
 

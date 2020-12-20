@@ -95,4 +95,5 @@ enum Strings: String{
     case NO_DATA_AVAILABLE = "No data available."
     case NO_MILES_AVAILABLE = "No miles available."
     case MILES_TRACKING = "Miles Tracking"
+    case NOTIFICATIONS = "Notifications"
 }

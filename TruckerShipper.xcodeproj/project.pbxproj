@@ -106,6 +106,10 @@
 		FA6B424F25791ABE00C6D106 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6B424825791ABE00C6D106 /* User.swift */; };
 		FA6F0144258AA23400197BE4 /* DashboardTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6F0142258AA23400197BE4 /* DashboardTVC.swift */; };
 		FA6F0145258AA23400197BE4 /* DashboardTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA6F0143258AA23400197BE4 /* DashboardTVC.xib */; };
+		FA88032D258F63E500B7A0ED /* NotificationDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA880329258F63E400B7A0ED /* NotificationDataModel.swift */; };
+		FA88032E258F63E500B7A0ED /* NotificationsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA88032A258F63E400B7A0ED /* NotificationsModel.swift */; };
+		FA88032F258F63E500B7A0ED /* NotificationToModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA88032B258F63E500B7A0ED /* NotificationToModel.swift */; };
+		FA880330258F63E500B7A0ED /* NotificationFromModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA88032C258F63E500B7A0ED /* NotificationFromModel.swift */; };
 		FA9DBD77258937FD0082A67C /* ShipperIdModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9DBD73258937FC0082A67C /* ShipperIdModel.swift */; };
 		FA9DBD78258937FD0082A67C /* RemarksMark.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9DBD74258937FD0082A67C /* RemarksMark.swift */; };
 		FA9DBD79258937FD0082A67C /* BookingDetailtModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9DBD75258937FD0082A67C /* BookingDetailtModel.swift */; };
@@ -247,6 +251,10 @@
 		FA6B424825791ABE00C6D106 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		FA6F0142258AA23400197BE4 /* DashboardTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardTVC.swift; sourceTree = "<group>"; };
 		FA6F0143258AA23400197BE4 /* DashboardTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DashboardTVC.xib; sourceTree = "<group>"; };
+		FA880329258F63E400B7A0ED /* NotificationDataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationDataModel.swift; sourceTree = "<group>"; };
+		FA88032A258F63E400B7A0ED /* NotificationsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationsModel.swift; sourceTree = "<group>"; };
+		FA88032B258F63E500B7A0ED /* NotificationToModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationToModel.swift; sourceTree = "<group>"; };
+		FA88032C258F63E500B7A0ED /* NotificationFromModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationFromModel.swift; sourceTree = "<group>"; };
 		FA9DBD73258937FC0082A67C /* ShipperIdModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShipperIdModel.swift; sourceTree = "<group>"; };
 		FA9DBD74258937FD0082A67C /* RemarksMark.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemarksMark.swift; sourceTree = "<group>"; };
 		FA9DBD75258937FD0082A67C /* BookingDetailtModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookingDetailtModel.swift; sourceTree = "<group>"; };
@@ -626,6 +634,7 @@
 				FA294FDD25882E1400323EA2 /* BookingDetailModel */,
 				FA294FFC258846A100323EA2 /* TripModel */,
 				FAD70DBD258C0E1000AACEDB /* BookingsCountModel */,
+				FA880328258F63CB00B7A0ED /* NotificationsModel */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -875,6 +884,17 @@
 				FA6F0143258AA23400197BE4 /* DashboardTVC.xib */,
 			);
 			path = DashboardTVC;
+			sourceTree = "<group>";
+		};
+		FA880328258F63CB00B7A0ED /* NotificationsModel */ = {
+			isa = PBXGroup;
+			children = (
+				FA88032A258F63E400B7A0ED /* NotificationsModel.swift */,
+				FA880329258F63E400B7A0ED /* NotificationDataModel.swift */,
+				FA88032C258F63E500B7A0ED /* NotificationFromModel.swift */,
+				FA88032B258F63E500B7A0ED /* NotificationToModel.swift */,
+			);
+			path = NotificationsModel;
 			sourceTree = "<group>";
 		};
 		FAA9C845258D3E24005FC95C /* TripDetailTVC */ = {
@@ -1203,6 +1223,7 @@
 				FAE067CE257AF5EB005E1C97 /* MyAccount.swift in Sources */,
 				FA37EAAE25740EAD0073CF0C /* NotificationsTVC.swift in Sources */,
 				FA37EA7925740E4C0073CF0C /* UserAPIManager.swift in Sources */,
+				FA88032F258F63E500B7A0ED /* NotificationToModel.swift in Sources */,
 				FA37EA7725740E4C0073CF0C /* APIManagerBase.swift in Sources */,
 				FA295005258846B700323EA2 /* VehicleIdModel.swift in Sources */,
 				FA62D004257D6263000DCFDD /* AttributesAPIManager.swift in Sources */,
@@ -1216,6 +1237,7 @@
 				FA37EABB257432E10073CF0C /* SignUp.swift in Sources */,
 				FA37EAAA25740EAD0073CF0C /* SideMenu.swift in Sources */,
 				FA6B424A25791ABE00C6D106 /* UserModel.swift in Sources */,
+				FA88032D258F63E500B7A0ED /* NotificationDataModel.swift in Sources */,
 				FA9DBD78258937FD0082A67C /* RemarksMark.swift in Sources */,
 				FA3298DA2588CAB700BA8C49 /* TripDetail.swift in Sources */,
 				FA294FD72587FB9E00323EA2 /* MyAccount+Extension.swift in Sources */,
@@ -1246,6 +1268,7 @@
 				FA37EA6525740E4C0073CF0C /* Dictionary+Extension.swift in Sources */,
 				FA37EA7825740E4C0073CF0C /* APIManager.swift in Sources */,
 				FA20009225839B1D00E14D36 /* LoadDetails.swift in Sources */,
+				FA88032E258F63E500B7A0ED /* NotificationsModel.swift in Sources */,
 				FA6B424E25791ABE00C6D106 /* UpdatedBy.swift in Sources */,
 				FAA9C852258D769B005FC95C /* TrackLocation.swift in Sources */,
 				FA9DBD79258937FD0082A67C /* BookingDetailtModel.swift in Sources */,
@@ -1258,6 +1281,7 @@
 				FAEDA2132586607C00AD777F /* RemarksModel.swift in Sources */,
 				FA37EA6425740E4C0073CF0C /* String+Extension.swift in Sources */,
 				FA37EA5225740E4C0073CF0C /* MOLHLanguage.swift in Sources */,
+				FA880330258F63E500B7A0ED /* NotificationFromModel.swift in Sources */,
 				FA37EA5D25740E4C0073CF0C /* UIColor+Extension.swift in Sources */,
 				FA295008258846B700323EA2 /* TripMilesModel.swift in Sources */,
 				FAD70DBF258C0E2E00AACEDB /* BookingsCountModel.swift in Sources */,
