@@ -56,8 +56,7 @@ extension Dashboard{
     }
     private func setDashboard(){
         DispatchQueue.main.async {
-            let index = IndexPath(row: 0, section: 0)
-            self.tableView.reloadRows(at: [index], with: .automatic)
+            self.tableView.reloadSections([0], with: .automatic)
         }
     }
     

@@ -94,6 +94,7 @@ enum Strings: String{
     case PROFILE_UPDATED = "Profile updated successfully."
     case NO_DATA_AVAILABLE = "No data available."
     case NO_MILES_AVAILABLE = "No miles available."
+    case NO_MILES_ADDED = "No miles added"
     case MILES_TRACKING = "Miles Tracking"
     case NOTIFICATIONS = "Notifications"
     case ASK_TO_DELETE_NOTIFICATION = "Are you sure you want to delete this notification?"

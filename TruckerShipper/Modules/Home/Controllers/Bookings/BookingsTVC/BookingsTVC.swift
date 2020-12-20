@@ -63,7 +63,19 @@ class BookingsTVC: UITableViewCell {
         let tripID = trip?.tripNumber ?? ""
         self.lblDistanceInKM.text = tripID
         
-        self.lblDuration.text = "trips of miles"
+        guard let selectedTrip:TripsModel = bookingDetails?.trips.filter({$0.id == trip?.id}).first else {return}
+        if selectedTrip.tripMiles.isEmpty{
+            self.lblDuration.text = Strings.NO_MILES_ADDED.text.uppercased()
+        }
+        else{
+            let lastMile = selectedTrip.tripMiles.last?.status ?? ""
+            if lastMile == MileType.completed.rawValue{
+                self.lblDuration.text = MileType.completed.rawValue.uppercased()
+            }
+            else{
+                self.lblDuration.text = MileType.inProgress.rawValue.uppercased()
+            }
+        }
         
         let pickUpDateString = bookingDetails?.pickUpDate ?? "2020-12-14T14:24:59.741Z"
         let pickUpTime = Utility.main.stringDateFormatter(dateStr: pickUpDateString, dateFormat: Constants.serverDateFormat, formatteddate: "hh:mm a")

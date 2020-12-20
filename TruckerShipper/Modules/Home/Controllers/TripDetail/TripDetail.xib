@@ -66,7 +66,7 @@
                     </constraints>
                 </view>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="XTn-zN-NFr">
-                    <rect key="frame" x="0.0" y="124" width="414" height="652"/>
+                    <rect key="frame" x="0.0" y="124" width="414" height="706"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                     <connections>
                         <outlet property="dataSource" destination="-1" id="h1O-Ow-c6k"/>
@@ -74,10 +74,9 @@
                     </connections>
                 </tableView>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Nok-It-thC">
-                    <rect key="frame" x="24" y="784" width="366" height="54"/>
+                    <rect key="frame" x="24" y="838" width="366" height="0.0"/>
                     <subviews>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2WJ-b1-jhX" customClass="UIButtonDeviceClass" customModule="TruckerShipper" customModuleProvider="target">
-                            <rect key="frame" x="0.0" y="0.0" width="366" height="54"/>
+                        <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2WJ-b1-jhX" customClass="UIButtonDeviceClass" customModule="TruckerShipper" customModuleProvider="target">
                             <color key="backgroundColor" red="0.2470588235" green="0.71764705880000002" blue="0.45098039220000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
                                 <constraint firstAttribute="width" secondItem="2WJ-b1-jhX" secondAttribute="height" multiplier="61:9" id="Iwn-FT-Onk"/>
