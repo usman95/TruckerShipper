@@ -96,7 +96,12 @@ extension BaseController{
         Constants.inProgressMileId = inProgressMile?.id ?? ""
         self.navigationController?.pushViewController(controller, animated: true)
     }
-    
+    func pushToMyContracts(){
+        let controller = MyContracts()
+        guard let topController = Utility.main.topViewController() as? LGSideMenuController else {return}
+        guard let topNavigationController = topController.rootViewController as? UINavigationController else {return}
+        topNavigationController.pushViewController(controller, animated: true)
+    }
 }
 extension BaseController: UIGestureRecognizerDelegate {
     func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {

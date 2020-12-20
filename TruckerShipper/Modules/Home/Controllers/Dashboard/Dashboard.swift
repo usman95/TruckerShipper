@@ -27,7 +27,7 @@ class Dashboard: BaseController {
     }
     
     @IBAction func onBtnLoadRequest(_ sender: UIButtonDeviceClass) {
-        //        super.pushToHome()
+        super.pushToMyContracts()
     }
     @IBAction func onBtnRateRequest(_ sender: UIButtonDeviceClass) {
         super.pushToHome()

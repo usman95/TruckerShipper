@@ -63,6 +63,49 @@ extension MyContracts: UITableViewDataSource{
 }
 //MARK:- UITableViewDelegate
 extension MyContracts: UITableViewDelegate{
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let contract = self.arrContracts[indexPath.row]
+        
+        var pickup = [String:Any]()
+        let pickup_coordinates:[Double] = [Double(contract.pickup?.coordinates.first?.value ?? 0.0),
+                                           Double(contract.pickup?.coordinates.last?.value ?? 0.0)]
+        pickup["city"] = contract.pickup?.cityId?.title ?? ""
+        pickup["address"] = contract.pickup?.address ?? ""
+        pickup["coordinates"] = pickup_coordinates
+        
+        var dropoff = [String:Any]()
+        let dropoff_coordinates:[Double] = [Double(contract.dropOff?.coordinates.first?.value ?? 0.0),
+                                           Double(contract.dropOff?.coordinates.last?.value ?? 0.0)]
+        dropoff["city"] = contract.dropOff?.cityId?.title ?? ""
+        dropoff["address"] = contract.dropOff?.address ?? ""
+        dropoff["coordinates"] = dropoff_coordinates
+        
+        let totalDistance = contract.totalDistance
+        let totalDuration = contract.totalDuration ?? ""
+        
+        let weight = contract.weight
+        let sizeId = contract.sizeId?.id ?? ""
+        let commodityId = contract.commodityId?.id ?? ""
+        let cargoTypeId = contract.cargoTypeId?.id ?? ""
+        let quantityOfTrucks = contract.quantityOfTrucks
+        
+        let modeOfTransport = (contract.transportModeId?.title ?? "").lowercased()
+        let selectedPrice = "\(contract.charges?.amount ?? 0)"
+        
+        let loadDetails:[String:Any] = ["pickup":pickup,
+                                        "dropOff":dropoff,
+                                        "totalDistance":totalDistance,
+                                        "totalDuration":totalDuration,
+                                        "weight":weight,
+                                        "sizeId":sizeId,
+                                        "commodityId":commodityId,
+                                        "cargoTypeId":cargoTypeId,
+                                        "quantityOfTrucks":quantityOfTrucks,
+                                        "modeOfTransport":modeOfTransport,
+                                        "selectedPrice":selectedPrice]
+
+        super.pushToLoadRequest(loadDetails: loadDetails)
+    }
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
             if tableView.visibleCells.contains(cell) {
