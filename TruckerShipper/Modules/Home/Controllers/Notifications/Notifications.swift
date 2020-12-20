@@ -39,10 +39,10 @@ extension Notifications{
     
     private func pullToRefresh(){
         self.refreshControl.attributedTitle = NSAttributedString(string: "Pull to refresh")
-        self.refreshControl.addTarget(self, action: #selector(self.refreshBookings), for: UIControl.Event.valueChanged)
+        self.refreshControl.addTarget(self, action: #selector(self.refreshNotifications), for: UIControl.Event.valueChanged)
         self.tableView.addSubview(self.refreshControl)
     }
-    @objc func refreshBookings() {
+    @objc func refreshNotifications() {
         self.pageNumber = 0
         self.arrNotifications.removeAll()
         self.tableView.reloadData()
@@ -57,7 +57,20 @@ extension Notifications: UITableViewDataSource{
         let cell = tableView.dequeueReusableCell(withIdentifier: "NotificationsTVC", for: indexPath) as! NotificationsTVC
         let data = self.arrNotifications[indexPath.row]
         cell.setData(data: data)
+        
+        cell.btnDelete.tag = indexPath.row
+        cell.btnDelete.addTarget(self, action: #selector(self.onBtnDeleteNotification(_:)), for: .touchUpInside)
         return cell
+    }
+    
+    @objc func onBtnDeleteNotification(_ sender: UIButton){
+        Utility.main.showAlert(message: Strings.ASK_TO_DELETE_NOTIFICATION.text, title: Strings.CONFIRMATION.text, YES: Strings.YES.text, NO: Strings.NO.text) { (yes, no) in
+            if yes != nil{
+                let index = sender.tag
+                let id = self.arrNotifications[index].id ?? ""
+                self.deleteNotification(id: id, index: index)
+            }
+        }
     }
 }
 //MARK:- UITableViewDelegate
@@ -107,6 +120,18 @@ extension Notifications{
             DispatchQueue.main.async {
                 self.tableView.reloadData()
                 self.refreshControl.endRefreshing()
+            }
+        }) { (error) in
+            print(error)
+        }
+    }
+    private func deleteNotification(id: String, index: Int){
+        APIManager.sharedInstance.shipperAPIManager.DeleteNotification(id: id, success: { (responseObject) in
+            print(responseObject)
+            self.arrNotifications.remove(at: index)
+            
+            DispatchQueue.main.async {
+                self.tableView.deleteRows(at: [IndexPath(row: index, section: 0)], with: .bottom)
             }
         }) { (error) in
             print(error)

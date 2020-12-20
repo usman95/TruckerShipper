@@ -57,4 +57,10 @@ class ShipperAPIManager: APIManagerBase {
         let route: URL = URLforRoute(route: Route.Notifications.rawValue, params: params)! as URL
         self.getDictionaryResponseWith(route: route, success: success, failure: failure, withHeader: true)
     }
+    //MARK:- DeleteNotification
+    func DeleteNotification(id: String, success: @escaping DefaultAPISuccessClosure, failure: @escaping DefaultAPIFailureClosure){
+        Utility.showLoader()
+        let route: URL = POSTURLforRoute(route: Route.Notifications.rawValue+id)! as URL
+        self.deleteDictionaryResponseWith(route: route, parameters: [:], success: success, failure: failure, withHeader: true)
+    }
 }
