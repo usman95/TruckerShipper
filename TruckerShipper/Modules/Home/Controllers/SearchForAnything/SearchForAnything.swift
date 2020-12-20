@@ -26,7 +26,9 @@ class SearchForAnything: BaseController {
     }
     
     @IBAction func onTfSearchForAnything(_ sender: UITextField) {
-        self.searchBookings()
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.4) {
+            self.searchBookings()
+        }
     }
     @IBAction func onBtnClearSearchRecords(_ sender: UIButton) {
         self.refreshBookings()

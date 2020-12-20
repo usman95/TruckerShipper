@@ -135,15 +135,15 @@ extension Dashboard: UITableViewDelegate{
         }
     }
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        if indexPath.section == 0 {return}
-        
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
-            if tableView.visibleCells.contains(cell) {
-                if indexPath.row == self.arrNotifications.count - 1{
-                    self.loadMoreCells()
-                }
-            }
-        }
+//        if indexPath.section == 0 {return}
+//
+//        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+//            if tableView.visibleCells.contains(cell) {
+//                if indexPath.row == self.arrNotifications.count - 1{
+//                    self.loadMoreCells()
+//                }
+//            }
+//        }
     }
     
     private func loadMoreCells(){
@@ -165,19 +165,24 @@ extension Dashboard{
         }
     }
     private func getNotifications(){
-        let skip = self.pageNumber * Constants.PAGINATION_PAGE_SIZE
-        let limit = Constants.PAGINATION_PAGE_SIZE
+//        let skip = self.pageNumber * Constants.PAGINATION_PAGE_SIZE
+//        let limit = Constants.PAGINATION_PAGE_SIZE
+        
+        let skip = 0
+        let limit = 1000
         
         let params:[String:Any] = ["skip":skip,
                                    "limit":limit]
+        
         APIManager.sharedInstance.shipperAPIManager.Notifications(params: params, success: { (responseObject) in
             let response = responseObject as Dictionary
 
             if let notificationsCount = response["notificationsCount"] as? Int {self.totalNotifications = notificationsCount}
 
             guard let notifications = response["notifications"] as? [[String:Any]] else {return}
-            let arrNotifications = Mapper<NotificationsModel>().mapArray(JSONArray: notifications)
-            self.arrNotifications.append(contentsOf: arrNotifications)
+//            let arrNotifications = Mapper<NotificationsModel>().mapArray(JSONArray: notifications)
+//            self.arrNotifications.append(contentsOf: arrNotifications)
+            self.arrNotifications = Mapper<NotificationsModel>().mapArray(JSONArray: notifications)
 
             DispatchQueue.main.async {
                 self.tableView.reloadData()

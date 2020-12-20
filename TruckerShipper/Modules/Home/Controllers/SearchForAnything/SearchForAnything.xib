@@ -79,7 +79,7 @@
                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Search..." minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1fz-VA-ol6" customClass="UITextFieldDeviceClass" customModule="TruckerShipper" customModuleProvider="target">
                             <rect key="frame" x="48" y="0.0" width="274" height="52"/>
                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                            <textInputTraits key="textInputTraits"/>
+                            <textInputTraits key="textInputTraits" autocorrectionType="no"/>
                             <userDefinedRuntimeAttributes>
                                 <userDefinedRuntimeAttribute type="number" keyPath="iPhoneFontSize">
                                     <real key="value" value="16"/>

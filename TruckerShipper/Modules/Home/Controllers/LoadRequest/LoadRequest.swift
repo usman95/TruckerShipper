@@ -98,12 +98,24 @@ class LoadRequest: BaseController {
     }
     
     @IBAction func onBtnBookingType(_ sender: UIButton) {
+        if self.arrBookingType.isEmpty{
+            self.getBookingType(showDropDown: true)
+            return
+        }
         self.bookingTypeDropDown.show()
     }
     @IBAction func onBtnShippingLine(_ sender: UIButton) {
+        if self.arrShippingLine.isEmpty{
+            self.getShippingLine(showDropDown: true)
+            return
+        }
         self.shippingLineDropDown.show()
     }
     @IBAction func onBtnCargoMode(_ sender: UIButton) {
+        if self.arrCargoType.isEmpty{
+            self.getCargoMode(showDropDown: true)
+            return
+        }
         self.cargoModeDropDown.show()
     }
     @IBAction func onBtnCreateBooking(_ sender: UIButtonDeviceClass) {
@@ -150,10 +162,10 @@ extension LoadRequest{
     }
     private func callAPIs(){
         self.getRoutes()
-        self.getBookingType()
-        self.getShippingLine()
+        self.getBookingType(showDropDown: false)
+        self.getShippingLine(showDropDown: false)
         self.getCommodity()
-        self.getCargoMode()
+        self.getCargoMode(showDropDown: false)
         self.getCargoType()
         self.getTransportMode()
     }
@@ -174,7 +186,7 @@ extension LoadRequest{
         }
         self.tfBookingDetailsRoute.text = self.selectedRoute?.uppercased()
     }
-    private func setBookingTypeDropDown(){
+    private func setBookingTypeDropDown(showDropDown: Bool){
         self.bookingTypeDropDown.dataSource = self.arrBookingType.map{$0.title ?? ""}
         self.bookingTypeDropDown.anchorView = self.tfBookingDetailsBookingType
         self.bookingTypeDropDown.cellHeight = self.tfBookingDetailsBookingType.frame.height
@@ -183,8 +195,11 @@ extension LoadRequest{
             self.tfBookingDetailsBookingType.text = item
             self.selectedBookingType = self.arrBookingType[index]
         }
+        if showDropDown{
+            self.bookingTypeDropDown.show()
+        }
     }
-    private func setShippingLineDropDown(){
+    private func setShippingLineDropDown(showDropDown: Bool){
         self.shippingLineDropDown.dataSource = self.arrShippingLine.map{$0.title ?? ""}
         self.shippingLineDropDown.anchorView = self.tfBookingDetailsShippingLine
         self.shippingLineDropDown.cellHeight = self.tfBookingDetailsShippingLine.frame.height
@@ -193,8 +208,11 @@ extension LoadRequest{
             self.tfBookingDetailsShippingLine.text = item
             self.selectedShippingLine = self.arrShippingLine[index]
         }
+        if showDropDown{
+            self.shippingLineDropDown.show()
+        }
     }
-    private func setCargoModeDropDown(){
+    private func setCargoModeDropDown(showDropDown: Bool){
         self.cargoModeDropDown.dataSource = self.arrCargoModes
         self.cargoModeDropDown.anchorView = self.tfBookingDetailsCargoMode
         self.cargoModeDropDown.cellHeight = self.tfBookingDetailsCargoMode.frame.height
@@ -202,6 +220,9 @@ extension LoadRequest{
         self.cargoModeDropDown.selectionAction = { [unowned self] (index: Int, item: String) in
             self.tfBookingDetailsCargoMode.text = item
             self.selectedCargoMode = self.arrCargoModes[index]
+        }
+        if showDropDown{
+            self.shippingLineDropDown.show()
         }
     }
     private func setSelectedCargoType(){
@@ -389,7 +410,7 @@ extension LoadRequest{
             print(error)
         }
     }
-    private func getBookingType(){
+    private func getBookingType(showDropDown: Bool){
         let skip = "0"
         let limit = "1000"
         
@@ -400,12 +421,12 @@ extension LoadRequest{
             let response = responseObject as Dictionary
             guard let bookingTypes = response["bookingTypes"] as? [[String:Any]] else {return}
             self.arrBookingType = Mapper<AttributeModel>().mapArray(JSONArray: bookingTypes)
-            self.setBookingTypeDropDown()
+            self.setBookingTypeDropDown(showDropDown: showDropDown)
         }) { (error) in
             print(error)
         }
     }
-    private func getShippingLine(){
+    private func getShippingLine(showDropDown: Bool){
         let skip = "0"
         let limit = "1000"
         
@@ -416,7 +437,7 @@ extension LoadRequest{
             let response = responseObject as Dictionary
             guard let bookingTypes = response["shippingLines"] as? [[String:Any]] else {return}
             self.arrShippingLine = Mapper<AttributeModel>().mapArray(JSONArray: bookingTypes)
-            self.setShippingLineDropDown()
+            self.setShippingLineDropDown(showDropDown: showDropDown)
         }) { (error) in
             print(error)
         }
@@ -437,7 +458,7 @@ extension LoadRequest{
             print(error)
         }
     }
-    private func getCargoMode(){
+    private func getCargoMode(showDropDown: Bool){
         let skip = "0"
         let limit = "1000"
         
@@ -447,7 +468,7 @@ extension LoadRequest{
         APIManager.sharedInstance.attributesAPIManager.CargoMode(params: params, success: { (responseObject) in
             guard let routes = responseObject as? [String] else {return}
             self.arrCargoModes = routes
-            self.setCargoModeDropDown()
+            self.setCargoModeDropDown(showDropDown: showDropDown)
         }) { (error) in
             print(error)
         }
