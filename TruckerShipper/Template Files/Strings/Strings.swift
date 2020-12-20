@@ -86,6 +86,7 @@ enum Strings: String{
     case BY_TRUCK = "By Truck"
     case BY_TRAIN = "By Train"
     case KARACHI = "Karachi"
+    case PKR = "PKR"
     case KM = "KM"
     case HOURS = "HOURS"
     case ASK_UPLOAD_DOCMENT_IMAGE_VIA = "How do you want to set your document?"
