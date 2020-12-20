@@ -116,7 +116,10 @@ extension SearchForAnything{
             return
         }
         
-        let params:[String:Any] = ["searchText":searchText]
+        let shipperId = AppStateManager.sharedInstance.loggedInUser.user?.id ?? ""
+        
+        let params:[String:Any] = ["searchText":searchText,
+                                   "shipperId":shipperId]
         
         APIManager.sharedInstance.shipperAPIManager.BookingSearch(params: params, success: { (responseObject) in
             print(responseObject)

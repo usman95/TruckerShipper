@@ -93,9 +93,11 @@ extension MyContracts{
     private func getMyContracts(){
         let skip = self.pageNumber * Constants.PAGINATION_PAGE_SIZE
         let limit = Constants.PAGINATION_PAGE_SIZE
+        let shipperId = AppStateManager.sharedInstance.loggedInUser.user?.id ?? ""
         
         let params:[String:Any] = ["skip":skip,
-                                   "limit":limit]
+                                   "limit":limit,
+                                   "shipperId":shipperId]
         
         APIManager.sharedInstance.shipperAPIManager.ShipperContracts(params: params, success: { (responseObject) in
             let response = responseObject as Dictionary
