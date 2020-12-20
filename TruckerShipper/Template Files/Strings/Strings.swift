@@ -97,7 +97,10 @@ enum Strings: String{
     case NO_MILES_ADDED = "No miles added"
     case MILES_TRACKING = "Miles Tracking"
     case NOTIFICATIONS = "Notifications"
+    case ASK_TO_CANCEL_NOTIFICATION = "Are you sure you want to cancel this booking?"
     case ASK_TO_DELETE_NOTIFICATION = "Are you sure you want to delete this notification?"
     case SEARCH_FOR_ANYTHING = "Search for anything"
     case SHIPMENT_TRACKING = "Shipment Tracking"
+    case CANCEL_BOOKING = "Cancel Booking"
+    case VIEW_TRIPS = "View Trips"
 }

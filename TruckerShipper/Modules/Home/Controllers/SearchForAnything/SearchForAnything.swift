@@ -11,7 +11,7 @@ import ObjectMapper
 import DZNEmptyDataSet
 
 class SearchForAnything: BaseController {
-
+    
     @IBOutlet weak var lblTitle: UILabelDeviceClass!
     @IBOutlet weak var tfSearchForAnything: UITextFieldDeviceClass!
     @IBOutlet weak var tableView: UITableView!
@@ -77,7 +77,19 @@ extension SearchForAnything: UITableViewDataSource{
     
     @objc func onBtnViewTrips(_ sender:UIButton){
         let booking = self.arrBookings[sender.tag]
-        super.pushToTrips(booking: booking)
+        
+        if booking.status == BookingType.pending.rawValue{
+            Utility.main.showAlert(message: Strings.ASK_TO_CANCEL_NOTIFICATION.text, title: Strings.CONFIRMATION.text, YES: Strings.YES.text, NO: Strings.NO.text) { (yes, no) in
+                if yes != nil{
+                    let index = sender.tag
+                    let id = self.arrBookings[index].id ?? ""
+                    self.cancelBooking(id: id, index: index)
+                }
+            }
+        }
+        else{
+            super.pushToTrips(booking: booking)
+        }
     }
     @objc func onBtnViewAddDocuments(_ sender:UIButton){
         let booking = self.arrBookings[sender.tag]
@@ -103,16 +115,31 @@ extension SearchForAnything{
         if searchText.count < 3{
             return
         }
-
+        
         let params:[String:Any] = ["searchText":searchText]
         
         APIManager.sharedInstance.shipperAPIManager.BookingSearch(params: params, success: { (responseObject) in
             print(responseObject)
             guard let bookings = responseObject as? [[String:Any]] else {return}
             self.arrBookings = Mapper<BookingModel>().mapArray(JSONArray: bookings)
-
+            
             DispatchQueue.main.async {
                 self.tableView.reloadData()
+            }
+        }) { (error) in
+            print(error)
+        }
+    }
+    private func cancelBooking(id: String, index: Int){
+        let status = BookingType.cancelled.rawValue
+        let param:[String:Any] = ["status":status]
+        
+        APIManager.sharedInstance.shipperAPIManager.BookingStatus(id: id, params: param, success: { (responseObject) in
+            print(responseObject)
+            self.arrBookings.remove(at: index)
+            
+            DispatchQueue.main.async {
+                self.tableView.deleteRows(at: [IndexPath(row: index, section: 0)], with: .bottom)
             }
         }) { (error) in
             print(error)

@@ -76,12 +76,63 @@ extension TripDetail: UITableViewDataSource{
         case 0:
             let cell = tableView.dequeueReusableCell(withIdentifier: "TripDetailTVC", for: indexPath) as!  TripDetailTVC
             cell.setData(bookingDetail: self.bookingDetail, trip: self.trip)
+            
+            cell.btnCallDriver.addTarget(self, action: #selector(self.onBtnCallDriver(_:)), for: .touchUpInside)
+            cell.btnMessageDriver.addTarget(self, action: #selector(self.onBtnMessageDriver(_:)), for: .touchUpInside)
+            
             return cell
         default:
             let cell = tableView.dequeueReusableCell(withIdentifier: "MilesTVC", for: indexPath) as! MilesTVC
             let data = self.trip?.tripMiles[indexPath.row]
             cell.setData(data: data)
             return cell
+        }
+    }
+    
+    @objc func onBtnCallDriver(_ sender: UIButton){
+        guard let selectedTrip:TripsModel = self.bookingDetail?.trips.filter({$0.id == self.trip?.id}).first else {return}
+        
+        let selectedInProgressMile = selectedTrip.tripMiles.filter{$0.status == MileType.inProgress.rawValue}.first
+        let selectedPendingMile = selectedTrip.tripMiles.filter{$0.status == MileType.pending.rawValue}.first
+        let selectedCompletedMile = selectedTrip.tripMiles.filter{$0.status == MileType.completed.rawValue}.first
+        
+        if selectedInProgressMile != nil{
+            let phoneNumber = selectedInProgressMile?.driverId?.contactNo ?? ""
+            Utility.main.makeCallTo(number: phoneNumber)
+            return
+        }
+        if selectedPendingMile != nil{
+            let phoneNumber = selectedPendingMile?.driverId?.contactNo ?? ""
+            Utility.main.makeCallTo(number: phoneNumber)
+            return
+        }
+        if selectedCompletedMile != nil{
+            let phoneNumber = selectedCompletedMile?.driverId?.contactNo ?? ""
+            Utility.main.makeCallTo(number: phoneNumber)
+            return
+        }
+    }
+    @objc func onBtnMessageDriver(_ sender: UIButton){
+        guard let selectedTrip:TripsModel = self.bookingDetail?.trips.filter({$0.id == self.trip?.id}).first else {return}
+        
+        let selectedInProgressMile = selectedTrip.tripMiles.filter{$0.status == MileType.inProgress.rawValue}.first
+        let selectedPendingMile = selectedTrip.tripMiles.filter{$0.status == MileType.pending.rawValue}.first
+        let selectedCompletedMile = selectedTrip.tripMiles.filter{$0.status == MileType.completed.rawValue}.first
+        
+        if selectedInProgressMile != nil{
+            let currentDriver = selectedInProgressMile?.driverId
+            
+            return
+        }
+        if selectedPendingMile != nil{
+            let currentDriver = selectedPendingMile?.driverId
+            
+            return
+        }
+        if selectedCompletedMile != nil{
+            let currentDriver = selectedCompletedMile?.driverId
+            
+            return
         }
     }
 }

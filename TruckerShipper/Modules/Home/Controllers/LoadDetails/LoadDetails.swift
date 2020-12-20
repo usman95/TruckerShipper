@@ -57,11 +57,11 @@ class LoadDetails: BaseController {
 //MARK:- Helper methods
 extension LoadDetails{
     private func callAPIs(){
-        self.getSizePerTruck()
-        self.getCommodity()
-        self.getCargoType()
+        self.getSizePerTruck(showDropDown: false)
+        self.getCommodity(showDropDown: false)
+        self.getCargoType(showDropDown: false)
     }
-    private func setSizePerTruckDropDown(){
+    private func setSizePerTruckDropDown(showDropDown: Bool){
         self.sizePerTruckDropDown.dataSource = self.arrSizePerTruck.map{$0.title ?? ""}
         self.sizePerTruckDropDown.anchorView = self.tfSizePerTruck
         self.sizePerTruckDropDown.cellHeight = self.tfSizePerTruck.frame.height
@@ -70,8 +70,11 @@ extension LoadDetails{
             self.tfSizePerTruck.text = item
             self.selectedSizePerTruck = self.arrSizePerTruck[index]
         }
+        if showDropDown{
+            self.sizePerTruckDropDown.show()
+        }
     }
-    private func setCommodityDropDown(){
+    private func setCommodityDropDown(showDropDown: Bool){
         self.commodityDropDown.dataSource = self.arrCommodity.map{$0.title ?? ""}
         self.commodityDropDown.anchorView = self.tfCommodity
         self.commodityDropDown.cellHeight = self.tfCommodity.frame.height
@@ -80,8 +83,11 @@ extension LoadDetails{
             self.tfCommodity.text = item
             self.selectedCommodity = self.arrCommodity[index]
         }
+        if showDropDown{
+            self.commodityDropDown.show()
+        }
     }
-    private func setCargoTypeDropDown(){
+    private func setCargoTypeDropDown(showDropDown: Bool){
         self.cargoTypeDropDown.dataSource = self.arrCargoType.map{$0.title ?? ""}
         self.cargoTypeDropDown.anchorView = self.tfCargoType
         self.cargoTypeDropDown.cellHeight = self.tfCargoType.frame.height
@@ -89,6 +95,9 @@ extension LoadDetails{
         self.cargoTypeDropDown.selectionAction = { [unowned self] (index: Int, item: String) in
             self.tfCargoType.text = item
             self.selectedCargoType = self.arrCargoType[index]
+        }
+        if showDropDown{
+            self.cargoTypeDropDown.show()
         }
     }
     private func presentCalculatedRate(priceEstimates: PriceEstimates?){
@@ -152,7 +161,7 @@ extension LoadDetails{
 }
 //MARK:- Services
 extension LoadDetails{
-    private func getSizePerTruck(){
+    private func getSizePerTruck(showDropDown: Bool){
         let skip = "0"
         let limit = "1000"
 
@@ -163,12 +172,12 @@ extension LoadDetails{
             let response = responseObject as Dictionary
             guard let sizes = response["sizes"] as? [[String:Any]] else {return}
             self.arrSizePerTruck = Mapper<AttributeModel>().mapArray(JSONArray: sizes)
-            self.setSizePerTruckDropDown()
+            self.setSizePerTruckDropDown(showDropDown: showDropDown)
         }) { (error) in
             print(error)
         }
     }
-    private func getCommodity(){
+    private func getCommodity(showDropDown: Bool){
         let skip = "0"
         let limit = "1000"
 
@@ -179,12 +188,12 @@ extension LoadDetails{
             let response = responseObject as Dictionary
             guard let commodities = response["commodities"] as? [[String:Any]] else {return}
             self.arrCommodity = Mapper<AttributeModel>().mapArray(JSONArray: commodities)
-            self.setCommodityDropDown()
+            self.setCommodityDropDown(showDropDown: showDropDown)
         }) { (error) in
             print(error)
         }
     }
-    private func getCargoType(){
+    private func getCargoType(showDropDown: Bool){
         let skip = "0"
         let limit = "1000"
 
@@ -195,7 +204,7 @@ extension LoadDetails{
             let response = responseObject as Dictionary
             guard let cargoTypes = response["cargoTypes"] as? [[String:Any]] else {return}
             self.arrCargoType = Mapper<AttributeModel>().mapArray(JSONArray: cargoTypes)
-            self.setCargoTypeDropDown()
+            self.setCargoTypeDropDown(showDropDown: showDropDown)
         }) { (error) in
             print(error)
         }

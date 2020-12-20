@@ -10,7 +10,7 @@ import UIKit
 import ObjectMapper
 
 class Dashboard: BaseController {
-
+    
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var btnLoadRequest: UIButtonDeviceClass!
     @IBOutlet weak var btnRateRequest: UIButtonDeviceClass!
@@ -18,8 +18,6 @@ class Dashboard: BaseController {
     var bookingsCount: BookingsCountModel?
     var refreshControl = UIRefreshControl()
     var arrNotifications = [NotificationsModel]()
-    var totalNotifications = 0
-    var pageNumber = 0
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -29,7 +27,7 @@ class Dashboard: BaseController {
     }
     
     @IBAction func onBtnLoadRequest(_ sender: UIButtonDeviceClass) {
-//        super.pushToHome()
+        //        super.pushToHome()
     }
     @IBAction func onBtnRateRequest(_ sender: UIButtonDeviceClass) {
         super.pushToHome()
@@ -66,7 +64,6 @@ extension Dashboard{
         self.tableView.addSubview(self.refreshControl)
     }
     @objc func refreshAll() {
-        self.pageNumber = 0
         self.arrNotifications.removeAll()
         self.tableView.reloadData()
         
@@ -121,7 +118,12 @@ extension Dashboard: UITableViewDelegate{
         case 0:
             return 0.0
         default:
-            return 50.0
+            if !self.arrNotifications.isEmpty{
+                return 50.0
+            }
+            else{
+                return 0.0
+            }
         }
     }
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
@@ -129,27 +131,14 @@ extension Dashboard: UITableViewDelegate{
         case 0:
             return nil
         default:
-            let header = TitleHeader.instanceFromNib() as! TitleHeader
-            header.setData(data: Strings.NOTIFICATIONS.text)
-            return header
-        }
-    }
-    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-//        if indexPath.section == 0 {return}
-//
-//        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
-//            if tableView.visibleCells.contains(cell) {
-//                if indexPath.row == self.arrNotifications.count - 1{
-//                    self.loadMoreCells()
-//                }
-//            }
-//        }
-    }
-    
-    private func loadMoreCells(){
-        if self.totalNotifications != self.arrNotifications.count{
-            self.pageNumber += 1
-            self.getNotifications()
+            if !self.arrNotifications.isEmpty{
+                let header = TitleHeader.instanceFromNib() as! TitleHeader
+                header.setData(data: Strings.NOTIFICATIONS.text)
+                return header
+            }
+            else{
+                return nil
+            }
         }
     }
 }
@@ -165,9 +154,6 @@ extension Dashboard{
         }
     }
     private func getNotifications(){
-//        let skip = self.pageNumber * Constants.PAGINATION_PAGE_SIZE
-//        let limit = Constants.PAGINATION_PAGE_SIZE
-        
         let skip = 0
         let limit = 1000
         
@@ -176,14 +162,9 @@ extension Dashboard{
         
         APIManager.sharedInstance.shipperAPIManager.Notifications(params: params, success: { (responseObject) in
             let response = responseObject as Dictionary
-
-            if let notificationsCount = response["notificationsCount"] as? Int {self.totalNotifications = notificationsCount}
-
             guard let notifications = response["notifications"] as? [[String:Any]] else {return}
-//            let arrNotifications = Mapper<NotificationsModel>().mapArray(JSONArray: notifications)
-//            self.arrNotifications.append(contentsOf: arrNotifications)
             self.arrNotifications = Mapper<NotificationsModel>().mapArray(JSONArray: notifications)
-
+            
             DispatchQueue.main.async {
                 self.tableView.reloadData()
                 self.refreshControl.endRefreshing()

@@ -11,7 +11,7 @@ import ObjectMapper
 import DZNEmptyDataSet
 
 class Bookings: BaseController {
-
+    
     @IBOutlet weak var btnPending: UIButtonStatesDeviceClass!
     @IBOutlet weak var btnInProgress: UIButtonStatesDeviceClass!
     @IBOutlet weak var btnCompleted: UIButtonStatesDeviceClass!
@@ -30,7 +30,7 @@ class Bookings: BaseController {
         self.getBookings()
         // Do any additional setup after loading the view.
     }
-
+    
     @IBAction func onBtnBookingsStatus(_ sender: UIButtonStatesDeviceClass) {
         switch sender.tag {
         case 0:
@@ -122,7 +122,19 @@ extension Bookings: UITableViewDataSource{
     
     @objc func onBtnViewTrips(_ sender:UIButton){
         let booking = self.arrBookings[sender.tag]
-        super.pushToTrips(booking: booking)
+        
+        if booking.status == BookingType.pending.rawValue{
+            Utility.main.showAlert(message: Strings.ASK_TO_CANCEL_NOTIFICATION.text, title: Strings.CONFIRMATION.text, YES: Strings.YES.text, NO: Strings.NO.text) { (yes, no) in
+                if yes != nil{
+                    let index = sender.tag
+                    let id = self.arrBookings[index].id ?? ""
+                    self.cancelBooking(id: id, index: index)
+                }
+            }
+        }
+        else{
+            super.pushToTrips(booking: booking)
+        }
     }
     @objc func onBtnViewAddDocuments(_ sender:UIButton){
         let booking = self.arrBookings[sender.tag]
@@ -162,7 +174,7 @@ extension Bookings{
         let skip = self.pageNumber * Constants.PAGINATION_PAGE_SIZE
         let limit = Constants.PAGINATION_PAGE_SIZE
         let status = self.bookingType.rawValue
-
+        
         let params:[String:Any] = ["skip":skip,
                                    "limit":limit,
                                    "status":status]
@@ -179,6 +191,21 @@ extension Bookings{
             DispatchQueue.main.async {
                 self.tableView.reloadData()
                 self.refreshControl.endRefreshing()
+            }
+        }) { (error) in
+            print(error)
+        }
+    }
+    private func cancelBooking(id: String, index: Int){
+        let status = BookingType.cancelled.rawValue
+        let param:[String:Any] = ["status":status]
+        
+        APIManager.sharedInstance.shipperAPIManager.BookingStatus(id: id, params: param, success: { (responseObject) in
+            print(responseObject)
+            self.arrBookings.remove(at: index)
+            
+            DispatchQueue.main.async {
+                self.tableView.deleteRows(at: [IndexPath(row: index, section: 0)], with: .bottom)
             }
         }) { (error) in
             print(error)

@@ -45,12 +45,16 @@ class BookingsTVC: UITableViewCell {
         self.lblPickUpAddress.text = data.pickup?.address ?? ""
         self.lblDropOffAddress.text = data.dropOff?.address ?? ""
         
+        self.btnViewTrips.setTitle(Strings.VIEW_TRIPS.text, for: .normal)
+        
         let bookingStatus = data.status ?? ""
         
         switch bookingStatus {
         case BookingType.pending.rawValue:
-            self.btnViewTrips.isHidden = true
+            self.btnViewTrips.isHidden = false
             self.btnAddDocuments.isHidden = true
+            
+            self.btnViewTrips.setTitle(Strings.CANCEL_BOOKING.text, for: .normal)
         case BookingType.inProgress.rawValue:
             self.btnAddDocuments.isHidden = data.documents.isEmpty
             self.btnViewTrips.isHidden = false
