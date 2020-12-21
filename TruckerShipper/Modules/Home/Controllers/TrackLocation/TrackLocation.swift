@@ -25,7 +25,7 @@ class TrackLocation: BaseController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.connectSocket()
-        self.addOrMoveDriverMarker()
+        self.addOrMoveDriverMarker(bearing: nil)
         self.addDropOffMarker()
         // Do any additional setup after loading the view.
     }
@@ -42,7 +42,7 @@ extension TrackLocation{
         CATransaction.setValue(0.5, forKey: kCATransactionAnimationDuration)
         let fancy = GMSCameraPosition.camera(withLatitude: location.latitude,
                                              longitude: location.longitude,
-                                             zoom: 18,
+                                             zoom: 20,
                                              bearing: 0,
                                              viewingAngle: 0)
         self.mapView.animate(to: fancy)
@@ -62,7 +62,7 @@ extension TrackLocation{
 }
 //MARK:- Add marker
 extension TrackLocation{
-    private func addOrMoveDriverMarker(){
+    private func addOrMoveDriverMarker(bearing: Double?){
         if self.driverLocationMarker == nil{
             let latitude = self.inProgressMile?.lastLocation?.lat ?? 0.0
             let longitude = self.inProgressMile?.lastLocation?.lng ?? 0.0
@@ -82,6 +82,7 @@ extension TrackLocation{
             self.fitAllMarkersBounds()
         }
         else{
+            self.driverLocationMarker?.rotation = bearing ?? 0.0
             self.driverLocationMarker?.position = self.currentDriverLocation ?? CLLocationCoordinate2D()
             self.zoomToSearchLocation(location: self.currentDriverLocation ?? CLLocationCoordinate2D())
         }
@@ -132,8 +133,10 @@ extension TrackLocation{
             guard let driverLocation = data.first as? [String:Any] else {return}
             let latitude = driverLocation["lat"] as? Double ?? 0.0
             let longitude = driverLocation["lng"] as? Double ?? 0.0
+            let bearing = driverLocation["bearing"] as? Double ?? 0.0
+            
             self.currentDriverLocation = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
-            self.addOrMoveDriverMarker()
+            self.addOrMoveDriverMarker(bearing: bearing)
         }
         socket.on("received-finished-ride-shipper-\(Constants.inProgressMileNumber)") {data, ack in
             guard let mileFinished = data.first as? [String:Any] else {return}
