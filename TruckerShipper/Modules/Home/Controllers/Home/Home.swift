@@ -48,6 +48,7 @@ class Home: BaseController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setData()
+        self.setLocationManager()
         // Do any additional setup after loading the view.
     }
     
@@ -76,17 +77,16 @@ class Home: BaseController {
         self.pickLocationFromPlacePicker()
     }
     @IBAction func onBtnGoToMyLocation(_ sender: UIButton) {
-        self.fitAllMarkersBounds()
-//        if self.currentLocation == nil{
-//            Utility.main.openSettings()
-//            return
-//        }
-//        if self.pickUpLocation != nil && self.dropOffLocation != nil{
-//            self.fitAllMarkersBounds()
-//        }
-//        else{
-//            self.zoomToSearchLocation(location: self.currentLocation ?? CLLocationCoordinate2D())
-//        }
+        if self.currentLocation == nil{
+            Utility.main.openSettings()
+            return
+        }
+        if self.pickUpLocation != nil && self.dropOffLocation != nil{
+            self.fitAllMarkersBounds()
+        }
+        else{
+            self.zoomToSearchLocation(location: self.currentLocation ?? CLLocationCoordinate2D())
+        }
     }
     @IBAction func onBtnNext(_ sender: UIButton) {
         self.pushToLoadDetails()
@@ -114,7 +114,7 @@ extension Home{
         CATransaction.setValue(0.5, forKey: kCATransactionAnimationDuration)
         let fancy = GMSCameraPosition.camera(withLatitude: location.latitude,
                                              longitude: location.longitude,
-                                             zoom: 18,
+                                             zoom: 20,
                                              bearing: 0,
                                              viewingAngle: 0)
         self.mapView.animate(to: fancy)
