@@ -8,6 +8,7 @@
 
 import UIKit
 import ObjectMapper
+import LGSideMenuController
 
 class Dashboard: BaseController {
     
@@ -19,9 +20,13 @@ class Dashboard: BaseController {
     var refreshControl = UIRefreshControl()
     var arrNotifications = [NotificationsModel]()
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.setUI()
+    }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.setUI()
+        self.setShipperTypeUI()
         self.getBookingsCount()
         self.getNotifications()
     }
@@ -37,7 +42,9 @@ class Dashboard: BaseController {
 extension Dashboard{
     private func setUI(){
         self.registerCells()
-        
+        self.pullToRefresh()
+    }
+    private func setShipperTypeUI(){
         let shipperType = AppStateManager.sharedInstance.loggedInUser.user?.shipperType ?? ""
         switch shipperType{
         case ShipperType.WalkIn.rawValue:
@@ -46,7 +53,9 @@ extension Dashboard{
             self.btnLoadRequest.isHidden = false
         }
         
-        self.pullToRefresh()
+        guard let topController = Utility.main.topViewController() as? LGSideMenuController else {return}
+        guard let sideMenu = topController.leftViewController as? SideMenu else {return}
+        sideMenu.setShipperTypeUI()
     }
     private func registerCells(){
         self.tableView.register(UINib(nibName: "DashboardTVC", bundle: nil), forCellReuseIdentifier: "DashboardTVC")

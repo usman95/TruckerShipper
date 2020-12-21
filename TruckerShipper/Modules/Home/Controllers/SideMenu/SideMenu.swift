@@ -12,6 +12,7 @@ import LGSideMenuController
 class SideMenu: UIViewController {
     
     @IBOutlet weak var segmentLocalization: UISegmentedControl!
+    @IBOutlet weak var viewMyContracts: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -82,6 +83,15 @@ extension SideMenu{
         }
         else{
             self.segmentLocalization.selectedSegmentIndex = 1
+        }
+    }
+    func setShipperTypeUI(){
+        let shipperType = AppStateManager.sharedInstance.loggedInUser.user?.shipperType ?? ""
+        switch shipperType{
+        case ShipperType.WalkIn.rawValue:
+            self.viewMyContracts.isHidden = true
+        default:
+            self.viewMyContracts.isHidden = false
         }
     }
 }

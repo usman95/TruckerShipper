@@ -17,10 +17,6 @@ class Login: BaseController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.tfEmailAddress.text = "hcurnor@gmail.com"
-        self.tfPassword.text = "abc123"
-//        self.tfEmailAddress.text = "usmanrehan124@gmail.com"
-//        self.tfPassword.text = "123123"
         // Do any additional setup after loading the view.
     }
     

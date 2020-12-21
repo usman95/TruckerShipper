@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MyAccount" customModule="TruckerShipper" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MyAccount" customModule="PakGo_Shipper" customModuleProvider="target">
             <connections>
                 <outlet property="btnSaveProfile" destination="A1X-Fa-C39" id="pZ4-4a-eIE"/>
                 <outlet property="imgNTN" destination="lpE-as-weF" id="DFV-pV-KhQ"/>
@@ -57,7 +57,7 @@
                                 <action selector="onBtnBack:" destination="-1" eventType="touchUpInside" id="1ba-vl-9YL"/>
                             </connections>
                         </button>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MY ACCOUNT" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GdT-UB-GBP" customClass="UILabelDeviceClass" customModule="TruckerShipper" customModuleProvider="target">
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MY ACCOUNT" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GdT-UB-GBP" customClass="UILabelDeviceClass" customModule="PakGo_Shipper" customModuleProvider="target">
                             <rect key="frame" x="64" y="27.5" width="140" height="25.5"/>
                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="21"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -87,7 +87,7 @@
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mbj-km-rGs">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="153"/>
                                     <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profilePlaceHolder" translatesAutoresizingMaskIntoConstraints="NO" id="h4I-4e-TAO" customClass="RoundedImage" customModule="TruckerShipper" customModuleProvider="target">
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profilePlaceHolder" translatesAutoresizingMaskIntoConstraints="NO" id="h4I-4e-TAO" customClass="RoundedImage" customModule="PakGo_Shipper" customModuleProvider="target">
                                             <rect key="frame" x="160.5" y="16" width="93" height="93"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" secondItem="h4I-4e-TAO" secondAttribute="height" multiplier="1:1" id="0V6-A2-8ss"/>
@@ -123,7 +123,7 @@
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kx1-Qm-i4L">
                                                     <rect key="frame" x="0.0" y="0.0" width="334" height="90"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="First name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2t5-WR-8k3" customClass="UILabelDeviceClass" customModule="TruckerShipper" customModuleProvider="target">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="First name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2t5-WR-8k3" customClass="UILabelDeviceClass" customModule="PakGo_Shipper" customModuleProvider="target">
                                                             <rect key="frame" x="0.0" y="14" width="81.5" height="19.5"/>
                                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                                                             <color key="textColor" red="0.0" green="0.2802670002" blue="0.62132591010000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -138,7 +138,7 @@
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T8y-xN-duB">
                                                             <rect key="frame" x="0.0" y="41.5" width="334" height="48.5"/>
                                                             <subviews>
-                                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter first name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gvP-z4-MHc" customClass="UITextFieldDeviceClass" customModule="TruckerShipper" customModuleProvider="target">
+                                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter first name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gvP-z4-MHc" customClass="UITextFieldDeviceClass" customModule="PakGo_Shipper" customModuleProvider="target">
                                                                     <rect key="frame" x="12" y="0.0" width="310" height="48.5"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                     <textInputTraits key="textInputTraits"/>
@@ -186,7 +186,7 @@
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Uxw-ra-JJB">
                                                     <rect key="frame" x="0.0" y="90" width="334" height="90"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ten-1I-GMS" customClass="UILabelDeviceClass" customModule="TruckerShipper" customModuleProvider="target">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ten-1I-GMS" customClass="UILabelDeviceClass" customModule="PakGo_Shipper" customModuleProvider="target">
                                                             <rect key="frame" x="0.0" y="14" width="80" height="19.5"/>
                                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                                                             <color key="textColor" red="0.0" green="0.2802670002" blue="0.62132591010000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -201,7 +201,7 @@
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ggY-zS-zsH">
                                                             <rect key="frame" x="0.0" y="41.5" width="334" height="48.5"/>
                                                             <subviews>
-                                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter last name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FYO-y0-PSR" customClass="UITextFieldDeviceClass" customModule="TruckerShipper" customModuleProvider="target">
+                                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter last name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FYO-y0-PSR" customClass="UITextFieldDeviceClass" customModule="PakGo_Shipper" customModuleProvider="target">
                                                                     <rect key="frame" x="12" y="0.0" width="310" height="48.5"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                     <textInputTraits key="textInputTraits"/>
@@ -248,7 +248,7 @@
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dio-jD-mTI">
                                                     <rect key="frame" x="0.0" y="180" width="334" height="90"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phone" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Pp-Bg-mma" customClass="UILabelDeviceClass" customModule="TruckerShipper" customModuleProvider="target">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phone" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Pp-Bg-mma" customClass="UILabelDeviceClass" customModule="PakGo_Shipper" customModuleProvider="target">
                                                             <rect key="frame" x="0.0" y="14" width="49" height="19.5"/>
                                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                                                             <color key="textColor" red="0.0" green="0.2802670002" blue="0.62132591010000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -263,7 +263,7 @@
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gVj-RW-74A">
                                                             <rect key="frame" x="0.0" y="41.5" width="334" height="48.5"/>
                                                             <subviews>
-                                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter phone number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rUh-iY-4mU" customClass="UITextFieldDeviceClass" customModule="TruckerShipper" customModuleProvider="target">
+                                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter phone number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rUh-iY-4mU" customClass="UITextFieldDeviceClass" customModule="PakGo_Shipper" customModuleProvider="target">
                                                                     <rect key="frame" x="12" y="0.0" width="310" height="48.5"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                     <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
@@ -310,7 +310,7 @@
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rw2-bZ-EDr">
                                                     <rect key="frame" x="0.0" y="270" width="334" height="90"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j9B-BV-gJ6" customClass="UILabelDeviceClass" customModule="TruckerShipper" customModuleProvider="target">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j9B-BV-gJ6" customClass="UILabelDeviceClass" customModule="PakGo_Shipper" customModuleProvider="target">
                                                             <rect key="frame" x="0.0" y="14" width="42" height="19.5"/>
                                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                                                             <color key="textColor" red="0.0" green="0.2802670002" blue="0.62132591010000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -325,7 +325,7 @@
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vuy-VM-xWi">
                                                             <rect key="frame" x="0.0" y="41.5" width="334" height="48.5"/>
                                                             <subviews>
-                                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter email address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FG3-3N-lix" customClass="UITextFieldDeviceClass" customModule="TruckerShipper" customModuleProvider="target">
+                                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter email address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FG3-3N-lix" customClass="UITextFieldDeviceClass" customModule="PakGo_Shipper" customModuleProvider="target">
                                                                     <rect key="frame" x="12" y="0.0" width="310" height="48.5"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                     <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
@@ -372,7 +372,7 @@
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7dy-4b-CNx">
                                                     <rect key="frame" x="0.0" y="360" width="334" height="90"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NIC" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hFJ-jK-HqV" customClass="UILabelDeviceClass" customModule="TruckerShipper" customModuleProvider="target">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NIC" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hFJ-jK-HqV" customClass="UILabelDeviceClass" customModule="PakGo_Shipper" customModuleProvider="target">
                                                             <rect key="frame" x="0.0" y="14" width="28.5" height="19.5"/>
                                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                                                             <color key="textColor" red="0.0" green="0.2802670002" blue="0.62132591010000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -387,7 +387,7 @@
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8eP-S4-p7C">
                                                             <rect key="frame" x="0.0" y="41.5" width="334" height="48.5"/>
                                                             <subviews>
-                                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter email address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ghE-k0-Qla" customClass="UITextFieldDeviceClass" customModule="TruckerShipper" customModuleProvider="target">
+                                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter nic number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ghE-k0-Qla" customClass="UITextFieldDeviceClass" customModule="PakGo_Shipper" customModuleProvider="target">
                                                                     <rect key="frame" x="12" y="0.0" width="310" height="48.5"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                     <textInputTraits key="textInputTraits"/>
@@ -434,7 +434,7 @@
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q7z-YR-P8E">
                                                     <rect key="frame" x="0.0" y="450" width="334" height="90"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Country" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iwF-fo-Kaf" customClass="UILabelDeviceClass" customModule="TruckerShipper" customModuleProvider="target">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Country" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iwF-fo-Kaf" customClass="UILabelDeviceClass" customModule="PakGo_Shipper" customModuleProvider="target">
                                                             <rect key="frame" x="0.0" y="14" width="63" height="19.5"/>
                                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                                                             <color key="textColor" red="0.0" green="0.2802670002" blue="0.62132591010000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -449,7 +449,7 @@
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pZf-0v-3wV">
                                                             <rect key="frame" x="0.0" y="41.5" width="334" height="48.5"/>
                                                             <subviews>
-                                                                <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Select country" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BnW-w4-viE" customClass="UITextFieldDeviceClass" customModule="TruckerShipper" customModuleProvider="target">
+                                                                <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Select country" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BnW-w4-viE" customClass="UITextFieldDeviceClass" customModule="PakGo_Shipper" customModuleProvider="target">
                                                                     <rect key="frame" x="12" y="0.0" width="288" height="48.5"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                     <textInputTraits key="textInputTraits"/>
@@ -511,7 +511,7 @@
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z6u-iC-Ytd">
                                                     <rect key="frame" x="0.0" y="540" width="334" height="90"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="City" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D63-as-aBB" customClass="UILabelDeviceClass" customModule="TruckerShipper" customModuleProvider="target">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="City" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D63-as-aBB" customClass="UILabelDeviceClass" customModule="PakGo_Shipper" customModuleProvider="target">
                                                             <rect key="frame" x="0.0" y="14" width="31.5" height="19.5"/>
                                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                                                             <color key="textColor" red="0.0" green="0.2802670002" blue="0.62132591010000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -526,7 +526,7 @@
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bD9-fy-RuP">
                                                             <rect key="frame" x="0.0" y="41.5" width="334" height="48.5"/>
                                                             <subviews>
-                                                                <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Select city" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aJD-J1-Hvy" customClass="UITextFieldDeviceClass" customModule="TruckerShipper" customModuleProvider="target">
+                                                                <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Select city" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aJD-J1-Hvy" customClass="UITextFieldDeviceClass" customModule="PakGo_Shipper" customModuleProvider="target">
                                                                     <rect key="frame" x="12" y="0.0" width="288" height="48.5"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                     <textInputTraits key="textInputTraits"/>
@@ -588,7 +588,7 @@
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sUN-iO-e0o">
                                                     <rect key="frame" x="0.0" y="630" width="334" height="90"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VF2-gd-q3P" customClass="UILabelDeviceClass" customModule="TruckerShipper" customModuleProvider="target">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VF2-gd-q3P" customClass="UILabelDeviceClass" customModule="PakGo_Shipper" customModuleProvider="target">
                                                             <rect key="frame" x="0.0" y="14" width="64.5" height="19.5"/>
                                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                                                             <color key="textColor" red="0.0" green="0.2802670002" blue="0.62132591010000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -603,7 +603,7 @@
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8u8-Cb-yVu">
                                                             <rect key="frame" x="0.0" y="41.5" width="334" height="48.5"/>
                                                             <subviews>
-                                                                <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="T5m-Ww-jzf" customClass="UITextFieldDeviceClass" customModule="TruckerShipper" customModuleProvider="target">
+                                                                <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="T5m-Ww-jzf" customClass="UITextFieldDeviceClass" customModule="PakGo_Shipper" customModuleProvider="target">
                                                                     <rect key="frame" x="12" y="0.0" width="310" height="48.5"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                     <textInputTraits key="textInputTraits"/>
@@ -660,7 +660,7 @@
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M3H-Po-hav">
                                                     <rect key="frame" x="0.0" y="720" width="334" height="90"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Shipper type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EO7-NO-S3i" customClass="UILabelDeviceClass" customModule="TruckerShipper" customModuleProvider="target">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Shipper type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EO7-NO-S3i" customClass="UILabelDeviceClass" customModule="PakGo_Shipper" customModuleProvider="target">
                                                             <rect key="frame" x="0.0" y="14" width="99.5" height="19.5"/>
                                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                                                             <color key="textColor" red="0.0" green="0.2802670002" blue="0.62132591010000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -675,7 +675,7 @@
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QKe-fF-u8j">
                                                             <rect key="frame" x="0.0" y="41.5" width="334" height="48.5"/>
                                                             <subviews>
-                                                                <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Select shipper type" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NP0-Ui-Jd6" customClass="UITextFieldDeviceClass" customModule="TruckerShipper" customModuleProvider="target">
+                                                                <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Select shipper type" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NP0-Ui-Jd6" customClass="UITextFieldDeviceClass" customModule="PakGo_Shipper" customModuleProvider="target">
                                                                     <rect key="frame" x="12" y="0.0" width="288" height="48.5"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                     <textInputTraits key="textInputTraits"/>
@@ -737,7 +737,7 @@
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TeE-ZA-nhs">
                                                     <rect key="frame" x="0.0" y="810" width="334" height="90"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Company" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dGH-bO-Kc7" customClass="UILabelDeviceClass" customModule="TruckerShipper" customModuleProvider="target">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Company" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dGH-bO-Kc7" customClass="UILabelDeviceClass" customModule="PakGo_Shipper" customModuleProvider="target">
                                                             <rect key="frame" x="0.0" y="14" width="74" height="19.5"/>
                                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                                                             <color key="textColor" red="0.0" green="0.2802670002" blue="0.62132591010000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -752,7 +752,7 @@
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VGm-JI-tMF">
                                                             <rect key="frame" x="0.0" y="41.5" width="334" height="48.5"/>
                                                             <subviews>
-                                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter company name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Mlo-Ub-35U" customClass="UITextFieldDeviceClass" customModule="TruckerShipper" customModuleProvider="target">
+                                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter company name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Mlo-Ub-35U" customClass="UITextFieldDeviceClass" customModule="PakGo_Shipper" customModuleProvider="target">
                                                                     <rect key="frame" x="12" y="0.0" width="310" height="48.5"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                     <textInputTraits key="textInputTraits"/>
@@ -799,7 +799,7 @@
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZPN-pb-egT">
                                                     <rect key="frame" x="0.0" y="900" width="334" height="90"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NTN" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gwe-m3-GKl" customClass="UILabelDeviceClass" customModule="TruckerShipper" customModuleProvider="target">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NTN" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gwe-m3-GKl" customClass="UILabelDeviceClass" customModule="PakGo_Shipper" customModuleProvider="target">
                                                             <rect key="frame" x="0.0" y="14" width="34.5" height="19.5"/>
                                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                                                             <color key="textColor" red="0.0" green="0.2802670002" blue="0.62132591010000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -814,7 +814,7 @@
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UuE-5D-nWV">
                                                             <rect key="frame" x="0.0" y="41.5" width="334" height="48.5"/>
                                                             <subviews>
-                                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter company ntn" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kvu-xO-MK6" customClass="UITextFieldDeviceClass" customModule="TruckerShipper" customModuleProvider="target">
+                                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter company ntn" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kvu-xO-MK6" customClass="UITextFieldDeviceClass" customModule="PakGo_Shipper" customModuleProvider="target">
                                                                     <rect key="frame" x="12" y="0.0" width="310" height="48.5"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                     <textInputTraits key="textInputTraits"/>
@@ -863,7 +863,7 @@
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mpK-Ex-BEn">
                                             <rect key="frame" x="0.0" y="990" width="334" height="100"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="255" verticalCompressionResistancePriority="755" text="Add photo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n4c-93-c31" customClass="UILabelDeviceClass" customModule="TruckerShipper" customModuleProvider="target">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="255" verticalCompressionResistancePriority="755" text="Add photo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n4c-93-c31" customClass="UILabelDeviceClass" customModule="PakGo_Shipper" customModuleProvider="target">
                                                     <rect key="frame" x="0.0" y="14" width="80.5" height="19.5"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                                                     <color key="textColor" red="0.0" green="0.2802670002" blue="0.62132591010000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -912,7 +912,7 @@
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X28-yD-2ne">
                                             <rect key="frame" x="0.0" y="1090" width="334" height="90"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Website" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m3n-RL-T9c" customClass="UILabelDeviceClass" customModule="TruckerShipper" customModuleProvider="target">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Website" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m3n-RL-T9c" customClass="UILabelDeviceClass" customModule="PakGo_Shipper" customModuleProvider="target">
                                                     <rect key="frame" x="0.0" y="14" width="63" height="19.5"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                                                     <color key="textColor" red="0.0" green="0.2802670002" blue="0.62132591010000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -927,7 +927,7 @@
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2XC-VH-6Sa">
                                                     <rect key="frame" x="0.0" y="41.5" width="334" height="48.5"/>
                                                     <subviews>
-                                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter company website" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LUl-Uy-ijU" customClass="UITextFieldDeviceClass" customModule="TruckerShipper" customModuleProvider="target">
+                                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter company website" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LUl-Uy-ijU" customClass="UITextFieldDeviceClass" customModule="PakGo_Shipper" customModuleProvider="target">
                                                             <rect key="frame" x="12" y="0.0" width="310" height="48.5"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                             <textInputTraits key="textInputTraits"/>
@@ -976,7 +976,7 @@
                                         <constraint firstItem="X28-yD-2ne" firstAttribute="height" secondItem="ZPN-pb-egT" secondAttribute="height" id="w5Q-tv-4QF"/>
                                     </constraints>
                                 </stackView>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A1X-Fa-C39" customClass="UIButtonDeviceClass" customModule="TruckerShipper" customModuleProvider="target">
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A1X-Fa-C39" customClass="UIButtonDeviceClass" customModule="PakGo_Shipper" customModuleProvider="target">
                                     <rect key="frame" x="24" y="1365" width="366" height="54"/>
                                     <color key="backgroundColor" red="0.0" green="0.2802670002" blue="0.62132591010000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>

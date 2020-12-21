@@ -214,6 +214,16 @@ extension MyAccount{
             self.btnSaveProfile.shake()
             return nil
         }
+        if self.selectedCountry == nil{
+            Utility.main.showToast(message: Strings.INVALID_COUNTRY.text)
+            self.btnSaveProfile.shake()
+            return nil
+        }
+        if self.selectedCity == nil{
+            Utility.main.showToast(message: Strings.INVALID_CITY.text)
+            self.btnSaveProfile.shake()
+            return nil
+        }
         if !Validation.validateStringLength(address){
             Utility.main.showToast(message: Strings.ENTER_ADDRESS.text)
             self.btnSaveProfile.shake()

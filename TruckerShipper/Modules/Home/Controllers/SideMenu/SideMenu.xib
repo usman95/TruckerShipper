@@ -7,10 +7,11 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SideMenu" customModule="TruckerShipper" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SideMenu" customModule="PakGo_Shipper" customModuleProvider="target">
             <connections>
                 <outlet property="segmentLocalization" destination="gk5-Au-c0o" id="ujz-Uf-ETr"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="viewMyContracts" destination="c9N-nj-eGj" id="Odq-cX-98T"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -53,7 +54,7 @@
                                                         <constraint firstAttribute="width" secondItem="TH0-qC-DRh" secondAttribute="height" multiplier="1:1" id="Opv-s5-fhT"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Language" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tyW-jd-15J" customClass="UILabelDeviceClass" customModule="TruckerShipper" customModuleProvider="target">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Language" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tyW-jd-15J" customClass="UILabelDeviceClass" customModule="PakGo_Shipper" customModuleProvider="target">
                                                     <rect key="frame" x="65.666666666666686" y="15.333333333333341" width="85.333333333333314" height="25.333333333333329"/>
                                                     <fontDescription key="fontDescription" name="NotoSansOriya-Bold" family="Noto Sans Oriya" pointSize="18"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -98,7 +99,7 @@
                                                         <constraint firstAttribute="width" secondItem="DH1-mR-p6D" secondAttribute="height" multiplier="1:1" id="8kt-mk-giF"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Bookings" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tsd-lw-nOS" customClass="UILabelDeviceClass" customModule="TruckerShipper" customModuleProvider="target">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Bookings" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tsd-lw-nOS" customClass="UILabelDeviceClass" customModule="PakGo_Shipper" customModuleProvider="target">
                                                     <rect key="frame" x="65.666666666666686" y="17.333333333333314" width="104.33333333333331" height="21.666666666666671"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -138,7 +139,7 @@
                                                         <constraint firstAttribute="width" secondItem="lzL-bH-HHH" secondAttribute="height" multiplier="1:1" id="m6a-hn-74x"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Shipment Tracking" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uaw-U8-ndd" customClass="UILabelDeviceClass" customModule="TruckerShipper" customModuleProvider="target">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Shipment Tracking" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uaw-U8-ndd" customClass="UILabelDeviceClass" customModule="PakGo_Shipper" customModuleProvider="target">
                                                     <rect key="frame" x="65.666666666666686" y="17.333333333333314" width="151" height="21.666666666666671"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -178,7 +179,7 @@
                                                         <constraint firstAttribute="width" secondItem="tYT-f7-bJK" secondAttribute="height" multiplier="1:1" id="KdK-Jc-1Yg"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Notifications" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DE5-Cl-AMY" customClass="UILabelDeviceClass" customModule="TruckerShipper" customModuleProvider="target">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Notifications" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DE5-Cl-AMY" customClass="UILabelDeviceClass" customModule="PakGo_Shipper" customModuleProvider="target">
                                                     <rect key="frame" x="65.666666666666671" y="17.333333333333314" width="102.00000000000001" height="21.666666666666671"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -218,7 +219,7 @@
                                                         <constraint firstAttribute="width" secondItem="NUD-WR-PfF" secondAttribute="height" multiplier="1:1" id="Kl2-Wu-qAx"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reports" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vL2-PG-8aa" customClass="UILabelDeviceClass" customModule="TruckerShipper" customModuleProvider="target">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reports" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vL2-PG-8aa" customClass="UILabelDeviceClass" customModule="PakGo_Shipper" customModuleProvider="target">
                                                     <rect key="frame" x="65.666666666666671" y="17.333333333333314" width="63.666666666666671" height="21.666666666666671"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -258,7 +259,7 @@
                                                         <constraint firstAttribute="width" secondItem="QL5-Ge-lmD" secondAttribute="height" multiplier="1:1" id="ca2-1V-lzf"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Contracts" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gFE-Pg-xZ0" customClass="UILabelDeviceClass" customModule="TruckerShipper" customModuleProvider="target">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Contracts" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gFE-Pg-xZ0" customClass="UILabelDeviceClass" customModule="PakGo_Shipper" customModuleProvider="target">
                                                     <rect key="frame" x="65.666666666666671" y="17.333333333333314" width="109.00000000000001" height="21.666666666666671"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -298,7 +299,7 @@
                                                         <constraint firstAttribute="width" secondItem="sAh-JK-433" secondAttribute="height" multiplier="1:1" id="IkM-Wd-4dR"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Account" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kBj-A7-0re" customClass="UILabelDeviceClass" customModule="TruckerShipper" customModuleProvider="target">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Account" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kBj-A7-0re" customClass="UILabelDeviceClass" customModule="PakGo_Shipper" customModuleProvider="target">
                                                     <rect key="frame" x="65.666666666666686" y="17.333333333333371" width="96.333333333333314" height="21.666666666666671"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -338,7 +339,7 @@
                                                         <constraint firstAttribute="width" secondItem="uUs-R5-qCq" secondAttribute="height" multiplier="1:1" id="vAz-Sd-Izi"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Change Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yjn-Gv-czr" customClass="UILabelDeviceClass" customModule="TruckerShipper" customModuleProvider="target">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Change Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yjn-Gv-czr" customClass="UILabelDeviceClass" customModule="PakGo_Shipper" customModuleProvider="target">
                                                     <rect key="frame" x="65.666666666666671" y="17.333333333333371" width="145.33333333333331" height="21.666666666666671"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -378,7 +379,7 @@
                                                         <constraint firstAttribute="width" secondItem="JiG-qk-ad7" secondAttribute="height" multiplier="1:1" id="UFL-uM-kIq"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Logout" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yp1-SD-tdx" customClass="UILabelDeviceClass" customModule="TruckerShipper" customModuleProvider="target">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Logout" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yp1-SD-tdx" customClass="UILabelDeviceClass" customModule="PakGo_Shipper" customModuleProvider="target">
                                                     <rect key="frame" x="65.666666666666671" y="17.333333333333371" width="56.666666666666671" height="21.666666666666671"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -414,7 +415,7 @@
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Xoa-my-rJO">
                                     <rect key="frame" x="20" y="726" width="160" height="80"/>
                                     <subviews>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dh1-Vb-cMc" customClass="UIButtonDeviceClass" customModule="TruckerShipper" customModuleProvider="target">
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dh1-Vb-cMc" customClass="UIButtonDeviceClass" customModule="PakGo_Shipper" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="0.0" width="118" height="30"/>
                                             <state key="normal" title="PRIVACY POLICY">
                                                 <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -429,7 +430,7 @@
                                                 <action selector="onBtnPrivacyAndTerms:" destination="-1" eventType="touchUpInside" id="poG-3u-UDZ"/>
                                             </connections>
                                         </button>
-                                        <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zm4-4c-jDU" customClass="UIButtonDeviceClass" customModule="TruckerShipper" customModuleProvider="target">
+                                        <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zm4-4c-jDU" customClass="UIButtonDeviceClass" customModule="PakGo_Shipper" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="50" width="160" height="30"/>
                                             <state key="normal" title="TERMS &amp; CONDITIONS">
                                                 <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
