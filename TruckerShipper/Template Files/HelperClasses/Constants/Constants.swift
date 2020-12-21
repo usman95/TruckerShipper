@@ -36,6 +36,6 @@ struct Constants {
     static var localCurrency               = "PKR"
     static let oneSignalAppID              = "4ac1ff96-ec01-4a69-8abc-414b5884d79f"
     static let gmailSignInClientID         = "857012175771-er4drafle21fh2eh6mn37saode9299jv.apps.googleusercontent.com"
-    static var inProgressMileId            = ""
+    static var inProgressMileNumber        = ""
     static let stripeDefaultPublishableKey = "pk_test_51HLEsID30KhvE5IwlgHuVtRB6rtqIBpfVRhOdaPAnLNs1Fa4I2nDEYjgxXY99WtISfwX3E9ylqJ2uh1kFIgcEQuw00FBv96gDW"
 }

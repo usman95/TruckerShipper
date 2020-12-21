@@ -93,7 +93,7 @@ extension BaseController{
     func pushToTrackLocation(inProgressMile: TripMilesModel?){
         let controller = TrackLocation()
         controller.inProgressMile = inProgressMile
-        Constants.inProgressMileId = inProgressMile?.id ?? ""
+        Constants.inProgressMileNumber = inProgressMile?.tripMileNumber ?? ""
         self.navigationController?.pushViewController(controller, animated: true)
     }
     func pushToMyContracts(){
