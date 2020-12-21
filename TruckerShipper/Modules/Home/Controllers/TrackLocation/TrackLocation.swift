@@ -25,6 +25,7 @@ class TrackLocation: BaseController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.connectSocket()
+        self.addOrMoveDriverMarker()
         self.addDropOffMarker()
         // Do any additional setup after loading the view.
     }
@@ -63,6 +64,10 @@ extension TrackLocation{
 extension TrackLocation{
     private func addOrMoveDriverMarker(){
         if self.driverLocationMarker == nil{
+            let latitude = self.inProgressMile?.lastLocation?.lat ?? 0.0
+            let longitude = self.inProgressMile?.lastLocation?.lng ?? 0.0
+            self.currentDriverLocation = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
+            
             var markerIcon: UIImageView?
             let pickUpPin = UIImage(named: "TruckMapPin")!.withRenderingMode(.alwaysOriginal)
             let markerView = UIImageView(image: pickUpPin)

@@ -35,6 +35,7 @@ public class TripMilesModel: Object, Mappable {
         static let updatedAt = "updatedAt"
         static let distance = "distance"
         static let dropOffAddress = "dropOffAddress"
+        static let lastLocation = "lastLocation"
     }
     
     // MARK: Properties
@@ -59,6 +60,7 @@ public class TripMilesModel: Object, Mappable {
     @objc dynamic var updatedAt: String? = ""
     @objc dynamic var distance = 0
     @objc dynamic var dropOffAddress: String? = ""
+    @objc dynamic var lastLocation: LastLocationModel?
     
     // MARK: ObjectMapper Initializers
     /// Map a JSON object to this class using ObjectMapper.
@@ -98,6 +100,7 @@ public class TripMilesModel: Object, Mappable {
         updatedAt <- map[SerializationKeys.updatedAt]
         distance <- map[SerializationKeys.distance]
         dropOffAddress <- map[SerializationKeys.dropOffAddress]
+        lastLocation <- map[SerializationKeys.lastLocation]
         
         var pickUpLocation: [Double]? = nil
         pickUpLocation <- map["pickUpLocation"]
