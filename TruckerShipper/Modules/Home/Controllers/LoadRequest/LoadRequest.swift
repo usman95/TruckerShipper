@@ -79,6 +79,8 @@ class LoadRequest: BaseController {
     var arrTransportMode = [AttributeModel]()
     var selectedTransportMode: AttributeModel?
     
+    var selectedContract: ContractModel?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setData()
@@ -158,6 +160,30 @@ extension LoadRequest{
             default:
                 self.tfBookingDetailsModeOfTransport.text = Strings.BY_TRAIN.text
             }
+        }
+        if let contract = self.selectedContract{
+            self.tfPickUpDetailsFullName.text = contract.pickup?.fullName ?? ""
+            self.tfPickUpDetailsPhoneNumber.text = contract.pickup?.phoneNumber ?? ""
+            self.tfPickUpDetailsCity.text = contract.pickup?.origin ?? ""
+            self.tfPickUpDetailsPickUpName.text = contract.pickup?.originName ?? ""
+            self.tfPickUpDetailsLabourers.text = contract.pickup?.labourers ?? ""
+            
+            self.tfDropOffDetailsFullName.text = contract.dropOff?.fullName ?? ""
+            self.tfDropOffDetailsPhoneNumber.text = contract.dropOff?.phoneNumber ?? ""
+            self.tfDropOffDetailsCity.text = contract.dropOff?.destination ?? ""
+            self.tfDropOffDetailsDropOffName.text = contract.dropOff?.destinationName ?? ""
+            self.tfDropOffDetailsLabourers.text = contract.dropOff?.labourers ?? ""
+            
+            self.tfBookingDetailsBookingType.text = contract.bookingTypeId?.title ?? ""
+            self.selectedBookingType = contract.bookingTypeId
+            
+            self.tfBookingDetailsTransitFreeDays.text = "\(contract.transitFreeDays)"
+            
+            self.tfBookingDetailsShippingLine.text = contract.shippingLine?.title ?? ""
+            self.selectedShippingLine = contract.shippingLine
+            
+            self.tfBookingDetailsCargoMode.text = contract.cargoMode
+            self.selectedCargoMode = contract.cargoMode
         }
     }
     private func callAPIs(){
@@ -318,6 +344,17 @@ extension LoadRequest{
             let totalDistance = loadDetails["totalDistance"] as? Int ?? 0
             let totalDuration = loadDetails["totalDuration"] as? String ?? ""
             let cargoMode = self.selectedCargoMode ?? ""
+            
+            if self.selectedBookingDate == nil {
+                Utility.main.showToast(message: Strings.SELECT_BOOKING_DATE.text)
+                self.btnCreatebooking.shake()
+                return nil
+            }
+            if self.selectedPickUpDate == nil {
+                Utility.main.showToast(message: Strings.SELECT_PICK_UP_DATE.text)
+                self.btnCreatebooking.shake()
+                return nil
+            }
             
             params["pickup"] = pickup
             params["dropOff"] = dropOff

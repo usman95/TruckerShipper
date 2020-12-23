@@ -112,7 +112,7 @@ extension LoadDetails{
             var loadDetails = self.estimateParams ?? [:]
             loadDetails["modeOfTransport"] = modeOfTransport.rawValue
             loadDetails["selectedPrice"] = selectedPrice
-            super.pushToLoadRequest(loadDetails: loadDetails)
+            super.pushToLoadRequest(loadDetails: loadDetails, selectedContract: nil)
         }
     }
     private func validate()->[String:Any]?{

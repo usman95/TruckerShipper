@@ -164,6 +164,10 @@ extension TripDetail{
         
         APIManager.sharedInstance.shipperAPIManager.BookingDetails(id: id, success: { (responseObject) in
             self.bookingDetail = Mapper<BookingDetailtModel>().map(JSON: responseObject)
+            if let selectedTrip:TripsModel = self.bookingDetail?.trips.filter({$0.id == self.trip?.id}).first {
+                self.trip = selectedTrip
+            }
+            
             self.setData()
             
             DispatchQueue.main.async {

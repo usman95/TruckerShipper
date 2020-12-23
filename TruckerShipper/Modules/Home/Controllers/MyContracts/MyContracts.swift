@@ -104,7 +104,8 @@ extension MyContracts: UITableViewDelegate{
                                         "modeOfTransport":modeOfTransport,
                                         "selectedPrice":selectedPrice]
 
-        super.pushToLoadRequest(loadDetails: loadDetails)
+        let selectedContract = self.arrContracts[indexPath.row]
+        super.pushToLoadRequest(loadDetails: loadDetails, selectedContract: selectedContract)
     }
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {

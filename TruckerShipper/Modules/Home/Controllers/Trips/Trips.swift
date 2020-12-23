@@ -19,8 +19,11 @@ class Trips: BaseController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.registerCells()
-        self.getBookingDetail()
         // Do any additional setup after loading the view.
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.getBookingDetail()
     }
 }
 //MARK:- Helper methods

@@ -60,9 +60,10 @@ extension BaseController{
         let controller = SignUp()
         self.navigationController?.pushViewController(controller, animated: true)
     }
-    func pushToLoadRequest(loadDetails: [String:Any]){
+    func pushToLoadRequest(loadDetails: [String:Any], selectedContract: ContractModel?){
         let controller = LoadRequest()
         controller.loadDetails = loadDetails
+        controller.selectedContract = selectedContract
         self.navigationController?.pushViewController(controller, animated: true)
     }
     func pushToHome(){
