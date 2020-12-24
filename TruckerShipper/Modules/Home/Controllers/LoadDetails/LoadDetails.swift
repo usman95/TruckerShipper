@@ -25,7 +25,6 @@ class LoadDetails: BaseController {
     var arrSizePerTruck = [AttributeModel]()
     var selectedSizePerTruck: AttributeModel?
     
-    let commodityDropDown = DropDown()
     var arrCommodity = [AttributeModel]()
     var selectedCommodity: AttributeModel?
     
@@ -45,7 +44,14 @@ class LoadDetails: BaseController {
         self.sizePerTruckDropDown.show()
     }
     @IBAction func onBtnCommodity(_ sender: UIButton) {
-        self.commodityDropDown.show()
+        let controller = SearchCommodity()
+        controller.arrCommodity = self.arrCommodity
+        self.navigationController?.pushViewController(controller, animated: true)
+        
+        controller.setSelectedCommodity = { commodity in
+            self.selectedCommodity = commodity
+            self.tfCommodity.text = commodity?.title ?? ""
+        }
     }
     @IBAction func onBtnCargoType(_ sender: UIButton) {
         self.cargoTypeDropDown.show()
@@ -58,7 +64,7 @@ class LoadDetails: BaseController {
 extension LoadDetails{
     private func callAPIs(){
         self.getSizePerTruck(showDropDown: false)
-        self.getCommodity(showDropDown: false)
+        self.getCommodity()
         self.getCargoType(showDropDown: false)
     }
     private func setSizePerTruckDropDown(showDropDown: Bool){
@@ -72,19 +78,6 @@ extension LoadDetails{
         }
         if showDropDown{
             self.sizePerTruckDropDown.show()
-        }
-    }
-    private func setCommodityDropDown(showDropDown: Bool){
-        self.commodityDropDown.dataSource = self.arrCommodity.map{$0.title ?? ""}
-        self.commodityDropDown.anchorView = self.tfCommodity
-        self.commodityDropDown.cellHeight = self.tfCommodity.frame.height
-        self.commodityDropDown.width = self.tfCommodity.frame.width
-        self.commodityDropDown.selectionAction = { [unowned self] (index: Int, item: String) in
-            self.tfCommodity.text = item
-            self.selectedCommodity = self.arrCommodity[index]
-        }
-        if showDropDown{
-            self.commodityDropDown.show()
         }
     }
     private func setCargoTypeDropDown(showDropDown: Bool){
@@ -177,10 +170,10 @@ extension LoadDetails{
             print(error)
         }
     }
-    private func getCommodity(showDropDown: Bool){
+    private func getCommodity(){
         let skip = "0"
         let limit = "1000"
-
+        
         let params:[String:Any] = ["skip":skip,
                                    "limit":limit]
         
@@ -188,7 +181,7 @@ extension LoadDetails{
             let response = responseObject as Dictionary
             guard let commodities = response["commodities"] as? [[String:Any]] else {return}
             self.arrCommodity = Mapper<AttributeModel>().mapArray(JSONArray: commodities)
-            self.setCommodityDropDown(showDropDown: showDropDown)
+
         }) { (error) in
             print(error)
         }

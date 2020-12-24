@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoadDetails" customModule="TruckerShipper" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoadDetails" customModule="PakGo_Shipper" customModuleProvider="target">
             <connections>
                 <outlet property="btnCalculateRate" destination="5SX-hh-g9E" id="ZCi-3m-AeK"/>
                 <outlet property="tfCargoType" destination="IXG-7e-djY" id="mKS-LR-8Pw"/>
@@ -48,7 +48,7 @@
                                 <action selector="onBtnBack:" destination="-1" eventType="touchUpInside" id="XiS-j4-2yh"/>
                             </connections>
                         </button>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BOOKING" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mSU-GI-u1Z" customClass="UILabelDeviceClass" customModule="TruckerShipper" customModuleProvider="target">
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BOOKING" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mSU-GI-u1Z" customClass="UILabelDeviceClass" customModule="PakGo_Shipper" customModuleProvider="target">
                             <rect key="frame" x="64" y="27.5" width="96" height="25.5"/>
                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="21"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -69,7 +69,7 @@
                         <constraint firstItem="mSU-GI-u1Z" firstAttribute="leading" secondItem="S8i-9J-Yqs" secondAttribute="trailing" constant="12" id="hrb-TA-NyL"/>
                     </constraints>
                 </view>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Load Details" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vHV-En-fXf" customClass="UILabelDeviceClass" customModule="TruckerShipper" customModuleProvider="target">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Load Details" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vHV-En-fXf" customClass="UILabelDeviceClass" customModule="PakGo_Shipper" customModuleProvider="target">
                     <rect key="frame" x="148" y="144" width="118" height="26.5"/>
                     <fontDescription key="fontDescription" type="system" pointSize="22"/>
                     <color key="textColor" red="0.30976641179999997" green="0.30982545020000002" blue="0.30976271630000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -90,7 +90,7 @@
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TOH-DM-Wk2">
                                     <rect key="frame" x="0.0" y="0.0" width="44" height="60"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ton" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="liD-eC-8pA" customClass="UILabelDeviceClass" customModule="TruckerShipper" customModuleProvider="target">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ton" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="liD-eC-8pA" customClass="UILabelDeviceClass" customModule="PakGo_Shipper" customModuleProvider="target">
                                             <rect key="frame" x="10.5" y="22" width="22.5" height="16"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                             <color key="textColor" red="0.32937228680000002" green="0.32943451400000001" blue="0.32936835289999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -109,7 +109,7 @@
                                         <constraint firstItem="liD-eC-8pA" firstAttribute="centerY" secondItem="TOH-DM-Wk2" secondAttribute="centerY" id="It1-3f-UB9"/>
                                     </constraints>
                                 </view>
-                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Weight Per Transport Unit" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="beB-Mb-y6o" customClass="UITextFieldDeviceClass" customModule="TruckerShipper" customModuleProvider="target">
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Weight Per Transport Unit" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="beB-Mb-y6o" customClass="UITextFieldDeviceClass" customModule="PakGo_Shipper" customModuleProvider="target">
                                     <rect key="frame" x="56" y="0.0" width="282" height="60"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                     <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
@@ -154,7 +154,7 @@
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Uk5-7K-7ai">
                                     <rect key="frame" x="0.0" y="0.0" width="44" height="60"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ft" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JeX-zJ-jM8" customClass="UILabelDeviceClass" customModule="TruckerShipper" customModuleProvider="target">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ft" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JeX-zJ-jM8" customClass="UILabelDeviceClass" customModule="PakGo_Shipper" customModuleProvider="target">
                                             <rect key="frame" x="17" y="22" width="9.5" height="16"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                             <color key="textColor" red="0.32937228680000002" green="0.32943451400000001" blue="0.32936835289999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -173,7 +173,7 @@
                                         <constraint firstItem="JeX-zJ-jM8" firstAttribute="centerX" secondItem="Uk5-7K-7ai" secondAttribute="centerX" id="Db9-pJ-51d"/>
                                     </constraints>
                                 </view>
-                                <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Size Per Transport Unit" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sKr-k9-TTt" customClass="UITextFieldDeviceClass" customModule="TruckerShipper" customModuleProvider="target">
+                                <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Size Per Transport Unit" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sKr-k9-TTt" customClass="UITextFieldDeviceClass" customModule="PakGo_Shipper" customModuleProvider="target">
                                     <rect key="frame" x="56" y="0.0" width="252" height="60"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                     <textInputTraits key="textInputTraits"/>
@@ -229,7 +229,7 @@
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IrV-46-Jc6">
                             <rect key="frame" x="0.0" y="148" width="350" height="60"/>
                             <subviews>
-                                <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Commodity" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BUB-VU-DKf" customClass="UITextFieldDeviceClass" customModule="TruckerShipper" customModuleProvider="target">
+                                <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Commodity" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BUB-VU-DKf" customClass="UITextFieldDeviceClass" customModule="PakGo_Shipper" customModuleProvider="target">
                                     <rect key="frame" x="20" y="0.0" width="288" height="60"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                     <textInputTraits key="textInputTraits"/>
@@ -240,8 +240,12 @@
                                         <userDefinedRuntimeAttribute type="string" keyPath="iPhoneFontWeight" value="medium"/>
                                     </userDefinedRuntimeAttributes>
                                 </textField>
-                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="255" verticalHuggingPriority="251" horizontalCompressionResistancePriority="755" image="dropDownBlack" translatesAutoresizingMaskIntoConstraints="NO" id="eWq-KL-AgV">
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="255" verticalHuggingPriority="251" horizontalCompressionResistancePriority="755" image="arrowRight" translatesAutoresizingMaskIntoConstraints="NO" id="eWq-KL-AgV">
                                     <rect key="frame" x="316" y="25" width="10" height="10"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="10" id="kco-Fx-1Jd"/>
+                                        <constraint firstAttribute="height" constant="10" id="mCJ-v5-sDA"/>
+                                    </constraints>
                                 </imageView>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EBZ-6K-d6s">
                                     <rect key="frame" x="0.0" y="0.0" width="350" height="60"/>
@@ -261,7 +265,6 @@
                                 <constraint firstItem="EBZ-6K-d6s" firstAttribute="top" secondItem="IrV-46-Jc6" secondAttribute="top" id="bjR-AB-1ae"/>
                                 <constraint firstItem="BUB-VU-DKf" firstAttribute="leading" secondItem="IrV-46-Jc6" secondAttribute="leading" constant="20" id="ccS-RZ-RhW"/>
                                 <constraint firstAttribute="bottom" secondItem="EBZ-6K-d6s" secondAttribute="bottom" id="h0F-Kh-eE6"/>
-                                <constraint firstAttribute="trailing" secondItem="eWq-KL-AgV" secondAttribute="trailing" constant="24" id="kWL-Xw-WCn"/>
                             </constraints>
                             <userDefinedRuntimeAttributes>
                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -278,7 +281,7 @@
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Moq-gn-oWU">
                             <rect key="frame" x="0.0" y="222" width="350" height="60"/>
                             <subviews>
-                                <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Cargo Type" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IXG-7e-djY" customClass="UITextFieldDeviceClass" customModule="TruckerShipper" customModuleProvider="target">
+                                <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Cargo Type" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IXG-7e-djY" customClass="UITextFieldDeviceClass" customModule="PakGo_Shipper" customModuleProvider="target">
                                     <rect key="frame" x="20" y="0.0" width="288" height="60"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                     <textInputTraits key="textInputTraits"/>
@@ -327,7 +330,7 @@
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qf5-g8-p4T">
                             <rect key="frame" x="0.0" y="296" width="350" height="60"/>
                             <subviews>
-                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Quantity Of Transport Unit" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6wl-LA-W5X" customClass="UITextFieldDeviceClass" customModule="TruckerShipper" customModuleProvider="target">
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Quantity Of Transport Unit" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6wl-LA-W5X" customClass="UITextFieldDeviceClass" customModule="PakGo_Shipper" customModuleProvider="target">
                                     <rect key="frame" x="20" y="0.0" width="310" height="60"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                     <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
@@ -359,8 +362,11 @@
                             </userDefinedRuntimeAttributes>
                         </view>
                     </subviews>
+                    <constraints>
+                        <constraint firstItem="eWq-KL-AgV" firstAttribute="centerX" secondItem="Tkc-6C-DkG" secondAttribute="centerX" id="YD0-Zs-HSi"/>
+                    </constraints>
                 </stackView>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5SX-hh-g9E" customClass="UIButtonDeviceClass" customModule="TruckerShipper" customModuleProvider="target">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5SX-hh-g9E" customClass="UIButtonDeviceClass" customModule="PakGo_Shipper" customModuleProvider="target">
                     <rect key="frame" x="32" y="578.5" width="350" height="51.5"/>
                     <color key="backgroundColor" red="0.0" green="0.2802670002" blue="0.61960784310000006" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
@@ -407,6 +413,7 @@
     <resources>
         <image name="Back" width="32" height="32"/>
         <image name="NavBar" width="375" height="95"/>
+        <image name="arrowRight" width="20" height="20"/>
         <image name="dropDownBlack" width="10" height="10"/>
     </resources>
 </document>

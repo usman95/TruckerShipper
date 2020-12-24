@@ -42,6 +42,9 @@ class LoadRequest: BaseController {
     @IBOutlet weak var tfBookingDetailsCommodity: UITextFieldDeviceClass!
     @IBOutlet weak var tfBookingDetailsRemarks: UITextFieldDeviceClass!
     
+    @IBOutlet weak var lblDnDPickUpDates: UILabelDeviceClass!
+    @IBOutlet weak var lblTransitFreeDays: UILabelDeviceClass!
+    
     @IBOutlet weak var btnCreatebooking: UIButtonDeviceClass!
     
     var loadDetails: [String:Any]?
@@ -177,6 +180,8 @@ extension LoadRequest{
             self.tfBookingDetailsBookingType.text = contract.bookingTypeId?.title ?? ""
             self.selectedBookingType = contract.bookingTypeId
             
+            self.setUIForSelectedBookingType()
+            
             self.tfBookingDetailsTransitFreeDays.text = "\(contract.transitFreeDays)"
             
             self.tfBookingDetailsShippingLine.text = contract.shippingLine?.title ?? ""
@@ -184,6 +189,8 @@ extension LoadRequest{
             
             self.tfBookingDetailsCargoMode.text = contract.cargoMode
             self.selectedCargoMode = contract.cargoMode
+            
+            self.tfBookingDetailsRemarks.text = contract.remarks.last?.comments ?? ""
         }
     }
     private func callAPIs(){
@@ -220,6 +227,8 @@ extension LoadRequest{
         self.bookingTypeDropDown.selectionAction = { [unowned self] (index: Int, item: String) in
             self.tfBookingDetailsBookingType.text = item
             self.selectedBookingType = self.arrBookingType[index]
+            
+            self.setUIForSelectedBookingType()
         }
         if showDropDown{
             self.bookingTypeDropDown.show()
@@ -271,6 +280,19 @@ extension LoadRequest{
         let modeOfTransport = self.loadDetails?["modeOfTransport"] as? String ?? ""
         
         self.selectedTransportMode = self.arrTransportMode.filter{$0.title?.lowercased() == modeOfTransport}.first
+    }
+    private func setUIForSelectedBookingType(){
+        guard let bookingType = self.selectedBookingType else {return}
+        let bookingTypeTitle = (bookingType.title ?? "").lowercased()
+        
+        switch bookingTypeTitle{
+        case BookingTypes.domestic.rawValue:
+            self.lblTransitFreeDays.text = Strings.TRANSIT_DAYS.text
+            self.lblDnDPickUpDates.text = Strings.PICKUP_DATE.text
+        default:
+            self.lblTransitFreeDays.text = Strings.FREE_DAYS.text
+            self.lblDnDPickUpDates.text = Strings.FREE_DAYS_START_DATE.text
+        }
     }
     private func validate()->[String:Any]?{
         if let loadDetails = self.loadDetails{

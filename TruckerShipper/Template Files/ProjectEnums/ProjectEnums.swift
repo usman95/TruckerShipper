@@ -60,3 +60,6 @@ enum ReportDateType{
     case start
     case end
 }
+enum BookingTypes: String{
+    case domestic = "domestic"
+}

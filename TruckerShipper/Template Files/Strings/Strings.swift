@@ -108,4 +108,8 @@ enum Strings: String{
     case SELECT_END_DATE = "Please select end date."
     case SELECT_BOOKING_DATE = "Please select booking date."
     case SELECT_PICK_UP_DATE = "Please select pickup date."
+    case TRANSIT_DAYS = "Transit Days"
+    case PICKUP_DATE = "Pickup Date"
+    case FREE_DAYS = "Free Days"
+    case FREE_DAYS_START_DATE = "Free Days Start Date"
 }
