@@ -8,6 +8,7 @@
 
 import UIKit
 import ObjectMapper
+import RealmSwift
 
 class TripDetail: BaseController {
 
@@ -16,11 +17,13 @@ class TripDetail: BaseController {
     
     var bookingDetail: BookingDetailtModel?
     var trip: TripsModel?
+    var tripMiles = List<TripMilesModel>()
     var inProgressMile: TripMilesModel?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.registerCells()
+        self.setTripMiles()
         // Do any additional setup after loading the view.
     }
     override func viewWillAppear(_ animated: Bool) {
@@ -57,6 +60,22 @@ extension TripDetail{
             self.btnTrackLocation.isHidden = true
         }
     }
+    private func setTripMiles(){
+        self.tripMiles.removeAll()
+        
+        let tripMiles = self.trip?.tripMiles ?? List<TripMilesModel>()
+        if !tripMiles.isEmpty{
+            self.tripMiles.append(tripMiles.first ?? TripMilesModel())
+        }
+        
+        for tripMile in tripMiles{
+            self.tripMiles.append(tripMile)
+        }
+        
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+        }
+    }
 }
 //MARK:- Helper method
 extension TripDetail: UITableViewDataSource{
@@ -68,7 +87,7 @@ extension TripDetail: UITableViewDataSource{
         case 0:
             return 1
         default:
-            return self.trip?.tripMiles.count ?? 0
+            return self.tripMiles.count
         }
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -83,8 +102,8 @@ extension TripDetail: UITableViewDataSource{
             return cell
         default:
             let cell = tableView.dequeueReusableCell(withIdentifier: "MilesTVC", for: indexPath) as! MilesTVC
-            let data = self.trip?.tripMiles[indexPath.row]
-            cell.setData(data: data)
+            let data = self.tripMiles[indexPath.row]
+            cell.setData(data: data, index: indexPath.row)
             return cell
         }
     }
@@ -166,11 +185,11 @@ extension TripDetail{
             self.bookingDetail = Mapper<BookingDetailtModel>().map(JSON: responseObject)
             if let selectedTrip:TripsModel = self.bookingDetail?.trips.filter({$0.id == self.trip?.id}).first {
                 self.trip = selectedTrip
+                self.setTripMiles()
             }
             
-            self.setData()
-            
             DispatchQueue.main.async {
+                self.setData()
                 self.tableView.reloadData()
             }
         }) { (error) in

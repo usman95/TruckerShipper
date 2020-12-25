@@ -26,7 +26,7 @@ class UsersAPIManager: APIManagerBase {
     func Login(params: Parameters, success: @escaping DefaultAPISuccessClosure, failure: @escaping DefaultAPIFailureClosure){
         Utility.showLoader()
         let route: URL = POSTURLforRoute(route: Route.Login.rawValue)!
-        self.postDictionaryResponseWith(route: route, parameters: params, success: success, failure: failure, withHeader: false)
+        self.postDictionaryResponseWith(route: route, parameters: params, success: success, failure: failure, withHeader: true)
     }
     //MARK:- ForgotPassword
     func ForgotPassword(params: Parameters, success: @escaping DefaultAPISuccessClosure, failure: @escaping DefaultAPIFailureClosure){

@@ -26,6 +26,16 @@
                                     <constraint firstAttribute="width" secondItem="UdI-sr-dg1" secondAttribute="height" multiplier="1:1" id="yWS-7t-bAP"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="255" verticalCompressionResistancePriority="755" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wiU-IB-4Jg" customClass="RoundedButton" customModule="PakGo_Shipper" customModuleProvider="target">
+                                <rect key="frame" x="70" y="16" width="32" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="32" id="9fR-cP-1Ap"/>
+                                    <constraint firstAttribute="height" constant="32" id="L4h-Ex-Wdi"/>
+                                </constraints>
+                                <state key="normal" image="EditProfile">
+                                    <color key="titleColor" red="0.0" green="0.27608564499999999" blue="0.62137049440000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="YDb-wH-1p3">
                                 <rect key="frame" x="114" y="29" width="151.5" height="48.5"/>
                                 <subviews>
@@ -59,11 +69,13 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="YDb-wH-1p3" firstAttribute="leading" secondItem="UdI-sr-dg1" secondAttribute="trailing" constant="16" id="1U2-kC-ye2"/>
+                            <constraint firstItem="wiU-IB-4Jg" firstAttribute="top" secondItem="UdI-sr-dg1" secondAttribute="top" id="4zY-SC-SN7"/>
                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="YDb-wH-1p3" secondAttribute="trailing" constant="20" id="JBD-f1-5rX"/>
                             <constraint firstItem="UdI-sr-dg1" firstAttribute="leading" secondItem="5QY-DM-E2O" secondAttribute="leading" constant="24" id="Jg2-PU-T5h"/>
                             <constraint firstItem="YDb-wH-1p3" firstAttribute="centerY" secondItem="UdI-sr-dg1" secondAttribute="centerY" id="Pia-hO-ecB"/>
                             <constraint firstAttribute="bottom" secondItem="UdI-sr-dg1" secondAttribute="bottom" constant="16" id="Q8g-mb-8uP"/>
                             <constraint firstItem="UdI-sr-dg1" firstAttribute="top" secondItem="5QY-DM-E2O" secondAttribute="top" constant="16" id="TH1-4x-ZSP"/>
+                            <constraint firstItem="wiU-IB-4Jg" firstAttribute="trailing" secondItem="UdI-sr-dg1" secondAttribute="trailing" constant="4" id="yLo-80-zmm"/>
                         </constraints>
                     </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xwg-KA-iua" customClass="RoundedView" customModule="PakGo_Shipper" customModuleProvider="target">
@@ -483,6 +495,7 @@
                 <outlet property="btnBookingsInProgress" destination="i16-b2-srn" id="85C-Hb-Eep"/>
                 <outlet property="btnCancelled" destination="Vif-3F-7yc" id="4s5-dE-k6U"/>
                 <outlet property="btnCompletedBookings" destination="Yeg-1y-gST" id="IM7-Tj-CwG"/>
+                <outlet property="btnProfileImage" destination="wiU-IB-4Jg" id="IWP-vw-Yre"/>
                 <outlet property="btnTotalBookings" destination="yl3-FP-dzi" id="lMX-pg-ZqH"/>
                 <outlet property="imgShipper" destination="UdI-sr-dg1" id="vZi-Y2-4Sm"/>
                 <outlet property="lblBookingsInProgress" destination="2BC-7K-QSk" id="u9B-xa-5N5"/>
@@ -499,6 +512,7 @@
     <resources>
         <image name="Cancelled" width="29" height="27.5"/>
         <image name="CloseBlue" width="20" height="19"/>
+        <image name="EditProfile" width="20" height="19"/>
         <image name="InProgress" width="29" height="28"/>
         <image name="Total" width="29" height="27.5"/>
         <image name="magnifyingglass" catalog="system" width="128" height="115"/>

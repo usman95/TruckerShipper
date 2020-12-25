@@ -15,6 +15,7 @@ import SDWebImage
 class MyAccount: BaseController {
     
     @IBOutlet weak var imgProfile: RoundedImage!
+    @IBOutlet weak var btnProfileImage: RoundedButton!
     @IBOutlet weak var tfFirstName: UITextFieldDeviceClass!
     @IBOutlet weak var tfLastName: UITextFieldDeviceClass!
     @IBOutlet weak var tfPhone: UITextFieldDeviceClass!
@@ -50,6 +51,7 @@ class MyAccount: BaseController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.setUI()
         self.callAPIs()
         self.setData()
         self.getUserDetails()
@@ -82,6 +84,10 @@ class MyAccount: BaseController {
 }
 //MARK:- Helper methods
 extension MyAccount{
+    private func setUI(){
+        let editProfileImage = UIImage(named: "EditProfile")?.maskWithColor(color: .white)
+        self.btnProfileImage.setImage(editProfileImage, for: .normal)
+    }
     private func setData(){
         let user = self.shipperProfile?.user ?? AppStateManager.sharedInstance.loggedInUser.user
         

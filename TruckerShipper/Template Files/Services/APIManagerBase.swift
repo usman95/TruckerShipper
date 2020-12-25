@@ -50,6 +50,9 @@ class APIManagerBase: NSObject {
     
     func getAuthorizationHeader () -> Dictionary<String,String> {
         if let token = APIManager.sharedInstance.serverToken {
+            if !AppStateManager.sharedInstance.isUserLoggedIn(){
+                return ["device-id":Constants.DeviceToken]
+            }
             return ["auth-token":"\(token)"]
         }
         return ["Content-Type":"application/x-www-form-urlencoded"]

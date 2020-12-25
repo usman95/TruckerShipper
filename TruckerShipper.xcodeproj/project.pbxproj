@@ -153,6 +153,7 @@
 		FAF031C42594128300219D1E /* SearchCommodity.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAF031C22594128300219D1E /* SearchCommodity.xib */; };
 		FAF031C82594141300219D1E /* SearchCommodityTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF031C62594141300219D1E /* SearchCommodityTVC.swift */; };
 		FAF031C92594141300219D1E /* SearchCommodityTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAF031C72594141300219D1E /* SearchCommodityTVC.xib */; };
+		FAFC97F32596A56C00BC0791 /* DropOffStateModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFC97F22596A56C00BC0791 /* DropOffStateModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -306,6 +307,7 @@
 		FAF031C22594128300219D1E /* SearchCommodity.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchCommodity.xib; sourceTree = "<group>"; };
 		FAF031C62594141300219D1E /* SearchCommodityTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCommodityTVC.swift; sourceTree = "<group>"; };
 		FAF031C72594141300219D1E /* SearchCommodityTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchCommodityTVC.xib; sourceTree = "<group>"; };
+		FAFC97F22596A56C00BC0791 /* DropOffStateModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropOffStateModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -447,6 +449,7 @@
 				FA294FFD258846B600323EA2 /* DriverIdModel.swift */,
 				FA295001258846B600323EA2 /* TripMilesModel.swift */,
 				FA294FFF258846B600323EA2 /* TripModel.swift */,
+				FAFC97F22596A56C00BC0791 /* DropOffStateModel.swift */,
 				FA294FFE258846B600323EA2 /* VehicleIdModel.swift */,
 			);
 			path = TripModel;
@@ -1355,6 +1358,7 @@
 				FA5AB71C258FF520008314FE /* ShippingLineModel.swift in Sources */,
 				FA295004258846B700323EA2 /* DriverIdModel.swift in Sources */,
 				FA294FC32587CAFD00323EA2 /* BookingDocuments.swift in Sources */,
+				FAFC97F32596A56C00BC0791 /* DropOffStateModel.swift in Sources */,
 				FA37EA6F25740E4C0073CF0C /* ProjectEnums.swift in Sources */,
 				FA37EA5B25740E4C0073CF0C /* UIApplication+Extension.swift in Sources */,
 				FA37EAB7257429350073CF0C /* ForgotPassword.swift in Sources */,

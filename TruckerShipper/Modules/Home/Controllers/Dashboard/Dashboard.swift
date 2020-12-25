@@ -98,6 +98,7 @@ extension Dashboard: UITableViewDataSource{
         case 0:
             let cell = tableView.dequeueReusableCell(withIdentifier: "DashboardTVC", for: indexPath) as! DashboardTVC
             cell.setData(data: self.bookingsCount)
+            cell.btnProfileImage.addTarget(self, action: #selector(self.onBtnProfileImage(_:)), for: .touchUpInside)
             cell.btnTotalBookings.addTarget(self, action: #selector(self.onBtnBookingStatus(_:)), for: .touchUpInside)
             cell.btnBookingsInProgress.addTarget(self, action: #selector(self.onBtnBookingStatus(_:)), for: .touchUpInside)
             cell.btnCompletedBookings.addTarget(self, action: #selector(self.onBtnBookingStatus(_:)), for: .touchUpInside)
@@ -114,6 +115,9 @@ extension Dashboard: UITableViewDataSource{
         }
     }
     
+    @objc func onBtnProfileImage(_ sender: UIButton){
+        super.pushToMyAccount()
+    }
     @objc func onBtnBookingStatus(_ sender: UIButton){
         switch sender.tag {
         case 0:

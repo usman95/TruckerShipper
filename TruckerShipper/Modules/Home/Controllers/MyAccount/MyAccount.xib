@@ -9,6 +9,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MyAccount" customModule="PakGo_Shipper" customModuleProvider="target">
             <connections>
+                <outlet property="btnProfileImage" destination="bBp-Yc-rE3" id="SkE-ch-hXV"/>
                 <outlet property="btnSaveProfile" destination="A1X-Fa-C39" id="pZ4-4a-eIE"/>
                 <outlet property="imgNTN" destination="lpE-as-weF" id="DFV-pV-KhQ"/>
                 <outlet property="imgProfile" destination="h4I-4e-TAO" id="gUt-hD-kJi"/>
@@ -82,10 +83,10 @@
                     <rect key="frame" x="0.0" y="124" width="414" height="1842"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6G5-2c-Lfb">
-                            <rect key="frame" x="0.0" y="0.0" width="414" height="1451"/>
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="1423"/>
                             <subviews>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mbj-km-rGs">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="153"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="125"/>
                                     <subviews>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profilePlaceHolder" translatesAutoresizingMaskIntoConstraints="NO" id="h4I-4e-TAO" customClass="RoundedImage" customModule="PakGo_Shipper" customModuleProvider="target">
                                             <rect key="frame" x="160.5" y="16" width="93" height="93"/>
@@ -93,10 +94,14 @@
                                                 <constraint firstAttribute="width" secondItem="h4I-4e-TAO" secondAttribute="height" multiplier="1:1" id="0V6-A2-8ss"/>
                                             </constraints>
                                         </imageView>
-                                        <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="255" verticalCompressionResistancePriority="755" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bBp-Yc-rE3">
-                                            <rect key="frame" x="155.5" y="113" width="103" height="32"/>
-                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
-                                            <state key="normal" title="Profile Image">
+                                        <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="255" verticalCompressionResistancePriority="755" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bBp-Yc-rE3" customClass="RoundedButton" customModule="PakGo_Shipper" customModuleProvider="target">
+                                            <rect key="frame" x="225.5" y="65" width="32" height="32"/>
+                                            <color key="backgroundColor" red="0.0" green="0.26731863620000001" blue="0.62948083880000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="32" id="BOX-Ij-J4N"/>
+                                                <constraint firstAttribute="width" constant="32" id="gag-Uz-VXp"/>
+                                            </constraints>
+                                            <state key="normal" image="EditProfile">
                                                 <color key="titleColor" red="0.0" green="0.27608564499999999" blue="0.62137049440000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </state>
                                             <connections>
@@ -106,16 +111,16 @@
                                     </subviews>
                                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                     <constraints>
-                                        <constraint firstItem="bBp-Yc-rE3" firstAttribute="centerX" secondItem="h4I-4e-TAO" secondAttribute="centerX" id="J7I-7d-i3V"/>
+                                        <constraint firstAttribute="bottom" secondItem="h4I-4e-TAO" secondAttribute="bottom" constant="16" id="AXS-dC-PiD"/>
+                                        <constraint firstItem="bBp-Yc-rE3" firstAttribute="trailing" secondItem="h4I-4e-TAO" secondAttribute="trailing" constant="4" id="JlR-Hp-rSn"/>
+                                        <constraint firstItem="bBp-Yc-rE3" firstAttribute="bottom" secondItem="h4I-4e-TAO" secondAttribute="bottom" constant="-12" id="Jp7-7X-huU"/>
                                         <constraint firstItem="h4I-4e-TAO" firstAttribute="width" secondItem="Mbj-km-rGs" secondAttribute="width" multiplier="0.225" id="Jwe-bS-Typ"/>
-                                        <constraint firstAttribute="bottom" secondItem="bBp-Yc-rE3" secondAttribute="bottom" constant="8" id="Qhk-lq-PI6"/>
                                         <constraint firstItem="h4I-4e-TAO" firstAttribute="top" secondItem="Mbj-km-rGs" secondAttribute="top" constant="16" id="Vc8-r5-i8g"/>
                                         <constraint firstItem="h4I-4e-TAO" firstAttribute="centerX" secondItem="Mbj-km-rGs" secondAttribute="centerX" id="k0o-ar-03z"/>
-                                        <constraint firstItem="bBp-Yc-rE3" firstAttribute="top" secondItem="h4I-4e-TAO" secondAttribute="bottom" constant="4" id="mhm-1o-R9u"/>
                                     </constraints>
                                 </view>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="3U7-FT-YoO">
-                                    <rect key="frame" x="40" y="153" width="334" height="1180"/>
+                                    <rect key="frame" x="40" y="125" width="334" height="1180"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="0Eb-mL-io3">
                                             <rect key="frame" x="0.0" y="0.0" width="334" height="990"/>
@@ -977,7 +982,7 @@
                                     </constraints>
                                 </stackView>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A1X-Fa-C39" customClass="UIButtonDeviceClass" customModule="PakGo_Shipper" customModuleProvider="target">
-                                    <rect key="frame" x="24" y="1365" width="366" height="54"/>
+                                    <rect key="frame" x="24" y="1337" width="366" height="54"/>
                                     <color key="backgroundColor" red="0.0" green="0.2802670002" blue="0.62132591010000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                     <state key="normal" title="SAVE PROFILE">
@@ -1044,6 +1049,7 @@
     <resources>
         <image name="Back" width="32" height="32"/>
         <image name="DocumentPlaceholder" width="48" height="48"/>
+        <image name="EditProfile" width="20" height="19"/>
         <image name="NavBar" width="375" height="95"/>
         <image name="UploadDocument" width="48" height="48"/>
         <image name="dropDownBlack" width="10" height="10"/>

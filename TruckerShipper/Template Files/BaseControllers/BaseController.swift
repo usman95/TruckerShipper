@@ -108,6 +108,12 @@ extension BaseController{
         controller.bookingType = bookingType
         self.navigationController?.pushViewController(controller, animated: true)
     }
+    func pushToMyAccount(){
+        let controller = MyAccount()
+        guard let topController = Utility.main.topViewController() as? LGSideMenuController else {return}
+        guard let topNavigationController = topController.rootViewController as? UINavigationController else {return}
+        topNavigationController.pushViewController(controller, animated: true)
+    }
 }
 extension BaseController: UIGestureRecognizerDelegate {
     func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
