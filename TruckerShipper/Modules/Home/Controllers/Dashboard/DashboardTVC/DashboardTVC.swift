@@ -42,13 +42,13 @@ extension DashboardTVC{
         self.lblShipperType.text = AppStateManager.sharedInstance.loggedInUser.user?.shipperType ?? ""
         
         let totalBookingsV1 = (data?.pending ?? 0) + (data?.accepted ?? 0) + (data?.rejected ?? 0)
-        let totalBookingsV2 = (data?.inProgress ?? 0) + (data?.cancelled ?? 0)
+        let totalBookingsV2 = (data?.inProgress ?? 0) + (data?.cancelled ?? 0) + (data?.completed ?? 0)
         let totalBookings = totalBookingsV1 + totalBookingsV2
         
-        self.lblTotalBookings.text = "\(totalBookings)"
-        self.lblBookingsInProgress.text = "\(data?.inProgress ?? 0)"
-        self.lblCompletedBookings.text = "\(data?.completed ?? 0)"
-        self.lblCancelled.text = "\(data?.cancelled ?? 0)"
+        self.lblTotalBookings.text = "\(totalBookings)+"
+        self.lblBookingsInProgress.text = "\(data?.inProgress ?? 0)+"
+        self.lblCompletedBookings.text = "\(data?.completed ?? 0)+"
+        self.lblCancelled.text = "\(data?.cancelled ?? 0)+"
     }
     private func pushToSearchForAnyThing(){
         let controller = SearchForAnything()

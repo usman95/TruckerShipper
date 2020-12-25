@@ -49,7 +49,7 @@ extension TripDetailTVC{
             self.lblDistanceInKM.text = "\(selectedInProgressMile?.distance ?? 0) \(Strings.KM.text)"
             
             let mileStartDateString = selectedInProgressMile?.mileStartDate ?? "2020-12-14T14:24:59.741Z"
-            let mileStartDate = Utility.main.stringDateFormatter(dateStr: mileStartDateString, dateFormat: Constants.serverDateFormat, formatteddate: "dd MMM")
+            let mileStartDate = Utility.main.stringDateFormatter(dateStr: mileStartDateString, dateFormat: Constants.serverDateFormat, formatteddate: "dd MMM yy")
             self.lblDate.text = mileStartDate
             
             self.lblPickUp.text = selectedInProgressMile?.pickUpAddress ?? ""
@@ -58,7 +58,10 @@ extension TripDetailTVC{
             let driverProfile = selectedInProgressMile?.driverId?.profileImageUrl ?? ""
             self.imgDriver.sd_setImage(with: URL(string: driverProfile), placeholderImage: UIImage(named: "profilePlaceHolder"))
             
-            self.lblDriverName.text = "\(selectedInProgressMile?.driverId?.firstName ?? "") \(selectedInProgressMile?.driverId?.lastName ?? "")"
+            let firstName = "\(selectedInProgressMile?.driverId?.firstName ?? "")".trimmingCharacters(in: .whitespacesAndNewlines)
+            let lastName = "\(selectedInProgressMile?.driverId?.lastName ?? "")".trimmingCharacters(in: .whitespacesAndNewlines)
+            self.lblDriverName.text = "\(firstName) \(lastName)"
+            
             self.lblVehicleName.text = ""
             self.lblPhoneNumber.text = selectedInProgressMile?.driverId?.contactNo ?? ""
             
@@ -78,7 +81,7 @@ extension TripDetailTVC{
             self.lblDistanceInKM.text = "\(selectedPendingMile?.distance ?? 0) \(Strings.KM.text)"
             
             let mileStartDateString = selectedPendingMile?.mileStartDate ?? "2020-12-14T14:24:59.741Z"
-            let mileStartDate = Utility.main.stringDateFormatter(dateStr: mileStartDateString, dateFormat: Constants.serverDateFormat, formatteddate: "dd MMM")
+            let mileStartDate = Utility.main.stringDateFormatter(dateStr: mileStartDateString, dateFormat: Constants.serverDateFormat, formatteddate: "dd MMM yy")
             self.lblDate.text = mileStartDate
             
             self.lblPickUp.text = selectedPendingMile?.pickUpAddress ?? ""
@@ -87,7 +90,10 @@ extension TripDetailTVC{
             let driverProfile = selectedPendingMile?.driverId?.profileImageUrl ?? ""
             self.imgDriver.sd_setImage(with: URL(string: driverProfile), placeholderImage: UIImage(named: "profilePlaceHolder"))
             
-            self.lblDriverName.text = "\(selectedPendingMile?.driverId?.firstName ?? "") \(selectedInProgressMile?.driverId?.lastName ?? "")"
+            let firstName = "\(selectedPendingMile?.driverId?.firstName ?? "")".trimmingCharacters(in: .whitespacesAndNewlines)
+            let lastName = "\(selectedPendingMile?.driverId?.lastName ?? "")".trimmingCharacters(in: .whitespacesAndNewlines)
+            self.lblDriverName.text = "\(firstName) \(lastName)"
+            
             self.lblVehicleName.text = ""
             self.lblPhoneNumber.text = selectedPendingMile?.driverId?.contactNo ?? ""
             
@@ -107,7 +113,7 @@ extension TripDetailTVC{
             self.lblDistanceInKM.text = "\(selectedCompletedMile?.distance ?? 0) \(Strings.KM.text)"
             
             let mileStartDateString = selectedCompletedMile?.mileStartDate ?? "2020-12-14T14:24:59.741Z"
-            let mileStartDate = Utility.main.stringDateFormatter(dateStr: mileStartDateString, dateFormat: Constants.serverDateFormat, formatteddate: "dd MMM")
+            let mileStartDate = Utility.main.stringDateFormatter(dateStr: mileStartDateString, dateFormat: Constants.serverDateFormat, formatteddate: "dd MMM yy")
             self.lblDate.text = mileStartDate
             
             self.lblPickUp.text = selectedCompletedMile?.pickUpAddress ?? ""
@@ -116,7 +122,10 @@ extension TripDetailTVC{
             let driverProfile = selectedCompletedMile?.driverId?.profileImageUrl ?? ""
             self.imgDriver.sd_setImage(with: URL(string: driverProfile), placeholderImage: UIImage(named: "profilePlaceHolder"))
             
-            self.lblDriverName.text = "\(selectedCompletedMile?.driverId?.firstName ?? "") \(selectedInProgressMile?.driverId?.lastName ?? "")"
+            let firstName = "\(selectedCompletedMile?.driverId?.firstName ?? "")".trimmingCharacters(in: .whitespacesAndNewlines)
+            let lastName = "\(selectedCompletedMile?.driverId?.lastName ?? "")".trimmingCharacters(in: .whitespacesAndNewlines)
+            self.lblDriverName.text = "\(firstName) \(lastName)"
+            
             self.lblVehicleName.text = ""
             self.lblPhoneNumber.text = selectedCompletedMile?.driverId?.contactNo ?? ""
             
@@ -170,7 +179,7 @@ extension TripDetailTVC{
             for marker in markerList {
                 bounds = bounds.includingCoordinate(marker.position)
             }
-            let update = GMSCameraUpdate.fit(bounds, withPadding: CGFloat(36))
+            let update = GMSCameraUpdate.fit(bounds, withPadding: CGFloat(44))
             self.mapView.animate(with: update)
         }
     }

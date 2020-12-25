@@ -98,6 +98,10 @@ extension Dashboard: UITableViewDataSource{
         case 0:
             let cell = tableView.dequeueReusableCell(withIdentifier: "DashboardTVC", for: indexPath) as! DashboardTVC
             cell.setData(data: self.bookingsCount)
+            cell.btnTotalBookings.addTarget(self, action: #selector(self.onBtnBookingStatus(_:)), for: .touchUpInside)
+            cell.btnBookingsInProgress.addTarget(self, action: #selector(self.onBtnBookingStatus(_:)), for: .touchUpInside)
+            cell.btnCompletedBookings.addTarget(self, action: #selector(self.onBtnBookingStatus(_:)), for: .touchUpInside)
+            cell.btnCancelled.addTarget(self, action: #selector(self.onBtnBookingStatus(_:)), for: .touchUpInside)
             return cell
         default:
             let cell = tableView.dequeueReusableCell(withIdentifier: "NotificationsTVC", for: indexPath) as! NotificationsTVC
@@ -110,6 +114,18 @@ extension Dashboard: UITableViewDataSource{
         }
     }
     
+    @objc func onBtnBookingStatus(_ sender: UIButton){
+        switch sender.tag {
+        case 0:
+            super.pushToBookings(bookingType: .pending)
+        case 1:
+            super.pushToBookings(bookingType: .inProgress)
+        case 2:
+            super.pushToBookings(bookingType: .completed)
+        default:
+            super.pushToBookings(bookingType: .cancelled)
+        }
+    }
     @objc func onBtnDeleteNotification(_ sender: UIButton){
         Utility.main.showAlert(message: Strings.ASK_TO_DELETE_NOTIFICATION.text, title: Strings.CONFIRMATION.text, YES: Strings.YES.text, NO: Strings.NO.text) { (yes, no) in
             if yes != nil{

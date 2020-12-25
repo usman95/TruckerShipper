@@ -7,12 +7,14 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="Bookings" customModule="TruckerShipper" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="Bookings" customModule="PakGo_Shipper" customModuleProvider="target">
             <connections>
+                <outlet property="btnCancelled" destination="swO-2J-Ieo" id="GjF-D5-pL7"/>
                 <outlet property="btnCompleted" destination="0Ny-Oy-1Ao" id="Nns-W4-csc"/>
                 <outlet property="btnInProgress" destination="5c5-4z-he8" id="cPF-yb-ZlZ"/>
                 <outlet property="btnPending" destination="x3t-08-VDU" id="LQP-qF-p11"/>
                 <outlet property="btnRejected" destination="UEU-UF-vln" id="9up-XG-gEU"/>
+                <outlet property="scrollView" destination="eUn-lC-rHm" id="8TM-RL-DlF"/>
                 <outlet property="tableView" destination="jYM-2a-JKJ" id="7Qy-Bz-K6b"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -47,7 +49,7 @@
                                 <action selector="onBtnBack:" destination="-1" eventType="touchUpInside" id="fdU-Kz-vVC"/>
                             </connections>
                         </button>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MY BOOKINGS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gcr-ZJ-idj" customClass="UILabelDeviceClass" customModule="TruckerShipper" customModuleProvider="target">
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MY BOOKINGS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gcr-ZJ-idj" customClass="UILabelDeviceClass" customModule="PakGo_Shipper" customModuleProvider="target">
                             <rect key="frame" x="64" y="27.5" width="146" height="25.5"/>
                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="21"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -68,73 +70,102 @@
                         <constraint firstItem="CZC-I1-Vb6" firstAttribute="centerY" secondItem="fcv-b1-OfP" secondAttribute="centerY" id="yrQ-fr-gpL"/>
                     </constraints>
                 </view>
-                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="WaD-yU-sRj">
-                    <rect key="frame" x="20" y="144" width="374" height="40"/>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" directionalLockEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eUn-lC-rHm">
+                    <rect key="frame" x="0.0" y="124" width="414" height="60"/>
                     <subviews>
-                        <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x3t-08-VDU" customClass="UIButtonStatesDeviceClass" customModule="TruckerShipper" customModuleProvider="target">
-                            <rect key="frame" x="0.0" y="0.0" width="93.5" height="40"/>
-                            <constraints>
-                                <constraint firstAttribute="width" secondItem="x3t-08-VDU" secondAttribute="height" multiplier="93:40" id="6xM-ud-4tH"/>
-                            </constraints>
-                            <state key="normal" title="Pending"/>
-                            <state key="selected" title="Pending"/>
-                            <userDefinedRuntimeAttributes>
-                                <userDefinedRuntimeAttribute type="number" keyPath="iPhoneFontSize">
-                                    <real key="value" value="15"/>
-                                </userDefinedRuntimeAttribute>
-                                <userDefinedRuntimeAttribute type="string" keyPath="iPhoneFontWeight" value="bold"/>
-                                <userDefinedRuntimeAttribute type="boolean" keyPath="isCircular" value="YES"/>
-                            </userDefinedRuntimeAttributes>
-                            <connections>
-                                <action selector="onBtnBookingsStatus:" destination="-1" eventType="touchUpInside" id="fTD-YZ-Ykw"/>
-                            </connections>
-                        </button>
-                        <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5c5-4z-he8" customClass="UIButtonStatesDeviceClass" customModule="TruckerShipper" customModuleProvider="target">
-                            <rect key="frame" x="93.5" y="0.0" width="93.5" height="40"/>
-                            <state key="normal" title="In Progress"/>
-                            <state key="selected" title="In Progress"/>
-                            <userDefinedRuntimeAttributes>
-                                <userDefinedRuntimeAttribute type="number" keyPath="iPhoneFontSize">
-                                    <real key="value" value="15"/>
-                                </userDefinedRuntimeAttribute>
-                                <userDefinedRuntimeAttribute type="string" keyPath="iPhoneFontWeight" value="bold"/>
-                                <userDefinedRuntimeAttribute type="boolean" keyPath="isCircular" value="YES"/>
-                            </userDefinedRuntimeAttributes>
-                            <connections>
-                                <action selector="onBtnBookingsStatus:" destination="-1" eventType="touchUpInside" id="2PQ-Ke-icG"/>
-                            </connections>
-                        </button>
-                        <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Ny-Oy-1Ao" customClass="UIButtonStatesDeviceClass" customModule="TruckerShipper" customModuleProvider="target">
-                            <rect key="frame" x="187" y="0.0" width="93.5" height="40"/>
-                            <state key="normal" title="Completed"/>
-                            <state key="selected" title="Completed"/>
-                            <userDefinedRuntimeAttributes>
-                                <userDefinedRuntimeAttribute type="number" keyPath="iPhoneFontSize">
-                                    <real key="value" value="15"/>
-                                </userDefinedRuntimeAttribute>
-                                <userDefinedRuntimeAttribute type="string" keyPath="iPhoneFontWeight" value="bold"/>
-                                <userDefinedRuntimeAttribute type="boolean" keyPath="isCircular" value="YES"/>
-                            </userDefinedRuntimeAttributes>
-                            <connections>
-                                <action selector="onBtnBookingsStatus:" destination="-1" eventType="touchUpInside" id="MFb-6G-FIb"/>
-                            </connections>
-                        </button>
-                        <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UEU-UF-vln" customClass="UIButtonStatesDeviceClass" customModule="TruckerShipper" customModuleProvider="target">
-                            <rect key="frame" x="280.5" y="0.0" width="93.5" height="40"/>
-                            <state key="normal" title="Rejected"/>
-                            <userDefinedRuntimeAttributes>
-                                <userDefinedRuntimeAttribute type="number" keyPath="iPhoneFontSize">
-                                    <real key="value" value="15"/>
-                                </userDefinedRuntimeAttribute>
-                                <userDefinedRuntimeAttribute type="string" keyPath="iPhoneFontWeight" value="bold"/>
-                                <userDefinedRuntimeAttribute type="boolean" keyPath="isCircular" value="YES"/>
-                            </userDefinedRuntimeAttributes>
-                            <connections>
-                                <action selector="onBtnBookingsStatus:" destination="-1" eventType="touchUpInside" id="Jho-I9-xq0"/>
-                            </connections>
-                        </button>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="WaD-yU-sRj">
+                            <rect key="frame" x="20" y="16" width="500" height="40"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x3t-08-VDU" customClass="UIButtonStatesDeviceClass" customModule="PakGo_Shipper" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="100" height="40"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="40" id="LAV-5t-PcJ"/>
+                                        <constraint firstAttribute="width" secondItem="x3t-08-VDU" secondAttribute="height" multiplier="5:2" id="sTW-YD-S5l"/>
+                                    </constraints>
+                                    <state key="normal" title="Pending"/>
+                                    <state key="selected" title="Pending"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="iPhoneFontSize">
+                                            <real key="value" value="15"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="iPhoneFontWeight" value="bold"/>
+                                        <userDefinedRuntimeAttribute type="boolean" keyPath="isCircular" value="YES"/>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="onBtnBookingsStatus:" destination="-1" eventType="touchUpInside" id="fTD-YZ-Ykw"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5c5-4z-he8" customClass="UIButtonStatesDeviceClass" customModule="PakGo_Shipper" customModuleProvider="target">
+                                    <rect key="frame" x="100" y="0.0" width="100" height="40"/>
+                                    <state key="normal" title="In Progress"/>
+                                    <state key="selected" title="In Progress"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="iPhoneFontSize">
+                                            <real key="value" value="15"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="iPhoneFontWeight" value="bold"/>
+                                        <userDefinedRuntimeAttribute type="boolean" keyPath="isCircular" value="YES"/>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="onBtnBookingsStatus:" destination="-1" eventType="touchUpInside" id="2PQ-Ke-icG"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Ny-Oy-1Ao" customClass="UIButtonStatesDeviceClass" customModule="PakGo_Shipper" customModuleProvider="target">
+                                    <rect key="frame" x="200" y="0.0" width="100" height="40"/>
+                                    <state key="normal" title="Completed"/>
+                                    <state key="selected" title="Completed"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="iPhoneFontSize">
+                                            <real key="value" value="15"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="iPhoneFontWeight" value="bold"/>
+                                        <userDefinedRuntimeAttribute type="boolean" keyPath="isCircular" value="YES"/>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="onBtnBookingsStatus:" destination="-1" eventType="touchUpInside" id="MFb-6G-FIb"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="swO-2J-Ieo" customClass="UIButtonStatesDeviceClass" customModule="PakGo_Shipper" customModuleProvider="target">
+                                    <rect key="frame" x="300" y="0.0" width="100" height="40"/>
+                                    <state key="normal" title="Cancelled"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="iPhoneFontSize">
+                                            <real key="value" value="15"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="iPhoneFontWeight" value="bold"/>
+                                        <userDefinedRuntimeAttribute type="boolean" keyPath="isCircular" value="YES"/>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="onBtnBookingsStatus:" destination="-1" eventType="touchUpInside" id="JzC-3G-SHa"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UEU-UF-vln" customClass="UIButtonStatesDeviceClass" customModule="PakGo_Shipper" customModuleProvider="target">
+                                    <rect key="frame" x="400" y="0.0" width="100" height="40"/>
+                                    <state key="normal" title="Rejected"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="iPhoneFontSize">
+                                            <real key="value" value="15"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="iPhoneFontWeight" value="bold"/>
+                                        <userDefinedRuntimeAttribute type="boolean" keyPath="isCircular" value="YES"/>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="onBtnBookingsStatus:" destination="-1" eventType="touchUpInside" id="Jho-I9-xq0"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                        </stackView>
                     </subviews>
-                </stackView>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="WaD-yU-sRj" secondAttribute="bottom" constant="12" id="6cu-r4-bH5"/>
+                        <constraint firstAttribute="trailing" secondItem="WaD-yU-sRj" secondAttribute="trailing" constant="20" id="Be8-my-u5E"/>
+                        <constraint firstItem="WaD-yU-sRj" firstAttribute="top" secondItem="eUn-lC-rHm" secondAttribute="top" constant="16" id="P6c-TH-pjn"/>
+                        <constraint firstItem="WaD-yU-sRj" firstAttribute="leading" secondItem="eUn-lC-rHm" secondAttribute="leading" constant="20" id="eSo-F4-6u4"/>
+                        <constraint firstAttribute="height" constant="60" id="fJb-6w-k1z"/>
+                    </constraints>
+                    <viewLayoutGuide key="contentLayoutGuide" id="H7c-kz-6k4"/>
+                    <viewLayoutGuide key="frameLayoutGuide" id="TBx-sx-bSj"/>
+                </scrollView>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="jYM-2a-JKJ">
                     <rect key="frame" x="0.0" y="188" width="414" height="674"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -146,17 +177,17 @@
             </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
             <constraints>
-                <constraint firstItem="WaD-yU-sRj" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="6qX-O1-ui1"/>
-                <constraint firstItem="jYM-2a-JKJ" firstAttribute="top" secondItem="WaD-yU-sRj" secondAttribute="bottom" constant="4" id="8c6-yv-TsG"/>
                 <constraint firstItem="fcv-b1-OfP" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="IfI-1C-DVK"/>
-                <constraint firstItem="WaD-yU-sRj" firstAttribute="top" secondItem="L0M-MZ-ubz" secondAttribute="bottom" constant="20" id="NHq-zJ-nur"/>
+                <constraint firstItem="eUn-lC-rHm" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="LDF-hC-Vfg"/>
+                <constraint firstItem="eUn-lC-rHm" firstAttribute="top" secondItem="L0M-MZ-ubz" secondAttribute="bottom" id="P8s-jc-1K3"/>
+                <constraint firstItem="jYM-2a-JKJ" firstAttribute="top" secondItem="eUn-lC-rHm" secondAttribute="bottom" constant="4" id="RSc-oY-ap3"/>
                 <constraint firstItem="L0M-MZ-ubz" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="S1z-9L-7IM"/>
                 <constraint firstItem="jYM-2a-JKJ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="bp4-Q4-hjM"/>
                 <constraint firstItem="L0M-MZ-ubz" firstAttribute="bottom" secondItem="fcv-b1-OfP" secondAttribute="bottom" id="d4w-k5-iHb"/>
                 <constraint firstItem="fcv-b1-OfP" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="fNQ-8d-DVs"/>
                 <constraint firstItem="L0M-MZ-ubz" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="iSQ-31-hOI"/>
                 <constraint firstItem="jYM-2a-JKJ" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="icT-2v-NUi"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="WaD-yU-sRj" secondAttribute="trailing" constant="20" id="meg-hm-Dql"/>
+                <constraint firstItem="eUn-lC-rHm" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="l10-bH-hP3"/>
                 <constraint firstItem="L0M-MZ-ubz" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="p7f-Bo-i63"/>
                 <constraint firstItem="jYM-2a-JKJ" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="rTm-iR-Lj8"/>
                 <constraint firstItem="fcv-b1-OfP" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="vbE-C8-6ko"/>

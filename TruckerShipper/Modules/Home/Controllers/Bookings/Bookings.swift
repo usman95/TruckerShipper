@@ -16,9 +16,12 @@ class Bookings: BaseController {
     @IBOutlet weak var btnInProgress: UIButtonStatesDeviceClass!
     @IBOutlet weak var btnCompleted: UIButtonStatesDeviceClass!
     @IBOutlet weak var btnRejected: UIButtonStatesDeviceClass!
+    @IBOutlet weak var btnCancelled: UIButtonStatesDeviceClass!
+    
+    @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var tableView: UITableView!
     
-    var bookingType = BookingType.pending
+    var bookingType = BookingType.cancelled
     var refreshControl = UIRefreshControl()
     var arrBookings = [BookingModel]()
     var totalBookings = 0
@@ -27,55 +30,29 @@ class Bookings: BaseController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setUI()
-        self.getBookings()
+        self.setBookingStatusUI()
         // Do any additional setup after loading the view.
+    }
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        self.scrollToItem()
     }
     
     @IBAction func onBtnBookingsStatus(_ sender: UIButtonStatesDeviceClass) {
         switch sender.tag {
         case 0:
-            self.btnPending.isSelected = true
-            self.btnInProgress.isSelected = false
-            self.btnCompleted.isSelected = false
-            self.btnRejected.isSelected = false
-            
-            self.arrBookings.removeAll()
-            self.tableView.reloadData()
-            
             self.bookingType = BookingType.pending
         case 1:
-            self.btnPending.isSelected = false
-            self.btnInProgress.isSelected = true
-            self.btnCompleted.isSelected = false
-            self.btnRejected.isSelected = false
-            
-            self.arrBookings.removeAll()
-            self.tableView.reloadData()
-            
             self.bookingType = BookingType.inProgress
         case 2:
-            self.btnPending.isSelected = false
-            self.btnInProgress.isSelected = false
-            self.btnCompleted.isSelected = true
-            self.btnRejected.isSelected = false
-            
-            self.arrBookings.removeAll()
-            self.tableView.reloadData()
-            
             self.bookingType = BookingType.completed
-        default:
-            self.btnPending.isSelected = false
-            self.btnInProgress.isSelected = false
-            self.btnCompleted.isSelected = false
-            self.btnRejected.isSelected = true
-            
-            self.arrBookings.removeAll()
-            self.tableView.reloadData()
-            
+        case 3:
             self.bookingType = BookingType.rejected
+            
+        default:
+            self.bookingType = BookingType.cancelled
         }
-        
-        self.refreshBookings()
+        self.setBookingStatusUI()
     }
 }
 //MARK:- Helper methods
@@ -87,6 +64,85 @@ extension Bookings{
     }
     private func registerCells(){
         self.tableView.register(UINib(nibName: "BookingsTVC", bundle: nil), forCellReuseIdentifier: "BookingsTVC")
+    }
+    private func setBookingStatusUI(){
+        switch self.bookingType{
+        case .pending:
+            self.btnPending.isSelected = true
+            self.btnInProgress.isSelected = false
+            self.btnCompleted.isSelected = false
+            self.btnRejected.isSelected = false
+            self.btnCancelled.isSelected = false
+            
+            self.arrBookings.removeAll()
+            self.tableView.reloadData()
+            
+        case .inProgress:
+            self.btnPending.isSelected = false
+            self.btnInProgress.isSelected = true
+            self.btnCompleted.isSelected = false
+            self.btnRejected.isSelected = false
+            self.btnCancelled.isSelected = false
+            
+            self.arrBookings.removeAll()
+            self.tableView.reloadData()
+            
+        case .completed:
+            self.btnPending.isSelected = false
+            self.btnInProgress.isSelected = false
+            self.btnCompleted.isSelected = true
+            self.btnRejected.isSelected = false
+            self.btnCancelled.isSelected = false
+            
+            self.arrBookings.removeAll()
+            self.tableView.reloadData()
+            
+        case .rejected:
+            self.btnPending.isSelected = false
+            self.btnInProgress.isSelected = false
+            self.btnCompleted.isSelected = false
+            self.btnRejected.isSelected = true
+            self.btnCancelled.isSelected = false
+            
+            self.arrBookings.removeAll()
+            self.tableView.reloadData()
+            
+        case .cancelled:
+            self.btnPending.isSelected = false
+            self.btnInProgress.isSelected = false
+            self.btnCompleted.isSelected = false
+            self.btnRejected.isSelected = false
+            self.btnCancelled.isSelected = true
+            
+            self.arrBookings.removeAll()
+            self.tableView.reloadData()
+        default:
+            break
+        }
+        self.scrollToItem()
+        self.refreshBookings()
+    }
+    private func scrollToItem(){
+        switch self.bookingType{
+            
+        case .pending:
+            let frame = CGRect(x: 0, y: 0, width: self.btnPending.frame.width, height: self.btnPending.frame.height)
+            self.scrollView.scrollRectToVisible(frame, animated: true)
+        case .inProgress:
+            let frame = CGRect(x: self.btnInProgress.frame.width, y: 0, width: self.btnInProgress.frame.width, height: self.btnInProgress.frame.height)
+            self.scrollView.scrollRectToVisible(frame, animated: true)
+        case .completed:
+            let frame = CGRect(x: self.btnCompleted.center.x, y: 0, width: self.btnCompleted.frame.width, height: self.btnCompleted.frame.height)
+            self.scrollView.scrollRectToVisible(frame, animated: true)
+        case .rejected:
+            let frame = CGRect(x: self.btnRejected.center.x, y: 0, width: self.btnRejected.frame.width, height: self.btnRejected.frame.height)
+            self.scrollView.scrollRectToVisible(frame, animated: true)
+        case .cancelled:
+            let frame = CGRect(x: self.btnCancelled.center.x, y: 0, width: self.btnCancelled.frame.width, height: self.btnCancelled.frame.height)
+            self.scrollView.scrollRectToVisible(frame, animated: true)
+        default:
+            break
+        }
     }
     
     private func pullToRefresh(){

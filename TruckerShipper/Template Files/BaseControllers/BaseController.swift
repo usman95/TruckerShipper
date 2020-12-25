@@ -103,6 +103,11 @@ extension BaseController{
         guard let topNavigationController = topController.rootViewController as? UINavigationController else {return}
         topNavigationController.pushViewController(controller, animated: true)
     }
+    func pushToBookings(bookingType: BookingType){
+        let controller = Bookings()
+        controller.bookingType = bookingType
+        self.navigationController?.pushViewController(controller, animated: true)
+    }
 }
 extension BaseController: UIGestureRecognizerDelegate {
     func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
