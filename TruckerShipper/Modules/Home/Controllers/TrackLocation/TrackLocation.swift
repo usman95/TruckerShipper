@@ -22,6 +22,10 @@ class TrackLocation: BaseController {
     var driverLocationMarker: GMSMarker?
     var dropOffLocationMarker: GMSMarker?
     
+    var lastUpdatedDriverLocation = 0
+    
+    lazy var geocoder = CLGeocoder()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.connectSocket()
@@ -59,6 +63,41 @@ extension TrackLocation{
         let update = GMSCameraUpdate.fit(bounds, withPadding: CGFloat(160))
         self.mapView.animate(with: update)
     }
+    private func getDriverAddress(){
+        let driverLocation = CLLocation(latitude: self.currentDriverLocation?.latitude ?? 0.0, longitude: self.currentDriverLocation?.longitude ?? 0.0)
+        self.reverseGeoCodeBy(location: driverLocation)
+    }
+    private func getDateFromTimeStamp()->String{
+        if self.lastUpdatedDriverLocation == 0{
+            return "-"
+        }
+        let date = Date(timeIntervalSince1970: TimeInterval(self.lastUpdatedDriverLocation))
+        return Utility.main.dateFormatter(date: date, dateFormat: "dd MMM yy h:mm a")
+    }
+}
+//MARK:- Reverse Geocode Location
+extension TrackLocation{
+    private func reverseGeoCodeBy(location:CLLocation){
+        Utility.showLoader()
+        self.geocoder.reverseGeocodeLocation(location) { (placemarks, error) in
+            self.processResponse(withPlacemarks: placemarks, error: error)
+        }
+    }
+    private func processResponse(withPlacemarks placemarks: [CLPlacemark]?, error: Error?) {
+        Utility.hideLoader()
+        if let error = error {
+            print("Unable to Reverse Geocode Location (\(error))")
+        } else {
+            if let placemarks = placemarks, let placemark = placemarks.first {
+                self.driverLocationMarker?.title = placemark.compactAddress
+                
+            } else {
+                self.driverLocationMarker?.title = "\(self.currentDriverLocation?.latitude ?? 0.0),\(self.currentDriverLocation?.longitude ?? 0.0)"
+            }
+        }
+        self.driverLocationMarker?.snippet = self.getDateFromTimeStamp()
+        self.mapView.selectedMarker = self.driverLocationMarker
+    }
 }
 //MARK:- Add marker
 extension TrackLocation{
@@ -82,7 +121,7 @@ extension TrackLocation{
             self.fitAllMarkersBounds()
         }
         else{
-            self.driverLocationMarker?.rotation = bearing ?? 0.0
+//            self.driverLocationMarker?.rotation = bearing ?? 0.0
             self.driverLocationMarker?.position = self.currentDriverLocation ?? CLLocationCoordinate2D()
             self.zoomToSearchLocation(location: self.currentDriverLocation ?? CLLocationCoordinate2D())
         }
@@ -103,6 +142,14 @@ extension TrackLocation{
         self.dropOffLocationMarker?.tracksViewChanges = true
         self.dropOffLocationMarker?.map = self.mapView
         self.fitAllMarkersBounds()
+    }
+}
+//MARK:- Add marker
+extension TrackLocation: GMSMapViewDelegate{
+    func mapView(_ mapView: GMSMapView, didTap marker: GMSMarker) -> Bool {
+        self.mapView.selectedMarker = nil
+        self.getDriverAddress()
+        return true
     }
 }
 //MARK:- Socket
@@ -134,8 +181,10 @@ extension TrackLocation{
             let latitude = driverLocation["lat"] as? Double ?? 0.0
             let longitude = driverLocation["lng"] as? Double ?? 0.0
             let bearing = driverLocation["bearing"] as? Double ?? 0.0
+            let date = driverLocation["date"] as? Int ?? 0
             
             self.currentDriverLocation = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
+            self.lastUpdatedDriverLocation = date
             self.addOrMoveDriverMarker(bearing: bearing)
         }
         socket.on("received-finished-ride-shipper-\(Constants.inProgressMileNumber)") {data, ack in

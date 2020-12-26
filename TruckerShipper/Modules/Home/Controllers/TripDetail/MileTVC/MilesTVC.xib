@@ -23,14 +23,6 @@
                             <constraint firstAttribute="width" secondItem="iGn-rr-FAi" secondAttribute="height" multiplier="1:1" id="Xdb-Mg-rO5"/>
                             <constraint firstAttribute="height" constant="12" id="p59-LE-MjG"/>
                         </constraints>
-                        <userDefinedRuntimeAttributes>
-                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                <real key="value" value="1"/>
-                            </userDefinedRuntimeAttribute>
-                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                <color key="value" red="0.24658459420000001" green="0.7185639143" blue="0.45008760689999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </userDefinedRuntimeAttribute>
-                        </userDefinedRuntimeAttributes>
                     </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Szb-71-Yxf">
                         <rect key="frame" x="29.5" y="22" width="1" height="107"/>
