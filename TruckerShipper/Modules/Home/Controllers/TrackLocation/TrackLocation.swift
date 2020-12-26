@@ -22,7 +22,7 @@ class TrackLocation: BaseController {
     var driverLocationMarker: GMSMarker?
     var dropOffLocationMarker: GMSMarker?
     
-    var lastUpdatedDriverLocation = 0
+    var lastUpdatedDriverLocation: String?
     
     lazy var geocoder = CLGeocoder()
     
@@ -67,13 +67,6 @@ extension TrackLocation{
         let driverLocation = CLLocation(latitude: self.currentDriverLocation?.latitude ?? 0.0, longitude: self.currentDriverLocation?.longitude ?? 0.0)
         self.reverseGeoCodeBy(location: driverLocation)
     }
-    private func getDateFromTimeStamp()->String{
-        if self.lastUpdatedDriverLocation == 0{
-            return "-"
-        }
-        let date = Date(timeIntervalSince1970: TimeInterval(self.lastUpdatedDriverLocation))
-        return Utility.main.dateFormatter(date: date, dateFormat: "dd MMM yy h:mm a")
-    }
 }
 //MARK:- Reverse Geocode Location
 extension TrackLocation{
@@ -95,7 +88,16 @@ extension TrackLocation{
                 self.driverLocationMarker?.title = "\(self.currentDriverLocation?.latitude ?? 0.0),\(self.currentDriverLocation?.longitude ?? 0.0)"
             }
         }
-        self.driverLocationMarker?.snippet = self.getDateFromTimeStamp()
+        
+        let lastUpdatedDriverLocationDateString = self.lastUpdatedDriverLocation ?? ""
+        switch lastUpdatedDriverLocationDateString.isEmpty {
+        case true:
+            self.driverLocationMarker?.snippet = "-"
+        default:
+            let lastUpdatedDriverLocationDate = Utility.main.stringDateFormatter(dateStr: lastUpdatedDriverLocationDateString, dateFormat: Constants.serverDateFormat, formatteddate: "dd MMM yy h:mm a")
+            self.driverLocationMarker?.snippet = lastUpdatedDriverLocationDate
+        }
+        
         self.mapView.selectedMarker = self.driverLocationMarker
     }
 }
@@ -181,7 +183,7 @@ extension TrackLocation{
             let latitude = driverLocation["lat"] as? Double ?? 0.0
             let longitude = driverLocation["lng"] as? Double ?? 0.0
             let bearing = driverLocation["bearing"] as? Double ?? 0.0
-            let date = driverLocation["date"] as? Int ?? 0
+            let date = driverLocation["updateAt"] as? String ?? ""
             
             self.currentDriverLocation = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
             self.lastUpdatedDriverLocation = date
