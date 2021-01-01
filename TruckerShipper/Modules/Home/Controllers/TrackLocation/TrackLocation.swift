@@ -110,7 +110,7 @@ extension TrackLocation{
             self.currentDriverLocation = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
             
             var markerIcon: UIImageView?
-            let pickUpPin = UIImage(named: "TruckMapPin")!.withRenderingMode(.alwaysOriginal)
+            let pickUpPin = UIImage(named: "TruckMapPin")?.withRenderingMode(.alwaysOriginal)
             let markerView = UIImageView(image: pickUpPin)
             markerIcon = markerView
             markerIcon?.frame = CGRect(x: 0, y: 0, width: 40, height: 50)

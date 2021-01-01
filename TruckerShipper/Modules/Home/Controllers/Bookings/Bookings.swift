@@ -21,7 +21,7 @@ class Bookings: BaseController {
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var tableView: UITableView!
     
-    var bookingType = BookingType.cancelled
+    var bookingType = BookingType.pending
     var refreshControl = UIRefreshControl()
     var arrBookings = [BookingModel]()
     var totalBookings = 0

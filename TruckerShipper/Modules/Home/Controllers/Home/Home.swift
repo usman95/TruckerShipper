@@ -45,6 +45,8 @@ class Home: BaseController {
     
     var routeDuration: String?
     
+    var isSelectedAreaCovered = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setData()
@@ -254,6 +256,12 @@ extension Home{
         dropoff["address"] = self.lblDropOff.text ?? ""
         dropoff["coordinates"] = dropoff_coordinates
         
+        if !self.isSelectedAreaCovered{
+            Utility.main.showToast(message: Strings.WE_DO_NOT_WORK_IN_THIS_AREA.text)
+            self.btnNext.shake()
+            return nil
+        }
+        
         let params:[String:Any] = ["pickup":pickup,
                                    "dropOff":dropoff]
         return params
@@ -376,6 +384,11 @@ extension Home{
                 let json = try JSON(data: response.data ?? Data())
                 let routes = json["routes"].arrayValue
                 self.drawRoute(routesArray: routes)
+                
+                if self.pickUpCity != nil && self.dropOffCity != nil{
+                    self.isSelectedAreaCovered = false
+                    self.checkSelectedCities()
+                }
             } catch {
                 print("Hm, something is wrong here. Try connecting to the wifi.")
             }
@@ -469,5 +482,22 @@ extension Home: GMSAutocompleteViewControllerDelegate{
     func didRequestAutocompletePredictions(_ viewController: GMSAutocompleteViewController) {
     }
     func didUpdateAutocompletePredictions(_ viewController: GMSAutocompleteViewController) {
+    }
+}
+//MARK:- Services
+extension Home{
+    private func checkSelectedCities(){
+        let pickUpCity = self.pickUpCity ?? ""
+        let dropOffCity = self.dropOffCity ?? ""
+        
+        let params:[String:Any] = ["pickUpCity":pickUpCity,
+                                   "dropOffCity":dropOffCity]
+        
+        APIManager.sharedInstance.shipperAPIManager.CheckCity(params: params, success: { (responseObject) in
+            self.isSelectedAreaCovered = true
+        }) { (error) in
+            print(error)
+            self.isSelectedAreaCovered = false
+        }
     }
 }

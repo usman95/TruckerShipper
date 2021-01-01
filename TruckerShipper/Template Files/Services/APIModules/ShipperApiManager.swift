@@ -81,4 +81,10 @@ class ShipperAPIManager: APIManagerBase {
         let route: URL = URLforRoute(route: Route.Report.rawValue, params: params)! as URL
         self.getStringResponseWith(route: route, success: success, failure: failure, withHeader: true)
     }
+    //MARK:- CheckCity
+    func CheckCity(params: Parameters, success: @escaping DefaultAPISuccessClosure, failure: @escaping DefaultAPIFailureClosure){
+        Utility.showLoader()
+        let route: URL = POSTURLforRoute(route: Route.CheckCity.rawValue)! as URL
+        self.postDictionaryResponseWith(route: route, parameters: params, success: success, failure: failure, withHeader: true)
+    }
 }

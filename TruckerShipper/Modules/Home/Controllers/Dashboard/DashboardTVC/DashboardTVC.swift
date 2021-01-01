@@ -41,8 +41,8 @@ extension DashboardTVC{
         let shipperImageURL = AppStateManager.sharedInstance.loggedInUser.user?.profileImageUrl ?? ""
         self.imgShipper.sd_setImage(with: URL(string: shipperImageURL), placeholderImage: UIImage(named: "profilePlaceHolder"))
         
-        let firstName = AppStateManager.sharedInstance.loggedInUser.user?.firstName ?? ""
-        let lastName = AppStateManager.sharedInstance.loggedInUser.user?.lastName ?? ""
+        let firstName = (AppStateManager.sharedInstance.loggedInUser.user?.firstName ?? "").trimmingCharacters(in: .whitespacesAndNewlines)
+        let lastName = (AppStateManager.sharedInstance.loggedInUser.user?.lastName ?? "").trimmingCharacters(in: .whitespacesAndNewlines)
         
         self.lblShipperName.text = "\(firstName) \(lastName)"
         
@@ -53,7 +53,7 @@ extension DashboardTVC{
         let totalBookings = totalBookingsV1 + totalBookingsV2
         
         self.lblTotalBookings.text = "\(totalBookings)+"
-        self.lblBookingsInProgress.text = "\(data?.inProgress ?? 0)+"
+        self.lblBookingsInProgress.text = "\((data?.inProgress ?? 0)+(data?.accepted ?? 0))+"
         self.lblCompletedBookings.text = "\(data?.completed ?? 0)+"
         self.lblCancelled.text = "\(data?.cancelled ?? 0)+"
     }

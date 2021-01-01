@@ -113,4 +113,5 @@ enum Strings: String{
     case FREE_DAYS = "Free Days"
     case FREE_DAYS_START_DATE = "Free Days Start Date"
     case NA = "N/A"
+    case WE_DO_NOT_WORK_IN_THIS_AREA = "We do not work in this area!"
 }
