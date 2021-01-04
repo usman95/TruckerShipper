@@ -230,11 +230,13 @@ extension Home{
         guard var locationAttribute = self.validate() else {return}
         locationAttribute["totalDistance"] = self.getDistance() ?? 0
         locationAttribute["totalDuration"] = self.routeDuration ?? ""
+        locationAttribute["route"] = Utility.main.getBearingBetweenTwoPoints(point1: self.pickUpLocation ?? CLLocationCoordinate2D(), point2: self.dropOffLocation ?? CLLocationCoordinate2D())
         
         let controller = LoadDetails()
         controller.locationAttribute = locationAttribute
         self.navigationController?.pushViewController(controller, animated: true)
     }
+    
     private func validate()->[String:Any]?{
         if self.pickUpLocation == nil || self.dropOffLocation == nil{
             Utility.main.showToast(message: Strings.PLEASE_SELECT_LOCATION.text)

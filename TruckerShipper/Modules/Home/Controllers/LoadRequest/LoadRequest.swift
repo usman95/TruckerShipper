@@ -58,7 +58,6 @@ class LoadRequest: BaseController {
     var selectedBookingDate: Date?
     var selectedPickUpDate: Date?
     
-    var arrRoutes = [String]()
     var selectedRoute: String?
     
     let bookingTypeDropDown = DropDown()
@@ -151,6 +150,10 @@ extension LoadRequest{
                 self.tfDropOffDetailsCity.text = city
             }
             
+            let route = loadDetails["route"] as? String ?? ""
+            self.selectedRoute = route
+            self.tfBookingDetailsRoute.text = route
+            
             self.getCities()
             
             let name = "\(AppStateManager.sharedInstance.loggedInUser.user?.firstName ?? "") \(AppStateManager.sharedInstance.loggedInUser.user?.lastName ?? "")"
@@ -194,7 +197,6 @@ extension LoadRequest{
         }
     }
     private func callAPIs(){
-        self.getRoutes()
         self.getBookingType(showDropDown: false)
         self.getShippingLine(showDropDown: false)
         self.getCommodity()
@@ -209,16 +211,7 @@ extension LoadRequest{
         self.selectedPickUpDetailsCity = self.arrCities.filter{$0.title == pickUpCity}.first
         self.selectedDropOffDetailsCity = self.arrCities.filter{$0.title == dropOffCity}.first
     }
-    private func setSelectedRoute(){
-        let pickUpCity = self.tfPickUpDetailsCity.text ?? ""
-        if pickUpCity == Strings.KARACHI.text{
-            self.selectedRoute = self.arrRoutes.filter{$0 == "up"}.first
-        }
-        else{
-            self.selectedRoute = self.arrRoutes.filter{$0 == "down"}.first
-        }
-        self.tfBookingDetailsRoute.text = self.selectedRoute?.uppercased()
-    }
+
     private func setBookingTypeDropDown(showDropDown: Bool){
         self.bookingTypeDropDown.dataSource = self.arrBookingType.map{$0.title ?? ""}
         self.bookingTypeDropDown.anchorView = self.tfBookingDetailsBookingType
@@ -456,15 +449,6 @@ extension LoadRequest{
             guard let cities = response["cities"] as? [[String:Any]] else {return}
             self.arrCities = Mapper<AttributeModel>().mapArray(JSONArray: cities)
             self.setSelectedCities()
-        }) { (error) in
-            print(error)
-        }
-    }
-    private func getRoutes(){
-        APIManager.sharedInstance.attributesAPIManager.Routes(success: { (responseObject) in
-            guard let routes = responseObject as? [String] else {return}
-            self.arrRoutes = routes
-            self.setSelectedRoute()
         }) { (error) in
             print(error)
         }

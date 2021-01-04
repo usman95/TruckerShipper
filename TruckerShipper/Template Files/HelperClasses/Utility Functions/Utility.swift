@@ -4,6 +4,7 @@ import AVFoundation
 import Toast_Swift
 import ContactsUI
 import MessageUI
+import GoogleMaps
 
 //MARK:- AppHelperUtility setup
 @objc class Utility: NSObject{
@@ -53,6 +54,48 @@ extension Utility{
     func delay(delay:Double, closure:@escaping ()->()) {
         DispatchQueue.main.asyncAfter(
             deadline: DispatchTime.now() + Double(Int64(delay * Double(NSEC_PER_SEC))) / Double(NSEC_PER_SEC), execute: closure)
+    }
+    
+    func degreesToRadians(degrees: Double) -> Double {
+        return degrees * .pi / 180.0
+    }
+    func radiansToDegrees(radians: Double) -> Double {
+        let radianToDegree = radians * 180.0 / .pi
+        if radianToDegree < 0.0{
+            return radianToDegree + 360.0
+        }
+        return radians * 180.0 / .pi
+    }
+    func getBearingBetweenTwoPoints(point1 : CLLocationCoordinate2D, point2 : CLLocationCoordinate2D) -> String {
+        let lat1 = degreesToRadians(degrees: point1.latitude)
+        let lon1 = degreesToRadians(degrees: point1.longitude)
+
+        let lat2 = degreesToRadians(degrees: point2.latitude)
+        let lon2 = degreesToRadians(degrees: point2.longitude)
+
+        let dLon = lon2 - lon1
+
+        let y = sin(dLon) * cos(lat2)
+        let x = cos(lat1) * sin(lat2) - sin(lat1) * cos(lat2) * cos(dLon)
+        let radiansBearing = atan2(y, x)
+
+        let directionAngle = radiansToDegrees(radians: radiansBearing)
+        
+        if(directionAngle > 23 && directionAngle <= 67){
+            return "UP" //"North East";
+        } else if(directionAngle > 113 && directionAngle <= 167){
+            return "DOWN" // "South East";
+        } else if(directionAngle > 168 && directionAngle <= 202){
+            return "DOWN" // "South";
+        } else if(directionAngle > 203 && directionAngle <= 247){
+            return "DOWN" //"South West";
+        } else if(directionAngle > 294 && directionAngle <= 337){
+            return "UP" //"North West";
+        } else if(directionAngle >= 338 || directionAngle <= 22){
+            return "UP" //"North";
+        }
+        
+        return "DOWN"
     }
 }
 //MARK:- SHOW TOAST
