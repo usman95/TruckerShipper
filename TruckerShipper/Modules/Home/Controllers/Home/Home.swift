@@ -230,7 +230,7 @@ extension Home{
         guard var locationAttribute = self.validate() else {return}
         locationAttribute["totalDistance"] = self.getDistance() ?? 0
         locationAttribute["totalDuration"] = self.routeDuration ?? ""
-        locationAttribute["route"] = Utility.main.getBearingBetweenTwoPoints(point1: self.pickUpLocation ?? CLLocationCoordinate2D(), point2: self.dropOffLocation ?? CLLocationCoordinate2D())
+        locationAttribute["route"] = Utility.main.getBearingBetweenTwoPoints(point1: self.pickUpLocation ?? CLLocationCoordinate2D(), point2: self.dropOffLocation ?? CLLocationCoordinate2D()).lowercased()
         
         let controller = LoadDetails()
         controller.locationAttribute = locationAttribute
@@ -434,7 +434,6 @@ extension Home{
             }
         }
         let distanceInKM = Int(Double("\(distance/1000.0)") ?? 0.0)
-        print(distanceInKM)
         return distanceInKM
     }
 }

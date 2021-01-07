@@ -10,20 +10,16 @@ import ObjectMapper
 import RealmSwift
 import ObjectMapper_Realm
 
-public class AttributeModel: Object, Mappable {
+public class RateIdModel: Object, Mappable {
     
     // MARK: Declaration for string constants to be used to decode and also serialize.
     private struct SerializationKeys {
         static let id = "_id"
-        static let title = "title"
-        static let weight = "weight"
-        static let rateId = "rateId"
+        static let type = "type"
     }
     // MARK: Properties
     @objc dynamic var id: String? = ""
-    @objc dynamic var title: String? = ""
-    @objc dynamic var weight = 0
-    @objc dynamic var rateId: RateIdModel?
+    @objc dynamic var type: String? = ""
     
     // MARK: ObjectMapper Initializers
     /// Map a JSON object to this class using ObjectMapper.
@@ -41,8 +37,6 @@ public class AttributeModel: Object, Mappable {
     /// - parameter map: A mapping from ObjectMapper.
     public func mapping(map: Map) {
         id <- map[SerializationKeys.id]
-        title <- map[SerializationKeys.title]
-        weight <- map[SerializationKeys.weight]
-        rateId <- map[SerializationKeys.rateId]
+        type <- map[SerializationKeys.type]
     }
 }

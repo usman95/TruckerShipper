@@ -19,6 +19,11 @@ class LoadDetails: BaseController {
     @IBOutlet weak var tfQuantity: UITextFieldDeviceClass!
     @IBOutlet weak var btnCalculateRate: UIButtonDeviceClass!
     
+    @IBOutlet weak var lblCargoItemRateId: UILabelDeviceClass!
+    
+    @IBOutlet weak var viewCargoType: UIView!
+    @IBOutlet weak var viewSize: UIView!
+    
     var locationAttribute: [String:Any]?
     
     let sizePerTruckDropDown = DropDown()
@@ -39,10 +44,7 @@ class LoadDetails: BaseController {
         self.callAPIs()
         // Do any additional setup after loading the view.
     }
-
-    @IBAction func onBtnSizerPerTruck(_ sender: UIButton) {
-        self.sizePerTruckDropDown.show()
-    }
+    
     @IBAction func onBtnCommodity(_ sender: UIButton) {
         let controller = SearchCommodity()
         controller.arrCommodity = self.arrCommodity
@@ -51,10 +53,24 @@ class LoadDetails: BaseController {
         controller.setSelectedCommodity = { commodity in
             self.selectedCommodity = commodity
             self.tfCommodity.text = commodity?.title ?? ""
+            
+            switch (self.selectedCommodity?.rateId?.type ?? ""){
+            case CargoItemRateTypes.ton.rawValue:
+                self.lblCargoItemRateId.text = Strings.TON.text
+                self.tfWeightPerTruck.placeholder = Strings.WEIGHT_PER_TRANSPORT_UNIT.text
+            case CargoItemRateTypes.bag.rawValue:
+                self.lblCargoItemRateId.text = Strings.BAG.text
+                self.tfWeightPerTruck.placeholder = Strings.QUANTITY_PER_TRANSPORT_UNIT.text
+            default:
+                break
+            }
         }
     }
     @IBAction func onBtnCargoType(_ sender: UIButton) {
         self.cargoTypeDropDown.show()
+    }
+    @IBAction func onBtnSizerPerTruck(_ sender: UIButton) {
+        self.sizePerTruckDropDown.show()
     }
     @IBAction func onBtnCalculateRate(_ sender: UIButtonDeviceClass) {
         self.getBookingEstimate()
@@ -88,13 +104,34 @@ extension LoadDetails{
         self.cargoTypeDropDown.selectionAction = { [unowned self] (index: Int, item: String) in
             self.tfCargoType.text = item
             self.selectedCargoType = self.arrCargoType[index]
+            
+            switch (self.selectedCargoType?.title ?? "").lowercased(){
+            case CargoTypes.containerized.rawValue:
+                self.viewSize.isHidden = false
+                
+                self.tfQuantity.placeholder = Strings.TOTAL_QUANTITY_PER_CONTAINER.text
+            case CargoTypes.nonContainerized.rawValue:
+                self.viewSize.isHidden = true
+                
+                self.tfQuantity.placeholder = Strings.TOTAL_QUANTITY.text
+            default:
+                break
+            }
         }
         if showDropDown{
             self.cargoTypeDropDown.show()
         }
     }
     private func presentCalculatedRate(priceEstimates: PriceEstimates?){
+        
+        guard let data = priceEstimates else {return}
+        if data.truck == 0 && data.train == 0 {
+            Utility.main.showToast(message: Strings.CANT_NOT_ESTIMATE_A_PRICE_PLEASE_CONTACT_SUPPORT.text)
+            return
+        }
+        
         let controller = CalculatedRate()
+        controller.selectedCargoType = self.selectedCargoType
         controller.priceEstimates = priceEstimates
         controller.modalPresentationStyle = .overFullScreen
         controller.modalTransitionStyle = .coverVertical
@@ -109,22 +146,12 @@ extension LoadDetails{
         }
     }
     private func validate()->[String:Any]?{
+        let commodityId = self.selectedCommodity?.id ?? ""
         let weight = self.tfWeightPerTruck.text ?? ""
         let sizeId = self.selectedSizePerTruck?.id ?? ""
-        let commodityId = self.selectedCommodity?.id ?? ""
         let cargoTypeId = self.selectedCargoType?.id ?? ""
         let quantityOfTrucks = self.tfQuantity.text ?? ""
         
-        if !Validation.isValidNumber(weight){
-            Utility.main.showToast(message: Strings.PLEASE_ENTER_WEIGHT_PER_TRUCK.text)
-            self.btnCalculateRate.shake()
-            return nil
-        }
-        if self.selectedSizePerTruck == nil{
-            Utility.main.showToast(message: Strings.PLEASE_SELECT_SIZE_PER_TRUCK.text)
-            self.btnCalculateRate.shake()
-            return nil
-        }
         if self.selectedCommodity == nil{
             Utility.main.showToast(message: Strings.PLEASE_SELECT_COMMODITY.text)
             self.btnCalculateRate.shake()
@@ -134,6 +161,27 @@ extension LoadDetails{
             Utility.main.showToast(message: Strings.PLEASE_SELECT_CARGO_TYPE.text)
             self.btnCalculateRate.shake()
             return nil
+        }
+        if !Validation.isValidNumber(weight){
+            
+            switch (self.selectedCargoType?.title ?? "").lowercased(){
+            case CargoTypes.containerized.rawValue:
+                Utility.main.showToast(message: Strings.PLEASE_ENTER_WEIGHT_PER_TRUCK.text)
+            case CargoTypes.nonContainerized.rawValue:
+                Utility.main.showToast(message: Strings.PLEASE_ENTER_QUANTITY_PER_TRUCK.text)
+            default:
+                break
+            }
+            
+            self.btnCalculateRate.shake()
+            return nil
+        }
+        if self.selectedCargoType?.title == CargoTypes.containerized.rawValue{
+            if self.selectedSizePerTruck == nil{
+                Utility.main.showToast(message: Strings.PLEASE_SELECT_SIZE_PER_TRUCK.text)
+                self.btnCalculateRate.shake()
+                return nil
+            }
         }
         if !Validation.isValidNumber(quantityOfTrucks){
             Utility.main.showToast(message: Strings.PLEASE_ENTER_QUANTITY.text)

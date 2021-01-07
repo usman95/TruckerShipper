@@ -116,6 +116,7 @@
 		FA880330258F63E500B7A0ED /* NotificationFromModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA88032C258F63E500B7A0ED /* NotificationFromModel.swift */; };
 		FA880334258F91A300B7A0ED /* SearchForAnything.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA880332258F91A300B7A0ED /* SearchForAnything.swift */; };
 		FA880335258F91A300B7A0ED /* SearchForAnything.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA880333258F91A300B7A0ED /* SearchForAnything.xib */; };
+		FA89426E25A7B9790025C49A /* RateIdModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA89426D25A7B9790025C49A /* RateIdModel.swift */; };
 		FA9DBD77258937FD0082A67C /* ShipperIdModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9DBD73258937FC0082A67C /* ShipperIdModel.swift */; };
 		FA9DBD78258937FD0082A67C /* RemarksMark.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9DBD74258937FD0082A67C /* RemarksMark.swift */; };
 		FA9DBD79258937FD0082A67C /* BookingDetailtModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9DBD75258937FD0082A67C /* BookingDetailtModel.swift */; };
@@ -270,6 +271,7 @@
 		FA88032C258F63E500B7A0ED /* NotificationFromModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationFromModel.swift; sourceTree = "<group>"; };
 		FA880332258F91A300B7A0ED /* SearchForAnything.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchForAnything.swift; sourceTree = "<group>"; };
 		FA880333258F91A300B7A0ED /* SearchForAnything.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchForAnything.xib; sourceTree = "<group>"; };
+		FA89426D25A7B9790025C49A /* RateIdModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateIdModel.swift; sourceTree = "<group>"; };
 		FA9DBD73258937FC0082A67C /* ShipperIdModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShipperIdModel.swift; sourceTree = "<group>"; };
 		FA9DBD74258937FD0082A67C /* RemarksMark.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemarksMark.swift; sourceTree = "<group>"; };
 		FA9DBD75258937FD0082A67C /* BookingDetailtModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookingDetailtModel.swift; sourceTree = "<group>"; };
@@ -893,6 +895,7 @@
 		FA6B423F2578F95B00C6D106 /* AttributeModel */ = {
 			isa = PBXGroup;
 			children = (
+				FA89426C25A7B95F0025C49A /* RateIdModel */,
 				FA6B42402578F97500C6D106 /* AttributeModel.swift */,
 			);
 			path = AttributeModel;
@@ -937,6 +940,14 @@
 				FA880333258F91A300B7A0ED /* SearchForAnything.xib */,
 			);
 			path = SearchForAnything;
+			sourceTree = "<group>";
+		};
+		FA89426C25A7B95F0025C49A /* RateIdModel */ = {
+			isa = PBXGroup;
+			children = (
+				FA89426D25A7B9790025C49A /* RateIdModel.swift */,
+			);
+			path = RateIdModel;
 			sourceTree = "<group>";
 		};
 		FAA9C845258D3E24005FC95C /* TripDetailTVC */ = {
@@ -1293,6 +1304,7 @@
 				FA88032D258F63E500B7A0ED /* NotificationDataModel.swift in Sources */,
 				FA9DBD78258937FD0082A67C /* RemarksMark.swift in Sources */,
 				FA3298DA2588CAB700BA8C49 /* TripDetail.swift in Sources */,
+				FA89426E25A7B9790025C49A /* RateIdModel.swift in Sources */,
 				FA294FD72587FB9E00323EA2 /* MyAccount+Extension.swift in Sources */,
 				FA37EA5425740E4C0073CF0C /* MOLHSizable.swift in Sources */,
 				FA37EA6225740E4C0073CF0C /* UIImage+Extension.swift in Sources */,

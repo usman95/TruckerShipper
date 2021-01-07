@@ -24,6 +24,7 @@ enum LocationPickerType{
     case dropOff
 }
 enum ModeOfTransportType: String{
+    case none = "none"
     case truck = "truck"
     case train = "train"
 }
@@ -62,4 +63,12 @@ enum ReportDateType{
 }
 enum BookingTypes: String{
     case domestic = "domestic"
+}
+enum CargoTypes: String{
+    case containerized = "containerized"
+    case nonContainerized = "non-containerized"
+}
+enum CargoItemRateTypes: String{
+    case ton = "ton"
+    case bag = "bag"
 }

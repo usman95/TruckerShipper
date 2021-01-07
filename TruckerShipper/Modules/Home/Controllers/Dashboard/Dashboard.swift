@@ -142,6 +142,17 @@ extension Dashboard: UITableViewDataSource{
 }
 //MARK:- UITableViewDelegate
 extension Dashboard: UITableViewDelegate{
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if indexPath.section == 0 {return}
+        
+        let notification = self.arrNotifications[indexPath.row].data
+        let bookingStatus = notification?.bookingStatus ?? ""
+        if bookingStatus == BookingType.inProgress.rawValue || bookingStatus == BookingType.accepted.rawValue || bookingStatus == BookingType.completed.rawValue{
+            let booking = BookingModel()
+            booking.id = self.arrNotifications[indexPath.row].data?.bookingId
+            super.pushToTrips(booking: booking)
+        }
+    }
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         switch section{
         case 0:

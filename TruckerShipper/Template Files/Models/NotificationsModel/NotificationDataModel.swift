@@ -18,6 +18,7 @@ public class NotificationDataModel: Object, Mappable {
         static let bookingId = "bookingId"
         static let bookingNumber = "bookingNumber"
         static let body = "body"
+        static let bookingStatus = "bookingStatus"
     }
     
     // MARK: Properties
@@ -26,6 +27,7 @@ public class NotificationDataModel: Object, Mappable {
     @objc dynamic var bookingNumber: String? = ""
     @objc dynamic var body: String? = ""
     @objc dynamic var id = 0
+    @objc dynamic var bookingStatus: String? = ""
     
     // MARK: ObjectMapper Initializers
     /// Map a JSON object to this class using ObjectMapper.
@@ -48,6 +50,7 @@ public class NotificationDataModel: Object, Mappable {
         bookingId <- map[SerializationKeys.bookingId]
         bookingNumber <- map[SerializationKeys.bookingNumber]
         body <- map[SerializationKeys.body]
+        bookingStatus <- map[SerializationKeys.bookingStatus]
     }
     
     

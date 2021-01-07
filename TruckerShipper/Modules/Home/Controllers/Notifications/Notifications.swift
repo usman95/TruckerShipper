@@ -75,6 +75,15 @@ extension Notifications: UITableViewDataSource{
 }
 //MARK:- UITableViewDelegate
 extension Notifications: UITableViewDelegate{
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let notification = self.arrNotifications[indexPath.row].data
+        let bookingStatus = notification?.bookingStatus ?? ""
+        if bookingStatus == BookingType.inProgress.rawValue || bookingStatus == BookingType.accepted.rawValue || bookingStatus == BookingType.completed.rawValue{
+            let booking = BookingModel()
+            booking.id = self.arrNotifications[indexPath.row].data?.bookingId
+            super.pushToTrips(booking: booking)
+        }
+    }
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
             if tableView.visibleCells.contains(cell) {

@@ -21,13 +21,11 @@ class LoadRequest: BaseController {
     @IBOutlet weak var tfPickUpDetailsPhoneNumber: UITextFieldDeviceClass!
     @IBOutlet weak var tfPickUpDetailsCity: UITextFieldDeviceClass!
     @IBOutlet weak var tfPickUpDetailsPickUpName: UITextFieldDeviceClass!
-    @IBOutlet weak var tfPickUpDetailsLabourers: UITextFieldDeviceClass!
     
     @IBOutlet weak var tfDropOffDetailsFullName: UITextFieldDeviceClass!
     @IBOutlet weak var tfDropOffDetailsPhoneNumber: UITextFieldDeviceClass!
     @IBOutlet weak var tfDropOffDetailsCity: UITextFieldDeviceClass!
     @IBOutlet weak var tfDropOffDetailsDropOffName: UITextFieldDeviceClass!
-    @IBOutlet weak var tfDropOffDetailsLabourers: UITextFieldDeviceClass!
     
     @IBOutlet weak var tfBookingDetailsCustomerName: UITextFieldDeviceClass!
     @IBOutlet weak var tfBookingDetailsBookingDate: UITextFieldDeviceClass!
@@ -172,13 +170,11 @@ extension LoadRequest{
             self.tfPickUpDetailsPhoneNumber.text = contract.pickup?.phoneNumber ?? ""
             self.tfPickUpDetailsCity.text = contract.pickup?.origin ?? ""
             self.tfPickUpDetailsPickUpName.text = contract.pickup?.originName ?? ""
-            self.tfPickUpDetailsLabourers.text = contract.pickup?.labourers ?? ""
             
             self.tfDropOffDetailsFullName.text = contract.dropOff?.fullName ?? ""
             self.tfDropOffDetailsPhoneNumber.text = contract.dropOff?.phoneNumber ?? ""
             self.tfDropOffDetailsCity.text = contract.dropOff?.destination ?? ""
             self.tfDropOffDetailsDropOffName.text = contract.dropOff?.destinationName ?? ""
-            self.tfDropOffDetailsLabourers.text = contract.dropOff?.labourers ?? ""
             
             self.tfBookingDetailsBookingType.text = contract.bookingTypeId?.title ?? ""
             self.selectedBookingType = contract.bookingTypeId
@@ -298,7 +294,6 @@ extension LoadRequest{
                 let origin = self.tfPickUpDetailsCity.text ?? ""
                 let originName = self.tfPickUpDetailsPickUpName.text ?? ""
                 let address = self.lblPickUpAddress.text ?? ""
-                let labourers = self.tfPickUpDetailsLabourers.text ?? ""
                 let cityId = self.selectedPickUpDetailsCity?.id ?? ""
                 let coordinates = pickupLoadDetails["coordinates"] as? [Double] ?? [Double]()
                 
@@ -307,7 +302,6 @@ extension LoadRequest{
                 pickup["origin"] = origin
                 pickup["originName"] = originName
                 pickup["address"] = address
-                pickup["labourers"] = labourers
                 pickup["cityId"] = cityId
                 pickup["coordinates"] = coordinates
             }
@@ -320,7 +314,6 @@ extension LoadRequest{
                 let destination = self.tfDropOffDetailsCity.text ?? ""
                 let destinationName = self.tfDropOffDetailsDropOffName.text ?? ""
                 let address = self.lblDropOffAddress.text ?? ""
-                let labourers = self.tfDropOffDetailsLabourers.text ?? ""
                 let cityId = self.selectedDropOffDetailsCity?.id ?? ""
                 let coordinates = dropOffLoadDetails["coordinates"] as? [Double] ?? [Double]()
                 
@@ -329,7 +322,6 @@ extension LoadRequest{
                 dropOff["destination"] = destination
                 dropOff["destinationName"] = destinationName
                 dropOff["address"] = address
-                dropOff["labourers"] = labourers
                 dropOff["cityId"] = cityId
                 dropOff["coordinates"] = coordinates
             }

@@ -232,7 +232,7 @@
                             </connections>
                         </button>
                     </subviews>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstItem="d5G-LB-AT0" firstAttribute="leading" secondItem="VGH-Ki-6Lj" secondAttribute="leading" id="1F6-tG-APE"/>
                         <constraint firstItem="sUK-uJ-2Xh" firstAttribute="centerY" secondItem="VGH-Ki-6Lj" secondAttribute="centerY" id="5d8-sM-CKC"/>

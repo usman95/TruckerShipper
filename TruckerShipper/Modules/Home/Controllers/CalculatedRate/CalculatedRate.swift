@@ -15,21 +15,26 @@ class CalculatedRate: BaseController {
     @IBOutlet weak var lblByTruck: UILabel!
     @IBOutlet weak var lblByTrain: UILabel!
     
+    var selectedCargoType: AttributeModel?
     var priceEstimates: PriceEstimates?
     var setSelectedPrice: ((ModeOfTransportType,String?)->Void)?
-    var selectedModeOfTransport = ModeOfTransportType.truck
+    var selectedModeOfTransport = ModeOfTransportType.none
     var selectedPrice: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.setData()
+        self.setUI()
     }
     
     @IBAction func onBtnByTruckOrTrain(_ sender: UIButton) {
+        guard let data = self.priceEstimates else {return}
+        
         switch sender.tag {
         case 0:
+            if data.truck == 0 {return}
             self.setViewByTruck()
         default:
+            if data.train == 0 {return}
             self.setViewByTrain()
         }
     }
@@ -44,12 +49,51 @@ class CalculatedRate: BaseController {
 }
 //MARK:- Helper method
 extension CalculatedRate{
-    private func setData(){
+    private func setUI(){
         guard let data = self.priceEstimates else {return}
-        self.selectedPrice = "\(data.truck)"
         
-        self.lblByTruck.text = "\(Constants.localCurrency) \(data.truck.withCommas()) \(Strings.PER_TRUCK.text)"
-        self.lblByTrain.text = "\(Constants.localCurrency) \(data.train.withCommas()) \(Strings.PER_CONTAINER.text)"
+        if data.truck > 0{
+            self.lblByTruck.text = "\(Constants.localCurrency) \(data.truck.withCommas()) \(Strings.PER_TRUCK.text)"
+        }
+        else{
+            self.lblByTruck.text = Strings.NA_FOR_TRUCK.text
+        }
+        
+        switch (self.selectedCargoType?.title ?? "").lowercased(){
+        case CargoTypes.containerized.rawValue:
+            
+            if data.train > 0{
+                self.lblByTrain.text = "\(Constants.localCurrency) \(data.train.withCommas()) \(Strings.PER_CONTAINER.text)"
+            }
+            else{
+                self.lblByTrain.text = Strings.NA_FOR_TRAIN.text
+            }
+            
+        case CargoTypes.nonContainerized.rawValue:
+            
+            if data.truck > 0{
+                self.lblByTruck.text = "\(Constants.localCurrency) \(data.truck.withCommas()) \(Strings.PER_TRUCK.text)"
+            }
+            else{
+                self.lblByTruck.text = Strings.NA_FOR_TRUCK.text
+            }
+            
+            self.lblByTrain.text = Strings.NA_FOR_NON_CONTAINERIZED.text
+        default:
+            break
+        }
+        
+        self.resetViewByTruckTrain()
+    }
+    private func resetViewByTruckTrain(){
+        self.viewByTruck.borderColor = Global.APP_COLOR_DARK_GREY
+        self.viewByTrain.borderColor = Global.APP_COLOR_DARK_GREY
+        
+        self.viewByTruck.borderWidth = 1.0
+        self.viewByTrain.borderWidth = 1.0
+        
+        self.lblByTruck.textColor = Global.APP_COLOR_DARK_GREY
+        self.lblByTrain.textColor = Global.APP_COLOR_DARK_GREY
     }
     private func setViewByTruck(){
         self.viewByTruck.borderColor = Global.APP_COLOR

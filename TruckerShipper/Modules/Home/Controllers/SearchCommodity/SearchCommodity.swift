@@ -85,8 +85,15 @@ extension SearchCommodity: UITableViewDelegate{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.navigationController?.popViewController(animated: true)
         
-        let selectedCommodity = self.arrCommodity[indexPath.row]
-        self.setSelectedCommodity?(selectedCommodity)
+        switch self.isFilter{
+        case true:
+            let selectedCommodity = self.arrFilteredCommodity[indexPath.row]
+            self.setSelectedCommodity?(selectedCommodity)
+        case false:
+            let selectedCommodity = self.arrCommodity[indexPath.row]
+            self.setSelectedCommodity?(selectedCommodity)
+        }
+        
     }
 }
 extension SearchCommodity{
