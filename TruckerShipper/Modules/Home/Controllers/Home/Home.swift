@@ -23,6 +23,8 @@ class Home: BaseController {
     @IBOutlet weak var btnPickUpTick: UIButton!
     @IBOutlet weak var btnDropOffTick: UIButton!
     @IBOutlet weak var viewPickUpMarker: RoundedView!
+    @IBOutlet weak var lblKilometers: UILabelDeviceClass!
+    @IBOutlet weak var lblTimeDuration: UILabelDeviceClass!
     @IBOutlet weak var btnNext: UIButtonDeviceClass!
     
     var locationPickerType = LocationPickerType.pickUp
@@ -100,6 +102,10 @@ extension Home{
         let userName = AppStateManager.sharedInstance.loggedInUser.user?.firstName ?? ""
         let greetings = "\(Strings.HEY.text) \(userName) \(Strings.PLEASE_SELECT_PICKUP_AND_DROPOFF_LOCATION.text)"
         self.lblGreetingText.text = greetings
+    }
+    private func setDistanceAndTimeDuration(){
+        self.lblKilometers.text = "\(self.getDistance() ?? 0)"
+        self.lblTimeDuration.text = self.routeDuration ?? ""
     }
     private func setGMSMapView(){
         self.mapView.delegate = self
@@ -416,6 +422,8 @@ extension Home{
             self.polyline.strokeWidth = 3.0
             self.polyline.map = self.mapView
             self.fitAllMarkersBounds()
+            
+            self.setDistanceAndTimeDuration()
         }
     }
     private func getDistance()->Int?{
