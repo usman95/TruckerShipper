@@ -23,16 +23,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "86D30C3A-898A-4D7C-9DBE-909E1FBB5D5F"
+            uuid = "CA7957BB-149D-45B2-82D8-5087E1E0F030"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "TruckerShipper/Modules/Home/Controllers/Notifications/Notifications.swift"
+            filePath = "TruckerShipper/AppDelegate/AppDelegate.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "122"
-            endingLineNumber = "122"
-            landmarkName = "getNotifications()"
+            startingLineNumber = "89"
+            endingLineNumber = "89"
+            landmarkName = "messaging(_:didReceiveRegistrationToken:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

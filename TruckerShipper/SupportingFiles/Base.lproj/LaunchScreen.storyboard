@@ -16,13 +16,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Splash" translatesAutoresizingMaskIntoConstraints="NO" id="TpI-PN-aIv">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <rect key="frame" x="-4" y="0.0" width="418" height="896"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="TpI-PN-aIv" secondAttribute="bottom" id="ARn-mr-O4r"/>
-                            <constraint firstItem="TpI-PN-aIv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="JjX-eX-9ab"/>
+                            <constraint firstItem="TpI-PN-aIv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="-4" id="JjX-eX-9ab"/>
                             <constraint firstItem="TpI-PN-aIv" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="gP9-7f-xo7"/>
                             <constraint firstItem="TpI-PN-aIv" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="h1J-v3-Yeh"/>
                         </constraints>

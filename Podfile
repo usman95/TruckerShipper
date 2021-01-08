@@ -24,5 +24,7 @@ target 'TruckerShipper' do
   pod 'GoogleMaps'
   pod 'GooglePlaces'
   pod 'Socket.IO-Client-Swift', '~> 15.1.0'
+  pod 'Firebase/Analytics'
+  pod 'Firebase/Messaging'
   
 end
