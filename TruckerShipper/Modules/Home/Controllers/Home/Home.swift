@@ -57,7 +57,6 @@ class Home: BaseController {
     }
     
     @IBAction func onBtnPickUpTick(_ sender: UIButton) {
-        return
 //        if self.btnPickUpTick.isSelected{return}
 //        self.btnPickUpTick.isSelected = true
 //        self.btnDropOffTick.isSelected = false
@@ -65,7 +64,6 @@ class Home: BaseController {
 //        self.showPicker()
     }
     @IBAction func onBtnDropOffTick(_ sender: UIButton) {
-        return
 //        if self.btnDropOffTick.isSelected{return}
 //        self.btnDropOffTick.isSelected = true
 //        self.btnPickUpTick.isSelected = false
