@@ -37,7 +37,7 @@
                     </connections>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Clm-lx-ppa" customClass="CardView" customModule="PakGo_Shipper" customModuleProvider="target">
-                    <rect key="frame" x="20" y="140" width="335" height="176"/>
+                    <rect key="frame" x="20" y="140" width="335" height="184"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hey! User please select pickup &amp; dropoff location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jxC-gM-7Bz" customClass="UILabelDeviceClass" customModule="PakGo_Shipper" customModuleProvider="target">
                             <rect key="frame" x="12" y="10" width="291.66666666666669" height="14.333333333333336"/>
@@ -52,7 +52,7 @@
                             </userDefinedRuntimeAttributes>
                         </label>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="woY-Pt-6SK">
-                            <rect key="frame" x="0.0" y="32.333333333333343" width="34" height="143.66666666666666"/>
+                            <rect key="frame" x="0.0" y="32.333333333333343" width="34" height="151.66666666666666"/>
                             <subviews>
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PickUpPin" translatesAutoresizingMaskIntoConstraints="NO" id="tqr-X5-5tv">
                                     <rect key="frame" x="15" y="13" width="16" height="15.333333333333336"/>
@@ -96,8 +96,8 @@
                                         <userDefinedRuntimeAttribute type="string" keyPath="iPhoneFontWeight" value="bold"/>
                                     </userDefinedRuntimeAttributes>
                                 </label>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="City" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fRs-rk-JaB" customClass="UILabelDeviceClass" customModule="PakGo_Shipper" customModuleProvider="target">
-                                    <rect key="frame" x="0.0" y="10.999999999999998" width="30.666666666666668" height="19.333333333333329"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pickup City" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fRs-rk-JaB" customClass="UILabelDeviceClass" customModule="PakGo_Shipper" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="10.999999999999998" width="86" height="19.333333333333329"/>
                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
                                     <color key="textColor" red="0.3254511356" green="0.32551270719999997" blue="0.32544726130000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <nil key="highlightedColor"/>
@@ -108,8 +108,8 @@
                                         <userDefinedRuntimeAttribute type="string" keyPath="iPhoneFontWeight" value="bold"/>
                                     </userDefinedRuntimeAttributes>
                                 </label>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5H4-jV-UAx" customClass="UILabelDeviceClass" customModule="PakGo_Shipper" customModuleProvider="target">
-                                    <rect key="frame" x="0.0" y="32.333333333333314" width="53" height="17"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pickup Address" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5H4-jV-UAx" customClass="UILabelDeviceClass" customModule="PakGo_Shipper" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="32.333333333333314" width="100.33333333333333" height="17"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                     <color key="textColor" red="0.45484960079999998" green="0.45493203399999999" blue="0.45484435560000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <nil key="highlightedColor"/>
@@ -176,8 +176,8 @@
                                         <userDefinedRuntimeAttribute type="string" keyPath="iPhoneFontWeight" value="bold"/>
                                     </userDefinedRuntimeAttributes>
                                 </label>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="City" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dUu-DJ-HRA" customClass="UILabelDeviceClass" customModule="PakGo_Shipper" customModuleProvider="target">
-                                    <rect key="frame" x="0.0" y="10.999999999999998" width="30.666666666666668" height="19.333333333333329"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DropOff City" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dUu-DJ-HRA" customClass="UILabelDeviceClass" customModule="PakGo_Shipper" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="10.999999999999998" width="95.666666666666671" height="19.333333333333329"/>
                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
                                     <color key="textColor" red="0.3254511356" green="0.32551270719999997" blue="0.32544726130000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <nil key="highlightedColor"/>
@@ -188,8 +188,8 @@
                                         <userDefinedRuntimeAttribute type="string" keyPath="iPhoneFontWeight" value="bold"/>
                                     </userDefinedRuntimeAttributes>
                                 </label>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lyw-yx-Kqu" customClass="UILabelDeviceClass" customModule="PakGo_Shipper" customModuleProvider="target">
-                                    <rect key="frame" x="0.0" y="32.333333333333343" width="53" height="17"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DropOff Address" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lyw-yx-Kqu" customClass="UILabelDeviceClass" customModule="PakGo_Shipper" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="32.333333333333343" width="108.66666666666667" height="17"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                     <color key="textColor" red="0.45484960079999998" green="0.45493203399999999" blue="0.45484435560000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <nil key="highlightedColor"/>
@@ -315,7 +315,7 @@
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstItem="d5G-LB-AT0" firstAttribute="leading" secondItem="VGH-Ki-6Lj" secondAttribute="leading" id="1F6-tG-APE"/>
-                        <constraint firstAttribute="bottom" secondItem="E9s-iO-6Ch" secondAttribute="bottom" constant="4" id="5OB-zj-tzh"/>
+                        <constraint firstAttribute="bottom" secondItem="E9s-iO-6Ch" secondAttribute="bottom" constant="12" id="5OB-zj-tzh"/>
                         <constraint firstItem="E9s-iO-6Ch" firstAttribute="top" secondItem="rtY-M5-5Db" secondAttribute="bottom" constant="4" id="5Yd-99-9iD"/>
                         <constraint firstItem="sUK-uJ-2Xh" firstAttribute="centerY" secondItem="VGH-Ki-6Lj" secondAttribute="centerY" id="5d8-sM-CKC"/>
                         <constraint firstAttribute="trailing" secondItem="sUK-uJ-2Xh" secondAttribute="trailing" constant="8" id="Caj-vP-ZIT"/>

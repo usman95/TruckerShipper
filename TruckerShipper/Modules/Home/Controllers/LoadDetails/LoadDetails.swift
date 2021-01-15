@@ -12,6 +12,13 @@ import DropDown
 
 class LoadDetails: BaseController {
 
+    @IBOutlet weak var lblPickUpTitle: UILabelDeviceClass!
+    @IBOutlet weak var lblDropOffTitle: UILabelDeviceClass!
+    @IBOutlet weak var lblPickUp: UILabelDeviceClass!
+    @IBOutlet weak var lblDropOff: UILabelDeviceClass!
+    @IBOutlet weak var lblKilometers: UILabelDeviceClass!
+    @IBOutlet weak var lblTimeDuration: UILabelDeviceClass!
+    
     @IBOutlet weak var tfWeightPerTruck: UITextFieldDeviceClass!
     @IBOutlet weak var tfSizePerTruck: UITextFieldDeviceClass!
     @IBOutlet weak var tfCommodity: UITextFieldDeviceClass!
@@ -41,6 +48,7 @@ class LoadDetails: BaseController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.setData()
         self.callAPIs()
         // Do any additional setup after loading the view.
     }
@@ -78,6 +86,18 @@ class LoadDetails: BaseController {
 }
 //MARK:- Helper methods
 extension LoadDetails{
+    private func setData(){
+        guard let data = self.locationAttribute else {return}
+        guard let pickUp = data["pickup"] as? [String:Any] else {return}
+        guard let dropOff = data["dropOff"] as? [String:Any] else {return}
+        
+        self.lblPickUpTitle.text = pickUp["city"] as? String ?? ""
+        self.lblDropOffTitle.text = dropOff["city"] as? String ?? ""
+        self.lblPickUp.text = pickUp["address"] as? String ?? ""
+        self.lblDropOff.text = dropOff["address"] as? String ?? ""
+        self.lblKilometers.text = "\(data["totalDistance"] as? Int ?? 0)"
+        self.lblTimeDuration.text = data["totalDuration"] as? String ?? ""
+    }
     private func callAPIs(){
         self.getSizePerTruck(showDropDown: false)
         self.getCommodity()

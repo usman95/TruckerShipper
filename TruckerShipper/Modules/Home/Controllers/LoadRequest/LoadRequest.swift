@@ -16,6 +16,8 @@ class LoadRequest: BaseController {
     @IBOutlet weak var lblDropOffCity: UILabelDeviceClass!
     @IBOutlet weak var lblPickUpAddress: UILabelDeviceClass!
     @IBOutlet weak var lblDropOffAddress: UILabelDeviceClass!
+    @IBOutlet weak var lblKilometers: UILabelDeviceClass!
+    @IBOutlet weak var lblTimeDuration: UILabelDeviceClass!
     
     @IBOutlet weak var tfPickUpDetailsFullName: UITextFieldDeviceClass!
     @IBOutlet weak var tfPickUpDetailsPhoneNumber: UITextFieldDeviceClass!
@@ -128,7 +130,7 @@ class LoadRequest: BaseController {
 extension LoadRequest{
     private func setData(){
         if let loadDetails = self.loadDetails{
-            loadDetails.printJson()
+            
             if let pickup = loadDetails["pickup"] as? [String:Any]{
                 let city = pickup["city"] as? String ?? ""
                 let address = pickup["address"] as? String ?? ""
@@ -147,6 +149,9 @@ extension LoadRequest{
                 
                 self.tfDropOffDetailsCity.text = city
             }
+            
+            self.lblKilometers.text = "\(loadDetails["totalDistance"] as? Int ?? 0)"
+            self.lblTimeDuration.text = loadDetails["totalDuration"] as? String ?? ""
             
             let route = loadDetails["route"] as? String ?? ""
             self.selectedRoute = route

@@ -11,6 +11,12 @@
             <connections>
                 <outlet property="btnCalculateRate" destination="5SX-hh-g9E" id="ZCi-3m-AeK"/>
                 <outlet property="lblCargoItemRateId" destination="liD-eC-8pA" id="YVj-e6-593"/>
+                <outlet property="lblDropOff" destination="Gsj-b4-MuW" id="s9w-6V-xMt"/>
+                <outlet property="lblDropOffTitle" destination="Ajd-qT-B2M" id="BSd-Gp-53h"/>
+                <outlet property="lblKilometers" destination="XIq-36-vqi" id="iME-j2-Adl"/>
+                <outlet property="lblPickUp" destination="oDm-Ho-nIX" id="FQE-DI-d5w"/>
+                <outlet property="lblPickUpTitle" destination="yc0-pN-pBg" id="dXD-um-s16"/>
+                <outlet property="lblTimeDuration" destination="602-hi-dfe" id="SEL-zk-Qvf"/>
                 <outlet property="tfCargoType" destination="IXG-7e-djY" id="C0Z-sI-BGv"/>
                 <outlet property="tfCommodity" destination="BUB-VU-DKf" id="cFj-bf-bak"/>
                 <outlet property="tfQuantity" destination="6wl-LA-W5X" id="YGK-z9-PV3"/>
@@ -72,342 +78,622 @@
                         <constraint firstItem="mSU-GI-u1Z" firstAttribute="leading" secondItem="S8i-9J-Yqs" secondAttribute="trailing" constant="12" id="hrb-TA-NyL"/>
                     </constraints>
                 </view>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Load Details" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vHV-En-fXf" customClass="UILabelDeviceClass" customModule="PakGo_Shipper" customModuleProvider="target">
-                    <rect key="frame" x="148" y="144" width="118" height="26.5"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                    <color key="textColor" red="0.30976641179999997" green="0.30982545020000002" blue="0.30976271630000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    <nil key="highlightedColor"/>
-                    <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="number" keyPath="iPhoneFontSize">
-                            <real key="value" value="22"/>
-                        </userDefinedRuntimeAttribute>
-                        <userDefinedRuntimeAttribute type="string" keyPath="iPhoneFontWeight" value="bold"/>
-                    </userDefinedRuntimeAttributes>
-                </label>
-                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="PAP-uo-mzh">
-                    <rect key="frame" x="32" y="190.5" width="350" height="356"/>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LEm-5y-GtT">
+                    <rect key="frame" x="0.0" y="124" width="414" height="738"/>
                     <subviews>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IrV-46-Jc6">
-                            <rect key="frame" x="0.0" y="0.0" width="350" height="60"/>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KmV-Rq-UER">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="726"/>
                             <subviews>
-                                <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Commodity" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BUB-VU-DKf" customClass="UITextFieldDeviceClass" customModule="PakGo_Shipper" customModuleProvider="target">
-                                    <rect key="frame" x="20" y="0.0" width="288" height="60"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                    <textInputTraits key="textInputTraits"/>
-                                    <userDefinedRuntimeAttributes>
-                                        <userDefinedRuntimeAttribute type="number" keyPath="iPhoneFontSize">
-                                            <real key="value" value="14"/>
-                                        </userDefinedRuntimeAttribute>
-                                        <userDefinedRuntimeAttribute type="string" keyPath="iPhoneFontWeight" value="medium"/>
-                                    </userDefinedRuntimeAttributes>
-                                </textField>
-                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="255" verticalHuggingPriority="251" horizontalCompressionResistancePriority="755" image="arrowRight" translatesAutoresizingMaskIntoConstraints="NO" id="eWq-KL-AgV">
-                                    <rect key="frame" x="316" y="25" width="10" height="10"/>
-                                    <constraints>
-                                        <constraint firstAttribute="width" constant="10" id="kco-Fx-1Jd"/>
-                                        <constraint firstAttribute="height" constant="10" id="mCJ-v5-sDA"/>
-                                    </constraints>
-                                </imageView>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EBZ-6K-d6s">
-                                    <rect key="frame" x="0.0" y="0.0" width="350" height="60"/>
-                                    <connections>
-                                        <action selector="onBtnCommodity:" destination="-1" eventType="touchUpInside" id="9Ct-0Q-fK6"/>
-                                    </connections>
-                                </button>
-                            </subviews>
-                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                            <constraints>
-                                <constraint firstAttribute="trailing" secondItem="EBZ-6K-d6s" secondAttribute="trailing" id="3v2-4s-pVB"/>
-                                <constraint firstAttribute="bottom" secondItem="BUB-VU-DKf" secondAttribute="bottom" id="Cw3-GE-uLY"/>
-                                <constraint firstItem="EBZ-6K-d6s" firstAttribute="leading" secondItem="IrV-46-Jc6" secondAttribute="leading" id="GsO-M7-ywY"/>
-                                <constraint firstItem="eWq-KL-AgV" firstAttribute="leading" secondItem="BUB-VU-DKf" secondAttribute="trailing" constant="8" id="NQK-ie-HjJ"/>
-                                <constraint firstItem="BUB-VU-DKf" firstAttribute="top" secondItem="IrV-46-Jc6" secondAttribute="top" id="ONh-p7-7Q1"/>
-                                <constraint firstItem="eWq-KL-AgV" firstAttribute="centerY" secondItem="IrV-46-Jc6" secondAttribute="centerY" id="RAp-FJ-I2E"/>
-                                <constraint firstItem="EBZ-6K-d6s" firstAttribute="top" secondItem="IrV-46-Jc6" secondAttribute="top" id="bjR-AB-1ae"/>
-                                <constraint firstItem="BUB-VU-DKf" firstAttribute="leading" secondItem="IrV-46-Jc6" secondAttribute="leading" constant="20" id="ccS-RZ-RhW"/>
-                                <constraint firstAttribute="bottom" secondItem="EBZ-6K-d6s" secondAttribute="bottom" id="h0F-Kh-eE6"/>
-                            </constraints>
-                            <userDefinedRuntimeAttributes>
-                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                    <real key="value" value="4"/>
-                                </userDefinedRuntimeAttribute>
-                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                    <real key="value" value="1"/>
-                                </userDefinedRuntimeAttribute>
-                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                    <color key="value" red="0.85480856900000002" green="0.85495573280000003" blue="0.85479927060000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </userDefinedRuntimeAttribute>
-                            </userDefinedRuntimeAttributes>
-                        </view>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Moq-gn-oWU">
-                            <rect key="frame" x="0.0" y="74" width="350" height="60"/>
-                            <subviews>
-                                <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Cargo Type" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IXG-7e-djY" customClass="UITextFieldDeviceClass" customModule="PakGo_Shipper" customModuleProvider="target">
-                                    <rect key="frame" x="20" y="0.0" width="288" height="60"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                    <textInputTraits key="textInputTraits"/>
-                                    <userDefinedRuntimeAttributes>
-                                        <userDefinedRuntimeAttribute type="number" keyPath="iPhoneFontSize">
-                                            <real key="value" value="14"/>
-                                        </userDefinedRuntimeAttribute>
-                                        <userDefinedRuntimeAttribute type="string" keyPath="iPhoneFontWeight" value="medium"/>
-                                    </userDefinedRuntimeAttributes>
-                                </textField>
-                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="255" verticalHuggingPriority="251" horizontalCompressionResistancePriority="755" image="dropDownBlack" translatesAutoresizingMaskIntoConstraints="NO" id="Tkc-6C-DkG">
-                                    <rect key="frame" x="316" y="25" width="10" height="10"/>
-                                </imageView>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Xr-Wb-IVU">
-                                    <rect key="frame" x="0.0" y="0.0" width="350" height="60"/>
-                                    <connections>
-                                        <action selector="onBtnCargoType:" destination="-1" eventType="touchUpInside" id="kPr-7Y-liL"/>
-                                    </connections>
-                                </button>
-                            </subviews>
-                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                            <constraints>
-                                <constraint firstItem="IXG-7e-djY" firstAttribute="leading" secondItem="Moq-gn-oWU" secondAttribute="leading" constant="20" id="0or-lX-hpv"/>
-                                <constraint firstItem="Tkc-6C-DkG" firstAttribute="leading" secondItem="IXG-7e-djY" secondAttribute="trailing" constant="8" id="5vZ-ez-J75"/>
-                                <constraint firstItem="Tkc-6C-DkG" firstAttribute="centerY" secondItem="Moq-gn-oWU" secondAttribute="centerY" id="UCN-j7-LZN"/>
-                                <constraint firstAttribute="trailing" secondItem="7Xr-Wb-IVU" secondAttribute="trailing" id="cdi-Nx-CVC"/>
-                                <constraint firstItem="7Xr-Wb-IVU" firstAttribute="top" secondItem="Moq-gn-oWU" secondAttribute="top" id="eoI-bJ-mAo"/>
-                                <constraint firstItem="IXG-7e-djY" firstAttribute="top" secondItem="Moq-gn-oWU" secondAttribute="top" id="hFN-1Z-y4i"/>
-                                <constraint firstItem="7Xr-Wb-IVU" firstAttribute="leading" secondItem="Moq-gn-oWU" secondAttribute="leading" id="i43-Vk-dSw"/>
-                                <constraint firstAttribute="bottom" secondItem="IXG-7e-djY" secondAttribute="bottom" id="jg1-XJ-DgD"/>
-                                <constraint firstAttribute="trailing" secondItem="Tkc-6C-DkG" secondAttribute="trailing" constant="24" id="vSq-NM-Nlk"/>
-                                <constraint firstAttribute="bottom" secondItem="7Xr-Wb-IVU" secondAttribute="bottom" id="wjx-4P-a9y"/>
-                            </constraints>
-                            <userDefinedRuntimeAttributes>
-                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                    <real key="value" value="4"/>
-                                </userDefinedRuntimeAttribute>
-                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                    <real key="value" value="1"/>
-                                </userDefinedRuntimeAttribute>
-                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                    <color key="value" red="0.85480856900000002" green="0.85495573280000003" blue="0.85479927060000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </userDefinedRuntimeAttribute>
-                            </userDefinedRuntimeAttributes>
-                        </view>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NRL-pi-Lv1">
-                            <rect key="frame" x="0.0" y="148" width="350" height="60"/>
-                            <subviews>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TOH-DM-Wk2">
-                                    <rect key="frame" x="0.0" y="0.0" width="44" height="60"/>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g2x-Lr-x7w" customClass="CardView" customModule="PakGo_Shipper" customModuleProvider="target">
+                                    <rect key="frame" x="32" y="20" width="350" height="164"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ton" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="liD-eC-8pA" customClass="UILabelDeviceClass" customModule="PakGo_Shipper" customModuleProvider="target">
-                                            <rect key="frame" x="10.5" y="22" width="22.5" height="16"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                            <color key="textColor" red="0.32937228680000002" green="0.32943451400000001" blue="0.32936835289999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <nil key="highlightedColor"/>
-                                            <userDefinedRuntimeAttributes>
-                                                <userDefinedRuntimeAttribute type="number" keyPath="iPhoneFontSize">
-                                                    <real key="value" value="13"/>
-                                                </userDefinedRuntimeAttribute>
-                                                <userDefinedRuntimeAttribute type="string" keyPath="iPhoneFontWeight" value="bold"/>
-                                            </userDefinedRuntimeAttributes>
-                                        </label>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HPh-vF-24y">
+                                            <rect key="frame" x="0.0" y="12" width="34" height="152"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PickUpPin" translatesAutoresizingMaskIntoConstraints="NO" id="T2n-Tq-mkW">
+                                                    <rect key="frame" x="15" y="13" width="16" height="15.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="16" id="KD9-Jq-72I"/>
+                                                        <constraint firstAttribute="width" secondItem="T2n-Tq-mkW" secondAttribute="height" multiplier="21:20" id="lpx-bC-iQc"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="RouteLine" translatesAutoresizingMaskIntoConstraints="NO" id="ae4-UQ-SJW">
+                                                    <rect key="frame" x="17" y="34.5" width="12.5" height="42"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="42" id="q0v-11-Afg"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DropOffPin" translatesAutoresizingMaskIntoConstraints="NO" id="oji-Io-5Er">
+                                                    <rect key="frame" x="12" y="77" width="22" height="20.5"/>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="oji-Io-5Er" firstAttribute="centerX" secondItem="HPh-vF-24y" secondAttribute="centerX" constant="6" id="3N7-Zk-dsK"/>
+                                                <constraint firstAttribute="width" constant="34" id="4RL-Ou-hUs"/>
+                                                <constraint firstItem="T2n-Tq-mkW" firstAttribute="centerX" secondItem="HPh-vF-24y" secondAttribute="centerX" constant="6" id="4fj-qS-oEJ"/>
+                                                <constraint firstAttribute="trailing" secondItem="oji-Io-5Er" secondAttribute="trailing" id="EFZ-mz-AWG"/>
+                                                <constraint firstItem="ae4-UQ-SJW" firstAttribute="centerX" secondItem="T2n-Tq-mkW" secondAttribute="centerX" id="T3A-XV-50E"/>
+                                                <constraint firstItem="ae4-UQ-SJW" firstAttribute="top" secondItem="T2n-Tq-mkW" secondAttribute="bottom" constant="6" id="jon-z4-Wqh"/>
+                                                <constraint firstItem="oji-Io-5Er" firstAttribute="width" secondItem="oji-Io-5Er" secondAttribute="height" multiplier="21:20" id="pIZ-cx-LcK"/>
+                                            </constraints>
+                                        </view>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Ht-92-cwX">
+                                            <rect key="frame" x="34" y="12" width="304" height="49.5"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pickup Point" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ygg-Dt-k4K" customClass="UILabelDeviceClass" customModule="PakGo_Shipper" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="0.0" width="63" height="12"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="10"/>
+                                                    <color key="textColor" red="0.70188313719999995" green="0.70200556520000001" blue="0.70187538859999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="iPhoneFontSize">
+                                                            <real key="value" value="10"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="iPhoneFontWeight" value="bold"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="City" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yc0-pN-pBg" customClass="UILabelDeviceClass" customModule="PakGo_Shipper" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="11" width="30.5" height="19.5"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                                    <color key="textColor" red="0.3254511356" green="0.32551270719999997" blue="0.32544726130000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="iPhoneFontSize">
+                                                            <real key="value" value="16"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="iPhoneFontWeight" value="bold"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oDm-Ho-nIX" customClass="UILabelDeviceClass" customModule="PakGo_Shipper" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="32.5" width="53" height="17"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <color key="textColor" red="0.45484960079999998" green="0.45493203399999999" blue="0.45484435560000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="iPhoneFontSize">
+                                                            <real key="value" value="14"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="iPhoneFontWeight" value="bold"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="oDm-Ho-nIX" secondAttribute="trailing" id="GvJ-6X-NFR"/>
+                                                <constraint firstItem="yc0-pN-pBg" firstAttribute="leading" secondItem="ygg-Dt-k4K" secondAttribute="leading" id="JrF-sX-eWq"/>
+                                                <constraint firstItem="yc0-pN-pBg" firstAttribute="top" secondItem="ygg-Dt-k4K" secondAttribute="bottom" constant="-1" id="MTi-ZP-Omc"/>
+                                                <constraint firstItem="oDm-Ho-nIX" firstAttribute="top" secondItem="yc0-pN-pBg" secondAttribute="bottom" constant="2" id="RV8-0a-aW5"/>
+                                                <constraint firstItem="ygg-Dt-k4K" firstAttribute="leading" secondItem="4Ht-92-cwX" secondAttribute="leading" id="Ylz-jM-Tj8"/>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="yc0-pN-pBg" secondAttribute="trailing" id="bf3-Xt-ptS"/>
+                                                <constraint firstItem="oDm-Ho-nIX" firstAttribute="leading" secondItem="yc0-pN-pBg" secondAttribute="leading" id="bnG-Wo-OhW"/>
+                                                <constraint firstAttribute="bottom" secondItem="oDm-Ho-nIX" secondAttribute="bottom" id="fFW-dy-cKM"/>
+                                                <constraint firstItem="ygg-Dt-k4K" firstAttribute="top" secondItem="4Ht-92-cwX" secondAttribute="top" id="p5j-Tl-ovi"/>
+                                            </constraints>
+                                        </view>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6wi-Sh-BFu">
+                                            <rect key="frame" x="34" y="69.5" width="284" height="1"/>
+                                            <color key="backgroundColor" red="0.94509953260000001" green="0.94121956829999998" blue="0.94101774689999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="1" id="qWl-2K-BSn"/>
+                                            </constraints>
+                                        </view>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LNk-6g-aaJ">
+                                            <rect key="frame" x="34" y="78.5" width="304" height="49.5"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dropoff Point" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gJ3-9q-8QK" customClass="UILabelDeviceClass" customModule="PakGo_Shipper" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="0.0" width="67.5" height="12"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="10"/>
+                                                    <color key="textColor" red="0.70188313719999995" green="0.70200556520000001" blue="0.70187538859999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="iPhoneFontSize">
+                                                            <real key="value" value="10"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="iPhoneFontWeight" value="bold"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="City" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ajd-qT-B2M" customClass="UILabelDeviceClass" customModule="PakGo_Shipper" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="11" width="30.5" height="19.5"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                                    <color key="textColor" red="0.3254511356" green="0.32551270719999997" blue="0.32544726130000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="iPhoneFontSize">
+                                                            <real key="value" value="16"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="iPhoneFontWeight" value="bold"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gsj-b4-MuW" customClass="UILabelDeviceClass" customModule="PakGo_Shipper" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="32.5" width="53" height="17"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <color key="textColor" red="0.45484960079999998" green="0.45493203399999999" blue="0.45484435560000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="iPhoneFontSize">
+                                                            <real key="value" value="14"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="iPhoneFontWeight" value="bold"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="gJ3-9q-8QK" firstAttribute="top" secondItem="LNk-6g-aaJ" secondAttribute="top" id="4bA-r5-8cB"/>
+                                                <constraint firstItem="Gsj-b4-MuW" firstAttribute="top" secondItem="Ajd-qT-B2M" secondAttribute="bottom" constant="2" id="ATZ-VT-J7F"/>
+                                                <constraint firstItem="Ajd-qT-B2M" firstAttribute="top" secondItem="gJ3-9q-8QK" secondAttribute="bottom" constant="-1" id="Ctb-hj-tsV"/>
+                                                <constraint firstItem="Ajd-qT-B2M" firstAttribute="leading" secondItem="gJ3-9q-8QK" secondAttribute="leading" id="O1d-dC-vXQ"/>
+                                                <constraint firstItem="Gsj-b4-MuW" firstAttribute="leading" secondItem="Ajd-qT-B2M" secondAttribute="leading" id="Tul-WJ-mCa"/>
+                                                <constraint firstAttribute="bottom" secondItem="Gsj-b4-MuW" secondAttribute="bottom" id="UZI-Lt-n1D"/>
+                                                <constraint firstItem="gJ3-9q-8QK" firstAttribute="leading" secondItem="LNk-6g-aaJ" secondAttribute="leading" id="Vhc-G6-9Js"/>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Ajd-qT-B2M" secondAttribute="trailing" id="Wk5-Qh-wLR"/>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Gsj-b4-MuW" secondAttribute="trailing" id="lLG-dh-iyv"/>
+                                            </constraints>
+                                        </view>
+                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="NzZ-hi-2j5">
+                                            <rect key="frame" x="12" y="132" width="326" height="20"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xkr-Z3-OjU">
+                                                    <rect key="frame" x="0.0" y="0.0" width="163" height="20"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kilometers:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nwj-pI-Bmn" customClass="UILabelDeviceClass" customModule="PakGo_Shipper" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="3" width="67.5" height="14.5"/>
+                                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="12"/>
+                                                            <color key="textColor" red="0.0" green="0.2802670002" blue="0.61960784310000006" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="iPhoneFontSize">
+                                                                    <real key="value" value="12"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="string" keyPath="iPhoneFontWeight" value="bold"/>
+                                                            </userDefinedRuntimeAttributes>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="N/A" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XIq-36-vqi" customClass="UILabelDeviceClass" customModule="PakGo_Shipper" customModuleProvider="target">
+                                                            <rect key="frame" x="71.5" y="3" width="22" height="14.5"/>
+                                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="12"/>
+                                                            <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="iPhoneFontSize">
+                                                                    <real key="value" value="12"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="string" keyPath="iPhoneFontWeight" value="bold"/>
+                                                            </userDefinedRuntimeAttributes>
+                                                        </label>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstItem="nwj-pI-Bmn" firstAttribute="centerY" secondItem="xkr-Z3-OjU" secondAttribute="centerY" id="SYz-ce-hOy"/>
+                                                        <constraint firstItem="XIq-36-vqi" firstAttribute="centerY" secondItem="xkr-Z3-OjU" secondAttribute="centerY" id="Xdm-Ak-SCE"/>
+                                                        <constraint firstItem="XIq-36-vqi" firstAttribute="leading" secondItem="nwj-pI-Bmn" secondAttribute="trailing" constant="4" id="fv1-KU-PYg"/>
+                                                        <constraint firstItem="nwj-pI-Bmn" firstAttribute="leading" secondItem="xkr-Z3-OjU" secondAttribute="leading" id="zpE-Po-AEh"/>
+                                                    </constraints>
+                                                </view>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="53J-7h-N2a">
+                                                    <rect key="frame" x="163" y="0.0" width="163" height="20"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2LW-aX-Z6a" customClass="UILabelDeviceClass" customModule="PakGo_Shipper" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="3" width="33" height="14.5"/>
+                                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="12"/>
+                                                            <color key="textColor" red="0.0" green="0.2802670002" blue="0.61960784310000006" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="iPhoneFontSize">
+                                                                    <real key="value" value="12"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="string" keyPath="iPhoneFontWeight" value="bold"/>
+                                                            </userDefinedRuntimeAttributes>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="N/A" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="602-hi-dfe" customClass="UILabelDeviceClass" customModule="PakGo_Shipper" customModuleProvider="target">
+                                                            <rect key="frame" x="37" y="3" width="22" height="14.5"/>
+                                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="12"/>
+                                                            <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="iPhoneFontSize">
+                                                                    <real key="value" value="12"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="string" keyPath="iPhoneFontWeight" value="bold"/>
+                                                            </userDefinedRuntimeAttributes>
+                                                        </label>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstItem="2LW-aX-Z6a" firstAttribute="leading" secondItem="53J-7h-N2a" secondAttribute="leading" id="Yf4-F6-35o"/>
+                                                        <constraint firstItem="2LW-aX-Z6a" firstAttribute="centerY" secondItem="53J-7h-N2a" secondAttribute="centerY" id="bWc-DM-nUy"/>
+                                                        <constraint firstItem="602-hi-dfe" firstAttribute="centerY" secondItem="53J-7h-N2a" secondAttribute="centerY" id="dhV-tG-td0"/>
+                                                        <constraint firstItem="602-hi-dfe" firstAttribute="leading" secondItem="2LW-aX-Z6a" secondAttribute="trailing" constant="4" id="xOf-IZ-K6t"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="20" id="xtr-wF-Aup"/>
+                                            </constraints>
+                                        </stackView>
                                     </subviews>
-                                    <color key="backgroundColor" red="0.95675891639999999" green="0.95692259069999996" blue="0.95674854519999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
-                                        <constraint firstItem="liD-eC-8pA" firstAttribute="centerX" secondItem="TOH-DM-Wk2" secondAttribute="centerX" id="5Q3-F3-HSJ"/>
-                                        <constraint firstItem="liD-eC-8pA" firstAttribute="centerY" secondItem="TOH-DM-Wk2" secondAttribute="centerY" id="It1-3f-UB9"/>
+                                        <constraint firstItem="4Ht-92-cwX" firstAttribute="top" secondItem="HPh-vF-24y" secondAttribute="top" id="0ch-5u-drj"/>
+                                        <constraint firstItem="HPh-vF-24y" firstAttribute="leading" secondItem="g2x-Lr-x7w" secondAttribute="leading" id="0eq-oR-g6y"/>
+                                        <constraint firstItem="LNk-6g-aaJ" firstAttribute="trailing" secondItem="4Ht-92-cwX" secondAttribute="trailing" id="4aF-wl-2IT"/>
+                                        <constraint firstItem="NzZ-hi-2j5" firstAttribute="top" secondItem="LNk-6g-aaJ" secondAttribute="bottom" constant="4" id="APT-OX-Sfe"/>
+                                        <constraint firstItem="NzZ-hi-2j5" firstAttribute="leading" secondItem="g2x-Lr-x7w" secondAttribute="leading" constant="12" id="F3w-MS-Bqx"/>
+                                        <constraint firstItem="6wi-Sh-BFu" firstAttribute="top" secondItem="4Ht-92-cwX" secondAttribute="bottom" constant="8" id="LUl-Xh-rma"/>
+                                        <constraint firstItem="4Ht-92-cwX" firstAttribute="leading" secondItem="HPh-vF-24y" secondAttribute="trailing" id="SEv-vX-84W"/>
+                                        <constraint firstAttribute="bottom" secondItem="HPh-vF-24y" secondAttribute="bottom" id="UCf-Ah-7xO"/>
+                                        <constraint firstAttribute="bottom" secondItem="NzZ-hi-2j5" secondAttribute="bottom" constant="12" id="Xlz-Lq-BdV"/>
+                                        <constraint firstItem="oji-Io-5Er" firstAttribute="centerY" secondItem="Ajd-qT-B2M" secondAttribute="centerY" id="Zo7-dY-fbN"/>
+                                        <constraint firstItem="6wi-Sh-BFu" firstAttribute="leading" secondItem="4Ht-92-cwX" secondAttribute="leading" id="dOK-p1-Rcg"/>
+                                        <constraint firstItem="6wi-Sh-BFu" firstAttribute="trailing" secondItem="4Ht-92-cwX" secondAttribute="trailing" constant="-20" id="g0S-lH-ovS"/>
+                                        <constraint firstItem="LNk-6g-aaJ" firstAttribute="top" secondItem="6wi-Sh-BFu" secondAttribute="bottom" constant="8" id="iVQ-e8-Hsr"/>
+                                        <constraint firstItem="T2n-Tq-mkW" firstAttribute="centerY" secondItem="yc0-pN-pBg" secondAttribute="centerY" id="jwx-Ck-XCd"/>
+                                        <constraint firstAttribute="trailing" secondItem="4Ht-92-cwX" secondAttribute="trailing" constant="12" id="mUD-ii-YT9"/>
+                                        <constraint firstItem="LNk-6g-aaJ" firstAttribute="leading" secondItem="4Ht-92-cwX" secondAttribute="leading" id="pmQ-0i-xcW"/>
+                                        <constraint firstItem="HPh-vF-24y" firstAttribute="top" secondItem="g2x-Lr-x7w" secondAttribute="top" constant="12" id="pyE-V6-mKT"/>
+                                        <constraint firstAttribute="trailing" secondItem="NzZ-hi-2j5" secondAttribute="trailing" constant="12" id="qYs-up-mya"/>
                                     </constraints>
-                                </view>
-                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Weight Per Transport Unit" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="beB-Mb-y6o" customClass="UITextFieldDeviceClass" customModule="PakGo_Shipper" customModuleProvider="target">
-                                    <rect key="frame" x="56" y="0.0" width="282" height="60"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                    <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                     <userDefinedRuntimeAttributes>
-                                        <userDefinedRuntimeAttribute type="color" keyPath="placeHolderColor">
-                                            <color key="value" red="0.65482908490000002" green="0.65494394300000003" blue="0.65482187270000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="4"/>
                                         </userDefinedRuntimeAttribute>
-                                        <userDefinedRuntimeAttribute type="number" keyPath="iPhoneFontSize">
-                                            <real key="value" value="14"/>
-                                        </userDefinedRuntimeAttribute>
-                                        <userDefinedRuntimeAttribute type="string" keyPath="iPhoneFontWeight" value="medium"/>
                                     </userDefinedRuntimeAttributes>
-                                </textField>
-                            </subviews>
-                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                            <constraints>
-                                <constraint firstAttribute="bottom" secondItem="beB-Mb-y6o" secondAttribute="bottom" id="AXg-Hn-mu1"/>
-                                <constraint firstItem="TOH-DM-Wk2" firstAttribute="width" secondItem="NRL-pi-Lv1" secondAttribute="width" multiplier="0.125" id="Hlt-Qe-zFh"/>
-                                <constraint firstItem="beB-Mb-y6o" firstAttribute="top" secondItem="NRL-pi-Lv1" secondAttribute="top" id="O9x-7l-7M6"/>
-                                <constraint firstAttribute="width" secondItem="NRL-pi-Lv1" secondAttribute="height" multiplier="35:6" id="htE-Cw-WFp"/>
-                                <constraint firstAttribute="trailing" secondItem="beB-Mb-y6o" secondAttribute="trailing" constant="12" id="kKn-ug-pag"/>
-                                <constraint firstItem="TOH-DM-Wk2" firstAttribute="top" secondItem="NRL-pi-Lv1" secondAttribute="top" id="mS3-97-SZu"/>
-                                <constraint firstItem="TOH-DM-Wk2" firstAttribute="leading" secondItem="NRL-pi-Lv1" secondAttribute="leading" id="uJ3-xd-CwC"/>
-                                <constraint firstAttribute="bottom" secondItem="TOH-DM-Wk2" secondAttribute="bottom" id="x5X-Tz-9mb"/>
-                                <constraint firstItem="beB-Mb-y6o" firstAttribute="leading" secondItem="TOH-DM-Wk2" secondAttribute="trailing" constant="12" id="z35-Hg-OFp"/>
-                            </constraints>
-                            <userDefinedRuntimeAttributes>
-                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                    <real key="value" value="4"/>
-                                </userDefinedRuntimeAttribute>
-                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                    <real key="value" value="1"/>
-                                </userDefinedRuntimeAttribute>
-                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                    <color key="value" red="0.85480856900000002" green="0.85495573280000003" blue="0.85479927060000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </userDefinedRuntimeAttribute>
-                            </userDefinedRuntimeAttributes>
-                        </view>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c7h-s2-f3I">
-                            <rect key="frame" x="0.0" y="222" width="350" height="60"/>
-                            <subviews>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Uk5-7K-7ai">
-                                    <rect key="frame" x="0.0" y="0.0" width="44" height="60"/>
+                                </view>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Load Details" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vHV-En-fXf" customClass="UILabelDeviceClass" customModule="PakGo_Shipper" customModuleProvider="target">
+                                    <rect key="frame" x="148" y="200" width="118" height="26.5"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                    <color key="textColor" red="0.30976641179999997" green="0.30982545020000002" blue="0.30976271630000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <nil key="highlightedColor"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="iPhoneFontSize">
+                                            <real key="value" value="22"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="iPhoneFontWeight" value="bold"/>
+                                    </userDefinedRuntimeAttributes>
+                                </label>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="PAP-uo-mzh">
+                                    <rect key="frame" x="32" y="246.5" width="350" height="356"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ft" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JeX-zJ-jM8" customClass="UILabelDeviceClass" customModule="PakGo_Shipper" customModuleProvider="target">
-                                            <rect key="frame" x="17" y="22" width="9.5" height="16"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                            <color key="textColor" red="0.32937228680000002" green="0.32943451400000001" blue="0.32936835289999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <nil key="highlightedColor"/>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IrV-46-Jc6">
+                                            <rect key="frame" x="0.0" y="0.0" width="350" height="60"/>
+                                            <subviews>
+                                                <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Commodity" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BUB-VU-DKf" customClass="UITextFieldDeviceClass" customModule="PakGo_Shipper" customModuleProvider="target">
+                                                    <rect key="frame" x="20" y="0.0" width="288" height="60"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="iPhoneFontSize">
+                                                            <real key="value" value="14"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="iPhoneFontWeight" value="medium"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                </textField>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="255" verticalHuggingPriority="251" horizontalCompressionResistancePriority="755" image="arrowRight" translatesAutoresizingMaskIntoConstraints="NO" id="eWq-KL-AgV">
+                                                    <rect key="frame" x="316" y="25" width="10" height="10"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="10" id="kco-Fx-1Jd"/>
+                                                        <constraint firstAttribute="height" constant="10" id="mCJ-v5-sDA"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EBZ-6K-d6s">
+                                                    <rect key="frame" x="0.0" y="0.0" width="350" height="60"/>
+                                                    <connections>
+                                                        <action selector="onBtnCommodity:" destination="-1" eventType="touchUpInside" id="9Ct-0Q-fK6"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="EBZ-6K-d6s" secondAttribute="trailing" id="3v2-4s-pVB"/>
+                                                <constraint firstAttribute="bottom" secondItem="BUB-VU-DKf" secondAttribute="bottom" id="Cw3-GE-uLY"/>
+                                                <constraint firstItem="EBZ-6K-d6s" firstAttribute="leading" secondItem="IrV-46-Jc6" secondAttribute="leading" id="GsO-M7-ywY"/>
+                                                <constraint firstItem="eWq-KL-AgV" firstAttribute="leading" secondItem="BUB-VU-DKf" secondAttribute="trailing" constant="8" id="NQK-ie-HjJ"/>
+                                                <constraint firstItem="BUB-VU-DKf" firstAttribute="top" secondItem="IrV-46-Jc6" secondAttribute="top" id="ONh-p7-7Q1"/>
+                                                <constraint firstItem="eWq-KL-AgV" firstAttribute="centerY" secondItem="IrV-46-Jc6" secondAttribute="centerY" id="RAp-FJ-I2E"/>
+                                                <constraint firstItem="EBZ-6K-d6s" firstAttribute="top" secondItem="IrV-46-Jc6" secondAttribute="top" id="bjR-AB-1ae"/>
+                                                <constraint firstItem="BUB-VU-DKf" firstAttribute="leading" secondItem="IrV-46-Jc6" secondAttribute="leading" constant="20" id="ccS-RZ-RhW"/>
+                                                <constraint firstAttribute="bottom" secondItem="EBZ-6K-d6s" secondAttribute="bottom" id="h0F-Kh-eE6"/>
+                                            </constraints>
                                             <userDefinedRuntimeAttributes>
-                                                <userDefinedRuntimeAttribute type="number" keyPath="iPhoneFontSize">
-                                                    <real key="value" value="13"/>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                    <real key="value" value="4"/>
                                                 </userDefinedRuntimeAttribute>
-                                                <userDefinedRuntimeAttribute type="string" keyPath="iPhoneFontWeight" value="bold"/>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                    <real key="value" value="1"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                    <color key="value" red="0.85480856900000002" green="0.85495573280000003" blue="0.85479927060000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </userDefinedRuntimeAttribute>
                                             </userDefinedRuntimeAttributes>
-                                        </label>
+                                        </view>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Moq-gn-oWU">
+                                            <rect key="frame" x="0.0" y="74" width="350" height="60"/>
+                                            <subviews>
+                                                <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Cargo Type" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IXG-7e-djY" customClass="UITextFieldDeviceClass" customModule="PakGo_Shipper" customModuleProvider="target">
+                                                    <rect key="frame" x="20" y="0.0" width="288" height="60"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="iPhoneFontSize">
+                                                            <real key="value" value="14"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="iPhoneFontWeight" value="medium"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                </textField>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="255" verticalHuggingPriority="251" horizontalCompressionResistancePriority="755" image="dropDownBlack" translatesAutoresizingMaskIntoConstraints="NO" id="Tkc-6C-DkG">
+                                                    <rect key="frame" x="316" y="25" width="10" height="10"/>
+                                                </imageView>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Xr-Wb-IVU">
+                                                    <rect key="frame" x="0.0" y="0.0" width="350" height="60"/>
+                                                    <connections>
+                                                        <action selector="onBtnCargoType:" destination="-1" eventType="touchUpInside" id="kPr-7Y-liL"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                            <constraints>
+                                                <constraint firstItem="IXG-7e-djY" firstAttribute="leading" secondItem="Moq-gn-oWU" secondAttribute="leading" constant="20" id="0or-lX-hpv"/>
+                                                <constraint firstItem="Tkc-6C-DkG" firstAttribute="leading" secondItem="IXG-7e-djY" secondAttribute="trailing" constant="8" id="5vZ-ez-J75"/>
+                                                <constraint firstItem="Tkc-6C-DkG" firstAttribute="centerY" secondItem="Moq-gn-oWU" secondAttribute="centerY" id="UCN-j7-LZN"/>
+                                                <constraint firstAttribute="trailing" secondItem="7Xr-Wb-IVU" secondAttribute="trailing" id="cdi-Nx-CVC"/>
+                                                <constraint firstItem="7Xr-Wb-IVU" firstAttribute="top" secondItem="Moq-gn-oWU" secondAttribute="top" id="eoI-bJ-mAo"/>
+                                                <constraint firstItem="IXG-7e-djY" firstAttribute="top" secondItem="Moq-gn-oWU" secondAttribute="top" id="hFN-1Z-y4i"/>
+                                                <constraint firstItem="7Xr-Wb-IVU" firstAttribute="leading" secondItem="Moq-gn-oWU" secondAttribute="leading" id="i43-Vk-dSw"/>
+                                                <constraint firstAttribute="bottom" secondItem="IXG-7e-djY" secondAttribute="bottom" id="jg1-XJ-DgD"/>
+                                                <constraint firstAttribute="trailing" secondItem="Tkc-6C-DkG" secondAttribute="trailing" constant="24" id="vSq-NM-Nlk"/>
+                                                <constraint firstAttribute="bottom" secondItem="7Xr-Wb-IVU" secondAttribute="bottom" id="wjx-4P-a9y"/>
+                                            </constraints>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                    <real key="value" value="4"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                    <real key="value" value="1"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                    <color key="value" red="0.85480856900000002" green="0.85495573280000003" blue="0.85479927060000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </view>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NRL-pi-Lv1">
+                                            <rect key="frame" x="0.0" y="148" width="350" height="60"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TOH-DM-Wk2">
+                                                    <rect key="frame" x="0.0" y="0.0" width="44" height="60"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ton" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="liD-eC-8pA" customClass="UILabelDeviceClass" customModule="PakGo_Shipper" customModuleProvider="target">
+                                                            <rect key="frame" x="10.5" y="22" width="22.5" height="16"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                            <color key="textColor" red="0.32937228680000002" green="0.32943451400000001" blue="0.32936835289999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="iPhoneFontSize">
+                                                                    <real key="value" value="13"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="string" keyPath="iPhoneFontWeight" value="bold"/>
+                                                            </userDefinedRuntimeAttributes>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" red="0.95675891639999999" green="0.95692259069999996" blue="0.95674854519999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <constraints>
+                                                        <constraint firstItem="liD-eC-8pA" firstAttribute="centerX" secondItem="TOH-DM-Wk2" secondAttribute="centerX" id="5Q3-F3-HSJ"/>
+                                                        <constraint firstItem="liD-eC-8pA" firstAttribute="centerY" secondItem="TOH-DM-Wk2" secondAttribute="centerY" id="It1-3f-UB9"/>
+                                                    </constraints>
+                                                </view>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Weight Per Transport Unit" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="beB-Mb-y6o" customClass="UITextFieldDeviceClass" customModule="PakGo_Shipper" customModuleProvider="target">
+                                                    <rect key="frame" x="56" y="0.0" width="282" height="60"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="placeHolderColor">
+                                                            <color key="value" red="0.65482908490000002" green="0.65494394300000003" blue="0.65482187270000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="iPhoneFontSize">
+                                                            <real key="value" value="14"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="iPhoneFontWeight" value="medium"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                </textField>
+                                            </subviews>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="beB-Mb-y6o" secondAttribute="bottom" id="AXg-Hn-mu1"/>
+                                                <constraint firstItem="TOH-DM-Wk2" firstAttribute="width" secondItem="NRL-pi-Lv1" secondAttribute="width" multiplier="0.125" id="Hlt-Qe-zFh"/>
+                                                <constraint firstItem="beB-Mb-y6o" firstAttribute="top" secondItem="NRL-pi-Lv1" secondAttribute="top" id="O9x-7l-7M6"/>
+                                                <constraint firstAttribute="width" secondItem="NRL-pi-Lv1" secondAttribute="height" multiplier="35:6" id="htE-Cw-WFp"/>
+                                                <constraint firstAttribute="trailing" secondItem="beB-Mb-y6o" secondAttribute="trailing" constant="12" id="kKn-ug-pag"/>
+                                                <constraint firstItem="TOH-DM-Wk2" firstAttribute="top" secondItem="NRL-pi-Lv1" secondAttribute="top" id="mS3-97-SZu"/>
+                                                <constraint firstItem="TOH-DM-Wk2" firstAttribute="leading" secondItem="NRL-pi-Lv1" secondAttribute="leading" id="uJ3-xd-CwC"/>
+                                                <constraint firstAttribute="bottom" secondItem="TOH-DM-Wk2" secondAttribute="bottom" id="x5X-Tz-9mb"/>
+                                                <constraint firstItem="beB-Mb-y6o" firstAttribute="leading" secondItem="TOH-DM-Wk2" secondAttribute="trailing" constant="12" id="z35-Hg-OFp"/>
+                                            </constraints>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                    <real key="value" value="4"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                    <real key="value" value="1"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                    <color key="value" red="0.85480856900000002" green="0.85495573280000003" blue="0.85479927060000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </view>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c7h-s2-f3I">
+                                            <rect key="frame" x="0.0" y="222" width="350" height="60"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Uk5-7K-7ai">
+                                                    <rect key="frame" x="0.0" y="0.0" width="44" height="60"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ft" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JeX-zJ-jM8" customClass="UILabelDeviceClass" customModule="PakGo_Shipper" customModuleProvider="target">
+                                                            <rect key="frame" x="17" y="22" width="9.5" height="16"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                            <color key="textColor" red="0.32937228680000002" green="0.32943451400000001" blue="0.32936835289999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="iPhoneFontSize">
+                                                                    <real key="value" value="13"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="string" keyPath="iPhoneFontWeight" value="bold"/>
+                                                            </userDefinedRuntimeAttributes>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" red="0.95675891639999999" green="0.95692259069999996" blue="0.95674854519999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <constraints>
+                                                        <constraint firstItem="JeX-zJ-jM8" firstAttribute="centerY" secondItem="Uk5-7K-7ai" secondAttribute="centerY" id="8Io-G8-Vf3"/>
+                                                        <constraint firstItem="JeX-zJ-jM8" firstAttribute="centerX" secondItem="Uk5-7K-7ai" secondAttribute="centerX" id="Db9-pJ-51d"/>
+                                                    </constraints>
+                                                </view>
+                                                <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Size Per Transport Unit" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sKr-k9-TTt" customClass="UITextFieldDeviceClass" customModule="PakGo_Shipper" customModuleProvider="target">
+                                                    <rect key="frame" x="56" y="0.0" width="252" height="60"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="placeHolderColor">
+                                                            <color key="value" red="0.65482908490000002" green="0.65494394300000003" blue="0.65482187270000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="iPhoneFontSize">
+                                                            <real key="value" value="14"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="iPhoneFontWeight" value="medium"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                </textField>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="255" verticalHuggingPriority="251" horizontalCompressionResistancePriority="755" image="dropDownBlack" translatesAutoresizingMaskIntoConstraints="NO" id="NlD-fQ-tWH">
+                                                    <rect key="frame" x="316" y="25" width="10" height="10"/>
+                                                </imageView>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pBw-Sc-ZPV">
+                                                    <rect key="frame" x="0.0" y="0.0" width="350" height="60"/>
+                                                    <connections>
+                                                        <action selector="onBtnSizerPerTruck:" destination="-1" eventType="touchUpInside" id="554-Rd-WUb"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="sKr-k9-TTt" secondAttribute="bottom" id="EEF-XK-M1d"/>
+                                                <constraint firstAttribute="bottom" secondItem="pBw-Sc-ZPV" secondAttribute="bottom" id="FTB-SV-VMY"/>
+                                                <constraint firstAttribute="bottom" secondItem="Uk5-7K-7ai" secondAttribute="bottom" id="G0Q-nL-7ok"/>
+                                                <constraint firstItem="pBw-Sc-ZPV" firstAttribute="leading" secondItem="c7h-s2-f3I" secondAttribute="leading" id="HCi-EB-tJ9"/>
+                                                <constraint firstItem="sKr-k9-TTt" firstAttribute="leading" secondItem="Uk5-7K-7ai" secondAttribute="trailing" constant="12" id="Hfa-Ln-jtW"/>
+                                                <constraint firstItem="pBw-Sc-ZPV" firstAttribute="top" secondItem="c7h-s2-f3I" secondAttribute="top" id="KTw-aF-rZA"/>
+                                                <constraint firstItem="sKr-k9-TTt" firstAttribute="top" secondItem="c7h-s2-f3I" secondAttribute="top" id="KWD-hF-up2"/>
+                                                <constraint firstAttribute="trailing" secondItem="pBw-Sc-ZPV" secondAttribute="trailing" id="NHQ-Hh-jQh"/>
+                                                <constraint firstItem="NlD-fQ-tWH" firstAttribute="centerY" secondItem="c7h-s2-f3I" secondAttribute="centerY" id="NvE-RB-8dq"/>
+                                                <constraint firstAttribute="trailing" secondItem="NlD-fQ-tWH" secondAttribute="trailing" constant="24" id="QMH-R0-ZOS"/>
+                                                <constraint firstItem="Uk5-7K-7ai" firstAttribute="top" secondItem="c7h-s2-f3I" secondAttribute="top" id="Tn7-1t-tzg"/>
+                                                <constraint firstItem="Uk5-7K-7ai" firstAttribute="leading" secondItem="c7h-s2-f3I" secondAttribute="leading" id="WrT-Fp-FwM"/>
+                                                <constraint firstItem="Uk5-7K-7ai" firstAttribute="width" secondItem="c7h-s2-f3I" secondAttribute="width" multiplier="0.125" id="lNf-Rc-Low"/>
+                                                <constraint firstItem="NlD-fQ-tWH" firstAttribute="leading" secondItem="sKr-k9-TTt" secondAttribute="trailing" constant="8" id="lmP-hR-PSQ"/>
+                                            </constraints>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                    <real key="value" value="4"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                    <real key="value" value="1"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                    <color key="value" red="0.85480856900000002" green="0.85495573280000003" blue="0.85479927060000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </view>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qf5-g8-p4T">
+                                            <rect key="frame" x="0.0" y="296" width="350" height="60"/>
+                                            <subviews>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Total Quantity Per Container" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6wl-LA-W5X" customClass="UITextFieldDeviceClass" customModule="PakGo_Shipper" customModuleProvider="target">
+                                                    <rect key="frame" x="20" y="0.0" width="310" height="60"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="iPhoneFontSize">
+                                                            <real key="value" value="14"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="iPhoneFontWeight" value="medium"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                </textField>
+                                            </subviews>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                            <constraints>
+                                                <constraint firstItem="6wl-LA-W5X" firstAttribute="leading" secondItem="Qf5-g8-p4T" secondAttribute="leading" constant="20" id="9tu-26-mSP"/>
+                                                <constraint firstAttribute="trailing" secondItem="6wl-LA-W5X" secondAttribute="trailing" constant="20" id="UiO-qi-Yl9"/>
+                                                <constraint firstAttribute="bottom" secondItem="6wl-LA-W5X" secondAttribute="bottom" id="h4a-le-L6C"/>
+                                                <constraint firstItem="6wl-LA-W5X" firstAttribute="top" secondItem="Qf5-g8-p4T" secondAttribute="top" id="s4O-lt-Axa"/>
+                                            </constraints>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                    <real key="value" value="4"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                    <real key="value" value="1"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                    <color key="value" red="0.85480856900000002" green="0.85495573280000003" blue="0.85479927060000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </view>
                                     </subviews>
-                                    <color key="backgroundColor" red="0.95675891639999999" green="0.95692259069999996" blue="0.95674854519999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <constraints>
-                                        <constraint firstItem="JeX-zJ-jM8" firstAttribute="centerY" secondItem="Uk5-7K-7ai" secondAttribute="centerY" id="8Io-G8-Vf3"/>
-                                        <constraint firstItem="JeX-zJ-jM8" firstAttribute="centerX" secondItem="Uk5-7K-7ai" secondAttribute="centerX" id="Db9-pJ-51d"/>
+                                        <constraint firstItem="eWq-KL-AgV" firstAttribute="centerX" secondItem="Tkc-6C-DkG" secondAttribute="centerX" id="YD0-Zs-HSi"/>
                                     </constraints>
-                                </view>
-                                <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Size Per Transport Unit" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sKr-k9-TTt" customClass="UITextFieldDeviceClass" customModule="PakGo_Shipper" customModuleProvider="target">
-                                    <rect key="frame" x="56" y="0.0" width="252" height="60"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                    <textInputTraits key="textInputTraits"/>
+                                </stackView>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5SX-hh-g9E" customClass="UIButtonDeviceClass" customModule="PakGo_Shipper" customModuleProvider="target">
+                                    <rect key="frame" x="32" y="626.5" width="350" height="51.5"/>
+                                    <color key="backgroundColor" red="0.0" green="0.2802670002" blue="0.61960784310000006" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" secondItem="5SX-hh-g9E" secondAttribute="height" multiplier="61:9" id="i8H-xP-tMp"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                    <state key="normal" title="CALCULATE RATE">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
                                     <userDefinedRuntimeAttributes>
-                                        <userDefinedRuntimeAttribute type="color" keyPath="placeHolderColor">
-                                            <color key="value" red="0.65482908490000002" green="0.65494394300000003" blue="0.65482187270000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="boolean" keyPath="isCircular" value="YES"/>
                                         <userDefinedRuntimeAttribute type="number" keyPath="iPhoneFontSize">
-                                            <real key="value" value="14"/>
+                                            <real key="value" value="16"/>
                                         </userDefinedRuntimeAttribute>
-                                        <userDefinedRuntimeAttribute type="string" keyPath="iPhoneFontWeight" value="medium"/>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="iPhoneFontWeight" value="bold"/>
                                     </userDefinedRuntimeAttributes>
-                                </textField>
-                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="255" verticalHuggingPriority="251" horizontalCompressionResistancePriority="755" image="dropDownBlack" translatesAutoresizingMaskIntoConstraints="NO" id="NlD-fQ-tWH">
-                                    <rect key="frame" x="316" y="25" width="10" height="10"/>
-                                </imageView>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pBw-Sc-ZPV">
-                                    <rect key="frame" x="0.0" y="0.0" width="350" height="60"/>
                                     <connections>
-                                        <action selector="onBtnSizerPerTruck:" destination="-1" eventType="touchUpInside" id="554-Rd-WUb"/>
+                                        <action selector="onBtnCalculateRate:" destination="-1" eventType="touchUpInside" id="i8D-k6-08t"/>
                                     </connections>
                                 </button>
                             </subviews>
                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             <constraints>
-                                <constraint firstAttribute="bottom" secondItem="sKr-k9-TTt" secondAttribute="bottom" id="EEF-XK-M1d"/>
-                                <constraint firstAttribute="bottom" secondItem="pBw-Sc-ZPV" secondAttribute="bottom" id="FTB-SV-VMY"/>
-                                <constraint firstAttribute="bottom" secondItem="Uk5-7K-7ai" secondAttribute="bottom" id="G0Q-nL-7ok"/>
-                                <constraint firstItem="pBw-Sc-ZPV" firstAttribute="leading" secondItem="c7h-s2-f3I" secondAttribute="leading" id="HCi-EB-tJ9"/>
-                                <constraint firstItem="sKr-k9-TTt" firstAttribute="leading" secondItem="Uk5-7K-7ai" secondAttribute="trailing" constant="12" id="Hfa-Ln-jtW"/>
-                                <constraint firstItem="pBw-Sc-ZPV" firstAttribute="top" secondItem="c7h-s2-f3I" secondAttribute="top" id="KTw-aF-rZA"/>
-                                <constraint firstItem="sKr-k9-TTt" firstAttribute="top" secondItem="c7h-s2-f3I" secondAttribute="top" id="KWD-hF-up2"/>
-                                <constraint firstAttribute="trailing" secondItem="pBw-Sc-ZPV" secondAttribute="trailing" id="NHQ-Hh-jQh"/>
-                                <constraint firstItem="NlD-fQ-tWH" firstAttribute="centerY" secondItem="c7h-s2-f3I" secondAttribute="centerY" id="NvE-RB-8dq"/>
-                                <constraint firstAttribute="trailing" secondItem="NlD-fQ-tWH" secondAttribute="trailing" constant="24" id="QMH-R0-ZOS"/>
-                                <constraint firstItem="Uk5-7K-7ai" firstAttribute="top" secondItem="c7h-s2-f3I" secondAttribute="top" id="Tn7-1t-tzg"/>
-                                <constraint firstItem="Uk5-7K-7ai" firstAttribute="leading" secondItem="c7h-s2-f3I" secondAttribute="leading" id="WrT-Fp-FwM"/>
-                                <constraint firstItem="Uk5-7K-7ai" firstAttribute="width" secondItem="c7h-s2-f3I" secondAttribute="width" multiplier="0.125" id="lNf-Rc-Low"/>
-                                <constraint firstItem="NlD-fQ-tWH" firstAttribute="leading" secondItem="sKr-k9-TTt" secondAttribute="trailing" constant="8" id="lmP-hR-PSQ"/>
+                                <constraint firstItem="g2x-Lr-x7w" firstAttribute="top" secondItem="KmV-Rq-UER" secondAttribute="top" constant="20" id="32N-2N-4iv"/>
+                                <constraint firstItem="PAP-uo-mzh" firstAttribute="leading" secondItem="KmV-Rq-UER" secondAttribute="leading" constant="32" id="Gxp-0s-Ulr"/>
+                                <constraint firstItem="g2x-Lr-x7w" firstAttribute="leading" secondItem="KmV-Rq-UER" secondAttribute="leading" constant="32" id="LK6-b0-qMy"/>
+                                <constraint firstAttribute="trailing" secondItem="PAP-uo-mzh" secondAttribute="trailing" constant="32" id="NsI-ph-tvg"/>
+                                <constraint firstAttribute="bottom" secondItem="5SX-hh-g9E" secondAttribute="bottom" constant="48" id="RV7-2J-0wp"/>
+                                <constraint firstAttribute="trailing" secondItem="g2x-Lr-x7w" secondAttribute="trailing" constant="32" id="Wkf-kd-JIR"/>
+                                <constraint firstItem="5SX-hh-g9E" firstAttribute="trailing" secondItem="PAP-uo-mzh" secondAttribute="trailing" id="aCO-y1-xcA"/>
+                                <constraint firstItem="vHV-En-fXf" firstAttribute="top" secondItem="g2x-Lr-x7w" secondAttribute="bottom" constant="16" id="awp-rX-mnB"/>
+                                <constraint firstItem="5SX-hh-g9E" firstAttribute="leading" secondItem="PAP-uo-mzh" secondAttribute="leading" id="dAo-rD-X7E"/>
+                                <constraint firstItem="PAP-uo-mzh" firstAttribute="top" secondItem="vHV-En-fXf" secondAttribute="bottom" constant="20" id="gdm-Le-iiQ"/>
+                                <constraint firstItem="5SX-hh-g9E" firstAttribute="top" secondItem="PAP-uo-mzh" secondAttribute="bottom" constant="24" id="hcP-yl-9fd"/>
+                                <constraint firstItem="vHV-En-fXf" firstAttribute="centerX" secondItem="KmV-Rq-UER" secondAttribute="centerX" id="rIH-pd-dVk"/>
                             </constraints>
-                            <userDefinedRuntimeAttributes>
-                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                    <real key="value" value="4"/>
-                                </userDefinedRuntimeAttribute>
-                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                    <real key="value" value="1"/>
-                                </userDefinedRuntimeAttribute>
-                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                    <color key="value" red="0.85480856900000002" green="0.85495573280000003" blue="0.85479927060000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </userDefinedRuntimeAttribute>
-                            </userDefinedRuntimeAttributes>
-                        </view>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qf5-g8-p4T">
-                            <rect key="frame" x="0.0" y="296" width="350" height="60"/>
-                            <subviews>
-                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Total Quantity Per Container" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6wl-LA-W5X" customClass="UITextFieldDeviceClass" customModule="PakGo_Shipper" customModuleProvider="target">
-                                    <rect key="frame" x="20" y="0.0" width="310" height="60"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                    <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
-                                    <userDefinedRuntimeAttributes>
-                                        <userDefinedRuntimeAttribute type="number" keyPath="iPhoneFontSize">
-                                            <real key="value" value="14"/>
-                                        </userDefinedRuntimeAttribute>
-                                        <userDefinedRuntimeAttribute type="string" keyPath="iPhoneFontWeight" value="medium"/>
-                                    </userDefinedRuntimeAttributes>
-                                </textField>
-                            </subviews>
-                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                            <constraints>
-                                <constraint firstItem="6wl-LA-W5X" firstAttribute="leading" secondItem="Qf5-g8-p4T" secondAttribute="leading" constant="20" id="9tu-26-mSP"/>
-                                <constraint firstAttribute="trailing" secondItem="6wl-LA-W5X" secondAttribute="trailing" constant="20" id="UiO-qi-Yl9"/>
-                                <constraint firstAttribute="bottom" secondItem="6wl-LA-W5X" secondAttribute="bottom" id="h4a-le-L6C"/>
-                                <constraint firstItem="6wl-LA-W5X" firstAttribute="top" secondItem="Qf5-g8-p4T" secondAttribute="top" id="s4O-lt-Axa"/>
-                            </constraints>
-                            <userDefinedRuntimeAttributes>
-                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                    <real key="value" value="4"/>
-                                </userDefinedRuntimeAttribute>
-                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                    <real key="value" value="1"/>
-                                </userDefinedRuntimeAttribute>
-                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                    <color key="value" red="0.85480856900000002" green="0.85495573280000003" blue="0.85479927060000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </userDefinedRuntimeAttribute>
-                            </userDefinedRuntimeAttributes>
                         </view>
                     </subviews>
                     <constraints>
-                        <constraint firstItem="eWq-KL-AgV" firstAttribute="centerX" secondItem="Tkc-6C-DkG" secondAttribute="centerX" id="YD0-Zs-HSi"/>
+                        <constraint firstAttribute="trailing" secondItem="KmV-Rq-UER" secondAttribute="trailing" id="24p-ct-WaP"/>
+                        <constraint firstAttribute="bottom" secondItem="KmV-Rq-UER" secondAttribute="bottom" id="QjV-aB-cIi"/>
+                        <constraint firstItem="KmV-Rq-UER" firstAttribute="leading" secondItem="LEm-5y-GtT" secondAttribute="leading" id="jas-RF-dIX"/>
+                        <constraint firstItem="KmV-Rq-UER" firstAttribute="top" secondItem="LEm-5y-GtT" secondAttribute="top" id="rKz-Cr-WAI"/>
+                        <constraint firstItem="KmV-Rq-UER" firstAttribute="centerX" secondItem="LEm-5y-GtT" secondAttribute="centerX" id="zti-8n-maQ"/>
                     </constraints>
-                </stackView>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5SX-hh-g9E" customClass="UIButtonDeviceClass" customModule="PakGo_Shipper" customModuleProvider="target">
-                    <rect key="frame" x="32" y="578.5" width="350" height="51.5"/>
-                    <color key="backgroundColor" red="0.0" green="0.2802670002" blue="0.61960784310000006" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    <constraints>
-                        <constraint firstAttribute="width" secondItem="5SX-hh-g9E" secondAttribute="height" multiplier="61:9" id="i8H-xP-tMp"/>
-                    </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                    <state key="normal" title="CALCULATE RATE">
-                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    </state>
-                    <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="boolean" keyPath="isCircular" value="YES"/>
-                        <userDefinedRuntimeAttribute type="number" keyPath="iPhoneFontSize">
-                            <real key="value" value="16"/>
-                        </userDefinedRuntimeAttribute>
-                        <userDefinedRuntimeAttribute type="string" keyPath="iPhoneFontWeight" value="bold"/>
-                    </userDefinedRuntimeAttributes>
-                    <connections>
-                        <action selector="onBtnCalculateRate:" destination="-1" eventType="touchUpInside" id="i8D-k6-08t"/>
-                    </connections>
-                </button>
+                    <viewLayoutGuide key="contentLayoutGuide" id="i7y-ef-LtA"/>
+                    <viewLayoutGuide key="frameLayoutGuide" id="waS-6N-a5q"/>
+                </scrollView>
             </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
             <constraints>
-                <constraint firstItem="5SX-hh-g9E" firstAttribute="top" secondItem="PAP-uo-mzh" secondAttribute="bottom" constant="32" id="Fdz-i9-RkV"/>
+                <constraint firstItem="LEm-5y-GtT" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="HL9-NH-GM0"/>
                 <constraint firstItem="CCO-iM-n7K" firstAttribute="bottom" secondItem="89n-d6-sOt" secondAttribute="bottom" id="Kfd-Rw-J58"/>
                 <constraint firstItem="89n-d6-sOt" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="LYV-GA-zKE"/>
                 <constraint firstItem="89n-d6-sOt" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="M2C-Zk-gOI"/>
                 <constraint firstItem="CCO-iM-n7K" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Suu-Hw-XgG"/>
+                <constraint firstItem="LEm-5y-GtT" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="UDY-T4-yqO"/>
                 <constraint firstItem="CCO-iM-n7K" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="URV-1R-Vqb"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="PAP-uo-mzh" secondAttribute="trailing" constant="32" id="UWI-FJ-csb"/>
-                <constraint firstItem="5SX-hh-g9E" firstAttribute="leading" secondItem="PAP-uo-mzh" secondAttribute="leading" id="aOZ-NR-gGQ"/>
-                <constraint firstItem="PAP-uo-mzh" firstAttribute="top" secondItem="vHV-En-fXf" secondAttribute="bottom" constant="20" id="cp6-WH-odp"/>
-                <constraint firstItem="5SX-hh-g9E" firstAttribute="trailing" secondItem="PAP-uo-mzh" secondAttribute="trailing" id="hSY-EL-Br1"/>
-                <constraint firstItem="PAP-uo-mzh" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="32" id="kbx-Ew-LL5"/>
                 <constraint firstItem="CCO-iM-n7K" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="mf2-cV-Ryp"/>
+                <constraint firstItem="LEm-5y-GtT" firstAttribute="top" secondItem="CCO-iM-n7K" secondAttribute="bottom" id="thR-xX-iEr"/>
                 <constraint firstItem="89n-d6-sOt" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="ujt-7v-R1A"/>
-                <constraint firstItem="vHV-En-fXf" firstAttribute="top" secondItem="CCO-iM-n7K" secondAttribute="bottom" constant="20" id="uy9-IS-VdJ"/>
-                <constraint firstItem="vHV-En-fXf" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="zIU-my-Rxv"/>
+                <constraint firstItem="LEm-5y-GtT" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="zsy-f1-rej"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="137.68115942028987" y="124.55357142857142"/>
@@ -415,7 +701,10 @@
     </objects>
     <resources>
         <image name="Back" width="32" height="32"/>
+        <image name="DropOffPin" width="84" height="80"/>
         <image name="NavBar" width="375" height="95"/>
+        <image name="PickUpPin" width="42" height="40"/>
+        <image name="RouteLine" width="12.5" height="50"/>
         <image name="arrowRight" width="20" height="20"/>
         <image name="dropDownBlack" width="10" height="10"/>
     </resources>
