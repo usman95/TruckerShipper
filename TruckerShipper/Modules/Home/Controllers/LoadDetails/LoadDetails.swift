@@ -30,6 +30,7 @@ class LoadDetails: BaseController {
     
     @IBOutlet weak var viewCargoType: UIView!
     @IBOutlet weak var viewSize: UIView!
+    @IBOutlet weak var viewQuantityOfContainer: UIView!
     
     var locationAttribute: [String:Any]?
     
@@ -78,7 +79,7 @@ class LoadDetails: BaseController {
         self.cargoTypeDropDown.show()
     }
     @IBAction func onBtnSizerPerTruck(_ sender: UIButton) {
-        self.sizePerTruckDropDown.show()
+        self.setSizePerTruckDropDown(showDropDown: true)
     }
     @IBAction func onBtnCalculateRate(_ sender: UIButtonDeviceClass) {
         self.getBookingEstimate()
@@ -128,10 +129,12 @@ extension LoadDetails{
             switch (self.selectedCargoType?.title ?? "").lowercased(){
             case CargoTypes.containerized.rawValue:
                 self.viewSize.isHidden = false
+                self.viewQuantityOfContainer.isHidden = false
                 
                 self.tfQuantity.placeholder = Strings.TOTAL_QUANTITY_PER_CONTAINER.text
             case CargoTypes.nonContainerized.rawValue:
                 self.viewSize.isHidden = true
+                self.viewQuantityOfContainer.isHidden = true
                 
                 self.tfQuantity.placeholder = Strings.TOTAL_QUANTITY.text
             default:
@@ -182,8 +185,14 @@ extension LoadDetails{
             self.btnCalculateRate.shake()
             return nil
         }
+        if self.selectedCargoType?.title == CargoTypes.containerized.rawValue{
+            if self.selectedSizePerTruck == nil{
+                Utility.main.showToast(message: Strings.PLEASE_SELECT_SIZE_PER_TRUCK.text)
+                self.btnCalculateRate.shake()
+                return nil
+            }
+        }
         if !Validation.isValidNumber(weight){
-            
             switch (self.selectedCargoType?.title ?? "").lowercased(){
             case CargoTypes.containerized.rawValue:
                 Utility.main.showToast(message: Strings.PLEASE_ENTER_WEIGHT_PER_TRUCK.text)
@@ -197,16 +206,11 @@ extension LoadDetails{
             return nil
         }
         if self.selectedCargoType?.title == CargoTypes.containerized.rawValue{
-            if self.selectedSizePerTruck == nil{
-                Utility.main.showToast(message: Strings.PLEASE_SELECT_SIZE_PER_TRUCK.text)
+            if !Validation.isValidNumber(quantityOfTrucks){
+                Utility.main.showToast(message: Strings.PLEASE_ENTER_QUANTITY.text)
                 self.btnCalculateRate.shake()
                 return nil
             }
-        }
-        if !Validation.isValidNumber(quantityOfTrucks){
-            Utility.main.showToast(message: Strings.PLEASE_ENTER_QUANTITY.text)
-            self.btnCalculateRate.shake()
-            return nil
         }
         
         var params = self.locationAttribute ?? [:]
