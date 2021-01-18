@@ -49,7 +49,7 @@ class APIManagerBase: NSObject {
     let defaultRequestHeader = ["Content-Type": "application/json"]
     let defaultError = NSError(domain: "Error", code: 0, userInfo: [NSLocalizedDescriptionKey: "Request Failed."])
     
-    func getAuthorizationHeader () -> Dictionary<String,String> {
+    func getAuthorizationHeader () -> [String:String] {
         if let token = APIManager.sharedInstance.serverToken {
             if !AppStateManager.sharedInstance.isUserLoggedIn(){
                 return ["device-id":Constants.DeviceToken]
@@ -87,6 +87,9 @@ extension APIManagerBase{
         Utility.hideLoader()
         
         if let dictData = response.result.value as? NSDictionary {
+            
+            let response = dictData as Dictionary
+            response.printJson()
             
             if let status = dictData["success"] as? Bool{
                 if status{

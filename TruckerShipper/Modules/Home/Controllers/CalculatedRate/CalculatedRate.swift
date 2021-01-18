@@ -42,6 +42,11 @@ class CalculatedRate: BaseController {
         self.dismiss(animated: true, completion: nil)
     }
     @IBAction func onBtnContinue(_ sender: UIButtonDeviceClass) {
+        if self.selectedModeOfTransport == .none {
+            sender.shake()
+            return
+        }
+        
         self.dismiss(animated: true) {
             self.setSelectedPrice?(self.selectedModeOfTransport,self.selectedPrice)
         }
