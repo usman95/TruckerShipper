@@ -429,24 +429,6 @@ extension Home{
             self.setDistanceAndTimeDuration()
         }
     }
-//    private func getDistance()->Int?{
-//        if self.path.count() == 0{return nil}
-//        var distance = 0.0
-//        let pathTaken = self.path.count()
-//        let p1 = path.coordinate(at: 0)
-//        var point1 = CLLocation(latitude: p1.latitude , longitude: p1.longitude)
-//        if pathTaken > 0{
-//            for i in 1..<pathTaken{
-//                let p2 = path.coordinate(at: i)
-//                let point2 = CLLocation(latitude: p2.latitude , longitude: p2.longitude)
-//                let dist = Double(point1.distance(from: point2))
-//                distance = distance + dist
-//                point1 = point2
-//            }
-//        }
-//        let distanceInKM = Int(Double("\(distance/1000.0)") ?? 0.0)
-//        return distanceInKM
-//    }
 }
 //MARK:- Add marker
 extension Home{
