@@ -59,7 +59,7 @@ class LoadDetails: BaseController {
         controller.arrCommodity = self.arrCommodity
         self.navigationController?.pushViewController(controller, animated: true)
         
-        controller.setSelectedCommodity = { commodity in
+        controller.setSelectedCommodity = {  [unowned self] commodity in
             self.selectedCommodity = commodity
             self.tfCommodity.text = commodity?.title ?? ""
             

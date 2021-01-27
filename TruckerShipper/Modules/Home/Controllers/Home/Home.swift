@@ -45,6 +45,7 @@ class Home: BaseController {
     var dropOffLocationMarker = GMSMarker()
     var flagShouldReverseGeoCode = false
     
+    var routeDistance = 0
     var routeDuration: String?
     
     var isSelectedAreaCovered = false
@@ -102,7 +103,7 @@ extension Home{
         self.lblGreetingText.text = greetings
     }
     private func setDistanceAndTimeDuration(){
-        self.lblKilometers.text = "\(self.getDistance() ?? 0)"
+        self.lblKilometers.text = "\(self.routeDistance)" 
         self.lblTimeDuration.text = self.routeDuration ?? ""
     }
     private func setGMSMapView(){
@@ -232,7 +233,7 @@ extension Home{
     }
     private func pushToLoadDetails(){
         guard var locationAttribute = self.validate() else {return}
-        locationAttribute["totalDistance"] = self.getDistance() ?? 0
+        locationAttribute["totalDistance"] = self.routeDistance ?? ""
         locationAttribute["totalDuration"] = self.routeDuration ?? ""
         locationAttribute["route"] = Utility.main.getBearingBetweenTwoPoints(point1: self.pickUpLocation ?? CLLocationCoordinate2D(), point2: self.dropOffLocation ?? CLLocationCoordinate2D()).lowercased()
         
@@ -406,6 +407,10 @@ extension Home{
             let routeDict = routesArray[0]
             
             if let legs = routeDict["legs"].arrayValue.first?.dictionary{
+                if let distance = legs["distance"]?.dictionary{
+                    let distanceValue = Int((Double(distance["value"]?.stringValue ?? "0") ?? 0.0)/1000.0)
+                    self.routeDistance = distanceValue
+                }
                 if let duration = legs["duration"]?.dictionary{
                     let durationValue = duration["text"]?.stringValue
                     self.routeDuration = durationValue
@@ -424,24 +429,24 @@ extension Home{
             self.setDistanceAndTimeDuration()
         }
     }
-    private func getDistance()->Int?{
-        if self.path.count() == 0{return nil}
-        var distance = 0.0
-        let pathTaken = self.path.count()
-        let p1 = path.coordinate(at: 0)
-        var point1 = CLLocation(latitude: p1.latitude , longitude: p1.longitude)
-        if pathTaken > 0{
-            for i in 1..<pathTaken{
-                let p2 = path.coordinate(at: i)
-                let point2 = CLLocation(latitude: p2.latitude , longitude: p2.longitude)
-                let dist = Double(point1.distance(from: point2))
-                distance = distance + dist
-                point1 = point2
-            }
-        }
-        let distanceInKM = Int(Double("\(distance/1000.0)") ?? 0.0)
-        return distanceInKM
-    }
+//    private func getDistance()->Int?{
+//        if self.path.count() == 0{return nil}
+//        var distance = 0.0
+//        let pathTaken = self.path.count()
+//        let p1 = path.coordinate(at: 0)
+//        var point1 = CLLocation(latitude: p1.latitude , longitude: p1.longitude)
+//        if pathTaken > 0{
+//            for i in 1..<pathTaken{
+//                let p2 = path.coordinate(at: i)
+//                let point2 = CLLocation(latitude: p2.latitude , longitude: p2.longitude)
+//                let dist = Double(point1.distance(from: point2))
+//                distance = distance + dist
+//                point1 = point2
+//            }
+//        }
+//        let distanceInKM = Int(Double("\(distance/1000.0)") ?? 0.0)
+//        return distanceInKM
+//    }
 }
 //MARK:- Add marker
 extension Home{

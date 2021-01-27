@@ -41,7 +41,6 @@ extension AppDelegate : UNUserNotificationCenterDelegate {
         if !AppStateManager.sharedInstance.isUserLoggedIn(){return}
         
         completionHandler([.alert, .badge, .sound])
-        
 //        let userInfo = notification.request.content.userInfo
         
 //        let notificationTypeId  = userInfo["notificationTypeId"] as? String ?? ""
@@ -76,7 +75,7 @@ extension AppDelegate{
         let authOptions: UNAuthorizationOptions = [.alert, .badge, .sound]
         UNUserNotificationCenter.current().requestAuthorization(options: authOptions) { (_, error) in
             guard error == nil else{
-                print(error!.localizedDescription)
+                print(error?.localizedDescription ?? "")
                 return
             }
         }
