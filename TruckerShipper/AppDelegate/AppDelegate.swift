@@ -85,9 +85,7 @@ extension AppDelegate{
 }
 extension AppDelegate : MessagingDelegate {
     func messaging(_ messaging: Messaging, didReceiveRegistrationToken fcmToken: String) {
-        print("Firebase registration token: \(fcmToken)")
         Constants.DeviceToken = fcmToken
-//        self.registerDeviceToken()
     }
 }
 //MARK:- Application flow

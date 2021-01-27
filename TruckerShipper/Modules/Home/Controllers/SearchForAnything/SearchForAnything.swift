@@ -122,7 +122,6 @@ extension SearchForAnything{
                                    "shipperId":shipperId]
         
         APIManager.sharedInstance.shipperAPIManager.BookingSearch(params: params, success: { (responseObject) in
-            print(responseObject)
             guard let bookings = responseObject as? [[String:Any]] else {return}
             self.arrBookings = Mapper<BookingModel>().mapArray(JSONArray: bookings)
             
@@ -138,7 +137,6 @@ extension SearchForAnything{
         let param:[String:Any] = ["status":status]
         
         APIManager.sharedInstance.shipperAPIManager.BookingStatus(id: id, params: param, success: { (responseObject) in
-            print(responseObject)
             self.arrBookings.remove(at: index)
             
             DispatchQueue.main.async {

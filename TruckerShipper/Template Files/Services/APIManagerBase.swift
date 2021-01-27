@@ -89,7 +89,7 @@ extension APIManagerBase{
         if let dictData = response.result.value as? NSDictionary {
             
             let response = dictData as Dictionary
-            response.printJson()
+            //response.printJson()
             
             if let status = dictData["success"] as? Bool{
                 if status{

@@ -136,7 +136,6 @@ extension Notifications{
     }
     private func deleteNotification(id: String, index: Int){
         APIManager.sharedInstance.shipperAPIManager.DeleteNotification(id: id, success: { (responseObject) in
-            print(responseObject)
             self.arrNotifications.remove(at: index)
             
             DispatchQueue.main.async {

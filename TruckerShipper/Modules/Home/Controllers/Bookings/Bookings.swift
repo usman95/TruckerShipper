@@ -259,7 +259,6 @@ extension Bookings{
         let param:[String:Any] = ["status":status]
         
         APIManager.sharedInstance.shipperAPIManager.BookingStatus(id: id, params: param, success: { (responseObject) in
-            print(responseObject)
             self.arrBookings.remove(at: index)
             
             DispatchQueue.main.async {
