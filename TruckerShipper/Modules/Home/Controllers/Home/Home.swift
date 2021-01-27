@@ -103,7 +103,7 @@ extension Home{
         self.lblGreetingText.text = greetings
     }
     private func setDistanceAndTimeDuration(){
-        self.lblKilometers.text = "\(self.routeDistance)" 
+        self.lblKilometers.text = "\(self.routeDistance)"
         self.lblTimeDuration.text = self.routeDuration ?? ""
     }
     private func setGMSMapView(){
@@ -233,7 +233,7 @@ extension Home{
     }
     private func pushToLoadDetails(){
         guard var locationAttribute = self.validate() else {return}
-        locationAttribute["totalDistance"] = self.routeDistance ?? ""
+        locationAttribute["totalDistance"] = self.routeDistance
         locationAttribute["totalDuration"] = self.routeDuration ?? ""
         locationAttribute["route"] = Utility.main.getBearingBetweenTwoPoints(point1: self.pickUpLocation ?? CLLocationCoordinate2D(), point2: self.dropOffLocation ?? CLLocationCoordinate2D()).lowercased()
         
