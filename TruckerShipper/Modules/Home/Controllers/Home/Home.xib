@@ -52,37 +52,39 @@
                             </userDefinedRuntimeAttributes>
                         </label>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="woY-Pt-6SK">
-                            <rect key="frame" x="0.0" y="32.333333333333343" width="34" height="151.66666666666666"/>
+                            <rect key="frame" x="0.0" y="32.333333333333343" width="40" height="151.66666666666666"/>
                             <subviews>
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PickUpPin" translatesAutoresizingMaskIntoConstraints="NO" id="tqr-X5-5tv">
-                                    <rect key="frame" x="15" y="13" width="16" height="15.333333333333336"/>
+                                    <rect key="frame" x="12" y="13" width="16" height="15.333333333333336"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="16" id="FBn-yl-maH"/>
                                         <constraint firstAttribute="width" secondItem="tqr-X5-5tv" secondAttribute="height" multiplier="21:20" id="bge-iS-F76"/>
                                     </constraints>
                                 </imageView>
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="RouteLine" translatesAutoresizingMaskIntoConstraints="NO" id="RIw-F9-W8X">
-                                    <rect key="frame" x="16.666666666666664" y="34.333333333333314" width="12.666666666666664" height="42"/>
+                                    <rect key="frame" x="13.666666666666664" y="34.333333333333314" width="12.666666666666664" height="42"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="42" id="kTF-on-6jx"/>
                                     </constraints>
                                 </imageView>
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DropOffPin" translatesAutoresizingMaskIntoConstraints="NO" id="GNR-xB-gRJ">
-                                    <rect key="frame" x="12" y="76.666666666666657" width="22" height="20.666666666666671"/>
+                                    <rect key="frame" x="9" y="76" width="22" height="22"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="22" id="Fr3-Cz-cjG"/>
+                                        <constraint firstAttribute="width" constant="22" id="yUi-wW-HsJ"/>
+                                    </constraints>
                                 </imageView>
                             </subviews>
                             <constraints>
                                 <constraint firstItem="RIw-F9-W8X" firstAttribute="top" secondItem="tqr-X5-5tv" secondAttribute="bottom" constant="6" id="EZq-io-mPD"/>
-                                <constraint firstAttribute="trailing" secondItem="GNR-xB-gRJ" secondAttribute="trailing" id="GrR-N0-Aq9"/>
                                 <constraint firstItem="RIw-F9-W8X" firstAttribute="centerX" secondItem="tqr-X5-5tv" secondAttribute="centerX" id="SLF-Pl-bos"/>
-                                <constraint firstItem="GNR-xB-gRJ" firstAttribute="centerX" secondItem="woY-Pt-6SK" secondAttribute="centerX" constant="6" id="qBF-pJ-xFR"/>
-                                <constraint firstAttribute="width" constant="34" id="sN3-nl-uOK"/>
-                                <constraint firstItem="tqr-X5-5tv" firstAttribute="centerX" secondItem="woY-Pt-6SK" secondAttribute="centerX" constant="6" id="ur9-xo-Gp3"/>
-                                <constraint firstItem="GNR-xB-gRJ" firstAttribute="width" secondItem="GNR-xB-gRJ" secondAttribute="height" multiplier="21:20" id="xoR-lg-qAm"/>
+                                <constraint firstItem="GNR-xB-gRJ" firstAttribute="centerX" secondItem="woY-Pt-6SK" secondAttribute="centerX" id="qBF-pJ-xFR"/>
+                                <constraint firstAttribute="width" constant="40" id="sN3-nl-uOK"/>
+                                <constraint firstItem="tqr-X5-5tv" firstAttribute="centerX" secondItem="woY-Pt-6SK" secondAttribute="centerX" id="ur9-xo-Gp3"/>
                             </constraints>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VGH-Ki-6Lj">
-                            <rect key="frame" x="34" y="32.333333333333343" width="253" height="49.333333333333343"/>
+                            <rect key="frame" x="40" y="32.333333333333343" width="247" height="49.333333333333343"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pickup Point" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5UE-K7-Qg5" customClass="UILabelDeviceClass" customModule="PakGo_Shipper" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="0.0" width="63" height="12"/>
@@ -121,7 +123,7 @@
                                     </userDefinedRuntimeAttributes>
                                 </label>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xa7-eQ-91k">
-                                    <rect key="frame" x="0.0" y="0.0" width="253" height="49.333333333333336"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="247" height="49.333333333333336"/>
                                     <connections>
                                         <action selector="onBtnPickUpLocationPicker:" destination="-1" eventType="touchUpInside" id="RMi-W6-y5a"/>
                                     </connections>
@@ -155,14 +157,14 @@
                             </connections>
                         </button>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d5G-LB-AT0">
-                            <rect key="frame" x="34" y="89.666666666666657" width="233" height="1"/>
+                            <rect key="frame" x="40" y="89.666666666666657" width="227" height="1"/>
                             <color key="backgroundColor" red="0.94509953260000001" green="0.94121956829999998" blue="0.94101774689999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="1" id="o0k-4o-kUb"/>
                             </constraints>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rtY-M5-5Db">
-                            <rect key="frame" x="34" y="98.666666666666657" width="253" height="49.333333333333343"/>
+                            <rect key="frame" x="40" y="98.666666666666657" width="247" height="49.333333333333343"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dropoff Point" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8XW-ol-7hl" customClass="UILabelDeviceClass" customModule="PakGo_Shipper" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="0.0" width="67.333333333333329" height="12"/>
@@ -201,7 +203,7 @@
                                     </userDefinedRuntimeAttributes>
                                 </label>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AuG-H3-o0T">
-                                    <rect key="frame" x="0.0" y="0.0" width="253" height="49.333333333333336"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="247" height="49.333333333333336"/>
                                     <connections>
                                         <action selector="onBtnDropOffLocationPicker:" destination="-1" eventType="touchUpInside" id="n3C-yh-OQU"/>
                                     </connections>
@@ -261,7 +263,7 @@
                                         <constraint firstItem="9hp-sa-1UL" firstAttribute="leading" secondItem="3do-Ih-zfq" secondAttribute="trailing" constant="4" id="zOS-UT-4MX"/>
                                     </constraints>
                                 </view>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="STT-xb-yvj">
+                                <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="STT-xb-yvj">
                                     <rect key="frame" x="155.66666666666663" y="0.0" width="155.33333333333337" height="20"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3al-z0-cV8" customClass="UILabelDeviceClass" customModule="PakGo_Shipper" customModuleProvider="target">

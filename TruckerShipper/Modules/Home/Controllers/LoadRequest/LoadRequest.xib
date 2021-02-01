@@ -280,7 +280,7 @@
                                                         <constraint firstItem="oba-j1-Ke5" firstAttribute="centerY" secondItem="nre-QD-LRd" secondAttribute="centerY" id="xad-i3-GhX"/>
                                                     </constraints>
                                                 </view>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SYh-mh-dBq">
+                                                <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SYh-mh-dBq">
                                                     <rect key="frame" x="171" y="0.0" width="171" height="20"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U08-80-R9x" customClass="UILabelDeviceClass" customModule="PakGo_Shipper" customModuleProvider="target">

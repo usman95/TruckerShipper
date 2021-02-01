@@ -1,9 +1,24 @@
 
-/* Class = "UIButton"; normalTitle = "Push"; ObjectID = "Bqr-7G-ebg"; */
-"Bqr-7G-ebg.normalTitle" = "Push";
+/* Class = "UIButton"; normalTitle = "SIGNUP"; ObjectID = "E4A-Sw-lfa"; */
+"E4A-Sw-lfa.normalTitle" = "SIGNUP";
 
-/* Class = "UIButton"; normalTitle = "Localize"; ObjectID = "ShQ-zc-nYd"; */
-"ShQ-zc-nYd.normalTitle" = "Localize";
+/* Class = "UILabel"; text = "Ship your orders and save your time."; ObjectID = "G1y-Ti-uHb"; */
+"G1y-Ti-uHb.text" = "Ship your orders and save your time.";
 
-/* Class = "UILabel"; text = "English"; ObjectID = "rIK-RJ-Dgo"; */
-"rIK-RJ-Dgo.text" = "English";
+/* Class = "UIButton"; normalTitle = "LOGIN"; ObjectID = "RcO-ug-5yU"; */
+"RcO-ug-5yU.normalTitle" = "LOGIN";
+
+/* Class = "UITextField"; placeholder = "Email address"; ObjectID = "UQa-1E-Pd7"; */
+"UQa-1E-Pd7.placeholder" = "Email address";
+
+/* Class = "UILabel"; text = "Login"; ObjectID = "cOa-dd-kYm"; */
+"cOa-dd-kYm.text" = "Login";
+
+/* Class = "UILabel"; text = "Sign in to your account so you can easily"; ObjectID = "ekL-js-tFD"; */
+"ekL-js-tFD.text" = "Sign in to your account so you can easily";
+
+/* Class = "UITextField"; placeholder = "e.g. ******"; ObjectID = "pFn-VU-lxZ"; */
+"pFn-VU-lxZ.placeholder" = "e.g. ******";
+
+/* Class = "UIButton"; normalTitle = "Forgot Password"; ObjectID = "w5Y-9m-cyO"; */
+"w5Y-9m-cyO.normalTitle" = "Forgot Password";

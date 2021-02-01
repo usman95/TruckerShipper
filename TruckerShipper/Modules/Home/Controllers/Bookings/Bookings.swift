@@ -123,25 +123,49 @@ extension Bookings{
         self.refreshBookings()
     }
     private func scrollToItem(){
-        switch self.bookingType{
-            
-        case .pending:
-            let frame = CGRect(x: 0, y: 0, width: self.btnPending.frame.width, height: self.btnPending.frame.height)
-            self.scrollView.scrollRectToVisible(frame, animated: true)
-        case .inProgress:
-            let frame = CGRect(x: self.btnInProgress.frame.width, y: 0, width: self.btnInProgress.frame.width, height: self.btnInProgress.frame.height)
-            self.scrollView.scrollRectToVisible(frame, animated: true)
-        case .completed:
-            let frame = CGRect(x: self.btnCompleted.center.x, y: 0, width: self.btnCompleted.frame.width, height: self.btnCompleted.frame.height)
-            self.scrollView.scrollRectToVisible(frame, animated: true)
-        case .rejected:
-            let frame = CGRect(x: self.btnRejected.center.x, y: 0, width: self.btnRejected.frame.width, height: self.btnRejected.frame.height)
-            self.scrollView.scrollRectToVisible(frame, animated: true)
-        case .cancelled:
-            let frame = CGRect(x: self.btnCancelled.center.x, y: 0, width: self.btnCancelled.frame.width, height: self.btnCancelled.frame.height)
-            self.scrollView.scrollRectToVisible(frame, animated: true)
-        default:
-            break
+        if MOLHLanguage.currentAppleLanguage() == "en"{
+            switch self.bookingType{
+                
+            case .pending:
+                let frame = CGRect(x: 0, y: 0, width: self.btnPending.frame.width, height: self.btnPending.frame.height)
+                self.scrollView.scrollRectToVisible(frame, animated: true)
+            case .inProgress:
+                let frame = CGRect(x: self.btnInProgress.frame.width, y: 0, width: self.btnInProgress.frame.width, height: self.btnInProgress.frame.height)
+                self.scrollView.scrollRectToVisible(frame, animated: true)
+            case .completed:
+                let frame = CGRect(x: self.btnCompleted.center.x, y: 0, width: self.btnCompleted.frame.width, height: self.btnCompleted.frame.height)
+                self.scrollView.scrollRectToVisible(frame, animated: true)
+            case .rejected:
+                let frame = CGRect(x: self.btnRejected.center.x, y: 0, width: self.btnRejected.frame.width, height: self.btnRejected.frame.height)
+                self.scrollView.scrollRectToVisible(frame, animated: true)
+            case .cancelled:
+                let frame = CGRect(x: self.btnCancelled.center.x, y: 0, width: self.btnCancelled.frame.width, height: self.btnCancelled.frame.height)
+                self.scrollView.scrollRectToVisible(frame, animated: true)
+            default:
+                break
+            }
+        }
+        else{
+            switch self.bookingType{
+                
+            case .pending:
+                let frame = CGRect(x: self.btnPending.center.x, y: 0, width: self.btnPending.frame.width, height: self.btnPending.frame.height)
+                self.scrollView.scrollRectToVisible(frame, animated: true)
+            case .inProgress:
+                let frame = CGRect(x: self.btnInProgress.center.x, y: 0, width: self.btnInProgress.frame.width, height: self.btnInProgress.frame.height)
+                self.scrollView.scrollRectToVisible(frame, animated: true)
+            case .completed:
+                let frame = CGRect(x: self.btnCompleted.center.x, y: 0, width: self.btnCompleted.frame.width, height: self.btnCompleted.frame.height)
+                self.scrollView.scrollRectToVisible(frame, animated: true)
+            case .rejected:
+                let frame = CGRect(x: 0, y: 0, width: self.btnRejected.frame.width, height: self.btnRejected.frame.height)
+                self.scrollView.scrollRectToVisible(frame, animated: true)
+            case .cancelled:
+                let frame = CGRect(x: self.btnCancelled.frame.width, y: 0, width: self.btnCancelled.frame.width, height: self.btnCancelled.frame.height)
+                self.scrollView.scrollRectToVisible(frame, animated: true)
+            default:
+                break
+            }
         }
     }
     

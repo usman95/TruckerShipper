@@ -125,4 +125,9 @@ enum Strings: String{
     case WEIGHT_PER_TRANSPORT_UNIT = "Weight Per Transport Unit"
     case QUANTITY_PER_TRANSPORT_UNIT = "Quantity Per Transport Unit"
     case CANT_NOT_ESTIMATE_A_PRICE_PLEASE_CONTACT_SUPPORT = "Cannot estimate a Price please contact support"
+    case PERMISSION_TO_CONTACTS = "Permission to Contacts"
+    case PERMISSION_TO_CONTACTS_DETAILS = "This app needs access to contacts in order to send them invitations."
+    case GO_TO_SETTINGS = "Go to Settings"
+    case ASK_GO_TO_SETTINGS = "Go to Settings?"
+    case LOCATION_PERMISSION_IS_REQUIRED = "Location permission is required."
 }

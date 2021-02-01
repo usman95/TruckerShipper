@@ -31,13 +31,7 @@ class DashboardTVC: UITableViewCell {
 }
 //MARK:- Helper methods
 extension DashboardTVC{
-    func setUI(){
-        let editProfileImage = UIImage(named: "EditProfile")?.maskWithColor(color: .black)
-        self.btnProfileImage.setImage(editProfileImage, for: .normal)
-    }
     func setData(data: BookingsCountModel?){
-        self.setUI()
-        
         let shipperImageURL = AppStateManager.sharedInstance.loggedInUser.user?.profileImageUrl ?? ""
         self.imgShipper.sd_setImage(with: URL(string: shipperImageURL), placeholderImage: UIImage(named: "profilePlaceHolder"))
         

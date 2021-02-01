@@ -33,7 +33,7 @@ extension MyAccount{
         self.present(picker, animated: true, completion: nil)
     }
     func uploadProfileImageBy(){
-        let alert = UIAlertController(title: Strings.ASK_UPLOAD_DOCMENT_IMAGE_VIA.text , message: "", preferredStyle: .actionSheet)
+        let alert = UIAlertController(title: "" , message: Strings.ASK_UPLOAD_DOCMENT_IMAGE_VIA.text, preferredStyle: .actionSheet)
         
         if self.imagePickerType == .ntn{
             alert.addAction(UIAlertAction(title: "iCloud", style: .default, handler: { (UIAlertAction) in

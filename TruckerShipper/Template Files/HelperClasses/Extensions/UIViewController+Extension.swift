@@ -33,3 +33,22 @@ extension UIViewController {
         return NSStringFromClass(self.classForCoder).components(separatedBy: ".").last!;
     }
 }
+extension UIViewController {
+    
+    //Align Textfield Text
+    func loopThroughSubViewAndAlignTextfieldText(subviews: [UIView]) {
+        if subviews.count > 0 {
+            for subView in subviews {
+                if subView is UITextField && subView.tag <= 0{
+                    let textField = subView as! UITextField
+                    textField.textAlignment = MOLHLanguage.currentAppleLanguage() == "en" ? .left:.right
+                } else if subView is UITextView && subView.tag <= 0{
+                    let textView = subView as! UITextView
+                    textView.textAlignment = MOLHLanguage.currentAppleLanguage() == "en" ? .left:.right
+                    
+                }
+                loopThroughSubViewAndAlignTextfieldText(subviews: subView.subviews)
+            }
+        }
+    }
+}

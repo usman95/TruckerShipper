@@ -88,13 +88,11 @@
 		FA37EAAC25740EAD0073CF0C /* Notifications.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA37EA9325740EAD0073CF0C /* Notifications.xib */; };
 		FA37EAAD25740EAD0073CF0C /* NotificationsTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA37EA9525740EAD0073CF0C /* NotificationsTVC.xib */; };
 		FA37EAAE25740EAD0073CF0C /* NotificationsTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA37EA9625740EAD0073CF0C /* NotificationsTVC.swift */; };
-		FA37EAAF25740EAE0073CF0C /* Login.strings in Resources */ = {isa = PBXBuildFile; fileRef = FA37EA9A25740EAD0073CF0C /* Login.strings */; };
 		FA37EAB025740EAE0073CF0C /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA37EA9C25740EAD0073CF0C /* Login.swift */; };
 		FA37EAB125740EAE0073CF0C /* Login.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA37EA9D25740EAD0073CF0C /* Login.xib */; };
 		FA37EAB7257429350073CF0C /* ForgotPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA37EAB5257429350073CF0C /* ForgotPassword.swift */; };
 		FA37EAB8257429350073CF0C /* ForgotPassword.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA37EAB6257429350073CF0C /* ForgotPassword.xib */; };
 		FA37EABB257432E10073CF0C /* SignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA37EAB9257432E10073CF0C /* SignUp.swift */; };
-		FA37EABC257432E10073CF0C /* SignUp.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA37EABA257432E10073CF0C /* SignUp.xib */; };
 		FA5225AC25802E6200C4FFD0 /* MyContractsTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5225AA25802E6200C4FFD0 /* MyContractsTVC.swift */; };
 		FA5225AD25802E6200C4FFD0 /* MyContractsTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA5225AB25802E6200C4FFD0 /* MyContractsTVC.xib */; };
 		FA5AB710258FF520008314FE /* ContractModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5AB701258FF51E008314FE /* ContractModel.swift */; };
@@ -142,6 +140,7 @@
 		FAE067CA257AE6A2005E1C97 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE067C9257AE6A2005E1C97 /* CardView.swift */; };
 		FAE067CE257AF5EB005E1C97 /* MyAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE067CC257AF5EB005E1C97 /* MyAccount.swift */; };
 		FAE067CF257AF5EB005E1C97 /* MyAccount.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAE067CD257AF5EB005E1C97 /* MyAccount.xib */; };
+		FAEB292125C564A50035F161 /* SignUp.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAEB292325C564A50035F161 /* SignUp.xib */; };
 		FAEDA2092586607C00AD777F /* DropOffModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEDA1FD2586607A00AD777F /* DropOffModel.swift */; };
 		FAEDA20B2586607C00AD777F /* BookingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEDA1FF2586607B00AD777F /* BookingModel.swift */; };
 		FAEDA20C2586607C00AD777F /* PickupModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEDA2002586607B00AD777F /* PickupModel.swift */; };
@@ -246,13 +245,11 @@
 		FA37EA9325740EAD0073CF0C /* Notifications.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Notifications.xib; sourceTree = "<group>"; };
 		FA37EA9525740EAD0073CF0C /* NotificationsTVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NotificationsTVC.xib; sourceTree = "<group>"; };
 		FA37EA9625740EAD0073CF0C /* NotificationsTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationsTVC.swift; sourceTree = "<group>"; };
-		FA37EA9B25740EAD0073CF0C /* ur */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ur; path = ur.lproj/Login.strings; sourceTree = "<group>"; };
 		FA37EA9C25740EAD0073CF0C /* Login.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 		FA37EA9E25740EAD0073CF0C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/Login.xib; sourceTree = "<group>"; };
 		FA37EAB5257429350073CF0C /* ForgotPassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPassword.swift; sourceTree = "<group>"; };
 		FA37EAB6257429350073CF0C /* ForgotPassword.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ForgotPassword.xib; sourceTree = "<group>"; };
 		FA37EAB9257432E10073CF0C /* SignUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUp.swift; sourceTree = "<group>"; };
-		FA37EABA257432E10073CF0C /* SignUp.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignUp.xib; sourceTree = "<group>"; };
 		FA5225AA25802E6200C4FFD0 /* MyContractsTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyContractsTVC.swift; sourceTree = "<group>"; };
 		FA5225AB25802E6200C4FFD0 /* MyContractsTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyContractsTVC.xib; sourceTree = "<group>"; };
 		FA5AB701258FF51E008314FE /* ContractModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContractModel.swift; sourceTree = "<group>"; };
@@ -300,6 +297,9 @@
 		FAE067C9257AE6A2005E1C97 /* CardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		FAE067CC257AF5EB005E1C97 /* MyAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAccount.swift; sourceTree = "<group>"; };
 		FAE067CD257AF5EB005E1C97 /* MyAccount.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyAccount.xib; sourceTree = "<group>"; };
+		FAEB292425C564B50035F161 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/SignUp.xib; sourceTree = "<group>"; };
+		FAEB292525C564BD0035F161 /* ur */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ur; path = ur.lproj/SignUp.strings; sourceTree = "<group>"; };
+		FAEB292725C56E150035F161 /* ur */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ur; path = ur.lproj/Login.strings; sourceTree = "<group>"; };
 		FAEDA1FD2586607A00AD777F /* DropOffModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropOffModel.swift; sourceTree = "<group>"; };
 		FAEDA1FF2586607B00AD777F /* BookingModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookingModel.swift; sourceTree = "<group>"; };
 		FAEDA2002586607B00AD777F /* PickupModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickupModel.swift; sourceTree = "<group>"; };
@@ -854,7 +854,6 @@
 		FA37EA9925740EAD0073CF0C /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				FA37EA9A25740EAD0073CF0C /* Login.strings */,
 				FA37EA9C25740EAD0073CF0C /* Login.swift */,
 				FA37EA9D25740EAD0073CF0C /* Login.xib */,
 			);
@@ -874,7 +873,7 @@
 			isa = PBXGroup;
 			children = (
 				FA37EAB9257432E10073CF0C /* SignUp.swift */,
-				FA37EABA257432E10073CF0C /* SignUp.xib */,
+				FAEB292325C564A50035F161 /* SignUp.xib */,
 			);
 			path = SignUp;
 			sourceTree = "<group>";
@@ -1196,7 +1195,7 @@
 				FAA9C85E258D8C2B005FC95C /* CMS.xib in Resources */,
 				FAEDA21925866DFD00AD777F /* Dashboard.xib in Resources */,
 				FA2000982583BB6800E14D36 /* CalculatedRate.xib in Resources */,
-				FA37EABC257432E10073CF0C /* SignUp.xib in Resources */,
+				FAEB292125C564A50035F161 /* SignUp.xib in Resources */,
 				FA20009D2583DF8F00E14D36 /* LoadRequest.xib in Resources */,
 				FAA9C863258D9172005FC95C /* ChangePassword.xib in Resources */,
 				FA294FCE2587E51C00323EA2 /* WebView.xib in Resources */,
@@ -1210,7 +1209,6 @@
 				FAEDA22625869B8A00AD777F /* TitleHeader.xib in Resources */,
 				FACF6A772585A14E004D2C16 /* Bookings.xib in Resources */,
 				FAA9C849258D3E50005FC95C /* TripDetailTVC.xib in Resources */,
-				FA37EAAF25740EAE0073CF0C /* Login.strings in Resources */,
 				FAA9C84E258D4B45005FC95C /* MilesTVC.xib in Resources */,
 				FA37EA042574099D0073CF0C /* Assets.xcassets in Resources */,
 				FA1A80A325A8972900107D7F /* GoogleService-Info.plist in Resources */,
@@ -1408,20 +1406,22 @@
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
-		FA37EA9A25740EAD0073CF0C /* Login.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				FA37EA9B25740EAD0073CF0C /* ur */,
-			);
-			name = Login.strings;
-			sourceTree = "<group>";
-		};
 		FA37EA9D25740EAD0073CF0C /* Login.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
 				FA37EA9E25740EAD0073CF0C /* Base */,
+				FAEB292725C56E150035F161 /* ur */,
 			);
 			name = Login.xib;
+			sourceTree = "<group>";
+		};
+		FAEB292325C564A50035F161 /* SignUp.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FAEB292425C564B50035F161 /* Base */,
+				FAEB292525C564BD0035F161 /* ur */,
+			);
+			name = SignUp.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

@@ -279,7 +279,7 @@
                                                         <constraint firstItem="nwj-pI-Bmn" firstAttribute="leading" secondItem="xkr-Z3-OjU" secondAttribute="leading" id="zpE-Po-AEh"/>
                                                     </constraints>
                                                 </view>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="53J-7h-N2a">
+                                                <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="53J-7h-N2a">
                                                     <rect key="frame" x="163" y="0.0" width="163" height="20"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2LW-aX-Z6a" customClass="UILabelDeviceClass" customModule="PakGo_Shipper" customModuleProvider="target">

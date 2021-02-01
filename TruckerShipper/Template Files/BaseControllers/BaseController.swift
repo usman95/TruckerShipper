@@ -19,6 +19,7 @@ class BaseController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.setNavigationBar()
+        self.loopThroughSubViewAndAlignTextfieldText(subviews: self.view.subviews)
     }
     
     @IBAction func onBtnSideMenu(_ sender: UIButton) {

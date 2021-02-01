@@ -248,17 +248,19 @@ extension Utility{
         let date = dateFormatter.date(from: dateStr)
         dateFormatter.dateFormat = formatteddate
         dateFormatter.timeZone = .current
-        dateFormatter.locale = .current
+        dateFormatter.locale = Locale(identifier: MOLHLanguage.currentAppleLanguage())
         return dateFormatter.string(from: date ?? Date())
     }
     func dateFormatter(date: Date,dateFormat:String) -> String {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = dateFormat
+        dateFormatter.locale = Locale(identifier: MOLHLanguage.currentAppleLanguage())
         return dateFormatter.string(from: date)
     }
     func getDateFrom(dateString: String,dateFormat: String) -> Date? {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = dateFormat
+        dateFormatter.locale = Locale(identifier: MOLHLanguage.currentAppleLanguage())
         guard let date = dateFormatter.date(from: dateString) else {return nil}
         return date
     }
@@ -296,24 +298,24 @@ extension Utility{
         let settingsURL = URL(string: UIApplication.openSettingsURLString)!
         
         DispatchQueue.main.async {
-            let alert = UIAlertController(title: "Permission to Contacts", message: "QuickDelivery needs access to contacts in order to send them invitations.", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "Go to Settings", style: .default) { _ in
+            let alert = UIAlertController(title: Strings.PERMISSION_TO_CONTACTS.text, message: Strings.PERMISSION_TO_CONTACTS_DETAILS.text, preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: Strings.GO_TO_SETTINGS.text, style: .default) { _ in
                 UIApplication.shared.open(settingsURL)
             })
-            alert.addAction(UIAlertAction(title: "Cancel", style: .cancel))
+            alert.addAction(UIAlertAction(title: Strings.CANCEL.text, style: .cancel))
             Utility.main.topViewController()?.present(alert, animated: true)
         }
     }
     func openSettings(){
-        let alertController = UIAlertController (title: "Go to Settings?", message: "Location permission is mandatory.", preferredStyle: .alert)
-        let settingsAction = UIAlertAction(title: "Settings", style: .default) { (_) -> Void in
+        let alertController = UIAlertController (title: Strings.ASK_GO_TO_SETTINGS.text, message: Strings.LOCATION_PERMISSION_IS_REQUIRED.text, preferredStyle: .alert)
+        let settingsAction = UIAlertAction(title: Strings.GO_TO_SETTINGS.text, style: .default) { (_) -> Void in
             guard let settingsUrl = URL(string: UIApplication.openSettingsURLString) else {return}
             if UIApplication.shared.canOpenURL(settingsUrl) {
                 UIApplication.shared.open(settingsUrl, completionHandler: nil)
             }
         }
         alertController.addAction(settingsAction)
-        let cancelAction = UIAlertAction(title: "Cancel", style: .default, handler: nil)
+        let cancelAction = UIAlertAction(title: Strings.CANCEL.text, style: .default, handler: nil)
         alertController.addAction(cancelAction)
         
         Utility.main.topViewController()?.present(alertController, animated: true, completion: nil)

@@ -101,7 +101,7 @@
                                                 <constraint firstAttribute="height" constant="32" id="BOX-Ij-J4N"/>
                                                 <constraint firstAttribute="width" constant="32" id="gag-Uz-VXp"/>
                                             </constraints>
-                                            <state key="normal" image="EditProfile">
+                                            <state key="normal" image="EditProfileWhite">
                                                 <color key="titleColor" red="0.0" green="0.27608564499999999" blue="0.62137049440000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </state>
                                             <connections>
@@ -1049,7 +1049,7 @@
     <resources>
         <image name="Back" width="32" height="32"/>
         <image name="DocumentPlaceholder" width="48" height="48"/>
-        <image name="EditProfile" width="20" height="19"/>
+        <image name="EditProfileWhite" width="20" height="19"/>
         <image name="NavBar" width="375" height="95"/>
         <image name="UploadDocument" width="48" height="48"/>
         <image name="dropDownBlack" width="10" height="10"/>
