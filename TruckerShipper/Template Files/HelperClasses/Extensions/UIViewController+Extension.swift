@@ -34,7 +34,6 @@ extension UIViewController {
     }
 }
 extension UIViewController {
-    
     //Align Textfield Text
     func loopThroughSubViewAndAlignTextfieldText(subviews: [UIView]) {
         if subviews.count > 0 {
@@ -45,7 +44,6 @@ extension UIViewController {
                 } else if subView is UITextView && subView.tag <= 0{
                     let textView = subView as! UITextView
                     textView.textAlignment = MOLHLanguage.currentAppleLanguage() == "en" ? .left:.right
-                    
                 }
                 loopThroughSubViewAndAlignTextfieldText(subviews: subView.subviews)
             }
