@@ -1,0 +1,39 @@
+
+/* Class = "UILabel"; text = "Notifications"; ObjectID = "DE5-Cl-AMY"; */
+"DE5-Cl-AMY.text" = "اطلاعات";
+
+/* Class = "UIButton"; normalTitle = "PRIVACY POLICY"; ObjectID = "Dh1-Vb-cMc"; */
+"Dh1-Vb-cMc.normalTitle" = "PRIVACY POLICY";
+
+/* Class = "UILabel"; text = "Shipment Tracking"; ObjectID = "Uaw-U8-ndd"; */
+"Uaw-U8-ndd.text" = "Shipment Tracking";
+
+/* Class = "UILabel"; text = "Change Password"; ObjectID = "Yjn-Gv-czr"; */
+"Yjn-Gv-czr.text" = "Change Password";
+
+/* Class = "UILabel"; text = "Logout"; ObjectID = "Yp1-SD-tdx"; */
+"Yp1-SD-tdx.text" = "Logout";
+
+/* Class = "UIButton"; normalTitle = "TERMS & CONDITIONS"; ObjectID = "Zm4-4c-jDU"; */
+"Zm4-4c-jDU.normalTitle" = "TERMS & CONDITIONS";
+
+/* Class = "UILabel"; text = "My Contracts"; ObjectID = "gFE-Pg-xZ0"; */
+"gFE-Pg-xZ0.text" = "My Contracts";
+
+/* Class = "UISegmentedControl"; gk5-Au-c0o.segmentTitles[0] = "EN"; ObjectID = "gk5-Au-c0o"; */
+"gk5-Au-c0o.segmentTitles[0]" = "EN";
+
+/* Class = "UISegmentedControl"; gk5-Au-c0o.segmentTitles[1] = "UR"; ObjectID = "gk5-Au-c0o"; */
+"gk5-Au-c0o.segmentTitles[1]" = "UR";
+
+/* Class = "UILabel"; text = "My Account"; ObjectID = "kBj-A7-0re"; */
+"kBj-A7-0re.text" = "My Account";
+
+/* Class = "UILabel"; text = "My Bookings"; ObjectID = "tsd-lw-nOS"; */
+"tsd-lw-nOS.text" = "My Bookings";
+
+/* Class = "UILabel"; text = "Language"; ObjectID = "tyW-jd-15J"; */
+"tyW-jd-15J.text" = "Language";
+
+/* Class = "UILabel"; text = "Reports"; ObjectID = "vL2-PG-8aa"; */
+"vL2-PG-8aa.text" = "Reports";

@@ -82,7 +82,6 @@
 		FA37EA7A25740E4C0073CF0C /* AppStateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA37EA4F25740E4C0073CF0C /* AppStateManager.swift */; };
 		FA37EA9F25740EAD0073CF0C /* Home.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA37EA7F25740EAD0073CF0C /* Home.xib */; };
 		FA37EAA025740EAD0073CF0C /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA37EA8025740EAD0073CF0C /* Home.swift */; };
-		FA37EAA925740EAD0073CF0C /* SideMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA37EA8F25740EAD0073CF0C /* SideMenu.xib */; };
 		FA37EAAA25740EAD0073CF0C /* SideMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA37EA9025740EAD0073CF0C /* SideMenu.swift */; };
 		FA37EAAB25740EAD0073CF0C /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA37EA9225740EAD0073CF0C /* Notifications.swift */; };
 		FA37EAAC25740EAD0073CF0C /* Notifications.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA37EA9325740EAD0073CF0C /* Notifications.xib */; };
@@ -95,6 +94,7 @@
 		FA37EABB257432E10073CF0C /* SignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA37EAB9257432E10073CF0C /* SignUp.swift */; };
 		FA5225AC25802E6200C4FFD0 /* MyContractsTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5225AA25802E6200C4FFD0 /* MyContractsTVC.swift */; };
 		FA5225AD25802E6200C4FFD0 /* MyContractsTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA5225AB25802E6200C4FFD0 /* MyContractsTVC.xib */; };
+		FA53A21F25CDD693006F064F /* SideMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA53A22125CDD693006F064F /* SideMenu.xib */; };
 		FA5AB710258FF520008314FE /* ContractModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5AB701258FF51E008314FE /* ContractModel.swift */; };
 		FA5AB717258FF520008314FE /* ChargesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5AB708258FF51F008314FE /* ChargesModel.swift */; };
 		FA5AB71C258FF520008314FE /* ShippingLineModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5AB70D258FF520008314FE /* ShippingLineModel.swift */; };
@@ -239,7 +239,6 @@
 		FA37EA4F25740E4C0073CF0C /* AppStateManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppStateManager.swift; sourceTree = "<group>"; };
 		FA37EA7F25740EAD0073CF0C /* Home.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Home.xib; sourceTree = "<group>"; };
 		FA37EA8025740EAD0073CF0C /* Home.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
-		FA37EA8F25740EAD0073CF0C /* SideMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SideMenu.xib; sourceTree = "<group>"; };
 		FA37EA9025740EAD0073CF0C /* SideMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideMenu.swift; sourceTree = "<group>"; };
 		FA37EA9225740EAD0073CF0C /* Notifications.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
 		FA37EA9325740EAD0073CF0C /* Notifications.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Notifications.xib; sourceTree = "<group>"; };
@@ -252,6 +251,8 @@
 		FA37EAB9257432E10073CF0C /* SignUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUp.swift; sourceTree = "<group>"; };
 		FA5225AA25802E6200C4FFD0 /* MyContractsTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyContractsTVC.swift; sourceTree = "<group>"; };
 		FA5225AB25802E6200C4FFD0 /* MyContractsTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyContractsTVC.xib; sourceTree = "<group>"; };
+		FA53A22025CDD693006F064F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/SideMenu.xib; sourceTree = "<group>"; };
+		FA53A22425CDD69A006F064F /* ur */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ur; path = ur.lproj/SideMenu.strings; sourceTree = "<group>"; };
 		FA5AB701258FF51E008314FE /* ContractModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContractModel.swift; sourceTree = "<group>"; };
 		FA5AB708258FF51F008314FE /* ChargesModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChargesModel.swift; sourceTree = "<group>"; };
 		FA5AB70D258FF520008314FE /* ShippingLineModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShippingLineModel.swift; sourceTree = "<group>"; };
@@ -807,7 +808,7 @@
 		FA37EA8E25740EAD0073CF0C /* SideMenu */ = {
 			isa = PBXGroup;
 			children = (
-				FA37EA8F25740EAD0073CF0C /* SideMenu.xib */,
+				FA53A22125CDD693006F064F /* SideMenu.xib */,
 				FA37EA9025740EAD0073CF0C /* SideMenu.swift */,
 			);
 			path = SideMenu;
@@ -1186,7 +1187,7 @@
 				FA1A80A525A899D900107D7F /* AuthKey_PushNotification.p8 in Resources */,
 				FA37EA9F25740EAD0073CF0C /* Home.xib in Resources */,
 				FAE067CF257AF5EB005E1C97 /* MyAccount.xib in Resources */,
-				FA37EAA925740EAD0073CF0C /* SideMenu.xib in Resources */,
+				FA53A21F25CDD693006F064F /* SideMenu.xib in Resources */,
 				FA294FC42587CAFD00323EA2 /* BookingDocuments.xib in Resources */,
 				FA37EA072574099D0073CF0C /* LaunchScreen.storyboard in Resources */,
 				FA880335258F91A300B7A0ED /* SearchForAnything.xib in Resources */,
@@ -1413,6 +1414,15 @@
 				FAEB292725C56E150035F161 /* ur */,
 			);
 			name = Login.xib;
+			sourceTree = "<group>";
+		};
+		FA53A22125CDD693006F064F /* SideMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FA53A22025CDD693006F064F /* Base */,
+				FA53A22425CDD69A006F064F /* ur */,
+			);
+			name = SideMenu.xib;
 			sourceTree = "<group>";
 		};
 		FAEB292325C564A50035F161 /* SignUp.xib */ = {
