@@ -1,0 +1,15 @@
+
+/* Class = "UILabel"; text = "Arrival"; ObjectID = "Ugc-SS-Noi"; */
+"Ugc-SS-Noi.text" = "آمد";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "XKU-SE-SBg"; */
+"XKU-SE-SBg.text" = "Label";
+
+/* Class = "UILabel"; text = "Departure"; ObjectID = "Xqn-gX-opC"; */
+"Xqn-gX-opC.text" = "روانگی";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "jGE-vV-IzF"; */
+"jGE-vV-IzF.text" = "Label";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "jfc-Zv-hkp"; */
+"jfc-Zv-hkp.text" = "Label";

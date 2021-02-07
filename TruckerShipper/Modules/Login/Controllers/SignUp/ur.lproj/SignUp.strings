@@ -1,9 +1,9 @@
 
 /* Class = "UITextField"; placeholder = "First name"; ObjectID = "4Ju-qq-R4u"; */
-"4Ju-qq-R4u.placeholder" = "First name";
+"4Ju-qq-R4u.placeholder" = "پہلا نام";
 
 /* Class = "UITextField"; placeholder = "Email address"; ObjectID = "6Y5-nX-W8Q"; */
-"6Y5-nX-W8Q.placeholder" = "Email address";
+"6Y5-nX-W8Q.placeholder" = "ای میل اڈریس";
 
 /* Class = "UILabel"; text = "Ship your orders and save your time."; ObjectID = "DXj-8K-DMa"; */
 "DXj-8K-DMa.text" = "Ship your orders and save your time.";
@@ -12,25 +12,25 @@
 "IQT-v6-mdN.text" = "Create an account so you can easily";
 
 /* Class = "UITextField"; placeholder = "Confirm password"; ObjectID = "Svj-jB-65e"; */
-"Svj-jB-65e.placeholder" = "Confirm password";
+"Svj-jB-65e.placeholder" = "پاس ورڈ کی تصدیق";
 
 /* Class = "UITextField"; placeholder = "Last name"; ObjectID = "crF-uu-8ez"; */
-"crF-uu-8ez.placeholder" = "Last name";
+"crF-uu-8ez.placeholder" = "آخری نام";
 
 /* Class = "UIButton"; normalTitle = "CREATE ACCOUNT"; ObjectID = "f38-Sy-d9w"; */
-"f38-Sy-d9w.normalTitle" = "CREATE ACCOUNT";
+"f38-Sy-d9w.normalTitle" = "کھاتا کھولیں";
 
 /* Class = "UITextField"; placeholder = "Password"; ObjectID = "gM3-9p-RXX"; */
-"gM3-9p-RXX.placeholder" = "Password";
+"gM3-9p-RXX.placeholder" = "پاس ورڈ";
 
 /* Class = "UITextField"; placeholder = "Shipper type"; ObjectID = "l3A-fO-UX0"; */
-"l3A-fO-UX0.placeholder" = "Shipper type";
+"l3A-fO-UX0.placeholder" = "جہاز کی قسم";
 
 /* Class = "UITextField"; placeholder = "Phone number"; ObjectID = "q1o-Is-FnH"; */
-"q1o-Is-FnH.placeholder" = "Phone number";
+"q1o-Is-FnH.placeholder" = "فون نمبر";
 
 /* Class = "UITextView"; text = "By signing up, you're agree to our Terms of use and Privacy Policy"; ObjectID = "qRU-kE-zq7"; */
-"qRU-kE-zq7.text" = "By signing up, you're agree to our Terms of use and Privacy Policy";
+"qRU-kE-zq7.text" = "سائن اپ کرکے ، آپ ہمارے ساتھ اتفاق کرتے ہیں";
 
 /* Class = "UILabel"; text = "Register"; ObjectID = "xDO-Ta-Vlr"; */
-"xDO-Ta-Vlr.text" = "Register";
+"xDO-Ta-Vlr.text" = "رجسٹر";

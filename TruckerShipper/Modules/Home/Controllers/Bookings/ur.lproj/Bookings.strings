@@ -1,0 +1,27 @@
+
+/* Class = "UIButton"; normalTitle = "Completed"; ObjectID = "0Ny-Oy-1Ao"; */
+"0Ny-Oy-1Ao.normalTitle" = "مکمل";
+
+/* Class = "UIButton"; selectedTitle = "Completed"; ObjectID = "0Ny-Oy-1Ao"; */
+"0Ny-Oy-1Ao.selectedTitle" = "مکمل";
+
+/* Class = "UIButton"; normalTitle = "In Progress"; ObjectID = "5c5-4z-he8"; */
+"5c5-4z-he8.normalTitle" = "کام جاری ہے";
+
+/* Class = "UIButton"; selectedTitle = "In Progress"; ObjectID = "5c5-4z-he8"; */
+"5c5-4z-he8.selectedTitle" = "کام جاری ہے";
+
+/* Class = "UILabel"; text = "MY BOOKINGS"; ObjectID = "Gcr-ZJ-idj"; */
+"Gcr-ZJ-idj.text" = "میری بکنگ";
+
+/* Class = "UIButton"; normalTitle = "Rejected"; ObjectID = "UEU-UF-vln"; */
+"UEU-UF-vln.normalTitle" = "مسترد";
+
+/* Class = "UIButton"; normalTitle = "Cancelled"; ObjectID = "swO-2J-Ieo"; */
+"swO-2J-Ieo.normalTitle" = "منسوخ";
+
+/* Class = "UIButton"; normalTitle = "Pending"; ObjectID = "x3t-08-VDU"; */
+"x3t-08-VDU.normalTitle" = "زیر التواء";
+
+/* Class = "UIButton"; selectedTitle = "Pending"; ObjectID = "x3t-08-VDU"; */
+"x3t-08-VDU.selectedTitle" = "زیر التواء";

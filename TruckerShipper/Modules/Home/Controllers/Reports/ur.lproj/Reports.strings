@@ -1,0 +1,18 @@
+
+/* Class = "UILabel"; text = "REPORTS"; ObjectID = "39K-oC-9vJ"; */
+"39K-oC-9vJ.text" = "رپورٹیں";
+
+/* Class = "UIButton"; normalTitle = "GENERATE REPORT"; ObjectID = "6r3-K3-pPZ"; */
+"6r3-K3-pPZ.normalTitle" = "GENERATE REPORT";
+
+/* Class = "UITextField"; placeholder = "Select end date"; ObjectID = "LcC-Ak-svd"; */
+"LcC-Ak-svd.placeholder" = "براہ کرم آخری تاریخ منتخب کریں";
+
+/* Class = "UITextField"; placeholder = "Select start date"; ObjectID = "RRc-sL-vc5"; */
+"RRc-sL-vc5.placeholder" = "براہ مہربانی دوبارہ کوشش کریں";
+
+/* Class = "UILabel"; text = "Start Date"; ObjectID = "hKZ-4U-ttq"; */
+"hKZ-4U-ttq.text" = "شروع کرنے کی تاریخ";
+
+/* Class = "UILabel"; text = "End Date"; ObjectID = "jyf-Jv-h49"; */
+"jyf-Jv-h49.text" = "آخری تاریخ";

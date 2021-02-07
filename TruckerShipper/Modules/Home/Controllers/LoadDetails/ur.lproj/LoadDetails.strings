@@ -1,0 +1,60 @@
+
+/* Class = "UILabel"; text = "Time:"; ObjectID = "2LW-aX-Z6a"; */
+"2LW-aX-Z6a.text" = "وقت:";
+
+/* Class = "UIButton"; normalTitle = "CALCULATE RATE"; ObjectID = "5SX-hh-g9E"; */
+"5SX-hh-g9E.normalTitle" = "شرح کی شرح";
+
+/* Class = "UILabel"; text = "N/A"; ObjectID = "602-hi-dfe"; */
+"602-hi-dfe.text" = "N/A";
+
+/* Class = "UITextField"; placeholder = "Total Quantity Per Container"; ObjectID = "6wl-LA-W5X"; */
+"6wl-LA-W5X.placeholder" = "کنٹینر کی کل مقدار";
+
+/* Class = "UILabel"; text = "City"; ObjectID = "Ajd-qT-B2M"; */
+"Ajd-qT-B2M.text" = "شہر";
+
+/* Class = "UITextField"; placeholder = "Commodity"; ObjectID = "BUB-VU-DKf"; */
+"BUB-VU-DKf.placeholder" = "کموڈیو";
+
+/* Class = "UILabel"; text = "Address"; ObjectID = "Gsj-b4-MuW"; */
+"Gsj-b4-MuW.text" = "ایڈریس";
+
+/* Class = "UITextField"; placeholder = "Cargo Type"; ObjectID = "IXG-7e-djY"; */
+"IXG-7e-djY.placeholder" = "کارگو کی قسم";
+
+/* Class = "UILabel"; text = "ft"; ObjectID = "JeX-zJ-jM8"; */
+"JeX-zJ-jM8.text" = "ایف ٹی";
+
+/* Class = "UILabel"; text = "N/A"; ObjectID = "XIq-36-vqi"; */
+"XIq-36-vqi.text" = "N/A";
+
+/* Class = "UITextField"; placeholder = "Weight Per Transport Unit"; ObjectID = "beB-Mb-y6o"; */
+"beB-Mb-y6o.placeholder" = "ٹرانسمیشن یونٹ وزن";
+
+/* Class = "UILabel"; text = "Dropoff Point"; ObjectID = "gJ3-9q-8QK"; */
+"gJ3-9q-8QK.text" = "ڈراپف پوائنٹ";
+
+/* Class = "UILabel"; text = "Ton"; ObjectID = "liD-eC-8pA"; */
+"liD-eC-8pA.text" = "ٹن";
+
+/* Class = "UILabel"; text = "BOOKING"; ObjectID = "mSU-GI-u1Z"; */
+"mSU-GI-u1Z.text" = "بکنگ";
+
+/* Class = "UILabel"; text = "Load Details"; ObjectID = "nC8-Mc-hg3"; */
+"nC8-Mc-hg3.text" = "لوڈ تفصیلات";
+
+/* Class = "UILabel"; text = "Kilometers:"; ObjectID = "nwj-pI-Bmn"; */
+"nwj-pI-Bmn.text" = "کلومیٹر:";
+
+/* Class = "UILabel"; text = "Address"; ObjectID = "oDm-Ho-nIX"; */
+"oDm-Ho-nIX.text" = "ایڈریس";
+
+/* Class = "UITextField"; placeholder = "Size Per Transport Unit"; ObjectID = "sKr-k9-TTt"; */
+"sKr-k9-TTt.placeholder" = "کنٹینر کا سائز";
+
+/* Class = "UILabel"; text = "City"; ObjectID = "yc0-pN-pBg"; */
+"yc0-pN-pBg.text" = "شہر";
+
+/* Class = "UILabel"; text = "Pickup Point"; ObjectID = "ygg-Dt-k4K"; */
+"ygg-Dt-k4K.text" = "پک اپ پوائنٹ";

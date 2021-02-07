@@ -1,0 +1,39 @@
+
+/* Class = "UILabel"; text = "N/A"; ObjectID = "2wW-jI-mOi"; */
+"2wW-jI-mOi.text" = "N/A";
+
+/* Class = "UILabel"; text = "Time:"; ObjectID = "3al-z0-cV8"; */
+"3al-z0-cV8.text" = "وقت:";
+
+/* Class = "UILabel"; text = "Kilometers:"; ObjectID = "3do-Ih-zfq"; */
+"3do-Ih-zfq.text" = "کلومیٹر:";
+
+/* Class = "UIButton"; normalTitle = "NEXT"; ObjectID = "3tC-xL-DdT"; */
+"3tC-xL-DdT.normalTitle" = "اگلے";
+
+/* Class = "UILabel"; text = "Pickup Address"; ObjectID = "5H4-jV-UAx"; */
+"5H4-jV-UAx.text" = "اٹھاو ایڈریس";
+
+/* Class = "UILabel"; text = "Pickup Point"; ObjectID = "5UE-K7-Qg5"; */
+"5UE-K7-Qg5.text" = "پک اپ پوائنٹ";
+
+/* Class = "UILabel"; text = "Dropoff Point"; ObjectID = "8XW-ol-7hl"; */
+"8XW-ol-7hl.text" = "ڈراپف پوائنٹ";
+
+/* Class = "UILabel"; text = "N/A"; ObjectID = "9hp-sa-1UL"; */
+"9hp-sa-1UL.text" = "N/A";
+
+/* Class = "UILabel"; text = "BOOKING"; ObjectID = "I72-37-0A2"; */
+"I72-37-0A2.text" = "بکنگ";
+
+/* Class = "UILabel"; text = "DropOff Address"; ObjectID = "Lyw-yx-Kqu"; */
+"Lyw-yx-Kqu.text" = "ڈراپف ایڈریس";
+
+/* Class = "UILabel"; text = "DropOff City"; ObjectID = "dUu-DJ-HRA"; */
+"dUu-DJ-HRA.text" = "ڈراپف شہر";
+
+/* Class = "UILabel"; text = "Pickup City"; ObjectID = "fRs-rk-JaB"; */
+"fRs-rk-JaB.text" = "اٹھاو شہر";
+
+/* Class = "UILabel"; text = "Hey! User please select pickup & dropoff location"; ObjectID = "jxC-gM-7Bz"; */
+"jxC-gM-7Bz.text" = "Hey! User please select pickup & dropoff location";

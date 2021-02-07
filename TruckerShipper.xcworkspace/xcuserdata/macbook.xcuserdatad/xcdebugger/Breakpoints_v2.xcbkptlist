@@ -8,7 +8,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "B7989C2C-3060-4316-A26B-BEBE895DF417"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TruckerShipper/Template Files/Services/APIManagerBase.swift"
@@ -32,8 +32,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "55"
             endingLineNumber = "55"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -50,6 +50,441 @@
             endingLineNumber = "26"
             landmarkName = "onBtnShowPassword(_:)"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "187706B2-222D-42CB-BC16-E85F714727BE"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TruckerShipper/Template Files/DynamicFonts/DynamicFonts.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "521"
+            endingLineNumber = "521"
+            landmarkName = "unknown"
+            landmarkType = "0">
+            <Locations>
+               <Location
+                  uuid = "187706B2-222D-42CB-BC16-E85F714727BE - 40ddeb164955605d"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "PakGo_Shipper.UITextViewDeviceClass.overrideFontSize(CoreGraphics.CGFloat, Swift.String) -&gt; ()"
+                  moduleName = "PakGo Shipper"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/macbook/Documents/CodeBase/PakGo/TruckerShipper/TruckerShipper/Template%20Files/DynamicFonts/DynamicFonts.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "521"
+                  endingLineNumber = "521"
+                  offsetFromSymbolStart = "370">
+               </Location>
+               <Location
+                  uuid = "187706B2-222D-42CB-BC16-E85F714727BE - 40ddeb164955605d"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "PakGo_Shipper.UITextViewDeviceClass.overrideFontSize(CoreGraphics.CGFloat, Swift.String) -&gt; ()"
+                  moduleName = "PakGo Shipper"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/macbook/Documents/CodeBase/PakGo/TruckerShipper/TruckerShipper/Template%20Files/DynamicFonts/DynamicFonts.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "521"
+                  endingLineNumber = "521"
+                  offsetFromSymbolStart = "2374">
+               </Location>
+               <Location
+                  uuid = "187706B2-222D-42CB-BC16-E85F714727BE - 40ddeb164955605d"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "PakGo_Shipper.UITextViewDeviceClass.overrideFontSize(CoreGraphics.CGFloat, Swift.String) -&gt; ()"
+                  moduleName = "PakGo Shipper"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/macbook/Documents/CodeBase/PakGo/TruckerShipper/TruckerShipper/Template%20Files/DynamicFonts/DynamicFonts.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "521"
+                  endingLineNumber = "521"
+                  offsetFromSymbolStart = "4378">
+               </Location>
+               <Location
+                  uuid = "187706B2-222D-42CB-BC16-E85F714727BE - 40ddeb164955605d"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "PakGo_Shipper.UITextViewDeviceClass.overrideFontSize(CoreGraphics.CGFloat, Swift.String) -&gt; ()"
+                  moduleName = "PakGo Shipper"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/macbook/Documents/CodeBase/PakGo/TruckerShipper/TruckerShipper/Template%20Files/DynamicFonts/DynamicFonts.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "521"
+                  endingLineNumber = "521"
+                  offsetFromSymbolStart = "6382">
+               </Location>
+               <Location
+                  uuid = "187706B2-222D-42CB-BC16-E85F714727BE - 40ddeb164955605d"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "PakGo_Shipper.UITextViewDeviceClass.overrideFontSize(CoreGraphics.CGFloat, Swift.String) -&gt; ()"
+                  moduleName = "PakGo Shipper"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/macbook/Documents/CodeBase/PakGo/TruckerShipper/TruckerShipper/Template%20Files/DynamicFonts/DynamicFonts.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "521"
+                  endingLineNumber = "521"
+                  offsetFromSymbolStart = "8386">
+               </Location>
+               <Location
+                  uuid = "187706B2-222D-42CB-BC16-E85F714727BE - 40ddeb164955605d"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "PakGo_Shipper.UITextViewDeviceClass.overrideFontSize(CoreGraphics.CGFloat, Swift.String) -&gt; ()"
+                  moduleName = "PakGo Shipper"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/macbook/Documents/CodeBase/PakGo/TruckerShipper/TruckerShipper/Template%20Files/DynamicFonts/DynamicFonts.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "521"
+                  endingLineNumber = "521"
+                  offsetFromSymbolStart = "10390">
+               </Location>
+               <Location
+                  uuid = "187706B2-222D-42CB-BC16-E85F714727BE - 40ddeb164955605d"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "PakGo_Shipper.UITextViewDeviceClass.overrideFontSize(CoreGraphics.CGFloat, Swift.String) -&gt; ()"
+                  moduleName = "PakGo Shipper"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/macbook/Documents/CodeBase/PakGo/TruckerShipper/TruckerShipper/Template%20Files/DynamicFonts/DynamicFonts.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "521"
+                  endingLineNumber = "521"
+                  offsetFromSymbolStart = "10416">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E19D3BA7-D074-4698-BE25-B099DC0E7B59"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TruckerShipper/Template Files/DynamicFonts/DynamicFonts.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "519"
+            endingLineNumber = "519"
+            landmarkName = "unknown"
+            landmarkType = "0">
+            <Locations>
+               <Location
+                  uuid = "E19D3BA7-D074-4698-BE25-B099DC0E7B59 - 40ddeb164955605d"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "PakGo_Shipper.UITextViewDeviceClass.overrideFontSize(CoreGraphics.CGFloat, Swift.String) -&gt; ()"
+                  moduleName = "PakGo Shipper"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/macbook/Documents/CodeBase/PakGo/TruckerShipper/TruckerShipper/Template%20Files/DynamicFonts/DynamicFonts.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "521"
+                  endingLineNumber = "521"
+                  offsetFromSymbolStart = "370">
+               </Location>
+               <Location
+                  uuid = "E19D3BA7-D074-4698-BE25-B099DC0E7B59 - 40ddeb164955605d"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "PakGo_Shipper.UITextViewDeviceClass.overrideFontSize(CoreGraphics.CGFloat, Swift.String) -&gt; ()"
+                  moduleName = "PakGo Shipper"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/macbook/Documents/CodeBase/PakGo/TruckerShipper/TruckerShipper/Template%20Files/DynamicFonts/DynamicFonts.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "521"
+                  endingLineNumber = "521"
+                  offsetFromSymbolStart = "2374">
+               </Location>
+               <Location
+                  uuid = "E19D3BA7-D074-4698-BE25-B099DC0E7B59 - 40ddeb164955605d"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "PakGo_Shipper.UITextViewDeviceClass.overrideFontSize(CoreGraphics.CGFloat, Swift.String) -&gt; ()"
+                  moduleName = "PakGo Shipper"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/macbook/Documents/CodeBase/PakGo/TruckerShipper/TruckerShipper/Template%20Files/DynamicFonts/DynamicFonts.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "521"
+                  endingLineNumber = "521"
+                  offsetFromSymbolStart = "4378">
+               </Location>
+               <Location
+                  uuid = "E19D3BA7-D074-4698-BE25-B099DC0E7B59 - 40ddeb164955605d"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "PakGo_Shipper.UITextViewDeviceClass.overrideFontSize(CoreGraphics.CGFloat, Swift.String) -&gt; ()"
+                  moduleName = "PakGo Shipper"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/macbook/Documents/CodeBase/PakGo/TruckerShipper/TruckerShipper/Template%20Files/DynamicFonts/DynamicFonts.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "521"
+                  endingLineNumber = "521"
+                  offsetFromSymbolStart = "6382">
+               </Location>
+               <Location
+                  uuid = "E19D3BA7-D074-4698-BE25-B099DC0E7B59 - 40ddeb164955605d"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "PakGo_Shipper.UITextViewDeviceClass.overrideFontSize(CoreGraphics.CGFloat, Swift.String) -&gt; ()"
+                  moduleName = "PakGo Shipper"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/macbook/Documents/CodeBase/PakGo/TruckerShipper/TruckerShipper/Template%20Files/DynamicFonts/DynamicFonts.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "521"
+                  endingLineNumber = "521"
+                  offsetFromSymbolStart = "8386">
+               </Location>
+               <Location
+                  uuid = "E19D3BA7-D074-4698-BE25-B099DC0E7B59 - 40ddeb164955605d"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "PakGo_Shipper.UITextViewDeviceClass.overrideFontSize(CoreGraphics.CGFloat, Swift.String) -&gt; ()"
+                  moduleName = "PakGo Shipper"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/macbook/Documents/CodeBase/PakGo/TruckerShipper/TruckerShipper/Template%20Files/DynamicFonts/DynamicFonts.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "521"
+                  endingLineNumber = "521"
+                  offsetFromSymbolStart = "10390">
+               </Location>
+               <Location
+                  uuid = "E19D3BA7-D074-4698-BE25-B099DC0E7B59 - 40ddeb164955605d"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "PakGo_Shipper.UITextViewDeviceClass.overrideFontSize(CoreGraphics.CGFloat, Swift.String) -&gt; ()"
+                  moduleName = "PakGo Shipper"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/macbook/Documents/CodeBase/PakGo/TruckerShipper/TruckerShipper/Template%20Files/DynamicFonts/DynamicFonts.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "521"
+                  endingLineNumber = "521"
+                  offsetFromSymbolStart = "10416">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "24C69B45-88FD-4F2C-9C8F-9092290F430E"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TruckerShipper/Template Files/DynamicFonts/DynamicFonts.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "596"
+            endingLineNumber = "596"
+            landmarkName = "unknown"
+            landmarkType = "0">
+            <Locations>
+               <Location
+                  uuid = "24C69B45-88FD-4F2C-9C8F-9092290F430E - 40ddeb1649557e81"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "PakGo_Shipper.UITextViewDeviceClass.overrideFontSize(CoreGraphics.CGFloat, Swift.String) -&gt; ()"
+                  moduleName = "PakGo Shipper"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/macbook/Documents/CodeBase/PakGo/TruckerShipper/TruckerShipper/Template%20Files/DynamicFonts/DynamicFonts.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "597"
+                  endingLineNumber = "597"
+                  offsetFromSymbolStart = "10398">
+               </Location>
+               <Location
+                  uuid = "24C69B45-88FD-4F2C-9C8F-9092290F430E - 40ddeb1649557e81"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "PakGo_Shipper.UITextViewDeviceClass.overrideFontSize(CoreGraphics.CGFloat, Swift.String) -&gt; ()"
+                  moduleName = "PakGo Shipper"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/macbook/Documents/CodeBase/PakGo/TruckerShipper/TruckerShipper/Template%20Files/DynamicFonts/DynamicFonts.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "597"
+                  endingLineNumber = "597"
+                  offsetFromSymbolStart = "10432">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "92E00346-0903-4A29-A7F8-A1E3E3FB9838"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TruckerShipper/Template Files/DynamicFonts/DynamicFonts.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "597"
+            endingLineNumber = "597"
+            landmarkName = "unknown"
+            landmarkType = "0">
+            <Locations>
+               <Location
+                  uuid = "92E00346-0903-4A29-A7F8-A1E3E3FB9838 - 40ddeb1649557e81"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "PakGo_Shipper.UITextViewDeviceClass.overrideFontSize(CoreGraphics.CGFloat, Swift.String) -&gt; ()"
+                  moduleName = "PakGo Shipper"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/macbook/Documents/CodeBase/PakGo/TruckerShipper/TruckerShipper/Template%20Files/DynamicFonts/DynamicFonts.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "597"
+                  endingLineNumber = "597"
+                  offsetFromSymbolStart = "10398">
+               </Location>
+               <Location
+                  uuid = "92E00346-0903-4A29-A7F8-A1E3E3FB9838 - 40ddeb1649557e81"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "PakGo_Shipper.UITextViewDeviceClass.overrideFontSize(CoreGraphics.CGFloat, Swift.String) -&gt; ()"
+                  moduleName = "PakGo Shipper"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/macbook/Documents/CodeBase/PakGo/TruckerShipper/TruckerShipper/Template%20Files/DynamicFonts/DynamicFonts.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "597"
+                  endingLineNumber = "597"
+                  offsetFromSymbolStart = "10432">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D8260B36-2E0A-4BCD-B31A-5635DFEA41A6"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TruckerShipper/Template Files/DynamicFonts/DynamicFonts.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "598"
+            endingLineNumber = "598"
+            landmarkName = "unknown"
+            landmarkType = "0">
+            <Locations>
+               <Location
+                  uuid = "D8260B36-2E0A-4BCD-B31A-5635DFEA41A6 - 40ddeb1649557e60"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "PakGo_Shipper.UITextViewDeviceClass.overrideFontSize(CoreGraphics.CGFloat, Swift.String) -&gt; ()"
+                  moduleName = "PakGo Shipper"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/macbook/Documents/CodeBase/PakGo/TruckerShipper/TruckerShipper/Template%20Files/DynamicFonts/DynamicFonts.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "598"
+                  endingLineNumber = "598"
+                  offsetFromSymbolStart = "10441">
+               </Location>
+               <Location
+                  uuid = "D8260B36-2E0A-4BCD-B31A-5635DFEA41A6 - 40ddeb1649557e60"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "PakGo_Shipper.UITextViewDeviceClass.overrideFontSize(CoreGraphics.CGFloat, Swift.String) -&gt; ()"
+                  moduleName = "PakGo Shipper"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/macbook/Documents/CodeBase/PakGo/TruckerShipper/TruckerShipper/Template%20Files/DynamicFonts/DynamicFonts.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "598"
+                  endingLineNumber = "598"
+                  offsetFromSymbolStart = "10808">
+               </Location>
+               <Location
+                  uuid = "D8260B36-2E0A-4BCD-B31A-5635DFEA41A6 - 40ddeb1649557e60"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "PakGo_Shipper.UITextViewDeviceClass.overrideFontSize(CoreGraphics.CGFloat, Swift.String) -&gt; ()"
+                  moduleName = "PakGo Shipper"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/macbook/Documents/CodeBase/PakGo/TruckerShipper/TruckerShipper/Template%20Files/DynamicFonts/DynamicFonts.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "598"
+                  endingLineNumber = "598"
+                  offsetFromSymbolStart = "11187">
+               </Location>
+               <Location
+                  uuid = "D8260B36-2E0A-4BCD-B31A-5635DFEA41A6 - 40ddeb1649557e60"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "PakGo_Shipper.UITextViewDeviceClass.overrideFontSize(CoreGraphics.CGFloat, Swift.String) -&gt; ()"
+                  moduleName = "PakGo Shipper"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/macbook/Documents/CodeBase/PakGo/TruckerShipper/TruckerShipper/Template%20Files/DynamicFonts/DynamicFonts.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "598"
+                  endingLineNumber = "598"
+                  offsetFromSymbolStart = "11566">
+               </Location>
+               <Location
+                  uuid = "D8260B36-2E0A-4BCD-B31A-5635DFEA41A6 - 40ddeb1649557e60"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "PakGo_Shipper.UITextViewDeviceClass.overrideFontSize(CoreGraphics.CGFloat, Swift.String) -&gt; ()"
+                  moduleName = "PakGo Shipper"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/macbook/Documents/CodeBase/PakGo/TruckerShipper/TruckerShipper/Template%20Files/DynamicFonts/DynamicFonts.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "598"
+                  endingLineNumber = "598"
+                  offsetFromSymbolStart = "11945">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

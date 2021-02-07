@@ -3,22 +3,22 @@
 "DE5-Cl-AMY.text" = "اطلاعات";
 
 /* Class = "UIButton"; normalTitle = "PRIVACY POLICY"; ObjectID = "Dh1-Vb-cMc"; */
-"Dh1-Vb-cMc.normalTitle" = "PRIVACY POLICY";
+"Dh1-Vb-cMc.normalTitle" = "پرائیویسی پالیسی";
 
 /* Class = "UILabel"; text = "Shipment Tracking"; ObjectID = "Uaw-U8-ndd"; */
-"Uaw-U8-ndd.text" = "Shipment Tracking";
+"Uaw-U8-ndd.text" = "شپمنٹ کی ٹریکنگ";
 
 /* Class = "UILabel"; text = "Change Password"; ObjectID = "Yjn-Gv-czr"; */
-"Yjn-Gv-czr.text" = "Change Password";
+"Yjn-Gv-czr.text" = "پاس ورڈ تبدیل کریں";
 
 /* Class = "UILabel"; text = "Logout"; ObjectID = "Yp1-SD-tdx"; */
-"Yp1-SD-tdx.text" = "Logout";
+"Yp1-SD-tdx.text" = "لاگ آوٹ";
 
 /* Class = "UIButton"; normalTitle = "TERMS & CONDITIONS"; ObjectID = "Zm4-4c-jDU"; */
-"Zm4-4c-jDU.normalTitle" = "TERMS & CONDITIONS";
+"Zm4-4c-jDU.normalTitle" = "شرائط و ضوابط";
 
 /* Class = "UILabel"; text = "My Contracts"; ObjectID = "gFE-Pg-xZ0"; */
-"gFE-Pg-xZ0.text" = "My Contracts";
+"gFE-Pg-xZ0.text" = "میرے معاہدے";
 
 /* Class = "UISegmentedControl"; gk5-Au-c0o.segmentTitles[0] = "EN"; ObjectID = "gk5-Au-c0o"; */
 "gk5-Au-c0o.segmentTitles[0]" = "EN";
@@ -27,13 +27,13 @@
 "gk5-Au-c0o.segmentTitles[1]" = "UR";
 
 /* Class = "UILabel"; text = "My Account"; ObjectID = "kBj-A7-0re"; */
-"kBj-A7-0re.text" = "My Account";
+"kBj-A7-0re.text" = "میرا اکاؤنٹس";
 
 /* Class = "UILabel"; text = "My Bookings"; ObjectID = "tsd-lw-nOS"; */
-"tsd-lw-nOS.text" = "My Bookings";
+"tsd-lw-nOS.text" = "میری بکنگ";
 
 /* Class = "UILabel"; text = "Language"; ObjectID = "tyW-jd-15J"; */
-"tyW-jd-15J.text" = "Language";
+"tyW-jd-15J.text" = "زبان";
 
 /* Class = "UILabel"; text = "Reports"; ObjectID = "vL2-PG-8aa"; */
-"vL2-PG-8aa.text" = "Reports";
+"vL2-PG-8aa.text" = "رپورٹیں";

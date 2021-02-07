@@ -1,0 +1,30 @@
+
+/* Class = "UILabel"; text = "8/JUNE/20"; ObjectID = "2zu-3I-Hw3"; */
+"2zu-3I-Hw3.text" = "8/JUNE/20";
+
+/* Class = "UIButton"; normalTitle = "ADD DOCUMENTS"; ObjectID = "3Qn-nI-Eqa"; */
+"3Qn-nI-Eqa.normalTitle" = "دستاویزات شامل کریں";
+
+/* Class = "UILabel"; text = "1, Thrale Street, London, SE18hW, UK"; ObjectID = "L1r-gw-AdH"; */
+"L1r-gw-AdH.text" = "1, Thrale Street, London, SE18hW, UK";
+
+/* Class = "UIButton"; normalTitle = "VIEW TRIPS"; ObjectID = "NBY-QK-ZVk"; */
+"NBY-QK-ZVk.normalTitle" = "ٹپس دیکھیں";
+
+/* Class = "UILabel"; text = "1243KM"; ObjectID = "Nkx-HI-ZRQ"; */
+"Nkx-HI-ZRQ.text" = "1243KM";
+
+/* Class = "UILabel"; text = "11:24"; ObjectID = "XRP-E6-39E"; */
+"XRP-E6-39E.text" = "11:24";
+
+/* Class = "UILabel"; text = "32 HOURS"; ObjectID = "bqg-wC-nCO"; */
+"bqg-wC-nCO.text" = "32 HOURS";
+
+/* Class = "UILabel"; text = "11:24"; ObjectID = "cqH-7g-r2V"; */
+"cqH-7g-r2V.text" = "11:24";
+
+/* Class = "UILabel"; text = "28/JUNE/20"; ObjectID = "vLx-sL-b1S"; */
+"vLx-sL-b1S.text" = "28/JUNE/20";
+
+/* Class = "UILabel"; text = "1, Thrale Street, London, SE18hW, UK"; ObjectID = "zlJ-VM-5lg"; */
+"zlJ-VM-5lg.text" = "1, Thrale Street, London, SE18hW, UK";

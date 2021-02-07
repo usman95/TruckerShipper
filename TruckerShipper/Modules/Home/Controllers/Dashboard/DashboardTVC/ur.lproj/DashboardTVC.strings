@@ -1,0 +1,44 @@
+
+/* Class = "UILabel"; text = "0+"; ObjectID = "0hj-fI-y7u"; */
+"0hj-fI-y7u.text" = "0+";
+
+/* Class = "UILabel"; text = "0+"; ObjectID = "2BC-7K-QSk"; */
+"2BC-7K-QSk.text" = "0+";
+
+/* Class = "UILabel"; text = "0+"; ObjectID = "6xR-EG-zh1"; */
+"6xR-EG-zh1.text" = "0+";
+
+/* Class = "UILabel"; text = "In Progress"; ObjectID = "9eA-ON-Y6N"; */
+"9eA-ON-Y6N.text" = "بکنگ جاری ہے";
+
+/* Class = "UILabel"; text = "Customer type"; ObjectID = "EBb-aC-asq"; */
+"EBb-aC-asq.text" = "Customer type";
+
+/* Class = "UILabel"; text = "Customer name"; ObjectID = "ELv-Or-qoa"; */
+"ELv-Or-qoa.text" = "گاہک کا نام";
+
+/* Class = "UILabel"; text = "Bookings"; ObjectID = "LxP-Nm-r5H"; */
+"LxP-Nm-r5H.text" = "میری بکنگ";
+
+/* Class = "UITextField"; placeholder = "Search for anything"; ObjectID = "MEL-O6-dIW"; */
+"MEL-O6-dIW.placeholder" = "کچھ بھی تلاش کریں";
+
+/* Class = "UILabel"; text = "Bookings"; ObjectID = "Pfc-jt-nHM"; */
+"Pfc-jt-nHM.text" =  "بکنگ";
+
+/* Class = "UILabel"; text = "Completed"; ObjectID = "Rx0-bV-Vmg"; */
+"Rx0-bV-Vmg.text" = "مکمل";
+
+/* Class = "UILabel"; text = "0+"; ObjectID = "WiF-qD-zz6"; */
+"WiF-qD-zz6.text" = "0+";
+
+/* Class = "UILabel"; text = "Bookings"; ObjectID = "aNc-07-BdW"; */
+"aNc-07-BdW.text" = "بکنگ";
+
+/* Class = "UILabel"; text = "Cancelled"; ObjectID = "eMa-bY-Y41"; */
+"eMa-bY-Y41.text" = "منسوخ";
+
+/* Class = "UILabel"; text = "Total"; ObjectID = "ivP-k6-nF5"; */
+"ivP-k6-nF5.text" = "Total";
+
+

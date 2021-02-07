@@ -139,7 +139,8 @@ extension Notifications{
             self.arrNotifications.remove(at: index)
             
             DispatchQueue.main.async {
-                self.tableView.deleteRows(at: [IndexPath(row: index, section: 0)], with: .bottom)
+                self.tableView.deleteRows(at: [IndexPath(row: index, section: 0)], with: .left)
+                self.tableView.reloadSections([0], with: .none)
             }
         }) { (error) in
             print(error)

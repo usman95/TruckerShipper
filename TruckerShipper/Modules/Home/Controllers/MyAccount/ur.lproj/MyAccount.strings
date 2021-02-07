@@ -1,0 +1,81 @@
+
+/* Class = "UILabel"; text = "First name"; ObjectID = "2t5-WR-8k3"; */
+"2t5-WR-8k3.text" = "پہلا نام";
+
+/* Class = "UILabel"; text = "Phone"; ObjectID = "7Pp-Bg-mma"; */
+"7Pp-Bg-mma.text" = "فون نمبر";
+
+/* Class = "UIButton"; normalTitle = "SAVE PROFILE"; ObjectID = "A1X-Fa-C39"; */
+"A1X-Fa-C39.normalTitle" = "پروفائل محفوظ کریں";
+
+/* Class = "UITextField"; placeholder = "Select country"; ObjectID = "BnW-w4-viE"; */
+"BnW-w4-viE.placeholder" = "Select country";
+
+/* Class = "UILabel"; text = "City"; ObjectID = "D63-as-aBB"; */
+"D63-as-aBB.text" = "شہر";
+
+/* Class = "UILabel"; text = "Shipper type"; ObjectID = "EO7-NO-S3i"; */
+"EO7-NO-S3i.text" = "جہاز کی قسم";
+
+/* Class = "UITextField"; placeholder = "Enter email address"; ObjectID = "FG3-3N-lix"; */
+"FG3-3N-lix.placeholder" = "Enter email address";
+
+/* Class = "UITextField"; placeholder = "Enter last name"; ObjectID = "FYO-y0-PSR"; */
+"FYO-y0-PSR.placeholder" = "Enter last name";
+
+/* Class = "UILabel"; text = "MY ACCOUNT"; ObjectID = "GdT-UB-GBP"; */
+"GdT-UB-GBP.text" = "MY ACCOUNT";
+
+/* Class = "UITextField"; placeholder = "Enter company website"; ObjectID = "LUl-Uy-ijU"; */
+"LUl-Uy-ijU.placeholder" = "Enter company website";
+
+/* Class = "UITextField"; placeholder = "Enter company name"; ObjectID = "Mlo-Ub-35U"; */
+"Mlo-Ub-35U.placeholder" = "Enter company name";
+
+/* Class = "UITextField"; placeholder = "Select shipper type"; ObjectID = "NP0-Ui-Jd6"; */
+"NP0-Ui-Jd6.placeholder" = "Select shipper type";
+
+/* Class = "UITextField"; placeholder = "Enter address"; ObjectID = "T5m-Ww-jzf"; */
+"T5m-Ww-jzf.placeholder" = "Enter address";
+
+/* Class = "UILabel"; text = "Address"; ObjectID = "VF2-gd-q3P"; */
+"VF2-gd-q3P.text" = "ایڈریس";
+
+/* Class = "UITextField"; placeholder = "Select city"; ObjectID = "aJD-J1-Hvy"; */
+"aJD-J1-Hvy.placeholder" = "Select city";
+
+/* Class = "UILabel"; text = "Company"; ObjectID = "dGH-bO-Kc7"; */
+"dGH-bO-Kc7.text" = "کمپنی";
+
+/* Class = "UITextField"; placeholder = "Enter nic number"; ObjectID = "ghE-k0-Qla"; */
+"ghE-k0-Qla.placeholder" = "Enter nic number";
+
+/* Class = "UITextField"; placeholder = "Enter first name"; ObjectID = "gvP-z4-MHc"; */
+"gvP-z4-MHc.placeholder" = "Enter first name";
+
+/* Class = "UILabel"; text = "NTN"; ObjectID = "gwe-m3-GKl"; */
+"gwe-m3-GKl.text" = "این ٹی این.";
+
+/* Class = "UILabel"; text = "NIC"; ObjectID = "hFJ-jK-HqV"; */
+"hFJ-jK-HqV.text" = "موضوع";
+
+/* Class = "UILabel"; text = "Country"; ObjectID = "iwF-fo-Kaf"; */
+"iwF-fo-Kaf.text" = "ملک";
+
+/* Class = "UILabel"; text = "Email"; ObjectID = "j9B-BV-gJ6"; */
+"j9B-BV-gJ6.text" = "ای میل اڈریس";
+
+/* Class = "UITextField"; placeholder = "Enter company ntn"; ObjectID = "kvu-xO-MK6"; */
+"kvu-xO-MK6.placeholder" = "Enter company ntn";
+
+/* Class = "UILabel"; text = "Website"; ObjectID = "m3n-RL-T9c"; */
+"m3n-RL-T9c.text" = "ویب سائٹ";
+
+/* Class = "UILabel"; text = "Add photo"; ObjectID = "n4c-93-c31"; */
+"n4c-93-c31.text" = "Add photo";
+
+/* Class = "UITextField"; placeholder = "Enter phone number"; ObjectID = "rUh-iY-4mU"; */
+"rUh-iY-4mU.placeholder" = "Enter phone number";
+
+/* Class = "UILabel"; text = "Last name"; ObjectID = "ten-1I-GMS"; */
+"ten-1I-GMS.text" = "آخری نام";
