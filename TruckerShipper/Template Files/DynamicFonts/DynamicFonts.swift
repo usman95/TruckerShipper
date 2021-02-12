@@ -84,7 +84,7 @@ class UILabelDeviceClass : UILabel {
             default:
                 break
             }
-        case 812.0: //iphone 11 pro
+        case 812.0: //iphone 11 pro , iphone 12 mini
             switch fontWeight {
             case "light":
                 self.font = UIFont(name: "Greycliff-cf-light", size: fontSize * 0.95)
@@ -205,7 +205,7 @@ class UITextFieldDeviceClass : UITextField {
             default:
                 break
             }
-        case 812.0: //iphone 11 pro
+        case 812.0: //iphone 11 pro, iphone 12 mini
             switch fontWeight {
             case "light":
                 self.font = UIFont(name: "Greycliff-cf-light", size: fontSize * 0.95)
@@ -326,7 +326,7 @@ class UIButtonDeviceClass : UIButton {
             default:
                 break
             }
-        case 812.0: //iphone 11 pro
+        case 812.0: //iphone 11 pro, iphone 12 mini
             switch fontWeight {
             case "light":
                 self.titleLabel?.font = UIFont(name: "Greycliff-cf-light", size: fontSize * 0.95)
@@ -447,7 +447,7 @@ class UIButtonStatesDeviceClass : UIButton {
             default:
                 break
             }
-        case 812.0: //iphone 11 pro
+        case 812.0: //iphone 11 pro, iphone 12 mini
             switch fontWeight {
             case "light":
                 self.titleLabel?.font = UIFont(name: "Greycliff-cf-light", size: fontSize * 0.95)
@@ -579,7 +579,7 @@ class UITextViewDeviceClass : UITextView {
             default:
                 break
             }
-        case 812.0: //iphone 11 pro
+        case 812.0: //iphone 11 pro, iphone 12 mini
             switch fontWeight {
             case "light":
                 self.font = UIFont(name: "Greycliff-cf-light", size: fontSize * 0.95)

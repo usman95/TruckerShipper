@@ -80,6 +80,9 @@
 		FA37EAB125740EAE0073CF0C /* Login.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA37EA9D25740EAD0073CF0C /* Login.xib */; };
 		FA37EAB7257429350073CF0C /* ForgotPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA37EAB5257429350073CF0C /* ForgotPassword.swift */; };
 		FA37EABB257432E10073CF0C /* SignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA37EAB9257432E10073CF0C /* SignUp.swift */; };
+		FA3F9D5D25D6970700CDE18F /* Dashboard.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA3F9D5F25D6970700CDE18F /* Dashboard.xib */; };
+		FA3F9D6225D697D900CDE18F /* SearchCommodityTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA3F9D6425D697D900CDE18F /* SearchCommodityTVC.xib */; };
+		FA3F9D6C25D6AB7800CDE18F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = FA3F9D6E25D6AB7800CDE18F /* Localizable.strings */; };
 		FA5225AC25802E6200C4FFD0 /* MyContractsTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5225AA25802E6200C4FFD0 /* MyContractsTVC.swift */; };
 		FA53A21F25CDD693006F064F /* SideMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA53A22125CDD693006F064F /* SideMenu.xib */; };
 		FA53A22625CDDE69006F064F /* DashboardTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA53A22825CDDE69006F064F /* DashboardTVC.xib */; };
@@ -149,12 +152,10 @@
 		FAEDA20C2586607C00AD777F /* PickupModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEDA2002586607B00AD777F /* PickupModel.swift */; };
 		FAEDA2132586607C00AD777F /* RemarksModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEDA2072586607C00AD777F /* RemarksModel.swift */; };
 		FAEDA21825866DFD00AD777F /* Dashboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEDA21625866DFD00AD777F /* Dashboard.swift */; };
-		FAEDA21925866DFD00AD777F /* Dashboard.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAEDA21725866DFD00AD777F /* Dashboard.xib */; };
 		FAEDA22825869B9600AD777F /* TitleHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEDA22725869B9600AD777F /* TitleHeader.swift */; };
 		FAEDA22C2586AF9600AD777F /* BookingsTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEDA22A2586AF9600AD777F /* BookingsTVC.swift */; };
 		FAF031C32594128300219D1E /* SearchCommodity.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF031C12594128300219D1E /* SearchCommodity.swift */; };
 		FAF031C82594141300219D1E /* SearchCommodityTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF031C62594141300219D1E /* SearchCommodityTVC.swift */; };
-		FAF031C92594141300219D1E /* SearchCommodityTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAF031C72594141300219D1E /* SearchCommodityTVC.xib */; };
 		FAFC97F32596A56C00BC0791 /* DropOffStateModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFC97F22596A56C00BC0791 /* DropOffStateModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -237,6 +238,12 @@
 		FA37EA9E25740EAD0073CF0C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/Login.xib; sourceTree = "<group>"; };
 		FA37EAB5257429350073CF0C /* ForgotPassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPassword.swift; sourceTree = "<group>"; };
 		FA37EAB9257432E10073CF0C /* SignUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUp.swift; sourceTree = "<group>"; };
+		FA3F9D5E25D6970700CDE18F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/Dashboard.xib; sourceTree = "<group>"; };
+		FA3F9D6125D6970C00CDE18F /* ur */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ur; path = ur.lproj/Dashboard.strings; sourceTree = "<group>"; };
+		FA3F9D6325D697D900CDE18F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/SearchCommodityTVC.xib; sourceTree = "<group>"; };
+		FA3F9D6725D697E000CDE18F /* ur */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ur; path = ur.lproj/SearchCommodityTVC.strings; sourceTree = "<group>"; };
+		FA3F9D6D25D6AB7800CDE18F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		FA3F9D7025D6AB7A00CDE18F /* ur */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ur; path = ur.lproj/Localizable.strings; sourceTree = "<group>"; };
 		FA5225AA25802E6200C4FFD0 /* MyContractsTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyContractsTVC.swift; sourceTree = "<group>"; };
 		FA53A22025CDD693006F064F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/SideMenu.xib; sourceTree = "<group>"; };
 		FA53A22425CDD69A006F064F /* ur */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ur; path = ur.lproj/SideMenu.strings; sourceTree = "<group>"; };
@@ -336,12 +343,10 @@
 		FAEDA2002586607B00AD777F /* PickupModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickupModel.swift; sourceTree = "<group>"; };
 		FAEDA2072586607C00AD777F /* RemarksModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemarksModel.swift; sourceTree = "<group>"; };
 		FAEDA21625866DFD00AD777F /* Dashboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dashboard.swift; sourceTree = "<group>"; };
-		FAEDA21725866DFD00AD777F /* Dashboard.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Dashboard.xib; sourceTree = "<group>"; };
 		FAEDA22725869B9600AD777F /* TitleHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleHeader.swift; sourceTree = "<group>"; };
 		FAEDA22A2586AF9600AD777F /* BookingsTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingsTVC.swift; sourceTree = "<group>"; };
 		FAF031C12594128300219D1E /* SearchCommodity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCommodity.swift; sourceTree = "<group>"; };
 		FAF031C62594141300219D1E /* SearchCommodityTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCommodityTVC.swift; sourceTree = "<group>"; };
-		FAF031C72594141300219D1E /* SearchCommodityTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchCommodityTVC.xib; sourceTree = "<group>"; };
 		FAFC97F22596A56C00BC0791 /* DropOffStateModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropOffStateModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -583,9 +588,11 @@
 			isa = PBXGroup;
 			children = (
 				FA37EA1225740E4C0073CF0C /* Strings.swift */,
+				FA3F9D6E25D6AB7800CDE18F /* Localizable.strings */,
 			);
 			path = Strings;
 			sourceTree = "<group>";
+			usesTabs = 0;
 		};
 		FA37EA1325740E4C0073CF0C /* DynamicFonts */ = {
 			isa = PBXGroup;
@@ -1100,7 +1107,7 @@
 			children = (
 				FA6F0141258AA21800197BE4 /* DashboardTVC */,
 				FAEDA21625866DFD00AD777F /* Dashboard.swift */,
-				FAEDA21725866DFD00AD777F /* Dashboard.xib */,
+				FA3F9D5F25D6970700CDE18F /* Dashboard.xib */,
 			);
 			path = Dashboard;
 			sourceTree = "<group>";
@@ -1137,7 +1144,7 @@
 			isa = PBXGroup;
 			children = (
 				FAF031C62594141300219D1E /* SearchCommodityTVC.swift */,
-				FAF031C72594141300219D1E /* SearchCommodityTVC.xib */,
+				FA3F9D6425D697D900CDE18F /* SearchCommodityTVC.xib */,
 			);
 			path = TVC;
 			sourceTree = "<group>";
@@ -1221,7 +1228,7 @@
 				FA53A2B825CEF7BE006F064F /* Notifications.xib in Resources */,
 				FA53A2CB25CEFCA4006F064F /* ForgotPassword.xib in Resources */,
 				FA53A2A625CEF5F3006F064F /* CMS.xib in Resources */,
-				FAEDA21925866DFD00AD777F /* Dashboard.xib in Resources */,
+				FA3F9D5D25D6970700CDE18F /* Dashboard.xib in Resources */,
 				FA53A24225CE0002006F064F /* CalculatedRate.xib in Resources */,
 				FAEB292125C564A50035F161 /* SignUp.xib in Resources */,
 				FA53A24925CE0127006F064F /* LoadRequest.xib in Resources */,
@@ -1236,6 +1243,7 @@
 				FA37EA7625740E4C0073CF0C /* Greycliff-cf-light.ttf in Resources */,
 				FA53A2AC25CEF70B006F064F /* TitleHeader.xib in Resources */,
 				FA53A26225CEDBDF006F064F /* Bookings.xib in Resources */,
+				FA3F9D6C25D6AB7800CDE18F /* Localizable.strings in Resources */,
 				FA53A26F25CEDD84006F064F /* TripDetailTVC.xib in Resources */,
 				FA53A27525CEDF0D006F064F /* MilesTVC.xib in Resources */,
 				FA37EA042574099D0073CF0C /* Assets.xcassets in Resources */,
@@ -1243,7 +1251,7 @@
 				FA53A25C25CEDB53006F064F /* BookingsTVC.xib in Resources */,
 				FA53A25625CEDAD7006F064F /* MyContractsTVC.xib in Resources */,
 				FA53A23B25CDFE2D006F064F /* SearchCommodity.xib in Resources */,
-				FAF031C92594141300219D1E /* SearchCommodityTVC.xib in Resources */,
+				FA3F9D6225D697D900CDE18F /* SearchCommodityTVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1441,6 +1449,33 @@
 				FAEB292725C56E150035F161 /* ur */,
 			);
 			name = Login.xib;
+			sourceTree = "<group>";
+		};
+		FA3F9D5F25D6970700CDE18F /* Dashboard.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FA3F9D5E25D6970700CDE18F /* Base */,
+				FA3F9D6125D6970C00CDE18F /* ur */,
+			);
+			name = Dashboard.xib;
+			sourceTree = "<group>";
+		};
+		FA3F9D6425D697D900CDE18F /* SearchCommodityTVC.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FA3F9D6325D697D900CDE18F /* Base */,
+				FA3F9D6725D697E000CDE18F /* ur */,
+			);
+			name = SearchCommodityTVC.xib;
+			sourceTree = "<group>";
+		};
+		FA3F9D6E25D6AB7800CDE18F /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FA3F9D6D25D6AB7800CDE18F /* en */,
+				FA3F9D7025D6AB7A00CDE18F /* ur */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 		FA53A22125CDD693006F064F /* SideMenu.xib */ = {
@@ -1829,7 +1864,7 @@
 				CODE_SIGN_ENTITLEMENTS = "TruckerShipper/PakGo Shipper.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = GZVCBLALGJ;
+				DEVELOPMENT_TEAM = RY4C896S84;
 				INFOPLIST_FILE = TruckerShipper/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1852,7 +1887,7 @@
 				CODE_SIGN_ENTITLEMENTS = "TruckerShipper/PakGo Shipper.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = GZVCBLALGJ;
+				DEVELOPMENT_TEAM = RY4C896S84;
 				INFOPLIST_FILE = TruckerShipper/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (

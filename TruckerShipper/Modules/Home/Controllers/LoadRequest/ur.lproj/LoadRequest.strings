@@ -18,7 +18,7 @@
 "4fT-oF-T51.text" = "پورا نام";
 
 /* Class = "UITextField"; placeholder = "Select D&D/pickup date"; ObjectID = "5pZ-xk-g2j"; */
-"5pZ-xk-g2j.placeholder" = "Select D&D/pickup date";
+"5pZ-xk-g2j.placeholder" = "D&D /اٹھا لینے کی تاریخ منتخب کریں";
 
 /* Class = "UILabel"; text = "Customer name"; ObjectID = "8Uk-o0-C6S"; */
 "8Uk-o0-C6S.text" = "گاہک کا نام";
@@ -33,61 +33,63 @@
 "F9s-Rd-lnB.text" = "ایڈریس";
 
 /* Class = "UITextField"; placeholder = "Enter phone number"; ObjectID = "Fij-JQ-OWS"; */
-"Fij-JQ-OWS.placeholder" = "Enter phone number";
+"Fij-JQ-OWS.placeholder" = "فون نمبر درج کریں";
 
 /* Class = "UITextField"; placeholder = "Enter full name"; ObjectID = "Fth-Ja-5eA"; */
-"Fth-Ja-5eA.placeholder" = "Enter full name";
+"Fth-Ja-5eA.placeholder" = "پورا نام درج کریں";
 
 /* Class = "UILabel"; text = "Pickup Point"; ObjectID = "Gns-G7-6xY"; */
 "Gns-G7-6xY.text" = "پک اپ پوائنٹ";
 
 /* Class = "UITextField"; placeholder = "Enter transit free days"; ObjectID = "I39-na-FRK"; */
-"I39-na-FRK.placeholder" = "Enter transit free days";
+"I39-na-FRK.placeholder" = "ٹرانزٹ فری دن درج کریں";
 
 /* Class = "UITextField"; placeholder = "Enter remarks"; ObjectID = "Kq4-kY-APW"; */
-"Kq4-kY-APW.placeholder" = "Enter remarks";
+"Kq4-kY-APW.placeholder" = "ریمارکس درج کریں";
 
 /* Class = "UITextField"; placeholder = "Select mode of transport"; ObjectID = "Nqw-nb-Sm9"; */
-"Nqw-nb-Sm9.placeholder" = "Select mode of transport";
+"Nqw-nb-Sm9.placeholder" = "نقل و حمل کا طریقہ منتخب کریں";
 
 /* Class = "UITextField"; placeholder = "Select city"; ObjectID = "PhD-LC-ilf"; */
-"PhD-LC-ilf.placeholder" = "Select city";
+"PhD-LC-ilf.placeholder" = "شہر منتخب کریں
+";
 
 /* Class = "UITextField"; placeholder = "Select cargo mode"; ObjectID = "Pq7-M5-C9o"; */
-"Pq7-M5-C9o.placeholder" = "Select cargo mode";
+"Pq7-M5-C9o.placeholder" = "کارگو وضع منتخب کریں
+";
 
 /* Class = "UILabel"; text = "Booking Date"; ObjectID = "Pzx-fg-WD8"; */
 "Pzx-fg-WD8.text" = "بکنگ کی تاریخ";
 
 /* Class = "UITextField"; placeholder = "Select booking type"; ObjectID = "QNr-Nc-7cl"; */
-"QNr-Nc-7cl.placeholder" = "Select booking type";
+"QNr-Nc-7cl.placeholder" = "بکنگ کی قسم منتخب کریں";
 
 /* Class = "UILabel"; text = "Drop Off Name"; ObjectID = "RHG-7e-8FO"; */
-"RHG-7e-8FO.text" = "Drop Off Name";
+"RHG-7e-8FO.text" = "ڈراپ آف نام";
 
 /* Class = "UITextField"; placeholder = "Select city"; ObjectID = "SSh-no-ddg"; */
-"SSh-no-ddg.placeholder" = "Select city";
+"SSh-no-ddg.placeholder" = "شہر منتخب کریں";
 
 /* Class = "UILabel"; text = "Cargo Mode"; ObjectID = "StA-u5-mrr"; */
 "StA-u5-mrr.text" = "کارگو موڈ";
 
 /* Class = "UILabel"; text = "Pickup POC Details"; ObjectID = "Tfa-Gz-eyB"; */
-"Tfa-Gz-eyB.text" = "Pickup POC Details";
+"Tfa-Gz-eyB.text" = "اٹھاو POC تفصیلات";
 
 /* Class = "UILabel"; text = "Time:"; ObjectID = "U08-80-R9x"; */
 "U08-80-R9x.text" = "وقت:";
 
 /* Class = "UITextField"; placeholder = "Enter full name"; ObjectID = "XVH-QO-Sam"; */
-"XVH-QO-Sam.placeholder" = "Enter full name";
+"XVH-QO-Sam.placeholder" = "پورا نام درج کریں";
 
 /* Class = "UITextField"; placeholder = "Enter phone number"; ObjectID = "Ydf-IA-Jet"; */
-"Ydf-IA-Jet.placeholder" = "Enter phone number";
+"Ydf-IA-Jet.placeholder" = "فون نمبر درج کریں";
 
 /* Class = "UILabel"; text = "N/A"; ObjectID = "c8p-6p-eil"; */
 "c8p-6p-eil.text" = "N/A";
 
 /* Class = "UITextField"; placeholder = "Select shipping line"; ObjectID = "cNi-Tw-VUN"; */
-"cNi-Tw-VUN.placeholder" = "Select shipping line";
+"cNi-Tw-VUN.placeholder" = "شپنگ لائن منتخب کریں";
 
 /* Class = "UILabel"; text = "City"; ObjectID = "cO7-pl-drm"; */
 "cO7-pl-drm.text" = "شہر";
@@ -96,10 +98,10 @@
 "cc5-8U-Igy.text" = "پورا نام";
 
 /* Class = "UITextField"; placeholder = "Select booking date"; ObjectID = "dtT-Gx-XRg"; */
-"dtT-Gx-XRg.placeholder" = "Select booking date";
+"dtT-Gx-XRg.placeholder" = "بکنگ کی تاریخ منتخب کریں";
 
 /* Class = "UITextField"; placeholder = "Select cargo type"; ObjectID = "eow-1x-bYI"; */
-"eow-1x-bYI.placeholder" = "Select cargo type";
+"eow-1x-bYI.placeholder" = "کارگو کی قسم منتخب کریں";
 
 /* Class = "UILabel"; text = "Dropoff Point"; ObjectID = "hHa-FY-zHD"; */
 "hHa-FY-zHD.text" = "ڈراپف پوائنٹ";
@@ -108,7 +110,7 @@
 "i2H-pm-SZY.text" = "فون نمبر";
 
 /* Class = "UITextField"; placeholder = "Select commodity"; ObjectID = "iwg-bj-4hf"; */
-"iwg-bj-4hf.placeholder" = "Select commodity";
+"iwg-bj-4hf.placeholder" = "اجناس کو منتخب کریں";
 
 /* Class = "UILabel"; text = "LOAD REQUEST"; ObjectID = "j8s-uP-ec0"; */
 "j8s-uP-ec0.text" = "لوڈ کی درخواست";
@@ -117,16 +119,16 @@
 "jZY-Q6-dNh.text" = "ٹرانزٹ مفت دن";
 
 /* Class = "UILabel"; text = "D&D/Pickup Date"; ObjectID = "jqY-hM-OlH"; */
-"jqY-hM-OlH.text" = "D&D/Pickup Date";
+"jqY-hM-OlH.text" = "ڈی اینڈ ڈی / پک اپ کی تاریخ";
 
 /* Class = "UITextField"; placeholder = "Enter drop off name"; ObjectID = "l4O-4T-a4J"; */
-"l4O-4T-a4J.placeholder" = "Enter drop off name";
+"l4O-4T-a4J.placeholder" = "ڈراپ آف نام درج کریں";
 
 /* Class = "UILabel"; text = "City"; ObjectID = "m5k-j7-zcq"; */
 "m5k-j7-zcq.text" = "شہر";
 
 /* Class = "UITextField"; placeholder = "Enter pickup poc name"; ObjectID = "oSD-1B-flL"; */
-"oSD-1B-flL.placeholder" = "Enter pickup poc name";
+"oSD-1B-flL.placeholder" = "اٹھاو پوک کا نام درج کریں";
 
 /* Class = "UILabel"; text = "Kilometers:"; ObjectID = "oba-j1-Ke5"; */
 "oba-j1-Ke5.text" = "کلومیٹر:";
@@ -135,10 +137,11 @@
 "ozF-E1-4qf.text" = "کموڈیو";
 
 /* Class = "UITextField"; placeholder = "Select Route"; ObjectID = "ppD-YS-Cli"; */
-"ppD-YS-Cli.placeholder" = "Select Route";
+"ppD-YS-Cli.placeholder" = "روٹ منتخب کریں";
 
 /* Class = "UILabel"; text = "City"; ObjectID = "ruL-fy-318"; */
 "ruL-fy-318.text" = "شہر";
+
 /* Class = "UILabel"; text = "City"; ObjectID = "tYR-2S-nXd"; */
 "tYR-2S-nXd.text" = "شہر";
 
@@ -152,7 +155,7 @@
 "vFz-md-6HN.text" = "ایڈریس";
 
 /* Class = "UITextField"; placeholder = "Enter customer name"; ObjectID = "vfb-BC-MNc"; */
-"vfb-BC-MNc.placeholder" = "Enter customer name";
+"vfb-BC-MNc.placeholder" = "گاہک کا نام درج کریں";
 
 /* Class = "UILabel"; text = "Route"; ObjectID = "wuz-29-WDJ"; */
 "wuz-29-WDJ.text" = "راسته";

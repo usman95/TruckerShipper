@@ -6,10 +6,10 @@
 "6Y5-nX-W8Q.placeholder" = "ای میل اڈریس";
 
 /* Class = "UILabel"; text = "Ship your orders and save your time."; ObjectID = "DXj-8K-DMa"; */
-"DXj-8K-DMa.text" = "Ship your orders and save your time.";
+"DXj-8K-DMa.text" = "اپنے آرڈر بھیجیں اور اپنا وقت بچائیں";
 
 /* Class = "UILabel"; text = "Create an account so you can easily"; ObjectID = "IQT-v6-mdN"; */
-"IQT-v6-mdN.text" = "Create an account so you can easily";
+"IQT-v6-mdN.text" = "ایک اکاؤنٹ بنائیں تاکہ آپ آسانی سے کر سکیں";
 
 /* Class = "UITextField"; placeholder = "Confirm password"; ObjectID = "Svj-jB-65e"; */
 "Svj-jB-65e.placeholder" = "پاس ورڈ کی تصدیق";

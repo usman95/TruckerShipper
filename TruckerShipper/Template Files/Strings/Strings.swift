@@ -94,7 +94,6 @@ enum Strings: String{
     case GALLERY = "Gallery"
     case CAMERA = "Camera"
     case PROFILE_UPDATED = "Profile updated successfully."
-    case NO_DATA_AVAILABLE = "No data available."
     case NO_MILES_AVAILABLE = "No miles available."
     case NO_MILES_ADDED = "No miles added"
     case MILES_TRACKING = "Miles Tracking"
@@ -130,4 +129,5 @@ enum Strings: String{
     case GO_TO_SETTINGS = "Go to Settings"
     case ASK_GO_TO_SETTINGS = "Go to Settings?"
     case LOCATION_PERMISSION_IS_REQUIRED = "Location permission is required."
+    case NO_DATA_AVAILABLE = "No data available."
 }

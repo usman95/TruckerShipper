@@ -12,7 +12,7 @@
 "9eA-ON-Y6N.text" = "بکنگ جاری ہے";
 
 /* Class = "UILabel"; text = "Customer type"; ObjectID = "EBb-aC-asq"; */
-"EBb-aC-asq.text" = "Customer type";
+"EBb-aC-asq.text" = "کسٹمر کی قسم";
 
 /* Class = "UILabel"; text = "Customer name"; ObjectID = "ELv-Or-qoa"; */
 "ELv-Or-qoa.text" = "گاہک کا نام";
@@ -39,6 +39,6 @@
 "eMa-bY-Y41.text" = "منسوخ";
 
 /* Class = "UILabel"; text = "Total"; ObjectID = "ivP-k6-nF5"; */
-"ivP-k6-nF5.text" = "Total";
+"ivP-k6-nF5.text" = "کل";
 
 

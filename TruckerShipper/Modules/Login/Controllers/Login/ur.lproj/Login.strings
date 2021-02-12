@@ -3,7 +3,7 @@
 "E4A-Sw-lfa.normalTitle" = "سائن اپ";
 
 /* Class = "UILabel"; text = "Ship your orders and save your time."; ObjectID = "G1y-Ti-uHb"; */
-"G1y-Ti-uHb.text" = "Ship your orders and save your time.";
+"G1y-Ti-uHb.text" = "اپنے آرڈر بھیجیں اور اپنا وقت بچائیں";
 
 /* Class = "UIButton"; normalTitle = "LOGIN"; ObjectID = "RcO-ug-5yU"; */
 "RcO-ug-5yU.normalTitle" = "لاگ ان کریں";
@@ -15,7 +15,7 @@
 "cOa-dd-kYm.text" = "لاگ ان کریں";
 
 /* Class = "UILabel"; text = "Sign in to your account so you can easily"; ObjectID = "ekL-js-tFD"; */
-"ekL-js-tFD.text" = "Sign in to your account so you can easily";
+"ekL-js-tFD.text" = "اپنے اکاؤنٹ میں سائن ان کریں تاکہ آپ آسانی سے کر سکیں";
 
 /* Class = "UITextField"; placeholder = "e.g. ******"; ObjectID = "pFn-VU-lxZ"; */
 "pFn-VU-lxZ.placeholder" = "e.g. ******";

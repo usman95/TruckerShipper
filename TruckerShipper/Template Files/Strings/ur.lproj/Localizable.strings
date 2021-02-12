@@ -1,0 +1,126 @@
+/* 
+  Localizable.strings
+  TruckerShipper
+
+  Created by macbook on 12/02/2021.
+  Copyright © 2021 Mac Book. All rights reserved.
+*/
+
+
+//MARK:- Notifies
+"Alert" = "انتباہ";
+"Error" = "خرابی";
+"Unknown error" = "نامعلوم خامی";
+"Yes" = "جی ہاں";
+"No" = "نہیں";
+"Ok" = "ٹھیک ہے";
+"Cancel" = "منسوخ کریں";
+"Continue" = "جاری رہے";
+"Confirm" = "تصدیق کریں";
+"Later" = "بعد میں";
+"Success" = "کامیابی";
+"Confirmation" = "تصدیق";
+"A verification PIN has been sent to your provided email address." = "آپ کے فراہم کردہ ای میل پتے پر توثیقی پن بھیج دیا گیا ہے۔";
+
+//RK:- Validation;
+
+"Please provide your valid email address or mobile number to login." = "براہ کرم لاگ ان کے لئے اپنا درست ای میل پتہ یا موبائل نمبر فراہم کریں۔";
+"Please upload your profile picture." = "براہ کرم اپنی پروفائل تصویر اپ لوڈ کریں۔";
+"Name should contain atleast 3 characters."; = "نام میں کم از کم 3 حرف ہونے چاہ.۔";
+"First name should contain atleast 3 characters." = "پہلے نام میں کم از کم 3 حرف ہونے چاہ.۔";
+"Last name should contain atleast 3 characters." = "آخری نام میں کم از کم 3 حرف ہونے چاہ.۔";
+"Please select your gender." = "براہ کرم اپنی جنس منتخب کریں۔";
+"Please select your date of birth." = "براہ کرم اپنی تاریخ پیدائش منتخب کریں۔";
+"Please provide a valid Email Address." = "براہ کرم ایک درست ای میل ایڈریس فراہم کریں۔";
+"Please provide a valid Phone Number." = "براہ کرم ایک درست فون نمبر فراہم کریں۔";
+"Please provide a valid OTP Code." = "براہ کرم ایک درست او ٹی پی کوڈ فراہم کریں۔"
+"Please select your country." = "براہ کرم اپنا ملک منتخب کریں۔";
+"Please enter your city." = "براہ کرم اپنے شہر میں داخل ہوں۔";
+"Please enter your zip code." = "براہ مہربانی اپنا زپ کوڈ درج کریں.";
+"Please provide password." = "براہ کرم پاس ورڈ مہیا کریں";
+"Please confirm your password." = "براہ کرم اپنے پاس ورڈ کی تصدیق کریں";
+"Password should contain minimum of 6 characters." = "پاس ورڈ میں کم از کم 6 حرف ہونے چاہئیں۔";
+"New password should contain minimum of 6 characters." = "نیا پاس ورڈ کم از کم 6 حروف پر مشتمل ہونا چاہئے۔";
+"Password should contain minimum of 8 characters with atleast 1 uppercase, 1 lowercase; and 1 digit." = "پاس ورڈ میں کم از کم 8 حرف ہونا چاہئے جس میں کم از کم 1 بڑے کیک ، 1 لوئر کیسیس ہو۔ اور 1 ہندسہ"
+"At least 6 characters." = "کم از کم 6 حرف";
+"New password and confirm password does not match." = "نیا پاس ورڈ اور تصدیق شدہ پاس ورڈ مماثل نہیں ہیں۔";
+"All Fields are required!" = "تمام خانے ضروری ہیں!";
+"Please provide complete PIN." = "براہ کرم پورا پن مہیا کریں۔";
+"You have successfully updated your password." = "آپ نے کامیابی کے ساتھ اپنا پاس ورڈ اپ ڈیٹ کر لیا ہے۔";
+"Invalid URL" = "غلط URL";
+"Login" = "لاگ ان کریں";
+"Logout" = "لاگ آوٹ";
+"Are you sure you want to logout?" = "کیا آپ واقعی لاگ آؤٹ کرنا چاہتے ہیں؟";
+"Please login to continue." = "جاری رکھنے کے لئے لاگ ان کریں.";
+
+"Invalid response for route:" = "راستے کے لئے غلط جواب:";
+"Unable to connect server\n Please check your internet connection and try; again later." = "سرور سے رابطہ قائم کرنے سے قاصر \ n براہ کرم اپنا انٹرنیٹ کنکشن چیک کریں اور کوشش کریں۔ پھر بعد میں."
+"Invalid authentication token supplied." = "غلط توثیق کا ٹوکن فراہم ہوا۔";
+"Password updated successfully." = "پاس ورڈ کامیابی کے ساتھ اپ ڈیٹ ہوا۔";
+"Message delivered" = "پیغام پہنچایا";
+"Our team will respond you shortly." = "ہماری ٹیم جلد ہی آپ کو جواب دے گی۔";
+
+"By signing up, you're agree to our Terms of use and Privacy Policy" = "سائن اپ کرکے ، آپ ہماری استعمال کی شرائط اور رازداری کی پالیسی سے اتفاق کرتے ہیں";
+"Terms of use" = "استعمال کرنے کی شرائط";
+"Privacy Policy" = "رازداری کی پالیسی";
+"Terms And Conditions" = "شرائط و ضوابط";
+"Please select shipper type." = "براہ کرم shipper کی قسم منتخب کریں۔";
+"Please check your email and click on the provided link to reset your; password." = "براہ کرم اپنا ای میل چیک کریں اور اپنے کو دوبارہ ترتیب دینے کیلئے فراہم کردہ لنک پر کلک کریں۔ پاس ورڈ"
+"A verification email has been sent to your provided email addres\nPlease check; your email and click on the provided link to verify your account." = "آپ کے فراہم کردہ ای میل پتوں پر توثیقی ای میل بھیجا گیا ہے \ n براہ کرم چیک کریں۔ اپنے ای میل اور اپنے اکاؤنٹ کی تصدیق کیلئے فراہم کردہ لنک پر کلک کریں۔"
+"Please enter your address." = "برائے مہربانی اپنا پتہ درج کریں۔";
+"please select pickup and dropoff location" = "براہ کرم اٹھاو اور ڈراپ آف لوکیشن منتخب کریں";
+"Please select your pick-up/drop-off locations." = "براہ کرم اپنے اٹھانے / ڈراپ آف مقامات منتخب کریں۔";
+"Please enter valid weight per transport unit." = "براہ کرم فی ٹرانسپورٹ یونٹ میں درست وزن درج کریں۔";
+"Please enter valid quantity per transport unit." = "براہ کرم فی ٹرانسپورٹ یونٹ کیلئے مناسب مقدار درج کریں۔";
+"Please select size per transport unit." = "براہ کرم فی ٹرانسپورٹ یونٹ سائز منتخب کریں۔";
+"Please select commodity." = "براہ کرم اجناس کا انتخاب کریں۔";
+"Please select cargo type." = "براہ کرم کارگو کی قسم منتخب کریں۔";
+"Please enter valid quantity." = "براہ کرم درست مقدار درج کریں۔";
+"Per Truck" = "فی ٹرک";
+"Per Container" = "فی کنٹینر";
+"By Truck" = "بذریعہ ٹرک";
+"By Train" = "ٹرین کے ذریعے";
+"Karachi" = "کراچی";
+"PKR" = "روپے";
+"KM" = "کلومیٹر";
+"HOURS" = "گھنٹے";
+"How do you want to set your document?" = "آپ اپنی دستاویز کیسے ترتیب دینا چاہتے ہیں؟";
+"Gallery" = "گیلری";
+"Camera" = "کیمرہ";
+"Profile updated successfully." = "پروفائل کامیابی کے ساتھ اپ ڈیٹ ہوا۔";
+"No miles available." = "کوئی میل دستیاب نہیں ہے۔";
+"No miles added" = "کوئی میل شامل نہیں کیا گیا";
+"Miles Tracking" = "میل سے باخبر رہنا";
+"Notifications" = "اطلاعات";
+"Are you sure you want to cancel this booking?" = "کیا آپ واقعی یہ بکنگ منسوخ کرنا چاہتے ہیں؟";
+"Are you sure you want to delete this notification?" = "کیا آپ واقعی اس اطلاع کو حذف کرنا چاہتے ہیں؟";
+"Search for anything" = "کچھ بھی تلاش کریں";
+"Shipment Tracking" = "شپمنٹ کی ٹریکنگ";
+"Cancel Booking" = "بکنگ منسوخ کریں";
+"View Trips" = "دورے دیکھیں";
+"Please select start date." = "براہ کرم آغاز کی تاریخ منتخب کریں۔";
+"Please select end date." = "براہ کرم اختتامی تاریخ منتخب کریں۔";
+"Please select booking date." = "براہ کرم بکنگ کی تاریخ منتخب کریں۔";
+"Please select pickup date." = "براہ کرم چننے کی تاریخ منتخب کریں۔";
+"Transit Days" = "ٹرانزٹ دن";
+"Pickup Date" = "تاریخ لینے";
+"Free Days" = "مفت دن";
+"Free Days Start Date" = "مفت دن شروع ہونے کی تاریخ";
+"N/A" = "N/A";
+"We do not operate in this area!" = "ہم اس علاقے میں کام نہیں کرتے!";
+"Total Quantity" = "کل مقدار";
+"Total Quantity Per Container" = "کل مقدار فی کنٹینر";
+"Ton" = "ٹن";
+"Bag" = "بیگ";
+"N/A for NON-Containerized" = "غیر / کنٹینرائزڈ کیلئے N / A";
+"N/A for Truck" = "N/A ٹرک کے لئے";
+"N/A for Train" = "ٹرین کے لئے N/A";
+"Weight Per Transport Unit" = "وزن فی ٹرانسپورٹ یونٹ";
+"Quantity Per Transport Unit" = "مقدار فی ٹرانسپورٹ یونٹ";
+"Cannot estimate a Price please contact support" = "قیمت کا اندازہ نہیں لگایا جاسکتا ہے سپورٹ سے رابطہ کریں";
+"Permission to Contacts" = "رابطوں کی اجازت";
+"This app needs access to contacts in order to send them invitations." = "ایپ کو دعوت نامے بھیجنے کے ل رابطوں تک رسائی کی ضرورت ہے۔";
+"Go to Settings" = "ترتیبات پر جائیں";
+"Go to Settings?" = "ترتیبات پر جائیں؟";
+"Location permission is required." = "مقام کی اجازت ضروری ہے۔";
+"No data available." = "اعداد و شمار دستیاب نہیں.";

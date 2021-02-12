@@ -3,7 +3,7 @@
 "39K-oC-9vJ.text" = "رپورٹیں";
 
 /* Class = "UIButton"; normalTitle = "GENERATE REPORT"; ObjectID = "6r3-K3-pPZ"; */
-"6r3-K3-pPZ.normalTitle" = "GENERATE REPORT";
+"6r3-K3-pPZ.normalTitle" = "رپورٹ تیار کریں";
 
 /* Class = "UITextField"; placeholder = "Select end date"; ObjectID = "LcC-Ak-svd"; */
 "LcC-Ak-svd.placeholder" = "براہ کرم آخری تاریخ منتخب کریں";
