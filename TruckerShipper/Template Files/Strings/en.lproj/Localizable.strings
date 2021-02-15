@@ -21,11 +21,12 @@
 "Confirmation" = "Confirmation";
 "A verification PIN has been sent to your provided email address." = "A verification PIN has been sent to your provided email address.";
 
-//RK:- Validation;
+//RK:- Validation
 
+"No data available." = "No data available.";
 "Please provide your valid email address or mobile number to login." = "Please provide your valid email address or mobile number to login.";
 "Please upload your profile picture." = "Please upload your profile picture.";
-"Name should contain atleast 3 characters."; = "Name should contain atleast 3 characters.";
+"Name should contain atleast 3 characters." = "Name should contain atleast 3 characters.";
 "First name should contain atleast 3 characters." = "First name should contain atleast 3 characters.";
 "Last name should contain atleast 3 characters." = "Last name should contain atleast 3 characters.";
 "Please select your gender." = "Please select your gender.";
@@ -40,7 +41,7 @@
 "Please confirm your password." = "Please confirm your password.";
 "Password should contain minimum of 6 characters." = "Password should contain minimum of 6 characters.";
 "New password should contain minimum of 6 characters." = "New password should contain minimum of 6 characters.";
-"Password should contain minimum of 8 characters with atleast 1 uppercase, 1 lowercase; and 1 digit." = "Password should contain minimum of 8 characters with atleast 1 uppercase, 1 lowercase; and 1 digit."
+"Password should contain minimum of 8 characters with atleast 1 uppercase, 1 lowercase; and 1 digit." = "Password should contain minimum of 8 characters with atleast 1 uppercase, 1 lowercase; and 1 digit.";
 "At least 6 characters." = "At least 6 characters.";
 "New password and confirm password does not match." = "New password and confirm password does not match.";
 "All Fields are required!" = "All Fields are required!";
@@ -51,21 +52,19 @@
 "Logout" = "Logout";
 "Are you sure you want to logout?" = "Are you sure you want to logout?";
 "Please login to continue." = "Please login to continue.";
-
 "Invalid response for route:" = "Invalid response for route:";
-"Unable to connect server\n Please check your internet connection and try; again later." = "Unable to connect server\n Please check your internet connection and try; again later."
+"Unable to connect server\n Please check your internet connection and try; again later." = "Unable to connect server\n Please check your internet connection and try; again later.";
 "Invalid authentication token supplied." = "Invalid authentication token supplied.";
 "Password updated successfully." = "Password updated successfully.";
 "Message delivered" = "Message delivered";
 "Our team will respond you shortly." = "Our team will respond you shortly.";
-
 "By signing up, you're agree to our Terms of use and Privacy Policy" = "By signing up, you're agree to our Terms of use and Privacy Policy";
 "Terms of use" = "Terms of use";
 "Privacy Policy" = "Privacy Policy";
 "Terms And Conditions" = "Terms And Conditions";
 "Please select shipper type." = "Please select shipper type.";
-"Please check your email and click on the provided link to reset your; password." = "Please check your email and click on the provided link to reset your; password."
-"A verification email has been sent to your provided email addres\nPlease check; your email and click on the provided link to verify your account." = "A verification email has been sent to your provided email addres\nPlease check; your email and click on the provided link to verify your account."
+"Please check your email and click on the provided link to reset your password." = "Please check your email and click on the provided link to reset your; password.";
+"A verification email has been sent to your provided email address\nPlease check your email and click on the provided link to verify your account." = "A verification email has been sent to your provided email addres\nPlease check your email and click on the provided link to verify your account.";
 "Please enter your address." = "Please enter your address.";
 "Hey!" = "Hey!";
 "please select pickup and dropoff location" = "please select pickup and dropoff location";
@@ -123,4 +122,3 @@
 "Go to Settings" = "Go to Settings";
 "Go to Settings?" = "Go to Settings?";
 "Location permission is required." = "Location permission is required.";
-"No data available." = "No data available.";

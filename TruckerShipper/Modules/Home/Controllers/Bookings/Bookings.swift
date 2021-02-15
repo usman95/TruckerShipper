@@ -243,7 +243,7 @@ extension Bookings: UITableViewDelegate{
 //MARK:- DZNEmptyDataSetSource
 extension Bookings: DZNEmptyDataSetSource{
     func title(forEmptyDataSet scrollView: UIScrollView!) -> NSAttributedString! {
-        let str = Strings.LOCATION_PERMISSION_IS_REQUIRED.text
+        let str = Strings.NO_DATA_AVAILABLE.text
         let attrs = [NSAttributedString.Key.font: UIFont.preferredFont(forTextStyle: UIFont.TextStyle.headline)]
         return NSAttributedString(string: str, attributes: attrs)
     }
