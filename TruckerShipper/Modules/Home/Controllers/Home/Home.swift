@@ -47,6 +47,7 @@ class Home: BaseController {
     
     var routeDistance = 0
     var routeDuration: String?
+    var routeDurationInSeconds: String?
     
     var isSelectedAreaCovered = false
     
@@ -235,6 +236,7 @@ extension Home{
         guard var locationAttribute = self.validate() else {return}
         locationAttribute["totalDistance"] = self.routeDistance
         locationAttribute["totalDuration"] = self.routeDuration ?? ""
+        locationAttribute["totalDurationInSeconds"] = self.routeDurationInSeconds ?? ""
         locationAttribute["route"] = Utility.main.getBearingBetweenTwoPoints(point1: self.pickUpLocation ?? CLLocationCoordinate2D(), point2: self.dropOffLocation ?? CLLocationCoordinate2D()).lowercased()
         
         let controller = LoadDetails()
@@ -414,6 +416,9 @@ extension Home{
                 if let duration = legs["duration"]?.dictionary{
                     let durationValue = duration["text"]?.stringValue
                     self.routeDuration = durationValue
+                    
+                    let durationValueInSeconds = duration["value"]?.stringValue
+                    self.routeDurationInSeconds = durationValueInSeconds
                 }
             }
             

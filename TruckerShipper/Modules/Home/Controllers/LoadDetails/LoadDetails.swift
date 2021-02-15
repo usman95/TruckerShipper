@@ -275,8 +275,10 @@ extension LoadDetails{
         }
     }
     private func getBookingEstimate(){
-        guard let params = self.validate() else {return}
+        guard var params = self.validate() else {return}
         self.estimateParams = params
+        
+        params.removeValue(forKey: "totalDurationInSeconds")
         
         APIManager.sharedInstance.shipperAPIManager.BookingEstimate(params: params, success: { (responseObject) in
             let response = responseObject as Dictionary

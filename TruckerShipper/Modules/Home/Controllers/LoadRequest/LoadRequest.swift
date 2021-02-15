@@ -355,6 +355,7 @@ extension LoadRequest{
             
             let totalDistance = loadDetails["totalDistance"] as? Int ?? 0
             let totalDuration = loadDetails["totalDuration"] as? String ?? ""
+            let totalDurationInSeconds = Double(loadDetails["totalDurationInSeconds"] as? String ?? "") ?? 0.0
             let cargoMode = self.selectedCargoMode ?? ""
             
             if self.selectedBookingDate == nil {
@@ -384,6 +385,7 @@ extension LoadRequest{
             params["shippingLine"] = shippingLine
             params["totalDistance"] = totalDistance
             params["totalDuration"] = totalDuration
+            params["totalDurationInSeconds"] = totalDurationInSeconds
             params["cargoMode"] = cargoMode
             
             return params
