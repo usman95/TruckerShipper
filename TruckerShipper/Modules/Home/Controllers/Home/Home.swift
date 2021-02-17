@@ -333,12 +333,17 @@ extension Home{
 }
 //MARK:- GMSMapViewDelegate
 extension Home: GMSMapViewDelegate{
-    func mapView(_ mapView: GMSMapView, idleAt position: GMSCameraPosition) {
-        if self.viewPickUpMarker.isHidden{
-            return
-        }
-        let center = CGPoint(x: self.mapView.center.x, y: self.mapView.frame.height/2.0)
-        let coordinates = mapView.projection.coordinate(for: center)
+//    func mapView(_ mapView: GMSMapView, idleAt position: GMSCameraPosition) {
+//        if self.viewPickUpMarker.isHidden{
+//            return
+//        }
+//        let center = CGPoint(x: self.mapView.center.x, y: self.mapView.frame.height/2.0)
+//        let coordinates = mapView.projection.coordinate(for: center)
+//        let location = CLLocation(latitude: coordinates.latitude, longitude: coordinates.longitude)
+//        self.reverseGeoCodeBy(location: location)
+//    }
+    func mapView(_ mapView: GMSMapView, didEndDragging marker: GMSMarker) {
+        let coordinates = marker.position
         let location = CLLocation(latitude: coordinates.latitude, longitude: coordinates.longitude)
         self.reverseGeoCodeBy(location: location)
     }
@@ -448,6 +453,7 @@ extension Home{
         self.pickUpLocationMarker.iconView = markerIcon
         self.pickUpLocationMarker.tracksViewChanges = true
         self.pickUpLocationMarker.map = self.mapView
+        self.pickUpLocationMarker.isDraggable = true
         self.fitAllMarkersBounds()
     }
     private func addDropOffMarker(){
@@ -461,6 +467,7 @@ extension Home{
         self.dropOffLocationMarker.iconView = markerIcon
         self.dropOffLocationMarker.tracksViewChanges = true
         self.dropOffLocationMarker.map = self.mapView
+        self.dropOffLocationMarker.isDraggable = true
         self.fitAllMarkersBounds()
     }
 }
