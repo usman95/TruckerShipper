@@ -112,7 +112,7 @@ extension AppDelegate{
         window.rootViewController = nil
         
         var rootController = LGSideMenuController()
-        if MOLHLanguage.currentAppleLanguage() == "en"{
+        if MOLHLanguage.currentAppleLanguage() == LocalizationType.EN.rawValue{
             rootController = LGSideMenuController(rootViewController: navController,
                                                   leftViewController: menuController,
                                                   rightViewController: nil)

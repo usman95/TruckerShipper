@@ -40,10 +40,10 @@ extension UIViewController {
             for subView in subviews {
                 if subView is UITextField && subView.tag <= 0{
                     let textField = subView as! UITextField
-                    textField.textAlignment = MOLHLanguage.currentAppleLanguage() == "en" ? .left:.right
+                    textField.textAlignment = MOLHLanguage.currentAppleLanguage() == LocalizationType.EN.rawValue ? .left:.right
                 } else if subView is UITextView && subView.tag <= 0{
                     let textView = subView as! UITextView
-                    textView.textAlignment = MOLHLanguage.currentAppleLanguage() == "en" ? .left:.right
+                    textView.textAlignment = MOLHLanguage.currentAppleLanguage() == LocalizationType.EN.rawValue ? .left:.right
                 }
                 loopThroughSubViewAndAlignTextfieldText(subviews: subView.subviews)
             }

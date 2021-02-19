@@ -23,7 +23,7 @@ class BaseController: UIViewController {
     }
     
     @IBAction func onBtnSideMenu(_ sender: UIButton) {
-        if MOLHLanguage.currentAppleLanguage() == "en"{
+        if MOLHLanguage.currentAppleLanguage() == LocalizationType.EN.rawValue{
             self.sideMenuController?.showLeftViewAnimated()
         }
         else{

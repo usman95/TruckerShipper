@@ -21,7 +21,7 @@ struct Constants {
     static let SINGLETON                   = Singleton.sharedInstance
     static let DEFAULTS_USER_KEY           = "User"
     static var DeviceType                  = "ios"
-    static var DeviceToken                 = "eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaWQiOiJkaUhORzZYTVFaNjRRRlZBMjhiemUtIiwicHJvamVjdE51bWJlciI6NDY5NDM4NjM0NzI2LCJleHAiOjE2MDk1MzI1ODYsImFwcElkIjoiMTo0Njk0Mzg2MzQ3MjY6YW5kcm9pZDo4N2ZkYjJjMzViN2MyYmRlZGQzOTI3In0.AB2LPV8wRAIgJpPKiboojXOR7GvUa9K8HcvDAjqjxXU5_khlwY-BABsCIDzueI7MXU_BJx3JzdKTfwnCYEW3oYCv3vs8ruj_ILlj"
+    static var DeviceToken                 = ""
     static let serverDateFormat            = "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'"
     static let PAGINATION_PAGE_SIZE        = 10
     static let VERIFY_CODE_TIME_LIMIT      = 5*60

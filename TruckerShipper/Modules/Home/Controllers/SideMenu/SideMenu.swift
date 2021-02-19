@@ -33,7 +33,7 @@ class SideMenu: UIViewController {
         }
     }
     @IBAction func onBtnOption(_ sender: UIButton) {
-        if MOLHLanguage.currentAppleLanguage() == "en"{
+        if MOLHLanguage.currentAppleLanguage() == LocalizationType.EN.rawValue{
             self.sideMenuController?.hideLeftViewAnimated()
         }
         else{
@@ -61,7 +61,7 @@ class SideMenu: UIViewController {
         }
     }
     @IBAction func onBtnPrivacyAndTerms(_ sender: UIButton) {
-        if MOLHLanguage.currentAppleLanguage() == "en"{
+        if MOLHLanguage.currentAppleLanguage() == LocalizationType.EN.rawValue{
             self.sideMenuController?.hideLeftViewAnimated()
         }
         else{

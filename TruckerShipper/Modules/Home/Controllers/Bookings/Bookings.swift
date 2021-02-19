@@ -123,7 +123,7 @@ extension Bookings{
         self.refreshBookings()
     }
     private func scrollToItem(){
-        if MOLHLanguage.currentAppleLanguage() == "en"{
+        if MOLHLanguage.currentAppleLanguage() == LocalizationType.EN.rawValue{
             switch self.bookingType{
                 
             case .pending:
