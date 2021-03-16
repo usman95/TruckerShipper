@@ -41,6 +41,7 @@ class LoadRequest: BaseController {
     @IBOutlet weak var tfBookingDetailsShippingLine: UITextFieldDeviceClass!
     @IBOutlet weak var tfBookingDetailsCommodity: UITextFieldDeviceClass!
     @IBOutlet weak var tfBookingDetailsRemarks: UITextFieldDeviceClass!
+    @IBOutlet weak var viewShippingLine: UIView!
     
     @IBOutlet weak var lblDnDPickUpDates: UILabelDeviceClass!
     @IBOutlet weak var lblTransitFreeDays: UILabelDeviceClass!
@@ -283,9 +284,11 @@ extension LoadRequest{
         case BookingTypes.domestic.rawValue:
             self.lblTransitFreeDays.text = Strings.TRANSIT_DAYS.text
             self.lblDnDPickUpDates.text = Strings.PICKUP_DATE.text
+            self.viewShippingLine.isHidden = true
         default:
             self.lblTransitFreeDays.text = Strings.FREE_DAYS.text
             self.lblDnDPickUpDates.text = Strings.FREE_DAYS_START_DATE.text
+            self.viewShippingLine.isHidden = false
         }
     }
     private func validate()->[String:Any]?{

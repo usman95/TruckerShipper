@@ -94,7 +94,6 @@ extension Utility{
         } else if(directionAngle >= 338 || directionAngle <= 22){
             return "UP" //"North";
         }
-        
         return "DOWN"
     }
 }

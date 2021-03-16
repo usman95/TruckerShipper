@@ -185,7 +185,7 @@ extension LoadDetails{
             self.btnCalculateRate.shake()
             return nil
         }
-        if self.selectedCargoType?.title == CargoTypes.containerized.rawValue{
+        if self.selectedCargoType?.title?.lowercased() == CargoTypes.containerized.rawValue{
             if self.selectedSizePerTruck == nil{
                 Utility.main.showToast(message: Strings.PLEASE_SELECT_SIZE_PER_TRUCK.text)
                 self.btnCalculateRate.shake()
