@@ -192,7 +192,7 @@ extension Home{
                 for components in addressComponent {
                     for type in components.types{
                         switch type{
-                        case "locality":
+                        case "locality", "sublocality_level_1":
                             self.pickUpCity = components.name
                             self.lblPickUpTitle.text = self.pickUpCity ?? "Pick-up Location"
                         default:
@@ -217,7 +217,7 @@ extension Home{
                 for components in addressComponent {
                     for type in components.types{
                         switch type{
-                        case "locality":
+                        case "locality", "sublocality_level_1":
                             self.dropOffCity = components.name
                             self.lblDropOffTitle.text = self.dropOffCity ?? "Drop-off Location"
                         default:
