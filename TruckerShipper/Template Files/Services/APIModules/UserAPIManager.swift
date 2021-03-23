@@ -6,13 +6,11 @@ import SwiftyJSON
 class UsersAPIManager: APIManagerBase {
     //MARK:- Roles
     func Roles(success: @escaping DefaultArrayResultAPISuccessClosure, failure: @escaping DefaultAPIFailureClosure){
-        Utility.showLoader()
         let route: URL = POSTURLforRoute(route: Route.Roles.rawValue)!
         self.getArrayResponseWith(route: route, success: success, failure: failure, withHeader: false)
     }
     //MARK:- ShipperTypes
     func ShipperTypes(success: @escaping DefaultArrayResultAPISuccessClosure, failure: @escaping DefaultAPIFailureClosure){
-        Utility.showLoader()
         let route: URL = POSTURLforRoute(route: Route.ShipperTypes.rawValue)!
         self.getArrayResponseWith(route: route, success: success, failure: failure, withHeader: false)
     }
@@ -27,6 +25,12 @@ class UsersAPIManager: APIManagerBase {
         Utility.showLoader()
         let route: URL = POSTURLforRoute(route: Route.Login.rawValue)!
         self.postDictionaryResponseWith(route: route, parameters: params, success: success, failure: failure, withHeader: true)
+    }
+    //MARK:- Logout
+    func Logout(success: @escaping DefaultAPISuccessClosure, failure: @escaping DefaultAPIFailureClosure){
+        Utility.showLoader()
+        let route: URL = POSTURLforRoute(route: Route.Logout.rawValue)!
+        self.postDictionaryResponseWith(route: route, parameters: [:], success: success, failure: failure, withHeader: true)
     }
     //MARK:- ForgotPassword
     func ForgotPassword(params: Parameters, success: @escaping DefaultAPISuccessClosure, failure: @escaping DefaultAPIFailureClosure){

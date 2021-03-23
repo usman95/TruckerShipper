@@ -36,6 +36,10 @@ class SignUp: BaseController {
     }
     
     @IBAction func onBtnShipperType(_ sender: UIButton) {
+        if self.arrShipper.isEmpty{
+            self.getShipperTypes(showDropDown: true)
+            return
+        }
         self.shipperDropDown.show()
     }
     @IBAction func onBtnShowPassword(_ sender: UIButton) {
@@ -48,16 +52,15 @@ class SignUp: BaseController {
         }
     }
     @IBAction func onBtnCreateAccount(_ sender: UIButtonDeviceClass) {
-        self.signUp()
+        self.getRoleAndSignUp(canSignUp: true)
     }
 }
 //MARK:- Helper Methods
 extension SignUp{
     private func setUI(){
-        self.setShipperDropDown()
         self.setTermsAndPoliciesTextView()
     }
-    private func setShipperDropDown(){
+    private func setShipperDropDown(showDropDown: Bool){
         self.shipperDropDown.dataSource = self.arrShipper
         self.shipperDropDown.anchorView = self.tfShipperType
         self.shipperDropDown.cellHeight = self.tfShipperType.frame.height
@@ -65,6 +68,10 @@ extension SignUp{
         self.shipperDropDown.selectionAction = { [unowned self] (index: Int, item: String) in
             self.tfShipperType.text = item
             self.selectedShipper = item
+        }
+        
+        if showDropDown{
+            self.shipperDropDown.show()
         }
     }
     private func setTermsAndPoliciesTextView(){
@@ -91,8 +98,8 @@ extension SignUp{
         self.tvTermsAndPolicies.textAlignment = .center
     }
     private func getAttributes(){
-        self.getRoles()
-        self.getShipperTypes()
+        self.getRoleAndSignUp(canSignUp: false)
+        self.getShipperTypes(showDropDown: false)
     }
     private func validate()->[String:Any]?{
         let firstName = self.tfFirstName.text ?? ""
@@ -155,30 +162,39 @@ extension SignUp: UITextViewDelegate{
     func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterRange: NSRange, interaction: UITextItemInteraction) -> Bool {
         let urlString = URL.absoluteString
         if urlString.contains("terms"){
-            
+            super.pushToTermsAndConditions()
         }
         if urlString.contains("policy"){
-            
+            super.pushToPrivacyPolicy()
         }
         return false
     }
 }
 //MARK:- Services
 extension SignUp{
-    private func getRoles(){
-        APIManager.sharedInstance.usersAPIManager.Roles(success: { (responseObject) in
-            guard let roles = responseObject as? [[String:Any]] else {return}
-            let arrRoles = Mapper<AttributeModel>().mapArray(JSONArray: roles)
-            self.selectedRole = arrRoles.filter{$0.title == RoleType.Shipper.rawValue}.first
-        }) { (error) in
-            print(error)
+    private func getRoleAndSignUp(canSignUp: Bool){
+        if self.selectedRole == nil{
+            APIManager.sharedInstance.usersAPIManager.Roles(success: { (responseObject) in
+                guard let roles = responseObject as? [[String:Any]] else {return}
+                let arrRoles = Mapper<AttributeModel>().mapArray(JSONArray: roles)
+                self.selectedRole = arrRoles.filter{$0.title == RoleType.Shipper.rawValue}.first
+                
+                if canSignUp{
+                    self.signUp()
+                }
+            }) { (error) in
+                print(error)
+            }
+        }
+        else{
+            self.signUp()
         }
     }
-    private func getShipperTypes(){
+    private func getShipperTypes(showDropDown: Bool){
         APIManager.sharedInstance.usersAPIManager.ShipperTypes(success: { (responseObject) in
             guard let shipper = responseObject as? [String] else {return}
             self.arrShipper = shipper
-            self.setShipperDropDown()
+            self.setShipperDropDown(showDropDown: showDropDown)
         }) { (error) in
             print(error)
         }

@@ -87,18 +87,18 @@ extension AppStateManager{
 }
 extension AppStateManager{
     private func processLogoutUser(){
-//        APIManager.sharedInstance.usersAPIManager.Logout(params: [:], success: { (responseObject) in
-//            print(responseObject)
-//            Utility.hideLoader()
+        APIManager.sharedInstance.usersAPIManager.Logout(success: { (responseObject) in
+            print(responseObject)
+            Utility.hideLoader()
             try! Global.APP_REALM?.write() {
                 Global.APP_REALM?.delete(self.loggedInUser)
                 self.loggedInUser = nil
             }
             AppDelegate.shared.changeRootViewController()
-//        }) { (error) in
-//            Utility.hideLoader()
-//            print(error)
-//        }
+        }) { (error) in
+            Utility.hideLoader()
+            print(error)
+        }
     }
 }
 extension AppStateManager{

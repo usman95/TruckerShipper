@@ -9,6 +9,7 @@ enum Route: String {
     case ShipperTypes = "/public/shipper-types"
     case SignUp = "/auth/sign-up"
     case Login = "/auth/shipper/login"
+    case Logout = "/api/user/logout"
     case ForgotPassword = "/auth/forget-pass"
     case UpdateProfile = "/api/user/"
     case UploadProfile = "/upload/profile-pic"
@@ -87,9 +88,6 @@ extension APIManagerBase{
         Utility.hideLoader()
         
         if let dictData = response.result.value as? NSDictionary {
-            
-            let response = dictData as Dictionary
-            //response.printJson()
             
             if let status = dictData["success"] as? Bool{
                 if status{
