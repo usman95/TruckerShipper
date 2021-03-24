@@ -67,9 +67,6 @@ class MyAccount: BaseController {
     @IBAction func onBtnCity(_ sender: UIButton) {
         self.citiesDropDown.show()
     }
-    @IBAction func onBtnShipperType(_ sender: UIButton) {
-        self.shipperDropDown.show()
-    }
     @IBAction func onBtnAddress(_ sender: UIButton) {
         self.pickLocationFromPlacePicker()
     }
