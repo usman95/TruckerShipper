@@ -170,7 +170,7 @@ extension Bookings{
     }
     
     private func pullToRefresh(){
-        self.refreshControl.attributedTitle = NSAttributedString(string: "Pull to refresh")
+        self.refreshControl.attributedTitle = NSAttributedString(string: "")
         self.refreshControl.addTarget(self, action: #selector(self.refreshBookings), for: UIControl.Event.valueChanged)
         self.tableView.addSubview(self.refreshControl)
     }

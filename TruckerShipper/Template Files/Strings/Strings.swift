@@ -130,4 +130,10 @@ enum Strings: String{
     case ASK_GO_TO_SETTINGS = "Go to Settings?"
     case LOCATION_PERMISSION_IS_REQUIRED = "Location permission is required."
     case NO_DATA_AVAILABLE = "No data available."
+    case DRIVER_NAME = "Driver Name"
+    case CREW_NAME = "Crew Name"
+    case BKID = "BKID"
+    case UPDATED_AT = "Updated At"
+    case REG = "Reg."
+    case LAST_LOCATION = "Last Location"
 }

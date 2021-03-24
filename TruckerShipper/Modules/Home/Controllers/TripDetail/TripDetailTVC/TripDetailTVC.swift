@@ -36,6 +36,11 @@ class TripDetailTVC: UITableViewCell {
     var polyline = GMSPolyline()
     var path = GMSPath()
     
+    var routeColor = Global.APP_COLOR
+    
+    var inProgressMileColor = UIColor(red:0/255, green:70/255, blue:158/255, alpha:1.0)
+    var pendingMileColor = UIColor(red:194/255, green:193/255, blue:193/255, alpha:1.0)
+    var completedMileColor = UIColor(red:63/255, green:183/255, blue:115/255, alpha:1.0)
 }
 extension TripDetailTVC{
     func setData(bookingDetail: BookingDetailtModel?, trip: TripsModel?){
@@ -46,6 +51,8 @@ extension TripDetailTVC{
         let selectedCompletedMile = selectedTrip.tripMiles.filter{$0.status == MileType.completed.rawValue}.first
         
         if selectedInProgressMile != nil{
+            self.routeColor = self.inProgressMileColor
+            
             self.lblDistanceInKM.text = "\(selectedInProgressMile?.distance ?? 0) \(Strings.KM.text)"
             
             let mileStartDateString = selectedInProgressMile?.mileStartDate ?? "2020-12-14T14:24:59.741Z"
@@ -78,6 +85,8 @@ extension TripDetailTVC{
             return
         }
         if selectedPendingMile != nil{
+            self.routeColor = self.pendingMileColor
+            
             self.lblDistanceInKM.text = "\(selectedPendingMile?.distance ?? 0) \(Strings.KM.text)"
             
             let mileStartDateString = selectedPendingMile?.mileStartDate ?? "2020-12-14T14:24:59.741Z"
@@ -110,6 +119,8 @@ extension TripDetailTVC{
             return
         }
         if selectedCompletedMile != nil{
+            self.routeColor = self.completedMileColor
+            
             self.lblDistanceInKM.text = "\(selectedCompletedMile?.distance ?? 0) \(Strings.KM.text)"
             
             let mileStartDateString = selectedCompletedMile?.mileStartDate ?? "2020-12-14T14:24:59.741Z"
@@ -207,7 +218,7 @@ extension TripDetailTVC{
             let points = routeOverviewPolyline?["points"]?.stringValue
             self.path = GMSPath.init(fromEncodedPath: points ?? "")!
             self.polyline.path = path
-            self.polyline.strokeColor = Global.APP_COLOR
+            self.polyline.strokeColor = self.routeColor
             self.polyline.strokeWidth = 3.0
             self.polyline.map = self.mapView
             self.fitAllMarkersBounds()

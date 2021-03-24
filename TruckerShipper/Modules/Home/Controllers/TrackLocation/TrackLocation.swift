@@ -78,24 +78,33 @@ extension TrackLocation{
     }
     private func processResponse(withPlacemarks placemarks: [CLPlacemark]?, error: Error?) {
         Utility.hideLoader()
+        var lastUpdatedAddress: String?
+        
         if let error = error {
             print("Unable to Reverse Geocode Location (\(error))")
         } else {
             if let placemarks = placemarks, let placemark = placemarks.first {
-                self.driverLocationMarker?.title = placemark.compactAddress
+                lastUpdatedAddress = placemark.compactAddress
                 
             } else {
-                self.driverLocationMarker?.title = "\(self.currentDriverLocation?.latitude ?? 0.0),\(self.currentDriverLocation?.longitude ?? 0.0)"
+                lastUpdatedAddress = "\(self.currentDriverLocation?.latitude ?? 0.0),\(self.currentDriverLocation?.longitude ?? 0.0)"
             }
         }
+        
+        self.driverLocationMarker?.title = "\(Strings.REG.text)# \(self.inProgressMile?.vehicleId?.registrationNumber ?? ""), \(Strings.BKID.text): \(self.inProgressMile?.lastLocation?.bookingNumber ?? "")"
         
         let lastUpdatedDriverLocationDateString = self.lastUpdatedDriverLocation ?? ""
         switch lastUpdatedDriverLocationDateString.isEmpty {
         case true:
-            self.driverLocationMarker?.snippet = "-"
+            let vehicleDetail = "\(Strings.DRIVER_NAME.text): \(self.inProgressMile?.driverId?.firstName ?? "") \(self.inProgressMile?.driverId?.lastName ?? ""), \(Strings.CREW_NAME.text): \(self.inProgressMile?.crewId?.firstName ?? "") \(self.inProgressMile?.crewId?.lastName ?? ""), \n\(Strings.LAST_LOCATION.text): \(lastUpdatedAddress ?? "")"
+            
+            self.driverLocationMarker?.snippet = vehicleDetail
         default:
-            let lastUpdatedDriverLocationDate = Utility.main.stringDateFormatter(dateStr: lastUpdatedDriverLocationDateString, dateFormat: Constants.serverDateFormat, formatteddate: "dd MMM yy h:mm a")
-            self.driverLocationMarker?.snippet = lastUpdatedDriverLocationDate
+            let lastUpdatedVehicleLocationDate = Utility.main.stringDateFormatter(dateStr: lastUpdatedDriverLocationDateString, dateFormat: Constants.serverDateFormat, formatteddate: "dd MMM yy h:mm a")
+            
+            let vehicleDetail = "\(Strings.DRIVER_NAME.text): \(self.inProgressMile?.driverId?.firstName ?? "") \(self.inProgressMile?.driverId?.lastName ?? ""), \(Strings.CREW_NAME.text): \(self.inProgressMile?.crewId?.firstName ?? "") \(self.inProgressMile?.crewId?.lastName ?? ""), \(Strings.UPDATED_AT.text): \(lastUpdatedVehicleLocationDate)\n\(Strings.LAST_LOCATION.text): \(lastUpdatedAddress ?? "")"
+
+            self.driverLocationMarker?.snippet = vehicleDetail
         }
         
         self.mapView.selectedMarker = self.driverLocationMarker
@@ -123,6 +132,7 @@ extension TrackLocation{
             self.fitAllMarkersBounds()
         }
         else{
+            self.mapView.selectedMarker = nil
 //            self.driverLocationMarker?.rotation = bearing ?? 0.0
             self.driverLocationMarker?.position = self.currentDriverLocation ?? CLLocationCoordinate2D()
             self.zoomToSearchLocation(location: self.currentDriverLocation ?? CLLocationCoordinate2D())
