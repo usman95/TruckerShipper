@@ -26,11 +26,11 @@ class BookingsTVC: UITableViewCell {
         
         switch isSearched{
         case false:
-            let totalDuration = data.totalDuration ?? ""
-            self.lblDuration.text = totalDuration.isEmpty ? "-" : totalDuration
+            self.lblDuration.text = data.bookingNumber ?? ""
         case true:
             self.lblDuration.text = (data.status ?? "").uppercased()
         }
+        
         
         let pickUpDateString = data.pickUpDate ?? "2020-12-14T14:24:59.741Z"
         let pickUpTime = Utility.main.stringDateFormatter(dateStr: pickUpDateString, dateFormat: Constants.serverDateFormat, formatteddate: "hh:mm a")
