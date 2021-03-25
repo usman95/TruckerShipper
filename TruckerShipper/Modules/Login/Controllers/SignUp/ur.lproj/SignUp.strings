@@ -27,7 +27,7 @@
 "l3A-fO-UX0.placeholder" = "جہاز کی قسم";
 
 /* Class = "UITextField"; placeholder = "Phone number"; ObjectID = "q1o-Is-FnH"; */
-"q1o-Is-FnH.placeholder" = "فون نمبر";
+"q1o-Is-FnH.placeholder" = "03XX-XXXXXXX جیسے";
 
 /* Class = "UITextView"; text = "By signing up, you're agree to our Terms of use and Privacy Policy"; ObjectID = "qRU-kE-zq7"; */
 "qRU-kE-zq7.text" = "سائن اپ کرکے ، آپ ہمارے ساتھ اتفاق کرتے ہیں";

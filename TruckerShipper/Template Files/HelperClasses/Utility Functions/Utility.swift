@@ -243,6 +243,7 @@ extension Utility{
     func stringDateFormatter(dateStr: String , dateFormat : String , formatteddate : String) -> String {
         let dateFormatter = DateFormatter()
         dateFormatter.timeZone = TimeZone(abbreviation: "UTC")
+        dateFormatter.locale = Locale(identifier: "en_US")
         dateFormatter.dateFormat = dateFormat
         let date = dateFormatter.date(from: dateStr)
         dateFormatter.dateFormat = formatteddate
@@ -252,12 +253,14 @@ extension Utility{
     }
     func dateFormatter(date: Date,dateFormat:String) -> String {
         let dateFormatter = DateFormatter()
+        dateFormatter.locale = Locale(identifier: "en_US")
         dateFormatter.dateFormat = dateFormat
         dateFormatter.locale = Locale(identifier: MOLHLanguage.currentAppleLanguage())
         return dateFormatter.string(from: date)
     }
     func getDateFrom(dateString: String,dateFormat: String) -> Date? {
         let dateFormatter = DateFormatter()
+        dateFormatter.locale = Locale(identifier: "en_US")
         dateFormatter.dateFormat = dateFormat
         dateFormatter.locale = Locale(identifier: MOLHLanguage.currentAppleLanguage())
         guard let date = dateFormatter.date(from: dateString) else {return nil}

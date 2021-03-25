@@ -18,7 +18,7 @@
 "ekL-js-tFD.text" = "اپنے اکاؤنٹ میں سائن ان کریں تاکہ آپ آسانی سے کر سکیں";
 
 /* Class = "UITextField"; placeholder = "e.g. ******"; ObjectID = "pFn-VU-lxZ"; */
-"pFn-VU-lxZ.placeholder" = "e.g. ******";
+"pFn-VU-lxZ.placeholder" = "جیسے ******";
 
 /* Class = "UIButton"; normalTitle = "Forgot Password"; ObjectID = "w5Y-9m-cyO"; */
 "w5Y-9m-cyO.normalTitle" = "پاسورڈ بھول گے";

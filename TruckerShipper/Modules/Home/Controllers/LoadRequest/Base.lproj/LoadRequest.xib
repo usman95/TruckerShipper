@@ -445,7 +445,7 @@
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kgA-Cu-lQi">
                                                     <rect key="frame" x="0.0" y="41.5" width="366" height="57"/>
                                                     <subviews>
-                                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter phone number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ydf-IA-Jet" customClass="UITextFieldDeviceClass" customModule="PakGo_Shipper" customModuleProvider="target">
+                                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="e.g. 03XX-XXXXXXX" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ydf-IA-Jet" customClass="UITextFieldDeviceClass" customModule="PakGo_Shipper" customModuleProvider="target">
                                                             <rect key="frame" x="12" y="0.0" width="342" height="57"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                             <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
@@ -458,6 +458,9 @@
                                                                 </userDefinedRuntimeAttribute>
                                                                 <userDefinedRuntimeAttribute type="string" keyPath="iPhoneFontWeight" value="medium"/>
                                                             </userDefinedRuntimeAttributes>
+                                                            <connections>
+                                                                <outlet property="delegate" destination="-1" id="Chf-WD-xir"/>
+                                                            </connections>
                                                         </textField>
                                                     </subviews>
                                                     <constraints>
@@ -711,7 +714,7 @@
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mkv-8C-c07">
                                                     <rect key="frame" x="0.0" y="41.5" width="366" height="57"/>
                                                     <subviews>
-                                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter phone number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Fij-JQ-OWS" customClass="UITextFieldDeviceClass" customModule="PakGo_Shipper" customModuleProvider="target">
+                                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="e.g. 03XX-XXXXXXX" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Fij-JQ-OWS" customClass="UITextFieldDeviceClass" customModule="PakGo_Shipper" customModuleProvider="target">
                                                             <rect key="frame" x="12" y="0.0" width="342" height="57"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                             <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
@@ -724,6 +727,9 @@
                                                                 </userDefinedRuntimeAttribute>
                                                                 <userDefinedRuntimeAttribute type="string" keyPath="iPhoneFontWeight" value="medium"/>
                                                             </userDefinedRuntimeAttributes>
+                                                            <connections>
+                                                                <outlet property="delegate" destination="-1" id="FQ7-a4-9gJ"/>
+                                                            </connections>
                                                         </textField>
                                                     </subviews>
                                                     <constraints>

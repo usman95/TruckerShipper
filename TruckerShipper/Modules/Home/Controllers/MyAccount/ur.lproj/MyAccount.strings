@@ -75,7 +75,7 @@
 "n4c-93-c31.text" = "تصویر لگاو";
 
 /* Class = "UITextField"; placeholder = "Enter phone number"; ObjectID = "rUh-iY-4mU"; */
-"rUh-iY-4mU.placeholder" = "فون نمبر درج کریں";
+"rUh-iY-4mU.placeholder" = "03XX-XXXXXXX جیسے";
 
 /* Class = "UILabel"; text = "Last name"; ObjectID = "ten-1I-GMS"; */
 "ten-1I-GMS.text" = "آخری نام";

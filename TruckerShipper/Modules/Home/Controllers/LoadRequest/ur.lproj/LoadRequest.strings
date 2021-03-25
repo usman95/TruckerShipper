@@ -33,7 +33,7 @@
 "F9s-Rd-lnB.text" = "ایڈریس";
 
 /* Class = "UITextField"; placeholder = "Enter phone number"; ObjectID = "Fij-JQ-OWS"; */
-"Fij-JQ-OWS.placeholder" = "فون نمبر درج کریں";
+"Fij-JQ-OWS.placeholder" = "03XX-XXXXXXX جیسے";
 
 /* Class = "UITextField"; placeholder = "Enter full name"; ObjectID = "Fth-Ja-5eA"; */
 "Fth-Ja-5eA.placeholder" = "پورا نام درج کریں";

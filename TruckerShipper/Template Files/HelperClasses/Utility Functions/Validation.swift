@@ -29,6 +29,7 @@ extension Validation {
         return false
     }
     static func isValidNumber(_ value: String) -> Bool {
+        if !value.hasPrefix("03") && value.count != 11 {return false}
         guard let _ = Double(value) else {return false}
         return true
     }

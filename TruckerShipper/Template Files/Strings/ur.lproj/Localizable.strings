@@ -32,7 +32,7 @@
 "Please select your gender." = "براہ کرم اپنی جنس منتخب کریں۔";
 "Please select your date of birth." = "براہ کرم اپنی تاریخ پیدائش منتخب کریں۔";
 "Please provide a valid Email Address." = "براہ کرم ایک درست ای میل ایڈریس فراہم کریں۔";
-"Please provide a valid Phone Number." = "براہ کرم ایک درست فون نمبر فراہم کریں۔";
+"Please provide a valid Phone Number like 03XX-XXXXXXX." = "براہ کرم ایک درست فون نمبر فراہم کریں جیسے 03XX-XXXXXXX۔";
 "Please provide a valid OTP Code." = "براہ کرم ایک درست او ٹی پی کوڈ فراہم کریں۔";
 "Please select your country." = "براہ کرم اپنا ملک منتخب کریں۔";
 "Please enter your city." = "براہ کرم اپنے شہر میں داخل ہوں۔";

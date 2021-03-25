@@ -37,7 +37,7 @@ enum Strings: String{
     case INVALID_GENDER = "Please select your gender."
     case INVALID_DATE_OF_BIRTH = "Please select your date of birth."
     case INVALID_EMAIL = "Please provide a valid Email Address."
-    case INVALID_PHONE = "Please provide a valid Phone Number."
+    case INVALID_PHONE = "Please provide a valid Phone Number like 03XX-XXXXXXX."
     case INVALID_OTP = "Please provide a valid OTP Code."
     case INVALID_COUNTRY = "Please select your country."
     case INVALID_CITY = "Please enter your city."
