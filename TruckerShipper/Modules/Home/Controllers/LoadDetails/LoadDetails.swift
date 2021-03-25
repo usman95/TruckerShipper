@@ -192,7 +192,7 @@ extension LoadDetails{
                 return nil
             }
         }
-        if !Validation.isValidWeight(weight){
+        if !Validation.isValidNumber(weight){
             switch (self.selectedCargoType?.title ?? "").lowercased(){
             case CargoTypes.containerized.rawValue:
                 Utility.main.showToast(message: Strings.PLEASE_ENTER_WEIGHT_PER_TRUCK.text)

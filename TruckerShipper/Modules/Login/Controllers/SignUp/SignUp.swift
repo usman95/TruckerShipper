@@ -126,7 +126,7 @@ extension SignUp{
             self.btnCreateAnAccount.shake()
             return nil
         }
-        if !Validation.isValidNumber(contactNo){
+        if !Validation.isValidPhoneNumber(contactNo){
             Utility.main.showToast(message: Strings.INVALID_PHONE.text)
             self.btnCreateAnAccount.shake()
             return nil

@@ -202,7 +202,7 @@ extension MyAccount{
             self.btnSaveProfile.shake()
             return nil
         }
-        if !Validation.isValidNumber(contactNo){
+        if !Validation.isValidPhoneNumber(contactNo){
             Utility.main.showToast(message: Strings.INVALID_PHONE.text)
             self.btnSaveProfile.shake()
             return nil
