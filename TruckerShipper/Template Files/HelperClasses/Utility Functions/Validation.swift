@@ -31,6 +31,10 @@ extension Validation {
     static func isValidNumber(_ value: String) -> Bool {
         return (value.hasPrefix("03") && value.count == 11)
     }
+    static func isValidWeight(_ value: String) -> Bool {
+        guard let _ = Double(value) else {return false}
+        return true
+    }
     static func isValidPhoneNumber(_ value: String)->Bool{
         let phoneNumberKit = PhoneNumberKit()
         do {
