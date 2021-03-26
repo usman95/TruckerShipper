@@ -1864,7 +1864,7 @@
 				CODE_SIGN_ENTITLEMENTS = "TruckerShipper/PakGo Shipper.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 10;
+				CURRENT_PROJECT_VERSION = 11;
 				DEVELOPMENT_TEAM = GZVCBLALGJ;
 				INFOPLIST_FILE = TruckerShipper/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -1888,7 +1888,7 @@
 				CODE_SIGN_ENTITLEMENTS = "TruckerShipper/PakGo Shipper.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 10;
+				CURRENT_PROJECT_VERSION = 11;
 				DEVELOPMENT_TEAM = GZVCBLALGJ;
 				INFOPLIST_FILE = TruckerShipper/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
