@@ -42,6 +42,7 @@ public class BookingModel: Object, Mappable {
         static let documents = "documents"
         static let createdBy = "createdBy"
         static let quantityOfTrucks = "quantityOfTrucks"
+        static let deliveryDate = "deliveryDate"
     }
     
     // MARK: Properties
@@ -73,6 +74,7 @@ public class BookingModel: Object, Mappable {
     var documents = List<DocumentModel>()
     @objc dynamic var createdBy: CreatedByModel?
     @objc dynamic var quantityOfTrucks = 0
+    @objc dynamic var deliveryDate: String? = ""
     
     // MARK: ObjectMapper Initializers
     /// Map a JSON object to this class using ObjectMapper.
@@ -119,6 +121,7 @@ public class BookingModel: Object, Mappable {
         documents <- (map[SerializationKeys.documents], ListTransform<DocumentModel>())
         createdBy <- map[SerializationKeys.createdBy]
         quantityOfTrucks <- map[SerializationKeys.quantityOfTrucks]
+        deliveryDate <- map[SerializationKeys.deliveryDate]
     }
     
     

@@ -39,12 +39,12 @@ class BookingsTVC: UITableViewCell {
         self.lblPickUpTime.text = pickUpTime
         self.lblPickUpDate.text = pickUpDate
         
-        let bookingDateString = data.bookingDate ?? "2020-12-14T14:24:59.741Z"
-        let bookingTime = Utility.main.stringDateFormatter(dateStr: bookingDateString, dateFormat: Constants.serverDateFormat, formatteddate: "hh:mm a")
-        let bookingDate = Utility.main.stringDateFormatter(dateStr: bookingDateString, dateFormat: Constants.serverDateFormat, formatteddate: "d MMM yy")
+        let deliveryDateString = data.deliveryDate ?? "2020-12-14T14:24:59.741Z"
+        let deliveryTime = Utility.main.stringDateFormatter(dateStr: deliveryDateString, dateFormat: Constants.serverDateFormat, formatteddate: "hh:mm a")
+        let deliveryDate = Utility.main.stringDateFormatter(dateStr: deliveryDateString, dateFormat: Constants.serverDateFormat, formatteddate: "d MMM yy")
         
-        self.lblDropOffTime.text = bookingTime
-        self.lblDropOffDate.text = bookingDate
+        self.lblDropOffTime.text = deliveryTime
+        self.lblDropOffDate.text = deliveryDate
         
         self.lblPickUpAddress.text = data.pickup?.address ?? ""
         self.lblDropOffAddress.text = data.dropOff?.address ?? ""
